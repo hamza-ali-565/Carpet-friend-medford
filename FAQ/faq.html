@@ -1,0 +1,254 @@
+<!-- wp:html -->
+<div class="cfm-page-faq">
+<style>
+.cfm-page-faq{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-faq *,.cfm-page-faq *::before,.cfm-page-faq *::after{box-sizing:border-box}
+.cfm-page-faq h1,.cfm-page-faq h2,.cfm-page-faq h3,.cfm-page-faq p{word-wrap:break-word;overflow-wrap:break-word}
+.cfm-faq-hero{background:linear-gradient(160deg,#0c1f35 0%,#1a3a5c 100%);padding:clamp(52px,7vw,88px) clamp(20px,5vw,40px);text-align:center}
+.cfm-faq-hero .ey{display:block;color:#7cbfe8;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 16px}
+.cfm-faq-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.15;letter-spacing:-.5px;margin:0 0 20px;max-width:900px;margin-left:auto;margin-right:auto}
+.cfm-faq-hero p{color:rgba(255,255,255,.84);font-size:clamp(15px,2vw,18px);line-height:1.7;margin:0 auto;max-width:760px}
+.cfm-faq-body{background:#fff;padding:clamp(48px,6vw,80px) clamp(20px,5vw,40px)}
+.cfm-faq-inner{max-width:840px;margin:0 auto}
+.cfm-cat{margin:0 0 48px}
+.cfm-cat:last-child{margin-bottom:0}
+.cfm-cat-title{display:flex;align-items:center;gap:12px;font-size:clamp(20px,3vw,26px);font-weight:800;color:#0c1f35;margin:0 0 20px;letter-spacing:-.3px}
+.cfm-cat-num{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;border-radius:50%;background:#1a7a4a;color:#fff;font-size:14px;font-weight:800;flex-shrink:0}
+.cfm-acc{border:1px solid #e8ecf0;border-radius:12px;overflow:hidden}
+.cfm-acc-item{border-bottom:1px solid #e8ecf0}
+.cfm-acc-item:last-child{border-bottom:none}
+.cfm-acc-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;background:#f7f8fa;border:none;text-align:left;cursor:pointer;font-family:inherit;font-size:16px;font-weight:600;color:#0c1f35;transition:background .15s}
+.cfm-acc-q:hover,.cfm-acc-q[aria-expanded="true"]{background:#f0f6ff}
+.cfm-acc-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#fff;border:1.5px solid #1a7a4a;color:#1a7a4a;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;transition:transform .2s}
+.cfm-acc-q[aria-expanded="true"] .cfm-acc-icon{transform:rotate(45deg)}
+.cfm-acc-panel{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-acc-panel-inner{padding:4px 22px 22px;font-size:15px;color:#4a5568;line-height:1.8;background:#fff}
+.cfm-acc-panel-inner a{color:#1a7a4a;font-weight:600;text-decoration:underline}
+.cfm-answers-sec{background:#f7f8fa;padding:clamp(48px,6vw,80px) clamp(20px,5vw,40px)}
+.cfm-answers-inner{max-width:840px;margin:0 auto}
+.cfm-answers-eyebrow{display:block;text-align:center;color:#1a7a4a;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 12px}
+.cfm-answers-h2{text-align:center;color:#0c1f35;font-size:clamp(22px,3.5vw,32px);font-weight:800;margin:0 0 36px;letter-spacing:-.4px}
+.cfm-callout{background:#f0f6ff;border-left:4px solid #0c1f35;border-radius:8px;padding:20px 24px;margin:0 0 18px}
+.cfm-callout:last-child{margin-bottom:0}
+.cfm-callout .q{font-size:15px;font-weight:700;color:#0c1f35;margin:0 0 8px}
+.cfm-callout .a{font-size:15px;color:#4a5568;line-height:1.7;margin:0}
+.cfm-callout .a strong{color:#0c1f35}
+.cfm-local-note{max-width:840px;margin:36px auto 0;background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 24px;font-size:14px;color:#718096;line-height:1.75}
+.cfm-local-note strong{color:#0c1f35}
+.cfm-faq-cta{background:#1a7a4a;padding:clamp(52px,7vw,84px) clamp(20px,5vw,40px);text-align:center}
+.cfm-faq-cta h2{color:#fff;font-size:clamp(24px,4vw,36px);font-weight:800;line-height:1.2;margin:0 0 14px}
+.cfm-faq-cta p{color:rgba(255,255,255,.9);font-size:17px;line-height:1.6;margin:0 0 30px}
+.cfm-faq-cta .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cfm-faq-cta a.btn-w{background:#fff;color:#1a7a4a;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-faq-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:13px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+@media(max-width:768px){
+.cfm-acc-q{padding:15px 16px;font-size:15px}
+.cfm-acc-panel-inner{padding:2px 16px 18px;font-size:14.5px}
+.cfm-callout{padding:18px 18px}
+.cfm-faq-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin:0 auto}
+.cfm-faq-cta a.btn-w,.cfm-faq-cta a.btn-o{text-align:center}
+}
+</style>
+
+<section class="cfm-faq-hero">
+<span class="ey">Frequently Asked Questions</span>
+<h1>Carpet Cleaning Questions — Answered by a Medford Local</h1>
+<p>These are the questions Medford and Jackson County homeowners actually ask before booking a professional carpet cleaning. Straight answers — no marketing fluff. If you're comparing us to a Rug Doctor rental, wondering about drying times in Medford's winter humidity, or trying to understand what PM2.5 wildfire smoke does to your carpet fibers, you're in the right place.</p>
+</section>
+
+<section class="cfm-faq-body">
+<div class="cfm-faq-inner">
+
+<div class="cfm-cat">
+<h2 class="cfm-cat-title"><span class="cfm-cat-num">1</span>Cost &amp; Pricing</h2>
+<div class="cfm-acc">
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">How much does carpet cleaning cost in Medford, Oregon?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Most Medford homes fall into an affordable, competitive range depending on square footage, carpet fiber type, and soil level. We confirm the exact cost before any work begins — no surprises after the truck is in your driveway. Homes with standard soiling run less than those with wildfire smoke contamination or years of pet accumulation. Call <a href="tel:+14583020101">(458) 302-0101</a> for a specific estimate based on your situation.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Is professional carpet cleaning worth it compared to renting a Rug Doctor?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Yes, for any carpet with real soiling. Rug Doctor machines deliver water at roughly 100°F. Our truck-mounted system runs at 195–240°F with 5–10x the vacuum power. The temperature difference is what releases PM2.5 wildfire smoke particles and cat urine crystallized in the backing — consumer machines physically can't generate enough heat to reach these. For light refreshes on lightly soiled carpet, a rental can make sense. For anything Jackson County homeowners actually deal with — trail dust, smoke, pets, mud season — professional extraction gets results rentals don't.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Do you charge extra for pet stains?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">We price based on the scope of treatment needed, not as hidden add-ons. Cat and dog urine require different enzyme formulas and sometimes sub-surface extraction — we assess this during the pre-inspection walk-through and include the full treatment scope in your upfront quote. No mid-job surprises.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Can carpet cleaning be deducted from my security deposit in Oregon?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Under Oregon law (ORS 90.300), landlords can deduct carpet cleaning costs from a security deposit only if the carpet condition exceeds normal wear and tear, AND only if the lease requires professional cleaning at move-out. The key is documentation: our dated service receipt is the standard document Medford-area property managers accept for deposit dispute records. If you're moving out, get the receipt — it's included with every job.</div></div>
+</div>
+
+</div>
+</div>
+
+<div class="cfm-cat">
+<h2 class="cfm-cat-title"><span class="cfm-cat-num">2</span>Process &amp; Methods</h2>
+<div class="cfm-acc">
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">What is the difference between steam cleaning and hot water extraction?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">They're often used interchangeably, but technically different. True steam cleaning uses low-moisture vapor. Hot water extraction (what we do) injects water at 195–240°F under pressure directly into the carpet fibers, then immediately extracts it along with loosened soil — back to the truck's recovery tank. Hot water extraction is the IICRC standard for residential carpet cleaning and what most carpet manufacturers require to maintain your warranty.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Should I vacuum before professional carpet cleaning?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">You don't need to — we pre-vacuum every job as part of our 7-step process. This step removes up to 90% of dry soil (Table Rocks volcanic dust, pet hair, ash, pollen) before any moisture touches your carpet. Skipping the pre-vacuum is the single most common reason carpets re-soil quickly after cleaning. Most Medford competitors skip it because it adds 15 minutes; we don't.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Does carpet cleaning include moving furniture?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">We move standard furniture — sofas, chairs, coffee tables — at no additional charge. We ask that you clear small items (toys, plants, electronics) beforehand. Large pieces like pianos, beds, and china cabinets should be moved before we arrive if possible.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">How does the 7-step process work?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Pre-inspection → dry pre-vacuum → fiber-matched pre-spray → hot water extraction at 195–240°F → pH-balanced rinse → dry stroke extraction → carpet raking and final walk-through. Read the full <a href="https://carpetcleaningmedfordoregon.com/our-process/">7-step process</a> in detail.</div></div>
+</div>
+
+</div>
+</div>
+
+<div class="cfm-cat">
+<h2 class="cfm-cat-title"><span class="cfm-cat-num">3</span>Drying &amp; Timing</h2>
+<div class="cfm-acc">
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">How long does carpet cleaning take to dry in Medford, Oregon?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">During Medford summers (80–110°F), carpets dry in 2–4 hours with our dry stroke technique. During the wet season (October–March) and winter temperature inversions, expect 6–8 hours. Running ceiling fans, opening windows, and avoiding foot traffic speeds the process. We advise on ventilation timing before we leave.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Can I walk on my carpet after cleaning?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">After 1–2 hours in summer conditions, yes — but wear clean socks or shoe covers until fully dry. Bare feet or outdoor shoes on damp carpet introduce new soil and oils before the fibers have closed back up. Pets should stay off until the carpet is completely dry.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">How often should I have my carpets professionally cleaned in Medford?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Once a year for most Medford homes. Twice a year if you have pets, hike Table Rocks or Bear Creek Greenway regularly, or live in a smoke-affected area during wildfire season. After any significant smoke event, we recommend cleaning within 60 days — PM2.5 particles bond more firmly to synthetic fibers over time, making the cleaning harder and less effective the longer you wait.</div></div>
+</div>
+
+</div>
+</div>
+
+<div class="cfm-cat">
+<h2 class="cfm-cat-title"><span class="cfm-cat-num">4</span>Specific Problems</h2>
+<div class="cfm-acc">
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Can carpet cleaning remove wildfire smoke smell?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Yes — but only with the correct process. Wildfire smoke deposits PM2.5 particles deep in carpet fibers through building infiltration. Vacuuming can't reach them. Standard hot water extraction reduces the odor but may not eliminate it. Our <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">dedicated wildfire smoke protocol</a> adds an oxidizing pre-spray with 8-minute dwell time before extraction at 195°F+ — this neutralizes smoke compounds at the fiber level rather than masking them. We're one of the only Medford companies with a specific smoke treatment protocol.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Can carpet cleaning remove pet urine odor permanently?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">In most cases, yes — with the right process. Cat urine and dog urine require different enzyme formulas. Cat urine crystallizes in carpet fibers and the backing; dog urine tends to spread more widely but stays in the pile. For contamination that has reached the carpet pad, we use sub-surface extraction to treat below the carpet surface. If the subfloor has been saturated over years, we'll tell you honestly whether cleaning or replacement is the better answer — before any work begins.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Why does my carpet smell worse after cleaning?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">This happens when too much moisture is left in the backing or when cleaning solution isn't fully rinsed out. Both are caused by low-temperature, low-suction equipment and skipped process steps. Our pH-balanced rinse removes all cleaning chemistry from the fiber after extraction, and our dry stroke technique extracts maximum moisture — avoiding both problems. If a carpet smells musty after cleaning, it's usually because it wasn't dried fast enough. In Medford's damp winter months, we advise on ventilation specifically to prevent this.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Can carpet cleaning kill fleas, dust mites, or bed bugs?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Hot water extraction at 195°F kills flea eggs, larvae, and adult fleas in the carpet fibers on contact. It also eliminates the vast majority of dust mites. Bed bugs are a different situation — they live in mattresses and furniture, not primarily in carpet. Carpet cleaning is one part of a bed bug treatment protocol, not the whole solution. For flea treatment specifically, we recommend treating pets and home simultaneously.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Will carpet cleaning remove furniture marks or dents?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Often yes, especially for recent indentations. Hot water and steam relax compressed carpet fibers, and carpet raking after extraction helps restore pile. Permanent furniture dents — particularly in older or low-pile carpet — may not fully recover. We'll assess during pre-inspection and give you an honest expectation before starting.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Does carpet cleaning cause mold?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Only if the carpet is left wet too long. Over-wet carpet (common with low-suction rental machines) can promote mold growth in the backing within 24–48 hours. Our truck-mounted extraction and dry stroke technique leave carpets dry in 2–4 hours in summer — well within the safe window. In Medford's wet season (October–March), we specifically advise on ventilation timing to ensure complete drying.</div></div>
+</div>
+
+</div>
+</div>
+
+<div class="cfm-cat">
+<h2 class="cfm-cat-title"><span class="cfm-cat-num">5</span>Choosing a Carpet Cleaner</h2>
+<div class="cfm-acc">
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">What questions should I ask a carpet cleaning company?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">These five: (1) Are you IICRC certified? — required by most carpet warranties. (2) Do you pre-vacuum before extracting? — if no, find someone else. (3) Is the price confirmed before you start or after? — bait-and-switch is common. (4) What's your drying time? — more than 6 hours in summer means low-quality equipment. (5) Do you use a truck-mounted or portable machine? — portables reach ~100°F, truck mounts reach 195–240°F. The difference shows in the results.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">Should I tip my carpet cleaner?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">Tipping isn't expected in this industry, but it's always appreciated. If your technician went above and beyond — handled a difficult pet contamination situation, worked carefully around antiques, or explained the process thoroughly — $10–$20 is a genuine sign of appreciation. Never feel obligated, and never feel awkward about asking directly.</div></div>
+</div>
+
+<div class="cfm-acc-item">
+<button class="cfm-acc-q" aria-expanded="false">What is IICRC certification and why does it matter?<span class="cfm-acc-icon">+</span></button>
+<div class="cfm-acc-panel"><div class="cfm-acc-panel-inner">IICRC stands for Institute of Inspection Cleaning and Restoration Certification. It's the industry's accredited training standard covering fiber science, cleaning chemistry, extraction technique, and restoration. Many carpet manufacturers require IICRC-certified hot water extraction to maintain your carpet warranty. It also means the technician has completed coursework, not just YouTube tutorials. We're IICRC certified — our certificate number is available on request.</div></div>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="cfm-answers-sec">
+<div class="cfm-answers-inner">
+<span class="cfm-answers-eyebrow">Quick Answers</span>
+<h2 class="cfm-answers-h2">The Short Version</h2>
+
+<div class="cfm-callout">
+<p class="q">Can carpet cleaning remove wildfire smoke?</p>
+<p class="a"><strong>Yes</strong> — with an oxidizing pre-spray and truck-mounted extraction at 195°F or higher.</p>
+</div>
+
+<div class="cfm-callout">
+<p class="q">How long does carpet cleaning take to dry in Medford?</p>
+<p class="a"><strong>2–4 hours in summer, 6–8 hours in winter.</strong> Our dry stroke technique is what makes this possible.</p>
+</div>
+
+<div class="cfm-callout">
+<p class="q">Is professional carpet cleaning worth it?</p>
+<p class="a"><strong>Yes</strong>, for any carpet with real soiling. The temperature and suction gap between rental machines and truck mounts is the difference between surface refreshing and genuine deep extraction.</p>
+</div>
+
+<div class="cfm-local-note">
+Serving Medford and all of <strong>Jackson County</strong> and the <strong>Rogue Valley</strong> — ZIP codes 97501–97504 and surrounding cities. From <strong>Table Rocks</strong> volcanic dust to muddy paws off the <strong>Bear Creek Greenway</strong>, from <strong>wildfire season</strong> smoke (July–September) to soot trapped by <strong>winter temperature inversions</strong>, we know exactly what ends up in Medford carpets — and how to get it out.
+</div>
+
+</div>
+</section>
+
+<section class="cfm-faq-cta">
+<h2>Questions Not Covered Here?</h2>
+<p>Call (458) 302-0101 — we answer the phone Mon–Fri 8am–6pm, Sat 9am–4pm.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">📞 Call Now</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/#book">📅 Book Online</a>
+</div>
+</section>
+
+</div>
+
+<script>
+(function(){'use strict';
+var buttons=document.querySelectorAll('.cfm-page-faq .cfm-acc-q');
+buttons.forEach(function(btn){
+var panel=btn.nextElementSibling;
+btn.addEventListener('click',function(){
+var open=btn.getAttribute('aria-expanded')==='true';
+btn.setAttribute('aria-expanded',open?'false':'true');
+btn.querySelector('.cfm-acc-icon').textContent=open?'+':'×';
+if(open){panel.style.maxHeight=null;}
+else{panel.style.maxHeight=panel.scrollHeight+'px';}
+});
+});
+})();
+</script>
+</div>
+<!-- /wp:html -->

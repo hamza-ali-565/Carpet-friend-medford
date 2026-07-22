@@ -1,0 +1,196 @@
+<style id="cfm-css">/* CARPET FRIEND MEDFORD — PREMIUM HEADER */
+.wp-block-kadence-header{display:none!important}
+#cfm-header{position:sticky;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 20px rgba(12,31,53,.10);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+#cfm-topbar{background:#0c1f35;padding:7px 0;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+#cfm-topbar a,#cfm-topbar span{color:#7cbfe8;font-size:12px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+#cfm-topbar a:hover{color:#fff}
+#cfm-topbar .pipe{color:rgba(255,255,255,.2);font-size:11px}
+#cfm-nav-wrap{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:70px;gap:0}
+#cfm-logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;margin-right:28px}
+#cfm-logo img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+#cfm-logo-text .name{display:block;font-size:15px;font-weight:800;color:#0c1f35;line-height:1.15;letter-spacing:-.3px}
+#cfm-logo-text .tagline{display:block;font-size:10px;font-weight:600;color:#1a7a4a;text-transform:uppercase;letter-spacing:1.5px}
+#cfm-nav{display:flex;align-items:center;list-style:none;margin:0;padding:0;gap:0;flex:1}
+#cfm-nav>li{position:relative}
+#cfm-nav>li>a{display:flex;align-items:center;gap:4px;padding:0 13px;height:70px;font-size:13px;font-weight:600;color:#374151;text-decoration:none;white-space:nowrap;transition:color .18s;border-bottom:3px solid transparent}
+#cfm-nav>li>a:hover,#cfm-nav>li.cfm-active>a{color:#1a7a4a;border-bottom-color:#1a7a4a}
+#cfm-nav>li>a .arr{font-size:8px;color:#9ca3af;transition:transform .2s;margin-left:2px;display:inline-block}
+#cfm-nav>li:hover>a .arr{transform:rotate(180deg);color:#1a7a4a}
+.cfm-drop{position:absolute;top:calc(100% + 4px);left:0;background:#fff;border-radius:10px;box-shadow:0 10px 44px rgba(12,31,53,.14);border:1px solid #e8ecf0;min-width:240px;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s cubic-bezier(.4,0,.2,1);z-index:10000}
+#cfm-nav>li:hover .cfm-drop{opacity:1;visibility:visible;transform:translateY(0)}
+.cfm-drop.wide{min-width:560px;display:grid;grid-template-columns:1fr 1fr;gap:0;padding:16px 12px}
+.cfm-col-hd{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9ca3af;padding:6px 10px 4px;display:block}
+.cfm-drop a{display:flex;align-items:center;gap:9px;padding:8px 12px;font-size:13px;color:#374151;text-decoration:none;border-radius:6px;transition:all .15s;font-weight:500}
+.cfm-drop a:hover{background:#f0f6ff;color:#0c1f35}
+.cfm-drop a .ic{font-size:13px;flex-shrink:0}
+.cfm-badge{background:#1a7a4a;color:#fff;font-size:9px;font-weight:700;padding:2px 5px;border-radius:4px;margin-left:auto;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+.cfm-div{height:1px;background:#f3f4f6;margin:6px 10px}
+#cfm-cta{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
+#cfm-cta .c-call{display:flex;align-items:center;gap:7px;background:#0c1f35;color:#fff;padding:9px 15px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none;transition:background .18s;white-space:nowrap}
+#cfm-cta .c-call:hover{background:#1a3a5c}
+#cfm-cta .c-book{display:flex;align-items:center;gap:7px;background:#1a7a4a;color:#fff;padding:9px 18px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none;transition:background .18s;white-space:nowrap}
+#cfm-cta .c-book:hover{background:#15693e}
+#cfm-burg{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;margin-left:auto}
+#cfm-burg span{display:block;width:24px;height:2px;background:#0c1f35;border-radius:2px;transition:all .22s}
+#cfm-burg.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+#cfm-burg.open span:nth-child(2){opacity:0}
+#cfm-burg.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+#cfm-mob{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:99998;overflow-y:auto;padding:72px 24px 40px}
+#cfm-mob.open{display:block}
+#cfm-mob-x{position:absolute;top:18px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#0c1f35;line-height:1}
+.cfm-ms{margin-bottom:24px}
+.cfm-ms-t{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;display:block}
+.cfm-ms a{display:block;padding:10px 0;font-size:15px;font-weight:600;color:#0c1f35;text-decoration:none;border-bottom:1px solid #f3f4f6}
+.cfm-ms a:hover{color:#1a7a4a}
+.cfm-mc{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.cfm-mc a{display:block;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none}
+.cfm-mc .cc{background:#0c1f35;color:#fff}
+.cfm-mc .cb{background:#1a7a4a;color:#fff}
+@media(max-width:1000px){#cfm-nav>li>a{padding:0 9px;font-size:12px}}
+@media(max-width:880px){#cfm-nav{display:none}#cfm-cta{display:none}#cfm-burg{display:flex}#cfm-topbar{display:none}}</style>
+
+<!-- wp:html -->
+<div id="cfm-header">
+<div id="cfm-topbar">
+<a href="tel:+14583020101">📞 (458) 302-0101</a>
+<span class="pipe">|</span>
+<span>Mon–Fri 8am–6pm · Sat 9am–4pm</span>
+<span class="pipe">|</span>
+<span>✓ IICRC Certified · Rogue Valley Local</span>
+<span class="pipe">|</span>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#10003; Transparent Pricing</a>
+</div>
+<div id="cfm-nav-wrap">
+<a id="cfm-logo" href="https://carpetcleaningmedfordoregon.com/"><img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/carpet-friend-medford-logo-1-1-300x300.jpg" alt="Carpet Friend Medford" width="44" height="44"><div id="cfm-logo-text"><span class="name">Carpet Friend Medford</span><span class="tagline">Medford's Trusted Carpet Cleaner</span></div></a>
+<ul id="cfm-nav">
+<li><a href="https://carpetcleaningmedfordoregon.com/">Home</a></li>
+<li>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">Services <span class="arr">▾</span></a>
+<div class="cfm-drop wide">
+<div><span class="cfm-col-hd">Core Services</span>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/"><span class="ic">🏠</span>Residential Carpet Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/"><span class="ic">🔥</span>Wildfire Smoke Treatment<span class="cfm-badge">Unique</span></a>
+<a href="https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/"><span class="ic">🐾</span>Pet Urine &amp; Odor Removal</a>
+<a href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/"><span class="ic">📦</span>Move-Out Carpet Cleaning</a>
+</div>
+<div><span class="cfm-col-hd">Specialty Services</span>
+<a href="https://carpetcleaningmedfordoregon.com/upholstery-cleaning-medford-oregon/"><span class="ic">🛋️</span>Upholstery Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/"><span class="ic">🪷</span>Area Rug &amp; Oriental Rug</a>
+<a href="https://carpetcleaningmedfordoregon.com/move-in-carpet-cleaning-medford-oregon/"><span class="ic">&#127968;</span>Move-In Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/tile-grout-cleaning-medford-oregon/"><span class="ic">🔲</span>Tile &amp; Grout Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/"><span class="ic">🏢</span>Commercial Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/"><span class="ic">🪵</span>Hardwood Floor Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/"><span class="ic">🧵</span>Carpet Repair</a>
+</div>
+</div>
+</li>
+<li>
+<a href="#">Locations <span class="arr">▾</span></a>
+<div class="cfm-drop wide">
+<div><span class="cfm-col-hd">Medford Neighborhoods</span>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/"><span class="ic">📍</span>Medford (All Areas)</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-east-medford-oregon/"><span class="ic">📍</span>East Medford</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-south-medford-oregon/"><span class="ic">📍</span>South Medford</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/"><span class="ic">📍</span>North Medford</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-west-medford-oregon/"><span class="ic">📍</span>West Medford</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-downtown-medford-oregon/"><span class="ic">📍</span>Downtown Medford</a>
+</div>
+<div><span class="cfm-col-hd">Surrounding Cities</span>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-ashland-oregon/"><span class="ic">📍</span>Ashland, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-central-point-oregon/"><span class="ic">📍</span>Central Point, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-jacksonville-oregon/"><span class="ic">📍</span>Jacksonville, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-eagle-point-oregon/"><span class="ic">📍</span>Eagle Point, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-white-city-oregon/"><span class="ic">📍</span>White City, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-phoenix-oregon/"><span class="ic">📍</span>Phoenix &amp; Talent, OR</a>
+</div>
+</div>
+</li>
+<li>
+<a href="#">Resources <span class="arr">▾</span></a>
+<div class="cfm-drop">
+<a href="https://carpetcleaningmedfordoregon.com/our-process/"><span class="ic">🔬</span>Our 7-Step Process</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/"><span class="ic">💲</span>Transparent Pricing Guide</a>
+<a href="https://carpetcleaningmedfordoregon.com/faq/"><span class="ic">❓</span>FAQ &#8212; Every Question Answered</a>
+<a href="https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/"><span class="ic">🏆</span>Best Carpet Cleaners in Medford</a>
+<div class="cfm-div"></div>
+<a href="https://carpetcleaningmedfordoregon.com/about/"><span class="ic">👤</span>About Us</a>
+<a href="https://carpetcleaningmedfordoregon.com/testimonials/"><span class="ic">⭐</span>Testimonials</a>
+</div>
+</li>
+<li>
+<a href="https://carpetcleaningmedfordoregon.com/blog/">Blog <span class="arr">▾</span></a>
+<div class="cfm-drop">
+<a href="https://carpetcleaningmedfordoregon.com/blog/"><span class="ic">📰</span>All Blog Posts</a>
+<div class="cfm-div"></div>
+<a href="https://carpetcleaningmedfordoregon.com/how-wildfire-smoke-damages-carpet-fibers-medford-oregon/"><span class="ic">🔥</span>Wildfire Smoke &amp; Carpet Fibers</a>
+<a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-guide-medford-oregon/"><span class="ic">&#128218;</span>Area Rug Cleaning Guide</a>
+<a href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/"><span class="ic">&#128197;</span>How Often to Clean</a>
+<a href="https://carpetcleaningmedfordoregon.com/rogue-valley-mud-season-carpet-guide/"><span class="ic">🌧️</span>Mud Season Carpet Guide</a>
+<a href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/"><span class="ic">🌸</span>Pollen Season Carpet Guide</a>
+</div>
+</li>
+</ul>
+<div id="cfm-cta">
+<a class="c-call" href="tel:+14583020101">📞 (458) 302-0101</a>
+<a class="c-book" href="https://carpetcleaningmedfordoregon.com/#book">Book Now →</a>
+</div>
+<button id="cfm-burg" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</div>
+<div id="cfm-mob">
+<button id="cfm-mob-x">✕</button>
+<div class="cfm-ms"><a href="https://carpetcleaningmedfordoregon.com/" style="font-size:17px;font-weight:800;border:none">🏠 Home</a></div>
+<div class="cfm-ms"><span class="cfm-ms-t">Services</span>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">Residential Carpet Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">&#128293; Wildfire Smoke Treatment</a>
+<a href="https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/">Pet Urine &amp; Odor Removal</a>
+<a href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/">Move-Out Carpet Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/move-in-carpet-cleaning-medford-oregon/">Move-In Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/upholstery-cleaning-medford-oregon/">Upholstery Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/tile-grout-cleaning-medford-oregon/">Tile &amp; Grout Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">Area Rug Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/">Commercial Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/">&#129909; Hardwood Floor Cleaning</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/">&#129525; Carpet Repair</a>
+</div>
+<div class="cfm-ms"><span class="cfm-ms-t">Locations</span>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">Medford (All Areas)</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-ashland-oregon/">Ashland, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-central-point-oregon/">Central Point, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-jacksonville-oregon/">Jacksonville, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-eagle-point-oregon/">Eagle Point, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-white-city-oregon/">White City, OR</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-phoenix-oregon/">Phoenix &amp; Talent, OR</a>
+</div>
+<div class="cfm-ms"><span class="cfm-ms-t">Resources</span>
+<a href="https://carpetcleaningmedfordoregon.com/our-process/">Our 7-Step Process</a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">Transparent Pricing Guide</a>
+<a href="https://carpetcleaningmedfordoregon.com/faq/">FAQ &#8212; Every Question Answered</a>
+<a href="https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/">Best Carpet Cleaners in Medford</a>
+<a href="https://carpetcleaningmedfordoregon.com/about/">About Us</a>
+<a href="https://carpetcleaningmedfordoregon.com/testimonials/">Testimonials</a>
+</div>
+<div class="cfm-ms"><span class="cfm-ms-t">Blog</span>
+<a href="https://carpetcleaningmedfordoregon.com/how-wildfire-smoke-damages-carpet-fibers-medford-oregon/">&#128293; Wildfire Smoke &amp; Carpet Fibers</a>
+<a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-guide-medford-oregon/">&#128218; Area Rug Cleaning Guide</a>
+<a href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">&#128197; How Often to Clean</a>
+<a href="https://carpetcleaningmedfordoregon.com/rogue-valley-mud-season-carpet-guide/">&#127783;&#65039; Mud Season Carpet Guide</a>
+<a href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">&#127800; Pollen Season Carpet Guide</a>
+</div>
+<div class="cfm-mc">
+<a class="cc" href="tel:+14583020101">📞 Call (458) 302-0101</a>
+<a class="cb" href="https://carpetcleaningmedfordoregon.com/#book">📅 Book Now</a>
+</div>
+</div>
+<script>
+(function(){
+var b=document.getElementById('cfm-burg'),m=document.getElementById('cfm-mob'),x=document.getElementById('cfm-mob-x');
+function tog(){b.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':''}
+if(b)b.addEventListener('click',tog);
+if(x)x.addEventListener('click',function(){b.classList.remove('open');m.classList.remove('open');document.body.style.overflow=''});
+var p=window.location.pathname;
+document.querySelectorAll('#cfm-nav a').forEach(function(a){if(a.getAttribute('href')===window.location.href||a.getAttribute('href')===p){var li=a.closest('li');if(li&&li.parentElement.id==='cfm-nav')li.classList.add('cfm-active')}});
+window.addEventListener('scroll',function(){var h=document.getElementById('cfm-header');if(h)h.style.boxShadow=window.scrollY>10?'0 4px 28px rgba(12,31,53,.18)':'0 2px 20px rgba(12,31,53,.10)'});
+})();
+</script>
+<!-- /wp:html -->
