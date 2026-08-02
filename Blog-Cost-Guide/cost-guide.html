@@ -1,0 +1,366 @@
+<!-- wp:html -->
+<style id="cfm-cg-css">
+.cfm-page-cost-guide{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-cost-guide *,.cfm-page-cost-guide *::before,.cfm-page-cost-guide *::after{box-sizing:border-box}
+.cfm-page-cost-guide p,.cfm-page-cost-guide li,.cfm-page-cost-guide h1,.cfm-page-cost-guide h2,.cfm-page-cost-guide h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-cg-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52b788;z-index:9998;transition:width .1s linear}
+
+.cfm-cg-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-cg-topline a{color:#2d6a4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-cg-topline a:hover{text-decoration:underline}
+
+.cfm-cg-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-cg-hero .ey{display:block;color:#7cbfe8;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-cg-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-cg-hero .byline{color:#7cbfe8;font-size:13.5px;font-weight:600;margin:0}
+.cfm-cg-hero .rt{display:inline-block;background:#e8f5e9;color:#1b4332;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-cg-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-cg-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-cg-toc{flex:0 0 300px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #0c1f35;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-cg-toc .toc-ttl{display:block;color:#1a7a4a;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-cg-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-cg-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-cg-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-cg-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-cg-toc a:hover{color:#0c1f35}
+.cfm-cg-toc a.active{color:#0c1f35;font-weight:700}
+.cfm-cg-toc a.active::before{color:#1a7a4a}
+.cfm-cg-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-cg-layout{flex-direction:column}
+.cfm-cg-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-cg-toc-static{display:none}
+.cfm-cg-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-cg-toc-toggle .chev{transition:transform .2s;color:#1a7a4a}
+.cfm-cg-toc[data-open="false"] ol{display:none}
+.cfm-cg-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-cg-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-cg-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-cg-intro{background:#f0f6ff;border-left:4px solid #1a7a4a;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-cg-intro p{color:#0c1f35;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-cost-guide h2{color:#0c1f35;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-cg-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-cost-guide .cfm-cg-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-cost-guide strong{color:#0c1f35}
+
+.cfm-cg-lbl{display:block;color:#1a7a4a;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-cg-pullquote{background:#0c1f35;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-cg-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-cg-pullquote::before{content:'"';color:#7cbfe8;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-cg-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0 8px}
+.cfm-cg-card{background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;border-top:4px solid #1a7a4a}
+.cfm-cg-card h4{color:#0c1f35;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-cg-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+.cfm-cg-card a{color:#1a7a4a;font-weight:600}
+
+.cfm-cg-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-cg-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e8ecf0;border-radius:12px;padding:20px 22px}
+.cfm-cg-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#1a7a4a;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-cg-steps .txt h4{color:#0c1f35;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-cg-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-cg-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-cg-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-cg-redflags{margin:24px 0;display:flex;flex-direction:column;gap:14px}
+.cfm-cg-rf{background:#fff8f5;border:1px solid #fcd5c2;border-radius:12px;padding:20px 22px}
+.cfm-cg-rf h4{color:#c2410c;font-size:15px;font-weight:700;margin:0 0 8px}
+.cfm-cg-rf p{color:#4a5568;font-size:14.5px;line-height:1.7;margin:0}
+
+.cfm-cg-windows{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.cfm-cg-win{border-radius:12px;padding:22px;border:1px solid #e8ecf0}
+.cfm-cg-win.good{background:#f0f6ff}
+.cfm-cg-win.avoid{background:#fff8f5;border-color:#fcd5c2}
+.cfm-cg-win .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:10px}
+.cfm-cg-win.good .tag{background:#1a7a4a;color:#fff}
+.cfm-cg-win.avoid .tag{background:#c2410c;color:#fff}
+.cfm-cg-win h4{color:#0c1f35;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-cg-win p{color:#4a5568;font-size:14px;line-height:1.7;margin:0}
+
+.cfm-cg-faq{max-width:100%;margin:24px 0 8px}
+.cfm-cg-faq-item{border:1px solid #e8ecf0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-cg-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#0c1f35;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-cg-faq-q:hover{background:#f0f6ff}
+.cfm-cg-faq-q .plus{color:#1a7a4a;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-cg-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-cg-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-cg-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-cg-cta{background:#1a7a4a;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-cg-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-cg-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-cg-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-cg-cta a.btn-w{background:#fff;color:#1a7a4a;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-cg-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-cg-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-cg-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-cg-related h3{color:#0c1f35;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-cg-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-cg-rel-card{display:block;background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-cg-rel-card:hover{box-shadow:0 10px 30px rgba(12,31,53,.12);transform:translateY(-2px)}
+.cfm-cg-rel-card .lbl{display:block;color:#1a7a4a;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-cg-rel-card .ttl{color:#0c1f35;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-cg-cards{grid-template-columns:1fr}
+.cfm-cg-windows{grid-template-columns:1fr}
+.cfm-cg-rel-grid{grid-template-columns:1fr}
+.cfm-cg-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-cg-cta a.btn-w,.cfm-cg-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-cg-layout{padding:32px 20px}
+.cfm-cg-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-cg-pullquote{padding:26px 22px}
+.cfm-cg-pullquote p{font-size:17px}
+}
+</style>
+
+<div class="cfm-page-cost-guide">
+
+<div class="cfm-cg-progress" id="cfm-cg-progress"></div>
+
+<div class="cfm-cg-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-cg-hero" style="background-image:linear-gradient(160deg,rgba(12,31,53,.88) 0%,rgba(26,58,92,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/How-much-does-carpet-cleaning-cost-in-Medford-OR.webp')" role="img" aria-label="Carpet cleaning cost guide for Medford Oregon homeowners">
+<span class="ey">Local Guide &middot; Jackson County, Oregon</span>
+<h1>How Much Does Carpet Cleaning Cost in Medford, OR?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">8 min read</span></p>
+</div>
+
+<div class="cfm-cg-layout">
+
+<div class="cfm-cg-wrap">
+
+<div class="cfm-cg-intro" id="direct-answer">
+<p>Most Medford homes cost $150&ndash;$280 for a whole-house carpet clean, and a single bedroom typically runs $75&ndash;$100. What you'll actually pay depends on your home's specific variables &mdash; room size, soil condition, carpet type, and whether pet treatment or wildfire smoke protocol is needed. See the full pricing breakdown from 214 completed Medford jobs at our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">transparent pricing guide</a>.</p>
+</div>
+
+<p class="cfm-cg-p">Getting a carpet cleaning quote in Medford shouldn't require a 20-minute phone call that ends with "we'll need to see it first." Our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">pricing guide</a> publishes the real numbers from 214 completed jobs in the 97501&ndash;97504 zip codes. This post covers something different &mdash; how to understand what's actually in a quote, what Medford-specific factors make your job cost more or less than a national average, and what the red flags look like in a market where bait-and-switch pricing still exists.</p>
+
+<h2 id="what-affects">What Actually Affects YOUR Specific Carpet Cleaning Quote</h2>
+<div class="cfm-cg-cards">
+<div class="cfm-cg-card"><h4>&#128207; Room Size, Not Room Count</h4><p>Square footage drives price, not the number of "rooms." A 10&times;12 bedroom is 120 sq ft; a 14&times;18 master is 252 sq ft &mdash; more than double. If a company quotes without measuring, ask: "Is this per square foot or per room, and what happens if my rooms are large?"</p></div>
+<div class="cfm-cg-card"><h4>&#129529; Soil Level</h4><p>A carpet vacuumed weekly and cleaned annually takes less time and fewer extraction passes than one untouched for years. Jackson County sees heavier-than-average soil from wildfire smoke particulate, volcanic clay from trail access, and high pet ownership.</p></div>
+<div class="cfm-cg-card"><h4>&#128062; Pet Contamination</h4><p>Enzyme treatment, UV inspection, and sub-surface extraction for pet contamination add real time and material cost &mdash; expect a separate line item, but ask what's specifically included versus a surface deodorizer spray.</p></div>
+<div class="cfm-cg-card"><h4>&#128293; Wildfire Smoke Treatment</h4><p>Smoke treatment needs oxidizing pre-spray, 8&ndash;12 minute dwell time (vs 2&ndash;3 for standard), and often a second extraction pass. This is a legitimate add-on, not an upsell. See our <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">wildfire smoke protocol</a>.</p></div>
+<div class="cfm-cg-card"><h4>&#129530; Carpet Fiber Type</h4><p>Wool, silk, or natural fiber rugs need pH-neutral chemistry, lower extraction temperature, and a dye transfer test before treatment. Mention any antique or pre-1990 natural fiber installation when you call &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">area rug guide</a>.</p></div>
+<div class="cfm-cg-card"><h4>&#127968; Access and Setup</h4><p>Second-floor rooms add hose run time. A home staged for sale with furniture cleared moves faster than a fully furnished one. Stairs are priced per flight since they need a different wand attachment.</p></div>
+</div>
+
+<h2 id="medford-factors">Medford-Specific Factors That Affect What You Actually Pay</h2>
+<span class="cfm-cg-lbl">Jackson County Context</span>
+<p class="cfm-cg-p">National carpet cleaning cost averages come from cities with different soil profiles, climates, and carpet challenges than Medford. Here's what makes Jackson County's costs &mdash; and what you're actually getting &mdash; different from a national estimate:</p>
+<div class="cfm-cg-pullquote">
+<p>Why does a national cost average not apply to a Medford home?</p>
+</div>
+<p class="cfm-cg-p"><strong>Wildfire season surcharge.</strong> Jackson County's July&ndash;September wildfire smoke season is the most significant local factor. After a major smoke event &mdash; when AQI has been above 150 for multiple consecutive days &mdash; a significant portion of Medford carpets need smoke treatment, not just standard cleaning. Demand rises, scheduling windows tighten, and smoke protocol adds real cost. If you're booking in August or September after a visible smoke event, budget for the add-on and book early.</p>
+<p class="cfm-cg-p"><strong>Trail and volcanic soil loading.</strong> Households that actively hike Table Rocks, Bear Creek Greenway, Roxy Ann Peak, or Prescott Park year-round have heavier-than-average soil loads in entry and living room carpets. The red volcanic clay from these trails is fine-particulate and penetrating, adding to what pre-spray must address &mdash; "maintenance pricing" may not apply even on recently cleaned carpet.</p>
+<p class="cfm-cg-p"><strong>Pet ownership density.</strong> Jackson County has above-average pet ownership, and Medford's active outdoor culture means dogs that hike also spend time on carpet. Multi-pet households with trail dogs are some of the most intensive jobs in the market &mdash; enzyme treatment on multiple zones isn't an upsell in these homes, it's what the job requires.</p>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/How-much-does-carpet-cleaning-cost-in-Medford-OR.webp" alt="Carpet cleaning cost factors in Medford Oregon &mdash; volcanic soil, wildfire smoke, and pet households" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="how-to-compare">How to Compare Two Carpet Cleaning Quotes Side by Side</h2>
+<p class="cfm-cg-p">Getting two quotes with different prices tells you very little unless you know what's actually in each one. Here's what to verify before choosing:</p>
+<ol class="cfm-cg-steps">
+<li><span class="num">1</span><div class="txt"><h4>Is the pre-vacuum included?</h4><p>Most budget cleaners skip the dry pre-vacuum since it adds 15&ndash;20 minutes. This step removes 80&ndash;90% of dry soil before moisture touches fiber &mdash; skipping it is the main reason carpet re-soils rapidly after a cheap clean. See our <a href="https://carpetcleaningmedfordoregon.com/should-i-vacuum-before-carpet-cleaning-medford-oregon/">pre-vacuum guide</a>.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>What extraction temperature does their equipment reach?</h4><p>Truck-mounted systems reach 195&ndash;240&deg;F; portables 100&ndash;130&deg;F; rentals 90&ndash;110&deg;F. Temperature matters for pet odor, smoke particulate, and allergen removal &mdash; ask what equipment an unusually cheap company uses.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Is the price per square foot or per room?</h4><p>Per square foot is the accurate method. Per room is an approximation that benefits the company when rooms are large, and often triggers on-site upcharges once they measure.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>What triggers an on-site price change?</h4><p>Ask for a published worst-case and best-case range. If a company can't or won't give one, be cautious &mdash; that's often a sign of quote-low-then-upsell pricing.</p></div></li>
+<li><span class="num">5</span><div class="txt"><h4>Is pet treatment included or a separate line item?</h4><p>If included, verify what it means. A light deodorizer spray isn't the same as enzyme pre-treatment with sub-surface extraction &mdash; ask what's specifically done if it's an add-on price.</p></div></li>
+<li><span class="num">6</span><div class="txt"><h4>What's the drying time?</h4><p>Our jobs dry in 2&ndash;4 hours in Medford summer conditions. Companies quoting 6&ndash;12 hour drying times are likely using low-suction equipment or leaving too much moisture in the backing &mdash; a real mold risk in Medford's wet winters.</p></div></li>
+</ol>
+
+<h2 id="red-flags">Red Flag Pricing Patterns in the Medford Carpet Cleaning Market</h2>
+<div class="cfm-cg-warn">
+<p>&#9888; These patterns appear regularly in Medford-area carpet cleaning advertising &mdash; worth knowing before you respond to any Groupon deal or "$9.95 per room" flyer.</p>
+</div>
+<div class="cfm-cg-redflags">
+<div class="cfm-cg-rf"><h4>"Whole house for $49" or "$9.95 per room"</h4><p>Classic bait-and-switch. A legitimately low price is followed by mandatory "add-ons" &mdash; protective coating claimed as required, pet treatment they say every home needs, stain treatment "not included" in the base. The job ends at $300&ndash;$500. If a price seems implausible for the service described, it is.</p></div>
+<div class="cfm-cg-rf"><h4>A quote given over the phone with no room dimensions</h4><p>Legitimate cleaners confirm room sizes or quote a clear per-square-foot rate. A flat "3 rooms for $X" quote given before anyone knows your room sizes is an approximation that will likely be adjusted on-site.</p></div>
+<div class="cfm-cg-rf"><h4>"No quote until we see it"</h4><p>Sometimes legitimate for unusual jobs, but also a technique for getting inside the door before naming a price. Most residential jobs can be quoted within a range based on room count, approximate square footage, and pet/specialty needs.</p></div>
+<div class="cfm-cg-rf"><h4>Extremely fast jobs with no pre-spray dwell time</h4><p>A company moving through multiple rooms in 30&ndash;40 minutes is skipping steps. Pre-spray dwell time alone should be 3&ndash;5 minutes per room standard, 8&ndash;12 for smoke or pet treatment &mdash; a thorough whole-house job takes 1.5&ndash;3 hours.</p></div>
+</div>
+
+<h2 id="worth-more">When Paying More Makes Sense for Medford Homes</h2>
+<div class="cfm-cg-windows">
+<div class="cfm-cg-win good"><span class="tag">Pay More</span><h4>After a Wildfire Smoke Event</h4><p>If Jackson County had a significant smoke event in the past two months and your home was affected, budget for the smoke treatment add-on &mdash; skipping it leaves odor that returns within days.</p></div>
+<div class="cfm-cg-win good"><span class="tag">Pay More</span><h4>Cat Contamination</h4><p>Cat urine needs specialist enzyme treatment and often sub-surface extraction. Improper treatment means it keeps returning with humidity and heat &mdash; the right process the first time beats cheap cleaning twice.</p></div>
+</div>
+
+<h2 id="when-standard">When Standard Pricing Is Enough</h2>
+<div class="cfm-cg-windows">
+<div class="cfm-cg-win avoid"><span class="tag">Standard OK</span><h4>Well-Kept Maintenance Clean</h4><p>Cleaned professionally in the last 12 months, vacuumed regularly, no pet contamination or smoke exposure &mdash; standard pricing at competitive Medford rates is exactly right.</p></div>
+<div class="cfm-cg-win avoid"><span class="tag">Standard OK</span><h4>Move-Out or Pre-Listing Clean</h4><p>Lightly soiled rental carpet needing a dated receipt, or carpet being cleaned for a home listing to photograph well &mdash; a standard professional clean covers both without needing premium add-ons.</p></div>
+</div>
+
+<h2 id="faq">Carpet Cleaning Cost FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-cg-faq" id="cfm-cg-faq">
+
+<div class="cfm-cg-faq-item" aria-expanded="false">
+<button class="cfm-cg-faq-q" type="button">Where can I see the actual carpet cleaning prices for Medford?<span class="plus">+</span></button>
+<div class="cfm-cg-faq-a"><div class="cfm-cg-faq-a-inner">We publish real pricing from 214 completed Medford jobs at our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">transparent pricing guide</a>. You'll find per-room rates, whole-house totals, and specialty service costs without needing to call first.</div></div>
+</div>
+
+<div class="cfm-cg-faq-item" aria-expanded="false">
+<button class="cfm-cg-faq-q" type="button">Is it cheaper to rent a Rug Doctor or hire a professional in Medford?<span class="plus">+</span></button>
+<div class="cfm-cg-faq-a"><div class="cfm-cg-faq-a-inner">A Rug Doctor rental runs $35&ndash;$50/day plus solution. Professional cleaning costs more upfront but extracts more deeply, dries faster, and avoids the sticky residue that causes rapid re-soiling. For light maintenance a rental can be adequate; for Medford's typical soil profile &mdash; volcanic clay, wildfire smoke, pet households &mdash; professional extraction achieves results a rental physically can't, due to temperature and suction limits.</div></div>
+</div>
+
+<div class="cfm-cg-faq-item" aria-expanded="false">
+<button class="cfm-cg-faq-q" type="button">Why do carpet cleaning quotes in Medford vary so much?<span class="plus">+</span></button>
+<div class="cfm-cg-faq-a"><div class="cfm-cg-faq-a-inner">Four main reasons: equipment quality (truck-mounted vs portable vs rental-grade), process completeness (pre-vacuum, enzyme treatment, pH-balanced rinse included or not), pricing model (per room vs per square foot), and business model (some quote low and adjust on-site). Compare quotes by asking what's specifically included in each step, not just the total.</div></div>
+</div>
+
+<div class="cfm-cg-faq-item" aria-expanded="false">
+<button class="cfm-cg-faq-q" type="button">Should I get multiple quotes for carpet cleaning in Medford?<span class="plus">+</span></button>
+<div class="cfm-cg-faq-a"><div class="cfm-cg-faq-a-inner">Getting 2&ndash;3 quotes is reasonable for larger jobs. For a standard single-family home, the range in Medford is well-documented &mdash; significant deviation usually signals either a very basic service or a bait-and-switch entry price. More important than multiple quotes is asking the right questions of each company. See our full <a href="https://carpetcleaningmedfordoregon.com/faq/">FAQ page</a>.</div></div>
+</div>
+
+<div class="cfm-cg-faq-item" aria-expanded="false">
+<button class="cfm-cg-faq-q" type="button">Does carpet cleaning cost more after wildfire smoke events in Medford?<span class="plus">+</span></button>
+<div class="cfm-cg-faq-a"><div class="cfm-cg-faq-a-inner">Yes &mdash; smoke treatment using oxidizing pre-spray and extended dwell time adds cost beyond a standard clean. This is a legitimate add-on (different chemistry, more time), not an opportunistic charge. During Jackson County fire season (July&ndash;September), if you're booking post-smoke event, budget for the add-on and book early since demand increases.</div></div>
+</div>
+
+<div class="cfm-cg-faq-item" aria-expanded="false">
+<button class="cfm-cg-faq-q" type="button">Is carpet cleaning deductible from a security deposit in Oregon?<span class="plus">+</span></button>
+<div class="cfm-cg-faq-a"><div class="cfm-cg-faq-a-inner">Under Oregon law (ORS 90.300), landlords can deduct carpet cleaning costs from a security deposit only if the carpet condition exceeds normal wear and tear and the lease specifies professional cleaning at move-out. The key document is a dated service receipt &mdash; every job we do includes one, the standard form for deposit documentation in Jackson County.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-cg-toc" id="cfm-cg-toc" data-open="true">
+<span class="toc-ttl cfm-cg-toc-static">In This Guide</span>
+<button class="cfm-cg-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-cg-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-cg-toc-list">
+<li><a href="#direct-answer">What Carpet Cleaning Costs Here</a></li>
+<li><a href="#what-affects">What Affects YOUR Specific Quote</a></li>
+<li><a href="#medford-factors">Medford-Specific Cost Factors</a></li>
+<li><a href="#how-to-compare">How to Compare Quotes</a></li>
+<li><a href="#red-flags">Red Flag Pricing Patterns</a></li>
+<li><a href="#worth-more">When Paying More Makes Sense</a></li>
+<li><a href="#when-standard">When Standard Pricing Is Enough</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-cg-cta">
+<h2>See Real Medford Carpet Cleaning Prices</h2>
+<p>From 214 completed jobs in Jackson County. Confirmed before we start. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; View Pricing Guide &rarr;</a>
+<a class="btn-o" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-cg-related">
+<h3>Related Reading</h3>
+<div class="cfm-cg-rel-grid">
+<a class="cfm-cg-rel-card" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">
+<span class="lbl">&#128176; Pricing</span>
+<p class="ttl">Transparent Pricing Guide</p>
+</a>
+<a class="cfm-cg-rel-card" href="https://carpetcleaningmedfordoregon.com/faq/">
+<span class="lbl">&#10067; FAQ</span>
+<p class="ttl">Every Question Answered</p>
+</a>
+<a class="cfm-cg-rel-card" href="https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/">
+<span class="lbl">&#127942; Guide</span>
+<p class="ttl">Best Carpet Cleaners in Medford</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-cg-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-cg-toc');
+var tocBtn=toc.querySelector('.cfm-cg-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-cg-faq .cfm-cg-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-cg-faq-q');
+var ans=item.querySelector('.cfm-cg-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-cg-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

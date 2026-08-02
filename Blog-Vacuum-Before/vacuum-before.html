@@ -4,12 +4,43 @@
 .cfm-page-vacuum-before *,.cfm-page-vacuum-before *::before,.cfm-page-vacuum-before *::after{box-sizing:border-box}
 .cfm-page-vacuum-before p,.cfm-page-vacuum-before li,.cfm-page-vacuum-before h1,.cfm-page-vacuum-before h2,.cfm-page-vacuum-before h3{word-wrap:break-word;overflow-wrap:break-word}
 
-.cfm-vb-hero{background:linear-gradient(160deg,#0c1f35 0%,#1a3a5c 100%);padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center}
+.cfm-vb-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52b788;z-index:9998;transition:width .1s linear}
+
+.cfm-vb-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-vb-topline a{color:#2d6a4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-vb-topline a:hover{text-decoration:underline}
+
+.cfm-vb-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
 .cfm-vb-hero .ey{display:block;color:#7cbfe8;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
 .cfm-vb-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
 .cfm-vb-hero .byline{color:#7cbfe8;font-size:13.5px;font-weight:600;margin:0}
+.cfm-vb-hero .rt{display:inline-block;background:#e8f5e9;color:#1b4332;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
 
-.cfm-vb-wrap{max-width:760px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px)}
+.cfm-vb-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-vb-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-vb-toc{flex:0 0 300px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #0c1f35;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-vb-toc .toc-ttl{display:block;color:#1a7a4a;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-vb-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-vb-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-vb-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-vb-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-vb-toc a:hover{color:#0c1f35}
+.cfm-vb-toc a.active{color:#0c1f35;font-weight:700}
+.cfm-vb-toc a.active::before{color:#1a7a4a}
+.cfm-vb-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-vb-layout{flex-direction:column}
+.cfm-vb-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-vb-toc-static{display:none}
+.cfm-vb-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-vb-toc-toggle .chev{transition:transform .2s;color:#1a7a4a}
+.cfm-vb-toc[data-open="false"] ol{display:none}
+.cfm-vb-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-vb-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-vb-toc[data-open="true"] ol{margin-top:12px}
+}
 
 .cfm-vb-intro{background:#f0f6ff;border-left:4px solid #1a7a4a;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
 .cfm-vb-intro p{color:#0c1f35;font-size:17px;line-height:1.75;margin:0;font-weight:500}
@@ -84,8 +115,8 @@
 .cfm-vb-rel-grid{grid-template-columns:1fr}
 .cfm-vb-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
 .cfm-vb-cta a.btn-w,.cfm-vb-cta a.btn-o{text-align:center;padding:15px 20px}
-.cfm-vb-wrap{padding:32px 20px}
-.cfm-vb-hero{padding:48px 20px 40px}
+.cfm-vb-layout{padding:32px 20px}
+.cfm-vb-hero{min-height:320px;padding:48px 20px 40px}
 .cfm-vb-pullquote{padding:26px 22px}
 .cfm-vb-pullquote p{font-size:17px}
 }
@@ -93,21 +124,27 @@
 
 <div class="cfm-page-vacuum-before">
 
-<div class="cfm-vb-hero">
+<div class="cfm-vb-progress" id="cfm-vb-progress"></div>
+
+<div class="cfm-vb-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-vb-hero" style="background-image:linear-gradient(160deg,rgba(12,31,53,.88) 0%,rgba(26,58,92,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Should-I-vacuum-before-professional-carpet-cleaning.webp')" role="img" aria-label="Vacuum cleaner on carpet &mdash; should I pre-vacuum before professional carpet cleaning?">
 <span class="ey">Local Guide &middot; Jackson County, Oregon</span>
 <h1>Should I Vacuum Before Professional Carpet Cleaning?</h1>
-<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR &middot; 6 min read</p>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">6 min read</span></p>
 </div>
+
+<div class="cfm-vb-layout">
 
 <div class="cfm-vb-wrap">
 
-<div class="cfm-vb-intro">
+<div class="cfm-vb-intro" id="answer">
 <p>No, you don't need to vacuum before professional carpet cleaning. Carpet Friend Medford pre-vacuums every job as part of our standard 7-step process &mdash; a step most local companies skip because it adds 15 minutes. This single step removes up to 90% of dry soil before any moisture touches your carpet, and it's the main reason our results hold longer.</p>
 </div>
 
 <p class="cfm-vb-p">This is one of the most common pre-booking questions we get from Medford and Jackson County homeowners. The answer is no &mdash; you don't need to do it, because we do it as a standard step. But the more interesting question is why pre-vacuuming matters at all, and why so many carpet cleaning companies skip it. The answer to that changes how you think about every carpet cleaning estimate you've ever gotten.</p>
 
-<h2>Why Pre-Vacuuming Matters More Than You Think</h2>
+<h2 id="the-science">Why Pre-Vacuuming Matters More Than You Think</h2>
 <p class="cfm-vb-p">Before any moisture enters a carpet, the fiber contains a significant load of dry particulate. In Medford and Jackson County, that typically includes red volcanic clay from Table Rocks and Bear Creek Greenway trail access, PM2.5 wildfire smoke particles from the July&ndash;September fire season, pet dander and hair, pollen from the Rogue Valley's high-pollen spring, and ordinary household dust. These are dry particles &mdash; sitting in the carpet pile, loose, not yet bonded to the fiber.</p>
 <p class="cfm-vb-p">The moment water (or cleaning solution) contacts dry soil, the chemistry changes. Loose particulate mixes with water and creates a suspension &mdash; essentially mud. This mud is viscous, harder to extract than dry particulate, and some fraction re-deposits into the carpet backing as the water is extracted. Removing the dry soil first means the extraction step deals only with bonded contamination rather than a mixture of bonded + loose soil.</p>
 <p class="cfm-vb-p">A thorough dry pre-vacuum on a standard Medford home removes roughly 80&ndash;90% of the total soil in the carpet. The remaining 10&ndash;20% is what's bonded to carpet fibers &mdash; stains, oils, smoke compounds, urine residue &mdash; and what hot water extraction at 195&deg;F is designed to address. Starting extraction without pre-vacuuming means less complete extraction of bonded material and faster re-soiling after cleaning.</p>
@@ -116,7 +153,7 @@
 <p>Why does carpet get dirty faster after some professional cleanings?</p>
 </div>
 
-<h2>What Happens When Pre-Vacuuming Is Skipped</h2>
+<h2 id="what-happens">What Happens When Pre-Vacuuming Is Skipped</h2>
 <span class="cfm-vb-lbl">The Re-Soiling Problem</span>
 <div class="cfm-vb-cards">
 <div class="cfm-vb-card">
@@ -136,16 +173,35 @@
 </div>
 </div>
 
-<h2>Why This Matters Specifically for Medford Homes</h2>
-<p class="cfm-vb-p">Red volcanic clay from Table Rocks, Bear Creek Greenway, Roxy Ann Peak, and Prescott Park is unusually fine and penetrating &mdash; when wet it becomes highly cohesive and creates significant mud-in-backing if not removed dry first.</p>
-<p class="cfm-vb-p">Wildfire smoke PM2.5 from July&ndash;September events is the smallest particulate we deal with (0.1&ndash;2.5 micrometers), sitting at the base of carpet pile on the primary backing &mdash; pre-vacuuming with a HEPA vacuum removes a meaningful portion before water contacts the fiber.</p>
-<p class="cfm-vb-p">Pollen from Rogue Valley's high-pollen spring (March&ndash;May, peaking around Pear Blossom Festival in April) is organic protein-based particulate that swells and bonds more readily to synthetic fiber when wetted without prior removal.</p>
-<p class="cfm-vb-p"><strong>The upshot:</strong> Medford's specific soil profile &mdash; volcanic clay, smoke particulate, pollen &mdash; responds particularly well to pre-vacuuming, and performs worse without it compared to generic household dust.</p>
+<h2 id="medford-soil">Medford's Specific Soil Types &mdash; Why This Matters More Here</h2>
+<span class="cfm-vb-lbl">Rogue Valley Soil Profile</span>
+<p class="cfm-vb-p"><strong>Why does trail access matter for carpet cleaning results?</strong> The soil profile in Medford and Jackson County homes is heavier and more varied than a national average assumes. Here's what's actually in the carpet of a typical Jackson County home:</p>
+<div class="cfm-vb-cards">
+<div class="cfm-vb-card">
+<h4>&#129718; Red Volcanic Clay</h4>
+<p>Soil from Table Rocks, Bear Creek Greenway, Roxy Ann Peak, and Prescott Park is unusually fine-grained and penetrating. When wet, it becomes highly cohesive &mdash; a small amount creates significant mud-in-backing if not removed dry first. Homes near these trail access points carry this in entry and living room carpet year-round.</p>
+</div>
+<div class="cfm-vb-card">
+<h4>&#128293; Wildfire Smoke PM2.5</h4>
+<p>PM2.5 particles from July&ndash;September Rogue Valley fire events (0.1&ndash;2.5 micrometers) settle at the base of carpet pile, resting on the primary backing. Pre-vacuuming with a HEPA vacuum removes a meaningful portion of surface-level particulate before hot water drives it deeper.</p>
+</div>
+<div class="cfm-vb-card">
+<h4>&#127800; Rogue Valley Spring Pollen</h4>
+<p>March&ndash;May, the Rogue Valley's high pear orchard density produces exceptional pollen load. Pear, oak, and ryegrass pollen are protein-based &mdash; when wetted without prior vacuuming, they swell and bond more readily to synthetic fiber than dry pollen does.</p>
+</div>
+<div class="cfm-vb-card">
+<h4>&#128062; Pet Hair and Dander Compaction</h4>
+<p>Jackson County's active outdoor culture means many Medford dogs are trail dogs with dense, year-round-shedding coats. Pet hair mats into carpet pile under foot traffic and forms a binding matrix that holds other soil &mdash; pre-vacuuming removes this matrix before extraction has to work through it.</p>
+</div>
+</div>
+<p class="cfm-vb-p"><strong>The upshot:</strong> Medford's specific soil profile &mdash; volcanic clay, smoke particulate, pollen, pet hair &mdash; responds particularly well to pre-vacuuming, and performs worse without it compared to generic household dust.</p>
 
-<h2>Do You Need to Vacuum or Will We?</h2>
+<h2 id="diy-vs-nothing">Do You Need to Vacuum or Will We?</h2>
 <div class="cfm-vb-intro" style="margin-bottom:24px">
 <p>We pre-vacuum every job &mdash; it's part of our standard 7-step process, not an add-on. You don't need to do anything to the carpet before we arrive. If you've already vacuumed recently, that's fine &mdash; it reduces our pre-vacuum load slightly. If you haven't, we'll handle it. Either way, we don't skip this step.</p>
 </div>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Should-I-vacuum-before-professional-carpet-cleaning.webp" alt="Professional carpet cleaning preparation guide for Medford Oregon homeowners &mdash; what to do before your appointment" style="width:100%;border-radius:12px;margin:0 0 24px">
 
 <div class="cfm-vb-windows">
 <div class="cfm-vb-win good">
@@ -169,7 +225,7 @@
 </div>
 </div>
 
-<h2>Complete Carpet Cleaning Preparation Guide for Medford Homeowners</h2>
+<h2 id="full-prep-guide">Complete Carpet Cleaning Preparation Guide for Medford Homeowners</h2>
 
 <div class="cfm-vb-stage">
 <h4>Before the Appointment</h4>
@@ -198,7 +254,7 @@
 </ul>
 </div>
 
-<h2>Carpet Cleaning Preparation FAQ &mdash; Medford, Oregon</h2>
+<h2 id="faq">Carpet Cleaning Preparation FAQ &mdash; Medford, Oregon</h2>
 <div class="cfm-vb-faq" id="cfm-vb-faq">
 
 <div class="cfm-vb-faq-item" aria-expanded="false">
@@ -231,7 +287,31 @@
 <div class="cfm-vb-faq-a"><div class="cfm-vb-faq-a-inner">Plan on staying off the carpet for at least 1&ndash;2 hours, and wear clean socks if you need to cross it sooner. Keep pets off for 2&ndash;4 hours. Full drying typically takes 2&ndash;4 hours in summer's low humidity and 6&ndash;8 hours in winter, when Rogue Valley temperature inversions slow evaporation. Running ceiling fans and opening windows (on good air-quality days) speeds things up.</div></div>
 </div>
 
+<div class="cfm-vb-faq-item" aria-expanded="false">
+<button class="cfm-vb-faq-q" type="button">Does vacuuming before carpet cleaning help at all?<span class="plus">+</span></button>
+<div class="cfm-vb-faq-a"><div class="cfm-vb-faq-a-inner">Marginally, if done in the 24 hours before the appointment &mdash; it reduces the surface particulate load our pre-vacuum has to handle, which may shorten that step slightly. But it's not necessary: we vacuum thoroughly regardless, and whatever a household vacuum leaves behind in the backing is exactly what our professional extraction is built to address. More helpful preparation is clearing the floor and noting problem areas ahead of time.</div></div>
 </div>
+
+</div>
+
+</div>
+
+<aside class="cfm-vb-toc" id="cfm-vb-toc" data-open="true">
+<span class="toc-ttl cfm-vb-toc-static">In This Guide</span>
+<button class="cfm-vb-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-vb-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-vb-toc-list">
+<li><a href="#answer">The Direct Answer</a></li>
+<li><a href="#the-science">The Dry Soil Science</a></li>
+<li><a href="#what-happens">What Happens When It's Skipped</a></li>
+<li><a href="#medford-soil">Medford's Specific Soil Types</a></li>
+<li><a href="#diy-vs-nothing">Should You Vacuum or Wait?</a></li>
+<li><a href="#full-prep-guide">Complete Prep Guide</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
 
 </div>
 
@@ -264,6 +344,59 @@
 </div>
 
 </div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-vb-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-vb-toc');
+var tocBtn=toc.querySelector('.cfm-vb-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
 
 <script>
 (function(){

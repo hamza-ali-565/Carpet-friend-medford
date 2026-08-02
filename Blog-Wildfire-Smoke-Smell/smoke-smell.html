@@ -1,0 +1,382 @@
+<!-- wp:html -->
+<style id="cfm-ss-css">
+.cfm-page-smoke-smell{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-smoke-smell *,.cfm-page-smoke-smell *::before,.cfm-page-smoke-smell *::after{box-sizing:border-box}
+.cfm-page-smoke-smell p,.cfm-page-smoke-smell li,.cfm-page-smoke-smell h1,.cfm-page-smoke-smell h2,.cfm-page-smoke-smell h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-ss-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52b788;z-index:9998;transition:width .1s linear}
+
+.cfm-ss-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-ss-topline a{color:#2d6a4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-ss-topline a:hover{text-decoration:underline}
+
+.cfm-ss-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-ss-hero .ey{display:block;color:#f3a06b;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-ss-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-ss-hero .byline{color:#f3a06b;font-size:13.5px;font-weight:600;margin:0}
+.cfm-ss-hero .rt{display:inline-block;background:#fdece6;color:#7c2d12;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-ss-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-ss-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-ss-toc{flex:0 0 300px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #2b1408;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-ss-toc .toc-ttl{display:block;color:#a3441b;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-ss-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-ss-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-ss-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-ss-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-ss-toc a:hover{color:#2b1408}
+.cfm-ss-toc a.active{color:#2b1408;font-weight:700}
+.cfm-ss-toc a.active::before{color:#a3441b}
+.cfm-ss-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-ss-layout{flex-direction:column}
+.cfm-ss-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-ss-toc-static{display:none}
+.cfm-ss-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-ss-toc-toggle .chev{transition:transform .2s;color:#a3441b}
+.cfm-ss-toc[data-open="false"] ol{display:none}
+.cfm-ss-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-ss-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-ss-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-ss-event{background:#fdece6;border-left:4px solid #d85a30;border-radius:0 12px 12px 0;padding:18px 22px;margin:0 0 32px}
+.cfm-ss-event p{color:#7c2d12;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-ss-intro{background:#fdece6;border-left:4px solid #a3441b;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-ss-intro p{color:#2b1408;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-smoke-smell h2{color:#2b1408;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-ss-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-smoke-smell .cfm-ss-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-smoke-smell strong{color:#2b1408}
+
+.cfm-ss-lbl{display:block;color:#a3441b;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-ss-pullquote{background:#2b1408;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-ss-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-ss-pullquote::before{content:'"';color:#f3a06b;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-ss-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-ss-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e8ecf0;border-radius:12px;padding:20px 22px}
+.cfm-ss-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#a3441b;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-ss-steps .txt h4{color:#2b1408;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-ss-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-ss-timeline{margin:24px 0;display:flex;flex-direction:column;gap:0}
+.cfm-ss-tl-item{position:relative;padding:0 0 24px 30px;border-left:2px solid #e8ecf0}
+.cfm-ss-tl-item:last-child{border-left:2px solid transparent;padding-bottom:0}
+.cfm-ss-tl-item::before{content:'';position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:#a3441b}
+.cfm-ss-tl-item h4{color:#2b1408;font-size:15px;font-weight:700;margin:0 0 6px}
+.cfm-ss-tl-item p{color:#4a5568;font-size:14.5px;line-height:1.7;margin:0}
+
+.cfm-ss-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.cfm-ss-card{background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;border-top:4px solid #a3441b}
+.cfm-ss-card h4{color:#2b1408;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-ss-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+
+.cfm-ss-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-ss-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-ss-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-ss-table th{background:#2b1408;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-ss-table td{padding:12px 14px;border:1px solid #e8ecf0;color:#4a5568;line-height:1.5}
+.cfm-ss-table tr:nth-child(even) td{background:#f8f9fa}
+.cfm-ss-table-wrap{overflow-x:auto;margin:20px 0}
+
+.cfm-ss-faq{max-width:100%;margin:24px 0 8px}
+.cfm-ss-faq-item{border:1px solid #e8ecf0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-ss-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#2b1408;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-ss-faq-q:hover{background:#fdece6}
+.cfm-ss-faq-q .plus{color:#a3441b;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-ss-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-ss-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-ss-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-ss-cta{background:#2b1408;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-ss-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-ss-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-ss-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-ss-cta a.btn-w{background:#fff;color:#a3441b;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-ss-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-ss-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-ss-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-ss-related h3{color:#2b1408;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-ss-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-ss-rel-card{display:block;background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-ss-rel-card:hover{box-shadow:0 10px 30px rgba(43,20,8,.12);transform:translateY(-2px)}
+.cfm-ss-rel-card .lbl{display:block;color:#a3441b;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-ss-rel-card .ttl{color:#2b1408;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-ss-cards{grid-template-columns:1fr}
+.cfm-ss-rel-grid{grid-template-columns:1fr}
+.cfm-ss-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-ss-cta a.btn-w,.cfm-ss-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-ss-layout{padding:32px 20px}
+.cfm-ss-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-ss-pullquote{padding:26px 22px}
+.cfm-ss-pullquote p{font-size:17px}
+.cfm-ss-table{font-size:12.5px}
+}
+</style>
+
+<div class="cfm-page-smoke-smell">
+
+<div class="cfm-ss-progress" id="cfm-ss-progress"></div>
+
+<div class="cfm-ss-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-ss-hero" style="background-image:linear-gradient(160deg,rgba(43,20,8,.88) 0%,rgba(92,42,18,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-remove-wildfire-smoke-smell.webp')" role="img" aria-label="Wildfire smoke over Medford Oregon Rogue Valley &mdash; can carpet cleaning remove smoke smell?">
+<span class="ey">Local Guide &middot; Jackson County, Oregon</span>
+<h1>Can Carpet Cleaning Remove Wildfire Smoke Smell?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">9 min read</span></p>
+</div>
+
+<div class="cfm-ss-layout">
+
+<div class="cfm-ss-wrap">
+
+<div class="cfm-ss-event">
+<p>&#128293; Currently Active: East Evans Creek Fire &mdash; Southern Oregon, July 2026. Jackson County has been under fire restrictions since May 2026. If you're reading this during an active smoke event, close your windows first, then call us once the AQI returns to safe levels &mdash; this post covers what to do next.</p>
+</div>
+
+<div class="cfm-ss-intro" id="answer">
+<p>Yes &mdash; professional carpet cleaning can remove wildfire smoke smell from Medford homes, but results depend on three things: how long the smoke has been sitting in the carpet, whether the right smoke-specific process is used, and whether the smell is actually coming from the carpet rather than walls, HVAC, or soft furnishings. With the correct protocol &mdash; oxidizing pre-spray plus truck-mounted extraction &mdash; most post-event odor is gone within 48 hours of treatment.</p>
+</div>
+
+<p class="cfm-ss-p">Every summer in the Rogue Valley, Medford homeowners ask this question one of two ways: "Our house still smells like smoke and it's been three weeks &mdash; can cleaning help?" or "We just had a smoke event, should we clean right away?" The answer to both is yes, and the timing and process matter more than most people realize. This post covers the odor specifically &mdash; what's causing the smell, how to confirm the carpet is the source, when to book, and what results you can realistically expect based on jobs we've done across Jackson County.</p>
+<p class="cfm-ss-p">For the technical explanation of how PM2.5 particles embed in carpet fibers and our 5-step smoke protocol, see our <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">wildfire smoke service page</a>. For the fiber damage mechanism, see our related post on <a href="https://carpetcleaningmedfordoregon.com/how-wildfire-smoke-damages-carpet-fibers-medford-oregon/">how wildfire smoke damages carpet fibers</a>.</p>
+
+<h2 id="what-causes-smell">What Actually Causes the Smoke Smell &mdash; and Why It Persists</h2>
+<div class="cfm-ss-pullquote">
+<p>Why does smoke smell come and go in the same room?</p>
+</div>
+<p class="cfm-ss-p">Wildfire smoke smell isn't a single compound &mdash; it's a mixture of volatile organic compounds (VOCs) produced by incomplete combustion of wood and vegetation. When these VOCs land on carpet fiber, some <strong>adsorb</strong> (attach to the fiber surface) and some <strong>absorb</strong> (penetrate into the fiber structure itself). The adsorbed compounds are what you smell first after a smoke event. The absorbed compounds are what cause the smell to return weeks later &mdash; particularly when temperature rises, humidity changes, or foot traffic agitates the fibers.</p>
+<p class="cfm-ss-p">This is why the smell is often worse in heated rooms and in summer, when carpet warms up. The VOC release rate from absorbed compounds increases with temperature &mdash; in Medford's summer heat, carpet surface temperature near sunny windows runs even higher than ambient air. This is why "the air cleared but the house still smells weeks later": the outdoor PM2.5 event ended, but the absorbed VOCs in the carpet are still off-gassing.</p>
+<p class="cfm-ss-p">Oxidizing agents in smoke-specific pre-spray formulas chemically convert smoke VOC compounds into non-odorous byproducts &mdash; the meaningful difference between smoke treatment and standard cleaning. Hot water extraction then lifts both the oxidation byproducts and any remaining loose smoke compounds from the fiber. The result is elimination of the odor source, not masking. See our <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">smoke protocol page</a> for the full process.</p>
+
+<h2 id="source-check">Is the Smell Coming From Your Carpet? How to Tell</h2>
+<span class="cfm-ss-lbl">Source Check</span>
+<p class="cfm-ss-p"><strong>How do I know if smoke smell is from carpet, walls, or HVAC?</strong> Before booking carpet cleaning for smoke odor, it's worth knowing whether carpet is the primary source &mdash; or whether walls, HVAC, soft furnishings, or a combination are contributing. Here's a simple four-step approach:</p>
+<ol class="cfm-ss-steps">
+<li><span class="num">1</span><div class="txt"><h4>The Warm Room Test</h4><p>Close a carpeted room, raise the temperature slightly for 30 minutes, then enter and assess. Carpet VOCs release more readily when warm. If the smell is significantly stronger in a heated carpeted room than in a room with hard floors, carpet is a primary source.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>The Cover Test</h4><p>Lay a clean sheet of heavy paper over a section of carpet and press firmly for 30 seconds. Smell it immediately after removing. If it carries a smoke odor, VOCs are off-gassing from the carpet fiber at the surface level.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>The HVAC Smell Check</h4><p>Run the HVAC fan for 10 minutes with a fresh filter in place. If the home smells like smoke during or right after HVAC operation, the duct system is distributing smoke compounds &mdash; a separate problem from carpet, and one that will recontaminate freshly cleaned carpet if left unaddressed.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>The Wall and Surface Check</h4><p>Wipe a small section of interior wall near a window or vent with a clean white cloth. A yellowish or gray tint with detectable odor means volatile compounds have deposited on painted surfaces &mdash; addressed with paint sealing, outside carpet cleaning's scope but worth knowing about.</p></div></li>
+</ol>
+<p class="cfm-ss-p">In most Medford homes after a significant smoke event, all four sources have some contribution. Carpet is typically the largest single source due to surface area and fiber absorption. If you clean the carpet and the smell persists, HVAC distribution or wall off-gassing is likely contributing. Addressing carpet first is still the right starting point &mdash; it's the highest-impact intervention per dollar spent.</p>
+
+<h2 id="timing">When Should You Book Carpet Cleaning After a Smoke Event?</h2>
+<p class="cfm-ss-p"><strong>Should I clean my carpets immediately after wildfire smoke, or wait?</strong></p>
+<div class="cfm-ss-timeline">
+<div class="cfm-ss-tl-item"><h4>During the smoke event</h4><p>Don't book yet. Additional smoke compounds are still entering the home. Wait for the AQI to return to Moderate (below 100 on OregonAQI.com) before scheduling.</p></div>
+<div class="cfm-ss-tl-item"><h4>Day 1&ndash;2 after AQI clears</h4><p>Ventilate the home &mdash; open windows, run HVAC with a fresh HEPA-grade filter, allow fresh air to flush the indoor environment. Replace the HVAC filter afterward; it will be saturated with smoke particulate.</p></div>
+<div class="cfm-ss-tl-item"><h4>Day 3&ndash;7 after AQI clears</h4><p>Optimal booking window. VOC concentration is lower after ventilation, the event isn't ongoing, and compounds haven't had extended time to bond deeper into carpet fiber &mdash; a single treatment is most likely to fully resolve the odor here.</p></div>
+<div class="cfm-ss-tl-item"><h4>2&ndash;6 weeks after the event</h4><p>Still very much worth cleaning. Compounds have had more time to settle, but the same oxidizing protocol addresses them, with results typically as good as an early treatment.</p></div>
+<div class="cfm-ss-tl-item"><h4>3+ months or years later</h4><p>Still possible to significantly reduce odor in most cases. We've treated Medford homes with 2020 Almeda Fire smoke that never received a specific protocol, with significant results even 3&ndash;4 years later. We assess honestly during pre-inspection whether one or two treatments is the right plan.</p></div>
+</div>
+<div class="cfm-ss-warn">
+<p>&#9888; Common mistake: cleaning within hours of the AQI improving, before adequate ventilation. Compounds still arriving from the event period can re-deposit on freshly cleaned carpet during drying. Ventilate for at least 24 hours with a fresh HVAC filter in place before scheduling.</p>
+</div>
+
+<h2 id="what-to-expect">What Results Should You Realistically Expect?</h2>
+<p class="cfm-ss-p"><strong>Will the smoke smell be completely gone after one cleaning?</strong> Here's an honest, calibrated answer &mdash; not an oversell.</p>
+<div class="cfm-ss-cards">
+<div class="cfm-ss-card"><h4>Single Recent Event</h4><p>One Rogue Valley fire season, AQI above 150 for 3&ndash;10 days, booked within 4&ndash;6 weeks: expect complete odor resolution with one treatment in the majority of cases, typically undetectable within 24&ndash;48 hours of drying.</p></div>
+<div class="cfm-ss-card"><h4>Multiple Seasons, No Prior Treatment</h4><p>Homes cleaned with standard methods but never given a smoke-specific protocol accumulate VOC compounds in layers. One treatment significantly reduces odor; a second 4&ndash;6 weeks later often completes resolution.</p></div>
+<div class="cfm-ss-card"><h4>Almeda-Level Exposure</h4><p>Homes in the direct smoke envelope of a major structural fire event carry a higher VOC load. Expect significant improvement with one treatment; some homes benefit from a second for full resolution. We give an honest expectation at pre-inspection.</p></div>
+</div>
+
+<h2 id="if-smell-returns">What If the Smoke Smell Comes Back After Cleaning?</h2>
+<p class="cfm-ss-p"><strong>Why would smoke smell return after professional carpet cleaning?</strong></p>
+<ol class="cfm-ss-steps">
+<li><span class="num">1</span><div class="txt"><h4>The HVAC System Wasn't Addressed</h4><p>If duct work retained smoke compounds and keeps distributing them, carpet will recontaminate. Signs: smell is stronger when the furnace or AC runs, and distributed throughout the home rather than concentrated near carpet.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Standard Cleaning Was Used, Not Smoke Protocol</h4><p>Standard hot water extraction removes surface soil and some adsorbed VOCs but doesn't break down absorbed compounds in the fiber. Smell returns when temperature rises or the fiber is agitated.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Wall or Surface VOC Off-Gassing</h4><p>Painted drywall, wood trim, drapes, or upholstered furniture that retained VOCs will keep off-gassing into the room, and the carpet re-adsorbs some of these compounds from the air.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>The Carpet Needed a Second Treatment</h4><p>Heavy smoke exposure sometimes needs a second pass 4&ndash;6 weeks later to fully resolve remaining absorbed compounds &mdash; something we'll flag before starting if pre-inspection points that way.</p></div></li>
+</ol>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-remove-wildfire-smoke-smell.webp" alt="Rogue Valley wildfire smoke season &mdash; Medford Oregon carpet cleaning options after smoke events" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="options">Comparing Your Options After a Wildfire Smoke Event</h2>
+<div class="cfm-ss-table-wrap">
+<table class="cfm-ss-table">
+<thead><tr><th>Approach</th><th>What it does</th><th>What it doesn't do</th><th>Best for</th></tr></thead>
+<tbody>
+<tr><td>Do nothing</td><td>Saves money short-term</td><td>VOCs remain, smell persists for months</td><td>Carpet you plan to replace</td></tr>
+<tr><td>Air purifiers</td><td>Filters airborne particles after event</td><td>Doesn't remove compounds already in carpet</td><td>Supplemental &mdash; not standalone</td></tr>
+<tr><td>DIY baking soda</td><td>Absorbs some surface odor temporarily</td><td>No effect on absorbed carpet compounds</td><td>Temporary between cleanings</td></tr>
+<tr><td>Standard carpet cleaning</td><td>Removes visible soil, surface VOCs</td><td>May miss absorbed compounds in fiber</td><td>Light smoke, short exposure</td></tr>
+<tr><td>Smoke protocol cleaning</td><td>Oxidizes and removes VOC compounds</td><td>Can't address HVAC or wall sources alone</td><td>Most Medford smoke situations</td></tr>
+<tr><td>Carpet replacement</td><td>Complete resolution</td><td>Expensive &mdash; rarely necessary</td><td>Structurally compromised carpet</td></tr>
+</tbody>
+</table>
+</div>
+<p class="cfm-ss-p">For the vast majority of Medford homes after a standard Rogue Valley fire season smoke event, dedicated smoke protocol cleaning is the right choice. Replacement is rarely necessary unless the carpet had other significant pre-existing issues. Air purifiers are useful supplementary tools during and after smoke events but don't address the carpet fiber odor source &mdash; they treat the air, carpet cleaning treats the carpet. See our full <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">wildfire smoke treatment process</a> for details.</p>
+
+<h2 id="faq">Wildfire Smoke Smell FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-ss-faq" id="cfm-ss-faq">
+
+<div class="cfm-ss-faq-item" aria-expanded="false">
+<button class="cfm-ss-faq-q" type="button">Can professional carpet cleaning remove wildfire smoke smell permanently?<span class="plus">+</span></button>
+<div class="cfm-ss-faq-a"><div class="cfm-ss-faq-a-inner">Yes, in most cases &mdash; with the right process. Oxidizing pre-spray breaks down the VOC compounds in carpet fibers, and truck-mounted extraction at high temperature removes the broken-down compounds from the fiber. The result is odor elimination at the source, not masking. For heavy exposure or multiple seasons of accumulated smoke without specific treatment, a second treatment 4&ndash;6 weeks after the first may be recommended for complete resolution.</div></div>
+</div>
+
+<div class="cfm-ss-faq-item" aria-expanded="false">
+<button class="cfm-ss-faq-q" type="button">How long should I wait after a smoke event before getting carpets cleaned?<span class="plus">+</span></button>
+<div class="cfm-ss-faq-a"><div class="cfm-ss-faq-a-inner">Wait until the AQI returns to Moderate (below 100 on OregonAQI.com) and ventilate the home for 24&ndash;48 hours with a fresh HVAC filter in place. Cleaning during or immediately after an active event risks re-contaminating freshly cleaned carpet. After ventilation, the optimal window is 3&ndash;14 days after the AQI clears &mdash; though later booking still works, since smoke treatment remains effective for months or years after an event.</div></div>
+</div>
+
+<div class="cfm-ss-faq-item" aria-expanded="false">
+<button class="cfm-ss-faq-q" type="button">Can carpet cleaning help with smoke from the 2020 Almeda Fire?<span class="plus">+</span></button>
+<div class="cfm-ss-faq-a"><div class="cfm-ss-faq-a-inner">Yes. We've treated homes in Phoenix and Talent with Almeda-era smoke that had never received a dedicated smoke protocol. Even years after the event, VOC compounds remain in carpet fibers and respond to oxidizing pre-spray treatment. Extended bonding time means longer dwell periods, and some Almeda-era cases benefit from two treatments &mdash; we assess this during pre-inspection and give a realistic expectation before starting.</div></div>
+</div>
+
+<div class="cfm-ss-faq-item" aria-expanded="false">
+<button class="cfm-ss-faq-q" type="button">My carpet was "professionally cleaned" after a smoke event but still smells. What happened?<span class="plus">+</span></button>
+<div class="cfm-ss-faq-a"><div class="cfm-ss-faq-a-inner">Most likely, standard hot water extraction was used without an oxidizing pre-spray. Standard cleaning removes surface soil and some adsorbed VOCs but doesn't break down absorbed compounds embedded in the fiber structure, which continue to off-gas &mdash; especially when the carpet warms or is walked on. This is the most common reason smoke smell returns after "cleaning": the method wasn't designed for smoke.</div></div>
+</div>
+
+<div class="cfm-ss-faq-item" aria-expanded="false">
+<button class="cfm-ss-faq-q" type="button">Does wildfire smoke affect upholstery and rugs the same way as carpet?<span class="plus">+</span></button>
+<div class="cfm-ss-faq-a"><div class="cfm-ss-faq-a-inner">Yes &mdash; any fabric-based soft surface in a smoke-affected home will have VOC adsorption and absorption. Upholstery, drapes, and fabric rugs can all carry smoke odor, and area rugs in particular can hold significant compounds due to their thicker construction. We offer upholstery and area rug cleaning as complementary services.</div></div>
+</div>
+
+<div class="cfm-ss-faq-item" aria-expanded="false">
+<button class="cfm-ss-faq-q" type="button">Will air purifiers remove wildfire smoke smell from carpet?<span class="plus">+</span></button>
+<div class="cfm-ss-faq-a"><div class="cfm-ss-faq-a-inner">Air purifiers filter particles from the air in the room &mdash; they don't remove compounds already absorbed into carpet fibers. Running one after a smoke event reduces ongoing particle load, but it won't address VOCs already embedded in the carpet. An air purifier treats the air; carpet cleaning treats the carpet. Ventilate and filter the air first, then clean the carpet once the AQI is safe.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-ss-toc" id="cfm-ss-toc" data-open="true">
+<span class="toc-ttl cfm-ss-toc-static">In This Guide</span>
+<button class="cfm-ss-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-ss-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-ss-toc-list">
+<li><a href="#answer">The Direct Answer</a></li>
+<li><a href="#what-causes-smell">What Causes the Smell</a></li>
+<li><a href="#source-check">Is It Coming From Your Carpet?</a></li>
+<li><a href="#timing">When to Book After a Smoke Event</a></li>
+<li><a href="#what-to-expect">What Results to Expect</a></li>
+<li><a href="#if-smell-returns">If the Smell Comes Back</a></li>
+<li><a href="#options">Comparing Your Options</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-ss-cta">
+<h2>Smoke in Your Home? Book a Treatment After the AQI Clears.</h2>
+<p>Same-week scheduling. Smoke protocol confirmed upfront. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">&#128293; Learn About Smoke Protocol &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-ss-related">
+<h3>Related Reading</h3>
+<div class="cfm-ss-rel-grid">
+<a class="cfm-ss-rel-card" href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#128293; Service</span>
+<p class="ttl">Wildfire Smoke Carpet Cleaning Service</p>
+</a>
+<a class="cfm-ss-rel-card" href="https://carpetcleaningmedfordoregon.com/how-wildfire-smoke-damages-carpet-fibers-medford-oregon/">
+<span class="lbl">&#128293; Guide</span>
+<p class="ttl">How Wildfire Smoke Damages Carpet Fibers</p>
+</a>
+<a class="cfm-ss-rel-card" href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#127800; Guide</span>
+<p class="ttl">Pollen Season Carpet Cleaning Guide</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-ss-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-ss-toc');
+var tocBtn=toc.querySelector('.cfm-ss-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-ss-faq .cfm-ss-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-ss-faq-q');
+var ans=item.querySelector('.cfm-ss-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-ss-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->
