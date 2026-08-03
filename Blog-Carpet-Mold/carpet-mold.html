@@ -1,0 +1,400 @@
+<!-- wp:html -->
+<style id="cfm-cm-css">
+.cfm-page-carpet-mold{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-carpet-mold *,.cfm-page-carpet-mold *::before,.cfm-page-carpet-mold *::after{box-sizing:border-box}
+.cfm-page-carpet-mold p,.cfm-page-carpet-mold li,.cfm-page-carpet-mold h1,.cfm-page-carpet-mold h2,.cfm-page-carpet-mold h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-cm-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52b788;z-index:9998;transition:width .1s linear}
+
+.cfm-cm-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-cm-topline a{color:#2d6a4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-cm-topline a:hover{text-decoration:underline}
+
+.cfm-cm-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-cm-hero .ey{display:block;color:#f19a9a;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-cm-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-cm-hero .byline{color:#f19a9a;font-size:13.5px;font-weight:600;margin:0}
+.cfm-cm-hero .rt{display:inline-block;background:#fee2e2;color:#7f1d1d;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-cm-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-cm-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-cm-toc{flex:0 0 300px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #1b4332;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-cm-toc .toc-ttl{display:block;color:#9b1c1c;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-cm-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-cm-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-cm-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-cm-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-cm-toc a:hover{color:#1b4332}
+.cfm-cm-toc a.active{color:#1b4332;font-weight:700}
+.cfm-cm-toc a.active::before{color:#9b1c1c}
+.cfm-cm-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-cm-layout{flex-direction:column}
+.cfm-cm-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-cm-toc-static{display:none}
+.cfm-cm-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-cm-toc-toggle .chev{transition:transform .2s;color:#9b1c1c}
+.cfm-cm-toc[data-open="false"] ol{display:none}
+.cfm-cm-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-cm-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-cm-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-cm-intro{background:#fee2e2;border-left:4px solid #9b1c1c;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-cm-intro p{color:#1a1a1a;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-carpet-mold h2{color:#1b4332;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-cm-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-carpet-mold .cfm-cm-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-carpet-mold strong{color:#1a1a1a}
+
+.cfm-cm-lbl{display:block;color:#9b1c1c;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-cm-pullquote{background:#1b4332;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-cm-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-cm-pullquote::before{content:'"';color:#f19a9a;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-cm-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-cm-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e8ecf0;border-radius:12px;padding:20px 22px}
+.cfm-cm-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#9b1c1c;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-cm-steps .txt h4{color:#1a1a1a;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-cm-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-cm-timeline{margin:24px 0;display:flex;flex-direction:column;gap:0}
+.cfm-cm-tl-item{position:relative;padding:0 0 24px 30px;border-left:2px solid #e8ecf0}
+.cfm-cm-tl-item:last-child{border-left:2px solid transparent;padding-bottom:0}
+.cfm-cm-tl-item::before{content:'';position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:#9b1c1c}
+.cfm-cm-tl-item .zone{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:8px;margin-bottom:6px}
+.cfm-cm-tl-item.safe .zone{background:#dcfce7;color:#166534}
+.cfm-cm-tl-item.caution .zone{background:#fef3c7;color:#78350f}
+.cfm-cm-tl-item.growth .zone{background:#fed7aa;color:#7c2d12}
+.cfm-cm-tl-item.established .zone{background:#fee2e2;color:#7f1d1d}
+.cfm-cm-tl-item h4{color:#1a1a1a;font-size:15px;font-weight:700;margin:0 0 6px}
+.cfm-cm-tl-item p{color:#4a5568;font-size:14.5px;line-height:1.7;margin:0}
+
+.cfm-cm-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0 8px}
+.cfm-cm-card{background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;border-top:4px solid #9b1c1c}
+.cfm-cm-card h4{color:#1a1a1a;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-cm-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0 0 10px}
+.cfm-cm-card .meta{display:flex;flex-direction:column;gap:4px;font-size:12.5px;font-weight:700;margin-top:10px;padding-top:10px;border-top:1px dashed #e2e8f0}
+.cfm-cm-card .meta span.k{color:#9b1c1c}
+.cfm-cm-card .meta span.v{color:#4a5568;font-weight:600}
+
+.cfm-cm-signs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0 8px}
+.cfm-cm-sign{display:flex;gap:14px;align-items:flex-start;background:#f7f8fa;border:1px solid #e8ecf0;border-radius:12px;padding:18px 20px}
+.cfm-cm-sign .ic{flex-shrink:0;font-size:22px;line-height:1}
+.cfm-cm-sign h4{color:#1a1a1a;font-size:14.5px;font-weight:700;margin:0 0 5px}
+.cfm-cm-sign p{color:#4a5568;font-size:13.5px;line-height:1.6;margin:0}
+
+.cfm-cm-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-cm-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-cm-danger{background:#fee2e2;border-left:4px solid #9b1c1c;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-cm-danger p{color:#7f1d1d;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-cm-info{background:#dbeafe;border-left:4px solid #1e40af;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-cm-info p{color:#1e3a8a;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-cm-faq{max-width:100%;margin:24px 0 8px}
+.cfm-cm-faq-item{border:1px solid #e8ecf0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-cm-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#1a1a1a;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-cm-faq-q:hover{background:#fee2e2}
+.cfm-cm-faq-q .plus{color:#9b1c1c;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-cm-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-cm-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-cm-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-cm-cta{background:#1b4332;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-cm-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-cm-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-cm-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-cm-cta a.btn-w{background:#fff;color:#9b1c1c;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-cm-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-cm-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-cm-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-cm-related h3{color:#1b4332;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-cm-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-cm-rel-card{display:block;background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-cm-rel-card:hover{box-shadow:0 10px 30px rgba(27,67,50,.12);transform:translateY(-2px)}
+.cfm-cm-rel-card .lbl{display:block;color:#9b1c1c;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-cm-rel-card .ttl{color:#1b4332;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-cm-cards{grid-template-columns:1fr}
+.cfm-cm-signs{grid-template-columns:1fr}
+.cfm-cm-rel-grid{grid-template-columns:1fr}
+.cfm-cm-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-cm-cta a.btn-w,.cfm-cm-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-cm-layout{padding:32px 20px}
+.cfm-cm-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-cm-pullquote{padding:26px 22px}
+.cfm-cm-pullquote p{font-size:17px}
+}
+</style>
+
+<div class="cfm-page-carpet-mold">
+
+<div class="cfm-cm-progress" id="cfm-cm-progress"></div>
+
+<div class="cfm-cm-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-cm-hero" style="background-image:linear-gradient(160deg,rgba(27,67,50,.88) 0%,rgba(20,45,35,.85) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-cause-mold-Wet-carpet-risks.webp')" role="img" aria-label="Wet carpet close-up &mdash; mold risk after carpet cleaning in Medford Oregon Rogue Valley">
+<span class="ey">Local Guide &middot; Jackson County, Oregon</span>
+<h1>Can Carpet Cleaning Cause Mold? What Medford Homeowners Need to Know</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">9 min read</span></p>
+</div>
+
+<div class="cfm-cm-layout">
+
+<div class="cfm-cm-wrap">
+
+<div class="cfm-cm-intro" id="answer">
+<p>Professional carpet cleaning done correctly does not cause mold. Mold from carpet cleaning occurs when too much moisture is left in the carpet backing or pad &mdash; typically from low-suction equipment (rental machines or portable cleaners) that don't extract enough water. With professional truck-mounted extraction and proper drying, Medford carpets dry in 2&ndash;4 hours in summer &mdash; well within the safe window before mold can grow.</p>
+</div>
+
+<p class="cfm-cm-p">This is a legitimate concern, not an unfounded fear &mdash; over-wet carpet can absolutely develop mold, and it happens more often than most people realize after DIY cleaning or low-quality professional jobs. In Medford's climate, with its wet October&ndash;March winter season and temperature inversions that slow indoor air circulation, the mold risk from improperly dried carpet is real. This guide covers when and why it happens, how much time you have, and the specific drying steps for a Jackson County home.</p>
+
+<h2 id="when-mold-grows">When Professional Carpet Cleaning CAN Cause Mold</h2>
+<p class="cfm-cm-p"><strong>Under what conditions does carpet cleaning cause mold?</strong></p>
+<div class="cfm-cm-danger">
+<p>&#9888; Mold can begin growing in carpet backing within 24&ndash;48 hours of over-wet conditions in warm, humid environments. This is the single most serious risk from improper carpet cleaning technique.</p>
+</div>
+
+<ol class="cfm-cm-steps">
+<li><span class="num">1</span><div class="txt"><h4>Over-saturation from low-suction equipment</h4><p>The most common cause. Cleaning injects water/solution then extracts it; equipment that injects well but extracts weakly leaves significant moisture in backing and pad &mdash; the primary mechanical problem with rental machines and low-grade portable units. Carpet surface may feel only slightly damp within 2&ndash;3 hours, but backing can stay saturated for 24&ndash;36 hours &mdash; within the mold growth window.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Skipping dry strokes</h4><p>The "dry stroke" is a final vacuum-only pass (no water injection) to pull residual moisture before finishing. Frequently skipped in fast, budget jobs. Carpet receiving dry strokes dries 30&ndash;40% faster than one that doesn't.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Inadequate post-cleaning ventilation</h4><p>Even professionally extracted carpet needs air circulation. Cleaned carpet in a sealed room with no airflow &mdash; particularly in a Medford winter with a Rogue Valley temperature inversion outside, no outdoor ventilation, HVAC running to heat the home &mdash; can take 12&ndash;18 hours to dry instead of 2&ndash;4. Extended drying increases mold risk, especially with older carpet backing/underlays.</p></div></li>
+</ol>
+
+<h2 id="timeline">The Mold Timeline &mdash; How Fast Does It Grow?</h2>
+<div class="cfm-cm-info">
+<p>The specific timeline depends on temperature, humidity, and substrate. Carpet backing and pad are particularly susceptible due to their organic composition and moisture-retaining structure.</p>
+</div>
+<div class="cfm-cm-timeline">
+<div class="cfm-cm-tl-item safe"><span class="zone">Safe Zone</span><h4>Hour 0&ndash;24</h4><p>Well-extracted carpet from truck-mounted systems is dry within 2&ndash;4 hours in Medford summer, 6&ndash;8 hours in winter. No mold risk.</p></div>
+<div class="cfm-cm-tl-item caution"><span class="zone">Caution Zone</span><h4>Hour 24&ndash;48</h4><p>Backing still wet from low-suction/rental extraction. Mold spore germination becomes possible above 60&deg;F and moisture &gt;70%. Smell: slight earthy note beginning in backing, distinct from standard "damp" smell.</p></div>
+<div class="cfm-cm-tl-item growth"><span class="zone">Growth Zone</span><h4>Hour 48&ndash;72</h4><p>Active mold growth can begin in backing. In warm Medford summer (70&ndash;90&deg;F indoors), colonies can establish. Initial growth in backing/pad, not yet visible from above.</p></div>
+<div class="cfm-cm-tl-item established"><span class="zone">Established Mold</span><h4>72+ Hours</h4><p>Mold odor detectable from the surface. Possible visible evidence if carpet is pulled back. Remediation rather than re-cleaning may be required depending on species/extent.</p></div>
+</div>
+<p class="cfm-cm-p"><strong>What temperature makes mold grow fastest in Medford carpet?</strong> Mold growth in organic materials like carpet backing is fastest between 70&deg;F and 90&deg;F &mdash; exactly a Medford home's summer temperature range with windows closed after cleaning. The combination of Medford's summer ambient (typically 80&ndash;100&deg;F June&ndash;September) and reduced ventilation after cleaning creates the most favorable growth conditions. Counterintuitively, summer cleaning has the highest mold risk if technique is poor &mdash; the temperatures that speed drying also speed mold growth if extraction isn't thorough.</p>
+
+<h2 id="medford-risk">Medford's Seasonal Mold Risk After Carpet Cleaning</h2>
+<p class="cfm-cm-p"><strong>Is mold from carpet cleaning more likely in Medford's winter or summer?</strong></p>
+<div class="cfm-cm-cards">
+<div class="cfm-cm-card"><h4>Summer (May&ndash;September)</h4><p><strong>Paradox season:</strong> Medford's heat (90&ndash;110&deg;F ambient) seems least likely for mold but creates the most urgent drying window &mdash; high temps favor rapid growth if moisture is present. Saving grace: very low relative humidity (often 15&ndash;30% on hot days) speeds evaporative drying and generally keeps risk manageable with basic ventilation.</p><div class="meta"><span class="k">RISK: Moderate, managed with open windows + fans</span><span class="v">DRY TIME: 2&ndash;3 hours</span></div></div>
+<div class="cfm-cm-card"><h4>Fall (September&ndash;November)</h4><p><strong>Transition risk window:</strong> Cooling temps (60&ndash;75&deg;F), rising humidity with early rains. Homes closing windows for warmth while still warm indoors create a harder drying environment &mdash; the season with the most "why is my carpet still damp after cleaning?" calls.</p><div class="meta"><span class="k">RISK: Moderate-high without deliberate drying measures</span><span class="v">DRY TIME: 4&ndash;6 hours</span></div></div>
+<div class="cfm-cm-card"><h4>Winter (October&ndash;March)</h4><p><strong>Highest risk season:</strong> Sustained rain (Nov&ndash;March rainy season), regular temperature inversions trapping cold humid valley air, closed-home conditions limiting ventilation. Indoor humidity rises with sealed homes/occupant activity; backing retains moisture longer at cooler indoor temps (60&ndash;65&deg;F).</p><div class="meta"><span class="k">RISK: Highest &mdash; requires deliberate drying protocol</span><span class="v">DRY TIME: 6&ndash;8 hours with active ventilation</span></div></div>
+<div class="cfm-cm-card"><h4>Spring (March&ndash;May)</h4><p><strong>Improving but variable:</strong> Alternates between dry warm days and wet cool ones; April can bring Pear Blossom Festival warmth or late-season rain. Check the forecast day-of.</p><div class="meta"><span class="k">RISK: Low-moderate on warm days / moderate on rain days</span><span class="v">DRY TIME: 3&ndash;5 hours</span></div></div>
+</div>
+
+<h2 id="rental-warning">The Rental Machine Problem &mdash; Why Rug Doctor and DIY Machines Risk Mold</h2>
+<div class="cfm-cm-danger">
+<p>&#9888; The majority of mold-from-carpet-cleaning cases we've seen in Medford homes were caused by rental machines that over-saturated the carpet and couldn't extract sufficient moisture. This is the most preventable risk in residential carpet cleaning.</p>
+</div>
+<p class="cfm-cm-p"><strong>Why does a Rug Doctor leave more water in the carpet than a truck mount?</strong></p>
+<div class="cfm-cm-pullquote">
+<p>Truck-mounted systems generate 10&ndash;20x the vacuum power of the best portable or rental unit.</p>
+</div>
+<p class="cfm-cm-p">This suction differential pulls moisture from the backing, not just the surface pile. Our standard configuration pulls water from 60&ndash;70% of the way through the backing layer; a Rug Doctor or similar extracts primarily from the top 30&ndash;40% of the pile. Result: after a rental clean, pile feels dry or damp within 30&ndash;60 minutes, but backing can hold 3&ndash;5x the moisture of a professionally extracted carpet &mdash; the moisture that promotes mold.</p>
+<p class="cfm-cm-p">Rental machines typically deliver detergent mixed with cleaning water rather than a pH-balanced rinse. Detergent residue left in the backing (because extraction didn't remove it) creates a sticky organic substrate providing nutrients for mold spores in addition to moisture &mdash; why DIY-cleaned carpets sometimes develop mold even where a professionally cleaned carpet in the same room wouldn't.</p>
+
+<h2 id="drying-guide">How to Dry Carpet After Cleaning in Medford &mdash; Season-by-Season Guide</h2>
+<p class="cfm-cm-p"><strong>What's the fastest way to dry carpet after professional cleaning in Medford?</strong></p>
+<ol class="cfm-cm-steps">
+<li><span class="num">1</span><div class="txt"><h4>Summer (May&ndash;September)</h4><p>Open all windows &mdash; Medford's low-humidity summer air is ideal for rapid evaporative drying. Run ceiling fans on high, directed at the carpet surface. Turn off AC if running (cooling increases relative humidity near the surface and slows evaporation) &mdash; use fan-only HVAC mode instead. Expected dry time 2&ndash;3 hours with windows open + fans. Check air quality before opening windows during wildfire season (July&ndash;September) &mdash; if smoke is present, keep windows closed, use interior fan circulation only; dry time increases to 4&ndash;5 hours.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Fall (September&ndash;November)</h4><p>Open windows during warm daytime hours (11am&ndash;4pm), close in the evening as cooling begins. Use portable fans in addition to ceiling fans. If HVAC heating is running, set fan-only mode for 2&ndash;3 hours after cleaning. Expected dry time 4&ndash;6 hours with active fan management.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Winter (October&ndash;March)</h4><p>Do not open windows to outside &mdash; outdoor air is humid (50&ndash;80% RH) and cold; bringing it in slows drying. Instead run HVAC heat (warm dry forced air is the best tool), ceiling fans, and a dehumidifier if available. Expected dry time 6&ndash;8 hours with heat + fans. Don't schedule late-afternoon winter appointments &mdash; if cleaning finishes at 4pm and the home isn't ventilated overnight, morning dew humidity can extend drying; schedule morning appointments in winter.</p></div></li>
+</ol>
+<div class="cfm-cm-warn">
+<p>&#128161; Universal rules, all seasons: keep foot traffic off cleaned areas until fully dry. Don't place rugs or mats on top of cleaned carpet while drying. Don't push furniture back for at least 2 hours. If in doubt, wait &mdash; touching the surface isn't accurate for backing moisture; press a clean white cloth against the carpet for 10 seconds &mdash; if moisture transfers, it's not fully dry.</p>
+</div>
+
+<h2 id="warning-signs">Warning Signs Your Carpet Has Mold After Cleaning</h2>
+<div class="cfm-cm-danger">
+<p>These signs don't always mean mold &mdash; they can also indicate bacterial growth in wet backing or simple over-saturation odor. But they warrant investigation.</p>
+</div>
+<div class="cfm-cm-signs">
+<div class="cfm-cm-sign"><span class="ic">&#128269;</span><div><h4>Earthy or musty smell that wasn't there before cleaning</h4><p>Normal just-cleaned carpet smells neutral/slightly fresh. An earthy, musty, "basement" odor within 24&ndash;48 hours in an area that didn't smell that way is the primary indicator of microbial activity in the backing.</p></div></div>
+<div class="cfm-cm-sign"><span class="ic">&#128167;</span><div><h4>Carpet still feels damp 24+ hours after cleaning</h4><p>Professional cleaning dries in 2&ndash;8 hours depending on season. Carpet still detectably damp (white-cloth test) after 24 hours was over-saturated or in a poorly ventilated room.</p></div></div>
+<div class="cfm-cm-sign"><span class="ic">&#11015;&#65039;</span><div><h4>Smell is worse when you press down or walk heavily on the carpet</h4><p>Pressing releases spores and odor compounds upward from the backing. Intensifying smell under weight points to a backing-level source, not surface pile.</p></div></div>
+<div class="cfm-cm-sign"><span class="ic">&#127777;&#65039;</span><div><h4>Smell is stronger in humid conditions or when the HVAC runs</h4><p>Mold spores and mycotoxins volatilize more readily at higher humidity; worse smell on humid days or during HVAC operation means backing mold is distributing through air circulation.</p></div></div>
+<div class="cfm-cm-sign"><span class="ic">&#128252;</span><div><h4>Dark spots visible when carpet is pulled back from the edge</h4><p>Advanced cases show dark (black/gray/green) patches on the backing underside or pad top. Pull carpet from a corner near a baseboard to inspect if other signs are present.</p></div></div>
+<div class="cfm-cm-sign"><span class="ic">&#128062;</span><div><h4>Pets avoid previously normal carpet areas</h4><p>Animals often detect microbial activity before humans. A pet suddenly avoiding a previously normal zone after cleaning can indicate floor-level odor below human detection threshold.</p></div></div>
+</div>
+
+<h2 id="already-moldy">What to Do If Your Carpet Has Mold After Cleaning</h2>
+<p class="cfm-cm-p"><strong>Can mold in carpet be cleaned, or does the carpet need to be replaced?</strong></p>
+<div class="cfm-cm-cards" style="grid-template-columns:repeat(3,1fr)">
+<div class="cfm-cm-card" style="border-top-color:#16a34a"><h4>Early-Stage (24&ndash;72 Hours)</h4><p>Caught within 24&ndash;72 hours: professional extraction to remove remaining moisture, followed by antimicrobial treatment and aggressive drying (industrial fans, dehumidifiers) can stop growth and save the carpet. Call immediately &mdash; speed matters.</p></div>
+<div class="cfm-cm-card" style="border-top-color:#b45309"><h4>Established Mold in Backing</h4><p>Visible, or present more than 72 hours &mdash; recommendation in most cases is carpet and pad replacement. Cleaning established backing mold is rarely successful long-term; the organic structure retains mycotoxins even after cleaning and reactivation is common. Sub-floor inspection is also necessary; if mold reached wood or concrete, sealing with an encapsulating primer before new carpet installation is essential.</p></div>
+<div class="cfm-cm-card" style="border-top-color:#9b1c1c"><h4>Mold on Hard Floor Under Pad</h4><p>If over-wet carpet sat on a hardwood sub-floor, mold on the wood is a serious structural concern. Carpet and pad must be removed for the sub-floor to dry and be treated. Contact a mold remediation specialist for sub-floor assessment &mdash; outside the scope of carpet cleaning services.</p></div>
+</div>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-cause-mold-Wet-carpet-risks.webp" alt="Wet carpet backing &mdash; mold risk from improper carpet cleaning technique in Medford Oregon homes" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="faq">Wet Carpet and Mold FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-cm-faq" id="cfm-cm-faq">
+
+<div class="cfm-cm-faq-item" aria-expanded="false">
+<button class="cfm-cm-faq-q" type="button">Does professional carpet cleaning cause mold?<span class="plus">+</span></button>
+<div class="cfm-cm-faq-a"><div class="cfm-cm-faq-a-inner">Not when done correctly. Professional truck-mounted extraction dries in 2&ndash;4 hours summer, 6&ndash;8 hours winter. Mold requires 24&ndash;48+ hours of sustained moisture at warm temperatures to establish. Mold from carpet cleaning is almost always caused by rental or low-quality portable equipment that over-saturates the backing. Ask any cleaner: what's your expected drying time? &mdash; the answer says a lot about equipment quality.</div></div>
+</div>
+
+<div class="cfm-cm-faq-item" aria-expanded="false">
+<button class="cfm-cm-faq-q" type="button">How long before mold grows in wet carpet?<span class="plus">+</span></button>
+<div class="cfm-cm-faq-a"><div class="cfm-cm-faq-a-inner">Spore germination can begin within 24 hours in warm, moist conditions; active colony growth is typically detectable (by smell) at 48&ndash;72 hours in an over-wet carpet. Timeline depends on temperature (faster 70&ndash;90&deg;F), humidity, and backing organic content. Medford's summer heat accelerates growth &mdash; making complete extraction even more critical despite otherwise fast-drying conditions.</div></div>
+</div>
+
+<div class="cfm-cm-faq-item" aria-expanded="false">
+<button class="cfm-cm-faq-q" type="button">What does mold in carpet smell like?<span class="plus">+</span></button>
+<div class="cfm-cm-faq-a"><div class="cfm-cm-faq-a-inner">Earthy, musty, "basement-like" &mdash; distinct from the slight "wet carpet" smell of a recently cleaned carpet that hasn't fully dried. Key distinction: normal drying carpet smells neutral-to-fresh and dissipates as it dries; mold odor gets stronger as the carpet warms or under weight, and doesn't improve as it dries out. If the smell is worse 24 hours after cleaning than 4 hours after, investigate.</div></div>
+</div>
+
+<div class="cfm-cm-faq-item" aria-expanded="false">
+<button class="cfm-cm-faq-q" type="button">How long does carpet take to dry after professional cleaning in Medford?<span class="plus">+</span></button>
+<div class="cfm-cm-faq-a"><div class="cfm-cm-faq-a-inner">Summer (May&ndash;Sept): 2&ndash;4 hours with windows open + ceiling fans (check air quality before opening windows in wildfire season). Fall (Sept&ndash;Nov): 4&ndash;6 hours with fan circulation. Winter (Oct&ndash;Mar): 6&ndash;8 hours with HVAC heat (fan mode) + dehumidifier if available; don't open windows &mdash; Rogue Valley winter air is too humid. Spring (Mar&ndash;May): 3&ndash;5 hours depending on temperature and cloud cover.</div></div>
+</div>
+
+<div class="cfm-cm-faq-item" aria-expanded="false">
+<button class="cfm-cm-faq-q" type="button">Can I sleep in a room after carpet cleaning?<span class="plus">+</span></button>
+<div class="cfm-cm-faq-a"><div class="cfm-cm-faq-a-inner">Yes, if professionally extracted and near the dry end of the window &mdash; 3&ndash;4 hours typically sufficient in summer; for winter cleans wait for the 6&ndash;8 hour mark and confirm with the white-cloth test. Sleeping on still-wet carpet doesn't itself cause mold, but reduces air circulation and can slow drying. If in doubt, crack a window from the hallway or run a fan at the doorway pointed into the room.</div></div>
+</div>
+
+<div class="cfm-cm-faq-item" aria-expanded="false">
+<button class="cfm-cm-faq-q" type="button">What should I do if my carpet still smells musty a week after cleaning?<span class="plus">+</span></button>
+<div class="cfm-cm-faq-a"><div class="cfm-cm-faq-a-inner">First, test: press a clean white cloth against the carpet for 10 seconds &mdash; if moisture transfers, it wasn't fully dried. If dry but the smell persists: the smell may be coming from the pad (extraction reaches the carpet but not always the full pad), or if there was significant prior contamination (pet, food, water damage) the source may be in the backing/pad. Call us &mdash; we assess and advise on re-cleaning, sub-surface extraction, or antimicrobial treatment, no charge for the assessment on jobs we completed.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-cm-toc" id="cfm-cm-toc" data-open="true">
+<span class="toc-ttl cfm-cm-toc-static">In This Guide</span>
+<button class="cfm-cm-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-cm-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-cm-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#when-mold-grows">When Cleaning CAN Cause Mold</a></li>
+<li><a href="#timeline">The Mold Timeline</a></li>
+<li><a href="#medford-risk">Medford's Seasonal Mold Risk</a></li>
+<li><a href="#rental-warning">The Rental Machine Problem</a></li>
+<li><a href="#drying-guide">How to Dry Carpet After Cleaning</a></li>
+<li><a href="#warning-signs">Warning Signs of Mold</a></li>
+<li><a href="#already-moldy">What to Do If Mold Is Already There</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-cm-cta">
+<h2>Professional Extraction &mdash; Dry in Hours, Not Days</h2>
+<p>Truck-mounted extraction with dry stroke technique. Carpet dry in 2&ndash;4 hours in Medford summer. No over-saturation. No mold risk.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/our-process/">Our Process &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-cm-related">
+<h3>Related Reading</h3>
+<div class="cfm-cm-rel-grid">
+<a class="cfm-cm-rel-card" href="https://carpetcleaningmedfordoregon.com/should-i-vacuum-before-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#129529; Guide</span>
+<p class="ttl">Should I Vacuum Before Cleaning?</p>
+</a>
+<a class="cfm-cm-rel-card" href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#128197; Guide</span>
+<p class="ttl">How Often to Clean Carpets</p>
+</a>
+<a class="cfm-cm-rel-card" href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-pet-urine-medford-oregon/">
+<span class="lbl">&#128062; Guide</span>
+<p class="ttl">Can Cleaning Remove Pet Urine?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-cm-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-cm-toc');
+var tocBtn=toc.querySelector('.cfm-cm-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-cm-faq .cfm-cm-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-cm-faq-q');
+var ans=item.querySelector('.cfm-cm-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-cm-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

@@ -1,15 +1,17 @@
 <style id="cfm-css">/* CARPET FRIEND MEDFORD — PREMIUM HEADER */
+#cfm-header,#cfm-header *,#cfm-mob,#cfm-mob *{box-sizing:border-box}
 .wp-block-kadence-header{display:none!important}
 #cfm-header{position:sticky;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 20px rgba(12,31,53,.10);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 #cfm-topbar{background:#0c1f35;padding:7px 0;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
 #cfm-topbar a,#cfm-topbar span{color:#7cbfe8;font-size:12px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px}
 #cfm-topbar a:hover{color:#fff}
 #cfm-topbar .pipe{color:rgba(255,255,255,.2);font-size:11px}
-#cfm-nav-wrap{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:70px;gap:0}
-#cfm-logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;margin-right:28px}
-#cfm-logo img{width:44px;height:44px;border-radius:8px;object-fit:cover}
-#cfm-logo-text .name{display:block;font-size:15px;font-weight:800;color:#0c1f35;line-height:1.15;letter-spacing:-.3px}
-#cfm-logo-text .tagline{display:block;font-size:10px;font-weight:600;color:#1a7a4a;text-transform:uppercase;letter-spacing:1.5px}
+#cfm-nav-wrap{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:70px;gap:0;min-width:0}
+#cfm-logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:1;min-width:0;margin-right:28px}
+#cfm-logo img{width:44px;height:44px;border-radius:8px;object-fit:cover;flex-shrink:0}
+#cfm-logo-text{min-width:0}
+#cfm-logo-text .name{display:block;font-size:15px;font-weight:800;color:#0c1f35;line-height:1.15;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#cfm-logo-text .tagline{display:block;font-size:10px;font-weight:600;color:#1a7a4a;text-transform:uppercase;letter-spacing:1.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #cfm-nav{display:flex;align-items:center;list-style:none;margin:0;padding:0;gap:0;flex:1}
 #cfm-nav>li{position:relative}
 #cfm-nav>li>a{display:flex;align-items:center;gap:4px;padding:0 13px;height:70px;font-size:13px;font-weight:600;color:#374151;text-decoration:none;white-space:nowrap;transition:color .18s;border-bottom:3px solid transparent}
@@ -19,6 +21,9 @@
 .cfm-drop{position:absolute;top:calc(100% + 4px);left:0;background:#fff;border-radius:10px;box-shadow:0 10px 44px rgba(12,31,53,.14);border:1px solid #e8ecf0;min-width:240px;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s cubic-bezier(.4,0,.2,1);z-index:10000}
 #cfm-nav>li:hover .cfm-drop{opacity:1;visibility:visible;transform:translateY(0)}
 .cfm-drop.wide{min-width:560px;display:grid;grid-template-columns:1fr 1fr;gap:0;padding:16px 12px}
+.cfm-drop.wide3{min-width:760px;grid-template-columns:repeat(3,1fr)}
+.cfm-drop-all{grid-column:1/-1;font-weight:700!important}
+.cfm-div-full{grid-column:1/-1}
 .cfm-col-hd{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9ca3af;padding:6px 10px 4px;display:block}
 .cfm-drop a{display:flex;align-items:center;gap:9px;padding:8px 12px;font-size:13px;color:#374151;text-decoration:none;border-radius:6px;transition:all .15s;font-weight:500}
 .cfm-drop a:hover{background:#f0f6ff;color:#0c1f35}
@@ -47,7 +52,11 @@
 .cfm-mc .cc{background:#0c1f35;color:#fff}
 .cfm-mc .cb{background:#1a7a4a;color:#fff}
 @media(max-width:1000px){#cfm-nav>li>a{padding:0 9px;font-size:12px}}
-@media(max-width:880px){#cfm-nav{display:none}#cfm-cta{display:none}#cfm-burg{display:flex}#cfm-topbar{display:none}}</style>
+@media(max-width:880px){#cfm-nav{display:none}#cfm-cta{display:none}#cfm-burg{display:flex}#cfm-topbar{display:none}#cfm-nav-wrap{padding:0 16px;height:64px}#cfm-logo{margin-right:12px}}
+@media(max-width:360px){#cfm-logo-text .tagline{display:none}#cfm-logo img{width:38px;height:38px}#cfm-logo-text .name{font-size:14px}}
+html,body{max-width:100%;overflow-x:hidden}
+#cfm-header,#cfm-header *{max-width:100%}
+#cfm-mob{width:100%;box-sizing:border-box}</style>
 
 <!-- wp:html -->
 <div id="cfm-header">
@@ -122,18 +131,27 @@
 </li>
 <li>
 <a href="https://carpetcleaningmedfordoregon.com/blog/">Blog <span class="arr">▾</span></a>
-<div class="cfm-drop">
-<a href="https://carpetcleaningmedfordoregon.com/blog/"><span class="ic">📰</span>All Blog Posts</a>
-<div class="cfm-div"></div>
+<div class="cfm-drop wide wide3">
+<a class="cfm-drop-all" href="https://carpetcleaningmedfordoregon.com/blog/"><span class="ic">📰</span>All Blog Posts</a>
+<div class="cfm-div cfm-div-full"></div>
+<div><span class="cfm-col-hd">Seasonal &amp; Local</span>
 <a href="https://carpetcleaningmedfordoregon.com/how-wildfire-smoke-damages-carpet-fibers-medford-oregon/"><span class="ic">🔥</span>Wildfire Smoke &amp; Carpet Fibers</a>
-<a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-guide-medford-oregon/"><span class="ic">&#128218;</span>Area Rug Cleaning Guide</a>
-<a href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/"><span class="ic">&#128197;</span>How Often to Clean</a>
 <a href="https://carpetcleaningmedfordoregon.com/rogue-valley-mud-season-carpet-guide/"><span class="ic">🌧️</span>Mud Season Carpet Guide</a>
 <a href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/"><span class="ic">🌸</span>Pollen Season Carpet Guide</a>
+<a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/"><span class="ic">🔥</span>Can Cleaning Remove Wildfire Smoke Smell?</a>
+<a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-guide-medford-oregon/"><span class="ic">&#128218;</span>Area Rug Cleaning Guide</a>
+</div>
+<div><span class="cfm-col-hd">Pet &amp; Maintenance</span>
 <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-pet-urine-medford-oregon/"><span class="ic">🐾</span>Can Carpet Cleaning Remove Pet Urine?</a>
+<a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-dog-and-cat-urine/"><span class="ic">🐾</span>Dog &amp; Cat Urine — Multi-Pet Guide</a>
+<a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-kill-fleas-and-dust-mites/"><span class="ic">🦟</span>Kill Fleas &amp; Dust Mites?</a>
+<a href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/"><span class="ic">&#128197;</span>How Often to Clean</a>
 <a href="https://carpetcleaningmedfordoregon.com/should-i-vacuum-before-carpet-cleaning-medford-oregon/"><span class="ic">🧹</span>Should I Vacuum Before Carpet Cleaning?</a>
+</div>
+<div><span class="cfm-col-hd">Cost &amp; More</span>
 <a href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/"><span class="ic">💰</span>How Much Does Carpet Cleaning Cost?</a>
-<a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell-medford-oregon/"><span class="ic">🔥</span>Can Cleaning Remove Wildfire Smoke Smell?</a>
+<a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-cause-mold-wet-carpet-risks/"><span class="ic">🧫</span>Can Carpet Cleaning Cause Mold?</a>
+</div>
 </div>
 </li>
 </ul>
@@ -190,6 +208,9 @@
 <a href="https://carpetcleaningmedfordoregon.com/should-i-vacuum-before-carpet-cleaning-medford-oregon/">&#129529; Should I Vacuum Before Carpet Cleaning?</a>
 <a href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">&#128176; How Much Does Carpet Cleaning Cost?</a>
 <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell-medford-oregon/">&#128293; Can Cleaning Remove Wildfire Smoke Smell?</a>
+<a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-dog-and-cat-urine/">&#128062; Dog &amp; Cat Urine — Multi-Pet Guide</a>
+<a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-kill-fleas-and-dust-mites/">&#129947; Kill Fleas &amp; Dust Mites?</a>
+<a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-cause-mold-wet-carpet-risks/">&#129514; Can Carpet Cleaning Cause Mold?</a>
 </div>
 <div class="cfm-mc">
 <a class="cc" href="tel:+14583020101">📞 Call (458) 302-0101</a>

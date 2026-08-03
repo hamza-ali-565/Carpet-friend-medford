@@ -1,0 +1,380 @@
+<!-- wp:html -->
+<style id="cfm-fd-css">
+.cfm-page-fleas-dust-mites{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-fleas-dust-mites *,.cfm-page-fleas-dust-mites *::before,.cfm-page-fleas-dust-mites *::after{box-sizing:border-box}
+.cfm-page-fleas-dust-mites p,.cfm-page-fleas-dust-mites li,.cfm-page-fleas-dust-mites h1,.cfm-page-fleas-dust-mites h2,.cfm-page-fleas-dust-mites h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-fd-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52b788;z-index:9998;transition:width .1s linear}
+
+.cfm-fd-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-fd-topline a{color:#2d6a4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-fd-topline a:hover{text-decoration:underline}
+
+.cfm-fd-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-fd-hero .ey{display:block;color:#93c5fd;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-fd-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-fd-hero .byline{color:#93c5fd;font-size:13.5px;font-weight:600;margin:0}
+.cfm-fd-hero .rt{display:inline-block;background:#DBEAFE;color:#1E40AF;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-fd-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-fd-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-fd-toc{flex:0 0 300px;background:#fff;border:1px solid #e2e8f0;border-left:3px solid #1B4332;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-fd-toc .toc-ttl{display:block;color:#1E40AF;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-fd-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-fd-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-fd-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-fd-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-fd-toc a:hover{color:#1B4332}
+.cfm-fd-toc a.active{color:#1B4332;font-weight:700}
+.cfm-fd-toc a.active::before{color:#1E40AF}
+.cfm-fd-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-fd-layout{flex-direction:column}
+.cfm-fd-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-fd-toc-static{display:none}
+.cfm-fd-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-fd-toc-toggle .chev{transition:transform .2s;color:#1E40AF}
+.cfm-fd-toc[data-open="false"] ol{display:none}
+.cfm-fd-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-fd-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-fd-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-fd-intro{background:#DBEAFE;border-left:4px solid #1E40AF;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-fd-intro p{color:#1A1A1A;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-fleas-dust-mites h2{color:#1B4332;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-fd-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-fleas-dust-mites .cfm-fd-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-fleas-dust-mites strong{color:#1B4332}
+
+.cfm-fd-lbl{display:block;color:#1E40AF;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-fd-pullquote{background:#1B4332;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-fd-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-fd-pullquote::before{content:'"';color:#93c5fd;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-fd-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-fd-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e2e8f0;border-radius:12px;padding:20px 22px}
+.cfm-fd-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#1E40AF;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-fd-steps .txt h4{color:#1B4332;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-fd-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-fd-info{background:#DBEAFE;border-left:4px solid #1E40AF;border-radius:0 12px 12px 0;padding:18px 22px;margin:0 0 28px}
+.cfm-fd-info p{color:#1E3A8A;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-fd-lifecycle{margin:24px 0 8px;display:flex;flex-direction:column;gap:16px}
+.cfm-fd-lc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:22px 20px;border-top:4px solid #1E40AF;position:relative}
+.cfm-fd-lc-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 8px;flex-wrap:wrap}
+.cfm-fd-lc-card h4{color:#1B4332;font-size:15.5px;font-weight:700;margin:0}
+.cfm-fd-lc-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+.cfm-fd-badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.5px;padding:3px 11px;border-radius:20px;text-transform:uppercase;white-space:nowrap}
+.cfm-fd-badge-high{background:#DCFCE7;color:#166534}
+.cfm-fd-badge-mod{background:#FEF3C7;color:#92400E}
+.cfm-fd-badge-low{background:#FEE2E2;color:#991B1B}
+
+.cfm-fd-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-fd-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-fd-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-fd-table th{background:#1B4332;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-fd-table td{padding:12px 14px;border:1px solid #e2e8f0;color:#4a5568;line-height:1.5}
+.cfm-fd-table tr:nth-child(even) td{background:#f8f9fa}
+.cfm-fd-table-wrap{overflow-x:auto;margin:20px 0}
+
+.cfm-fd-faq{max-width:100%;margin:24px 0 8px}
+.cfm-fd-faq-item{border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-fd-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#1B4332;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-fd-faq-q:hover{background:#DBEAFE}
+.cfm-fd-faq-q .plus{color:#1E40AF;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-fd-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-fd-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-fd-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-fd-cta{background:#1B4332;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-fd-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-fd-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-fd-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-fd-cta a.btn-w{background:#fff;color:#1E40AF;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-fd-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-fd-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-fd-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-fd-related h3{color:#1B4332;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-fd-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-fd-rel-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-fd-rel-card:hover{box-shadow:0 10px 30px rgba(27,67,50,.12);transform:translateY(-2px)}
+.cfm-fd-rel-card .lbl{display:block;color:#1E40AF;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-fd-rel-card .ttl{color:#1B4332;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-fd-rel-grid{grid-template-columns:1fr}
+.cfm-fd-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-fd-cta a.btn-w,.cfm-fd-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-fd-layout{padding:32px 20px}
+.cfm-fd-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-fd-pullquote{padding:26px 22px}
+.cfm-fd-pullquote p{font-size:17px}
+.cfm-fd-table{font-size:12.5px}
+.cfm-fd-lc-head{flex-direction:column;align-items:flex-start;gap:8px}
+}
+</style>
+
+<div class="cfm-page-fleas-dust-mites">
+
+<div class="cfm-fd-progress" id="cfm-fd-progress"></div>
+
+<div class="cfm-fd-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-fd-hero" style="background-image:linear-gradient(160deg,rgba(27,67,50,.88) 0%,rgba(30,64,175,.75) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-kill-fleas-and-dust-mites.webp')" role="img" aria-label="Microscopic view of carpet fibers — can professional cleaning kill fleas and dust mites in Medford Oregon homes?">
+<span class="ey">Local Guide &middot; Jackson County, Oregon</span>
+<h1>Can Carpet Cleaning Kill Fleas and Dust Mites?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">8 min read</span></p>
+</div>
+
+<div class="cfm-fd-layout">
+
+<div class="cfm-fd-wrap">
+
+<div class="cfm-fd-intro" id="answer">
+<p>Yes &mdash; professional carpet cleaning kills fleas in the carpet, including eggs and larvae, through heat (195&deg;F extraction) and mechanical extraction. Dust mites are also significantly reduced &mdash; both killed by heat and removed by extraction. However, for flea infestations, carpet cleaning is one essential step in a complete plan that also requires treating pets and other home surfaces simultaneously.</p>
+</div>
+
+<p class="cfm-fd-p">Two of the most common pest-related carpet cleaning questions we get in Medford both start with "can carpet cleaning kill..." &mdash; and both have a similar answer: yes, with important caveats most articles don't tell you. This guide covers both in full &mdash; what hot water extraction actually does to fleas and dust mites, why carpet cleaning alone isn't enough for a flea infestation, and the Rogue Valley-specific seasonal context relevant for Jackson County homeowners.</p>
+
+<h2 id="fleas">Carpet Cleaning and Fleas &mdash; The Honest Answer</h2>
+<p class="cfm-fd-p"><strong>Does carpet cleaning kill fleas, eggs, and larvae?</strong> Hot water extraction at 195&deg;F kills adult fleas, flea eggs, and flea larvae on contact. Adult fleas die above 100&deg;F, eggs and larvae at similar thresholds. High-temperature water plus mechanical extraction force (physically removing fleas and debris from the pile) makes professional cleaning highly effective at reducing flea populations in carpet. What's extracted: adult fleas, flea eggs (white, about 1mm, often mistaken for salt grains), flea larvae (small, pale, worm-like), and flea feces &mdash; "flea dirt," dark specks of dried blood &mdash; all present in the lower pile and primary backing.</p>
+<div class="cfm-fd-pullquote">
+<p>Why isn't carpet cleaning enough to eliminate a flea infestation?</p>
+</div>
+<p class="cfm-fd-p">Because roughly 95% of a flea infestation doesn't live in the carpet at any given moment. Adult fleas mostly stay on the host pet; eggs are laid on the pet and drop off into carpet, furniture, and bedding; larvae live in carpet, furniture, cracks, and yard debris; pupae stay cocooned in carpet and furniture, highly resistant to both pesticides and cleaning because the cocoon is a physical barrier. Pupae can survive carpet cleaning in some cases, remain dormant for weeks, then hatch when CO2 from a warm-blooded host stimulates emergence. This is why homes cleaned and vacuumed repeatedly still have flea problems &mdash; the pupal stage keeps reintroducing adults.</p>
+
+<h2 id="flea-lifecycle">Understanding the Flea Life Cycle in Carpet</h2>
+<div class="cfm-fd-info">
+<p>This section explains why flea control requires multiple simultaneous approaches. Understanding the life cycle is what separates effective flea management from a revolving door of treatments that don't fully resolve the infestation.</p>
+</div>
+<div class="cfm-fd-lifecycle">
+<div class="cfm-fd-lc-card">
+<div class="cfm-fd-lc-head"><h4>Stage 1 &mdash; Eggs (about 50% of infestation)</h4><span class="cfm-fd-badge cfm-fd-badge-high">High kill rate</span></div>
+<p>Laid on the host, fall off into carpet, furniture, and bedding. A female flea lays 40&ndash;50 eggs per day. Smooth, oval, white, about 0.5mm &mdash; they slide into pile easily. Hot water extraction physically removes and kills eggs effectively.</p>
+</div>
+<div class="cfm-fd-lc-card">
+<div class="cfm-fd-lc-head"><h4>Stage 2 &mdash; Larvae (about 35% of infestation)</h4><span class="cfm-fd-badge cfm-fd-badge-high">High (carpet) / Low (under furniture, cracks)</span></div>
+<p>Avoid light, move deep into pile, under furniture, and into flooring cracks. Feed on flea feces and organic debris. In Rogue Valley's darker winter months (November&ndash;February), larvae can penetrate deeper due to reduced light repulsion. Extraction reaches larvae in the pile but is less effective under furniture and in cracks.</p>
+</div>
+<div class="cfm-fd-lc-card">
+<div class="cfm-fd-lc-head"><h4>Stage 3 &mdash; Pupae (about 10% of infestation)</h4><span class="cfm-fd-badge cfm-fd-badge-mod">Moderate kill rate</span></div>
+<p>Cocooned using environmental debris including carpet fibers, giving significant physical protection. Can remain dormant for months, hatching when they detect warmth, vibration, or CO2 from a nearby host. Extraction removes some pupae mechanically and heat penetrates some cocoons, but this is the hardest stage to fully address.</p>
+</div>
+<div class="cfm-fd-lc-card">
+<div class="cfm-fd-lc-head"><h4>Stage 4 &mdash; Adults (about 5% of infestation)</h4><span class="cfm-fd-badge cfm-fd-badge-high">High kill rate</span></div>
+<p>Found in carpet after jumping from the host or newly hatched, they seek a host within seconds. Professional cleaning extracts adults effectively.</p>
+</div>
+</div>
+
+<h2 id="dust-mites">Carpet Cleaning and Dust Mites &mdash; A Different Story</h2>
+<p class="cfm-fd-p"><strong>Does professional carpet cleaning reduce dust mites?</strong> Yes, significantly. 195&deg;F extraction kills dust mites throughout the pile. Unlike fleas, dust mites have no pupal stage or host-dependent life cycle taking them outside the carpet &mdash; they live, breed, and die entirely in carpet fibers, mattresses, and upholstered furniture. The thermal kill point for the two Oregon-dominant species (Dermatophagoides pteronyssinus and D. farinae) is around 130&deg;F, well below our 195&deg;F extraction temperature. A professional clean kills the vast majority present.</p>
+<p class="cfm-fd-p"><strong>If cleaning kills dust mites, why might allergies still be triggered?</strong> Because the allergen isn't the mite itself &mdash; it's dust mite feces and body fragments. A killed mite still leaves allergens behind. Extraction removes live mites, dead mites, feces, and fragments through mechanical extraction plus high-temperature rinsing, which is genuinely effective allergen reduction. But the carpet doesn't stay mite-free; mites repopulate from surrounding environments like mattresses and upholstery within weeks to months.</p>
+<p class="cfm-fd-p">For dust mite allergy management in Medford homes, carpet cleaning is high-impact but not permanent. Combine it with HEPA vacuuming (twice weekly for allergy sufferers), dust mite covers on mattresses and pillows, and indoor humidity kept below 50% for sustained reduction. In Rogue Valley summer heat (90&ndash;110&deg;F, low humidity) populations naturally decline; in the winter indoor season, with heated homes and closed windows, they proliferate.</p>
+
+<h2 id="medford-allergy">Medford's Allergy Season &mdash; Dust Mites in Context</h2>
+<span class="cfm-fd-lbl">Seasonal Context</span>
+<p class="cfm-fd-p"><strong>When are dust mite allergen levels highest in Jackson County homes?</strong> Two peak allergen windows matter for scheduling. Spring (March&ndash;June) is pollen-dominant &mdash; the Rogue Valley's high pear orchard density in the Bear Creek Valley, plus native oak and grass vegetation, creates some of Oregon's highest pollen counts, peaking in April around Pear Blossom Festival timing; carpet accumulates pollen alongside dust mite allergens. Winter (November&ndash;March) is dust mite-dominant &mdash; heated homes, closed windows, reduced humidity control, and extended indoor time create optimal breeding conditions, and Jackson County's temperature inversions trap households indoors longer than flat-valley cities, intensifying indoor allergen exposure.</p>
+<p class="cfm-fd-p">Optimal Medford cleaning windows for dust mite control: late April or May addresses full spring allergen accumulation (pollen plus dust mites) before summer heat and open-window season, resetting the baseline for summer. October or November addresses summer accumulation (wildfire smoke, dust mites, and trail soil) before winter indoor season begins &mdash; the single most impactful clean for allergy households. See our <a href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">pollen-specific guide</a> for more.</p>
+
+<h2 id="full-plan">The Complete Flea Control Plan &mdash; Carpet Is One Step</h2>
+<p class="cfm-fd-p">If you have a flea infestation and are considering carpet cleaning, here's the complete protocol that actually works. Carpet cleaning alone reduces the infestation significantly but won't eliminate it &mdash; these steps need to happen simultaneously.</p>
+<ol class="cfm-fd-steps">
+<li><span class="num">1</span><div class="txt"><h4>Treat the pet first</h4><p>Same day as (or before) carpet cleaning, every household pet needs vet-recommended flea treatment &mdash; topical monthly like Frontline or Advantage, oral medication, or a flea bath. Treating the environment without the host gives only temporary results; the pet is where new eggs originate.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Treat the carpet professionally</h4><p>195&deg;F hot water extraction the same day as pet treatment, addressing egg, larval, and adult populations simultaneously with pet treatment and preventing the re-deposition cycle.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Treat upholstered furniture</h4><p>Sofas, chairs, and pet beds are secondary flea environments; an IGR-based (insect growth regulator) spray is more effective than contact pesticides alone. Our <a href="https://carpetcleaningmedfordoregon.com/upholstery-cleaning-medford-oregon/">upholstery cleaning</a> can be done the same visit.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Treat outdoor areas where pets spend time</h4><p>Relevant for Medford's outdoor culture &mdash; yard, deck, Bear Creek Greenway routes &mdash; where perimeter sprays or diatomaceous earth in high-use areas reduce reinfestation.</p></div></li>
+<li><span class="num">5</span><div class="txt"><h4>Vacuum daily for 2&ndash;3 weeks after treatment</h4><p>Vibration stimulates pupae to hatch, mimicking a host walking past. Daily vacuuming cycles pupae through the hatch stimulus, exposing newly hatched adults to residual IGR and progressively reducing the dormant population. Discard bags or empty the canister outside each time.</p></div></li>
+</ol>
+
+<h2 id="dust-mite-plan">The Dust Mite Reduction Plan for Medford Homes</h2>
+<div class="cfm-fd-lifecycle">
+<div class="cfm-fd-lc-card">
+<h4>1. Professional carpet cleaning (primary)</h4>
+<p>195&deg;F truck-mounted extraction kills the vast majority of mites and removes allergens. Schedule spring and fall for optimal management.</p>
+</div>
+<div class="cfm-fd-lc-card">
+<h4>2. HEPA vacuuming between professional cleans</h4>
+<p>A HEPA filter removes surface feces and fragments between cleans &mdash; standard filters let allergen particles pass through and re-deposit. Twice weekly for allergy households, once weekly for maintenance.</p>
+</div>
+<div class="cfm-fd-lc-card">
+<h4>3. Humidity management</h4>
+<p>Mites need 70&ndash;80% relative humidity to thrive; keeping indoor humidity below 50% reduces breeding. Medford summer, often 20&ndash;30% RH outdoors, achieves this naturally with ventilation; winter needs a bedroom dehumidifier as the most effective supplement.</p>
+</div>
+<div class="cfm-fd-lc-card">
+<h4>4. Mattress and pillow encasements</h4>
+<p>Mattresses hold the highest mite populations of any household surface; allergen-proof encasements prevent access to breeding material. Combined with professional carpet cleaning, this produces the most significant measurable allergen reduction for Jackson County allergy sufferers.</p>
+</div>
+</div>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-kill-fleas-and-dust-mites.webp" alt="Carpet cleaning technician in Medford Oregon — professional treatment for flea and dust mite allergen reduction" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="faq">Fleas &amp; Dust Mites FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-fd-faq" id="cfm-fd-faq">
+
+<div class="cfm-fd-faq-item" aria-expanded="false">
+<button class="cfm-fd-faq-q" type="button">Does carpet cleaning kill all fleas?<span class="plus">+</span></button>
+<div class="cfm-fd-faq-a"><div class="cfm-fd-faq-a-inner">Carpet cleaning kills adult fleas, eggs, and larvae at high effectiveness; pupae in cocoons have some resistance from physical protection. Carpet cleaning alone cannot eliminate an infestation &mdash; it must pair with pet treatment and, for severe cases, furniture treatment and continued vacuuming. Without treating the source (the pet), the infestation restarts.</div></div>
+</div>
+
+<div class="cfm-fd-faq-item" aria-expanded="false">
+<button class="cfm-fd-faq-q" type="button">How soon after flea treatment should I have carpets cleaned in Medford?<span class="plus">+</span></button>
+<div class="cfm-fd-faq-a"><div class="cfm-fd-faq-a-inner">Same day as pet treatment ideally &mdash; treating the host and environment simultaneously prevents the re-deposition cycle. Coordinate with a vet appointment if possible, and continue vacuuming daily for 2&ndash;3 weeks afterward to cycle dormant pupae through the hatch stimulus.</div></div>
+</div>
+
+<div class="cfm-fd-faq-item" aria-expanded="false">
+<button class="cfm-fd-faq-q" type="button">Does hot water extraction kill dust mites in carpet?<span class="plus">+</span></button>
+<div class="cfm-fd-faq-a"><div class="cfm-fd-faq-a-inner">Yes &mdash; 195&deg;F is well above the thermal kill point for both common Oregon dust mite species. Extraction also removes allergens (feces and fragments) remaining after mite death. Mites repopulate from mattresses and furniture over weeks to months, so regular vacuuming and humidity management extend results.</div></div>
+</div>
+
+<div class="cfm-fd-faq-item" aria-expanded="false">
+<button class="cfm-fd-faq-q" type="button">Is carpet cleaning enough to help with dust mite allergies in Jackson County?<span class="plus">+</span></button>
+<div class="cfm-fd-faq-a"><div class="cfm-fd-faq-a-inner">It's the highest-impact single intervention for carpet-based allergen reduction. For sustained relief, combine it with HEPA vacuuming (twice weekly), mattress and pillow encasements, and humidity management below 50% in winter. Jackson County's high-pollen spring and dust-mite-intensive winter make twice-yearly professional cleaning the recommended schedule for allergy households. See our <a href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">pollen season guide</a>.</div></div>
+</div>
+
+<div class="cfm-fd-faq-item" aria-expanded="false">
+<button class="cfm-fd-faq-q" type="button">When is flea season in the Rogue Valley?<span class="plus">+</span></button>
+<div class="cfm-fd-faq-a"><div class="cfm-fd-faq-a-inner">Flea season peaks May through October, when warm temps favor rapid breeding and outdoor pet exposure is highest. Bear Creek Greenway, Prescott Park, and Rogue Valley trail systems are active flea environments during this window. Pupae can stay dormant through winter and hatch in spring &mdash; why "we haven't seen fleas since last fall and suddenly they're back in April" is a common Medford experience.</div></div>
+</div>
+
+<div class="cfm-fd-faq-item" aria-expanded="false">
+<button class="cfm-fd-faq-q" type="button">Do you offer flea treatment as a standalone service?<span class="plus">+</span></button>
+<div class="cfm-fd-faq-a"><div class="cfm-fd-faq-a-inner">We offer professional hot water extraction &mdash; the most effective carpet treatment for flea populations &mdash; but we do not apply pesticides. For complete control, coordinate with your vet for pet treatment and, for severe infestations, a licensed pest control operator for IGR-based environmental treatment. Our carpet cleaning is the critical environmental piece of that coordinated plan.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-fd-toc" id="cfm-fd-toc" data-open="true">
+<span class="toc-ttl cfm-fd-toc-static">In This Guide</span>
+<button class="cfm-fd-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-fd-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-fd-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#fleas">Carpet Cleaning and Fleas</a></li>
+<li><a href="#flea-lifecycle">The Flea Life Cycle</a></li>
+<li><a href="#dust-mites">Carpet Cleaning and Dust Mites</a></li>
+<li><a href="#medford-allergy">Medford's Allergy Season</a></li>
+<li><a href="#full-plan">Complete Flea Control Plan</a></li>
+<li><a href="#dust-mite-plan">Dust Mite Reduction Plan</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-fd-cta">
+<h2>Flea Problem or Allergy Season? We Can Help.</h2>
+<p>Truck-mounted extraction at 195&deg;F for Medford and Jackson County homes. Part of a complete plan that actually works.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/#book">Book Online &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-fd-related">
+<h3>Related Reading</h3>
+<div class="cfm-fd-rel-grid">
+<a class="cfm-fd-rel-card" href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#127800; Guide</span>
+<p class="ttl">Pollen Season Carpet Cleaning Guide</p>
+</a>
+<a class="cfm-fd-rel-card" href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-dog-and-cat-urine/">
+<span class="lbl">&#128021; Guide</span>
+<p class="ttl">Can Carpet Cleaning Remove Dog and Cat Urine?</p>
+</a>
+<a class="cfm-fd-rel-card" href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#128197; Guide</span>
+<p class="ttl">How Often Should You Clean Your Carpets?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-fd-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-fd-toc');
+var tocBtn=toc.querySelector('.cfm-fd-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-fd-faq .cfm-fd-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-fd-faq-q');
+var ans=item.querySelector('.cfm-fd-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-fd-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

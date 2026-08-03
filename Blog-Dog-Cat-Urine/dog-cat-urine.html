@@ -1,0 +1,353 @@
+<!-- wp:html -->
+<style id="cfm-dc-css">
+.cfm-page-dog-cat-urine{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-dog-cat-urine *,.cfm-page-dog-cat-urine *::before,.cfm-page-dog-cat-urine *::after{box-sizing:border-box}
+.cfm-page-dog-cat-urine p,.cfm-page-dog-cat-urine li,.cfm-page-dog-cat-urine h1,.cfm-page-dog-cat-urine h2,.cfm-page-dog-cat-urine h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-dc-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52B788;z-index:9998;transition:width .1s linear}
+
+.cfm-dc-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-dc-topline a{color:#2D6A4F;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-dc-topline a:hover{text-decoration:underline}
+
+.cfm-dc-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-dc-hero .ey{display:block;color:#95D5B2;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-dc-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-dc-hero .byline{color:#95D5B2;font-size:13.5px;font-weight:600;margin:0}
+.cfm-dc-hero .rt{display:inline-block;background:#E8F5E9;color:#1B4332;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-dc-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-dc-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-dc-toc{flex:0 0 300px;background:#fff;border:1px solid #E2E8F0;border-left:3px solid #1B4332;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-dc-toc .toc-ttl{display:block;color:#2D6A4F;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-dc-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-dc-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-dc-toc a{display:block;color:#4A5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-dc-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-dc-toc a:hover{color:#1B4332}
+.cfm-dc-toc a.active{color:#1B4332;font-weight:700}
+.cfm-dc-toc a.active::before{color:#52B788}
+.cfm-dc-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-dc-layout{flex-direction:column}
+.cfm-dc-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-dc-toc-static{display:none}
+.cfm-dc-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-dc-toc-toggle .chev{transition:transform .2s;color:#52B788}
+.cfm-dc-toc[data-open="false"] ol{display:none}
+.cfm-dc-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-dc-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-dc-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-dc-intro{background:#E8F5E9;border-left:4px solid #1B4332;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-dc-intro p{color:#1B4332;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-dog-cat-urine h2{color:#1A1A1A;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-dc-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-dog-cat-urine .cfm-dc-p{color:#4A5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-dog-cat-urine strong{color:#1A1A1A}
+
+.cfm-dc-lbl{display:block;color:#2D6A4F;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-dc-pullquote{background:#1B4332;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-dc-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-dc-pullquote::before{content:'"';color:#95D5B2;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-dc-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-dc-steps li{display:flex;gap:16px;align-items:flex-start;background:#F8F9FA;border:1px solid #E2E8F0;border-radius:12px;padding:20px 22px}
+.cfm-dc-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#2D6A4F;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-dc-steps .txt h4{color:#1A1A1A;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-dc-steps .txt p{color:#4A5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-dc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.cfm-dc-card{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:22px 20px;border-top:4px solid #52B788}
+.cfm-dc-card.amber{border-top-color:#d97706}
+.cfm-dc-card.red{border-top-color:#dc2626}
+.cfm-dc-card h4{color:#1A1A1A;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-dc-card p{color:#4A5568;font-size:14px;line-height:1.65;margin:0}
+
+.cfm-dc-tips{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.cfm-dc-tips li{display:flex;gap:14px;align-items:flex-start;background:#F8F9FA;border:1px solid #E2E8F0;border-radius:12px;padding:18px 20px}
+.cfm-dc-tips .ic{flex-shrink:0;font-size:20px;line-height:1}
+.cfm-dc-tips .txt p{color:#4A5568;font-size:14.5px;line-height:1.65;margin:0}
+.cfm-dc-tips .txt strong{color:#1A1A1A}
+
+.cfm-dc-faq{max-width:100%;margin:24px 0 8px}
+.cfm-dc-faq-item{border:1px solid #E2E8F0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-dc-faq-q{width:100%;text-align:left;background:#F8F9FA;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#1A1A1A;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-dc-faq-q:hover{background:#E8F5E9}
+.cfm-dc-faq-q .plus{color:#2D6A4F;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-dc-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-dc-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-dc-faq-a-inner{padding:20px 22px;font-size:15px;color:#4A5568;line-height:1.75}
+
+.cfm-dc-cta{background:#1B4332;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-dc-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-dc-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-dc-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-dc-cta a.btn-w{background:#fff;color:#1B4332;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-dc-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-dc-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-dc-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-dc-related h3{color:#1B4332;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-dc-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-dc-rel-card{display:block;background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-dc-rel-card:hover{box-shadow:0 10px 30px rgba(27,67,50,.12);transform:translateY(-2px)}
+.cfm-dc-rel-card .lbl{display:block;color:#2D6A4F;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-dc-rel-card .ttl{color:#1B4332;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-dc-cards{grid-template-columns:1fr}
+.cfm-dc-rel-grid{grid-template-columns:1fr}
+.cfm-dc-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-dc-cta a.btn-w,.cfm-dc-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-dc-layout{padding:32px 20px}
+.cfm-dc-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-dc-pullquote{padding:26px 22px}
+.cfm-dc-pullquote p{font-size:17px}
+}
+</style>
+
+<div class="cfm-page-dog-cat-urine">
+
+<div class="cfm-dc-progress" id="cfm-dc-progress"></div>
+
+<div class="cfm-dc-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-dc-hero" style="background-image:linear-gradient(160deg,rgba(27,67,50,.88) 0%,rgba(45,106,79,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-remove-dog-and-cat-urine.webp')" role="img" aria-label="Dog and cat sitting near carpet in Medford Oregon home — multi-pet urine treatment guide">
+<span class="ey">Local Guide &middot; Jackson County, Oregon</span>
+<h1>Can Carpet Cleaning Remove Dog and Cat Urine?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">9 min read</span></p>
+</div>
+
+<div class="cfm-dc-layout">
+
+<div class="cfm-dc-wrap">
+
+<div class="cfm-dc-intro" id="answer">
+<p>Yes &mdash; professional carpet cleaning can remove both dog and cat urine from the same carpet, but a multi-pet household requires a specific treatment sequence. Cat and dog contamination need different enzyme formulas, and in homes with both, we treat each zone with the formula matched to that animal's specific urine chemistry. Most mixed-pet households in Medford achieve full odor resolution in one professional visit.</p>
+</div>
+
+<p class="cfm-dc-p">Jackson County has one of Oregon's highest per-household pet ownership rates, and Rogue Valley homes are often multi-pet homes &mdash; a trail dog from Roxy Ann Peak hikes and an indoor cat who considers the guest bedroom her personal bathroom. These homes don't have "a pet odor problem." They have two overlapping contamination profiles that need to be read separately and treated in the right order. This guide covers what that actually looks like in a real Medford job.</p>
+<p class="cfm-dc-p">If you have a single-pet home and want the chemistry explanation, see our dedicated <a href="https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/">pet urine removal guide</a>. This post focuses specifically on the multi-pet situation.</p>
+
+<h2 id="the-problem">Why Dog and Cat Urine Together Is a Different Problem</h2>
+<div class="cfm-dc-pullquote">
+<p>What makes mixed-pet urine contamination harder to treat than a single type?</p>
+</div>
+<p class="cfm-dc-p">In most multi-pet homes, cat and dog contamination doesn't stay in separate zones. Over months and years, urine spots from both animals overlap &mdash; particularly in corner areas, along walls, near doorways, and under furniture. When two different urine chemical profiles are layered in the same carpet zone, a single enzyme formula applied to the area addresses one chemistry but not the other. The result homeowners notice: cleaning reduces the smell significantly but a faint, different-smelling odor remains &mdash; the enzyme addressed the dominant contamination type in that zone, but the other's compounds are still present and active.</p>
+<p class="cfm-dc-p">Dog urine's higher volume creates a moisture-spreading effect that can mask the location of underlying cat contamination. When UV inspection reveals a large dog urine zone, there's often a smaller, more concentrated cat contamination directly underneath or adjacent to it &mdash; deposited first, then covered by subsequent dog accidents. Treating the dog contamination without finding the underlying cat zones leaves a persistently "different" odor after cleaning.</p>
+<p class="cfm-dc-p"><strong>Why does carpet smell like two different things after cleaning?</strong></p>
+<p class="cfm-dc-p">We treat multi-pet homes differently from single-pet homes. The pre-inspection UV walk is more thorough &mdash; we map which contamination zones show the concentrated, smaller-area pattern typical of cat vs the broader, wetter pattern typical of dog. Enzyme selection is then zone-specific: cat formula on cat zones, dog formula on dog zones. Overlap zones get sequential treatment.</p>
+
+<h2 id="jackson-county">Medford's Multi-Pet Reality &mdash; Why This Matters Here</h2>
+<p class="cfm-dc-p"><strong>Why does the Rogue Valley have more multi-pet households than average?</strong></p>
+<p class="cfm-dc-p">The typical Jackson County multi-pet household combines an active outdoor dog &mdash; breeds like Australian Shepherds, Labs, and Border Collies are common in Medford's hiking community &mdash; with one or more indoor cats. The dog uses the Table Rocks trailhead, Prescott Park, or the Bear Creek Greenway daily. The cat uses the carpet. The outdoor dog's contribution tends to concentrate near entry points &mdash; the mudroom, entryway, carpeted rooms adjacent to exterior doors. The cat's contamination tends to be more distributed: bedroom corners, under beds, areas near litter boxes.</p>
+<p class="cfm-dc-p">Multi-pet carpet contamination in Medford has a seasonal pattern. Summer and fall bring more outdoor dog access to trails &mdash; and more muddy, wet paws alongside any marking. Winter (October&ndash;March), when Rogue Valley temperature inversions trap pets indoors for extended periods, tends to produce the highest accident rates. We see a consistent surge in multi-pet cleaning calls in January and February after the holidays, when households have accumulated two to three months of missed accidents.</p>
+<p class="cfm-dc-p"><strong>When is the best time to schedule multi-pet carpet cleaning in Medford?</strong></p>
+<p class="cfm-dc-p">For most multi-pet Medford households, twice-yearly professional cleaning is right &mdash; once in late spring (April&ndash;May, after mud season) and once in late fall (October&ndash;November, before the winter indoor season). This addresses spring soil + pet accumulation and resets before the high-risk indoor period. Households with senior pets or continence issues should consider quarterly cleaning.</p>
+
+<h2 id="how-it-works">How We Treat a Multi-Pet Home</h2>
+<p class="cfm-dc-p">The treatment for mixed dog-and-cat contamination follows the same IICRC-standard process as any pet job &mdash; but with zone-specific enzyme chemistry.</p>
+<ol class="cfm-dc-steps">
+<li><span class="num">1</span><div class="txt"><h4>Zone mapping</h4><p>UV inspection across the full carpeted area, categorizing each zone as cat pattern (concentrated, circular, brighter UV reaction), dog pattern (broader, wetter, linear marking patterns), or overlap. Documented so enzyme selection is applied correctly by zone.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Enzyme selection and application</h4><p>Cat zones get a protease-heavy enzyme for cat urine's higher protein/uric acid profile. Dog zones get a broad-spectrum enzyme for larger-volume, wider-spread contamination. Overlap zones: dog enzyme first (full dwell), extraction, then cat enzyme (full dwell), extraction &mdash; doubling time on overlap zones but producing complete results.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Extraction and rinse</h4><p>Truck-mounted hot water extraction at 195&deg;F after dwell, pH-balanced rinse to neutralize residual enzyme and prevent re-soiling. Zones with pad saturation get sub-surface extraction before the main pass.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Post-inspection</h4><p>UV check after drying (advice given on drying time, follow-up if needed). Confirm treatment success per zone, note any areas needing a second application.</p></div></li>
+</ol>
+
+<h2 id="sequence">Which Gets Treated First &mdash; Cat or Dog Zones?</h2>
+<p class="cfm-dc-p"><strong>Does the order of treatment matter in a multi-pet home?</strong></p>
+<p class="cfm-dc-p">For clearly separated zones, order doesn't affect the result. For overlap zones with both present, we treat dog contamination first.</p>
+<p class="cfm-dc-p">Dog urine zones are higher-volume and broader &mdash; treating first removes the largest amount of moisture/contamination, leaving a cleaner substrate for the cat enzyme second pass. Sequence in overlap zones: pre-spray dog enzyme &rarr; dwell 10 min &rarr; extract &rarr; pre-spray cat enzyme &rarr; dwell 12-15 min &rarr; extract &rarr; pH rinse &rarr; dry stroke. Total time for a severe overlap zone: ~35-45 min vs 20-25 min for a single-type zone.</p>
+
+<h2 id="compound-odor">The Compound Odor Problem &mdash; Why Your Carpet Smells Like Multiple Things</h2>
+<p class="cfm-dc-p"><strong>Why does a multi-pet home have a "layered" smell that's hard to describe?</strong></p>
+<p class="cfm-dc-p">Dog urine odor is primarily ammonia-forward &mdash; sharp, familiar. Cat urine odor has the ammonia component plus a distinctive sulfurous note from felinine metabolism. Combined, the odor profile is one neither single-type treatment nor masking agents fully address.</p>
+<p class="cfm-dc-p">Store-bought deodorizers are typically designed for one profile and mask with fragrance. It fades and the underlying compounds re-emerge. We don't use masking agents in multi-pet homes &mdash; the goal is compound elimination, not coverage.</p>
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-remove-dog-and-cat-urine.webp" alt="Multi-pet home in Medford Oregon — treating both dog and cat urine in the same carpet" style="width:100%;border-radius:12px;margin:24px 0">
+<p class="cfm-dc-p">A correctly treated multi-pet carpet should be odor-neutral, not "fresh-smelling" chemically &mdash; just clean. If odor remains after treatment and the carpet is fully dry (24-48 hrs), call us &mdash; usually HVAC redistribution or a missed zone, not treatment failure.</p>
+
+<h2 id="realistic">What to Realistically Expect &mdash; Multi-Pet Edition</h2>
+<div class="cfm-dc-cards">
+<div class="cfm-dc-card"><h4>Moderate Contamination</h4><p>Incidents over 1-3 years: most Medford homes in this category achieve full resolution in one visit. Zone-specific enzymes address both profiles. Drying 3-5 hrs in summer. Re-inspection at 48 hrs. Follow-up in 6 months.</p></div>
+<div class="cfm-dc-card amber"><h4>Heavy Contamination</h4><p>Same zones used repeatedly 3+ years: pile and backing likely saturated. Sub-surface extraction necessary. One treatment gives 75-90% improvement; second treatment 3-4 weeks later completes resolution in most cases. Assessed honestly at pre-inspection.</p></div>
+<div class="cfm-dc-card red"><h4>Sub-Floor Reached</h4><p>Through sustained cat contamination: urine that penetrated carpet &rarr; pad &rarr; subfloor creates a source cleaning can't reach. Carpet can be cleaned to neutral but subfloor keeps off-gassing. Signs: smell strongest at floor level, returns immediately after cleaning, concentrated in one spot. Solution: carpet/pad replacement with subfloor sealing (encapsulating primer like Kilz), not more cleaning.</p></div>
+</div>
+
+<h2 id="before-you-call">Before You Call Us &mdash; Multi-Pet Preparation</h2>
+<ul class="cfm-dc-tips">
+<li><span class="ic">&#128062;</span><div class="txt"><p><strong>Know your pet population</strong> &mdash; Tell us pet counts, types, approximate ages when booking (senior pets = higher accident rates, often concentrated areas). Helps estimate job time and bring the right enzyme inventory.</p></div></li>
+<li><span class="ic">&#128205;</span><div class="txt"><p><strong>Note known accident areas</strong> &mdash; Even approximate locations help focus UV inspection efficiently.</p></div></li>
+<li><span class="ic">&#128683;</span><div class="txt"><p><strong>Don't apply enzyme products 48 hours before the appointment</strong> &mdash; Residual chemistry can interfere with formula selection; tell us if you've recently used a store product.</p></div></li>
+<li><span class="ic">&#128682;</span><div class="txt"><p><strong>Arrange pets elsewhere during the job</strong> &mdash; Pets in the cleaning area is the most common job complication. Arrange a separate room, crate, or outside for the job duration + 2-3 hours after.</p></div></li>
+<li><span class="ic">&#127760;</span><div class="txt"><p><strong>Plan for ventilation</strong> &mdash; Windows open (check air quality first) and ceiling fans on after the technician leaves.</p></div></li>
+</ul>
+
+<h2 id="faq">Multi-Pet Carpet Cleaning FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-dc-faq" id="cfm-dc-faq">
+
+<div class="cfm-dc-faq-item" aria-expanded="false">
+<button class="cfm-dc-faq-q" type="button">Can professional cleaning remove both cat and dog urine in one visit?<span class="plus">+</span></button>
+<div class="cfm-dc-faq-a"><div class="cfm-dc-faq-a-inner">Yes in most cases &mdash; zone-mapped, matched enzyme formulas per area with proper dwell before extraction. Budget an extra 30-60 min vs a single-pet home of the same size.</div></div>
+</div>
+
+<div class="cfm-dc-faq-item" aria-expanded="false">
+<button class="cfm-dc-faq-q" type="button">Which is harder to treat &mdash; cat urine or dog urine?<span class="plus">+</span></button>
+<div class="cfm-dc-faq-a"><div class="cfm-dc-faq-a-inner">Cat urine is consistently harder &mdash; more concentrated, penetrates deeper, forms uric acid crystals needing specific enzyme chemistry. Dog urine covers more area but responds readily to broad-spectrum enzyme. Cat zones usually need the most attention and longest dwell.</div></div>
+</div>
+
+<div class="cfm-dc-faq-item" aria-expanded="false">
+<button class="cfm-dc-faq-q" type="button">Will one enzyme product treat both cat and dog urine?<span class="plus">+</span></button>
+<div class="cfm-dc-faq-a"><div class="cfm-dc-faq-a-inner">No formula is optimal for both simultaneously. "Multi-pet" products are broad-spectrum but partial for each. We bring both cat and dog formulas to every multi-pet job.</div></div>
+</div>
+
+<div class="cfm-dc-faq-item" aria-expanded="false">
+<button class="cfm-dc-faq-q" type="button">How often should a multi-pet Medford home be cleaned professionally?<span class="plus">+</span></button>
+<div class="cfm-dc-faq-a"><div class="cfm-dc-faq-a-inner">Twice yearly &mdash; spring (April-May, after mud season) and fall (October-November, before winter indoor season). Quarterly for senior pets/more than 2 animals/recurring health-related accidents. See our guide on <a href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">how often to clean carpets</a> between visits.</div></div>
+</div>
+
+<div class="cfm-dc-faq-item" aria-expanded="false">
+<button class="cfm-dc-faq-q" type="button">Do you serve multi-pet homes across all Medford zip codes?<span class="plus">+</span></button>
+<div class="cfm-dc-faq-a"><div class="cfm-dc-faq-a-inner">Yes &mdash; 97501, 97502, 97503, 97504, plus Central Point, Ashland, Jacksonville, Eagle Point, White City, Phoenix, Talent, Gold Hill, Rogue River. See our <a href="https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/">pet odor removal service</a>.</div></div>
+</div>
+
+<div class="cfm-dc-faq-item" aria-expanded="false">
+<button class="cfm-dc-faq-q" type="button">What if the smell comes back after treatment?<span class="plus">+</span></button>
+<div class="cfm-dc-faq-a"><div class="cfm-dc-faq-a-inner">First confirm the carpet is fully dry (4-6 hrs in Medford summer for multi-pet jobs). If odor persists after 48 hrs: check HVAC redistribution, check untreated soft furnishings, call us to assess a missed zone or subfloor contamination.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-dc-toc" id="cfm-dc-toc" data-open="true">
+<span class="toc-ttl cfm-dc-toc-static">In This Guide</span>
+<button class="cfm-dc-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-dc-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-dc-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#the-problem">Why Both Together Is Harder</a></li>
+<li><a href="#jackson-county">Medford's Multi-Pet Reality</a></li>
+<li><a href="#how-it-works">How We Treat Mixed Contamination</a></li>
+<li><a href="#sequence">Which Gets Treated First</a></li>
+<li><a href="#compound-odor">The Compound Odor Problem</a></li>
+<li><a href="#realistic">What to Realistically Expect</a></li>
+<li><a href="#before-you-call">Before You Call</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-dc-cta">
+<h2>Book Multi-Pet Carpet Cleaning in Medford</h2>
+<p>Zone-specific enzyme treatment for dog and cat contamination. Same-week scheduling. Upfront pricing.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/">View Pet Urine Service &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-dc-related">
+<h3>Related Reading</h3>
+<div class="cfm-dc-rel-grid">
+<a class="cfm-dc-rel-card" href="https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/">
+<span class="lbl">&#128062; Service</span>
+<p class="ttl">Pet Urine Removal Service</p>
+</a>
+<a class="cfm-dc-rel-card" href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-pet-urine-medford-oregon/">
+<span class="lbl">&#128062; Guide</span>
+<p class="ttl">Can Cleaning Remove Pet Urine?</p>
+</a>
+<a class="cfm-dc-rel-card" href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#128197; Guide</span>
+<p class="ttl">How Often to Clean Carpets</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-dc-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-dc-toc');
+var tocBtn=toc.querySelector('.cfm-dc-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-dc-faq .cfm-dc-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-dc-faq-q');
+var ans=item.querySelector('.cfm-dc-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-dc-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->
