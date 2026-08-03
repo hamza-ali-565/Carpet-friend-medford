@@ -1,0 +1,213 @@
+<!-- wp:html -->
+<style id="cfm-contact-css">
+.cfm-page-contact{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-contact *,.cfm-page-contact *::before,.cfm-page-contact *::after{box-sizing:border-box}
+.cfm-page-contact p,.cfm-page-contact li,.cfm-page-contact h1,.cfm-page-contact h2,.cfm-page-contact h3{word-wrap:break-word;overflow-wrap:break-word}
+.cfm-page-contact a{color:inherit}
+
+/* HERO */
+.cfm-ct-hero{background:linear-gradient(160deg,#0c1f35 0%,#1a3a5c 100%);min-height:clamp(220px,32vw,300px);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:clamp(40px,6vw,64px) clamp(20px,5vw,40px)}
+.cfm-ct-hero h1{color:#fff;font-size:clamp(28px,4.6vw,42px);font-weight:800;line-height:1.2;letter-spacing:-.5px;margin:0 0 14px;max-width:760px}
+.cfm-ct-hero p{color:#7cbfe8;font-size:clamp(14px,1.8vw,16.5px);line-height:1.6;margin:0;max-width:600px}
+
+/* SHARED SECTION WRAP */
+.cfm-ct-section{max-width:1100px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,32px)}
+.cfm-ct-lbl{display:block;text-align:center;color:#1a7a4a;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 10px}
+.cfm-page-contact h2{color:#0c1f35;font-size:clamp(24px,3.6vw,34px);font-weight:800;line-height:1.25;letter-spacing:-.4px;text-align:center;margin:0 0 40px}
+
+/* CONTACT METHOD CARDS */
+.cfm-ct-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cfm-ct-card{background:#fff;border:1px solid #e8ecf0;border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;position:relative}
+.cfm-ct-card.primary{border:2px solid #1a7a4a;background:#f0f6ff}
+.cfm-ct-card .ic{font-size:30px;margin-bottom:14px}
+.cfm-ct-badge{position:absolute;top:20px;right:20px;background:#1a7a4a;color:#fff;font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:100px;letter-spacing:.3px}
+.cfm-ct-card h3{color:#0c1f35;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+.cfm-ct-card .detail{color:#0c1f35;font-size:19px;font-weight:800;margin:0 0 10px;word-break:break-word}
+.cfm-ct-card .sub{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0 0 10px;flex:1}
+.cfm-ct-card .meta{color:#6b7280;font-size:13px;margin:0 0 18px}
+.cfm-ct-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#1a7a4a;color:#fff;font-weight:700;font-size:14.5px;padding:13px 22px;border-radius:8px;text-decoration:none;transition:background .18s;white-space:nowrap}
+.cfm-ct-btn:hover{background:#15693e}
+.cfm-ct-btn.outline{background:transparent;color:#0c1f35;border:2px solid #0c1f35}
+.cfm-ct-btn.outline:hover{background:#0c1f35;color:#fff}
+
+/* FORM */
+.cfm-ct-formwrap{max-width:640px;margin:0 auto;background:#fff;border:1px solid #e8ecf0;border-radius:16px;padding:clamp(28px,5vw,40px)}
+.cfm-ct-formwrap form{display:flex;flex-direction:column;gap:18px}
+.cfm-ct-field{display:flex;flex-direction:column;gap:7px}
+.cfm-ct-field label{color:#0c1f35;font-size:13.5px;font-weight:700}
+.cfm-ct-field input,.cfm-ct-field select,.cfm-ct-field textarea{border:1px solid #e8ecf0;border-radius:8px;padding:12px 14px;font-size:15px;font-family:inherit;color:#0c1f35;background:#f7f8fa;resize:vertical}
+.cfm-ct-field input:focus,.cfm-ct-field select:focus,.cfm-ct-field textarea:focus{outline:none;border-color:#1a7a4a;background:#fff}
+.cfm-ct-submit{background:#1a7a4a;color:#fff;font-weight:800;font-size:16px;padding:15px 24px;border:none;border-radius:8px;cursor:pointer;transition:background .18s}
+.cfm-ct-submit:hover{background:#15693e}
+.cfm-ct-formnote{color:#6b7280;font-size:12.5px;font-style:italic;line-height:1.6;margin:16px 0 0;text-align:center}
+.cfm-ct-formnote a{color:#1a7a4a;font-weight:600;text-decoration:underline}
+
+/* SERVICE AREA */
+.cfm-ct-area{background:#f0f6ff;border-radius:16px;padding:clamp(32px,5vw,44px)}
+.cfm-ct-area p.copy{color:#4a5568;font-size:16.5px;line-height:1.75;text-align:center;max-width:760px;margin:0 auto 28px}
+.cfm-ct-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.cfm-ct-pill{background:#fff;border:1px solid #cfe0f7;color:#0c1f35;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:100px}
+.cfm-ct-pill.all{background:#1a7a4a;color:#fff;border-color:#1a7a4a}
+
+/* SOCIAL */
+.cfm-ct-social{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cfm-ct-soc{display:block;background:#fff;border:1px solid #e8ecf0;border-radius:14px;padding:26px 24px;text-align:center;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-ct-soc:hover{box-shadow:0 12px 32px rgba(12,31,53,.12);transform:translateY(-3px)}
+.cfm-ct-soc .ic{font-size:28px;margin-bottom:12px;display:block}
+.cfm-ct-soc h3{color:#0c1f35;font-size:16px;font-weight:800;margin:0 0 8px}
+.cfm-ct-soc p{color:#6b7280;font-size:13.5px;line-height:1.6;margin:0}
+
+@media(max-width:768px){
+.cfm-ct-cards{grid-template-columns:1fr}
+.cfm-ct-social{grid-template-columns:1fr}
+.cfm-ct-hero{min-height:200px;padding:44px 20px}
+.cfm-ct-badge{position:static;display:inline-block;margin-bottom:10px}
+}
+</style>
+
+<div class="cfm-page-contact">
+
+<div class="cfm-ct-hero">
+<h1>Get in Touch &mdash; We're Local and We Pick Up</h1>
+<p>Call, text, or email &mdash; we usually respond within a few hours.<br>Mon&ndash;Fri 8am&ndash;6pm &middot; Sat 9am&ndash;4pm &middot; Serving all of Jackson County</p>
+</div>
+
+<div class="cfm-ct-section">
+<span class="cfm-ct-lbl">How to Reach Us</span>
+<h2>Four Ways to Contact Carpet Friend Medford</h2>
+<div class="cfm-ct-cards">
+
+<div class="cfm-ct-card primary">
+<span class="cfm-ct-badge">Fastest response</span>
+<span class="ic">&#128222;</span>
+<h3>Call or Text</h3>
+<p class="detail">(458) 302-0101</p>
+<p class="sub">Fastest way to reach us. We answer during business hours and return calls within a few hours outside them.</p>
+<p class="meta">Mon&ndash;Fri 8am&ndash;6pm &middot; Sat 9am&ndash;4pm</p>
+<a class="cfm-ct-btn" href="tel:+14583020101">&#128222; Call Now &rarr;</a>
+</div>
+
+<div class="cfm-ct-card">
+<span class="ic">&#9993;</span>
+<h3>Email Us</h3>
+<p class="detail">carpetfriendmedford@gmail.com</p>
+<p class="sub">Good for questions that need a detailed response &mdash; fiber types, job scope, scheduling options.</p>
+<p class="meta">Usually within 24 hours on business days</p>
+<a class="cfm-ct-btn" href="mailto:carpetfriendmedford@gmail.com">&#9993; Send Email &rarr;</a>
+</div>
+
+<div class="cfm-ct-card">
+<span class="ic">&#128218;</span>
+<h3>Facebook Message</h3>
+<p class="detail">Carpet Friend Medford on Facebook</p>
+<p class="sub">Message us on Facebook if that's more convenient. We check messages regularly during business hours.</p>
+<a class="cfm-ct-btn" href="https://www.facebook.com/profile.php?id=61592073030535" target="_blank" rel="noopener">Open Facebook &rarr;</a>
+</div>
+
+<div class="cfm-ct-card">
+<span class="ic">&#128205;</span>
+<h3>Our Location</h3>
+<p class="detail">1600 Delta Waters Rd, Medford, OR 97504</p>
+<p class="sub">We're based in Medford but serve all of Jackson County. We come to you &mdash; no need to drop anything off.</p>
+<a class="cfm-ct-btn outline" href="https://maps.google.com/?q=1600+Delta+Waters+Rd,+Medford,+OR+97504" target="_blank" rel="noopener">Get Directions &rarr;</a>
+</div>
+
+</div>
+</div>
+
+<div class="cfm-ct-section">
+<span class="cfm-ct-lbl">Send a Message</span>
+<h2>Send Us a Message</h2>
+<div class="cfm-ct-formwrap">
+<form id="cfm-ct-form" action="mailto:carpetfriendmedford@gmail.com" method="post" enctype="text/plain">
+<div class="cfm-ct-field">
+<label for="cfm-ct-name">Your Name</label>
+<input type="text" id="cfm-ct-name" name="Name" required>
+</div>
+<div class="cfm-ct-field">
+<label for="cfm-ct-phone">Phone Number</label>
+<input type="tel" id="cfm-ct-phone" name="Phone" placeholder="(458) ___ ____" required>
+</div>
+<div class="cfm-ct-field">
+<label for="cfm-ct-time">Best Time to Call</label>
+<select id="cfm-ct-time" name="Best Time to Call">
+<option value="">Select an option (optional)</option>
+<option value="Morning (8am-12pm)">Morning (8am&ndash;12pm)</option>
+<option value="Afternoon (12pm-4pm)">Afternoon (12pm&ndash;4pm)</option>
+<option value="Evening (4pm-6pm)">Evening (4pm&ndash;6pm)</option>
+<option value="Anytime">Anytime</option>
+</select>
+</div>
+<div class="cfm-ct-field">
+<label for="cfm-ct-msg">Your Message</label>
+<textarea id="cfm-ct-msg" name="Message" rows="4" required></textarea>
+</div>
+<button class="cfm-ct-submit" type="submit">Send Message &rarr;</button>
+</form>
+<p class="cfm-ct-formnote">Submitting this form opens your email client with your message pre-filled to send to us. We don't share your information with anyone. Read our <a href="https://carpetcleaningmedfordoregon.com/privacy-policy/">Privacy Policy</a>.</p>
+</div>
+</div>
+
+<div class="cfm-ct-section">
+<div class="cfm-ct-area">
+<span class="cfm-ct-lbl">Where We Serve</span>
+<h2>We Come to You &mdash; Across All of Jackson County</h2>
+<p class="copy">Carpet Friend Medford is a mobile service &mdash; we bring everything to your home. If you're in Medford, Ashland, Central Point, Jacksonville, Eagle Point, White City, Phoenix, Talent, Gold Hill, or Rogue River, we serve you. No travel charge for any location in our service area.</p>
+<div class="cfm-ct-badges">
+<span class="cfm-ct-pill">Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504</span>
+<span class="cfm-ct-pill">Ashland</span>
+<span class="cfm-ct-pill">Central Point</span>
+<span class="cfm-ct-pill">Jacksonville</span>
+<span class="cfm-ct-pill">Eagle Point</span>
+<span class="cfm-ct-pill">White City</span>
+<span class="cfm-ct-pill">Phoenix</span>
+<span class="cfm-ct-pill">Talent</span>
+<span class="cfm-ct-pill">Gold Hill</span>
+<span class="cfm-ct-pill">Rogue River</span>
+<span class="cfm-ct-pill all">All of Jackson County</span>
+</div>
+</div>
+</div>
+
+<div class="cfm-ct-section">
+<span class="cfm-ct-lbl">Find Us Online</span>
+<h2>Follow Along</h2>
+<div class="cfm-ct-social">
+<a class="cfm-ct-soc" href="https://www.facebook.com/profile.php?id=61592073030535" target="_blank" rel="noopener">
+<span class="ic">&#128218;</span>
+<h3>Facebook</h3>
+<p>Follow us for before-and-after photos and local carpet tips.</p>
+</a>
+<a class="cfm-ct-soc" href="https://www.tiktok.com/@carpetfriend" target="_blank" rel="noopener">
+<span class="ic">&#127909;</span>
+<h3>TikTok</h3>
+<p>Watch real Medford carpet cleaning jobs in action.</p>
+</a>
+<a class="cfm-ct-soc" href="https://www.pinterest.com/hamzakharadi/_profile/" target="_blank" rel="noopener">
+<span class="ic">&#128204;</span>
+<h3>Pinterest</h3>
+<p>Carpet care guides and Rogue Valley homeowner tips.</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+'use strict';
+var form=document.getElementById('cfm-ct-form');
+if(!form)return;
+form.addEventListener('submit',function(){
+var name=document.getElementById('cfm-ct-name');
+var phone=document.getElementById('cfm-ct-phone');
+var msg=document.getElementById('cfm-ct-msg');
+if(!name.value.trim()||!phone.value.trim()||!msg.value.trim()){
+return;
+}
+});
+})();
+</script>
+
+</div>
+<!-- /wp:html -->

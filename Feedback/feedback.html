@@ -1,0 +1,200 @@
+<!-- wp:html -->
+<style id="cfm-feedback-css">
+.cfm-page-feedback{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-feedback *,.cfm-page-feedback *::before,.cfm-page-feedback *::after{box-sizing:border-box}
+.cfm-page-feedback p,.cfm-page-feedback li,.cfm-page-feedback h1,.cfm-page-feedback h2,.cfm-page-feedback h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-fb-hero{background:#e8f5e9;padding:clamp(56px,8vw,84px) clamp(20px,5vw,40px) clamp(48px,6vw,64px);text-align:center}
+.cfm-fb-hero h1{color:#0c1f35;font-size:clamp(28px,5vw,44px);font-weight:800;line-height:1.2;letter-spacing:-.5px;margin:0 auto 18px;max-width:760px}
+.cfm-fb-hero .sub{color:#4a5568;font-size:16.5px;line-height:1.7;margin:0 auto 22px;max-width:640px}
+.cfm-fb-pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.cfm-fb-pill{background:#fff;color:#1a7a4a;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:100px;border:1px solid rgba(26,122,74,.25)}
+
+.cfm-fb-wrap{max-width:820px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,32px)}
+
+.cfm-fb-lbl{display:block;color:#1a7a4a;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 10px;text-align:center}
+.cfm-page-feedback h2{color:#0c1f35;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:0 0 18px;text-align:center}
+.cfm-fb-p{color:#4a5568;font-size:16px;line-height:1.75;margin:0 0 30px;text-align:center}
+
+.cfm-fb-card-primary{background:#0c1f35;border-radius:16px;padding:32px 30px;text-align:center;margin:0 0 20px}
+.cfm-fb-card-primary .ic{font-size:34px;display:block;margin-bottom:10px}
+.cfm-fb-card-primary h3{color:#fff;font-size:19px;font-weight:800;margin:0 0 10px}
+.cfm-fb-card-primary p{color:rgba(255,255,255,.8);font-size:14.5px;line-height:1.7;margin:0 auto 20px;max-width:480px}
+.cfm-fb-card-primary a.btn{display:inline-block;background:#1a7a4a;color:#fff;font-weight:700;font-size:15.5px;padding:14px 30px;border-radius:8px;text-decoration:none;transition:background .18s}
+.cfm-fb-card-primary a.btn:hover{background:#15693e}
+.cfm-fb-card-primary .note{color:rgba(255,255,255,.55);font-size:12.5px;font-style:italic;margin:14px 0 0}
+
+.cfm-fb-secondary{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 8px}
+.cfm-fb-card{background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;text-align:center}
+.cfm-fb-card h4{color:#0c1f35;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-fb-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0 0 14px}
+.cfm-fb-card a{color:#1a7a4a;font-weight:700;font-size:14px;text-decoration:none}
+.cfm-fb-card a:hover{text-decoration:underline}
+
+.cfm-fb-divider{height:1px;background:#e8ecf0;margin:56px 0}
+
+.cfm-fb-form-intro{color:#4a5568;font-size:16px;line-height:1.75;margin:0 0 10px;text-align:center}
+.cfm-fb-call{color:#0c1f35;font-weight:700;text-align:center;margin:0 0 30px;font-size:15px}
+.cfm-fb-call a{color:#1a7a4a;text-decoration:none}
+.cfm-fb-call a:hover{text-decoration:underline}
+
+.cfm-fb-form{background:#f7f8fa;border:1px solid #e8ecf0;border-radius:16px;padding:clamp(24px,4vw,36px)}
+.cfm-fb-field{margin:0 0 20px}
+.cfm-fb-field label{display:block;color:#0c1f35;font-size:13.5px;font-weight:700;margin:0 0 7px}
+.cfm-fb-field input[type="text"],.cfm-fb-field input[type="email"],.cfm-fb-field textarea{width:100%;border:1px solid #e8ecf0;border-radius:8px;padding:12px 14px;font-size:15px;font-family:inherit;color:#0c1f35;background:#fff}
+.cfm-fb-field input:focus,.cfm-fb-field textarea:focus{outline:2px solid #7cbfe8;outline-offset:1px}
+.cfm-fb-field textarea{resize:vertical}
+.cfm-fb-req{color:#c2410c;font-weight:700}
+
+.cfm-fb-stars{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:6px}
+.cfm-fb-stars input{position:absolute;opacity:0;pointer-events:none}
+.cfm-fb-stars label{cursor:pointer;font-size:34px;color:#d1d5db;line-height:1;transition:color .15s;margin:0;padding:0}
+.cfm-fb-stars label:hover,.cfm-fb-stars label:hover~label{color:#f5b301}
+.cfm-fb-stars input:checked~label{color:#f5b301}
+
+.cfm-fb-check{display:flex;align-items:center;gap:9px}
+.cfm-fb-check input{width:17px;height:17px;flex-shrink:0}
+.cfm-fb-check label{margin:0;font-size:14.5px;font-weight:600;color:#0c1f35}
+
+.cfm-fb-submit{background:#1a7a4a;color:#fff;font-weight:700;font-size:16px;padding:14px 32px;border-radius:8px;border:none;cursor:pointer;width:100%;transition:background .18s}
+.cfm-fb-submit:hover{background:#15693e}
+.cfm-fb-formnote{color:#6b7280;font-size:13px;font-style:italic;line-height:1.65;text-align:center;margin:16px 0 0}
+
+.cfm-fb-callout{background:#fff;border:1px solid #e8ecf0;border-radius:14px;padding:28px 26px;text-align:center;margin:0 0 8px}
+.cfm-fb-callout h3{color:#0c1f35;font-size:19px;font-weight:800;margin:0 0 10px}
+.cfm-fb-callout p{color:#4a5568;font-size:15px;line-height:1.7;margin:0 0 16px}
+.cfm-fb-callout a.link{color:#1a7a4a;font-weight:700;font-size:15px;text-decoration:none}
+.cfm-fb-callout a.link:hover{text-decoration:underline}
+
+.cfm-fb-contactnote{text-align:center;padding:36px 0 0;color:#4a5568;font-size:15px}
+.cfm-fb-contactnote a{color:#1a7a4a;font-weight:700;text-decoration:none}
+.cfm-fb-contactnote a:hover{text-decoration:underline}
+
+@media(max-width:768px){
+.cfm-fb-secondary{grid-template-columns:1fr}
+.cfm-fb-wrap{padding:40px 20px}
+.cfm-fb-hero{padding:44px 20px 40px}
+.cfm-fb-stars label{font-size:30px}
+}
+</style>
+
+<div class="cfm-page-feedback">
+
+<div class="cfm-fb-hero">
+<h1>How Did We Do? We Actually Want to Know.</h1>
+<p class="sub">Whether it was great, average, or not what you expected &mdash; your feedback helps us improve and helps other Medford homeowners make an informed decision.</p>
+<div class="cfm-fb-pills">
+<span class="cfm-fb-pill">&#10003; No Fake Reviews</span>
+<span class="cfm-fb-pill">&#10003; Real Customers Only</span>
+<span class="cfm-fb-pill">&#10003; Every Response Read</span>
+</div>
+</div>
+
+<div class="cfm-fb-wrap">
+
+<span class="cfm-fb-lbl">Leave a Public Review</span>
+<h2>The Most Helpful Thing You Can Do &mdash; Leave a Google Review</h2>
+<p class="cfm-fb-p">If your experience was positive, the most useful thing you can do is leave a Google review. Other Jackson County homeowners look at these reviews before booking &mdash; your honest account of what the job was like genuinely helps them decide. Good or bad, reviews give people real information.</p>
+
+<div class="cfm-fb-card-primary">
+<span class="ic">&#11088;</span>
+<h3>Google Review</h3>
+<p>Takes about 2 minutes. Your review shows up publicly and helps other Medford and Jackson County homeowners find us (or avoid us, if we fell short).</p>
+<!-- REPLACE WITH: https://g.page/r/[YOUR_GOOGLE_REVIEW_LINK]/review -->
+<a class="btn" href="#" target="_blank" rel="noopener">Leave a Google Review &rarr;</a>
+<p class="note">You'll need to be signed into a Google account.</p>
+</div>
+
+<div class="cfm-fb-secondary">
+<div class="cfm-fb-card">
+<h4>&#128064; Facebook Review</h4>
+<p>Leave a recommendation on Facebook.</p>
+<a href="https://www.facebook.com/profile.php?id=61592073030535" target="_blank" rel="noopener">Open Reviews Tab &rarr;</a>
+</div>
+<div class="cfm-fb-card">
+<h4>&#127775; Yelp Review (Optional)</h4>
+<p>If you found us on Yelp, leaving a review there helps too.</p>
+<!-- REPLACE WITH YOUR YELP URL -->
+<a href="#" target="_blank" rel="noopener">Leave a Yelp Review &rarr;</a>
+</div>
+</div>
+
+<div class="cfm-fb-divider"></div>
+
+<span class="cfm-fb-lbl">Tell Us Directly</span>
+<h2>Prefer to Send Feedback Privately? That's Fine Too.</h2>
+<p class="cfm-fb-form-intro">If something didn't go right and you'd rather talk to us directly before leaving a public review, we welcome that. We'd genuinely like to know what happened and have the opportunity to make it right. If we made a mistake, we want to fix it.</p>
+<p class="cfm-fb-call">Fill out the form below or call us: <a href="tel:+14583020101">(458) 302-0101</a></p>
+
+<form class="cfm-fb-form" action="mailto:carpetfriendmedford@gmail.com" method="post" enctype="text/plain">
+
+<div class="cfm-fb-field">
+<label for="cfm-fb-name">Your Name <span class="cfm-fb-req">*</span></label>
+<input type="text" id="cfm-fb-name" name="Name" required>
+</div>
+
+<div class="cfm-fb-field">
+<label for="cfm-fb-contact">Phone or Email <span class="cfm-fb-req">*</span></label>
+<input type="text" id="cfm-fb-contact" name="Phone or Email" required>
+</div>
+
+<div class="cfm-fb-field">
+<label for="cfm-fb-when">When Was Your Job?</label>
+<input type="text" id="cfm-fb-when" name="Job Date" placeholder="e.g. July 2026">
+</div>
+
+<div class="cfm-fb-field">
+<label>Overall Rating</label>
+<div class="cfm-fb-stars" id="cfm-fb-stars">
+<input type="radio" id="cfm-fb-star5" name="Overall Rating" value="5 stars"><label for="cfm-fb-star5" title="5 stars">&#9733;</label>
+<input type="radio" id="cfm-fb-star4" name="Overall Rating" value="4 stars"><label for="cfm-fb-star4" title="4 stars">&#9733;</label>
+<input type="radio" id="cfm-fb-star3" name="Overall Rating" value="3 stars"><label for="cfm-fb-star3" title="3 stars">&#9733;</label>
+<input type="radio" id="cfm-fb-star2" name="Overall Rating" value="2 stars"><label for="cfm-fb-star2" title="2 stars">&#9733;</label>
+<input type="radio" id="cfm-fb-star1" name="Overall Rating" value="1 star"><label for="cfm-fb-star1" title="1 star">&#9733;</label>
+</div>
+</div>
+
+<div class="cfm-fb-field">
+<label for="cfm-fb-text">Your Feedback</label>
+<textarea id="cfm-fb-text" name="Feedback" rows="5"></textarea>
+</div>
+
+<div class="cfm-fb-field cfm-fb-check">
+<input type="checkbox" id="cfm-fb-respond" name="May We Respond" value="Yes, please follow up with me" checked>
+<label for="cfm-fb-respond">Yes, please follow up with me</label>
+</div>
+
+<button class="cfm-fb-submit" type="submit">Send Feedback &rarr;</button>
+<p class="cfm-fb-formnote">Submitting will open your email client to send this feedback. We read every submission. If you asked for a response, you'll hear from us within one business day.</p>
+
+</form>
+
+<div class="cfm-fb-divider"></div>
+
+<div class="cfm-fb-callout">
+<h3>See What Others Have Said</h3>
+<p>Before leaving feedback, you might want to read what other Medford and Jackson County homeowners have shared.</p>
+<a class="link" href="https://carpetcleaningmedfordoregon.com/testimonials/">View Testimonials &rarr;</a>
+</div>
+
+<div class="cfm-fb-contactnote">
+Have a question rather than feedback? &rarr; <a href="https://carpetcleaningmedfordoregon.com/contact/">Contact Us</a>
+</div>
+
+</div>
+
+</div>
+
+<script>
+(function(){
+'use strict';
+var stars=document.querySelectorAll('#cfm-fb-stars input[type="radio"]');
+stars.forEach(function(s){
+s.addEventListener('change',function(){
+document.getElementById('cfm-fb-stars').setAttribute('data-selected',s.value);
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

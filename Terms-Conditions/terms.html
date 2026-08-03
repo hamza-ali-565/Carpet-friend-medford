@@ -1,0 +1,244 @@
+<!-- wp:html -->
+<style id="cfm-terms-css">
+.cfm-page-terms{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-terms *,.cfm-page-terms *::before,.cfm-page-terms *::after{box-sizing:border-box}
+.cfm-page-terms p,.cfm-page-terms li,.cfm-page-terms h1,.cfm-page-terms h2{word-wrap:break-word;overflow-wrap:break-word}
+html,body{max-width:100%;overflow-x:hidden}
+
+.cfm-tc-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0;font-size:13.5px}
+.cfm-tc-topline a{color:#1a7a4a;font-weight:600;text-decoration:none}
+.cfm-tc-topline a:hover{text-decoration:underline}
+.cfm-tc-topline span{color:#9ca3af;margin:0 6px}
+.cfm-tc-topline .cur{color:#6b7280;font-weight:600}
+
+.cfm-tc-head{max-width:1200px;margin:0 auto;padding:20px 20px 0}
+.cfm-tc-head h1{color:#0c1f35;font-size:clamp(28px,5vw,42px);font-weight:800;letter-spacing:-.5px;margin:0 0 10px;line-height:1.15}
+.cfm-tc-head .eff{display:inline-block;background:#e8f5e9;color:#15693e;font-size:13px;font-weight:700;padding:5px 14px;border-radius:100px;margin:0 0 18px}
+.cfm-tc-head .intro{color:#4a5568;font-size:16.5px;line-height:1.75;max-width:760px;margin:0 0 8px}
+
+.cfm-tc-layout{max-width:1200px;margin:0 auto;padding:clamp(32px,6vw,48px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-tc-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-tc-toc{flex:0 0 280px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #0c1f35;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-tc-toc .toc-ttl{display:block;color:#1a7a4a;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-tc-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-tc-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-tc-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-tc-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-tc-toc a:hover{color:#0c1f35}
+.cfm-tc-toc a.active{color:#0c1f35;font-weight:700}
+.cfm-tc-toc a.active::before{color:#1a7a4a}
+.cfm-tc-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-tc-layout{flex-direction:column}
+.cfm-tc-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-tc-toc-static{display:none}
+.cfm-tc-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-tc-toc-toggle .chev{transition:transform .2s;color:#1a7a4a}
+.cfm-tc-toc[data-open="false"] ol{display:none}
+.cfm-tc-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-tc-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-tc-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-page-terms h2{color:#0c1f35;font-size:clamp(20px,3vw,26px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:40px 0 14px}
+.cfm-tc-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-terms .cfm-tc-p{color:#4a5568;font-size:16px;line-height:1.75;margin:0 0 16px}
+.cfm-page-terms strong{color:#0c1f35}
+.cfm-page-terms .cfm-tc-list{color:#4a5568;font-size:16px;line-height:1.75;margin:0 0 16px;padding-left:22px}
+.cfm-page-terms .cfm-tc-list li{margin:0 0 8px}
+.cfm-tc-sub{background:#f0f6ff;border-left:4px solid #1a7a4a;border-radius:0 8px 8px 0;padding:16px 20px;margin:0 0 18px}
+.cfm-tc-sub p{color:#0c1f35;font-size:15.5px;line-height:1.7;margin:0 0 8px}
+.cfm-tc-sub p:last-child{margin-bottom:0}
+
+.cfm-tc-contact{background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 24px;margin:16px 0}
+.cfm-tc-contact a{display:flex;align-items:center;gap:8px;color:#1a7a4a;font-weight:700;font-size:15.5px;text-decoration:none;margin:0 0 10px}
+.cfm-tc-contact a:last-child{margin-bottom:0}
+.cfm-tc-contact a:hover{color:#15693e}
+
+.cfm-tc-cta{background:#1a7a4a;padding:clamp(40px,6vw,56px) clamp(20px,5vw,40px);text-align:center;margin-top:48px;border-radius:16px}
+.cfm-tc-cta h2{color:#fff;font-size:clamp(22px,3.6vw,30px);font-weight:800;margin:0 0 12px;line-height:1.2}
+.cfm-tc-cta p{color:rgba(255,255,255,.92);font-size:16px;line-height:1.6;margin:0 auto 24px;max-width:560px}
+.cfm-tc-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cfm-tc-cta a.btn-w{background:#fff;color:#1a7a4a;font-weight:800;font-size:15.5px;padding:14px 30px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-tc-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:15.5px;padding:13px 30px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+
+@media(max-width:768px){
+.cfm-tc-layout{padding:28px 20px}
+.cfm-tc-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-tc-cta a.btn-w,.cfm-tc-cta a.btn-o{text-align:center;padding:14px 20px}
+}
+</style>
+
+<div class="cfm-page-terms">
+
+<div class="cfm-tc-topline">
+<a href="https://carpetcleaningmedfordoregon.com/">Home</a>
+<span>&rarr;</span>
+<span class="cur">Terms &amp; Conditions</span>
+</div>
+
+<div class="cfm-tc-head">
+<h1>Terms &amp; Conditions</h1>
+<span class="eff">Effective: July 2026</span>
+<p class="intro">These terms apply when you use the Carpet Friend Medford website (carpetcleaningmedfordoregon.com) or book our carpet cleaning services. They're written plainly because we'd rather you understand them than not read them at all.</p>
+</div>
+
+<div class="cfm-tc-layout">
+
+<div class="cfm-tc-wrap">
+
+<h2 id="using-this-website">1. Using This Website</h2>
+<p class="cfm-tc-p">This website is provided for informational purposes &mdash; to help you learn about our services, understand carpet cleaning, and get in touch with us.</p>
+<p class="cfm-tc-p">You agree not to:</p>
+<ul class="cfm-tc-list">
+<li>Use this site for any illegal purpose</li>
+<li>Scrape, copy, or redistribute our content without permission</li>
+<li>Submit false or misleading information through our contact forms</li>
+<li>Attempt to access any restricted area of the site</li>
+</ul>
+<p class="cfm-tc-p">We reserve the right to block access to anyone misusing the site.</p>
+
+<h2 id="service-agreement">2. Our Service Agreement</h2>
+<p class="cfm-tc-p">When you book a carpet cleaning service with Carpet Friend Medford, you agree to:</p>
+<div class="cfm-tc-sub">
+<p><strong>Access:</strong> Providing reasonable access to the areas to be cleaned on the scheduled date.</p>
+<p><strong>Accurate information:</strong> Telling us accurately about the condition of the carpet, including pet contamination, staining, water damage, or other known issues.</p>
+<p><strong>Pre-existing conditions:</strong> We inspect before starting and document any pre-existing damage. We're not responsible for conditions that existed before our visit.</p>
+<p><strong>Payment:</strong> Payment is due on completion of service unless otherwise arranged.</p>
+</div>
+<p class="cfm-tc-p">We agree to:</p>
+<ul class="cfm-tc-list">
+<li>Confirm pricing before starting any work.</li>
+<li>Provide IICRC-certified hot water extraction using truck-mounted equipment.</li>
+<li>Issue a dated service receipt for every completed job.</li>
+<li>Advise you honestly if a carpet cannot be restored to an acceptable standard before we attempt to clean it.</li>
+</ul>
+
+<h2 id="cancellations">3. Cancellations and Rescheduling</h2>
+<p class="cfm-tc-p">We understand plans change. If you need to cancel or reschedule:</p>
+<ul class="cfm-tc-list">
+<li><strong>24+ hours notice:</strong> No charge, we'll find a new time.</li>
+<li><strong>Less than 24 hours notice:</strong> We appreciate as much notice as possible. We may request a deposit for future bookings if last-minute cancellations become a pattern.</li>
+<li><strong>If we need to reschedule</strong> due to equipment issues or illness: We'll contact you as early as possible and reschedule at your earliest convenience.</li>
+</ul>
+
+<h2 id="results-limitations">4. Results and Limitations</h2>
+<p class="cfm-tc-p">We believe in honest expectations. Carpet cleaning has limitations:</p>
+<ul class="cfm-tc-list">
+<li>We cannot guarantee complete removal of all stains or odors. We assess this during pre-inspection and tell you what to expect before starting.</li>
+<li>We cannot guarantee that pre-existing fiber damage, color loss, or structural carpet wear will improve with cleaning.</li>
+<li>Mold remediation is beyond our scope &mdash; we clean carpets, we don't perform structural mold remediation.</li>
+<li>If sub-floor contamination requires replacement rather than cleaning, we'll tell you before starting work.</li>
+</ul>
+
+<h2 id="liability">5. Liability</h2>
+<p class="cfm-tc-p">Carpet Friend Medford is not liable for:</p>
+<ul class="cfm-tc-list">
+<li>Pre-existing damage to carpet, furniture, or flooring not documented at the time of service</li>
+<li>Damage resulting from undisclosed conditions (e.g., a hidden stain that was treated without disclosure of prior DIY treatments)</li>
+<li>Incidental or consequential damages beyond the cost of the service provided</li>
+</ul>
+<p class="cfm-tc-p">Our total liability for any claim related to a service is limited to the cost of that service.</p>
+<p class="cfm-tc-p">We carry general liability insurance. If something is damaged during a cleaning visit that was not pre-existing, contact us immediately &mdash; we have a claims process.</p>
+
+<h2 id="intellectual-property">6. Intellectual Property</h2>
+<p class="cfm-tc-p">All content on carpetcleaningmedfordoregon.com &mdash; including text, images, case studies, pricing information, and process descriptions &mdash; is owned by Carpet Friend Medford. You may not copy or reproduce it without written permission.</p>
+
+<h2 id="third-party-links">7. Third-Party Links</h2>
+<p class="cfm-tc-p">Our website links to other websites (Google Maps, Facebook, Yelp, etc.). We're not responsible for the content or privacy practices of those sites. Visit them at your own discretion.</p>
+
+<h2 id="changes-to-terms">8. Changes to These Terms</h2>
+<p class="cfm-tc-p">We may update these terms occasionally. The current version is always at this URL. Major changes will be noted with an updated effective date.</p>
+
+<h2 id="governing-law">9. Governing Law</h2>
+<p class="cfm-tc-p">These terms are governed by the laws of the State of Oregon. Any disputes arising from your use of this website or our services will be governed by Oregon law.</p>
+
+<h2 id="contact">10. Contact</h2>
+<p class="cfm-tc-p">Questions about these terms?</p>
+<div class="cfm-tc-contact">
+<a href="mailto:carpetfriendmedford@gmail.com">&#128231; carpetfriendmedford@gmail.com</a>
+<a href="tel:+14583020101">&#128222; (458) 302-0101</a>
+</div>
+
+</div>
+
+<aside class="cfm-tc-toc" id="cfm-tc-toc" data-open="true">
+<span class="toc-ttl cfm-tc-toc-static">On This Page</span>
+<button class="cfm-tc-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-tc-toc-list">
+<span class="toc-ttl" style="margin:0">On This Page</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-tc-toc-list">
+<li><a href="#using-this-website">Using This Website</a></li>
+<li><a href="#service-agreement">Our Service Agreement</a></li>
+<li><a href="#cancellations">Cancellations &amp; Rescheduling</a></li>
+<li><a href="#results-limitations">Results &amp; Limitations</a></li>
+<li><a href="#liability">Liability</a></li>
+<li><a href="#intellectual-property">Intellectual Property</a></li>
+<li><a href="#third-party-links">Third-Party Links</a></li>
+<li><a href="#changes-to-terms">Changes to Terms</a></li>
+<li><a href="#governing-law">Governing Law</a></li>
+<li><a href="#contact">Contact</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-tc-cta">
+<h2>Questions Before You Book?</h2>
+<p>We're happy to walk through pricing, scheduling, or anything in these terms before your appointment.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/contact/">&#9993; Contact Us</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var toc=document.getElementById('cfm-tc-toc');
+var tocBtn=toc.querySelector('.cfm-tc-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+</div>
+<!-- /wp:html -->

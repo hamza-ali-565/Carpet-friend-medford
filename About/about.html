@@ -1,0 +1,147 @@
+<!-- wp:html -->
+<style id="cfm-about-css">
+.cfm-page-about{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-about *,.cfm-page-about *::before,.cfm-page-about *::after{box-sizing:border-box}
+.cfm-page-about p,.cfm-page-about li,.cfm-page-about h1,.cfm-page-about h2,.cfm-page-about h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-ab-hero{background:linear-gradient(160deg,#0c1f35 0%,#12314f 100%);padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,7vw,72px);text-align:center}
+.cfm-ab-hero .badge{display:inline-block;background:rgba(124,191,232,.12);border:1px solid rgba(124,191,232,.3);color:#7cbfe8;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin:0 0 22px}
+.cfm-ab-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.2;letter-spacing:-.5px;margin:0 auto 16px;max-width:820px}
+.cfm-ab-hero .sub{color:rgba(255,255,255,.78);font-size:clamp(14px,1.8vw,17px);line-height:1.6;margin:0 auto 26px;max-width:640px}
+.cfm-ab-pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.cfm-ab-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:100px}
+
+.cfm-ab-sec{max-width:1100px;margin:0 auto;padding:clamp(48px,7vw,72px) clamp(20px,5vw,32px)}
+.cfm-ab-lbl{display:block;color:#1a7a4a;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 10px;text-align:center}
+.cfm-page-about h2{color:#0c1f35;font-size:clamp(24px,3.6vw,32px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:0 0 28px;text-align:center}
+.cfm-ab-narrow{max-width:760px;margin:0 auto}
+.cfm-ab-p{color:#4a5568;font-size:16.5px;line-height:1.8;margin:0 0 20px}
+.cfm-page-about strong{color:#0c1f35}
+
+.cfm-ab-who{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.cfm-ab-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cfm-ab-stat{background:#0c1f35;border-radius:12px;padding:22px 18px;text-align:center}
+.cfm-ab-stat .num{display:block;color:#fff;font-size:clamp(20px,2.4vw,26px);font-weight:800;margin:0 0 6px;line-height:1.1}
+.cfm-ab-stat .lbl{display:block;color:#7cbfe8;font-size:12.5px;line-height:1.4;font-weight:600}
+
+.cfm-ab-values{display:flex;flex-direction:column;gap:16px;max-width:800px;margin:0 auto}
+.cfm-ab-value{background:#fff;border:1px solid #e8ecf0;border-left:4px solid #1a7a4a;border-radius:0 12px 12px 0;padding:22px 26px}
+.cfm-ab-value h4{color:#0c1f35;font-size:16.5px;font-weight:700;margin:0 0 8px}
+.cfm-ab-value p{color:#4a5568;font-size:15px;line-height:1.75;margin:0}
+
+.cfm-ab-area{background:#f0f6ff}
+.cfm-ab-pills2{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+.cfm-ab-pill2{background:#fff;border:1px solid #e8ecf0;color:#0c1f35;font-size:13px;font-weight:600;padding:8px 16px;border-radius:100px}
+
+.cfm-ab-trust{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.cfm-ab-tcard{background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:24px 22px;border-top:4px solid #1a7a4a}
+.cfm-ab-tcard h4{color:#0c1f35;font-size:16px;font-weight:700;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+.cfm-ab-tcard p{color:#4a5568;font-size:14.5px;line-height:1.7;margin:0}
+
+.cfm-ab-cta{background:#1a7a4a;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center}
+.cfm-ab-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-ab-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-ab-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cfm-ab-cta a.btn-w{background:#fff;color:#1a7a4a;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-ab-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+
+@media(max-width:1023px){
+.cfm-ab-who{grid-template-columns:1fr;gap:28px}
+}
+
+@media(max-width:768px){
+.cfm-ab-trust{grid-template-columns:1fr}
+.cfm-ab-stats{grid-template-columns:1fr 1fr}
+.cfm-ab-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-ab-cta a.btn-w,.cfm-ab-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-ab-sec{padding:40px 20px}
+}
+</style>
+
+<div class="cfm-page-about">
+
+<div class="cfm-ab-hero">
+<span class="badge">Jackson County &middot; Locally Owned Since 2020</span>
+<h1>We're Carpet Friend Medford &mdash; A Local Company That Actually Cares</h1>
+<p class="sub">IICRC Certified &middot; No Subcontractors &middot; Upfront Pricing &middot; Based Right Here</p>
+<div class="cfm-ab-pills">
+<span class="cfm-ab-pill">&#10003; 214+ Completed Jobs</span>
+<span class="cfm-ab-pill">&#10003; Jackson County Local</span>
+<span class="cfm-ab-pill">&#10003; No Franchise</span>
+</div>
+</div>
+
+<div class="cfm-ab-sec">
+<span class="cfm-ab-lbl">Our Story</span>
+<h2>Why We Started &mdash; and What We're Trying to Do Differently</h2>
+<div class="cfm-ab-narrow">
+<p class="cfm-ab-p">Most carpet cleaning companies in Medford operate the same way &mdash; quote low to get in the door, upsell once the truck is parked, rush through the job, and move on. We'd seen enough of that before we started Carpet Friend Medford in 2020.</p>
+<p class="cfm-ab-p">We started this company because we wanted to do one thing: clean carpets in Jackson County the right way, at a price we'd tell our neighbors upfront, using a process that actually holds up. No franchise fees to pay to Ohio. No rotating subcontractors who've had different training every time. No surprises on the invoice after we've moved your furniture.</p>
+<p class="cfm-ab-p">Medford is a specific place. Your carpet deals with things that a carpet in Portland or Phoenix, Arizona doesn't &mdash; wildfire smoke every summer that packs PM2.5 into fibers no rental machine can reach, red volcanic clay from Table Rocks hikes that bonds differently than ordinary dirt, and Rogue Valley hard water that makes spot-treating with tap water backfire over time. We spent a lot of time learning this market before we started claiming we knew it.</p>
+<p class="cfm-ab-p">We're based in Medford. We live here. When we clean your carpet in East Medford or help a Phoenix property manager document a move-out after the Almeda rebuild, the money stays in Jackson County. That matters to us.</p>
+</div>
+</div>
+
+<div class="cfm-ab-sec">
+<span class="cfm-ab-lbl">Who We Are</span>
+<h2>The People Behind the Work</h2>
+<div class="cfm-ab-who">
+<div>
+<p class="cfm-ab-p">Every carpet we clean is handled directly by our IICRC-certified technician &mdash; the same person who answers the phone, does the pre-inspection walk-through, and finishes the job. We don't hand off to crew members depending on availability, and we don't use subcontractors. If something goes wrong, the person you booked with is the person you'll talk to.</p>
+<p class="cfm-ab-p">We carry IICRC certification &mdash; the Institute of Inspection Cleaning and Restoration Certification &mdash; which is the industry's accredited standard for fiber science, cleaning chemistry, and extraction technique. Most carpet warranties require IICRC-certified hot water extraction. We keep our certification current because we think it matters, not because a franchise told us to display it.</p>
+</div>
+<div class="cfm-ab-stats">
+<div class="cfm-ab-stat"><span class="num">214+</span><span class="lbl">Completed jobs in Medford &amp; Jackson County</span></div>
+<div class="cfm-ab-stat"><span class="num">IICRC</span><span class="lbl">Certified &mdash; current certification on file</span></div>
+<div class="cfm-ab-stat"><span class="num">100%</span><span class="lbl">Jobs handled by the same technician, no subcontractors</span></div>
+<div class="cfm-ab-stat"><span class="num">2020</span><span class="lbl">Serving the Rogue Valley since</span></div>
+</div>
+</div>
+</div>
+
+<div class="cfm-ab-sec">
+<span class="cfm-ab-lbl">How We Work</span>
+<h2>The Things We Won't Do</h2>
+<div class="cfm-ab-values">
+<div class="cfm-ab-value"><h4>We won't quote you one price and charge another.</h4><p>Price is confirmed before any work begins, every time. If something changes the scope mid-job, we stop and tell you before continuing. No surprises after the truck is in your driveway.</p></div>
+<div class="cfm-ab-value"><h4>We won't skip the pre-vacuum to save time.</h4><p>That step removes 80&ndash;90% of dry soil before water touches your carpet &mdash; skipping it is the single biggest reason carpets re-soil fast after cleaning. We do it every job, even though it adds 15 minutes.</p></div>
+<div class="cfm-ab-value"><h4>We won't tell you we can fix something if we can't.</h4><p>If a carpet is saturated to the subfloor from years of cat contamination and replacement makes more sense than cleaning, we'll tell you that before we start. We'd rather lose the job than take your money for a result that won't hold.</p></div>
+<div class="cfm-ab-value"><h4>We won't use one enzyme formula for every pet situation.</h4><p>Cat and dog urine have different chemistry and require different treatments. A generic "pet deodorizer" misses one or the other. We bring both and use the right one per zone.</p></div>
+<div class="cfm-ab-value"><h4>We won't let you buy a wildfire smoke treatment you don't need.</h4><p>If a smoke event didn't affect your area significantly, we'll tell you standard cleaning is appropriate. Upselling a $150 smoke protocol on a home that doesn't need it is not something we do.</p></div>
+</div>
+</div>
+
+<div class="cfm-ab-sec cfm-ab-area">
+<span class="cfm-ab-lbl">Where We Clean</span>
+<h2>Our Home &mdash; Jackson County, Oregon</h2>
+<div class="cfm-ab-narrow">
+<p class="cfm-ab-p">Our base is in Medford, and Jackson County is where we work. We cover all four Medford zip codes (97501&ndash;97504) and regularly clean in Ashland, Central Point, Jacksonville, Eagle Point, White City, Phoenix, Talent, Gold Hill, and Rogue River. If you're in the Rogue Valley and need your carpets cleaned, we're probably close.</p>
+<p class="cfm-ab-p">The drive to Jacksonville for a historic wool rug, the Phoenix rebuild-era new construction that needs a drywall dust protocol before the first tenant moves in, the Rogue River vacation cabin that hasn't been extracted in six years &mdash; we know each situation because we've been in each one.</p>
+</div>
+<div class="cfm-ab-pills2">
+<span class="cfm-ab-pill2">Medford</span><span class="cfm-ab-pill2">Ashland</span><span class="cfm-ab-pill2">Central Point</span><span class="cfm-ab-pill2">Jacksonville</span><span class="cfm-ab-pill2">Eagle Point</span><span class="cfm-ab-pill2">White City</span><span class="cfm-ab-pill2">Phoenix</span><span class="cfm-ab-pill2">Talent</span><span class="cfm-ab-pill2">Gold Hill</span><span class="cfm-ab-pill2">Rogue River</span><span class="cfm-ab-pill2">All of Jackson County</span>
+</div>
+</div>
+
+<div class="cfm-ab-sec">
+<span class="cfm-ab-lbl">Our Credentials</span>
+<h2>IICRC Certified &middot; Licensed &amp; Insured</h2>
+<div class="cfm-ab-trust">
+<div class="cfm-ab-tcard"><h4>&#127941; IICRC Certification</h4><p>The Institute of Inspection Cleaning and Restoration Certification is the industry's accredited standard. Most carpet manufacturers require IICRC-certified hot water extraction to maintain your carpet's warranty &mdash; our certification is current and on file.</p></div>
+<div class="cfm-ab-tcard"><h4>&#128203; Licensed &amp; Insured</h4><p>We carry general liability insurance on every job. If something is damaged during a cleaning visit, you're covered. We'll provide proof of insurance on request.</p></div>
+<div class="cfm-ab-tcard"><h4>&#128683; No Subcontractors</h4><p>Every job is performed by our IICRC-certified technician directly &mdash; the same person who answers the phone. We don't subcontract work to third-party cleaners with different training or standards.</p></div>
+<div class="cfm-ab-tcard"><h4>&#128196; Dated Service Receipts</h4><p>Every cleaning comes with a dated service receipt that documents the job date, treatment areas, and our certification. Most Jackson County landlords accept our receipts for security deposit dispute documentation.</p></div>
+</div>
+</div>
+
+<div class="cfm-ab-cta">
+<h2>Want to Talk Before You Book? That's Fine.</h2>
+<p>We understand it takes a bit of trust to let someone into your home. Call or text us &mdash; we're happy to answer questions about your specific carpet type, what to expect from the process, whether your situation needs a specialist treatment or just a standard clean. No obligation.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call or Text (458) 302-0101</a>
+<a class="btn-o" href="mailto:carpetfriendmedford@gmail.com">&#9993; Email Us</a>
+</div>
+</div>
+
+</div>
+<!-- /wp:html -->

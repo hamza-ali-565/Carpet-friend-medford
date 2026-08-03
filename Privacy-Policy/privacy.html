@@ -1,0 +1,228 @@
+<!-- wp:html -->
+<style id="cfm-privacy-css">
+.cfm-page-privacy{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-privacy *,.cfm-page-privacy *::before,.cfm-page-privacy *::after{box-sizing:border-box}
+.cfm-page-privacy p,.cfm-page-privacy li,.cfm-page-privacy h1,.cfm-page-privacy h2{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-pv-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-pv-topline a{color:#4a5568;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-pv-topline a:hover{color:#1a7a4a;text-decoration:underline}
+.cfm-pv-topline span{color:#9ca3af;font-size:13px;margin:0 6px}
+.cfm-pv-topline .cur{color:#0c1f35;font-weight:700}
+
+.cfm-pv-head{max-width:1200px;margin:0 auto;padding:20px 20px 0}
+.cfm-pv-head h1{color:#0c1f35;font-size:clamp(28px,5vw,42px);font-weight:800;letter-spacing:-.5px;margin:0 0 10px}
+.cfm-pv-head .updated{color:#6b7280;font-size:13.5px;font-weight:600;margin:0 0 18px}
+.cfm-pv-intro{background:#f0f6ff;border-left:4px solid #1a7a4a;border-radius:0 12px 12px 0;padding:22px 24px;margin:0 0 8px}
+.cfm-pv-intro p{color:#0c1f35;font-size:16.5px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-pv-layout{max-width:1200px;margin:0 auto;padding:clamp(32px,5vw,48px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-pv-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-pv-toc{flex:0 0 280px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #0c1f35;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-pv-toc .toc-ttl{display:block;color:#1a7a4a;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-pv-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-pv-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-pv-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-pv-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-pv-toc a:hover{color:#0c1f35}
+.cfm-pv-toc a.active{color:#0c1f35;font-weight:700}
+.cfm-pv-toc a.active::before{color:#1a7a4a}
+.cfm-pv-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-pv-layout{flex-direction:column}
+.cfm-pv-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-pv-toc-static{display:none}
+.cfm-pv-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-pv-toc-toggle .chev{transition:transform .2s;color:#1a7a4a}
+.cfm-pv-toc[data-open="false"] ol{display:none}
+.cfm-pv-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-pv-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-pv-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-page-privacy h2{color:#0c1f35;font-size:clamp(20px,3vw,26px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:40px 0 14px;padding-top:20px;border-top:1px solid #e8ecf0}
+.cfm-pv-wrap>h2:first-of-type{margin-top:0;padding-top:0;border-top:none}
+.cfm-page-privacy .cfm-pv-p{color:#4a5568;font-size:16px;line-height:1.75;margin:0 0 16px}
+.cfm-page-privacy strong{color:#0c1f35}
+.cfm-page-privacy h4{color:#0c1f35;font-size:15px;font-weight:700;margin:18px 0 6px}
+.cfm-pv-list{margin:0 0 16px;padding-left:22px}
+.cfm-pv-list li{color:#4a5568;font-size:16px;line-height:1.75;margin:0 0 8px}
+.cfm-pv-list li strong{color:#0c1f35}
+
+.cfm-pv-contact-box{background:#e8f5e9;border-radius:12px;padding:24px 26px;margin:16px 0 0}
+.cfm-pv-contact-box p{color:#0c1f35;font-size:15.5px;line-height:1.9;margin:0}
+.cfm-pv-contact-box a{color:#1a7a4a;font-weight:700;text-decoration:none}
+.cfm-pv-contact-box a:hover{text-decoration:underline}
+
+.cfm-pv-cta{background:#1a7a4a;padding:clamp(40px,6vw,60px) clamp(20px,5vw,40px);text-align:center;margin-top:40px}
+.cfm-pv-cta h2{color:#fff;border:none;padding:0;font-size:clamp(22px,3.6vw,30px);font-weight:800;margin:0 0 12px;line-height:1.2}
+.cfm-pv-cta p{color:rgba(255,255,255,.92);font-size:15.5px;line-height:1.65;margin:0 auto 24px;max-width:560px}
+.cfm-pv-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cfm-pv-cta a.btn-w{background:#fff;color:#1a7a4a;font-weight:800;font-size:15.5px;padding:14px 30px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-pv-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:15.5px;padding:13px 30px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+
+@media(max-width:768px){
+.cfm-pv-layout{padding:28px 20px}
+.cfm-pv-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-pv-cta a.btn-w,.cfm-pv-cta a.btn-o{text-align:center;padding:14px 20px}
+}
+</style>
+
+<div class="cfm-page-privacy">
+
+<div class="cfm-pv-topline">
+<a href="https://carpetcleaningmedfordoregon.com/">Home</a><span>&rarr;</span><span class="cur">Privacy Policy</span>
+</div>
+
+<div class="cfm-pv-head">
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: July 2026</p>
+<div class="cfm-pv-intro">
+<p>We take privacy seriously. This page explains what information Carpet Friend Medford collects when you use our website or contact us, how we use it, and how you can ask us to delete or correct it. We've written this in plain English because legal jargon doesn't help anyone.</p>
+</div>
+</div>
+
+<div class="cfm-pv-layout">
+
+<div class="cfm-pv-wrap">
+
+<h2 id="what-we-collect">1. What Information We Collect</h2>
+<h4>Information you give us directly</h4>
+<p class="cfm-pv-p">When you call, text, email, or fill out a form on this website, we collect your name, phone number, email address (if provided), your address or service location, and the details of your carpet cleaning request (number of rooms, pet situation, etc.). We only ask for what we need to schedule and complete your job.</p>
+<h4>Information collected automatically when you visit our website</h4>
+<p class="cfm-pv-p">Like most websites, our site collects basic technical information &mdash; your IP address, the browser you're using, the pages you visit, and how long you spend on them. This is standard web traffic data. We use Google Analytics for this. No personally identifiable information is captured through analytics.</p>
+<h4>Information from forms and contact</h4>
+<p class="cfm-pv-p">If you use our contact form or feedback form, we receive the information you enter &mdash; your name, contact details, and message. This goes to our email inbox and is not stored in a separate database.</p>
+
+<h2 id="how-we-use-it">2. How We Use Your Information</h2>
+<p class="cfm-pv-p">We use your information for one purpose: to provide carpet cleaning services to you. Specifically:</p>
+<ul class="cfm-pv-list">
+<li>To contact you about scheduling, pricing, and job details</li>
+<li>To send your dated service receipt after a completed job</li>
+<li>To follow up if you requested a response to feedback</li>
+<li>To understand how our website is being used (via anonymous analytics)</li>
+</ul>
+<p class="cfm-pv-p">We don't use your information to send marketing emails unless you specifically ask us to stay in touch. We don't sign you up for newsletters automatically.</p>
+
+<h2 id="who-we-share-with">3. Who We Share Your Information With</h2>
+<p class="cfm-pv-p"><strong>We don't sell your personal information. Period.</strong></p>
+<p class="cfm-pv-p">We use a small number of third-party tools that may process your data:</p>
+<ul class="cfm-pv-list">
+<li><strong>Google Analytics:</strong> website traffic data (anonymized)</li>
+<li><strong>Google Workspace/Gmail:</strong> our email service for receiving contact form submissions</li>
+<li><strong>WordPress:</strong> the platform this website runs on (Automattic/WordPress.com)</li>
+</ul>
+<p class="cfm-pv-p">None of these providers sell your data, and none of them receive your information for purposes beyond operating the service.</p>
+<p class="cfm-pv-p">We may share your information if required by law &mdash; for example, in response to a legal subpoena or government request. We're not aware of having done this to date.</p>
+
+<h2 id="cookies-analytics">4. Cookies and Analytics</h2>
+<p class="cfm-pv-p">Our website uses cookies &mdash; small text files stored in your browser. We use them for:</p>
+<ul class="cfm-pv-list">
+<li><strong>Google Analytics:</strong> to understand how visitors use our site (anonymized)</li>
+<li><strong>WordPress session cookies:</strong> to maintain functionality (e.g., if you log into a WordPress account on this site)</li>
+</ul>
+<p class="cfm-pv-p">We don't use advertising cookies or tracking pixels for ad retargeting. You can opt out of Google Analytics across all sites by installing the Google Analytics Opt-out Browser Add-on.</p>
+
+<h2 id="your-rights">5. Your Rights</h2>
+<p class="cfm-pv-p">You have the right to:</p>
+<ul class="cfm-pv-list">
+<li>Ask what personal information we hold about you</li>
+<li>Ask us to correct inaccurate information</li>
+<li>Ask us to delete your information</li>
+<li>Withdraw consent for communications at any time</li>
+</ul>
+<p class="cfm-pv-p">To exercise any of these rights, contact us: <a href="mailto:carpetfriendmedford@gmail.com" style="color:#1a7a4a;font-weight:700;text-decoration:none">carpetfriendmedford@gmail.com</a> or <a href="tel:+14583020101" style="color:#1a7a4a;font-weight:700;text-decoration:none">(458) 302-0101</a>. We'll respond within 5 business days.</p>
+
+<h2 id="childrens-privacy">6. Children's Privacy</h2>
+<p class="cfm-pv-p">Our website and services are intended for adults making decisions about their home. We don't knowingly collect personal information from anyone under the age of 13. If you believe a child has submitted personal information to us, contact us and we'll delete it.</p>
+
+<h2 id="changes-to-policy">7. Changes to This Policy</h2>
+<p class="cfm-pv-p">We may update this privacy policy occasionally &mdash; for example, if we add a new tool to the site or if laws change. When we make significant changes, we'll update the "Last Updated" date at the top of this page. We won't send you a notification, so check back if this matters to you.</p>
+
+<h2 id="contact-us">8. Contact Us About Privacy</h2>
+<p class="cfm-pv-p">If you have any questions or concerns about this policy or how we handle your personal information, reach out:</p>
+<div class="cfm-pv-contact-box">
+<p>&#128231; <a href="mailto:carpetfriendmedford@gmail.com">carpetfriendmedford@gmail.com</a><br>
+&#128222; <a href="tel:+14583020101">(458) 302-0101</a><br>
+&#128205; 1600 Delta Waters Rd, Medford, OR 97504</p>
+</div>
+
+</div>
+
+<aside class="cfm-pv-toc" id="cfm-pv-toc" data-open="true">
+<span class="toc-ttl cfm-pv-toc-static">In This Document</span>
+<button class="cfm-pv-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-pv-toc-list">
+<span class="toc-ttl" style="margin:0">In This Document</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-pv-toc-list">
+<li><a href="#what-we-collect">What Information We Collect</a></li>
+<li><a href="#how-we-use-it">How We Use Your Information</a></li>
+<li><a href="#who-we-share-with">Who We Share It With</a></li>
+<li><a href="#cookies-analytics">Cookies and Analytics</a></li>
+<li><a href="#your-rights">Your Rights</a></li>
+<li><a href="#childrens-privacy">Children's Privacy</a></li>
+<li><a href="#changes-to-policy">Changes to This Policy</a></li>
+<li><a href="#contact-us">Contact Us About Privacy</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-pv-cta">
+<h2>Questions About Your Privacy?</h2>
+<p>We're happy to talk it through. Reach out any time &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="btn-o" href="mailto:carpetfriendmedford@gmail.com">&#128231; Email Us</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var toc=document.getElementById('cfm-pv-toc');
+var tocBtn=toc.querySelector('.cfm-pv-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<!-- /wp:html -->
