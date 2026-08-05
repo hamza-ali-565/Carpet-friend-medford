@@ -1,0 +1,365 @@
+<!-- wp:html -->
+<style id="cfm-tip-css">
+.cfm-page-tipping{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-tipping *,.cfm-page-tipping *::before,.cfm-page-tipping *::after{box-sizing:border-box}
+.cfm-page-tipping p,.cfm-page-tipping li,.cfm-page-tipping h1,.cfm-page-tipping h2,.cfm-page-tipping h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-tip-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#B8860B;z-index:9998;transition:width .1s linear}
+
+.cfm-tip-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-tip-topline a{color:#8a6608;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-tip-topline a:hover{text-decoration:underline}
+
+.cfm-tip-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-tip-hero .ey{display:block;color:#e8b84b;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-tip-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-tip-hero .byline{color:#e8b84b;font-size:13.5px;font-weight:600;margin:0}
+.cfm-tip-hero .rt{display:inline-block;background:#fdf3dc;color:#5c4408;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-tip-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-tip-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-tip-toc{flex:0 0 300px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #3a2b06;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-tip-toc .toc-ttl{display:block;color:#8a6608;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-tip-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-tip-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-tip-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-tip-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-tip-toc a:hover{color:#3a2b06}
+.cfm-tip-toc a.active{color:#3a2b06;font-weight:700}
+.cfm-tip-toc a.active::before{color:#8a6608}
+.cfm-tip-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-tip-layout{flex-direction:column}
+.cfm-tip-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-tip-toc-static{display:none}
+.cfm-tip-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-tip-toc-toggle .chev{transition:transform .2s;color:#8a6608}
+.cfm-tip-toc[data-open="false"] ol{display:none}
+.cfm-tip-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-tip-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-tip-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-tip-intro{background:#fdf3dc;border-left:4px solid #B8860B;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 32px}
+.cfm-tip-intro p{color:#3a2b06;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-tipping h2{color:#3a2b06;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-tip-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-tipping .cfm-tip-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-tipping strong{color:#3a2b06}
+
+.cfm-tip-lbl{display:block;color:#8a6608;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-tip-pullquote{background:#3a2b06;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-tip-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-tip-pullquote::before{content:'"';color:#e8b84b;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-tip-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-tip-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e8ecf0;border-radius:12px;padding:20px 22px}
+.cfm-tip-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#B8860B;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-tip-steps .txt h4{color:#3a2b06;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-tip-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-tip-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.cfm-tip-card{background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;border-top:4px solid #B8860B}
+.cfm-tip-card h4{color:#3a2b06;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-tip-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+
+.cfm-tip-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-tip-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-tip-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-tip-table th{background:#3a2b06;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-tip-table td{padding:12px 14px;border:1px solid #e8ecf0;color:#4a5568;line-height:1.5}
+.cfm-tip-table tr:nth-child(even) td{background:#f8f9fa}
+.cfm-tip-table-wrap{overflow-x:auto;margin:20px 0}
+
+.cfm-tip-faq{max-width:100%;margin:24px 0 8px}
+.cfm-tip-faq-item{border:1px solid #e8ecf0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-tip-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#3a2b06;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-tip-faq-q:hover{background:#fdf3dc}
+.cfm-tip-faq-q .plus{color:#8a6608;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-tip-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-tip-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-tip-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-tip-cta{background:#3a2b06;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-tip-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-tip-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-tip-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-tip-cta a.btn-w{background:#fff;color:#8a6608;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-tip-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-tip-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-tip-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-tip-related h3{color:#3a2b06;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-tip-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-tip-rel-card{display:block;background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-tip-rel-card:hover{box-shadow:0 10px 30px rgba(58,43,6,.12);transform:translateY(-2px)}
+.cfm-tip-rel-card .lbl{display:block;color:#8a6608;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-tip-rel-card .ttl{color:#3a2b06;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-tip-cards{grid-template-columns:1fr}
+.cfm-tip-rel-grid{grid-template-columns:1fr}
+.cfm-tip-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-tip-cta a.btn-w,.cfm-tip-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-tip-layout{padding:32px 20px}
+.cfm-tip-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-tip-pullquote{padding:26px 22px}
+.cfm-tip-pullquote p{font-size:17px}
+.cfm-tip-table{font-size:12.5px}
+}
+</style>
+
+<div class="cfm-page-tipping">
+
+<div class="cfm-tip-progress" id="cfm-tip-progress"></div>
+
+<div class="cfm-tip-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-tip-hero" style="background-image:linear-gradient(160deg,rgba(58,43,6,.88) 0%,rgba(110,80,20,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Should-I-tip-my-carpet-cleaner.webp')" role="img" aria-label="Medford Oregon carpet cleaning technician finishing a job &mdash; should you tip your carpet cleaner?">
+<span class="ey">Honest Answers &middot; Jackson County, Oregon</span>
+<h1>Should I Tip My Carpet Cleaner? A Medford Technician's Honest Answer</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">7 min read</span></p>
+</div>
+
+<div class="cfm-tip-layout">
+
+<div class="cfm-tip-wrap">
+
+<div class="cfm-tip-intro" id="answer">
+<p>No &mdash; tipping isn't expected or standard in carpet cleaning. Unlike a server's wage, our pricing already covers labor in full, so a tip is never "making up the difference." That said, tips are genuinely appreciated when a technician goes above and beyond. And honestly? A detailed Google review or a referral to your neighbor helps a small Medford business more than a $20 bill ever could.</p>
+</div>
+
+<p class="cfm-tip-p">I've stood in a lot of Medford living rooms right at that moment &mdash; equipment coiled back up, the carpet still drying, the homeowner reaching for their wallet with this slightly uncertain look on their face. <strong>Should I tip you? Is that weird? Do carpet cleaners even expect it?</strong> It's one of the most common questions I get asked at the door, usually mumbled half-apologetically, like there's a wrong answer waiting to embarrass somebody. There isn't. I've answered this question in driveways from East Medford to Gold Hill more times than I can count, and I'd rather just lay out the honest, non-awkward version here so you're never standing there guessing again.</p>
+
+<h2 id="different-from-restaurants">Why Carpet Cleaning Is Different From Restaurants and Rideshare</h2>
+<div class="cfm-tip-pullquote">
+<p>Why do we tip servers but not electricians?</p>
+</div>
+<p class="cfm-tip-p"><strong>Why is tipping such a big deal at restaurants but not for a service like carpet cleaning?</strong> It comes down to how the wage is structured. In most states, servers and bartenders are paid a "tipped minimum wage" &mdash; a lower base wage that the employer is legally allowed to pay because tips are expected to close the gap up to a full minimum wage. When you skip the tip in that system, you're genuinely reducing what that person takes home for the shift. That's the whole reason tipping culture exists there.</p>
+<p class="cfm-tip-p">Oregon is actually a little unusual on this front &mdash; we don't have a tipped minimum wage at all. Servers here are paid the full state minimum wage before a single tip hits the table, and tips are added entirely on top. Even in the one industry where tipping is most deeply expected, Oregon workers aren't relying on tips to reach minimum wage the way they might in, say, Texas or Florida.</p>
+<p class="cfm-tip-p">Carpet cleaning was never built on that model in the first place. When we quote a job, the price is set to fully cover the technician's time, the equipment, the drive out to your neighborhood, and the labor of doing the work right. There's no wage gap a tip is filling. <strong>Do carpet cleaners expect a tip the way a server does?</strong> No &mdash; and if a company is pricing jobs assuming tips will round out their technicians' pay, that's a pricing problem on their end, not something you should feel responsible for fixing.</p>
+<p class="cfm-tip-p">The better comparison isn't a server or a rideshare driver &mdash; it's an electrician, a plumber, or an HVAC tech. Nobody stands at the door wondering if they should tip the person who just fixed their water heater. You hired a skilled tradesperson, they quoted a fair price, they did the job, you paid the invoice. Carpet cleaning sits in that same category. We're happy to be there, and we're not counting on an envelope of cash to make the day worthwhile.</p>
+
+<h2 id="what-matters">What Actually Matters to a Medford Carpet Cleaner</h2>
+<p class="cfm-tip-p"><strong>If not tips, what actually helps a small carpet cleaning business in Medford?</strong> As someone running a small operation in a market the size of the Rogue Valley, I can tell you honestly &mdash; these three things move the needle far more than cash in hand.</p>
+<div class="cfm-tip-cards">
+<div class="cfm-tip-card"><h4>A Specific, Detailed Google Review</h4><p>Not "great service, five stars." A review that mentions the actual job &mdash; pet stain treatment in a Jacksonville rental, or a stairway runner cleaned before the Pear Blossom Festival &mdash; helps the next Jackson County homeowner searching Google actually picture what we do and trust that we can handle their specific problem. Specificity is what makes a review useful to strangers, not just flattering to us.</p></div>
+<div class="cfm-tip-card"><h4>A Direct Referral</h4><p>Mentioning us to a neighbor, a friend, or the property manager down the street is worth more than almost anything else. In a market this size, word-of-mouth is our biggest source of new work &mdash; far bigger than any ad we could run. A referral from someone real beats a marketing dollar every time.</p></div>
+<div class="cfm-tip-card"><h4>Booking Us Again</h4><p>Loyal customers who rebook every year or every six months are the actual foundation of a sustainable small business. It's not glamorous, but repeat relationships are what let a company like ours keep serving the Rogue Valley long-term instead of chasing one-off jobs.</p></div>
+</div>
+
+<h2 id="when-tip">When Tipping a Carpet Cleaner Makes the Most Sense</h2>
+<p class="cfm-tip-p"><strong>Are there times when tipping a carpet cleaner genuinely makes sense?</strong> Yes. It's never required, but there are situations where it's a real, honest way to say thank you for something above the standard job.</p>
+<ol class="cfm-tip-steps">
+<li><span class="num">1</span><div class="txt"><h4>The Technician Caught Something You Didn't Know About</h4><p>A UV inspection turns up old pet contamination or a hidden spill you had no idea was there, and it gets treated properly instead of just noted and left. That's real extra value delivered on the spot.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Honest Advice That Saved You Money</h4><p>The technician tells you straight that a section of carpet is beyond help and not worth paying to clean, instead of running the equipment over it anyway and charging you for it. That kind of honesty costs us a line item and benefits you directly.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Difficult Access or Unusual Conditions</h4><p>Multiple flights of stairs, a rural Rogue River property with a long gravel drive, or a fragile historic rug that needed extra-careful handling &mdash; jobs that clearly took more physical effort or precision than a standard clean.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Real Scheduling Flexibility</h4><p>The technician worked around a tight moving timeline, showed up early for an emergency, or rearranged the day to fit you in when it genuinely mattered.</p></div></li>
+<li><span class="num">5</span><div class="txt"><h4>You're Genuinely Moved by the Result</h4><p>A years-old pet odor or smoke smell that's finally, truly gone, and you can tell the difference the moment you walk in the door. That reaction is real, and if you want to express it with a tip, it's absolutely appreciated.</p></div></li>
+</ol>
+
+<h2 id="how-much">If You Do Tip &mdash; How Much Is Appropriate?</h2>
+<div class="cfm-tip-warn">
+<p>&#128176; As a rule of thumb: $10&ndash;$20 is a genuine, appreciated amount when you're simply pleased with the result. $20&ndash;$40 fits a job that was noticeably difficult or where the technician went clearly above and beyond. It's entirely discretionary &mdash; there's no obligation, and no technician will think less of you for skipping it.</p>
+</div>
+<p class="cfm-tip-p"><strong>How much should I tip a carpet cleaner in Medford?</strong> A few reference points, based on what we typically see:</p>
+<ol class="cfm-tip-steps">
+<li><span class="num">1</span><div class="txt"><h4>Standard Clean, Happy With the Result</h4><p>$10&ndash;$15 is a common, well-received amount for a routine job that went smoothly.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Multi-Room or Specialty Treatment</h4><p>$15&ndash;$25 fits jobs with extra rooms, a pet treatment, or a stain that took real extra attention.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Complex or Exceptional Job</h4><p>$25&ndash;$40 for the situations above &mdash; difficult access, an emergency turnaround, or a result that genuinely exceeded expectations.</p></div></li>
+</ol>
+<p class="cfm-tip-p">One more practical note: if more than one technician worked on your home, it's worth tipping each of them individually rather than handing one lump sum and assuming it gets split evenly &mdash; that's not always how it works out. For actual service pricing (not tipping, which is entirely separate and optional), see our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">Medford carpet cleaning cost guide</a>.</p>
+
+<h2 id="better-than-cash">Better Than Cash &mdash; How to Really Help a Local Medford Business</h2>
+<p class="cfm-tip-p"><strong>What's the single most useful thing I can do instead of tipping?</strong> Honestly, a well-written Google review. Here's how to make one actually count:</p>
+<ol class="cfm-tip-steps">
+<li><span class="num">1</span><div class="txt"><h4>Search the Business on Google</h4><p>Search "Carpet Friend Medford" and open the Google Business profile &mdash; the review link is right there under the star rating.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Leave an Honest Star Rating</h4><p>Rate it the way you actually experienced it. Honest reviews build more long-term trust than inflated ones, and they help other Rogue Valley homeowners make a real decision.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Describe the Specific Job</h4><p>Mention what service you had done, what problem it solved, and roughly where you're located &mdash; East Medford, near the Bear Creek Greenway, out toward Rogue River, wherever it applies. Specific details are what make a review genuinely useful to someone reading it later.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Mention One Detail That Stood Out</h4><p>Maybe it was punctuality, maybe it was how the technician explained the process, maybe it was the smell finally being gone. One concrete detail does more than five generic adjectives.</p></div></li>
+</ol>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Should-I-tip-my-carpet-cleaner.webp" alt="Writing an honest Google review after a Medford Oregon carpet cleaning job instead of tipping" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="situation-guide">Situation-Specific Tipping Guide for Medford Jobs</h2>
+<p class="cfm-tip-p"><strong>Does tipping etiquette change depending on the type of job?</strong> A little, yes. Here's a practical breakdown by job type we commonly see across Jackson County.</p>
+<div class="cfm-tip-table-wrap">
+<table class="cfm-tip-table">
+<thead><tr><th>Job Type</th><th>Tip?</th><th>Amount</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Standard residential clean</td><td>Optional</td><td>$10&ndash;$15</td><td>Appreciated, never expected</td></tr>
+<tr><td>Wildfire smoke protocol</td><td>Optional</td><td>$15&ndash;$20</td><td>Extra process, extra time involved</td></tr>
+<tr><td>Pet enzyme treatment</td><td>Optional</td><td>$15&ndash;$20</td><td>Detailed, hands-on work</td></tr>
+<tr><td>Multi-pet household</td><td>Optional</td><td>$20&ndash;$25</td><td>Multiple areas, more contamination to treat</td></tr>
+<tr><td>Move-out with dated receipt</td><td>Optional</td><td>$10&ndash;$15</td><td>Standard scope, tenants on a schedule</td></tr>
+<tr><td>Historic wool or antique rug</td><td>Optional</td><td>$20&ndash;$30</td><td>Careful, specialized handling</td></tr>
+<tr><td>Same-day emergency scheduling</td><td>Optional</td><td>$20&ndash;$30</td><td>Real flexibility on the technician's part</td></tr>
+<tr><td>Long-neglected odor finally resolved</td><td>Optional</td><td>$20&ndash;$30</td><td>Noticeable, meaningful result</td></tr>
+<tr><td>Standard clean, result as expected</td><td>Skip it</td><td>&mdash;</td><td>Nothing wrong &mdash; job simply met expectations</td></tr>
+<tr><td>Partial or unfixable result</td><td>Skip it</td><td>&mdash;</td><td>Don't tip for a result that couldn't be fully fixed</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="faq">Tipping Carpet Cleaners FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-tip-faq" id="cfm-tip-faq">
+
+<div class="cfm-tip-faq-item" aria-expanded="false">
+<button class="cfm-tip-faq-q" type="button">Should I tip my carpet cleaner?<span class="plus">+</span></button>
+<div class="cfm-tip-faq-a"><div class="cfm-tip-faq-a-inner">It's entirely up to you and never required. Carpet cleaning pricing already covers the technician's labor in full, unlike restaurant tipping, which fills a wage gap. If a technician went above and beyond, a tip is a genuine and appreciated way to say thanks &mdash; but skipping it is completely normal and expected in this industry.</div></div>
+</div>
+
+<div class="cfm-tip-faq-item" aria-expanded="false">
+<button class="cfm-tip-faq-q" type="button">How much do you tip a carpet cleaner in Medford?<span class="plus">+</span></button>
+<div class="cfm-tip-faq-a"><div class="cfm-tip-faq-a-inner">If you choose to tip, $10&ndash;$20 is common for a standard job you're happy with, and $20&ndash;$40 fits a more difficult or exceptional job &mdash; tricky access, an emergency turnaround, or a result that genuinely exceeded expectations. If multiple technicians worked on your home, it's best to tip each of them individually.</div></div>
+</div>
+
+<div class="cfm-tip-faq-item" aria-expanded="false">
+<button class="cfm-tip-faq-q" type="button">Is it rude not to tip a carpet cleaner?<span class="plus">+</span></button>
+<div class="cfm-tip-faq-a"><div class="cfm-tip-faq-a-inner">Not at all. Tipping isn't a standard part of carpet cleaning etiquette the way it is at a restaurant, because our pricing already covers the full cost of labor. Most homeowners in the Rogue Valley don't tip, and no technician expects it or thinks less of a customer for not doing so.</div></div>
+</div>
+
+<div class="cfm-tip-faq-item" aria-expanded="false">
+<button class="cfm-tip-faq-q" type="button">What's better than tipping a carpet cleaner?<span class="plus">+</span></button>
+<div class="cfm-tip-faq-a"><div class="cfm-tip-faq-a-inner">A specific, detailed Google review that mentions the actual job and your neighborhood, or a direct referral to a friend or neighbor. For a small local business, both do far more good long-term than a cash tip &mdash; they're how new customers in Jackson County actually find and trust us.</div></div>
+</div>
+
+<div class="cfm-tip-faq-item" aria-expanded="false">
+<button class="cfm-tip-faq-q" type="button">Do you tip carpet cleaners who work for a franchise?<span class="plus">+</span></button>
+<div class="cfm-tip-faq-a"><div class="cfm-tip-faq-a-inner">The same general principle applies &mdash; tipping is optional and appreciated, not expected. The one thing worth checking is whether the tip goes directly to the technician who did the work or gets pooled and shared company-wide. If you're not sure, it's fine to just ask the technician directly before you tip.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-tip-toc" id="cfm-tip-toc" data-open="true">
+<span class="toc-ttl cfm-tip-toc-static">In This Guide</span>
+<button class="cfm-tip-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-tip-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-tip-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#different-from-restaurants">Why It's Different From Restaurants</a></li>
+<li><a href="#what-matters">What Actually Matters to Us</a></li>
+<li><a href="#when-tip">When Tipping Makes Sense</a></li>
+<li><a href="#how-much">How Much Is Appropriate</a></li>
+<li><a href="#better-than-cash">Better Than Cash</a></li>
+<li><a href="#situation-guide">Situation-Specific Guide</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-tip-cta">
+<h2>Ready to Book? No Tips Required &mdash; Just Results.</h2>
+<p>Upfront pricing, honest service, and a Medford technician who tells you the truth about your carpet. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/#book">Book Now &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-tip-related">
+<h3>Related Reading</h3>
+<div class="cfm-tip-rel-grid">
+<a class="cfm-tip-rel-card" href="https://carpetcleaningmedfordoregon.com/questions-to-ask-carpet-cleaning-company-medford/">
+<span class="lbl">&#128172; Guide</span>
+<p class="ttl">What Questions Should I Ask?</p>
+</a>
+<a class="cfm-tip-rel-card" href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">
+<span class="lbl">&#128176; Guide</span>
+<p class="ttl">How Much Does Carpet Cleaning Cost?</p>
+</a>
+<a class="cfm-tip-rel-card" href="https://carpetcleaningmedfordoregon.com/is-carpet-cleaning-worth-it-medford-oregon/">
+<span class="lbl">&#10003; Guide</span>
+<p class="ttl">Is Carpet Cleaning Worth It?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-tip-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-tip-toc');
+var tocBtn=toc.querySelector('.cfm-tip-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-tip-faq .cfm-tip-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-tip-faq-q');
+var ans=item.querySelector('.cfm-tip-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-tip-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

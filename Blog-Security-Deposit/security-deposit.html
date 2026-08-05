@@ -1,0 +1,428 @@
+<!-- wp:html -->
+<style id="cfm-sd-css">
+.cfm-page-security-deposit{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-security-deposit *,.cfm-page-security-deposit *::before,.cfm-page-security-deposit *::after{box-sizing:border-box}
+.cfm-page-security-deposit p,.cfm-page-security-deposit li,.cfm-page-security-deposit h1,.cfm-page-security-deposit h2,.cfm-page-security-deposit h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-sd-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#1e3a5f;z-index:9998;transition:width .1s linear}
+
+.cfm-sd-topline{position:sticky;top:var(--cfm-sd-header-h,0px);z-index:9990;background:#fff;max-width:100%;margin:0 auto;padding:12px 20px;box-shadow:0 2px 10px rgba(12,31,53,.06)}
+.cfm-sd-topline-inner{max-width:1200px;margin:0 auto}
+.cfm-sd-topline a{color:#1e3a5f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-sd-topline a:hover{text-decoration:underline}
+
+.cfm-sd-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-sd-hero .ey{display:block;color:#7ea3c2;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-sd-hero h1{color:#fff;font-size:clamp(26px,4.6vw,44px);font-weight:800;line-height:1.2;letter-spacing:-.5px;margin:0 auto 18px;max-width:860px}
+.cfm-sd-hero .byline{color:#a8c2d8;font-size:13.5px;font-weight:600;margin:0}
+.cfm-sd-hero .rt{display:inline-block;background:#e6edf4;color:#1e3a5f;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-sd-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-sd-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-sd-toc{flex:0 0 300px;background:#fff;border:1px solid #e2e8f0;border-left:3px solid #1e3a5f;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-sd-toc .toc-ttl{display:block;color:#1e3a5f;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-sd-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-sd-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-sd-toc a{display:block;color:#475569;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-sd-toc a::before{content:counter(toc)'. ';color:#94a3b8;font-weight:700}
+.cfm-sd-toc a:hover{color:#1e3a5f}
+.cfm-sd-toc a.active{color:#1e3a5f;font-weight:700}
+.cfm-sd-toc a.active::before{color:#1e3a5f}
+.cfm-sd-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-sd-layout{flex-direction:column}
+.cfm-sd-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-sd-toc-static{display:none}
+.cfm-sd-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-sd-toc-toggle .chev{transition:transform .2s;color:#1e3a5f}
+.cfm-sd-toc[data-open="false"] ol{display:none}
+.cfm-sd-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-sd-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-sd-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-sd-disclaimer{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 12px 12px 0;padding:20px 24px;margin:0 0 32px}
+.cfm-sd-disclaimer p{color:#78350f;font-size:14.5px;line-height:1.7;margin:0;font-weight:600}
+
+.cfm-sd-intro{background:#eef2f7;border-left:4px solid #1e3a5f;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-sd-intro p{color:#1e2a3a;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-security-deposit h2{color:#1e2a3a;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-sd-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-security-deposit .cfm-sd-p{color:#475569;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-security-deposit strong{color:#1e2a3a}
+
+.cfm-sd-lbl{display:block;color:#1e3a5f;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-sd-legal{background:#f4f0fb;border:1px solid #ddd3f2;border-left:4px solid #5B21B6;border-radius:0 12px 12px 0;padding:24px 26px;margin:22px 0}
+.cfm-sd-legal .tag{display:inline-block;background:#5B21B6;color:#fff;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:10px;margin:0 0 12px}
+.cfm-sd-legal p{color:#3b1f6b;font-size:15.5px;line-height:1.75;margin:0 0 10px}
+.cfm-sd-legal p:last-child{margin-bottom:0}
+.cfm-sd-legal strong{color:#3b1f6b}
+
+.cfm-sd-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-sd-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-sd-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-sd-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e2e8f0;border-radius:12px;padding:20px 22px}
+.cfm-sd-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#1e3a5f;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-sd-steps .txt h4{color:#1e2a3a;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-sd-steps .txt p{color:#475569;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-sd-cond{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-sd-cond li{display:flex;gap:16px;align-items:flex-start;background:#eef4ee;border:1px solid #c9e2c9;border-radius:12px;padding:20px 22px}
+.cfm-sd-cond .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#2f6b3a;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-sd-cond .txt h4{color:#1e2a3a;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-sd-cond .txt p{color:#475569;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-sd-notcards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0 8px}
+.cfm-sd-notcard{background:#fef3c7;border:1px solid #fbe3ac;border-radius:12px;padding:20px 20px;border-top:4px solid #b45309}
+.cfm-sd-notcard h4{color:#78350f;font-size:15px;font-weight:700;margin:0 0 8px}
+.cfm-sd-notcard p{color:#78350f;font-size:13.5px;line-height:1.6;margin:0}
+
+.cfm-sd-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.cfm-sd-compare .col{border-radius:12px;padding:20px 22px;border:1px solid #e2e8f0}
+.cfm-sd-compare .col.ok{background:#eef4ee;border-color:#c9e2c9}
+.cfm-sd-compare .col.bad{background:#fdecec;border-color:#f3c6c6}
+.cfm-sd-compare h4{font-size:15px;font-weight:800;margin:0 0 12px}
+.cfm-sd-compare .col.ok h4{color:#2f6b3a}
+.cfm-sd-compare .col.bad h4{color:#a3281e}
+.cfm-sd-compare ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.cfm-sd-compare li{font-size:14px;line-height:1.55;color:#3a4a3a;padding-left:22px;position:relative}
+.cfm-sd-compare .col.bad li{color:#5a2c26}
+.cfm-sd-compare .col.ok li::before{content:'\2713';position:absolute;left:0;color:#2f6b3a;font-weight:800}
+.cfm-sd-compare .col.bad li::before{content:'\2717';position:absolute;left:0;color:#a3281e;font-weight:800}
+
+.cfm-sd-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-sd-table th{background:#1e2a3a;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-sd-table td{padding:12px 14px;border:1px solid #e2e8f0;color:#475569;line-height:1.5}
+.cfm-sd-table tr:nth-child(even) td{background:#f8f9fa}
+.cfm-sd-table-wrap{overflow-x:auto;margin:20px 0}
+
+.cfm-sd-faq{max-width:100%;margin:24px 0 8px}
+.cfm-sd-faq-item{border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-sd-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#1e2a3a;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-sd-faq-q:hover{background:#eef2f7}
+.cfm-sd-faq-q .plus{color:#1e3a5f;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-sd-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-sd-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-sd-faq-a-inner{padding:20px 22px;font-size:15px;color:#475569;line-height:1.75}
+
+.cfm-sd-cta{background:#1e2a3a;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-sd-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-sd-cta p{color:rgba(255,255,255,.9);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-sd-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-sd-cta a.btn-w{background:#fff;color:#1e3a5f;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-sd-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-sd-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-sd-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-sd-related h3{color:#1e2a3a;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-sd-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-sd-rel-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-sd-rel-card:hover{box-shadow:0 10px 30px rgba(30,42,58,.12);transform:translateY(-2px)}
+.cfm-sd-rel-card .lbl{display:block;color:#1e3a5f;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-sd-rel-card .ttl{color:#1e2a3a;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-sd-notcards{grid-template-columns:1fr}
+.cfm-sd-compare{grid-template-columns:1fr}
+.cfm-sd-rel-grid{grid-template-columns:1fr}
+.cfm-sd-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-sd-cta a.btn-w,.cfm-sd-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-sd-layout{padding:32px 20px}
+.cfm-sd-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-sd-table{font-size:12.5px}
+}
+</style>
+
+<div class="cfm-page-security-deposit">
+
+<div class="cfm-sd-progress" id="cfm-sd-progress"></div>
+
+<div class="cfm-sd-topline" id="cfm-sd-topline"><div class="cfm-sd-topline-inner"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div></div>
+
+<div class="cfm-sd-hero" style="background-image:linear-gradient(160deg,rgba(15,25,40,.88) 0%,rgba(30,58,95,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-be-deducted-from-a-security-deposit.webp')" role="img" aria-label="Lease agreement and keys on a table &mdash; Oregon security deposit and carpet cleaning deductions">
+<span class="ey">Legal &amp; Practical Guide &middot; Jackson County, Oregon</span>
+<h1>Can Carpet Cleaning Be Deducted from a Security Deposit in Oregon?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">9 min read</span></p>
+</div>
+
+<div class="cfm-sd-layout">
+
+<div class="cfm-sd-wrap">
+
+<div class="cfm-sd-disclaimer">
+<p>&#9888; This post explains Oregon's residential tenancy law in plain terms for educational purposes. It is not legal advice. For specific situations &mdash; especially if you are in or anticipating a deposit dispute &mdash; consult an Oregon attorney or the Oregon State Bar's lawyer referral service.</p>
+</div>
+
+<div class="cfm-sd-intro" id="answer">
+<p>In Oregon, a landlord can deduct carpet cleaning costs from a security deposit only if the carpet's condition exceeds normal wear and tear <strong>and</strong> the lease specifically requires professional cleaning at move-out. If both conditions are met, only the actual, documented cost of cleaning may be deducted &mdash; and a dated service receipt is the standard piece of documentation used to support that deduction.</p>
+</div>
+
+<p class="cfm-sd-p">Move-out season in Medford brings the same question from both sides of the lease every year: <strong>can a landlord really take carpet cleaning out of my deposit?</strong> And on the other side, <strong>am I within my rights to deduct for carpet cleaning when a tenant moves out?</strong> Our site's <a href="https://carpetcleaningmedfordoregon.com/faq/">FAQ page</a> gives a short answer to this in a few sentences. This post goes further &mdash; walking through what Oregon law actually frames, how "normal wear and tear" tends to get interpreted, what makes a deduction legitimate versus improper, and a practical step-by-step guide for both tenants and landlords in Jackson County. None of this replaces advice from a licensed Oregon attorney for your specific situation, but it should give you a much clearer picture of the landscape than a three-sentence answer can.</p>
+
+<h2 id="oregon-law">What Oregon Law Actually Says &mdash; ORS 90.300</h2>
+<div class="cfm-sd-legal">
+<span class="tag">Legal Framework</span>
+<p><strong>Oregon's residential landlord-tenant statute, ORS 90.300, governs security deposits.</strong> In general terms, it sets up a framework where deductions from a deposit are meant to cover damage beyond normal wear and tear, not routine upkeep or cosmetic refresh items a landlord would reasonably expect to handle as a cost of doing business. The statute also requires landlords to provide tenants with a written, itemized accounting of any deductions within a set window after the tenant moves out &mdash; commonly cited as 31 days.</p>
+<p>This is a general summary of the statutory framework, not a substitute for reading the statute itself or consulting an attorney. Oregon law changes periodically, and how a specific clause applies to your lease, your unit, and your circumstances can vary. If you are facing an active dispute, the Oregon Law Center or the Oregon State Bar's lawyer referral service are appropriate next steps &mdash; not a blog post.</p>
+</div>
+<p class="cfm-sd-p"><strong>What does the two-part test actually mean in plain language?</strong> Two conditions generally need to be true before a carpet cleaning deduction is proper. First, the condition of the carpet has to exceed normal wear and tear &mdash; meaning the carpet shows more than the expected fading, light matting, or minor marks that come from ordinary living over a lease term. Second, the lease itself has to specifically require professional cleaning at move-out. A landlord who has only one of these two elements &mdash; a slightly worn carpet but no specific lease clause, or a lease clause but a carpet in genuinely normal condition &mdash; is on much shakier ground than a landlord who has both.</p>
+<p class="cfm-sd-p">The documentation requirement matters just as much as the substantive test. Generally speaking, landlords are expected to provide tenants a written, itemized accounting of any deposit deductions within a set number of days after the tenant vacates the unit &mdash; commonly described as 31 days under Oregon practice. This accounting should show what was deducted, why, and typically what it cost. This is the procedural half of the framework: even where a deduction might be substantively justified, failing to document and disclose it properly can create problems for a landlord. Again, for the precise statutory language and how it applies to a specific lease, consult an attorney or refer directly to the Oregon Revised Statutes.</p>
+
+<h2 id="wear-and-tear">What "Normal Wear and Tear" Means &mdash; and How It's Interpreted in Practice</h2>
+<p class="cfm-sd-p"><strong>What counts as normal wear and tear on carpet?</strong> Normal wear and tear generally refers to the gradual, unavoidable deterioration that happens simply from a tenant living in a unit and using it as intended. Gradual fading from sunlight, light pile matting in high-traffic paths like hallways and in front of couches, and small, unavoidable furniture indentations are the kinds of things typically treated as ordinary wear. Beyond-normal wear generally includes things like pet stains and odor, food or beverage stains, burns, tears or rips, and heavy soiling that reflects neglect rather than ordinary use.</p>
+
+<div class="cfm-sd-compare">
+<div class="col ok">
+<h4>Normal Wear and Tear</h4>
+<ul>
+<li>Gradual, even fading from sunlight over the lease term</li>
+<li>Light pile matting in high-traffic walkways</li>
+<li>Minor, unavoidable furniture indentations</li>
+<li>General "broken-in" look consistent with tenancy length</li>
+<li>Light soiling consistent with ordinary vacuuming and use</li>
+</ul>
+</div>
+<div class="col bad">
+<h4>Beyond Normal Wear and Tear</h4>
+<ul>
+<li>Pet stains, pet odor, or urine damage</li>
+<li>Food or beverage stains not addressed during tenancy</li>
+<li>Burns, tears, rips, or cuts in the carpet</li>
+<li>Heavy soiling consistent with neglect, not ordinary use</li>
+<li>Mold or moisture damage from unreported leaks</li>
+</ul>
+</div>
+</div>
+
+<p class="cfm-sd-p"><strong>How do landlords and tenants typically sort out where a specific carpet falls?</strong> In practice, several factors tend to get weighed when a carpet's condition is in a gray area. Length of tenancy matters &mdash; a carpet at the end of a five-year lease is expected to show considerably more wear than one at the end of a one-year lease, and a court or mediator would typically expect landlords to factor tenancy length into their expectations. The carpet's age and condition at move-in also matters a great deal, which is why move-in documentation is so important on the landlord side. And the quality of documentation on both ends &mdash; move-in photos, move-out photos, any mid-lease inspection notes &mdash; tends to carry significant weight in how a dispute actually gets resolved. These are the kinds of practical factors that typically get considered in a deposit dispute, not a rigid legal formula, and outcomes can vary considerably based on the specific facts. For anything beyond general understanding, an attorney familiar with Oregon landlord-tenant law is the right resource.</p>
+
+<h2 id="when-legal">When a Carpet Cleaning Deduction IS Legal in Oregon</h2>
+<p class="cfm-sd-p"><strong>Under what conditions can a landlord actually deduct for carpet cleaning?</strong> Generally speaking, three conditions tend to line up when a deduction is on solid footing.</p>
+<ol class="cfm-sd-cond">
+<li><span class="num">1</span><div class="txt"><h4>The carpet's condition exceeds normal wear and tear</h4><p>Stains, odor, damage, or soiling beyond what would be expected for ordinary use over the tenancy length &mdash; not simply a carpet that looks "lived in."</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>The lease specifically requires professional cleaning at move-out</h4><p>Generic language like "unit must be returned in clean condition" may not be sufficient on its own to justify a carpet-specific deduction. Landlords should review their lease wording carefully &mdash; and ideally have specific carpet-cleaning language reviewed by an attorney &mdash; rather than relying on broad, non-specific clauses.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>The deduction reflects the actual, documented cost</h4><p>A proper deduction matches what was actually paid for cleaning, supported by a receipt &mdash; not a round-number estimate or an amount unrelated to any real invoice.</p></div></li>
+</ol>
+
+<h2 id="when-not-legal">When a Carpet Cleaning Deduction Is NOT Legal in Oregon</h2>
+<p class="cfm-sd-p"><strong>What makes a carpet cleaning deduction improper?</strong> On the flip side, several common situations generally point toward a deduction being on weak legal footing.</p>
+<div class="cfm-sd-notcards">
+<div class="cfm-sd-notcard"><h4>Carpet was already dirty at move-in, undocumented</h4><p>Without move-in photos or a condition report, a landlord has little basis to attribute existing wear to the departing tenant.</p></div>
+<div class="cfm-sd-notcard"><h4>Condition reflects normal wear and tear for the tenancy length</h4><p>Ordinary fading or light matting after a multi-year tenancy is generally expected, not a chargeable defect.</p></div>
+<div class="cfm-sd-notcard"><h4>The lease doesn't specifically require professional cleaning</h4><p>A vague "leave the unit clean" clause is generally weaker support for a carpet-specific charge than explicit lease language.</p></div>
+<div class="cfm-sd-notcard"><h4>The deduction exceeds the actual documented cleaning cost</h4><p>Charging a flat, unsupported amount rather than the real invoiced cost is a common point of dispute.</p></div>
+</div>
+<div class="cfm-sd-warn">
+<p>&#9888; This list describes commonly disputed scenarios in general terms. Whether a specific deduction is lawful depends on the exact lease language, documentation, and facts involved &mdash; a determination best made with an attorney's review, not a blog post.</p>
+</div>
+
+<h2 id="for-tenants">Guide for Tenants Moving Out in Medford, Oregon</h2>
+<p class="cfm-sd-p"><strong>What should a Medford tenant actually do to protect their deposit?</strong> Here's a practical, step-by-step approach.</p>
+<ol class="cfm-sd-steps">
+<li><span class="num">1</span><div class="txt"><h4>Read your lease for specific carpet-cleaning language</h4><p>Before you assume anything, check whether your lease actually requires professional carpet cleaning at move-out, and what exact wording is used. This shapes everything that follows.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Document carpet condition at move-out with timestamped photos</h4><p>Photograph every room's carpet, including close-ups of any high-traffic areas, before you leave. Timestamped photos are your strongest evidence if a dispute arises later.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Book a professional cleaner and get a dated receipt</h4><p>If your lease requires it, having your own <a href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/">move-out carpet cleaning</a> done proactively, with a dated, itemized receipt, is often the simplest way to satisfy the requirement on your own terms rather than leaving it to the landlord.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Provide the receipt to your landlord along with your move-out documentation</h4><p>Submit the dated receipt together with your photos and any move-out checklist. This creates a clear paper trail showing the requirement was met before you handed back the keys.</p></div></li>
+<li><span class="num">5</span><div class="txt"><h4>If the landlord still deducts unreasonably</h4><p>Oregon's general framework calls for landlords to provide a written, itemized accounting of any deductions within a set window after move-out. If a deduction seems to ignore your documentation or exceed the actual cost, Oregon law provides remedies for tenants when landlords don't follow proper procedure &mdash; but the specifics of what remedy applies depend on your facts. Tenants with qualifying incomes can seek help from the <strong>Oregon Law Center</strong>, and the <strong>Oregon State Bar's lawyer referral service</strong> can connect anyone with a private attorney for a consultation.</p></div></li>
+</ol>
+
+<h2 id="for-landlords">Guide for Landlords and Property Managers in Jackson County</h2>
+<p class="cfm-sd-p"><strong>What should a landlord or property manager do to make a carpet cleaning deduction defensible?</strong> The same evenhanded logic applies in reverse.</p>
+<ol class="cfm-sd-steps">
+<li><span class="num">1</span><div class="txt"><h4>Check your lease for specific carpet-cleaning language</h4><p>Generic "return unit clean" clauses may not be enough to support a carpet-specific deduction. Consider adding explicit carpet-cleaning language to your lease template, reviewed by an attorney, so expectations are clear from day one.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Document carpet condition at move-in with photos</h4><p>A dated set of move-in photos is the single most useful piece of evidence for establishing a baseline condition, and it protects you if a later dispute arises.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Use a professional cleaner with a dated receipt for baseline and turnover</h4><p>Having carpets professionally cleaned between tenants &mdash; with a dated receipt kept on file &mdash; establishes a clean, documented starting point for the next tenant and supports any future deduction with real, verifiable cost data.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Apply the two-part test before deducting anything</h4><p>Before charging a former tenant, confirm the condition genuinely exceeds normal wear and tear for that tenancy length, and that your lease actually requires professional cleaning. Deduct only the actual documented cost, and provide the written accounting promptly.</p></div></li>
+<li><span class="num">5</span><div class="txt"><h4>Know the local rental market context</h4><p>Jackson County is an active rental corridor with frequent turnover across neighborhoods from White City to Central Point. Consistent, well-documented practices at every turnover reduce disputes and make each move-out easier to handle fairly.</p></div></li>
+</ol>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Can-carpet-cleaning-be-deducted-from-a-security-deposit.webp" alt="Property manager reviewing a move-in carpet condition checklist in a Jackson County Oregon rental unit" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="the-receipt">Why the Dated Service Receipt Is the Most Important Document in a Deposit Dispute</h2>
+<p class="cfm-sd-p"><strong>Why does a receipt matter so much in a deposit dispute?</strong> A dated, professional service receipt does something photos alone can't: it establishes that a specific service actually happened, on a specific date, at a specific address, performed by a specific company, at a specific documented cost. That combination &mdash; date, address, provider, scope of work, and price &mdash; is exactly the kind of concrete record that supports a deduction on the landlord side, or proves compliance on the tenant side.</p>
+<p class="cfm-sd-p"><strong>What makes a receipt actually useful for this purpose?</strong> A receipt that will hold up in a deposit conversation should include the full property address, the date of service, a description of the services performed (carpet cleaning specifically, not a vague "cleaning" line item), the total amount charged, and the company's name and credentials. A receipt from a licensed, insured, IICRC-certified company carries more weight than a generic or informal invoice.</p>
+<p class="cfm-sd-p">What a receipt alone cannot do is document the condition of the carpet before and after the work. It proves that cleaning happened and what it cost &mdash; it doesn't prove what the carpet looked like beforehand. That's why the strongest documentation pairs a dated receipt with timestamped photos taken close to the same date, whether you're a tenant proving you met a lease requirement or a landlord supporting a deduction.</p>
+
+<h2 id="medford-context">Medford's Rental Market &mdash; Why Carpet Cleaning Documentation Matters Here</h2>
+<p class="cfm-sd-p"><strong>Why does this come up so often in Jackson County specifically?</strong> Jackson County has an active rental market with steady turnover across a wide range of neighborhoods and communities &mdash; from apartments and single-family rentals in <strong>White City</strong> and <strong>West Medford</strong>, to the <strong>Phoenix</strong> and <strong>Talent</strong> corridor along the Bear Creek Greenway, to growing rental stock in <strong>Central Point</strong> and <strong>Eagle Point</strong>. With that much movement between tenants, carpet condition at turnover comes up constantly &mdash; for property managers handling multiple units and for tenants navigating a lease for the first time.</p>
+<p class="cfm-sd-p">In a market with this much rental activity, consistent documentation habits &mdash; move-in photos, move-out photos, and dated service receipts &mdash; tend to prevent far more disputes than they resolve after the fact. Whether you're a tenant in a Talent duplex or a landlord managing several properties around Central Point, the same basic practice applies: document early, document specifically, and keep the paperwork.</p>
+
+<h2 id="faq">Security Deposit &amp; Carpet Cleaning FAQ &mdash; Oregon</h2>
+<div class="cfm-sd-faq" id="cfm-sd-faq">
+
+<div class="cfm-sd-faq-item" aria-expanded="false">
+<button class="cfm-sd-faq-q" type="button">Can a landlord automatically deduct carpet cleaning from a security deposit in Oregon?<span class="plus">+</span></button>
+<div class="cfm-sd-faq-a"><div class="cfm-sd-faq-a-inner">No. A deduction is generally only proper if the carpet's condition exceeds normal wear and tear and the lease specifically requires professional cleaning at move-out. A landlord can't automatically deduct for carpet cleaning simply because a tenant is moving out. This is a general summary of the statutory framework under ORS 90.300, not legal advice for a specific lease or dispute.</div></div>
+</div>
+
+<div class="cfm-sd-faq-item" aria-expanded="false">
+<button class="cfm-sd-faq-q" type="button">What is "normal wear and tear" on carpet in Oregon?<span class="plus">+</span></button>
+<div class="cfm-sd-faq-a"><div class="cfm-sd-faq-a-inner">Normal wear and tear generally covers the gradual deterioration that comes from ordinary living, such as light fading, minor pile matting in traffic areas, and small unavoidable furniture marks. It generally does not cover pet stains and odor, food or beverage stains, burns, tears, or heavy soiling from neglect. Where a specific carpet falls often depends on tenancy length and the quality of move-in and move-out documentation.</div></div>
+</div>
+
+<div class="cfm-sd-faq-item" aria-expanded="false">
+<button class="cfm-sd-faq-q" type="button">Do I need professional carpet cleaning to get my deposit back in Oregon?<span class="plus">+</span></button>
+<div class="cfm-sd-faq-a"><div class="cfm-sd-faq-a-inner">It depends on your lease. If your lease specifically requires professional cleaning at move-out, arranging it yourself with a dated receipt is often the simplest way to satisfy that requirement and avoid a landlord-initiated deduction. If your lease has no such requirement and your carpet shows only normal wear and tear, professional cleaning may not be required at all. Check your specific lease language.</div></div>
+</div>
+
+<div class="cfm-sd-faq-item" aria-expanded="false">
+<button class="cfm-sd-faq-q" type="button">What should a carpet cleaning receipt include for deposit documentation in Oregon?<span class="plus">+</span></button>
+<div class="cfm-sd-faq-a"><div class="cfm-sd-faq-a-inner">A useful receipt includes the full property address, the date of service, a description of the specific services performed, the total amount charged, and the cleaning company's name and credentials (such as IICRC certification). A receipt like this, paired with timestamped photos of the carpet's condition, forms the strongest documentation for either side of a deposit conversation.</div></div>
+</div>
+
+<div class="cfm-sd-faq-item" aria-expanded="false">
+<button class="cfm-sd-faq-q" type="button">Can I use a consumer rental-machine receipt for security deposit purposes?<span class="plus">+</span></button>
+<div class="cfm-sd-faq-a"><div class="cfm-sd-faq-a-inner">A rental-machine receipt shows you purchased or rented equipment, but it doesn't establish that professional cleaning was performed by a company, and many leases that require "professional carpet cleaning" specifically mean a licensed, insured cleaning service rather than a DIY rental. Review your lease wording carefully, and when in doubt, a professional service receipt is the safer documentation.</div></div>
+</div>
+
+<div class="cfm-sd-faq-item" aria-expanded="false">
+<button class="cfm-sd-faq-q" type="button">What happens if a Medford landlord doesn't return my deposit within the required timeframe?<span class="plus">+</span></button>
+<div class="cfm-sd-faq-a"><div class="cfm-sd-faq-a-inner">Oregon's general framework calls for landlords to provide tenants a written, itemized accounting of any deductions within a set window after move-out (commonly cited as 31 days). Oregon law provides remedies for tenants when landlords don't follow proper procedure, but the specific remedy that applies depends on the facts of your situation. For guidance on your specific case, contact the Oregon Law Center (for qualifying incomes) or use the Oregon State Bar's lawyer referral service to reach a private attorney.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-sd-toc" id="cfm-sd-toc" data-open="true">
+<span class="toc-ttl cfm-sd-toc-static">In This Guide</span>
+<button class="cfm-sd-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-sd-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-sd-toc-list">
+<li><a href="#answer">The Short Legal Answer</a></li>
+<li><a href="#oregon-law">What Oregon Law Says (ORS 90.300)</a></li>
+<li><a href="#wear-and-tear">Normal Wear and Tear, Explained</a></li>
+<li><a href="#when-legal">When a Deduction IS Legal</a></li>
+<li><a href="#when-not-legal">When a Deduction Is NOT Legal</a></li>
+<li><a href="#for-tenants">Guide for Tenants</a></li>
+<li><a href="#for-landlords">Guide for Landlords</a></li>
+<li><a href="#the-receipt">Why the Receipt Matters Most</a></li>
+<li><a href="#medford-context">Medford's Rental Market</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-sd-cta">
+<h2>Moving Out? We Provide the Receipt That Protects Your Deposit.</h2>
+<p>Every job includes a dated, itemized service receipt with your address, service date, and scope of work &mdash; IICRC certified. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/">&#128230; Move-Out Cleaning &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-sd-related">
+<h3>Related Reading</h3>
+<div class="cfm-sd-rel-grid">
+<a class="cfm-sd-rel-card" href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#128230; Service</span>
+<p class="ttl">Move-Out Carpet Cleaning in Medford</p>
+</a>
+<a class="cfm-sd-rel-card" href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">
+<span class="lbl">&#128176; Guide</span>
+<p class="ttl">How Much Does Carpet Cleaning Cost?</p>
+</a>
+<a class="cfm-sd-rel-card" href="https://carpetcleaningmedfordoregon.com/faq/">
+<span class="lbl">&#10067; FAQ</span>
+<p class="ttl">Full FAQ &mdash; Every Question Answered</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var page=document.querySelector('.cfm-page-security-deposit');
+function syncHeaderOffset(){
+var siteHeader=document.getElementById('cfm-header');
+var h=siteHeader?siteHeader.getBoundingClientRect().height:0;
+if(page)page.style.setProperty('--cfm-sd-header-h',h+'px');
+}
+syncHeaderOffset();
+window.addEventListener('resize',syncHeaderOffset);
+window.addEventListener('load',syncHeaderOffset);
+
+var bar=document.getElementById('cfm-sd-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-sd-toc');
+var tocBtn=toc.querySelector('.cfm-sd-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-sd-faq .cfm-sd-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-sd-faq-q');
+var ans=item.querySelector('.cfm-sd-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-sd-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

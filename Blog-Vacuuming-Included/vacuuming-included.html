@@ -1,0 +1,336 @@
+<!-- wp:html -->
+<style id="cfm-vi-css">
+.cfm-page-vacuuming-included{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-vacuuming-included *,.cfm-page-vacuuming-included *::before,.cfm-page-vacuuming-included *::after{box-sizing:border-box}
+.cfm-page-vacuuming-included p,.cfm-page-vacuuming-included li,.cfm-page-vacuuming-included h1,.cfm-page-vacuuming-included h2,.cfm-page-vacuuming-included h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-vi-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#0E7C7B;z-index:9998;transition:width .1s linear}
+
+.cfm-vi-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-vi-topline a{color:#0E7C7B;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-vi-topline a:hover{text-decoration:underline}
+
+.cfm-vi-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-vi-hero .ey{display:block;color:#5FD1CD;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-vi-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-vi-hero .byline{color:#5FD1CD;font-size:13.5px;font-weight:600;margin:0}
+.cfm-vi-hero .rt{display:inline-block;background:#e2f6f5;color:#0a4b4a;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-vi-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-vi-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-vi-toc{flex:0 0 300px;background:#fff;border:1px solid #e2e8ec;border-left:3px solid #0a2e2e;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-vi-toc .toc-ttl{display:block;color:#0E7C7B;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-vi-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-vi-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-vi-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-vi-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-vi-toc a:hover{color:#0a2e2e}
+.cfm-vi-toc a.active{color:#0a2e2e;font-weight:700}
+.cfm-vi-toc a.active::before{color:#0E7C7B}
+.cfm-vi-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-vi-layout{flex-direction:column}
+.cfm-vi-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-vi-toc-static{display:none}
+.cfm-vi-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-vi-toc-toggle .chev{transition:transform .2s;color:#0E7C7B}
+.cfm-vi-toc[data-open="false"] ol{display:none}
+.cfm-vi-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-vi-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-vi-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-vi-intro{background:#e9f7f6;border-left:4px solid #0E7C7B;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-vi-intro p{color:#0a2e2e;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-vacuuming-included h2{color:#0a2e2e;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-vi-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-vacuuming-included .cfm-vi-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-vacuuming-included strong{color:#0a2e2e}
+
+.cfm-vi-lbl{display:block;color:#0E7C7B;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-vi-pullquote{background:#0a2e2e;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-vi-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-vi-pullquote::before{content:'"';color:#5FD1CD;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-vi-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-vi-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f9fa;border:1px solid #e2e8ec;border-radius:12px;padding:20px 22px}
+.cfm-vi-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#0E7C7B;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-vi-steps .txt h4{color:#0a2e2e;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-vi-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-vi-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.cfm-vi-card{background:#fff;border:1px solid #e2e8ec;border-radius:12px;padding:22px 20px;border-top:4px solid #0E7C7B}
+.cfm-vi-card h4{color:#0a2e2e;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-vi-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+
+.cfm-vi-cards4{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0 8px}
+.cfm-vi-card4{background:#fff;border:1px solid #e2e8ec;border-radius:12px;padding:20px;border-left:4px solid #0E7C7B}
+.cfm-vi-card4 h4{color:#0a2e2e;font-size:15px;font-weight:700;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+.cfm-vi-card4 p{color:#4a5568;font-size:13.5px;line-height:1.65;margin:0}
+
+.cfm-vi-callout{background:#e9f7f6;border:1px solid #bfe8e6;border-radius:12px;padding:24px 26px;margin:28px 0}
+.cfm-vi-callout h4{color:#0a2e2e;font-size:16px;font-weight:800;margin:0 0 10px}
+.cfm-vi-callout p{color:#0a4b4a;font-size:15px;line-height:1.7;margin:0}
+
+.cfm-vi-faq{max-width:100%;margin:24px 0 8px}
+.cfm-vi-faq-item{border:1px solid #e2e8ec;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-vi-faq-q{width:100%;text-align:left;background:#f7f9fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#0a2e2e;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-vi-faq-q:hover{background:#e9f7f6}
+.cfm-vi-faq-q .plus{color:#0E7C7B;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-vi-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-vi-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-vi-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-vi-cta{background:#0a2e2e;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-vi-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-vi-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-vi-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-vi-cta a.btn-w{background:#fff;color:#0E7C7B;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-vi-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-vi-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-vi-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-vi-related h3{color:#0a2e2e;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-vi-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-vi-rel-card{display:block;background:#fff;border:1px solid #e2e8ec;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-vi-rel-card:hover{box-shadow:0 10px 30px rgba(10,46,46,.12);transform:translateY(-2px)}
+.cfm-vi-rel-card .lbl{display:block;color:#0E7C7B;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-vi-rel-card .ttl{color:#0a2e2e;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-vi-cards{grid-template-columns:1fr}
+.cfm-vi-cards4{grid-template-columns:1fr}
+.cfm-vi-rel-grid{grid-template-columns:1fr}
+.cfm-vi-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-vi-cta a.btn-w,.cfm-vi-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-vi-layout{padding:32px 20px}
+.cfm-vi-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-vi-pullquote{padding:26px 22px}
+.cfm-vi-pullquote p{font-size:17px}
+}
+</style>
+
+<div class="cfm-page-vacuuming-included">
+
+<div class="cfm-vi-progress" id="cfm-vi-progress"></div>
+
+<div class="cfm-vi-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-vi-hero" style="background-image:linear-gradient(160deg,rgba(10,46,46,.88) 0%,rgba(14,124,123,.78) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Does-carpet-cleaning-include-vacuuming.webp')" role="img" aria-label="Professional carpet cleaner pre-vacuuming a Medford Oregon living room before hot water extraction">
+<span class="ey">Consumer Guide &middot; Jackson County, Oregon</span>
+<h1>Does Carpet Cleaning Include Vacuuming?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">7 min read</span></p>
+</div>
+
+<div class="cfm-vi-layout">
+
+<div class="cfm-vi-wrap">
+
+<div class="cfm-vi-intro" id="answer">
+<p>It depends on the company. A thorough dry pre-vacuum should happen before any water touches the carpet &mdash; it's a standard part of professional cleaning, not an extra. But many companies skip this step to save time on each job. At Carpet Friend Medford, pre-vacuuming is part of every job, every time, and it's never excluded from the quoted price. Ask before you book.</p>
+</div>
+
+<p class="cfm-vi-p">Here's a question most Medford homeowners never think to ask before booking a carpet cleaning appointment: <strong>is vacuuming actually part of the service I'm paying for, or is it something the crew skips to move faster?</strong> Most people assume it's automatically included, the same way you'd assume a car wash includes wiping down the dashboard. But carpet cleaning isn't standardized the way people expect, and the pre-vacuum step is one of the most commonly shortcut parts of the entire process. This isn't about whether you, the homeowner, should run your own vacuum before the crew arrives &mdash; we cover that separately in our post on <a href="https://carpetcleaningmedfordoregon.com/should-i-vacuum-before-carpet-cleaning-medford-oregon/">whether you should vacuum before carpet cleaning</a>. And it isn't a deep dive into the soil science of why pre-vacuuming works &mdash; that's covered on our <a href="https://carpetcleaningmedfordoregon.com/our-process/">process page</a>. This post answers a third, more practical question: when you hand over money for professional carpet cleaning, is vacuuming baked into that price, or is it something companies quietly leave out?</p>
+
+<h2 id="industry-reality">What the Carpet Cleaning Industry Actually Does About Vacuuming</h2>
+<p class="cfm-vi-p"><strong>Do all carpet cleaning companies vacuum before they clean?</strong> No &mdash; and that surprises most people. The honest answer is that the industry sits on a spectrum. On one end are companies that treat dry pre-vacuuming as a non-negotiable step on every job, built into their process and their price, no exceptions. On the other end are companies that skip it by default and only do it if a customer specifically asks, sometimes tacking on an extra charge when they do.</p>
+<div class="cfm-vi-pullquote">
+<p>Why would a company skip a step that makes their own cleaning work better?</p>
+</div>
+<p class="cfm-vi-p">The reason comes down to simple business math on the company's side, not the customer's. A thorough commercial-grade pre-vacuum of an average living room and hallway adds real minutes to a job &mdash; time the crew isn't spending on the next appointment. Multiply that across a full day of bookings, and skipping the pre-vacuum step lets a crew squeeze in one or two extra jobs. From a technician's perspective standing in your living room, water extraction alone still "looks" like a full clean. The carpet gets wet, it gets extracted, it dries lighter in color. Nothing about the visible result immediately tells you whether dry soil was removed first or just pushed around and re-deposited.</p>
+<p class="cfm-vi-p"><strong>Is a quick pass with a shop vac the same as a professional pre-vacuum?</strong> No, and this distinction matters. A household vacuum pass and a professional pre-vacuum aren't the same task. A proper pre-vacuum uses commercial-grade equipment with strong airflow, multiple directional passes, and deliberate attention to edges, corners, and traffic lanes where dry soil concentrates. It's designed to pull dry particulate matter &mdash; sand, grit, dander, dust &mdash; out of the base of the fiber before any moisture is introduced. A fast once-over with a household vacuum, or worse, skipping it entirely because "the extraction wand will get it anyway," leaves a meaningful amount of dry soil sitting in the carpet when the water goes down.</p>
+
+<h2 id="why-it-matters">What It Costs You When Pre-Vacuuming Is Skipped</h2>
+<p class="cfm-vi-p">This isn't a cosmetic shortcut with no consequence. Skipping the pre-vacuum step changes what happens physically inside your carpet during and after the cleaning, and it shows up in your results and your wallet.</p>
+<div class="cfm-vi-cards">
+<div class="cfm-vi-card"><h4>Rapid Re-Soiling Within Weeks</h4><p>Dry soil left in the carpet turns to mud the moment water and cleaning solution hit it. Instead of being extracted out, that mud gets pushed and redistributed deeper into the backing and around the base of the fibers during the cleaning motion &mdash; setting the carpet up to look dirty again far sooner than it should.</p></div>
+<div class="cfm-vi-card"><h4>Reduced Extraction Effectiveness</h4><p>Every pass of the cleaning wand has a limited amount of mechanical and thermal energy to work with. When that energy has to be split between loosening dry soil that should already be gone and breaking down bonded, greasy contamination, neither job gets done as thoroughly. Your paid-for clean ends up doing less than it's capable of.</p></div>
+<div class="cfm-vi-card"><h4>Paying More Over Time</h4><p><strong>Why does carpet cleaned by one company always seem to need cleaning again sooner than expected?</strong> When re-soiled carpet looks dingy again in a couple of months instead of six to twelve, homeowners often just book another cleaning &mdash; effectively paying twice to solve a problem that a proper pre-vacuum would have prevented the first time.</p></div>
+</div>
+
+<h2 id="medford-context">Why This Matters More in Medford Than Most Markets</h2>
+<p class="cfm-vi-p">Skipping pre-vacuuming is a bad idea anywhere, but it's a worse idea here in the Rogue Valley. Jackson County carpets tend to carry a heavier, more varied dry-soil load than carpet in a lot of other markets, which makes the pre-vacuum step do more work than usual.</p>
+<div class="cfm-vi-cards4">
+<div class="cfm-vi-card4"><h4>&#9968; Table Rocks Volcanic Clay</h4><p>Homes in East and South Medford near the Table Rocks pick up fine, silicate-based volcanic clay dust that tracks in on shoes and pets. It's cohesive once wet &mdash; if it isn't dry-vacuumed out first, it binds into a paste that's far harder to fully extract.</p></div>
+<div class="cfm-vi-card4"><h4>&#128293; Wildfire Smoke Ash</h4><p>Every July through September, Rogue Valley fire season deposits fine carbonaceous ash particulate into homes across Jackson County. This soil type is light and easily airborne if disturbed dry, but if it's wetted first without a pre-vacuum pass, it smears rather than lifts.</p></div>
+<div class="cfm-vi-card4"><h4>&#127800; Rogue Valley Pollen</h4><p>March through May, the pear orchard density around the Bear Creek Valley sends heavy pollen loads into area homes. Pollen is protein-based, and protein particles bond more firmly to fiber once they're wetted and left unremoved &mdash; another reason the dry step has to come first.</p></div>
+<div class="cfm-vi-card4"><h4>&#128021; Pet Hair Compaction</h4><p>Jackson County has above-average pet ownership, and pet hair and dander create a binding matrix at the base of the fiber that traps other dry soil around it. Skipping pre-vacuuming leaves that matrix intact for the extraction water to compress rather than release.</p></div>
+</div>
+
+<h2 id="how-to-ask">How to Ask the Right Question Before You Book</h2>
+<p class="cfm-vi-p">You don't need to become a carpet cleaning expert to protect yourself here. You just need to ask the right questions when you're getting quotes, before anyone's van shows up in your driveway.</p>
+<ol class="cfm-vi-steps">
+<li><span class="num">1</span><div class="txt"><h4>"Is dry pre-vacuuming included in your standard service?"</h4><p>This is the single most direct question you can ask. A company confident in its process will answer immediately and specifically. Hesitation, vague answers, or "we can add that on" is useful information in itself.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>"When does vacuuming happen in your process &mdash; before or after?"</h4><p>This matters because pre-vacuum soil removal and post-clean grooming are two different things that both involve a vacuum-like tool. Grooming after cleaning helps fiber lay and appearance, but it isn't a substitute for removing dry soil before the water goes down.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>"Do you do this on every job or only on request?"</h4><p>A company that only pre-vacuums when a customer specifically asks is telling you it isn't part of their default process &mdash; which means most of their customers are getting a cleaning without it.</p></div></li>
+</ol>
+
+<h2 id="what-we-do">What Carpet Friend Medford Does &mdash; Every Time</h2>
+<div class="cfm-vi-callout">
+<h4>Pre-Vacuuming Is Step 2 of Our 7-Step Process. Every Job. No Exceptions.</h4>
+<p>Dry pre-vacuuming is built into Step 2 of the 7-step process we run on every single appointment. It is never an add-on, never something we charge extra for, and never something a technician has discretion to skip to save time. If it's not done, the job isn't finished the way we quoted it.</p>
+</div>
+<p class="cfm-vi-p">We run this same standard whether we're in East Medford (97504) working around Table Rocks dust, South Medford (97501) doing a pre-listing clean before a home hits the market, Phoenix or Talent handling a post-rebuild property still settling after construction dust, or out at a Rogue River vacation cabin that's sat closed up between visits. The soil conditions change from job to job across Jackson County, but the process doesn't. For the full breakdown of all seven steps and the reasoning behind each one, see our <a href="https://carpetcleaningmedfordoregon.com/our-process/">7-step carpet cleaning process</a> page.</p>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Does-carpet-cleaning-include-vacuuming.webp" alt="Carpet Friend Medford technician completing the pre-vacuum step before hot water extraction in a Jackson County Oregon home" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="faq">FAQ &mdash; Carpet Cleaning and Vacuuming in Medford, Oregon</h2>
+<div class="cfm-vi-faq" id="cfm-vi-faq">
+
+<div class="cfm-vi-faq-item" aria-expanded="false">
+<button class="cfm-vi-faq-q" type="button">Does carpet cleaning include vacuuming?<span class="plus">+</span></button>
+<div class="cfm-vi-faq-a"><div class="cfm-vi-faq-a-inner">It depends on the company. A thorough dry pre-vacuum should be a standard part of professional carpet cleaning, but not every company includes it by default &mdash; some skip it to save time, and some charge extra if you ask for it. At Carpet Friend Medford, pre-vacuuming is built into every job as Step 2 of our process and is always included in the quoted price.</div></div>
+</div>
+
+<div class="cfm-vi-faq-item" aria-expanded="false">
+<button class="cfm-vi-faq-q" type="button">Does it matter if carpet cleaners vacuum before or after cleaning?<span class="plus">+</span></button>
+<div class="cfm-vi-faq-a"><div class="cfm-vi-faq-a-inner">Yes, significantly. Vacuuming before cleaning removes dry soil that would otherwise turn to mud and re-deposit into the carpet backing once water is introduced. Vacuuming or grooming after cleaning is a different task &mdash; it helps fiber appearance and lay, but it doesn't remove dry soil, since by that point the carpet has already been wetted and extracted. Both can have a place in a full service, but pre-vacuuming is the step that actually protects your result.</div></div>
+</div>
+
+<div class="cfm-vi-faq-item" aria-expanded="false">
+<button class="cfm-vi-faq-q" type="button">Should I vacuum my carpet before the carpet cleaner arrives?<span class="plus">+</span></button>
+<div class="cfm-vi-faq-a"><div class="cfm-vi-faq-a-inner">That's a separate question from what this post covers, and we've written a full guide on it. Short version: it can help, but it isn't a substitute for the commercial-grade pre-vacuum a professional crew should be doing on-site. See our post on <a href="https://carpetcleaningmedfordoregon.com/should-i-vacuum-before-carpet-cleaning-medford-oregon/">whether you should vacuum before carpet cleaning</a> for the full answer.</div></div>
+</div>
+
+<div class="cfm-vi-faq-item" aria-expanded="false">
+<button class="cfm-vi-faq-q" type="button">Why does carpet get dirty so quickly after some professional cleanings?<span class="plus">+</span></button>
+<div class="cfm-vi-faq-a"><div class="cfm-vi-faq-a-inner">This is one of the most common signs that pre-vacuuming was skipped. When dry soil isn't removed before water and cleaning solution are applied, it turns to mud and gets redistributed into the carpet backing and fiber base during the cleaning process instead of being extracted out. The carpet may look fine right after drying, but it re-soils and looks dingy again far faster than it should &mdash; sometimes within weeks instead of months.</div></div>
+</div>
+
+<div class="cfm-vi-faq-item" aria-expanded="false">
+<button class="cfm-vi-faq-q" type="button">Do you charge extra for pre-vacuuming at Carpet Friend Medford?<span class="plus">+</span></button>
+<div class="cfm-vi-faq-a"><div class="cfm-vi-faq-a-inner">No. Pre-vacuuming is included in every job as part of our standard 7-step process and is never billed as an add-on or upcharge. It's factored into the price we quote you upfront. For a full breakdown of what typically affects carpet cleaning pricing in Medford, see our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">carpet cleaning cost guide</a>.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-vi-toc" id="cfm-vi-toc" data-open="true">
+<span class="toc-ttl cfm-vi-toc-static">In This Guide</span>
+<button class="cfm-vi-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-vi-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-vi-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#industry-reality">What the Industry Actually Does</a></li>
+<li><a href="#why-it-matters">What It Costs You</a></li>
+<li><a href="#medford-context">Why It Matters More in Medford</a></li>
+<li><a href="#how-to-ask">How to Ask the Right Question</a></li>
+<li><a href="#what-we-do">What We Do &mdash; Every Time</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-vi-cta">
+<h2>Pre-Vacuum Included &mdash; Every Medford Job</h2>
+<p>No surprises, no add-ons. Every job follows the same 7-step process with upfront pricing, including dry pre-vacuuming before any water touches your carpet. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/our-process/">&#128203; See Our Process &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-vi-related">
+<h3>Related Reading</h3>
+<div class="cfm-vi-rel-grid">
+<a class="cfm-vi-rel-card" href="https://carpetcleaningmedfordoregon.com/should-i-vacuum-before-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#129529; Guide</span>
+<p class="ttl">Should I Vacuum Before Carpet Cleaning?</p>
+</a>
+<a class="cfm-vi-rel-card" href="https://carpetcleaningmedfordoregon.com/our-process/">
+<span class="lbl">&#128203; Process</span>
+<p class="ttl">Our 7-Step Carpet Cleaning Process</p>
+</a>
+<a class="cfm-vi-rel-card" href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">
+<span class="lbl">&#128176; Pricing</span>
+<p class="ttl">How Much Does Carpet Cleaning Cost?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-vi-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-vi-toc');
+var tocBtn=toc.querySelector('.cfm-vi-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-vi-faq .cfm-vi-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-vi-faq-q');
+var ans=item.querySelector('.cfm-vi-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-vi-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

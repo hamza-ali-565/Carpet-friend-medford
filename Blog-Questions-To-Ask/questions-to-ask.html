@@ -1,0 +1,455 @@
+<!-- wp:html -->
+<style id="cfm-qa-css">
+.cfm-page-questions-to-ask{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-questions-to-ask *,.cfm-page-questions-to-ask *::before,.cfm-page-questions-to-ask *::after{box-sizing:border-box}
+.cfm-page-questions-to-ask p,.cfm-page-questions-to-ask li,.cfm-page-questions-to-ask h1,.cfm-page-questions-to-ask h2,.cfm-page-questions-to-ask h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-qa-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#1E40AF;z-index:9998;transition:width .1s linear}
+
+.cfm-qa-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-qa-topline a{color:#1E40AF;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-qa-topline a:hover{text-decoration:underline}
+
+.cfm-qa-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-qa-hero .ey{display:block;color:#93c5fd;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-qa-hero h1{color:#fff;font-size:clamp(26px,4.6vw,44px);font-weight:800;line-height:1.2;letter-spacing:-.5px;margin:0 auto 18px;max-width:860px}
+.cfm-qa-hero .byline{color:#93c5fd;font-size:13.5px;font-weight:600;margin:0}
+.cfm-qa-hero .rt{display:inline-block;background:#dbeafe;color:#1e3a8a;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-qa-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-qa-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-qa-toc{flex:0 0 300px;background:#fff;border:1px solid #e2e8f0;border-left:3px solid #0f1f4d;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-qa-toc .toc-ttl{display:block;color:#1E40AF;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-qa-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-qa-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-qa-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-qa-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-qa-toc a:hover{color:#0f1f4d}
+.cfm-qa-toc a.active{color:#0f1f4d;font-weight:700}
+.cfm-qa-toc a.active::before{color:#1E40AF}
+.cfm-qa-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-qa-layout{flex-direction:column}
+.cfm-qa-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-qa-toc-static{display:none}
+.cfm-qa-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-qa-toc-toggle .chev{transition:transform .2s;color:#1E40AF}
+.cfm-qa-toc[data-open="false"] ol{display:none}
+.cfm-qa-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-qa-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-qa-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-qa-intro{background:#eff6ff;border-left:4px solid #1E40AF;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-qa-intro p{color:#0f1f4d;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-questions-to-ask h2{color:#0f1f4d;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-qa-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-questions-to-ask .cfm-qa-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-questions-to-ask strong{color:#0f1f4d}
+
+.cfm-qa-lbl{display:block;color:#1E40AF;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-qa-qcards{display:flex;flex-direction:column;gap:16px;margin:24px 0 8px}
+.cfm-qa-qcard{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:22px 24px;border-top:4px solid #1E40AF}
+.cfm-qa-qcard .qnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#1E40AF;color:#fff;font-size:12.5px;font-weight:800;margin-right:8px;flex-shrink:0}
+.cfm-qa-qcard h4{color:#0f1f4d;font-size:16.5px;font-weight:700;margin:0 0 12px;line-height:1.4}
+.cfm-qa-qcard .why{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0 0 14px}
+.cfm-qa-qcard .flag{border-radius:8px;padding:12px 15px;margin:0 0 10px;font-size:14px;line-height:1.6}
+.cfm-qa-qcard .flag:last-child{margin-bottom:0}
+.cfm-qa-qcard .flag.green{background:#ecfdf5;border-left:3px solid #059669;color:#065f46}
+.cfm-qa-qcard .flag.red{background:#fef2f2;border-left:3px solid #dc2626;color:#7f1d1d}
+.cfm-qa-qcard .flag b{display:block;font-weight:700;margin-bottom:3px}
+
+.cfm-qa-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-qa-table th{background:#0f1f4d;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-qa-table td{padding:12px 14px;border:1px solid #e2e8f0;color:#4a5568;line-height:1.5}
+.cfm-qa-table tr:nth-child(even) td{background:#f8fafc}
+.cfm-qa-table-wrap{overflow-x:auto;margin:20px 0}
+.cfm-qa-table .fillcell{color:#94a3b8;font-style:italic}
+
+.cfm-qa-danger{background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #dc2626;border-radius:0 10px 10px 0;padding:18px 20px;margin:0 0 14px}
+.cfm-qa-danger h4{color:#7f1d1d;font-size:15px;font-weight:700;margin:0 0 6px;display:flex;align-items:center;gap:8px}
+.cfm-qa-danger p{color:#7f1d1d;font-size:14.5px;line-height:1.65;margin:0}
+.cfm-qa-danger-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0 8px}
+
+.cfm-qa-faq{max-width:100%;margin:24px 0 8px}
+.cfm-qa-faq-item{border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-qa-faq-q{width:100%;text-align:left;background:#f8fafc;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#0f1f4d;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-qa-faq-q:hover{background:#eff6ff}
+.cfm-qa-faq-q .plus{color:#1E40AF;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-qa-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-qa-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-qa-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-qa-cta{background:#0f1f4d;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-qa-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-qa-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-qa-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-qa-cta a.btn-w{background:#fff;color:#1E40AF;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-qa-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-qa-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-qa-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-qa-related h3{color:#0f1f4d;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-qa-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-qa-rel-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-qa-rel-card:hover{box-shadow:0 10px 30px rgba(15,31,77,.12);transform:translateY(-2px)}
+.cfm-qa-rel-card .lbl{display:block;color:#1E40AF;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-qa-rel-card .ttl{color:#0f1f4d;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-qa-danger-grid{grid-template-columns:1fr}
+.cfm-qa-rel-grid{grid-template-columns:1fr}
+.cfm-qa-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-qa-cta a.btn-w,.cfm-qa-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-qa-layout{padding:32px 20px}
+.cfm-qa-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-qa-table{font-size:12.5px}
+.cfm-qa-qcard{padding:18px}
+}
+</style>
+
+<div class="cfm-page-questions-to-ask">
+
+<div class="cfm-qa-progress" id="cfm-qa-progress"></div>
+
+<div class="cfm-qa-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-qa-hero" style="background-image:linear-gradient(160deg,rgba(15,31,77,.90) 0%,rgba(30,64,175,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/What-questions-should-I-ask-a-carpet-cleaning-company.webp')" role="img" aria-label="Homeowner checklist for questions to ask a carpet cleaning company in Medford Oregon">
+<span class="ey">Consumer Guide &middot; Jackson County, Oregon</span>
+<h1>15 Questions to Ask a Carpet Cleaning Company Before You Book in Medford</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">10 min read</span></p>
+</div>
+
+<div class="cfm-qa-layout">
+
+<div class="cfm-qa-wrap">
+
+<div class="cfm-qa-intro" id="answer">
+<p>Before booking any carpet cleaner in Medford, ask: Are you IICRC certified? Do you pre-vacuum before extracting? Is the price confirmed before you start? What's the expected drying time in summer? Truck-mounted or portable equipment? These five screen out most low-quality operators. Given Medford's wildfire smoke, volcanic trail dust, and pet-heavy households, four more Medford-specific questions below are just as essential.</p>
+</div>
+
+<h2 id="intro">Why Asking the Right Questions Saves You Money and Frustration</h2>
+<p class="cfm-qa-p">We hear a version of the same story often enough that it has a pattern. A homeowner books whoever quoted the lowest price over the phone. The crew shows up, does something to the carpet, and it looks fine walking out the door that afternoon &mdash; damp but clean, no obvious problems. Then a week or two later, the traffic lanes start to look dingy again faster than they should. Or a musty smell shows up near a baseboard. Or the invoice at the door is fifty dollars higher than the phone quote, because "the carpet was more soiled than expected." None of this is unusual, and none of it required bad luck &mdash; it's the predictable result of booking on price alone without asking a handful of questions that would have surfaced the issue before a truck ever left the shop.</p>
+<p class="cfm-qa-p">This isn't about turning a simple phone call into an interrogation. It's about five or six specific questions that take three or four minutes and separate operators who will do the job correctly from operators who are counting on you not knowing what to ask. For a straightforward job &mdash; a few rooms, no pets, no prior damage &mdash; the five foundation questions below are usually enough. For more complex situations &mdash; multi-pet households, wool or antique rugs, a home recently affected by wildfire smoke, a move-out clean that needs to satisfy a landlord &mdash; the additional questions further down are worth the extra few minutes, because the cost of getting one of those jobs wrong is a lot higher than the cost of asking.</p>
+
+<h2 id="foundation-5">The 5 Foundation Questions &mdash; Everyone Should Ask These</h2>
+<p class="cfm-qa-p">These five apply to essentially every carpet cleaning job in Medford, regardless of size or complexity. If a company gives strong answers to all five, that alone puts them ahead of most of the market.</p>
+
+<div class="cfm-qa-qcards">
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">1</span><strong>Are you IICRC certified?</strong></h4>
+<p class="why"><b>Why it matters:</b> The Institute of Inspection, Cleaning and Restoration Certification (IICRC) sets the industry's baseline training standard for carpet cleaning technicians &mdash; chemistry, fiber types, extraction methods, and safe handling of specialty situations. It's not a legal requirement to operate in Oregon, which is exactly why it's worth asking about: certification is a voluntary signal that a company invested in training rather than just buying equipment.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>They state their certification number without hesitation and mention it covers general carpet cleaning, and often a specialty area like pet odor or upholstery.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>A vague "yeah, we're certified" with no number, no specifics, and visible irritation at being asked to clarify.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">2</span><strong>Do you pre-vacuum before extracting?</strong></h4>
+<p class="why"><b>Why it matters:</b> Dry soil &mdash; sand, dust, dander, volcanic ash from Rogue Valley trails, pollen &mdash; makes up a large share of what's actually in a carpet. Extraction alone, without dry-soil removal first, tends to turn that dry soil into mud that gets pushed deeper into the pad rather than lifted out.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>"Yes, always, with a commercial-grade upright before we apply any pre-spray." It's a standard, non-negotiable step in their process.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>"We don't usually need to, the extraction gets it all." This skips a step that meaningfully affects the result, especially in homes with pets or high dry-soil load.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">3</span><strong>Is the price confirmed before you start work &mdash; or can it change once you're there?</strong></h4>
+<p class="why"><b>Why it matters:</b> This is the single most common source of carpet cleaning complaints nationally: a low phone quote followed by a higher in-person price once the crew has already moved furniture and started setting up equipment, at which point most homeowners feel stuck paying it. Do not skip a cost discussion here without checking realistic ranges &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">Medford carpet cleaning cost guide</a> before comparing quotes.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>"We confirm square footage and any add-ons before we start, and that's the number on your invoice &mdash; no surprises once we're working."</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>A suspiciously low flat number given over the phone with no mention of square footage, followed by "we'll take a look and finalize when we get there."</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">4</span><strong>What's your expected drying time in summer conditions?</strong></h4>
+<p class="why"><b>Why it matters:</b> Medford summers run hot and dry through the Bear Creek Valley, and carpet moisture management is different in July than in January. Extended dry time in summer heat isn't always about heat &mdash; it's often a sign of over-wetting, weak extraction suction, or poor airflow planning, and it raises the risk of wicking and mildew odor.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>A specific range &mdash; typically 4 to 8 hours with fans and good airflow &mdash; plus a suggestion to run ceiling fans or the AC afterward.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>"It depends" with no range offered, or a shrug when asked directly &mdash; a sign drying time isn't something they actively manage.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">5</span><strong>Do you use truck-mounted equipment or portable?</strong></h4>
+<p class="why"><b>Why it matters:</b> Truck-mounted systems draw power directly from the vehicle's engine, which generates significantly higher heat and suction than plug-in portable units. Higher heat and stronger extraction generally mean better soil removal and faster drying &mdash; portable units aren't automatically bad, but they're a different tool with different limits, and you should know which one is showing up.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>A direct, specific answer &mdash; "truck-mounted, we run at roughly 195&deg;F water temperature for stronger extraction and faster dry times."</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>Can't answer clearly, or says "steam cleaning" and can't explain what that actually means when asked a follow-up question.</div>
+</div>
+
+</div>
+
+<h2 id="medford-5">5 Medford-Specific Questions Most Homeowners Never Think to Ask</h2>
+<p class="cfm-qa-p">These five go beyond the generic checklist you'll find on most carpet cleaning sites. They're specific to conditions in Jackson County &mdash; wildfire season, volcanic soil types near Table Rocks and Roxy Ann Peak, and the documentation needs of a Rogue Valley rental market.</p>
+
+<div class="cfm-qa-qcards">
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">6</span><strong>Do you have a specific wildfire smoke protocol, or do you use standard extraction?</strong></h4>
+<p class="why"><b>Why it matters:</b> Smoke residue behaves differently than everyday soil &mdash; it carries volatile compounds that adsorb onto and absorb into carpet fiber, and standard extraction alone often leaves an odor that returns as the carpet warms. A company unfamiliar with wildfire smoke as a distinct issue is a company that hasn't dealt with Jackson County's actual conditions.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>They describe an oxidizing pre-spray step specifically for smoke odor, separate from their standard process, and ask when the smoke event happened.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>"We just clean it the normal way, that should handle it" &mdash; treating smoke odor as identical to everyday dirt.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">7</span><strong>Are you familiar with the soil types in this area &mdash; volcanic clay, wildfire ash, Rogue Valley pollen?</strong></h4>
+<p class="why"><b>Why it matters:</b> Homes near Table Rocks and the foothills around Jacksonville and Gold Hill often see volcanic clay-heavy dust tracked in, which behaves differently under extraction than sandy or urban soil. A company that's worked across Jackson County will recognize this on sight rather than being surprised by it.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>They mention adjusting pre-spray dwell time or agitation for heavier clay-based soil without being prompted.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>No recognition of the question at all, or a generic "dirt is dirt" response.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">8</span><strong>Do you provide a dated service receipt suitable for Jackson County landlord-tenant documentation?</strong></h4>
+<p class="why"><b>Why it matters:</b> Move-out carpet cleaning is frequently tied to deposit disputes. A dated, itemized receipt showing professional cleaning was performed is often the deciding piece of documentation in those disputes.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>"Yes, every job gets a dated invoice with the address and services listed &mdash; we can email it same day if you need it for a landlord."</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>No receipt offered by default, or a handwritten note with no company information on it.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">9</span><strong>When do you recommend booking relative to Jackson County wildfire season?</strong></h4>
+<p class="why"><b>Why it matters:</b> Booking windows tighten up fast once fire season starts and smoke events hit the valley. A company that plans ahead with you &mdash; rather than only reacting after smoke has already settled in &mdash; is thinking about your home's actual annual conditions.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>They suggest a pre-season clean in late spring and flag that post-event scheduling often needs a short wait for the AQI to clear first.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>No awareness that wildfire season affects scheduling or timing at all.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">10</span><strong>Are you familiar with wool and natural fiber rugs &mdash; do you test for dye stability first?</strong></h4>
+<p class="why"><b>Why it matters:</b> Wool and other natural fibers can bleed dye or react poorly to the wrong chemistry. A dye-stability spot test before full treatment is standard practice for anyone experienced with these materials &mdash; skipping it is how rugs get permanently damaged.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>"We always spot-test an inconspicuous corner for colorfastness before treating a wool or natural fiber rug."</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>"We treat everything the same way" &mdash; no distinction made between synthetic carpet and natural fiber rugs.</div>
+</div>
+
+</div>
+
+<h2 id="advanced-5">5 Advanced Questions &mdash; For Complex or High-Value Jobs</h2>
+<p class="cfm-qa-p">These matter most when the job isn't routine: multiple pets, contamination that's soaked into the pad, an antique or high-value rug, or a situation where the outcome genuinely matters and you want to vet the company more carefully before committing.</p>
+
+<div class="cfm-qa-qcards">
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">11</span><strong>Do you use zone-specific enzyme formulas for multi-pet households &mdash; different chemistry for cat vs dog?</strong></h4>
+<p class="why"><b>Why it matters:</b> Cat and dog urine break down differently and often need different enzyme treatments to fully neutralize. A company that treats every pet stain identically is more likely to leave residual odor in a multi-pet home. See our detailed breakdown on <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-dog-and-cat-urine/">removing dog and cat urine from carpet</a> for how this works.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>They ask which pets and how many, and describe using different enzyme formulations or dwell times accordingly.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>"One spray works on all pet stains" with no distinction offered.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">12</span><strong>Do you have sub-surface extraction capability for pad contamination?</strong></h4>
+<p class="why"><b>Why it matters:</b> When urine or other liquid soaks through to the carpet pad, surface-level cleaning won't reach it, and the odor typically returns within days. Sub-surface extraction tools are built specifically to reach and treat the pad layer, not just the fiber above it.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>They describe a specific sub-surface tool or injection method for pad-level contamination and explain when it's needed versus standard cleaning.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>"If it's in the pad there's not much we can do" without offering any deeper-extraction option at all.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">13</span><strong>Are you insured &mdash; and does that cover antique or high-value rugs?</strong></h4>
+<p class="why"><b>Why it matters:</b> General liability insurance is standard, but not every policy specifically covers high-value or antique rugs. If something goes wrong with an heirloom piece, this distinction determines whether you have any recourse.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>They confirm liability coverage and can speak specifically to how antique or high-value items are handled and protected.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>Gets defensive or vague when asked directly about insurance coverage.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">14</span><strong>Can you provide references for similar jobs in Jackson County?</strong></h4>
+<p class="why"><b>Why it matters:</b> For a complex or high-stakes job, a reference for comparable work &mdash; similar rug type, similar contamination level, similar property size &mdash; tells you more than a generic star rating.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>They can point to specific past jobs or reviews describing similar work, without hesitation.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>No references offered, or pushback on the request itself.</div>
+</div>
+
+<div class="cfm-qa-qcard">
+<h4><span class="qnum">15</span><strong>What happens if I'm not satisfied with the result?</strong></h4>
+<p class="why"><b>Why it matters:</b> This question reveals how a company handles the rare job that doesn't go as planned. A confident, specific answer signals a company that stands behind its work; defensiveness signals the opposite.</p>
+<div class="flag green"><b>&#9989; Green flag answer</b>A clear satisfaction policy &mdash; they'll come back and re-treat problem areas at no extra charge within a defined window.</div>
+<div class="flag red"><b>&#128680; Red flag answer</b>Gets defensive, changes the subject, or implies dissatisfaction is always the customer's fault.</div>
+</div>
+
+</div>
+
+<h2 id="compare-quotes">How to Use These Questions to Compare Two Quotes Side by Side</h2>
+<p class="cfm-qa-p">Once you've called two or three companies, it helps to have the answers side by side rather than trying to remember which one said what. Below is a simple scoring framework &mdash; fill in the actual answers you get for "Company A" and "Company B," then use the weight column to decide how much each answer should influence your decision. Not every question carries equal weight for every job; a wildfire smoke protocol question matters a lot if your home was near a recent fire, and much less if it wasn't.</p>
+<div class="cfm-qa-table-wrap">
+<table class="cfm-qa-table">
+<thead><tr><th>Question</th><th>Company A answer</th><th>Company B answer</th><th>Weight</th></tr></thead>
+<tbody>
+<tr><td>IICRC certified?</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>High</td></tr>
+<tr><td>Pre-vacuum included?</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>High</td></tr>
+<tr><td>Price confirmed before start?</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>High</td></tr>
+<tr><td>Summer drying time (range given?)</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>Medium</td></tr>
+<tr><td>Truck-mounted or portable?</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>Medium</td></tr>
+<tr><td>Wildfire smoke protocol?</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>High if recent smoke exposure</td></tr>
+<tr><td>Dated receipt for landlord?</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>Medium if moving out</td></tr>
+<tr><td>Insurance + antique rug coverage?</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>Medium if high-value rug</td></tr>
+<tr><td>Sub-surface extraction available?</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>Medium if pet contamination</td></tr>
+<tr><td>References for similar jobs?</td><td class="fillcell">&hellip;</td><td class="fillcell">&hellip;</td><td>Low&ndash;Medium</td></tr>
+</tbody>
+</table>
+</div>
+<p class="cfm-qa-p">Use it like this: fill in each company's actual answer as you get it on the phone, then look at the "High" weight rows first &mdash; if a company falls short on more than one of those, that's usually disqualifying regardless of price. The "Medium" and "Low&ndash;Medium" rows matter more or less depending on your specific job, so weight them up or down as needed. A company that scores well across the high-weight rows and gives a specific, non-defensive answer on the rest is very likely to do a good job. Avoid comparing quotes on price alone &mdash; for a sense of realistic pricing ranges in Medford before you compare, see our <a href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">carpet cleaning cost guide</a>.</p>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/What-questions-should-I-ask-a-carpet-cleaning-company.webp" alt="Comparing two carpet cleaning quotes side by side with a printed question checklist in a Medford Oregon home" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="red-flags">Red Flag Answers &mdash; When to Hang Up and Call Someone Else</h2>
+<p class="cfm-qa-p">Some answers are strong enough signals on their own that you don't need to keep evaluating the rest of the call. All examples below are generic and hypothetical &mdash; they describe patterns to watch for, not any specific real business.</p>
+<div class="cfm-qa-danger-grid">
+<div class="cfm-qa-danger"><h4>&#128680; Can't explain what IICRC stands for</h4><p>If a company claims certification but can't name the organization or explain what it means, the claim likely isn't accurate.</p></div>
+<div class="cfm-qa-danger"><h4>&#128680; A suspiciously low flat price before knowing square footage</h4><p>A number quoted before any details are gathered is a placeholder designed to get you to book &mdash; not a real price.</p></div>
+<div class="cfm-qa-danger"><h4>&#128680; Won't confirm price before starting work</h4><p>"We'll figure it out when we get there" is the single most common setup for a bill that's higher than expected.</p></div>
+<div class="cfm-qa-danger"><h4>&#128680; Says "steam cleaning" and can't explain what they mean</h4><p>Most professional carpet cleaning is hot water extraction, not literal steam. An operator who can't explain the actual process may not understand it either.</p></div>
+<div class="cfm-qa-danger"><h4>&#128680; Unfamiliar with wildfire smoke as a Medford-relevant issue</h4><p>Given how often wildfire smoke affects Jackson County homes, a company with no awareness of it hasn't dealt with local conditions much.</p></div>
+<div class="cfm-qa-danger"><h4>&#128680; Gets defensive when asked about satisfaction guarantees</h4><p>Confidence in the work shows up as a clear, specific policy &mdash; defensiveness or dodging the question is a signal worth taking seriously.</p></div>
+</div>
+
+<h2 id="faq">Carpet Cleaner Questions FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-qa-faq" id="cfm-qa-faq">
+
+<div class="cfm-qa-faq-item" aria-expanded="false">
+<button class="cfm-qa-faq-q" type="button">What's the most important question to ask a carpet cleaning company?<span class="plus">+</span></button>
+<div class="cfm-qa-faq-a"><div class="cfm-qa-faq-a-inner">If you can only ask one, ask whether the price is confirmed before work starts or can change once the crew is there. This single question prevents the most common complaint in the industry &mdash; a low phone quote followed by a higher in-person price after furniture has already been moved and equipment set up. That said, pairing it with the IICRC certification question gives you the strongest two-question screen for a quick phone call.</div></div>
+</div>
+
+<div class="cfm-qa-faq-item" aria-expanded="false">
+<button class="cfm-qa-faq-q" type="button">How do I verify that a carpet cleaner is IICRC certified?<span class="plus">+</span></button>
+<div class="cfm-qa-faq-a"><div class="cfm-qa-faq-a-inner">Ask for the certificate number directly, then check it using the IICRC's public verification tool at iicrc.org. A legitimately certified technician will give you the number without hesitation, since it's meant to be checkable. If a company can't or won't provide one, treat that as a meaningful gap in your evaluation rather than a minor detail.</div></div>
+</div>
+
+<div class="cfm-qa-faq-item" aria-expanded="false">
+<button class="cfm-qa-faq-q" type="button">What should I ask before booking carpet cleaning after wildfire smoke in Medford?<span class="plus">+</span></button>
+<div class="cfm-qa-faq-a"><div class="cfm-qa-faq-a-inner">Ask specifically whether they use a smoke-specific protocol &mdash; typically an oxidizing pre-spray step &mdash; rather than standard extraction alone, and ask when they recommend booking relative to when the AQI cleared. Standard cleaning can miss the volatile compounds absorbed into carpet fiber during a smoke event, which is why smoke odor sometimes returns weeks after a "normal" cleaning.</div></div>
+</div>
+
+<div class="cfm-qa-faq-item" aria-expanded="false">
+<button class="cfm-qa-faq-q" type="button">Is it OK to ask a carpet cleaner for references?<span class="plus">+</span></button>
+<div class="cfm-qa-faq-a"><div class="cfm-qa-faq-a-inner">Yes, and for a complex or high-value job it's a reasonable, normal request. A company confident in its work will typically point you to past jobs or reviews without hesitation. Pushback or discomfort at the request is itself useful information.</div></div>
+</div>
+
+<div class="cfm-qa-faq-item" aria-expanded="false">
+<button class="cfm-qa-faq-q" type="button">Should I get multiple quotes for carpet cleaning in Medford?<span class="plus">+</span></button>
+<div class="cfm-qa-faq-a"><div class="cfm-qa-faq-a-inner">For most standard jobs, two or three quotes using the questions in this guide is enough to identify a solid operator without turning it into a long process. Use the side-by-side comparison framework above rather than comparing price alone, and check our <a href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">Medford carpet cleaning cost guide</a> so you know what a realistic price range looks like before you start calling.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-qa-toc" id="cfm-qa-toc" data-open="true">
+<span class="toc-ttl cfm-qa-toc-static">In This Guide</span>
+<button class="cfm-qa-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-qa-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-qa-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#intro">Why Asking Matters</a></li>
+<li><a href="#foundation-5">5 Foundation Questions</a></li>
+<li><a href="#medford-5">5 Medford-Specific Questions</a></li>
+<li><a href="#advanced-5">5 Advanced Questions</a></li>
+<li><a href="#compare-quotes">Comparing Two Quotes</a></li>
+<li><a href="#red-flags">Red Flag Answers</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-qa-cta">
+<h2>We Answer All 15 Questions Before You Even Ask</h2>
+<p>IICRC certified. We pre-vacuum every job. Price confirmed before we start. Truck-mounted extraction at 195&deg;F. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/our-process/">See Our Process &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-qa-related">
+<h3>Related Reading</h3>
+<div class="cfm-qa-rel-grid">
+<a class="cfm-qa-rel-card" href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">
+<span class="lbl">&#128176; Cost Guide</span>
+<p class="ttl">How Much Does Carpet Cleaning Cost?</p>
+</a>
+<a class="cfm-qa-rel-card" href="https://carpetcleaningmedfordoregon.com/is-carpet-cleaning-worth-it-medford-oregon/">
+<span class="lbl">&#10003; Guide</span>
+<p class="ttl">Is Carpet Cleaning Worth It?</p>
+</a>
+<a class="cfm-qa-rel-card" href="https://carpetcleaningmedfordoregon.com/our-process/">
+<span class="lbl">&#128295; Process</span>
+<p class="ttl">Our 7-Step Process</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-qa-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-qa-toc');
+var tocBtn=toc.querySelector('.cfm-qa-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-qa-faq .cfm-qa-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-qa-faq-q');
+var ans=item.querySelector('.cfm-qa-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-qa-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

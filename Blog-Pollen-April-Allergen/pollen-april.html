@@ -1,0 +1,383 @@
+<!-- wp:html -->
+<style id="cfm-pa-css">
+.cfm-page-pollen-april{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-pollen-april *,.cfm-page-pollen-april *::before,.cfm-page-pollen-april *::after{box-sizing:border-box}
+.cfm-page-pollen-april p,.cfm-page-pollen-april li,.cfm-page-pollen-april h1,.cfm-page-pollen-april h2,.cfm-page-pollen-april h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-pa-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#DB6E8A;z-index:9998;transition:width .1s linear}
+
+.cfm-pa-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-pa-topline a{color:#a84360;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-pa-topline a:hover{text-decoration:underline}
+
+.cfm-pa-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-pa-hero .ey{display:block;color:#f4b8c8;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-pa-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-pa-hero .byline{color:#f4b8c8;font-size:13.5px;font-weight:600;margin:0}
+.cfm-pa-hero .rt{display:inline-block;background:#fdeaef;color:#7a2038;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-pa-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-pa-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-pa-toc{flex:0 0 300px;background:#fff;border:1px solid #ece8ea;border-left:3px solid #4a1628;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-pa-toc .toc-ttl{display:block;color:#a84360;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-pa-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-pa-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-pa-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-pa-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-pa-toc a:hover{color:#4a1628}
+.cfm-pa-toc a.active{color:#4a1628;font-weight:700}
+.cfm-pa-toc a.active::before{color:#a84360}
+.cfm-pa-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-pa-layout{flex-direction:column}
+.cfm-pa-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-pa-toc-static{display:none}
+.cfm-pa-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-pa-toc-toggle .chev{transition:transform .2s;color:#a84360}
+.cfm-pa-toc[data-open="false"] ol{display:none}
+.cfm-pa-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-pa-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-pa-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-pa-disclaimer{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 12px 12px 0;padding:20px 24px;margin:0 0 32px}
+.cfm-pa-disclaimer p{color:#78350f;font-size:14.5px;line-height:1.7;margin:0;font-weight:600}
+
+.cfm-pa-intro{background:#fdeaef;border-left:4px solid #a84360;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-pa-intro p{color:#4a1628;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-pollen-april h2{color:#4a1628;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-pa-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-pollen-april .cfm-pa-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-pollen-april strong{color:#4a1628}
+
+.cfm-pa-lbl{display:block;color:#a84360;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-pa-pullquote{background:#4a1628;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-pa-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-pa-pullquote::before{content:'"';color:#f4b8c8;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-pa-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-pa-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #ece8ea;border-radius:12px;padding:20px 22px}
+.cfm-pa-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#a84360;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-pa-steps .txt h4{color:#4a1628;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-pa-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-pa-check{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.cfm-pa-check li{display:flex;gap:14px;align-items:flex-start;background:#f7f8fa;border:1px solid #ece8ea;border-radius:10px;padding:16px 18px}
+.cfm-pa-check .chk{flex-shrink:0;width:24px;height:24px;border-radius:6px;background:#DB6E8A;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.cfm-pa-check .txt h4{color:#4a1628;font-size:15px;font-weight:700;margin:0 0 4px}
+.cfm-pa-check .txt p{color:#4a5568;font-size:14px;line-height:1.6;margin:0}
+
+.cfm-pa-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.cfm-pa-card{background:#fff;border:1px solid #ece8ea;border-radius:12px;padding:22px 20px;border-top:4px solid #a84360}
+.cfm-pa-card h4{color:#4a1628;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-pa-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+
+.cfm-pa-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-pa-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-pa-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-pa-table th{background:#4a1628;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-pa-table td{padding:12px 14px;border:1px solid #ece8ea;color:#4a5568;line-height:1.5}
+.cfm-pa-table tr:nth-child(even) td{background:#f8f9fa}
+.cfm-pa-table-wrap{overflow-x:auto;margin:20px 0}
+
+.cfm-pa-faq{max-width:100%;margin:24px 0 8px}
+.cfm-pa-faq-item{border:1px solid #ece8ea;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-pa-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#4a1628;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-pa-faq-q:hover{background:#fdeaef}
+.cfm-pa-faq-q .plus{color:#a84360;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-pa-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-pa-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-pa-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-pa-cta{background:#4a1628;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-pa-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-pa-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-pa-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-pa-cta a.btn-w{background:#fff;color:#a84360;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-pa-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-pa-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-pa-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-pa-related h3{color:#4a1628;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-pa-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-pa-rel-card{display:block;background:#fff;border:1px solid #ece8ea;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-pa-rel-card:hover{box-shadow:0 10px 30px rgba(74,22,40,.12);transform:translateY(-2px)}
+.cfm-pa-rel-card .lbl{display:block;color:#a84360;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-pa-rel-card .ttl{color:#4a1628;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-pa-cards{grid-template-columns:1fr}
+.cfm-pa-rel-grid{grid-template-columns:1fr}
+.cfm-pa-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-pa-cta a.btn-w,.cfm-pa-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-pa-layout{padding:32px 20px}
+.cfm-pa-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-pa-pullquote{padding:26px 22px}
+.cfm-pa-pullquote p{font-size:17px}
+.cfm-pa-table{font-size:12.5px}
+}
+</style>
+
+<div class="cfm-page-pollen-april">
+
+<div class="cfm-pa-progress" id="cfm-pa-progress"></div>
+
+<div class="cfm-pa-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-pa-hero" style="background-image:linear-gradient(160deg,rgba(74,22,40,.88) 0%,rgba(140,52,80,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Pollen-Season-in-Medford-Carpet-Allergen-Guide-April.webp')" role="img" aria-label="Pear blossoms and spring pollen in Medford Oregon &mdash; April carpet allergen guide for Jackson County households">
+<span class="ey">Health &amp; Allergen Guide &middot; Jackson County, Oregon</span>
+<h1>Medford's April Pollen Problem &mdash; A Carpet Allergen Guide for Jackson County</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">8 min read</span></p>
+</div>
+
+<div class="cfm-pa-layout">
+
+<div class="cfm-pa-wrap">
+
+<div class="cfm-pa-disclaimer">
+<p>&#9888; Note: The information in this guide is for general educational purposes about indoor allergen management. If you or a household member has diagnosed asthma, severe allergies, or respiratory conditions, consult your healthcare provider for personalized advice. Carpet cleaning is one component of a broader allergen management strategy.</p>
+</div>
+
+<div class="cfm-pa-intro" id="answer">
+<p>April creates a compound allergen burden in Medford carpet &mdash; pear tree pollen (timed with the Pear Blossom Festival), spring pet shedding, and rising dust mite activity all converge in the same few weeks. Professional carpet extraction in late April or early May is a high-impact intervention for indoor air quality, alongside regular HEPA vacuuming between visits.</p>
+</div>
+
+<h2 id="intro">Why April Is Medford's Worst Month for Carpet Allergens</h2>
+<p class="cfm-pa-p">If you live in the Rogue Valley, you already know spring here is not gentle. Between the pear orchards of Bear Creek Valley, the backyard flowering trees all over Jackson County, and a household routine that shifts from closed winter windows to open spring air, April tends to be the month Medford households notice the biggest jump in sneezing, itchy eyes, and stuffy mornings. We've covered the pollen calendar itself &mdash; which trees peak when, how long the season runs &mdash; in detail on our <a href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">Pollen Season Carpet Cleaning Guide</a>, so we won't repeat that here. This guide has a narrower, more specific focus: <strong>why does April in particular hit carpet-related allergens harder than any other month?</strong></p>
+<p class="cfm-pa-p">The short version is that April isn't just a pollen month in Jackson County &mdash; it's the month where three separate allergen sources land in your carpet at roughly the same time. Each one on its own is manageable. Stacked together, in the same fibers, during the same few weeks, they add up to what many Medford households describe as their worst stretch of the year for indoor symptoms.</p>
+
+<div class="cfm-pa-cards">
+<div class="cfm-pa-card"><h4>Pear Tree Pollen</h4><p>Bear Creek Valley has a heavy concentration of pear orchards, and ornamental flowering pear trees line streets throughout Medford and surrounding Jackson County neighborhoods. Pollen output typically peaks around the second week of April, right around Pear Blossom Festival timing.</p></div>
+<div class="cfm-pa-card"><h4>Spring Pet Shedding</h4><p>Dogs and cats blow their winter coat between March and May, and double-coated breeds especially common in Oregon households shed heavily during this window. Loose fur and the dander attached to it settle directly into carpet pile.</p></div>
+<div class="cfm-pa-card"><h4>Rising Dust Mite Activity</h4><p>Dust mites are largely dormant through the coldest winter months. As indoor temperatures and humidity rise in spring, mite populations become more active again, and their waste particles &mdash; a well-known indoor allergen source &mdash; increase along with them.</p></div>
+</div>
+
+<h2 id="compound-burden">The Compound Allergen Burden &mdash; When All Three Hit Your Carpet at Once</h2>
+<p class="cfm-pa-p">Think of carpet as a reservoir. Each allergen source on its own adds a certain amount to that reservoir over the course of a normal week. In April, all three sources are filling it at the same time: pollen tracked in on shoes and drifting through opened windows, shed fur and dander from a pet mid-molt, and dust mite waste that's been quietly accumulating since the mites became active again. None of these are unusual individually &mdash; they're normal parts of living in a home with carpet, pets, and open windows. What's different about April specifically is the overlap.</p>
+<p class="cfm-pa-p"><strong>Why do allergy symptoms feel worse in April than in other pollen months?</strong> In plain, non-clinical terms: when a carpet is holding a heavier combined load of pollen, dander, and dust mite allergen than it would from any single source, there's simply more total allergen material available to be stirred up by normal household activity &mdash; walking, vacuuming, kids and pets playing on the floor. It's an additive effect, not a mysterious one.</p>
+<div class="cfm-pa-pullquote">
+<p>Where does most of that exposure actually happen? For a lot of households, it's the bedroom.</p>
+</div>
+<p class="cfm-pa-p">Bedroom carpet deserves particular attention during this stretch. Most people spend more consecutive close-proximity hours on or near bedroom carpet than any other room in the house, simply because of sleep. A carpet that's accumulating a heavier allergen load in April, combined with hours of nightly close contact, is a combination worth being deliberate about &mdash; which is part of why we recommend prioritizing bedrooms in the HEPA vacuuming protocol later in this guide.</p>
+
+<h2 id="allergen-science">How Carpet Allergens Trigger Allergic Reactions</h2>
+<p class="cfm-pa-p"><strong>Why does carpet hold onto allergens more than hard flooring?</strong> This comes down to basic surface geometry. A hardwood or tile floor is essentially a flat plane &mdash; particles that land on it tend to stay on the surface, where they're relatively easy to capture with a damp mop or a simple vacuum pass. Carpet pile is different: each fiber creates additional surface area, and a typical carpet has an enormous amount of that surface area packed into a small footprint. Pollen grains, pet dander flakes, and dust mite waste particles settle down into the base of the pile and the backing layer, not just the visible top surface.</p>
+<p class="cfm-pa-p">That structure is exactly why carpet is a more effective long-term allergen reservoir than hard flooring &mdash; and also why it responds well to the right cleaning approach. The particles are there, but they're removable with methods designed to reach into the pile rather than just skim the surface.</p>
+<p class="cfm-pa-p"><strong>Why does regular vacuuming sometimes seem to make allergy symptoms worse, not better?</strong> This is the re-suspension problem, and it's one of the more counterintuitive parts of indoor allergen management. Standard vacuums with non-sealed systems and basic filtration can blow a portion of the fine particles they pick up right back out through the exhaust, into the air of the room you're standing in. Combined with normal foot traffic, which agitates carpet pile and knocks loose particles airborne, a room can end up with more allergen material circulating in the air right after vacuuming than before.</p>
+<p class="cfm-pa-p">This is exactly why HEPA vacuum exhaust matters. A true HEPA-filtered, sealed-system vacuum is built to capture what it picks up rather than reblowing fine particles back into the room. It's a small mechanical difference with a real practical effect on indoor air quality during heavy allergen weeks.</p>
+
+<h2 id="pear-blossom-event">The Pear Blossom Festival as a Carpet Health Event</h2>
+<p class="cfm-pa-p">The Pear Blossom Festival, typically held the second Saturday in April in Medford, is a great community event and also, from a pollen standpoint, the single highest local pollen week of the year. The orchards throughout Bear Creek Valley are in full bloom right around festival time, and that concentrated bloom means a concentrated pollen release into the local air &mdash; right as many households have windows open for spring weather and kids and pets are in and out of the yard more than usual.</p>
+<p class="cfm-pa-p">We think of it as a useful, memorable local marker for planning around &mdash; a practical before/during/after framework Medford households can actually use:</p>
+<ol class="cfm-pa-steps">
+<li><span class="num">1</span><div class="txt"><h4>Before the Festival</h4><p>Consider a professional carpet clean in the week or two leading up to Pear Blossom weekend. Starting the peak pollen week with carpet in its cleanest state gives the compound allergen load a lower starting point before the heaviest week hits.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>During Festival Weekend</h4><p>Be a little more deliberate about window management on the highest-pollen days &mdash; check a public pollen or air quality resource before deciding whether to open windows wide or keep them mostly closed during peak bloom hours.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>After the Festival</h4><p>Run a HEPA vacuum pass within about 48 hours after festival weekend, focusing on entryways, living areas, and bedrooms, to catch the pollen load that came in on shoes, clothing, and pets during the peak bloom days.</p></div></li>
+</ol>
+<p class="cfm-pa-p">If your schedule doesn't allow for a pre-festival clean, a post-festival professional clean in late April or early May works just as well &mdash; the point isn't the exact calendar date, it's making sure a professional deep clean happens on one side or the other of the year's single heaviest local pollen week.</p>
+
+<h2 id="hepa-comparison">HEPA Vacuums vs. Professional Extraction for Allergen Management</h2>
+<p class="cfm-pa-p"><strong>Do I need professional carpet cleaning if I already have a good HEPA vacuum?</strong> This is one of the most common questions we get from allergy-conscious households in April, and the honest answer is that HEPA vacuuming and professional extraction aren't competing options &mdash; they're complementary, and each does something the other doesn't.</p>
+<p class="cfm-pa-p">A quality sealed-system HEPA vacuum is genuinely good at what it does: regular surface-layer removal of loose pollen, dander, and debris, without recirculating fine particles back into room air through the exhaust. HEPA filters are rated to capture 99.97% of particles down to 0.3 microns, a standard, well-established industry specification &mdash; that's real, meaningful filtration for what the vacuum actually reaches.</p>
+<p class="cfm-pa-p">What it can't reach is allergen material bonded deeper in the pile, compressed into the base of the fibers by months of foot traffic, or sitting at the backing level where a vacuum's suction and brush action simply don't penetrate. Dust mite allergen in particular tends to concentrate deep in pile rather than sitting loosely on the surface. This is where professional hot water extraction, typically run around 195&deg;F, adds something a vacuum structurally cannot: it flushes the full depth of the pile and rinses allergen material out of the fiber and backing, not just off the top.</p>
+<div class="cfm-pa-table-wrap">
+<table class="cfm-pa-table">
+<thead><tr><th>Allergen Task</th><th>Standard Vacuum</th><th>HEPA Vacuum</th><th>Professional Extraction</th></tr></thead>
+<tbody>
+<tr><td>Surface allergen removal</td><td>Partial</td><td>Good</td><td>Excellent</td></tr>
+<tr><td>Deep pile removal</td><td>Minimal</td><td>Limited</td><td>Excellent</td></tr>
+<tr><td>Dust mite removal</td><td>Minimal</td><td>Partial</td><td>Strong</td></tr>
+<tr><td>Pet dander removal</td><td>Partial</td><td>Good</td><td>Excellent</td></tr>
+<tr><td>Pollen removal</td><td>Partial</td><td>Good</td><td>Excellent</td></tr>
+<tr><td>Recommended frequency</td><td>Not recommended for allergy households</td><td>1&ndash;2x weekly, April&ndash;May</td><td>Seasonal (pre/post peak pollen)</td></tr>
+</tbody>
+</table>
+</div>
+<p class="cfm-pa-p">For pricing on a professional visit, see our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">carpet cleaning cost guide</a> &mdash; we don't want to guess a number here that doesn't match your home's size and condition.</p>
+
+<h2 id="asthma-protocol">The Asthma Household Carpet Protocol for Medford Springs</h2>
+<div class="cfm-pa-warn">
+<p>&#9888; This section is general environmental-control information, not medical advice. Asthma management should be directed by your healthcare provider &mdash; please consult them for anything specific to your or a family member's condition.</p>
+</div>
+<p class="cfm-pa-p">With that said, here's how we structure carpet care for Medford households who've told us asthma or severe allergies are a factor. These are general environmental steps, offered alongside &mdash; never in place of &mdash; medical guidance.</p>
+<div class="cfm-pa-cards">
+<div class="cfm-pa-card"><h4>Pre-Season Professional Extraction</h4><p>A deep clean in February or March, ahead of the April pollen surge, starts the season with carpet allergen load as low as possible before the compound burden begins building.</p></div>
+<div class="cfm-pa-card"><h4>Window Management on High-Pollen Days</h4><p>Check a public pollen or air quality resource before deciding how much to open windows on a given spring day, rather than following a fixed daily routine.</p></div>
+<div class="cfm-pa-card"><h4>HEPA Vacuuming Protocol</h4><p>Twice weekly through April and May with a sealed-system HEPA vacuum, prioritizing bedrooms first given the extended close-proximity exposure during sleep.</p></div>
+<div class="cfm-pa-card"><h4>Post-Season Extraction</h4><p>A late-May or early-June clean with an allergen-focused pre-spray closes out the season. Mention the asthma household context when booking so we can plan the visit accordingly.</p></div>
+</div>
+
+<h2 id="air-quality-plan">The Indoor Air Quality Plan for Jackson County Spring</h2>
+<p class="cfm-pa-p"><strong>What's a reasonable month-by-month plan for a Medford household trying to stay ahead of spring allergens?</strong> Here's the general framework we'd suggest, month by month:</p>
+<ul class="cfm-pa-check">
+<li><span class="chk">&#10003;</span><div class="txt"><h4>February &mdash; Prepare</h4><p>Book a pre-season professional carpet clean before the spring pollen ramp-up begins, and confirm your vacuum has a true sealed HEPA system.</p></div></li>
+<li><span class="chk">&#10003;</span><div class="txt"><h4>March &mdash; Early Defense</h4><p>Start regular HEPA vacuuming as early bloom begins around Jackson County, and start checking pollen/AQI resources as part of your normal routine.</p></div></li>
+<li><span class="chk">&#10003;</span><div class="txt"><h4>April &mdash; Pre/Post Pear Blossom Critical Window</h4><p>This is the highest-priority month. Time a professional clean around Pear Blossom Festival weekend, and increase HEPA vacuuming frequency through the peak bloom weeks.</p></div></li>
+<li><span class="chk">&#10003;</span><div class="txt"><h4>May &mdash; Peak Grass Pollen Wind-Down</h4><p>As tree pollen fades and grass pollen becomes the dominant seasonal factor, a post-season professional extraction closes out the heaviest allergen months and resets carpet for early summer.</p></div></li>
+</ul>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Pollen-Season-in-Medford-Carpet-Allergen-Guide-April.webp" alt="Month-by-month indoor air quality checklist for allergy-conscious Medford Oregon households during spring pollen season" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="faq">April Pollen Carpet FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-pa-faq" id="cfm-pa-faq">
+
+<div class="cfm-pa-faq-item" aria-expanded="false">
+<button class="cfm-pa-faq-q" type="button">When should I get carpets cleaned for allergy season in Medford?<span class="plus">+</span></button>
+<div class="cfm-pa-faq-a"><div class="cfm-pa-faq-a-inner">For most Jackson County households, a pre-season clean in February or March followed by either a pre- or post-Pear Blossom Festival clean in April works well, with a wind-down clean in late May as grass pollen takes over. See our <a href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">Pollen Season Carpet Cleaning Guide</a> for the full seasonal calendar and best booking windows.</div></div>
+</div>
+
+<div class="cfm-pa-faq-item" aria-expanded="false">
+<button class="cfm-pa-faq-q" type="button">Why are my allergies worse in April specifically in Medford?<span class="plus">+</span></button>
+<div class="cfm-pa-faq-a"><div class="cfm-pa-faq-a-inner">April is when pear tree pollen (heavy across Bear Creek Valley and timed with Pear Blossom Festival), spring pet shedding, and rising dust mite activity all converge in the same few weeks. It's the overlap of these three sources in carpet and indoor air, not any single one, that many Medford households report as their toughest stretch of the year.</div></div>
+</div>
+
+<div class="cfm-pa-faq-item" aria-expanded="false">
+<button class="cfm-pa-faq-q" type="button">Does a HEPA vacuum replace professional carpet cleaning for allergy households?<span class="plus">+</span></button>
+<div class="cfm-pa-faq-a"><div class="cfm-pa-faq-a-inner">No &mdash; they're complementary. A sealed-system HEPA vacuum is excellent for regular surface-layer maintenance between visits, but it can't reach allergen material bonded deep in the pile or at the carpet backing. Professional hot water extraction reaches that depth periodically. Most allergy-conscious households benefit from both working together.</div></div>
+</div>
+
+<div class="cfm-pa-faq-item" aria-expanded="false">
+<button class="cfm-pa-faq-q" type="button">What should allergy sufferers tell their carpet cleaner before the appointment?<span class="plus">+</span></button>
+<div class="cfm-pa-faq-a"><div class="cfm-pa-faq-a-inner">Let us know if anyone in the household has allergies, asthma, or sensitivities, whether you'd like an allergen-focused pre-spray used, and whether bedrooms should be prioritized. This helps us plan the visit around your household's specific situation rather than a generic clean.</div></div>
+</div>
+
+<div class="cfm-pa-faq-item" aria-expanded="false">
+<button class="cfm-pa-faq-q" type="button">Is there carpet cleaning specifically for asthma households in Medford?<span class="plus">+</span></button>
+<div class="cfm-pa-faq-a"><div class="cfm-pa-faq-a-inner">We offer allergen-focused pre-spray options and can plan visit timing around pre- and post-pollen-season windows for households managing asthma or severe allergies. This is general environmental support, though &mdash; not medical treatment. For anything related to managing an asthma diagnosis itself, please talk with your healthcare provider.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-pa-toc" id="cfm-pa-toc" data-open="true">
+<span class="toc-ttl cfm-pa-toc-static">In This Guide</span>
+<button class="cfm-pa-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-pa-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-pa-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#intro">Why April Is Worst</a></li>
+<li><a href="#compound-burden">The Compound Allergen Burden</a></li>
+<li><a href="#allergen-science">How Carpet Allergens Trigger Reactions</a></li>
+<li><a href="#pear-blossom-event">Pear Blossom Festival Carpet Event</a></li>
+<li><a href="#hepa-comparison">HEPA vs. Professional Extraction</a></li>
+<li><a href="#asthma-protocol">Asthma Household Protocol</a></li>
+<li><a href="#air-quality-plan">Indoor Air Quality Plan</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-pa-cta">
+<h2>Book Your April Allergen Clean &mdash; Pre or Post Pear Blossom</h2>
+<p>Same-week scheduling. Allergen-focused pre-spray available on request. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">&#127800; Pollen Season Guide &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-pa-related">
+<h3>Related Reading</h3>
+<div class="cfm-pa-rel-grid">
+<a class="cfm-pa-rel-card" href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#127800; Guide</span>
+<p class="ttl">Pollen Season Carpet Guide</p>
+</a>
+<a class="cfm-pa-rel-card" href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-kill-fleas-and-dust-mites/">
+<span class="lbl">&#128027; Guide</span>
+<p class="ttl">Can Carpet Cleaning Kill Fleas and Dust Mites?</p>
+</a>
+<a class="cfm-pa-rel-card" href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">
+<span class="lbl">&#128197; Guide</span>
+<p class="ttl">How Often to Clean Carpets in Medford</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-pa-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-pa-toc');
+var tocBtn=toc.querySelector('.cfm-pa-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-pa-faq .cfm-pa-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-pa-faq-q');
+var ans=item.querySelector('.cfm-pa-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-pa-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

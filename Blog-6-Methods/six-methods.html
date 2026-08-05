@@ -1,0 +1,425 @@
+<!-- wp:html -->
+<style id="cfm-6m-css">
+.cfm-page-six-methods{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-six-methods *,.cfm-page-six-methods *::before,.cfm-page-six-methods *::after{box-sizing:border-box}
+.cfm-page-six-methods p,.cfm-page-six-methods li,.cfm-page-six-methods h1,.cfm-page-six-methods h2,.cfm-page-six-methods h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-6m-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#7C3AED;z-index:9998;transition:width .1s linear}
+
+.cfm-6m-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-6m-topline a{color:#3B1466;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-6m-topline a:hover{text-decoration:underline}
+
+.cfm-6m-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-6m-hero .ey{display:block;color:#C4A6F7;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-6m-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:880px}
+.cfm-6m-hero .byline{color:#C4A6F7;font-size:13.5px;font-weight:600;margin:0}
+.cfm-6m-hero .rt{display:inline-block;background:#F1E9FD;color:#3B1466;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-6m-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-6m-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-6m-toc{flex:0 0 300px;background:#fff;border:1px solid #ece5f9;border-left:3px solid #2E0F52;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-6m-toc .toc-ttl{display:block;color:#6D28D9;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-6m-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-6m-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-6m-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-6m-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-6m-toc a:hover{color:#2E0F52}
+.cfm-6m-toc a.active{color:#2E0F52;font-weight:700}
+.cfm-6m-toc a.active::before{color:#6D28D9}
+.cfm-6m-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-6m-layout{flex-direction:column}
+.cfm-6m-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-6m-toc-static{display:none}
+.cfm-6m-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-6m-toc-toggle .chev{transition:transform .2s;color:#6D28D9}
+.cfm-6m-toc[data-open="false"] ol{display:none}
+.cfm-6m-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-6m-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-6m-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-6m-intro{background:#F1E9FD;border-left:4px solid #6D28D9;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-6m-intro p{color:#2E0F52;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-six-methods h2{color:#2E0F52;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-6m-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-six-methods .cfm-6m-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-six-methods strong{color:#2E0F52}
+
+.cfm-6m-lbl{display:block;color:#6D28D9;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-6m-pullquote{background:#2E0F52;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-6m-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-6m-pullquote::before{content:'"';color:#C4A6F7;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-6m-fitbox{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 8px}
+.cfm-6m-fit{background:#F5F0FC;border:1px solid #ece5f9;border-radius:12px;padding:18px 20px}
+.cfm-6m-fit.bad{background:#FEF2F2;border-color:#fecaca}
+.cfm-6m-fit h4{color:#2E0F52;font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin:0 0 10px}
+.cfm-6m-fit.bad h4{color:#991B1B}
+.cfm-6m-fit ul{margin:0;padding:0 0 0 18px}
+.cfm-6m-fit li{color:#4a5568;font-size:14.5px;line-height:1.7;margin:0 0 4px}
+
+.cfm-6m-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-6m-steps li{display:flex;gap:16px;align-items:flex-start;background:#f8f6fb;border:1px solid #ece5f9;border-radius:12px;padding:20px 22px}
+.cfm-6m-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#6D28D9;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-6m-steps .txt h4{color:#2E0F52;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-6m-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-6m-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.cfm-6m-card{background:#fff;border:1px solid #ece5f9;border-radius:12px;padding:22px 20px;border-top:4px solid #6D28D9}
+.cfm-6m-card h4{color:#2E0F52;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-6m-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+
+.cfm-6m-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-6m-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-6m-info{background:#F1E9FD;border-left:4px solid #6D28D9;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-6m-info p{color:#2E0F52;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-6m-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-6m-table th{background:#2E0F52;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-6m-table td{padding:12px 14px;border:1px solid #ece5f9;color:#4a5568;line-height:1.5}
+.cfm-6m-table tr:nth-child(even) td{background:#f8f6fb}
+.cfm-6m-table-wrap{overflow-x:auto;margin:20px 0}
+.cfm-6m-yes{color:#15803d;font-weight:800}
+.cfm-6m-no{color:#b91c1c;font-weight:800}
+
+.cfm-6m-faq{max-width:100%;margin:24px 0 8px}
+.cfm-6m-faq-item{border:1px solid #ece5f9;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-6m-faq-q{width:100%;text-align:left;background:#f8f6fb;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#2E0F52;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-6m-faq-q:hover{background:#F1E9FD}
+.cfm-6m-faq-q .plus{color:#6D28D9;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-6m-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-6m-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-6m-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-6m-cta{background:#2E0F52;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-6m-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-6m-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-6m-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-6m-cta a.btn-w{background:#fff;color:#5B21B6;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-6m-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-6m-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-6m-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-6m-related h3{color:#2E0F52;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-6m-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-6m-rel-card{display:block;background:#fff;border:1px solid #ece5f9;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-6m-rel-card:hover{box-shadow:0 10px 30px rgba(46,15,82,.12);transform:translateY(-2px)}
+.cfm-6m-rel-card .lbl{display:block;color:#6D28D9;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-6m-rel-card .ttl{color:#2E0F52;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-6m-cards{grid-template-columns:1fr}
+.cfm-6m-fitbox{grid-template-columns:1fr}
+.cfm-6m-rel-grid{grid-template-columns:1fr}
+.cfm-6m-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-6m-cta a.btn-w,.cfm-6m-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-6m-layout{padding:32px 20px}
+.cfm-6m-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-6m-pullquote{padding:26px 22px}
+.cfm-6m-pullquote p{font-size:17px}
+.cfm-6m-table{font-size:12.5px}
+}
+</style>
+
+<div class="cfm-page-six-methods">
+
+<div class="cfm-6m-progress" id="cfm-6m-progress"></div>
+
+<div class="cfm-6m-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-6m-hero" style="background-image:linear-gradient(160deg,rgba(46,15,82,.90) 0%,rgba(59,20,102,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/6-Carpet-Cleaning-Methods-Explained-Hot-Water-Extraction-Encapsulation-Dry-Cleaning-Bonnet-Cleaning-Shampooing-Absorbent-Compound.webp')" role="img" aria-label="Six carpet cleaning methods compared side by side &mdash; hot water extraction, encapsulation, dry cleaning, bonnet cleaning, shampooing, and absorbent compound equipment">
+<span class="ey">Method Guide &middot; Jackson County, Oregon</span>
+<h1>6 Carpet Cleaning Methods Explained &mdash; Which One Is Right for Your Home?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">10 min read</span></p>
+</div>
+
+<div class="cfm-6m-layout">
+
+<div class="cfm-6m-wrap">
+
+<div class="cfm-6m-intro" id="answer">
+<p>There are six carpet cleaning methods in general use: hot water extraction, encapsulation, dry cleaning, bonnet cleaning, carpet shampooing, and absorbent compound cleaning. Hot water extraction is the IICRC-recognized standard for residential carpet and what Carpet Friend Medford uses on every job. The other five have legitimate roles &mdash; mostly in commercial maintenance or specialty situations &mdash; but aren't built for deep residential soil, pet contamination, or smoke odor.</p>
+</div>
+
+<p class="cfm-6m-p">Ask five carpet cleaning companies what method they use and you'll often get five different answers, described five different ways &mdash; "steam cleaning," "low-moisture cleaning," "eco-friendly compound cleaning," "deep extraction." Some of that is genuine variety in equipment and approach. Some of it is marketing language dressing up a method that isn't actually built for the job you're hiring for. This guide breaks down all six methods in plain terms &mdash; what each one physically does to your carpet, where it's genuinely the right tool, and where it falls short &mdash; so you can ask the right questions before you book anyone in Jackson County.</p>
+
+<h2 id="method-1">Method 1 &mdash; Hot Water Extraction (HWE)</h2>
+<p class="cfm-6m-p"><strong>What actually happens during a hot water extraction cleaning?</strong> A truck-mounted unit uses the vehicle's engine to power a high-capacity vacuum blower and route engine heat through a heat exchanger, bringing water to a high cleaning temperature almost instantly. That hot water travels through a hose &mdash; commonly rated to run up to roughly 150 feet &mdash; into a cleaning wand at the carpet. The process runs in stages: a pre-spray loosens embedded soil, the extraction pass injects hot water under pressure while simultaneously vacuuming it back out along with the dissolved soil, a pH-balanced rinse pass neutralizes any residue from the pre-spray, and final dry strokes pull remaining moisture from the pile.</p>
+<div class="cfm-6m-fitbox">
+<div class="cfm-6m-fit"><h4>Best For</h4><ul>
+<li>Standard residential carpet cleaning</li>
+<li>Pet urine and odor contamination</li>
+<li>Wildfire smoke odor treatment</li>
+<li>Allergen and dust mite reduction</li>
+<li>IICRC-recommended, often required to preserve manufacturer carpet warranties</li>
+</ul></div>
+<div class="cfm-6m-fit bad"><h4>Not Ideal For</h4><ul>
+<li>Berber and tight loop-pile carpet needs a lower-pressure wand and careful technique to avoid pile distortion</li>
+<li>Commercial jobs needing a same-hour turnaround, since drying takes a few hours even with strong extraction</li>
+</ul></div>
+</div>
+<p class="cfm-6m-p">Hot water extraction is what Carpet Friend Medford runs on every residential job &mdash; see our full <a href="https://carpetcleaningmedfordoregon.com/our-process/">7-step process</a> for exactly how each stage works. It's the method the IICRC (the industry's standard-setting body for cleaning and restoration) identifies as the benchmark for residential carpet, and it's frequently the method carpet manufacturers specify to keep a warranty valid.</p>
+
+<h2 id="method-2">Method 2 &mdash; Encapsulation</h2>
+<div class="cfm-6m-pullquote">
+<p>Why does a hotel hallway get cleaned every week when your living room only needs it twice a year?</p>
+</div>
+<p class="cfm-6m-p"><strong>How is encapsulation different from a full wet extraction?</strong> Encapsulation uses a polymer-based cleaning solution applied with a rotary or cylindrical brush machine (sometimes called a CRB applicator). The polymer surrounds and crystallizes around soil particles as it dries &mdash; typically in 20 to 30 minutes, far faster than a wet extraction pass. Once dry, the crystallized soil no longer clings to carpet fiber, and a routine vacuum pass lifts it away. There's no rinse step and very little standing moisture involved.</p>
+<div class="cfm-6m-fitbox">
+<div class="cfm-6m-fit"><h4>Best For</h4><ul>
+<li>Commercial maintenance cleaning between full deep cleans</li>
+<li>High-traffic offices, retail floors, hotel corridors</li>
+<li>Spaces that can't tolerate downtime for drying</li>
+</ul></div>
+<div class="cfm-6m-fit bad"><h4>Not Ideal For</h4><ul>
+<li>Heavily soiled residential carpet</li>
+<li>Pet contamination &mdash; doesn't reach or remove urine deep in the pad</li>
+<li>Smoke odor treatment</li>
+</ul></div>
+</div>
+<p class="cfm-6m-p">Encapsulation is genuinely useful &mdash; it's just built for a different job than most residential homeowners need. It's a maintenance tool that keeps light commercial soil from building up between real deep cleans, not a substitute for hot water extraction. A carpet that's had months of foot traffic, pet exposure, or accumulated household soil needs the pile-depth reach that only a wet extraction pass provides.</p>
+
+<h2 id="method-3">Method 3 &mdash; Dry Cleaning (Very Low Moisture / VLM)</h2>
+<p class="cfm-6m-p"><strong>Is "dry" carpet cleaning actually dry?</strong> Not entirely &mdash; the name is a little misleading. Dry cleaning systems use solvent-based or specially formulated chemical cleaners applied with minimal water, usually through a branded proprietary system. The solvent breaks down soil without saturating the carpet, and because so little moisture is introduced, the carpet is typically ready to walk on almost immediately.</p>
+<div class="cfm-6m-fitbox">
+<div class="cfm-6m-fit"><h4>Best For</h4><ul>
+<li>Delicate natural fibers and antique or specialty rugs sensitive to water</li>
+<li>Commercial spaces with zero tolerance for a drying window</li>
+<li>Isolated spot treatment for solvent-soluble stains</li>
+</ul></div>
+<div class="cfm-6m-fit bad"><h4>Not Ideal For</h4><ul>
+<li>Standard residential soil loads</li>
+<li>Pet contamination</li>
+<li>Wildfire smoke VOC removal</li>
+</ul></div>
+</div>
+<p class="cfm-6m-p">In Jackson County specifically, dry cleaning tends to fall short on the three soil types local homes deal with most: fine volcanic clay tracked in from yards and trails, pet hair and dander in a region with high pet ownership, and wildfire smoke particulate during fire season. None of those respond well to a low-moisture solvent pass the way they respond to hot water flushed through the full pile depth. Dry cleaning has a real place for delicate rugs; it's rarely the right call for a standard Medford living room carpet.</p>
+
+<h2 id="method-4">Method 4 &mdash; Bonnet Cleaning</h2>
+<p class="cfm-6m-p"><strong>What is bonnet cleaning, and why does it get called "carpet cleaning" at all?</strong> A bonnet machine is a rotary floor buffer fitted with an absorbent cleaning pad. Cleaning solution is applied to the carpet surface, and the spinning pad wicks up soil as it moves across the top of the pile. It's fast, requires minimal drying time, and can make a carpet look noticeably better within minutes &mdash; which is exactly why it's popular for quick commercial refreshes.</p>
+<div class="cfm-6m-fitbox">
+<div class="cfm-6m-fit"><h4>Best For</h4><ul>
+<li>Commercial quick-turnaround appearance refresh &mdash; hotel lobbies, offices, showrooms</li>
+</ul></div>
+<div class="cfm-6m-fit bad"><h4>Not Ideal For</h4><ul>
+<li>Residential deep cleaning of any kind</li>
+<li>Any situation where soil sits below the surface</li>
+</ul></div>
+</div>
+<p class="cfm-6m-p">Here's the part worth being direct about: bonnet cleaning is controversial in the industry precisely because it's sometimes marketed as "carpet cleaning" to budget-conscious commercial buyers when what it actually delivers is a surface refresh, not a deep clean. The IICRC doesn't recommend bonnet cleaning as a primary residential method, and there's a real mechanical reason why &mdash; because the pad only works the top of the pile, it can push soil deeper into the carpet and pad rather than remove it, leaving a carpet that looks better on day one but is dirtier underneath than before it started. <strong>Should you ask a company directly whether they use bonnet cleaning on residential jobs?</strong> Yes &mdash; and the honest answer from any reputable residential cleaner should be no.</p>
+
+<h2 id="method-5">Method 5 &mdash; Carpet Shampooing</h2>
+<p class="cfm-6m-p"><strong>Is carpet shampooing the same thing as steam cleaning?</strong> No, and this is one of the most common points of confusion. Shampooing is an older, legacy method: a rotating brush machine works a foaming detergent into the carpet, the foam is allowed to dry, and the dried residue &mdash; along with the soil it's bonded to &mdash; is vacuumed up afterward.</p>
+<p class="cfm-6m-p">The problem is what's left behind. Foaming detergents used in shampooing tend to leave a sticky, alkaline residue in the fiber even after vacuuming. That residue acts almost like a magnet for new soil, which is why shampooed carpet often looks dirty again noticeably faster than carpet cleaned with hot water extraction. The IICRC doesn't recommend shampooing as a standalone residential method for this reason, and it's a method you mostly still encounter today from budget operations running older equipment rather than as an intentional professional choice.</p>
+<p class="cfm-6m-p"><strong>How do you know if a company is going to leave that residue behind?</strong> Ask directly whether they rinse or extract after applying the cleaning solution. A pH-balanced rinse and extraction pass &mdash; the step built into our <a href="https://carpetcleaningmedfordoregon.com/our-process/">hot water extraction process</a> &mdash; is what separates a method that removes residue from one that leaves it in the carpet to attract soil.</p>
+
+<h2 id="method-6">Method 6 &mdash; Absorbent Compound (Host-Style / Dry Compound) Cleaning</h2>
+<p class="cfm-6m-p"><strong>What is that powder some "dry" or "eco" carpet cleaning companies spread across the floor?</strong> Absorbent compound cleaning uses a biodegradable organic carrier material &mdash; often corn-cob or similarly plant-based &mdash; that's lightly moistened with cleaning solution and worked into the carpet with a brush machine. As the compound sits in the pile for a short dwell time, it absorbs soil and oils from the fiber. Afterward, a thorough vacuum pass removes the compound along with the soil it picked up.</p>
+<p class="cfm-6m-p">This category includes a number of branded systems marketed on eco-friendly and low-chemical-residue claims, and some carry third-party sustainability certifications. We won't speak to any specific brand's certification status here since that varies by product and changes over time &mdash; if a company markets a specific certification, it's reasonable to ask them to show it.</p>
+<div class="cfm-6m-fitbox">
+<div class="cfm-6m-fit"><h4>Best For</h4><ul>
+<li>Allergy-sensitive households wanting minimal chemical residue</li>
+<li>Situations with zero tolerance for any drying time</li>
+<li>Light maintenance cleaning between full hot water extraction sessions</li>
+</ul></div>
+<div class="cfm-6m-fit bad"><h4>Not Ideal For</h4><ul>
+<li>Heavily soiled residential carpet</li>
+<li>Pet contamination</li>
+<li>Wildfire smoke odor treatment</li>
+</ul></div>
+</div>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/6-Carpet-Cleaning-Methods-Explained-Hot-Water-Extraction-Encapsulation-Dry-Cleaning-Bonnet-Cleaning-Shampooing-Absorbent-Compound.webp" alt="Comparison chart illustration of six carpet cleaning methods used across Jackson County Oregon homes and businesses" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="comparison">Side-by-Side Comparison of All 6 Methods</h2>
+<p class="cfm-6m-p"><strong>Which method actually reaches soil deep in the pile versus just the surface?</strong> The table below lays out all six methods against the factors that matter most for a real cleaning decision.</p>
+<div class="cfm-6m-table-wrap">
+<table class="cfm-6m-table">
+<thead><tr><th>Method</th><th>Moisture</th><th>Drying Time</th><th>Soil Depth Reached</th><th>Pet/Smoke Treatment</th><th>Residential Use</th><th>Commercial Use</th></tr></thead>
+<tbody>
+<tr><td>Hot Water Extraction</td><td>High (rinsed &amp; extracted)</td><td>2&ndash;6 hours</td><td>Full pile depth</td><td><span class="cfm-6m-yes">&#10003;</span></td><td><span class="cfm-6m-yes">&#10003;</span></td><td><span class="cfm-6m-yes">&#10003;</span></td></tr>
+<tr><td>Encapsulation</td><td>Very low</td><td>20&ndash;30 min</td><td>Surface to mid-pile</td><td><span class="cfm-6m-no">&#10007;</span></td><td><span class="cfm-6m-no">&#10007;</span></td><td><span class="cfm-6m-yes">&#10003;</span></td></tr>
+<tr><td>Dry Cleaning (VLM)</td><td>Minimal (solvent)</td><td>Under 1 hour</td><td>Surface to mid-pile</td><td><span class="cfm-6m-no">&#10007;</span></td><td><span class="cfm-6m-no">&#10007;</span></td><td><span class="cfm-6m-yes">&#10003;</span></td></tr>
+<tr><td>Bonnet Cleaning</td><td>Low (surface only)</td><td>Under 1 hour</td><td>Surface only</td><td><span class="cfm-6m-no">&#10007;</span></td><td><span class="cfm-6m-no">&#10007;</span></td><td><span class="cfm-6m-yes">&#10003;</span></td></tr>
+<tr><td>Carpet Shampooing</td><td>Moderate (no rinse)</td><td>4&ndash;8 hours</td><td>Surface to mid-pile</td><td><span class="cfm-6m-no">&#10007;</span></td><td><span class="cfm-6m-no">&#10007;</span></td><td><span class="cfm-6m-no">&#10007;</span></td></tr>
+<tr><td>Absorbent Compound</td><td>Very low</td><td>Near-zero</td><td>Surface to mid-pile</td><td><span class="cfm-6m-no">&#10007;</span></td><td><span class="cfm-6m-no">&#10007;</span> (maintenance only)</td><td><span class="cfm-6m-yes">&#10003;</span></td></tr>
+</tbody>
+</table>
+</div>
+<p class="cfm-6m-p">The pattern is consistent across the table: hot water extraction is the only method rated for pet contamination and smoke treatment, because both require flushing hot water through the full depth of the pile to break down and remove what's bonded to the fiber. Every other method has a legitimate commercial maintenance role, but none of them are built to replace a deep residential clean.</p>
+
+<h2 id="medford-match">Which Method Matches Medford Conditions?</h2>
+<p class="cfm-6m-p"><strong>Does the "best" method actually change depending on where in Jackson County you live?</strong> Not fundamentally &mdash; but the reasons hot water extraction wins get more concrete when you look at what local homes actually deal with.</p>
+<div class="cfm-6m-cards">
+<div class="cfm-6m-card"><h4>Volcanic Clay Soil</h4><p>Fine reddish clay from the Table Rocks and the Bear Creek Greenway trail system tracks into homes on shoes, paws, and gear, and it settles deep into carpet pile rather than sitting on the surface. Full pile-depth extraction is needed to actually remove it &mdash; surface methods just redistribute it.</p></div>
+<div class="cfm-6m-card"><h4>Wildfire Smoke Contamination</h4><p>PM2.5 smoke particulate embeds in carpet fiber during Rogue Valley fire seasons and needs an oxidizing pre-spray paired with high-temperature (around 195&deg;F) extraction to break down and remove it. See our full <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">wildfire smoke treatment guide</a> for the complete protocol.</p></div>
+<div class="cfm-6m-card"><h4>Pet Contamination</h4><p>Jackson County has a high rate of pet ownership, and pet accidents require sub-surface extraction, UV inspection to locate hidden contamination, and enzyme treatment to break down uric acid crystals &mdash; something only a wet extraction method can deliver.</p></div>
+</div>
+<p class="cfm-6m-p">Put those three factors together and the conclusion for most Jackson County homes is straightforward: hot water extraction is the method that matches local conditions. The other five methods aren't wrong or fake &mdash; they have real, legitimate niches in commercial maintenance and specialty situations &mdash; they're just not built for what a typical Medford home actually needs removed from its carpet.</p>
+
+<h2 id="faq">Carpet Cleaning Methods FAQ</h2>
+<div class="cfm-6m-faq" id="cfm-6m-faq">
+
+<div class="cfm-6m-faq-item" aria-expanded="false">
+<button class="cfm-6m-faq-q" type="button">What is the best carpet cleaning method for home use?<span class="plus">+</span></button>
+<div class="cfm-6m-faq-a"><div class="cfm-6m-faq-a-inner">Hot water extraction is the IICRC-recognized standard for residential carpet and the method most likely to be required to keep a manufacturer's carpet warranty valid. It's the only one of the six common methods that reaches full pile depth with enough heat and rinse-and-extract action to handle standard household soil, pet contamination, and allergens effectively.</div></div>
+</div>
+
+<div class="cfm-6m-faq-item" aria-expanded="false">
+<button class="cfm-6m-faq-q" type="button">What's the difference between steam cleaning and hot water extraction?<span class="plus">+</span></button>
+<div class="cfm-6m-faq-a"><div class="cfm-6m-faq-a-inner">They're the same method under two different names. "Steam cleaning" is the common consumer term, but no actual steam vapor is used &mdash; the process is hot water under pressure, injected into the carpet and immediately extracted back out along with dissolved soil. Professionals and the IICRC refer to it as hot water extraction because that's a more accurate description of what's happening.</div></div>
+</div>
+
+<div class="cfm-6m-faq-item" aria-expanded="false">
+<button class="cfm-6m-faq-q" type="button">Is encapsulation cleaning as good as hot water extraction?<span class="plus">+</span></button>
+<div class="cfm-6m-faq-a"><div class="cfm-6m-faq-a-inner">Not for a deep residential clean. Encapsulation is a low-moisture maintenance method designed to keep light commercial soil from accumulating between full deep cleans &mdash; it dries in 20&ndash;30 minutes and doesn't rinse or flush the pile the way hot water extraction does. It's a good supplement, but it isn't a substitute for a full extraction pass, especially for pet contamination or smoke odor.</div></div>
+</div>
+
+<div class="cfm-6m-faq-item" aria-expanded="false">
+<button class="cfm-6m-faq-q" type="button">Is bonnet cleaning safe for carpet?<span class="plus">+</span></button>
+<div class="cfm-6m-faq-a"><div class="cfm-6m-faq-a-inner">It won't damage most carpet, but it's not recommended by the IICRC as a primary residential method because it only cleans the surface of the pile and can push soil deeper into the carpet and pad rather than remove it. It's best suited to commercial quick-turnaround appearance refreshes, not deep home cleaning. If a company proposes bonnet cleaning for a residential job, ask why.</div></div>
+</div>
+
+<div class="cfm-6m-faq-item" aria-expanded="false">
+<button class="cfm-6m-faq-q" type="button">Does carpet shampooing leave residue?<span class="plus">+</span></button>
+<div class="cfm-6m-faq-a"><div class="cfm-6m-faq-a-inner">Yes, typically. Foaming detergents used in shampooing tend to leave a sticky, alkaline residue in the fiber even after vacuuming, which attracts new soil faster and makes carpet look dirty again sooner. This is a core reason the IICRC doesn't recommend shampooing as a standalone method. If a company shampoos, ask whether they follow it with a rinse and extraction pass to remove the residue.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-6m-toc" id="cfm-6m-toc" data-open="true">
+<span class="toc-ttl cfm-6m-toc-static">In This Guide</span>
+<button class="cfm-6m-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-6m-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-6m-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#method-1">Hot Water Extraction</a></li>
+<li><a href="#method-2">Encapsulation</a></li>
+<li><a href="#method-3">Dry Cleaning (VLM)</a></li>
+<li><a href="#method-4">Bonnet Cleaning</a></li>
+<li><a href="#method-5">Carpet Shampooing</a></li>
+<li><a href="#method-6">Absorbent Compound</a></li>
+<li><a href="#comparison">Side-by-Side Comparison</a></li>
+<li><a href="#medford-match">Best Match for Medford</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-6m-cta">
+<h2>We Use Hot Water Extraction &mdash; Every Medford Job, Every Time</h2>
+<p>The IICRC standard, truck-mounted at 195&deg;F, on every visit. No bonnet pads, no leftover shampoo residue. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/our-process/">&#128295; See Our Process &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-6m-related">
+<h3>Related Reading</h3>
+<div class="cfm-6m-rel-grid">
+<a class="cfm-6m-rel-card" href="https://carpetcleaningmedfordoregon.com/truck-mount-vs-portable-carpet-cleaning-medford/">
+<span class="lbl">&#128295; Equipment</span>
+<p class="ttl">Truck Mount vs Portable Cleaning</p>
+</a>
+<a class="cfm-6m-rel-card" href="https://carpetcleaningmedfordoregon.com/our-process/">
+<span class="lbl">&#128295; Process</span>
+<p class="ttl">Our 7-Step Process</p>
+</a>
+<a class="cfm-6m-rel-card" href="https://carpetcleaningmedfordoregon.com/is-carpet-cleaning-worth-it-medford-oregon/">
+<span class="lbl">&#128176; Guide</span>
+<p class="ttl">Is Carpet Cleaning Worth It?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-6m-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-6m-toc');
+var tocBtn=toc.querySelector('.cfm-6m-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-6m-faq .cfm-6m-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-6m-faq-q');
+var ans=item.querySelector('.cfm-6m-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-6m-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

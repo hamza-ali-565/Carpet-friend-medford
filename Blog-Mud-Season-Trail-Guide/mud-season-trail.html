@@ -1,0 +1,402 @@
+<!-- wp:html -->
+<style id="cfm-mt-css">
+.cfm-page-mud-trail{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-mud-trail *,.cfm-page-mud-trail *::before,.cfm-page-mud-trail *::after{box-sizing:border-box}
+.cfm-page-mud-trail p,.cfm-page-mud-trail li,.cfm-page-mud-trail h1,.cfm-page-mud-trail h2,.cfm-page-mud-trail h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-mt-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#8a9a5b;z-index:9998;transition:width .1s linear}
+
+.cfm-mt-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-mt-topline a{color:#6b5d4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-mt-topline a:hover{text-decoration:underline}
+
+.cfm-mt-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-mt-hero .ey{display:block;color:#c9b896;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-mt-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:860px}
+.cfm-mt-hero .byline{color:#c9b896;font-size:13.5px;font-weight:600;margin:0}
+.cfm-mt-hero .rt{display:inline-block;background:#f0ead9;color:#3f3628;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-mt-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-mt-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-mt-toc{flex:0 0 300px;background:#fff;border:1px solid #e6e2d8;border-left:3px solid #3f3628;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-mt-toc .toc-ttl{display:block;color:#6b5d4f;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-mt-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-mt-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-mt-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-mt-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-mt-toc a:hover{color:#3f3628}
+.cfm-mt-toc a.active{color:#3f3628;font-weight:700}
+.cfm-mt-toc a.active::before{color:#6b5d4f}
+.cfm-mt-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-mt-layout{flex-direction:column}
+.cfm-mt-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-mt-toc-static{display:none}
+.cfm-mt-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-mt-toc-toggle .chev{transition:transform .2s;color:#6b5d4f}
+.cfm-mt-toc[data-open="false"] ol{display:none}
+.cfm-mt-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-mt-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-mt-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-mt-intro{background:#f0ead9;border-left:4px solid #6b5d4f;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-mt-intro p{color:#3f3628;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-mud-trail h2{color:#3f3628;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-mt-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-mud-trail .cfm-mt-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-mud-trail strong{color:#3f3628}
+
+.cfm-mt-lbl{display:block;color:#6b5d4f;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-mt-pullquote{background:#3f3628;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-mt-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-mt-pullquote::before{content:'"';color:#c9b896;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-mt-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-mt-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f6f2;border:1px solid #e6e2d8;border-radius:12px;padding:20px 22px}
+.cfm-mt-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#6b5d4f;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-mt-steps .txt h4{color:#3f3628;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-mt-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-mt-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.cfm-mt-card{background:#fff;border:1px solid #e6e2d8;border-radius:12px;padding:22px 20px;border-top:4px solid #6b5d4f}
+.cfm-mt-card h4{color:#3f3628;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-mt-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+.cfm-mt-card .soil{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 8px;border-radius:8px;margin-bottom:8px}
+
+.cfm-mt-warn{background:#f5e6d3;border-left:4px solid #a5672f;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-mt-warn p{color:#5c3a17;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-mt-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-mt-table th{background:#3f3628;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-mt-table td{padding:12px 14px;border:1px solid #e6e2d8;color:#4a5568;line-height:1.5}
+.cfm-mt-table tr:nth-child(even) td{background:#f8f9fa}
+.cfm-mt-table-wrap{overflow-x:auto;margin:20px 0}
+
+.cfm-mt-cost{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.cfm-mt-cost-card{border-radius:12px;padding:22px 22px;border:1px solid #e6e2d8}
+.cfm-mt-cost-card.good{background:#f1f4ea;border-top:4px solid #8a9a5b}
+.cfm-mt-cost-card.bad{background:#f9efe6;border-top:4px solid #a5672f}
+.cfm-mt-cost-card h4{color:#3f3628;font-size:15.5px;font-weight:800;margin:0 0 10px}
+.cfm-mt-cost-card ul{margin:0;padding-left:18px}
+.cfm-mt-cost-card li{color:#4a5568;font-size:14px;line-height:1.7;margin:0 0 4px}
+.cfm-mt-cost-card .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#fff;padding:3px 9px;border-radius:8px;margin-bottom:10px}
+.cfm-mt-cost-card.good .tag{background:#6f8046}
+.cfm-mt-cost-card.bad .tag{background:#a5672f}
+
+.cfm-mt-faq{max-width:100%;margin:24px 0 8px}
+.cfm-mt-faq-item{border:1px solid #e6e2d8;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-mt-faq-q{width:100%;text-align:left;background:#f7f6f2;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#3f3628;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-mt-faq-q:hover{background:#f0ead9}
+.cfm-mt-faq-q .plus{color:#6b5d4f;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-mt-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-mt-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-mt-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-mt-cta{background:#3f3628;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-mt-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-mt-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-mt-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-mt-cta a.btn-w{background:#fff;color:#6b5d4f;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-mt-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-mt-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-mt-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-mt-related h3{color:#3f3628;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-mt-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-mt-rel-card{display:block;background:#fff;border:1px solid #e6e2d8;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-mt-rel-card:hover{box-shadow:0 10px 30px rgba(63,54,40,.12);transform:translateY(-2px)}
+.cfm-mt-rel-card .lbl{display:block;color:#6b5d4f;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-mt-rel-card .ttl{color:#3f3628;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-mt-cards{grid-template-columns:1fr}
+.cfm-mt-cost{grid-template-columns:1fr}
+.cfm-mt-rel-grid{grid-template-columns:1fr}
+.cfm-mt-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-mt-cta a.btn-w,.cfm-mt-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-mt-layout{padding:32px 20px}
+.cfm-mt-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-mt-pullquote{padding:26px 22px}
+.cfm-mt-pullquote p{font-size:17px}
+.cfm-mt-table{font-size:12.5px}
+}
+</style>
+
+<div class="cfm-page-mud-trail">
+
+<div class="cfm-mt-progress" id="cfm-mt-progress"></div>
+
+<div class="cfm-mt-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-mt-hero" style="background-image:linear-gradient(160deg,rgba(63,54,40,.88) 0%,rgba(107,93,79,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Rogue-Valley-Mud-Season-Carpet-Cleaning-Guide-Bear-Creek-Table-Rocks.webp')" role="img" aria-label="Muddy trailhead boots near Bear Creek Greenway and Table Rocks in Medford Oregon during mud season">
+<span class="ey">Trail Guide &middot; Jackson County, Oregon</span>
+<h1>The Rogue Valley Hiker's Carpet Guide &mdash; Bear Creek, Table Rocks &amp; Mud Season</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">8 min read</span></p>
+</div>
+
+<div class="cfm-mt-layout">
+
+<div class="cfm-mt-wrap">
+
+<div class="cfm-mt-intro" id="answer">
+<p>Medford's trail systems &mdash; Bear Creek Greenway, Table Rocks, Roxy Ann Peak, Prescott Park &mdash; each deposit a different soil type in your carpet depending on trail, season, and whether dogs are along. This guide maps trail-specific mud profiles by name, mud exposure by Medford zip code, a full gear-entry protocol, a dedicated trail-dog routine, and the real cost of letting an active outdoor season go unmanaged.</p>
+</div>
+
+<p class="cfm-mt-p">If you're looking for the science of volcanic clay, why damp vacuuming spreads mud instead of lifting it, or the seasonal booking calendar, we cover that in our <a href="https://carpetcleaningmedfordoregon.com/rogue-valley-mud-season-carpet-guide/">Rogue Valley mud season carpet guide</a>. This post picks up where that one leaves off: it's written for people who are actually on the trails week after week, and it treats "mud" as the specific, trail-by-trail thing it really is &mdash; not a single generic problem.</p>
+
+<h2 id="intro">Why the Rogue Valley Specifically Creates a Carpet Problem</h2>
+<p class="cfm-mt-p">In a lot of cities, trail access is an occasional weekend thing. In Medford, it's closer to a daily-life feature. Bear Creek Greenway runs through the middle of town and connects neighborhoods directly to miles of creekside path. Roxy Ann Peak and Prescott Park sit close enough to East Medford that an after-work loop is routine, not a production. Table Rocks draws people from across Jackson County on any clear day, wet season included. <strong>Why does Medford see more trail-soil carpet buildup than a typical city its size?</strong> Because so many households here treat a trail outing as a before-dinner errand rather than a special trip &mdash; which means trail soil is entering the home multiple times a week, all winter and spring, not two or three times a season.</p>
+<p class="cfm-mt-p">That frequency is the whole story. A single muddy hike is a cleanup job. A household running the Greenway three evenings a week, plus a Table Rocks trip most weekends from November through March, is running a continuous low-grade soil-loading process on the same handful of entry paths &mdash; the mudroom, the hallway, the stairs. The volume compounds in a way that occasional recreation never does, and it's the reason Medford carpet cleaners see wear patterns that look different from other regions: concentrated, repeated-path abrasion rather than one-off spot staining.</p>
+<div class="cfm-mt-pullquote">
+<p>The trail isn't the problem. The trail three times a week, on the same eight feet of hallway carpet, is the problem.</p>
+</div>
+
+<h2 id="trail-profiles">Named Trail Mud Profiles &mdash; What Each Trail Leaves in Your Carpet</h2>
+<p class="cfm-mt-p"><strong>Does it matter which trail you were on?</strong> Yes &mdash; a lot, actually. Jackson County's geology shifts noticeably from one trailhead to the next, and the soil each trail deposits behaves differently in carpet fiber: different color, different stickiness wet, different dust profile dry, and different staining risk. Knowing which trail you were on tells you roughly how urgent the cleanup is.</p>
+
+<div class="cfm-mt-cards">
+<div class="cfm-mt-card"><span class="soil" style="background:#e8d5c8;color:#7c3f1a">Volcanic Basalt</span><h4>Table Rocks Trailhead</h4><p>Red-orange volcanic basalt clay. Sticky and cohesive when wet, fine and dusty once dried. Worst November through March. This is the profile most likely to leave a rust-colored stain if it sits in fiber, because the iron content in the basalt clay is what gives it that color.</p></div>
+<div class="cfm-mt-card"><span class="soil" style="background:#e2ddc9;color:#5c5228">Alluvial Silt</span><h4>Bear Creek Greenway</h4><p>Mixed creek-bank alluvial clay with organic silt. Carries an earthy, slightly sulfurous odor when wet from decomposing streamside vegetation. In spring, it also tends to intersect with pollen tracked in on the same shoes, so cleanup often means two problems at once.</p></div>
+<div class="cfm-mt-card"><span class="soil" style="background:#e9e4d8;color:#6b5d4f">Rhyolite Dust</span><h4>Roxy Ann Peak &amp; Prescott Park</h4><p>Lighter volcanic rhyolite soil, finer-grained and higher in silica than Table Rocks clay. Shows up pale tan-gray rather than red. Less likely to stain, but the fine particle size means it works down into pile faster and is harder to fully vacuum out.</p></div>
+<div class="cfm-mt-card"><span class="soil" style="background:#e8d5c8;color:#7c3f1a">Iron-Oxide Red</span><h4>Jacksonville-Area Trails</h4><p>Mixed Applegate Valley geology with a notable iron-oxide red component, similar staining risk profile to Table Rocks clay. Common on trails around the historic district and the surrounding hillsides west of Medford.</p></div>
+<div class="cfm-mt-card"><span class="soil" style="background:#d8c9b0;color:#4a3a1f">River Alluvial</span><h4>Gold Hill &amp; Rogue River Canyon</h4><p>Dark, slow-drying river alluvial clay from canyon-adjacent trails along the Rogue River. Because it holds moisture longer than upland soils, it's the profile most likely to still be damp &mdash; and trackable &mdash; hours after you're home.</p></div>
+<div class="cfm-mt-card"><span class="soil" style="background:#ddd2b8;color:#5c4a28">Organic Loam</span><h4>Jacksonville Wine Country Land</h4><p>Softer organic loam from agricultural and vineyard-adjacent land near Jacksonville. Lower staining risk than the volcanic clays, but higher organic content means more odor if it's left damp in carpet for more than a day or two.</p></div>
+</div>
+
+<h2 id="soil-by-zip">Mud Exposure by Medford Neighborhood &mdash; Which Zip Codes See the Most</h2>
+<p class="cfm-mt-p"><strong>Does where you live in Medford change how much trail mud your carpet deals with?</strong> Consistently, yes. Proximity to a trailhead is the single biggest driver of how often trail soil actually reaches your front door, more than household size or dog ownership alone.</p>
+<div class="cfm-mt-table-wrap">
+<table class="cfm-mt-table">
+<thead><tr><th>Tier</th><th>Zip / Area</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Tier 1 &mdash; Highest</td><td>97504 (East Medford)</td><td>Closest access to Table Rocks and the Roxy Ann approach roads; short-hop trail trips happen almost daily in active households.</td></tr>
+<tr><td>Tier 1 &mdash; Highest</td><td>97501 (South Medford)</td><td>Direct Bear Creek Greenway access plus proximity to Prescott Park and the Roxy Ann trail network.</td></tr>
+<tr><td>Tier 2 &mdash; Elevated</td><td>97502 (Central/West Medford)</td><td>Greenway-adjacent but a short drive from Table Rocks; regular exposure, slightly less frequent than Tier 1.</td></tr>
+<tr><td>Tier 2 &mdash; Elevated</td><td>97503 (White City / Hwy 62 corridor)</td><td>Farther from town-center trailheads but close to Table Rocks via Hwy 62, with regular weekend traffic.</td></tr>
+<tr><td>Tier 3 &mdash; Standard</td><td>Ashland, Central Point, Jacksonville</td><td>Own local trail access (Jacksonville Woodlands, Central Point paths) but generally a drive rather than a walk to the bigger Medford-area systems.</td></tr>
+</tbody>
+</table>
+</div>
+<p class="cfm-mt-p">If you're in a Tier 1 zip code and hiking or walking the Greenway regularly, plan on trail soil being a standing maintenance item in your home rather than an occasional cleanup &mdash; the gear protocol and cleaning frequency below are written with that household in mind.</p>
+
+<h2 id="gear-protocol">Trail Gear Entry Protocol &mdash; The Right Order of Operations</h2>
+<p class="cfm-mt-p"><strong>What's the correct order for dealing with muddy gear before it reaches the carpet?</strong> Most of the damage happens because people handle these steps out of order &mdash; boots come off in the hallway instead of at the car, or gear gets set down on carpet "just for a second." Here's the sequence that actually keeps mud off carpet.</p>
+<ol class="cfm-mt-steps">
+<li><span class="num">1</span><div class="txt"><h4>Gear Strip at the Car</h4><p>Before you're anywhere near the front door, knock loose debris off boots, pull off gaiters or muddy socks if you're carrying spares, and shake out anything obviously caked. This single step removes the bulk of the material before it's within twenty feet of carpet.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Entry Station Setup</h4><p>A proper entry station has, in this order of use: a boot scraper at the outer step, a water basin or hose bib nearby for a quick rinse, a boot tray with a gravel or grate insert so runoff doesn't pool against the boot itself, a heavy-duty entry mat past the tray, and a bench to sit on so boots come off before the first carpeted step rather than mid-stride.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Boot and Gear Storage Away From Carpet</h4><p>Boots, trekking poles, and packs should have a designated storage spot on a hard surface &mdash; a mudroom shelf, a closet with a tray, or a garage hook system &mdash; not leaned against a carpeted wall or set down "temporarily" in a carpeted hallway while they dry.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Trail-Clothes Management</h4><p>Pants and jacket hems pick up more soil than most people account for. Change out of trail clothes at the entry station before walking further into the house, and bag or basket them there rather than carrying them room to room.</p></div></li>
+</ol>
+
+<h2 id="dog-protocol">The Trail Dog Protocol &mdash; Managing Paw Tracking in Medford Households</h2>
+<p class="cfm-mt-p"><strong>How is managing a trail dog's paws different from managing your own boots?</strong> A dog can't strip gear at the car, and paws track soil in a much more distributed pattern than boots do &mdash; across the whole stride rather than a single contact point. That calls for its own routine.</p>
+<ol class="cfm-mt-steps">
+<li><span class="num">1</span><div class="txt"><h4>Paw Rinse Station</h4><p>A simple basin, hose attachment, or paw-wash cup kept at the entry point lets you rinse the bulk of trail soil off all four paws before the dog is inside at all. This is the single highest-impact step in the whole protocol.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Paw-Wipe Sequence After Rinsing</h4><p>After the rinse, a dry towel wipe on each paw removes residual moisture and any fine silt the rinse didn't fully clear. Front paws first, since dogs naturally shift weight forward and those tend to carry more soil.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Dog Entry Path Management</h4><p>Give the dog a dedicated route from the door to wherever they settle &mdash; ideally over washable runners rather than open carpet &mdash; so any soil that does make it past the rinse stays contained to a strip you can pull up and wash rather than spread across the whole floor plan.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Professional Cleaning Frequency for Trail-Dog Households</h4><p>Even with a good rinse-and-wipe routine, active trail dogs push most households onto a shorter professional cleaning cycle than average. See our full breakdown on <a href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">how often to clean carpet in Medford</a> for a schedule matched to your specific household.</p></div></li>
+</ol>
+
+<h2 id="economic-cost">The Economic Cost of Ignoring Mud Season &mdash; The Real Numbers</h2>
+<p class="cfm-mt-p"><strong>Does skipping cleaning for a few seasons actually cost you money, or is that just a sales pitch?</strong> It's a real mechanism, not a scare tactic. Trail silicate clay is mineral grit, and when it's ground into carpet fiber underfoot over and over, it behaves like fine sandpaper against every fiber it touches. Vacuuming removes loose surface particles, but it doesn't remove what's already been worked down into the pile base by repeated foot traffic &mdash; and every additional week that grit stays embedded, more fiber gets abraded every time someone walks across it.</p>
+<p class="cfm-mt-p">That compounding abrasion is the mechanism behind two very different outcomes for the same carpet, depending on maintenance:</p>
+<div class="cfm-mt-cost">
+<div class="cfm-mt-cost-card good">
+<span class="tag">Scenario A</span>
+<h4>Active Trail Household, Maintained</h4>
+<ul>
+<li>Annual professional cleaning on schedule</li>
+<li>Fiber abrasion kept to a manageable baseline</li>
+<li>Typical carpet lifespan: 10&ndash;15 years</li>
+<li>Modest, predictable recurring cost over that span</li>
+</ul>
+</div>
+<div class="cfm-mt-cost-card bad">
+<span class="tag">Scenario B</span>
+<h4>Same Household, No Cleaning for 5 Years</h4>
+<ul>
+<li>Grit accumulates and abrades fiber continuously</li>
+<li>Visible matting typically appears by year 3&ndash;4</li>
+<li>Replacement likely needed by year 8&ndash;10, not year 15</li>
+<li>Difference is a few thousand dollars of avoidable replacement cost, pulled years earlier than necessary</li>
+</ul>
+</div>
+</div>
+<p class="cfm-mt-p">Those figures are illustrative, not a quote &mdash; every home's numbers depend on carpet quality, traffic volume, and household size. For an honest look at whether the maintenance investment pencils out for your situation, see <a href="https://carpetcleaningmedfordoregon.com/is-carpet-cleaning-worth-it-medford-oregon/">is carpet cleaning worth it in Medford</a>, and for current pricing see our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">carpet cleaning cost guide</a>. The short version: the cost of staying on schedule is small and predictable, and the cost of skipping it shows up years later as an early, unplanned carpet replacement.</p>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Rogue-Valley-Mud-Season-Carpet-Cleaning-Guide-Bear-Creek-Table-Rocks.webp" alt="Trail-worn hallway carpet near a Medford Oregon entryway showing repeated mud traffic wear patterns" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="when-to-call">When to Call a Professional vs Handle It Yourself</h2>
+<p class="cfm-mt-p"><strong>How do you know when trail mud has crossed the line from a DIY job to a call-us job?</strong> A simple three-tier read on the situation:</p>
+<div class="cfm-mt-cards">
+<div class="cfm-mt-card"><h4>Handle It Yourself</h4><p>Fresh mud from a single outing. Let it dry fully, then vacuum thoroughly. Don't scrub while it's wet &mdash; that pushes clay deeper into the fiber base instead of lifting it.</p></div>
+<div class="cfm-mt-card"><h4>Call Soon</h4><p>Four or more weeks of accumulated trail traffic with early color transfer starting to show in high-path areas like hallways and entry points.</p></div>
+<div class="cfm-mt-card"><h4>Call Immediately</h4><p>Visible rust-colored staining from Table Rocks or Jacksonville-area iron-oxide clay. The longer that sits, the higher the risk it sets permanently in the fiber.</p></div>
+</div>
+<div class="cfm-mt-warn">
+<p>&#9888; A common mistake is treating rust-colored staining like ordinary dirt and scrubbing it with a household cleaner. That can actually help set the iron-oxide color into the fiber. Blot, don't scrub, and call sooner rather than later if you see red-orange staining.</p>
+</div>
+
+<h2 id="faq">Rogue Valley Trail Mud FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-mt-faq" id="cfm-mt-faq">
+
+<div class="cfm-mt-faq-item" aria-expanded="false">
+<button class="cfm-mt-faq-q" type="button">What trail in Medford leaves the worst mud in carpet?<span class="plus">+</span></button>
+<div class="cfm-mt-faq-a"><div class="cfm-mt-faq-a-inner">Table Rocks trail mud is generally the hardest on carpet. Its red-orange volcanic basalt clay is sticky and cohesive when wet, dusty when dry, and carries enough iron content to leave a rust-colored stain if it sits in fiber for more than a few weeks. Jacksonville-area trails have a similar iron-oxide profile and similar risk.</div></div>
+</div>
+
+<div class="cfm-mt-faq-item" aria-expanded="false">
+<button class="cfm-mt-faq-q" type="button">How often should active hikers have carpets professionally cleaned?<span class="plus">+</span></button>
+<div class="cfm-mt-faq-a"><div class="cfm-mt-faq-a-inner">Households regularly hiking Bear Creek Greenway, Table Rocks, or Roxy Ann Peak typically need a shorter cleaning cycle than average households, especially in Tier 1 zip codes near trailheads. See our full guide on <a href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">how often to clean carpet in Medford</a> for a schedule matched to your traffic level.</div></div>
+</div>
+
+<div class="cfm-mt-faq-item" aria-expanded="false">
+<button class="cfm-mt-faq-q" type="button">Can I prevent Table Rocks mud staining?<span class="plus">+</span></button>
+<div class="cfm-mt-faq-a"><div class="cfm-mt-faq-a-inner">The entry gear protocol &mdash; strip gear at the car, use a proper boot scraper and tray station, and keep boots off carpet while they dry &mdash; prevents most of it. If staining does start to show, blot rather than scrub and call sooner rather than later, since the iron-oxide clay in Table Rocks soil sets more permanently the longer it sits in fiber.</div></div>
+</div>
+
+<div class="cfm-mt-faq-item" aria-expanded="false">
+<button class="cfm-mt-faq-q" type="button">What's the difference between Bear Creek mud and Table Rocks mud?<span class="plus">+</span></button>
+<div class="cfm-mt-faq-a"><div class="cfm-mt-faq-a-inner">Bear Creek Greenway soil is a mixed alluvial creek-bank clay with organic silt, more likely to carry an earthy odor when wet than to stain. Table Rocks soil is red-orange volcanic basalt clay with a much higher staining risk due to its iron content. Bear Creek mud is more of an odor and tracking issue; Table Rocks mud is more of a staining issue.</div></div>
+</div>
+
+<div class="cfm-mt-faq-item" aria-expanded="false">
+<button class="cfm-mt-faq-q" type="button">Is professional cleaning recommended mid-mud-season?<span class="plus">+</span></button>
+<div class="cfm-mt-faq-a"><div class="cfm-mt-faq-a-inner">Yes, particularly for active trail households in Tier 1 or Tier 2 zip codes. Waiting until the end of mud season lets abrasive clay grit continue working into fiber for months. A mid-season cleaning resets the baseline and reduces the compounding wear that leads to premature matting.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-mt-toc" id="cfm-mt-toc" data-open="true">
+<span class="toc-ttl cfm-mt-toc-static">In This Guide</span>
+<button class="cfm-mt-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-mt-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-mt-toc-list">
+<li><a href="#answer">The Direct Answer</a></li>
+<li><a href="#intro">Why the Rogue Valley Is Different</a></li>
+<li><a href="#trail-profiles">Named Trail Mud Profiles</a></li>
+<li><a href="#soil-by-zip">Mud Exposure by Zip Code</a></li>
+<li><a href="#gear-protocol">Gear Entry Protocol</a></li>
+<li><a href="#dog-protocol">The Trail Dog Protocol</a></li>
+<li><a href="#economic-cost">The Real Cost of Neglect</a></li>
+<li><a href="#when-to-call">When to Call a Pro</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-mt-cta">
+<h2>Active Trail Household? We Know Your Carpet.</h2>
+<p>Bear Creek, Table Rocks, Roxy Ann &mdash; we see this trail soil every week. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">How Often to Clean &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-mt-related">
+<h3>Related Reading</h3>
+<div class="cfm-mt-rel-grid">
+<a class="cfm-mt-rel-card" href="https://carpetcleaningmedfordoregon.com/rogue-valley-mud-season-carpet-guide/">
+<span class="lbl">Guide</span>
+<p class="ttl">Rogue Valley Mud Season Carpet Guide</p>
+</a>
+<a class="cfm-mt-rel-card" href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">
+<span class="lbl">Guide</span>
+<p class="ttl">How Often to Clean Carpets in Medford</p>
+</a>
+<a class="cfm-mt-rel-card" href="https://carpetcleaningmedfordoregon.com/will-carpet-cleaning-lift-pile-restore-matted-carpet/">
+<span class="lbl">Guide</span>
+<p class="ttl">Will Cleaning Restore Matted Carpet?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-mt-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-mt-toc');
+var tocBtn=toc.querySelector('.cfm-mt-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-mt-faq .cfm-mt-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-mt-faq-q');
+var ans=item.querySelector('.cfm-mt-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-mt-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->
