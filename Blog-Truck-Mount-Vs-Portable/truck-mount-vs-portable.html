@@ -1,0 +1,372 @@
+<!-- wp:html -->
+<style id="cfm-tp-css">
+.cfm-page-truck-mount-vs-portable{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-truck-mount-vs-portable *,.cfm-page-truck-mount-vs-portable *::before,.cfm-page-truck-mount-vs-portable *::after{box-sizing:border-box}
+.cfm-page-truck-mount-vs-portable p,.cfm-page-truck-mount-vs-portable li,.cfm-page-truck-mount-vs-portable h1,.cfm-page-truck-mount-vs-portable h2,.cfm-page-truck-mount-vs-portable h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-tp-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#2A9D8F;z-index:9998;transition:width .1s linear}
+
+.cfm-tp-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-tp-topline a{color:#0E3B43;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-tp-topline a:hover{text-decoration:underline}
+
+.cfm-tp-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-tp-hero .ey{display:block;color:#6FE3D6;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-tp-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:860px}
+.cfm-tp-hero .byline{color:#6FE3D6;font-size:13.5px;font-weight:600;margin:0}
+.cfm-tp-hero .rt{display:inline-block;background:#E3F7F4;color:#0E3B43;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-tp-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-tp-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-tp-toc{flex:0 0 300px;background:#fff;border:1px solid #e5edee;border-left:3px solid #0B2A31;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-tp-toc .toc-ttl{display:block;color:#1B7A87;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-tp-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-tp-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-tp-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-tp-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-tp-toc a:hover{color:#0B2A31}
+.cfm-tp-toc a.active{color:#0B2A31;font-weight:700}
+.cfm-tp-toc a.active::before{color:#1B7A87}
+.cfm-tp-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-tp-layout{flex-direction:column}
+.cfm-tp-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-tp-toc-static{display:none}
+.cfm-tp-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-tp-toc-toggle .chev{transition:transform .2s;color:#1B7A87}
+.cfm-tp-toc[data-open="false"] ol{display:none}
+.cfm-tp-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-tp-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-tp-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-tp-intro{background:#E3F7F4;border-left:4px solid #1B7A87;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-tp-intro p{color:#0B2A31;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-truck-mount-vs-portable h2{color:#0B2A31;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-tp-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-truck-mount-vs-portable .cfm-tp-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-truck-mount-vs-portable strong{color:#0B2A31}
+
+.cfm-tp-lbl{display:block;color:#1B7A87;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-tp-pullquote{background:#0B2A31;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-tp-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-tp-pullquote::before{content:'"';color:#6FE3D6;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-tp-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-tp-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f9f9;border:1px solid #e5edee;border-radius:12px;padding:20px 22px}
+.cfm-tp-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#1B7A87;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-tp-steps .txt h4{color:#0B2A31;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-tp-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-tp-timeline{margin:24px 0;display:flex;flex-direction:column;gap:0}
+.cfm-tp-tl-item{position:relative;padding:0 0 24px 30px;border-left:2px solid #e5edee}
+.cfm-tp-tl-item:last-child{border-left:2px solid transparent;padding-bottom:0}
+.cfm-tp-tl-item::before{content:'';position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:#1B7A87}
+.cfm-tp-tl-item h4{color:#0B2A31;font-size:15px;font-weight:700;margin:0 0 6px}
+.cfm-tp-tl-item p{color:#4a5568;font-size:14.5px;line-height:1.7;margin:0}
+
+.cfm-tp-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0 8px}
+.cfm-tp-card{background:#fff;border:1px solid #e5edee;border-radius:12px;padding:22px 20px;border-top:4px solid #1B7A87}
+.cfm-tp-card h4{color:#0B2A31;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-tp-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+
+.cfm-tp-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-tp-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-tp-info{background:#EAF6FB;border-left:4px solid #1B7A87;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-tp-info p{color:#0B2A31;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-tp-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-tp-table th{background:#0B2A31;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-tp-table td{padding:12px 14px;border:1px solid #e5edee;color:#4a5568;line-height:1.5}
+.cfm-tp-table tr:nth-child(even) td{background:#f7f9f9}
+.cfm-tp-table-wrap{overflow-x:auto;margin:20px 0}
+
+.cfm-tp-faq{max-width:100%;margin:24px 0 8px}
+.cfm-tp-faq-item{border:1px solid #e5edee;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-tp-faq-q{width:100%;text-align:left;background:#f7f9f9;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#0B2A31;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-tp-faq-q:hover{background:#E3F7F4}
+.cfm-tp-faq-q .plus{color:#1B7A87;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-tp-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-tp-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-tp-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-tp-cta{background:#0B2A31;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-tp-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-tp-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-tp-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-tp-cta a.btn-w{background:#fff;color:#0E5A66;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-tp-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-tp-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-tp-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-tp-related h3{color:#0B2A31;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-tp-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-tp-rel-card{display:block;background:#fff;border:1px solid #e5edee;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-tp-rel-card:hover{box-shadow:0 10px 30px rgba(11,42,49,.12);transform:translateY(-2px)}
+.cfm-tp-rel-card .lbl{display:block;color:#1B7A87;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-tp-rel-card .ttl{color:#0B2A31;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-tp-cards{grid-template-columns:1fr}
+.cfm-tp-rel-grid{grid-template-columns:1fr}
+.cfm-tp-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-tp-cta a.btn-w,.cfm-tp-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-tp-layout{padding:32px 20px}
+.cfm-tp-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-tp-pullquote{padding:26px 22px}
+.cfm-tp-pullquote p{font-size:17px}
+.cfm-tp-table{font-size:12.5px}
+}
+</style>
+
+<div class="cfm-page-truck-mount-vs-portable">
+
+<div class="cfm-tp-progress" id="cfm-tp-progress"></div>
+
+<div class="cfm-tp-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-tp-hero" style="background-image:linear-gradient(160deg,rgba(11,42,49,.90) 0%,rgba(14,58,67,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Truck-Mount-vs-Portable-Carpet-Cleaning-Which-Is-Better.webp')" role="img" aria-label="Truck-mounted carpet cleaning van hose setup versus a portable cleaning unit outside a Medford Oregon home">
+<span class="ey">Equipment Guide &middot; Jackson County, Oregon</span>
+<h1>Truck Mount vs Portable Carpet Cleaning &mdash; What Medford Homeowners Need to Know</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">8 min read</span></p>
+</div>
+
+<div class="cfm-tp-layout">
+
+<div class="cfm-tp-wrap">
+
+<div class="cfm-tp-intro" id="answer">
+<p>For most Medford homes, truck-mounted cleaning produces better results. But there are real situations &mdash; high-rises, historic properties with limited access, certain restoration scenarios &mdash; where professional portable is the right choice. Knowing which situation you're in, and how to verify what a company actually uses before booking, matters more than picking a side.</p>
+</div>
+
+<p class="cfm-tp-p">"Truck mount or portable?" isn't a question most Medford homeowners think to ask &mdash; until a quote comes in low, or a friend mentions their carpet took two days to dry. The equipment behind a carpet cleaning job shapes almost everything about the outcome: how fast your floors dry, whether pet odor actually leaves the fiber, and how soon your carpet gets dirty again. This guide walks through how each system works, when portable genuinely makes sense, the Medford-specific access scenarios where it matters in practice, and exactly how to verify what a company is showing up with before you book.</p>
+
+<h2 id="how-each-works">How Truck Mounts and Portables Actually Work</h2>
+<p class="cfm-tp-p"><strong>What's the actual mechanical difference between a truck mount and a portable machine?</strong> It comes down to where the power comes from and how far it has to travel.</p>
+<p class="cfm-tp-p">A truck-mounted system is a full cleaning plant built into a van or trailer, powered directly by the vehicle's engine. That engine drives a vacuum blower far more powerful than any practical electric motor could produce, and it routes engine heat through a heat exchanger to bring water up to cleaning temperature almost instantly. The unit runs completely self-contained &mdash; it doesn't draw on your home's water heater, electrical panel, or plumbing. A hose (commonly rated up to roughly 150 feet) carries hot water in and soiled water back out to a large recovery tank in the vehicle, which is why truck mounts need a parking spot with a clear hose run to the work area.</p>
+<p class="cfm-tp-p">A portable unit is a smaller, self-contained machine that plugs into a standard household outlet. It uses an electric motor for suction and an electric heating element for water temperature &mdash; both inherently more limited than an engine-driven system, since household circuits cap how much power the unit can draw. What portables give up in raw power, they make up for in reach: without a hose tethering them to a truck outside, they can go anywhere a technician can carry them &mdash; up stairwells, into elevators, through doorways a hose would never clear.</p>
+
+<h2 id="performance-gap">The Performance Gap &mdash; Why It Matters for Your Specific Carpet</h2>
+<div class="cfm-tp-pullquote">
+<p>Why does the same "deep clean" leave one carpet dry by dinner and another damp for two days?</p>
+</div>
+<p class="cfm-tp-p"><strong>Does the equipment type actually change your results, or is it just a sales pitch?</strong> It shows up in three outcomes homeowners actually notice, rather than in a spec sheet.</p>
+<p class="cfm-tp-p"><strong>Drying time.</strong> In a typical Medford summer, carpet cleaned with a truck mount is usually dry to the touch in 2&ndash;4 hours. A portable or rental unit, with weaker extraction, commonly leaves carpet damp for 8&ndash;12+ hours &mdash; sometimes longer. That gap matters more than it sounds like in isolation. In Rogue Valley winters, when temperature inversions trap cool, damp air close to the ground for days, slow-drying carpet sits wet through a stretch with almost no natural air movement to help it along. That's exactly the setup that raises mold risk under carpet and pad &mdash; we cover the mechanism in detail in <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-cause-mold-wet-carpet-risks/">can carpet cleaning cause mold?</a></p>
+<p class="cfm-tp-p"><strong>Pet and smoke treatment effectiveness.</strong> Uric acid crystals from pet accidents and the VOC compounds left behind by wildfire smoke both respond to heat &mdash; the hotter the water, the more effectively an oxidizing pre-spray breaks the odor-causing bonds before extraction pulls them out. Portable units, limited by what a household electrical circuit can deliver to a heating element, typically can't sustain the water temperature a truck mount reaches. On a straightforward soil-and-vacuum job that difference may be minor. On a job where the whole point is breaking down bonded odor compounds, it's often the difference between "smells better" and "smell is actually gone."</p>
+<p class="cfm-tp-p"><strong>Re-soiling rate.</strong> Carpet fiber that's still holding residual moisture stays "open" &mdash; dirt and foot traffic re-embed into damp fiber more easily than into fully dry fiber. A carpet that takes half a day longer to dry is also a carpet that stays more vulnerable to fast re-soiling during that window, which is part of why some homeowners feel like a cleaning "didn't last."</p>
+
+<h2 id="when-portable">When a Portable Machine Is the Right Choice</h2>
+<p class="cfm-tp-p"><strong>Is portable cleaning ever actually the better option, not just the fallback?</strong> Yes &mdash; in four specific situations, it's the right call, not a compromise.</p>
+<div class="cfm-tp-cards">
+<div class="cfm-tp-card"><h4>Upper-Floor Apartments &amp; Condos</h4><p>A truck mount's hose has a practical maximum run, commonly around 150 feet including vertical distance. In a multi-story building with the truck parked at street level, upper floors can simply be out of reach. Portable is the only realistic option here, not a downgrade.</p></div>
+<div class="cfm-tp-card"><h4>No Truck Access or Parking</h4><p>Some properties have no legal or physical spot for a van to park within hose range &mdash; narrow lots, restricted loading zones, or gated access with no vehicle clearance. Portable equipment sidesteps the access problem entirely.</p></div>
+<div class="cfm-tp-card"><h4>Water Damage Restoration</h4><p>Restoration work sometimes calls for controlled, incremental moisture application rather than a full hot-water flood-and-extract pass &mdash; a scenario where a portable unit's more limited output is actually the appropriate tool. See our related post on <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-cause-mold-wet-carpet-risks/">carpet cleaning and mold risk</a> for how moisture control factors into restoration decisions.</p></div>
+<div class="cfm-tp-card"><h4>Small Commercial Spot Treatment</h4><p>A single stained entryway rug or a small conference room doesn't justify running a hose from a truck outside. Portable equipment is faster to deploy and perfectly matched to the scale of the job.</p></div>
+</div>
+
+<h2 id="medford-scenarios">Medford-Specific Scenarios That Affect Equipment Choice</h2>
+<p class="cfm-tp-p"><strong>Where in Jackson County does equipment choice actually come up in real jobs?</strong> More often than you'd think, and the pattern is pretty consistent.</p>
+<div class="cfm-tp-timeline">
+<div class="cfm-tp-tl-item"><h4>Long Hose Runs on Rural Properties</h4><p>Out toward Gold Hill, Rogue River, and properties near the Josephine County line, driveways and outbuildings are often set well back from where a truck can park. We plan the hose run in advance on these calls, and occasionally a secondary portable pass covers a detached space the main hose can't comfortably reach.</p></div>
+<div class="cfm-tp-tl-item"><h4>Historic Jacksonville Homes</h4><p>Narrow streets, limited curb parking, and preservation-conscious property access mean Jacksonville jobs usually need advance coordination on where the van sits and how the hose route works &mdash; sometimes portable equipment is simply the more practical fit for a tight historic lot.</p></div>
+<div class="cfm-tp-tl-item"><h4>Short-Term Rentals Near Downtown Medford &amp; Ashland</h4><p>Vacation rental turnovers near downtown Medford and Ashland &mdash; including the fast-turnaround stretch around Britt Festival season, and properties serving the Shady Cove and Crater Lake gateway routes &mdash; put drying time front and center. Hosts need carpet dry before the next guest checks in, which is exactly where truck-mount speed earns its keep.</p></div>
+<div class="cfm-tp-tl-item"><h4>Multi-Unit Apartments in White City &amp; West Medford</h4><p>Multi-building apartment complexes often mean the truck can only reach a subset of units from any single parking spot. On these routes we sometimes combine truck-mounted units for ground-floor and reachable units with portable equipment for units further from the hose path.</p></div>
+<div class="cfm-tp-tl-item"><h4>Large Luxury Homes in North Medford &amp; Ashland Hillside</h4><p>Bigger lots with proper driveway access make truck mount the straightforward, no-compromise choice &mdash; plenty of parking, a clear hose run, and square footage where faster drying and stronger extraction matter most.</p></div>
+</div>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Truck-Mount-vs-Portable-Carpet-Cleaning-Which-Is-Better.webp" alt="Carpet cleaning technician routing a hose from a truck-mounted unit to a multi-story apartment building in Jackson County Oregon" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="how-to-verify">How to Verify What a Company Actually Uses Before Booking</h2>
+<p class="cfm-tp-p"><strong>How do you find out what equipment a carpet cleaner is actually bringing, before they show up?</strong> Four questions, asked at booking, tell you almost everything.</p>
+<ol class="cfm-tp-steps">
+<li><span class="num">1</span><div class="txt"><h4>Ask directly: "Truck-mounted or portable?"</h4><p>It's a fair, normal question and any legitimate company should answer it without hesitation. Vague answers ("we use professional equipment") are a signal to ask again more specifically.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>For multi-story or limited-access properties, ask about maximum hose run</h4><p>If you're on an upper floor or in a building with restricted parking, ask how far their hose reaches and whether your unit is within range. A company that's done the math already will have a specific number, not a guess.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Ask the quoted drying time &mdash; it reveals the equipment</h4><p>This is the most useful proxy question if you only ask one. A quoted summer drying time of 2&ndash;4 hours almost always means truck mount. A quote of 6&ndash;8+ hours points to a lower-extraction setup, portable or otherwise. Pricing details for the job itself are covered on our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">carpet cleaning cost page</a>.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Ask if it's a professional portable or a consumer rental-grade unit</h4><p>"Portable" covers a wide range &mdash; a commercial-grade professional portable and a rental-store machine are very different tools. If a company's answer is vague on this distinction, that's worth pressing on before you book, especially for pet odor or smoke jobs.</p></div></li>
+</ol>
+
+<h2 id="rental-different">Rental Machines Are a Third Category</h2>
+<p class="cfm-tp-p"><strong>Isn't a rental machine basically the same as a professional portable?</strong> No &mdash; and this is the distinction most people never hear about. There are really three tiers of equipment, not two: truck mount, professional portable, and consumer rental (the Rug Doctor-type machine from a grocery store).</p>
+<div class="cfm-tp-table-wrap">
+<table class="cfm-tp-table">
+<thead><tr><th>Factor</th><th>Truck Mount</th><th>Professional Portable</th><th>Consumer Rental</th></tr></thead>
+<tbody>
+<tr><td>Power source</td><td>Vehicle engine</td><td>Household outlet, commercial-grade motor</td><td>Household outlet, consumer-grade motor</td></tr>
+<tr><td>Water temp</td><td>Highest, engine heat exchanger</td><td>Moderate, electric heating element</td><td>Low, minimal heating capacity</td></tr>
+<tr><td>Suction power</td><td>Strongest available</td><td>Solid, below truck mount</td><td>Weakest of the three</td></tr>
+<tr><td>Drying time (summer, Medford)</td><td>2&ndash;4 hours</td><td>4&ndash;8 hours</td><td>12+ hours, often longer</td></tr>
+<tr><td>Waste water handling</td><td>Large tank in vehicle</td><td>Small onboard tank, hauled out</td><td>Small tank, manual dump by renter</td></tr>
+<tr><td>Operator skill</td><td>Trained technician</td><td>Trained technician</td><td>Homeowner, no training</td></tr>
+<tr><td>Best for</td><td>Most homes with truck access</td><td>Upper floors, limited-access sites</td><td>Very light, occasional touch-ups</td></tr>
+<tr><td>Not ideal for</td><td>No-access historic/high-rise sites</td><td>Heaviest whole-home jobs</td><td>Pet enzyme, smoke, or heavy soil</td></tr>
+</tbody>
+</table>
+</div>
+<p class="cfm-tp-p">Consumer rental machines simply weren't built for the jobs that matter most &mdash; heavy pet odor, wildfire smoke treatment, or deep, ground-in soil. Lower heat, weaker suction, and no oxidizing pre-treatment mean rental machines often push moisture and soil deeper into the pad rather than fully lifting it out, which is part of why DIY rental results can disappoint even with real effort behind them. Whether professional cleaning is worth the difference for your situation is a fair question &mdash; we walk through that honestly in <a href="https://carpetcleaningmedfordoregon.com/is-carpet-cleaning-worth-it-medford-oregon/">is carpet cleaning worth it in Medford?</a></p>
+
+<div class="cfm-tp-info">
+<p>Quick gut-check: if a job involves pet odor, smoke, or carpet that hasn't been deep cleaned in years, a consumer rental machine is very unlikely to fully resolve it &mdash; that's a professional portable or truck-mount job.</p>
+</div>
+
+<h2 id="faq">Truck Mount vs Portable FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-tp-faq" id="cfm-tp-faq">
+
+<div class="cfm-tp-faq-item" aria-expanded="false">
+<button class="cfm-tp-faq-q" type="button">Is truck-mounted cleaning better than portable?<span class="plus">+</span></button>
+<div class="cfm-tp-faq-a"><div class="cfm-tp-faq-a-inner">For the majority of Medford homes with normal driveway or street access, yes &mdash; truck-mounted cleaning delivers stronger suction, higher water temperature, and meaningfully faster drying. That said, "better" depends on the property. Upper-floor units, limited-access historic sites, and certain restoration scenarios are situations where professional portable is genuinely the more appropriate choice, not a fallback.</div></div>
+</div>
+
+<div class="cfm-tp-faq-item" aria-expanded="false">
+<button class="cfm-tp-faq-q" type="button">How can I tell if a company uses a truck mount?<span class="plus">+</span></button>
+<div class="cfm-tp-faq-a"><div class="cfm-tp-faq-a-inner">Ask directly &mdash; a legitimate company will answer plainly. If you want a second signal, ask their quoted summer drying time: 2&ndash;4 hours points to a truck mount, while 6&ndash;8+ hours suggests a lower-extraction setup. You can also simply look for the van or trailer with hose reels parked outside on the day of service.</div></div>
+</div>
+
+<div class="cfm-tp-faq-item" aria-expanded="false">
+<button class="cfm-tp-faq-q" type="button">Can a portable machine get good results?<span class="plus">+</span></button>
+<div class="cfm-tp-faq-a"><div class="cfm-tp-faq-a-inner">Yes, a professional-grade portable in trained hands can produce solid results, particularly for lighter soil or access-limited properties where a truck mount simply isn't an option. The key word is professional &mdash; a trained technician running a commercial portable is a very different outcome than a consumer rental unit run without training.</div></div>
+</div>
+
+<div class="cfm-tp-faq-item" aria-expanded="false">
+<button class="cfm-tp-faq-q" type="button">Does Carpet Friend Medford use a truck-mounted system?<span class="plus">+</span></button>
+<div class="cfm-tp-faq-a"><div class="cfm-tp-faq-a-inner">Yes &mdash; we run a truck-mounted system on every job, which is part of why our typical summer drying time in Medford is 2&ndash;4 hours. See our full process on the <a href="https://carpetcleaningmedfordoregon.com/our-process/">7-step carpet cleaning process page</a>.</div></div>
+</div>
+
+<div class="cfm-tp-faq-item" aria-expanded="false">
+<button class="cfm-tp-faq-q" type="button">What's the difference between a portable and a Rug Doctor rental?<span class="plus">+</span></button>
+<div class="cfm-tp-faq-a"><div class="cfm-tp-faq-a-inner">A professional portable is commercial-grade equipment run by a trained technician, with stronger suction and higher sustained water temperature than a consumer rental machine. A rental unit like a Rug Doctor is built for occasional, light homeowner use &mdash; it's a different tier entirely, and generally isn't a substitute for pet enzyme treatment, smoke odor work, or heavily soiled carpet.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-tp-toc" id="cfm-tp-toc" data-open="true">
+<span class="toc-ttl cfm-tp-toc-static">In This Guide</span>
+<button class="cfm-tp-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-tp-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-tp-toc-list">
+<li><a href="#answer">The Bottom Line</a></li>
+<li><a href="#how-each-works">How Each System Works</a></li>
+<li><a href="#performance-gap">The Performance Gap</a></li>
+<li><a href="#when-portable">When Portable Is Right</a></li>
+<li><a href="#medford-scenarios">Medford-Specific Scenarios</a></li>
+<li><a href="#how-to-verify">How to Verify Before Booking</a></li>
+<li><a href="#rental-different">Rentals Are a Third Category</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-tp-cta">
+<h2>We Use a Truck Mount &mdash; On Every Medford Job</h2>
+<p>Commercial-grade suction, engine-heated water, and 2&ndash;4 hour summer drying times as standard. Serving Medford and all of Jackson County. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/our-process/">&#128295; See Our Process &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-tp-related">
+<h3>Related Reading</h3>
+<div class="cfm-tp-rel-grid">
+<a class="cfm-tp-rel-card" href="https://carpetcleaningmedfordoregon.com/our-process/">
+<span class="lbl">&#128295; Process</span>
+<p class="ttl">Our 7-Step Carpet Cleaning Process</p>
+</a>
+<a class="cfm-tp-rel-card" href="https://carpetcleaningmedfordoregon.com/is-carpet-cleaning-worth-it-medford-oregon/">
+<span class="lbl">&#128176; Guide</span>
+<p class="ttl">Is Carpet Cleaning Worth It?</p>
+</a>
+<a class="cfm-tp-rel-card" href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-cause-mold-wet-carpet-risks/">
+<span class="lbl">&#128167; Guide</span>
+<p class="ttl">Can Carpet Cleaning Cause Mold?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-tp-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-tp-toc');
+var tocBtn=toc.querySelector('.cfm-tp-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-tp-faq .cfm-tp-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-tp-faq-q');
+var ans=item.querySelector('.cfm-tp-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-tp-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

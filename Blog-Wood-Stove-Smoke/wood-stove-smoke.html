@@ -1,0 +1,372 @@
+<!-- wp:html -->
+<style id="cfm-ws-css">
+.cfm-page-wood-stove-smoke{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-wood-stove-smoke *,.cfm-page-wood-stove-smoke *::before,.cfm-page-wood-stove-smoke *::after{box-sizing:border-box}
+.cfm-page-wood-stove-smoke p,.cfm-page-wood-stove-smoke li,.cfm-page-wood-stove-smoke h1,.cfm-page-wood-stove-smoke h2,.cfm-page-wood-stove-smoke h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-ws-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#78716C;z-index:9998;transition:width .1s linear}
+
+.cfm-ws-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-ws-topline a{color:#57534E;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-ws-topline a:hover{text-decoration:underline}
+
+.cfm-ws-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-ws-hero .ey{display:block;color:#D6A876;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-ws-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-ws-hero .byline{color:#D6A876;font-size:13.5px;font-weight:600;margin:0}
+.cfm-ws-hero .rt{display:inline-block;background:#EFE9E3;color:#3F3A34;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-ws-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-ws-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-ws-toc{flex:0 0 300px;background:#fff;border:1px solid #e8e6e3;border-left:3px solid #292524;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-ws-toc .toc-ttl{display:block;color:#57534E;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-ws-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-ws-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-ws-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-ws-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-ws-toc a:hover{color:#292524}
+.cfm-ws-toc a.active{color:#292524;font-weight:700}
+.cfm-ws-toc a.active::before{color:#57534E}
+.cfm-ws-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-ws-layout{flex-direction:column}
+.cfm-ws-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-ws-toc-static{display:none}
+.cfm-ws-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-ws-toc-toggle .chev{transition:transform .2s;color:#57534E}
+.cfm-ws-toc[data-open="false"] ol{display:none}
+.cfm-ws-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-ws-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-ws-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-ws-intro{background:#EFE9E3;border-left:4px solid #57534E;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-ws-intro p{color:#292524;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-wood-stove-smoke h2{color:#292524;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-ws-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-wood-stove-smoke .cfm-ws-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-wood-stove-smoke strong{color:#292524}
+
+.cfm-ws-lbl{display:block;color:#57534E;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-ws-note{background:#E7EDEF;border-left:4px solid #44575E;border-radius:0 12px 12px 0;padding:18px 22px;margin:0 0 32px}
+.cfm-ws-note p{color:#233337;font-size:14.5px;line-height:1.7;margin:0}
+.cfm-ws-note p a{color:#233337;font-weight:700}
+
+.cfm-ws-pullquote{background:#292524;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-ws-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-ws-pullquote::before{content:'"';color:#D6A876;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-ws-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-ws-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f7f6;border:1px solid #e8e6e3;border-radius:12px;padding:20px 22px}
+.cfm-ws-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#57534E;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-ws-steps .txt h4{color:#292524;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-ws-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-ws-timeline{margin:24px 0;display:flex;flex-direction:column;gap:0}
+.cfm-ws-tl-item{position:relative;padding:0 0 24px 30px;border-left:2px solid #e8e6e3}
+.cfm-ws-tl-item:last-child{border-left:2px solid transparent;padding-bottom:0}
+.cfm-ws-tl-item::before{content:'';position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:#57534E}
+.cfm-ws-tl-item h4{color:#292524;font-size:15px;font-weight:700;margin:0 0 6px}
+.cfm-ws-tl-item p{color:#4a5568;font-size:14.5px;line-height:1.7;margin:0}
+
+.cfm-ws-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0 8px}
+.cfm-ws-card{background:#fff;border:1px solid #e8e6e3;border-radius:12px;padding:22px 20px;border-top:4px solid #57534E}
+.cfm-ws-card h4{color:#292524;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-ws-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+.cfm-ws-card p a{color:#57534E;font-weight:700}
+
+.cfm-ws-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-ws-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-ws-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-ws-table th{background:#292524;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-ws-table td{padding:12px 14px;border:1px solid #e8e6e3;color:#4a5568;line-height:1.5}
+.cfm-ws-table tr:nth-child(even) td{background:#f8f8f7}
+.cfm-ws-table-wrap{overflow-x:auto;margin:20px 0}
+
+.cfm-ws-faq{max-width:100%;margin:24px 0 8px}
+.cfm-ws-faq-item{border:1px solid #e8e6e3;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-ws-faq-q{width:100%;text-align:left;background:#f7f7f6;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#292524;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-ws-faq-q:hover{background:#EFE9E3}
+.cfm-ws-faq-q .plus{color:#57534E;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-ws-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-ws-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-ws-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-ws-cta{background:#292524;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-ws-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-ws-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-ws-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-ws-cta a.btn-w{background:#fff;color:#57534E;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-ws-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-ws-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-ws-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-ws-related h3{color:#292524;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-ws-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-ws-rel-card{display:block;background:#fff;border:1px solid #e8e6e3;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-ws-rel-card:hover{box-shadow:0 10px 30px rgba(41,37,36,.12);transform:translateY(-2px)}
+.cfm-ws-rel-card .lbl{display:block;color:#57534E;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-ws-rel-card .ttl{color:#292524;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-ws-cards{grid-template-columns:1fr}
+.cfm-ws-rel-grid{grid-template-columns:1fr}
+.cfm-ws-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-ws-cta a.btn-w,.cfm-ws-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-ws-layout{padding:32px 20px}
+.cfm-ws-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-ws-pullquote{padding:26px 22px}
+.cfm-ws-pullquote p{font-size:17px}
+.cfm-ws-table{font-size:12.5px}
+}
+</style>
+
+<div class="cfm-page-wood-stove-smoke">
+
+<div class="cfm-ws-progress" id="cfm-ws-progress"></div>
+
+<div class="cfm-ws-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-ws-hero" style="background-image:linear-gradient(160deg,rgba(41,37,36,.88) 0%,rgba(68,60,52,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Will-carpet-cleaning-remove-smoke-smell-from-a-wood-stove.webp')" role="img" aria-label="Wood stove burning in a Medford Oregon living room next to carpet &mdash; will carpet cleaning remove the smoke smell?">
+<span class="ey">Local Guide &middot; Jackson County, Oregon</span>
+<h1>Will Carpet Cleaning Remove Smoke Smell from a Wood Stove?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">8 min read</span></p>
+</div>
+
+<div class="cfm-ws-layout">
+
+<div class="cfm-ws-wrap">
+
+<div class="cfm-ws-intro" id="answer">
+<p>Yes &mdash; in most cases. Wood stove smoke has a different chemical profile than wildfire smoke, and truck-mounted hot water extraction at 195&deg;F, paired with the right pre-spray, removes most of that odor from carpet in a single visit. Cases that don't fully resolve usually mean the chimney or HVAC system also needs attention, not that the carpet can't be cleaned.</p>
+</div>
+
+<p class="cfm-ws-p">Wood stoves are woven into winter life across the Rogue Valley &mdash; a lot of Medford-area homes lean on them for heat, ambiance, or both, from November through April. <strong>Is it normal for carpet near a wood stove to smell like smoke?</strong> Yes, and it's fixable. This post walks through why that smell settles into carpet over a heating season, how it's different from wildfire smoke, what a professional cleaning can realistically do about it, and what else in the home might need attention if the smell keeps coming back.</p>
+
+<h2 id="different-from-wildfire">Wood Stove Smoke vs Wildfire Smoke &mdash; The Key Differences That Matter for Cleaning</h2>
+<div class="cfm-ws-note">
+<p>&#128172; Dealing with wildfire smoke instead? That's a different problem with a different protocol. See our dedicated guide: <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/">Can Carpet Cleaning Remove Wildfire Smoke Smell?</a></p>
+</div>
+<p class="cfm-ws-p"><strong>Is wood stove smoke the same as wildfire smoke in carpet?</strong> No &mdash; and the difference actually changes how a technician should approach the job. Wildfire smoke comes from an outdoor, uncontrolled event covering a wide area over a short, intense window, carrying very fine PM2.5 particulate that infiltrates a home through every gap in the envelope. Wood stove smoke comes from a single, controlled, indoor combustion source that leaks small amounts continuously or intermittently over months, concentrated most heavily in the room where the stove sits.</p>
+<div class="cfm-ws-table-wrap">
+<table class="cfm-ws-table">
+<thead><tr><th>Factor</th><th>Wildfire Smoke</th><th>Wood Stove Smoke</th></tr></thead>
+<tbody>
+<tr><td>Source</td><td>Outdoor, regional, event-based (fire season)</td><td>Indoor, single appliance, ongoing over winter</td></tr>
+<tr><td>Particle size</td><td>Very fine PM2.5, widely dispersed</td><td>Coarser particulate plus creosote residue, localized</td></tr>
+<tr><td>VOC profile</td><td>Broad combustion byproducts from mixed vegetation</td><td>More phenolic and creosote-related compounds from cordwood</td></tr>
+<tr><td>Deposition pattern</td><td>Whole-home, driven by infiltration and HVAC</td><td>Surface-concentrated near the stove and adjoining rooms</td></tr>
+<tr><td>Odor character</td><td>Sharp, acrid, "fire event" smell</td><td>Familiar, woody, campfire-like smell</td></tr>
+<tr><td>Treatment emphasis</td><td>Oxidizing pre-spray for broad VOC breakdown</td><td>Degreasing/deodorizing pre-spray targeting creosote and phenolics</td></tr>
+</tbody>
+</table>
+</div>
+<p class="cfm-ws-p">The practical upshot: wood stove odor is often <strong>more</strong> addressable in a single standard treatment than wildfire smoke, because the deposition is concentrated near the stove rather than spread through every room. But it's also an <strong>ongoing</strong> source &mdash; as long as the stove is in use, the carpet nearest it keeps picking up fresh residue each heating season, which is why this is more of a recurring maintenance topic than a one-time event.</p>
+
+<h2 id="why-it-lingers">Why Wood Stove Smoke Smell Stays in Carpet</h2>
+<div class="cfm-ws-pullquote">
+<p>Why does my carpet smell like smoke months after I stopped using the stove?</p>
+</div>
+<p class="cfm-ws-p">Think of carpet near a wood stove as a filter running for an entire heating season. Every time the firebox door opens to reload, every small puff of backdraft on a windy night, every bit of residue that clings to smoke that drifts past a slightly-open damper &mdash; it all settles onto the nearest soft surface, and in most living rooms that's the carpet. Over a five- or six-month burning season, that adds up to a real accumulation, even in homes where the stove "never smokes."</p>
+<p class="cfm-ws-p">Convective air currents play a role too. Wood stoves heat a room by pushing warm air out and pulling cooler air back in near the floor &mdash; the same currents that keep a room comfortable also carry trace smoke particulate down toward carpet level and circulate it through adjoining rooms. <strong>Why does my carpet smell stronger on cold mornings, even in spring?</strong> Temperature and humidity both affect how readily the absorbed compounds release back into the air. Cold, damp mornings common to Medford's spring inversions cause phenolic and creosote-related compounds trapped in the fiber to off-gas more noticeably, which is why a carpet that seemed odor-free by late afternoon can smell distinctly smoky again the next chilly morning.</p>
+
+<h2 id="medford-wood-stoves">Wood Stoves in the Rogue Valley &mdash; Why This Is a Medford-Specific Topic</h2>
+<p class="cfm-ws-p">Wood heat is a bigger part of daily life here than in a lot of other parts of Oregon. Jackson County has colder winter nights than the Willamette Valley, easy access to affordable firewood, and a strong rural and semi-rural culture that leans on wood stoves and inserts as a primary or backup heat source. Drive through <strong>Gold Hill</strong>, <strong>Jacksonville</strong>, or <strong>Rogue River</strong> on a January evening and you'll smell it in the air &mdash; wood heat is common practice, not a novelty. Even inside city limits, plenty of homes in <strong>west Medford</strong> run a stove alongside central heat, and neighborhoods in <strong>east Medford</strong> and around <strong>Ashland</strong> increasingly use high-efficiency gas inserts that still carry some of the same odor considerations when a wood-burning unit is present.</p>
+<p class="cfm-ws-p">There's also a valley-specific weather factor: winter <strong>Air Stagnation Advisories</strong> and burn restriction days are common across the Rogue Valley, when cold air settles into the basin and traps pollutants close to the ground. On those days, homeowners often keep windows shut tight to stay compliant with burn guidance, which means whatever smoke does escape the stove has nowhere to go &mdash; it stays indoors, settles into carpet and fabric, and lingers longer than it would in a home with better winter ventilation.</p>
+
+<h2 id="treatment">How Professional Carpet Cleaning Addresses Wood Stove Smoke Odor</h2>
+<p class="cfm-ws-p"><strong>What actually gets wood stove smoke smell out of carpet?</strong> For moderate, typical use &mdash; a stove run a few nights a week through a normal Rogue Valley winter &mdash; our standard approach is truck-mounted hot water extraction at 195&deg;F paired with a degreasing pre-spray. The heat and pre-spray combination breaks down the oily, resinous residue that phenolic and creosote compounds leave behind, and the high-temperature extraction lifts it out of the fiber rather than just masking it on the surface.</p>
+<ol class="cfm-ws-steps">
+<li><span class="num">1</span><div class="txt"><h4>Pre-Inspection</h4><p>We check carpet closest to the stove and along the main air currents in the room to gauge how concentrated the buildup is before choosing a pre-spray strength.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Degreasing / Deodorizing Pre-Spray</h4><p>A formulation different from the oxidizing pre-spray used for wildfire smoke &mdash; this one is built to target the phenolic and creosote-related compounds specific to wood combustion residue.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>195&deg;F Truck-Mounted Extraction</h4><p>High-temperature extraction lifts the broken-down residue and remaining odor compounds out of the fiber rather than leaving them to re-settle.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Spot Reassessment</h4><p>We recheck the area closest to the stove after drying &mdash; the highest-concentration zone &mdash; and flag if a specialty pass is warranted.</p></div></li>
+</ol>
+<p class="cfm-ws-p"><strong>When is a specialty deodorizing treatment worth the extra step?</strong> For heavy, multi-season buildup &mdash; homes that have run a stove for several winters without a dedicated cleaning, or where residue has visibly darkened the carpet near the hearth &mdash; a stronger specialty deodorizing pre-spray targeted specifically at creosote and phenolic compounds gets better results than the standard degreasing pass alone. We'll recommend it honestly during pre-inspection rather than upselling it by default. If cost is a factor in deciding which approach to book, our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">carpet cleaning cost guide</a> breaks down typical pricing factors.</p>
+<div class="cfm-ws-warn">
+<p>&#9888; Realistic expectation: if the stove or chimney is still actively leaking smoke into the room &mdash; a bad gasket, a draft problem, a chimney needing a sweep &mdash; the carpet will simply re-accumulate residue over the following weeks. Cleaning fixes what's already in the fiber; it doesn't stop new smoke from entering. Source control matters just as much as the cleaning itself.</p>
+</div>
+
+<h2 id="beyond-carpet">What Else Needs Attention &mdash; Beyond Carpet Cleaning</h2>
+<p class="cfm-ws-p"><strong>If the carpet is clean but the room still smells like smoke, what else could be the source?</strong> A handful of other spots in a wood-stove home often need attention alongside the carpet.</p>
+<div class="cfm-ws-cards">
+<div class="cfm-ws-card"><h4>The Stove and Chimney</h4><p>An annual chimney sweep and inspection is recommended by the NFPA for any actively used wood stove. A dirty flue or failing gasket is often the actual ongoing smoke source, not the carpet.</p></div>
+<div class="cfm-ws-card"><h4>Hard Surfaces Near the Stove</h4><p>Hearth tile, hardwood, and nearby walls can carry a thin film of the same residue and benefit from a wipe-down alongside carpet cleaning.</p></div>
+<div class="cfm-ws-card"><h4>HVAC / Forced-Air Ducts</h4><p>If the stove room shares return air with central heating, ducts can distribute smoke odor house-wide. A NADCA-certified duct cleaning addresses that distribution problem directly.</p></div>
+<div class="cfm-ws-card"><h4>Upholstered Furniture Near the Stove</h4><p>Couches and chairs closest to the stove absorb odor the same way carpet does. See our <a href="https://carpetcleaningmedfordoregon.com/upholstery-cleaning-medford-oregon/">upholstery cleaning service</a> as an add-on to the same visit.</p></div>
+</div>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Will-carpet-cleaning-remove-smoke-smell-from-a-wood-stove.webp" alt="Carpet cleaning technician treating carpet near a wood stove hearth in a Rogue Valley home for smoke odor" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="prevention">Preventing Wood Stove Smoke Odor in Carpet</h2>
+<p class="cfm-ws-p"><strong>What's the best way to keep wood stove smell out of carpet next winter?</strong> A few habits go a long way toward keeping the odor from building up in the first place.</p>
+<ol class="cfm-ws-steps">
+<li><span class="num">1</span><div class="txt"><h4>Clean at the End of Heating Season</h4><p>Book carpet cleaning in April or May, right after the stove goes quiet for the year &mdash; the same window that works well for <a href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">pollen season carpet cleaning</a>, so many Medford homeowners handle both in one visit.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Keep the Stove Properly Sealed</h4><p>A tight door gasket and clear draft path mean less smoke escapes into the room to begin with &mdash; check gaskets each fall before the first burn.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Use a Washable Area Rug in the Stove Zone</h4><p>A rug placed in front of the stove takes the brunt of the residue and can be laundered separately, protecting the carpet underneath.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Run a HEPA Air Purifier Near the Stove</h4><p>Catching particulate in the air before it settles onto carpet reduces how much residue accumulates over the season.</p></div></li>
+<li><span class="num">5</span><div class="txt"><h4>Ventilate on Clear, Good-Air Days</h4><p>On days without a burn advisory or stagnant air, cracking a window for even 20&ndash;30 minutes helps flush trapped smoke compounds out of the house.</p></div></li>
+</ol>
+
+<h2 id="faq">Wood Stove Smoke Carpet FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-ws-faq" id="cfm-ws-faq">
+
+<div class="cfm-ws-faq-item" aria-expanded="false">
+<button class="cfm-ws-faq-q" type="button">Will professional cleaning remove wood stove smoke smell from carpet?<span class="plus">+</span></button>
+<div class="cfm-ws-faq-a"><div class="cfm-ws-faq-a-inner">In most cases, yes. Truck-mounted extraction at 195&deg;F combined with a degreasing pre-spray targeted at creosote and phenolic residue removes the majority of wood stove odor from carpet in a single visit, since deposition is typically concentrated near the stove rather than spread through the whole home. Heavy, multi-season buildup sometimes benefits from a stronger specialty deodorizing pre-spray, which we'll recommend honestly during pre-inspection.</div></div>
+</div>
+
+<div class="cfm-ws-faq-item" aria-expanded="false">
+<button class="cfm-ws-faq-q" type="button">How is wood stove smoke different from wildfire smoke in carpet?<span class="plus">+</span></button>
+<div class="cfm-ws-faq-a"><div class="cfm-ws-faq-a-inner">Wood stove smoke comes from a single indoor combustion source and tends to concentrate near the stove, with a VOC profile heavier in phenolic and creosote compounds. Wildfire smoke comes from an outdoor, regional event with very fine PM2.5 particulate that infiltrates the whole home. They call for different pre-spray formulations. If wildfire smoke is your actual issue, see our dedicated guide: <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/">Can Carpet Cleaning Remove Wildfire Smoke Smell?</a></div></div>
+</div>
+
+<div class="cfm-ws-faq-item" aria-expanded="false">
+<button class="cfm-ws-faq-q" type="button">How often should I clean carpets in a home with a wood stove?<span class="plus">+</span></button>
+<div class="cfm-ws-faq-a"><div class="cfm-ws-faq-a-inner">Once a year, timed for the end of the heating season in April or May, works well for typical use. Homes that run the stove daily through a full Rogue Valley winter, or that skipped a cleaning the year before, may benefit from a mid-season check partway through winter as well.</div></div>
+</div>
+
+<div class="cfm-ws-faq-item" aria-expanded="false">
+<button class="cfm-ws-faq-q" type="button">My carpet smells worse on cold mornings even in spring &mdash; why?<span class="plus">+</span></button>
+<div class="cfm-ws-faq-a"><div class="cfm-ws-faq-a-inner">Temperature and humidity affect how readily absorbed smoke compounds release back into the air. Cold, damp mornings &mdash; common during Medford's spring inversions &mdash; cause trapped phenolic and creosote-related compounds in the carpet fiber to off-gas more noticeably than they do later in a warm afternoon.</div></div>
+</div>
+
+<div class="cfm-ws-faq-item" aria-expanded="false">
+<button class="cfm-ws-faq-q" type="button">Does cleaning help if the stove or chimney is still producing smoke that enters the room?<span class="plus">+</span></button>
+<div class="cfm-ws-faq-a"><div class="cfm-ws-faq-a-inner">Cleaning removes what's already settled into the carpet, but if the stove or chimney is still actively leaking smoke, the carpet will simply re-accumulate residue over the following weeks. An annual chimney sweep and inspection, along with checking the door gasket and draft, addresses the source so a cleaning's results actually last.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-ws-toc" id="cfm-ws-toc" data-open="true">
+<span class="toc-ttl cfm-ws-toc-static">In This Guide</span>
+<button class="cfm-ws-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-ws-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-ws-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#different-from-wildfire">Wood Stove vs Wildfire Smoke</a></li>
+<li><a href="#why-it-lingers">Why the Smell Lingers</a></li>
+<li><a href="#medford-wood-stoves">A Medford-Specific Topic</a></li>
+<li><a href="#treatment">How Cleaning Addresses It</a></li>
+<li><a href="#beyond-carpet">Beyond Carpet Cleaning</a></li>
+<li><a href="#prevention">Preventing It Next Winter</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-ws-cta">
+<h2>End of Heating Season? Book Your Spring Carpet Clean.</h2>
+<p>Same-week scheduling across Jackson County. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/pollen-season-carpet-cleaning-medford-oregon/">&#127800; Spring Carpet Cleaning Guide &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-ws-related">
+<h3>Related Reading</h3>
+<div class="cfm-ws-rel-grid">
+<a class="cfm-ws-rel-card" href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/">
+<span class="lbl">&#128293; Guide</span>
+<p class="ttl">Can Cleaning Remove Wildfire Smoke Smell?</p>
+</a>
+<a class="cfm-ws-rel-card" href="https://carpetcleaningmedfordoregon.com/how-wildfire-smoke-damages-carpet-fibers-medford-oregon/">
+<span class="lbl">&#128293; Guide</span>
+<p class="ttl">How Wildfire Smoke Damages Carpet Fibers</p>
+</a>
+<a class="cfm-ws-rel-card" href="https://carpetcleaningmedfordoregon.com/upholstery-cleaning-medford-oregon/">
+<span class="lbl">&#128717; Service</span>
+<p class="ttl">Upholstery Cleaning in Medford</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-ws-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-ws-toc');
+var tocBtn=toc.querySelector('.cfm-ws-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-ws-faq .cfm-ws-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-ws-faq-q');
+var ans=item.querySelector('.cfm-ws-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-ws-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

@@ -1,0 +1,388 @@
+<!-- wp:html -->
+<style id="cfm-fm-css">
+.cfm-page-furniture-marks{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-furniture-marks *,.cfm-page-furniture-marks *::before,.cfm-page-furniture-marks *::after{box-sizing:border-box}
+.cfm-page-furniture-marks p,.cfm-page-furniture-marks li,.cfm-page-furniture-marks h1,.cfm-page-furniture-marks h2,.cfm-page-furniture-marks h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-fm-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52b788;z-index:9998;transition:width .1s linear}
+
+.cfm-fm-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-fm-topline a{color:#2d6a4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-fm-topline a:hover{text-decoration:underline}
+
+.cfm-fm-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-fm-hero .ey{display:block;color:#7cb0f3;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-fm-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-fm-hero .byline{color:#7cb0f3;font-size:13.5px;font-weight:600;margin:0}
+.cfm-fm-hero .rt{display:inline-block;background:#e7eefb;color:#1e3a5f;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-fm-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-fm-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-fm-toc{flex:0 0 300px;background:#fff;border:1px solid #e3e8ee;border-left:3px solid #16233a;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-fm-toc .toc-ttl{display:block;color:#1e4d8c;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-fm-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-fm-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-fm-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-fm-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-fm-toc a:hover{color:#16233a}
+.cfm-fm-toc a.active{color:#16233a;font-weight:700}
+.cfm-fm-toc a.active::before{color:#1e4d8c}
+.cfm-fm-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-fm-layout{flex-direction:column}
+.cfm-fm-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-fm-toc-static{display:none}
+.cfm-fm-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-fm-toc-toggle .chev{transition:transform .2s;color:#1e4d8c}
+.cfm-fm-toc[data-open="false"] ol{display:none}
+.cfm-fm-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-fm-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-fm-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-fm-intro{background:#e7eefb;border-left:4px solid #1e4d8c;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-fm-intro p{color:#16233a;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-furniture-marks h2{color:#16233a;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-fm-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-furniture-marks .cfm-fm-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-furniture-marks strong{color:#16233a}
+
+.cfm-fm-lbl{display:block;color:#1e4d8c;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-fm-pullquote{background:#16233a;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-fm-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-fm-pullquote::before{content:'"';color:#7cb0f3;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-fm-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-fm-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e3e8ee;border-radius:12px;padding:20px 22px}
+.cfm-fm-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#1e4d8c;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-fm-steps .txt h4{color:#16233a;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-fm-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-fm-timeline{margin:24px 0;display:flex;flex-direction:column;gap:0}
+.cfm-fm-tl-item{position:relative;padding:0 0 24px 30px;border-left:2px solid #e3e8ee}
+.cfm-fm-tl-item:last-child{border-left:2px solid transparent;padding-bottom:0}
+.cfm-fm-tl-item::before{content:'';position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:#1e4d8c}
+.cfm-fm-tl-item h4{color:#16233a;font-size:15px;font-weight:700;margin:0 0 6px}
+.cfm-fm-tl-item p{color:#4a5568;font-size:14.5px;line-height:1.7;margin:0}
+
+.cfm-fm-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.cfm-fm-card{background:#fff;border:1px solid #e3e8ee;border-radius:12px;padding:22px 20px;border-top:4px solid #1e4d8c}
+.cfm-fm-card h4{color:#16233a;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-fm-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+
+.cfm-fm-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-fm-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-fm-scenarios{display:flex;flex-direction:column;gap:16px;margin:24px 0}
+.cfm-fm-sc{border-radius:12px;padding:22px 24px;border-left:5px solid}
+.cfm-fm-sc h4{font-size:16px;font-weight:800;margin:0 0 10px}
+.cfm-fm-sc p{font-size:14.5px;line-height:1.7;margin:0 0 8px;color:#374151}
+.cfm-fm-sc p:last-child{margin-bottom:0}
+.cfm-fm-sc.good{background:#e9f7ef;border-color:#2f9e5c}
+.cfm-fm-sc.good h4{color:#1c6b3f}
+.cfm-fm-sc.medium{background:#fef3c7;border-color:#b45309}
+.cfm-fm-sc.medium h4{color:#78350f}
+.cfm-fm-sc.limited{background:#fdeceb;border-color:#c0392b}
+.cfm-fm-sc.limited h4{color:#8a271d}
+.cfm-fm-sc a{color:inherit;font-weight:700;text-decoration:underline}
+
+.cfm-fm-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13.5px}
+.cfm-fm-table th{background:#16233a;color:#fff;padding:12px 14px;text-align:left;font-weight:700}
+.cfm-fm-table td{padding:12px 14px;border:1px solid #e3e8ee;color:#4a5568;line-height:1.5}
+.cfm-fm-table tr:nth-child(even) td{background:#f8f9fa}
+.cfm-fm-table-wrap{overflow-x:auto;margin:20px 0}
+
+.cfm-fm-faq{max-width:100%;margin:24px 0 8px}
+.cfm-fm-faq-item{border:1px solid #e3e8ee;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-fm-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#16233a;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-fm-faq-q:hover{background:#e7eefb}
+.cfm-fm-faq-q .plus{color:#1e4d8c;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-fm-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-fm-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-fm-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-fm-cta{background:#16233a;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-fm-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-fm-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-fm-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-fm-cta a.btn-w{background:#fff;color:#1e4d8c;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-fm-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-fm-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-fm-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-fm-related h3{color:#16233a;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-fm-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-fm-rel-card{display:block;background:#fff;border:1px solid #e3e8ee;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-fm-rel-card:hover{box-shadow:0 10px 30px rgba(22,35,58,.12);transform:translateY(-2px)}
+.cfm-fm-rel-card .lbl{display:block;color:#1e4d8c;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-fm-rel-card .ttl{color:#16233a;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-fm-cards{grid-template-columns:1fr}
+.cfm-fm-rel-grid{grid-template-columns:1fr}
+.cfm-fm-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-fm-cta a.btn-w,.cfm-fm-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-fm-layout{padding:32px 20px}
+.cfm-fm-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-fm-pullquote{padding:26px 22px}
+.cfm-fm-pullquote p{font-size:17px}
+.cfm-fm-table{font-size:12.5px}
+}
+</style>
+
+<div class="cfm-page-furniture-marks">
+
+<div class="cfm-fm-progress" id="cfm-fm-progress"></div>
+
+<div class="cfm-fm-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-fm-hero" style="background-image:linear-gradient(160deg,rgba(22,35,58,.88) 0%,rgba(30,77,140,.80) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Will-carpet-cleaning-remove-furniture-marks.webp')" role="img" aria-label="Sofa leg indentations pressed into carpet pile in a Medford Oregon living room">
+<span class="ey">Local Guide &middot; Jackson County, Oregon</span>
+<h1>Will Carpet Cleaning Remove Furniture Marks and Dents?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">7 min read</span></p>
+</div>
+
+<div class="cfm-fm-layout">
+
+<div class="cfm-fm-wrap">
+
+<div class="cfm-fm-intro" id="answer">
+<p>In most cases, yes &mdash; professional cleaning can noticeably lift furniture indentations, but how much recovery you'll actually see depends on how long the dent has been there, the carpet's fiber type, and the pile height. Fresh marks respond best. Marks that have sat under heavy furniture for years may only partially improve. We give you an honest answer during pre-inspection, before any work starts &mdash; not after.</p>
+</div>
+
+<p class="cfm-fm-p">If you've just moved a couch, rearranged a bedroom, or you're staging a Medford home for sale, you've probably noticed the deep, stubborn rows and squares pressed into the carpet where furniture legs used to sit. It's one of the most common questions we hear on pre-inspection calls across the Rogue Valley: <strong>can this actually be fixed, or is the carpet just going to look like this forever?</strong> This guide goes past the quick yes-or-no and explains the actual science of why furniture marks happen, what determines whether yours will bounce back, how different carpet fiber types behave, and what you should (and shouldn't) do before you call anyone.</p>
+<p class="cfm-fm-p">For the general mechanics of how our appointments work, including the raking step that helps restore compressed pile, see our <a href="https://carpetcleaningmedfordoregon.com/our-process/">7-step cleaning process</a>. If a mark turns out to be permanent, we'll talk about repair-side options like patching, covered on our <a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/">carpet repair page</a>.</p>
+
+<h2 id="fiber-science">The Fiber Compression Science &mdash; Why Furniture Marks Happen</h2>
+<div class="cfm-fm-pullquote">
+<p>Why does a heavy dresser leave a permanent dent while a chair you move every week leaves nothing at all?</p>
+</div>
+<p class="cfm-fm-p">Carpet pile is built to spring back. Each fiber has what's called <strong>elastic memory</strong> &mdash; a built-in tendency to return to its original upright position after being flattened by foot traffic, a vacuum, or a piece of furniture. Under normal daily use, that memory does its job: you walk across the room, the pile bends, and within minutes to hours it recovers. Furniture is a different story because the pressure is constant, concentrated on a tiny footprint (a chair leg or caster), and sustained for weeks, months, or years without relief.</p>
+<p class="cfm-fm-p">At the microscopic level, sustained compression forces the fiber's internal structure &mdash; the crimp and twist that gives carpet its bounce &mdash; to flatten and, over time, to take a "set." Early on, that set is reversible: moisture and heat reintroduce enough flexibility for the fiber to relax back toward its original shape. That's essentially what a hot water extraction cleaning does at 195&deg;F, combined with the raking step already part of our process, which lifts and redistributes crushed pile so the fibers stand back up rather than drying flat. The longer the compression sits, though, the more the fiber's internal structure adapts to the flattened position permanently, and heat and moisture alone stop being enough to reverse it.</p>
+<p class="cfm-fm-p">This is really a race between two forces: how much "spring" is still left in the fiber's memory versus how long and how hard it's been held down. That's the entire question we're answering at pre-inspection when we look at a furniture mark &mdash; not whether cleaning in general works, but where a specific mark falls on that spectrum.</p>
+
+<h2 id="what-determines">What Determines Whether a Furniture Mark Will Recover</h2>
+<p class="cfm-fm-p">We look at five factors before giving you a straight answer. None of them alone tells the whole story &mdash; it's the combination that predicts how much a mark will lift.</p>
+<div class="cfm-fm-cards">
+<div class="cfm-fm-card"><h4>1. Duration of Compression</h4><p>Under about 3 months, most marks recover well. Between 3 months and a year, recovery is usually partial but visible. Beyond a year or two under the same piece of furniture, the fiber has often taken a permanent set and full recovery isn't realistic.</p></div>
+<div class="cfm-fm-card"><h4>2. Weight Applied</h4><p>A floor lamp leaves almost nothing. A loaded bookshelf, piano, or waterbed frame concentrates enormous pressure on a small footprint and compresses fiber structure far more aggressively, even in a shorter window of time.</p></div>
+<div class="cfm-fm-card"><h4>3. Pile Height and Density</h4><p>Taller, denser pile has more fiber mass and more elastic memory to work with, so it tends to spring back further. Low, dense builder-grade carpet has less material to recover, so marks can look deeper even from lighter furniture.</p></div>
+<div class="cfm-fm-card"><h4>4. Moisture History</h4><p>Carpet that's been kept reasonably dry retains more of its original resilience. Carpet that's had repeated water exposure, humidity swings, or prior over-wetting from DIY cleaning attempts tends to lose elasticity faster, which limits how far it can spring back.</p></div>
+<div class="cfm-fm-card"><h4>5. Fiber Type</h4><p>Nylon, polyester, olefin, and wool all respond differently to compression and to heat-and-moisture recovery. This matters enough that it deserves its own section below.</p></div>
+</div>
+
+<h2 id="fiber-types">How Different Carpet Fibers Respond to Furniture Marks</h2>
+<p class="cfm-fm-p"><strong>Does it actually matter what your carpet is made of when it comes to furniture dents?</strong> Yes, significantly &mdash; fiber type is often the single biggest predictor of recovery after duration of compression.</p>
+<p class="cfm-fm-p"><strong>Nylon</strong> has the best natural elastic memory of the common residential fibers. It resists permanent crushing and responds well to heat and moisture, which is why nylon carpet holds up best under furniture over time. A lot of the newer builds we see in East Medford and Central Point use nylon, and those homes generally show the best mark recovery even after moderate compression periods.</p>
+<p class="cfm-fm-p"><strong>Polyester</strong> feels soft and looks great when new, but it has moderate resilience &mdash; it compresses more easily than nylon and its recovery, while still real, tends to be less complete on marks that have sat for a long time. It's an extremely common fiber in mid-range Medford homes built or re-carpeted over the last decade.</p>
+<p class="cfm-fm-p"><strong>Olefin (polypropylene)</strong> has the lowest resilience of the four. It's inexpensive, common in rental-grade carpet across White City and other rental-heavy areas of Jackson County, and it tends to hold compression marks more stubbornly because the fiber itself doesn't have much spring to begin with, even when it's relatively new.</p>
+<p class="cfm-fm-p"><strong>Wool</strong> is variable. Natural wool fiber actually has excellent inherent elastic memory and can recover impressively well, but older wool carpet &mdash; the kind you'll still find in some of the historic homes around Jacksonville &mdash; may have lost some of that resilience simply from age and decades of wear, independent of any one piece of furniture. On older wool, we set expectations carefully rather than promising a like-new result.</p>
+
+<h2 id="recovery-stages">Fresh Mark, Old Dent, or Permanent Damage? What to Expect</h2>
+<p class="cfm-fm-p"><strong>How do you know which category your carpet's marks fall into before you even book anything?</strong> Here's the honest breakdown we use on pre-inspection walk-throughs.</p>
+<div class="cfm-fm-scenarios">
+<div class="cfm-fm-sc good">
+<h4>Fresh Mark (Furniture Moved Recently, Under a Few Months)</h4>
+<p><strong>Expectation:</strong> High likelihood of near-complete recovery.</p>
+<p><strong>What we do:</strong> Standard hot water extraction with attention to raking the affected area, allowing heat and moisture to relax the fiber back toward its original position.</p>
+<p><strong>Result:</strong> Most fresh marks are dramatically less visible, often close to unnoticeable, once fully dry.</p>
+</div>
+<div class="cfm-fm-sc medium">
+<h4>Medium-Age Mark (Several Months to a Couple of Years)</h4>
+<p><strong>Expectation:</strong> Partial, visible improvement rather than full disappearance.</p>
+<p><strong>What we do:</strong> The same heat-and-extraction process, sometimes with extra attention and dwell time on the compressed area, but we won't oversell what fiber that's partially set can do.</p>
+<p><strong>Result:</strong> Noticeably softer and less defined marks; the outline may remain faintly visible depending on fiber type and pile.</p>
+</div>
+<div class="cfm-fm-sc limited">
+<h4>Permanent Set (Years Under the Same Furniture, or Very Low-Resilience Fiber)</h4>
+<p><strong>Expectation:</strong> Limited change from cleaning alone &mdash; the fiber structure itself has adapted to the flattened position.</p>
+<p><strong>What we do:</strong> We'll say so plainly rather than charge you for a result cleaning can't deliver, and point you toward alternatives.</p>
+<p><strong>Result:</strong> If the mark matters for resale or appearance, patching or a small repair may be the more realistic fix &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/">carpet repair page</a> for what that looks like.</p>
+</div>
+</div>
+
+<h2 id="before-you-call">What Homeowners Can Try Before Calling &mdash; and What to Avoid</h2>
+<p class="cfm-fm-p"><strong>Is there anything worth trying yourself before you book a cleaning appointment?</strong> A few small things help; a few popular internet tricks can actually make things worse.</p>
+<ol class="cfm-fm-steps">
+<li><span class="num">1</span><div class="txt"><h4>Do: Move the furniture off the mark now</h4><p>The sooner weight comes off, the sooner the fiber's elastic memory can start working on its own, even before a cleaning appointment.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Do: Give it 24&ndash;48 hours before judging</h4><p>Some rebound happens naturally just from relieved pressure and normal room humidity. Don't assume a mark is permanent the same day you move the furniture.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Do: Gently brush or fluff the pile by hand</h4><p>A soft brush or even your fingers, worked gently against the direction of the flattened pile, can help loosen the compressed fibers without damaging them.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Don't: Use the "ice cube method"</h4><p>You've likely seen this online &mdash; place an ice cube on the dent and let it melt, supposedly rehydrating the fiber as it recovers. We don't recommend it for Medford homes. Slow, localized melting can push moisture down into padding and subfloor rather than lifting the fiber, and in winter especially, that trapped moisture in an unheated or poorly ventilated area can sit long enough to invite mildew or subfloor issues rather than actually fixing the dent. A brief, even application of heat and moisture during a real cleaning does the job far more effectively and without the risk.</p></div></li>
+<li><span class="num">5</span><div class="txt"><h4>Don't: Scrub aggressively or over-vacuum the spot</h4><p>Hard scrubbing or repeated heavy vacuuming over a compressed area can fray or break fibers that are already stressed, turning a recoverable mark into visible fiber damage.</p></div></li>
+</ol>
+<div class="cfm-fm-warn">
+<p>&#9888; If the mark is more than just flattened pile &mdash; if you notice the carpet backing showing through, fibers that feel brittle or broken, or a permanent color change &mdash; that's fiber damage, not just compression, and it needs to be assessed differently. We'll flag this honestly during pre-inspection rather than treating it as a routine cleaning fix.</p>
+</div>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Will-carpet-cleaning-remove-furniture-marks.webp" alt="Close-up of carpet pile recovering after professional cleaning near Medford Oregon" style="width:100%;border-radius:12px;margin:24px 0">
+
+<h2 id="medford-context">Furniture Mark Scenarios We See in Medford and Jackson County</h2>
+<p class="cfm-fm-p">Furniture marks come up in a handful of very specific situations across the Rogue Valley, and each one has slightly different stakes and timelines.</p>
+<div class="cfm-fm-timeline">
+<div class="cfm-fm-tl-item"><h4>Rental Move-Outs (White City, West Medford, Phoenix-Talent, Central Point)</h4><p>Tenants preparing to move out often worry that furniture indentations from a couch or bed frame will be flagged during a walk-through. In most cases, ordinary furniture compression is treated as normal wear, not damage &mdash; and cleaning can help minimize marks before the final inspection. If a deposit dispute does come up, our related guide on <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-deducted-security-deposit-oregon/">carpet cleaning and Oregon security deposit deductions</a> covers what landlords can and can't reasonably charge for.</p></div>
+<div class="cfm-fm-tl-item"><h4>Pre-Listing Home Staging</h4><p>Sellers rearranging or staging furniture ahead of showings want carpet looking as fresh as possible. Since staging often means moving pieces that have sat in one spot for years, we're upfront about which marks are likely to lift and which are better addressed by simply arranging furniture to cover a stubborn spot for photos and showings.</p></div>
+<div class="cfm-fm-tl-item"><h4>Historic Jacksonville Homes</h4><p>Older homes in Jacksonville sometimes still have original or long-installed wool or wool-blend carpet in select rooms, alongside decades of furniture that's rarely been rearranged. These cases benefit from a careful, conservative approach &mdash; testing recovery on a small area before committing to a full room treatment plan.</p></div>
+<div class="cfm-fm-tl-item"><h4>New Construction Move-In (Eagle Point, Central Point)</h4><p>New homeowners in growing neighborhoods around Eagle Point and Central Point sometimes see faint marks appear surprisingly fast, within the first few weeks of moving in furniture. New carpet padding can still be settling, and fresh nylon or polyester fiber generally responds very well to an early cleaning that includes raking, before any compression has a chance to set further.</p></div>
+</div>
+
+<h2 id="faq">Furniture Mark FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-fm-faq" id="cfm-fm-faq">
+
+<div class="cfm-fm-faq-item" aria-expanded="false">
+<button class="cfm-fm-faq-q" type="button">Can carpet cleaning remove sofa or chair leg dents?<span class="plus">+</span></button>
+<div class="cfm-fm-faq-a"><div class="cfm-fm-faq-a-inner">Often, yes &mdash; especially when the furniture has been moved recently and the compression hasn't had time to set permanently. Heat and moisture from hot water extraction, combined with raking to lift the flattened pile, allow the fiber's natural elastic memory to relax back toward its original shape. Older, deeper dents may see partial rather than complete improvement, which is why we assess each mark individually during pre-inspection rather than giving a blanket answer.</div></div>
+</div>
+
+<div class="cfm-fm-faq-item" aria-expanded="false">
+<button class="cfm-fm-faq-q" type="button">How long before furniture dents become permanent?<span class="plus">+</span></button>
+<div class="cfm-fm-faq-a"><div class="cfm-fm-faq-a-inner">There's no exact cutoff, but as a general pattern, marks under about three months old tend to recover well, marks between three months and a year or two show partial recovery, and marks that have sat under the same heavy furniture for several years often show limited change from cleaning alone because the fiber structure has taken a permanent set. Fiber type, pile height, weight, and moisture history all shift where a specific mark falls on that timeline.</div></div>
+</div>
+
+<div class="cfm-fm-faq-item" aria-expanded="false">
+<button class="cfm-fm-faq-q" type="button">Will cleaning fix deep piano leg dents?<span class="plus">+</span></button>
+<div class="cfm-fm-faq-a"><div class="cfm-fm-faq-a-inner">Piano legs concentrate enormous weight on a very small footprint, often for years without moving, which makes these some of the deepest and most stubborn marks we see. Cleaning can still soften the appearance in many cases, but full recovery isn't always realistic once fiber has taken a long-term set. When a piano dent doesn't respond well to cleaning, a small patch or repair is sometimes the more realistic path &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/">carpet repair page</a> for how that works.</div></div>
+</div>
+
+<div class="cfm-fm-faq-item" aria-expanded="false">
+<button class="cfm-fm-faq-q" type="button">Should I move furniture before a cleaning appointment?<span class="plus">+</span></button>
+<div class="cfm-fm-faq-a"><div class="cfm-fm-faq-a-inner">If you're able to safely move lighter pieces yourself beforehand, that gives compressed areas extra time to start relaxing before we even arrive, which can help. For heavier furniture, let us know in advance and we'll work with you on the best approach for your appointment &mdash; there's no need to strain yourself moving large or heavy items alone.</div></div>
+</div>
+
+<div class="cfm-fm-faq-item" aria-expanded="false">
+<button class="cfm-fm-faq-q" type="button">Do you assess furniture marks during pre-inspection?<span class="plus">+</span></button>
+<div class="cfm-fm-faq-a"><div class="cfm-fm-faq-a-inner">Yes, always. Before we start any cleaning, we walk the space, look at the specific marks you're concerned about, and give you a realistic expectation based on fiber type, mark age, and pile condition &mdash; not a generic promise. If cost is part of your decision, our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">cleaning cost guide</a> covers what typically factors into pricing for Medford homes.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-fm-toc" id="cfm-fm-toc" data-open="true">
+<span class="toc-ttl cfm-fm-toc-static">In This Guide</span>
+<button class="cfm-fm-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-fm-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-fm-toc-list">
+<li><a href="#answer">The Honest Answer</a></li>
+<li><a href="#fiber-science">The Fiber Compression Science</a></li>
+<li><a href="#what-determines">What Determines Recovery</a></li>
+<li><a href="#fiber-types">How Fiber Types Respond</a></li>
+<li><a href="#recovery-stages">Fresh, Medium, or Permanent?</a></li>
+<li><a href="#before-you-call">Before You Call &mdash; Do &amp; Don't</a></li>
+<li><a href="#medford-context">Medford &amp; Jackson County Scenarios</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-fm-cta">
+<h2>Furniture Marks? Let Us Assess Before You Decide.</h2>
+<p>We'll look at the specific marks in your home during pre-inspection and give you an honest expectation &mdash; before any cleaning starts, not after. Call (458) 302-0101 &mdash; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/our-process/">Our Process &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-fm-related">
+<h3>Related Reading</h3>
+<div class="cfm-fm-rel-grid">
+<a class="cfm-fm-rel-card" href="https://carpetcleaningmedfordoregon.com/our-process/">
+<span class="lbl">Process</span>
+<p class="ttl">Our 7-Step Cleaning Process</p>
+</a>
+<a class="cfm-fm-rel-card" href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/">
+<span class="lbl">Service</span>
+<p class="ttl">Carpet Repair in Medford</p>
+</a>
+<a class="cfm-fm-rel-card" href="https://carpetcleaningmedfordoregon.com/is-carpet-cleaning-worth-it-medford-oregon/">
+<span class="lbl">Guide</span>
+<p class="ttl">Is Carpet Cleaning Worth It?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-fm-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-fm-toc');
+var tocBtn=toc.querySelector('.cfm-fm-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-fm-faq .cfm-fm-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-fm-faq-q');
+var ans=item.querySelector('.cfm-fm-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-fm-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->
