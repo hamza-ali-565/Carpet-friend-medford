@@ -1,0 +1,449 @@
+<!-- wp:html -->
+<style id="cfm-rd-css">
+.cfm-page-rug-doctor{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-rug-doctor *,.cfm-page-rug-doctor *::before,.cfm-page-rug-doctor *::after{box-sizing:border-box}
+.cfm-page-rug-doctor p,.cfm-page-rug-doctor li,.cfm-page-rug-doctor h1,.cfm-page-rug-doctor h2,.cfm-page-rug-doctor h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-rd-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52b788;z-index:9998;transition:width .1s linear}
+
+.cfm-rd-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-rd-topline a{color:#2d6a4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-rd-topline a:hover{text-decoration:underline}
+
+.cfm-rd-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-rd-hero .ey{display:block;color:#95d5b2;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-rd-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-rd-hero .byline{color:#95d5b2;font-size:13.5px;font-weight:600;margin:0}
+.cfm-rd-hero .rt{display:inline-block;background:#d1fae5;color:#065f46;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-rd-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-rd-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-rd-toc{flex:0 0 300px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #1b4332;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-rd-toc .toc-ttl{display:block;color:#2d6a4f;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-rd-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-rd-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-rd-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-rd-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-rd-toc a:hover{color:#1b4332}
+.cfm-rd-toc a.active{color:#1b4332;font-weight:700}
+.cfm-rd-toc a.active::before{color:#2d6a4f}
+.cfm-rd-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-rd-layout{flex-direction:column}
+.cfm-rd-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-rd-toc-static{display:none}
+.cfm-rd-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-rd-toc-toggle .chev{transition:transform .2s;color:#2d6a4f}
+.cfm-rd-toc[data-open="false"] ol{display:none}
+.cfm-rd-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-rd-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-rd-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-rd-intro{background:#d1fae5;border-left:4px solid #1b4332;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-rd-intro p{color:#1a1a1a;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-rug-doctor h2{color:#1b4332;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-rd-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-rug-doctor .cfm-rd-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-rug-doctor strong{color:#1a1a1a}
+
+.cfm-rd-lbl{display:block;color:#2d6a4f;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-rd-pullquote{background:#1b4332;border-radius:16px;padding:32px 30px;margin:36px 0;position:relative}
+.cfm-rd-pullquote p{color:#fff;font-size:19px;line-height:1.55;font-weight:600;margin:0}
+.cfm-rd-pullquote::before{content:'"';color:#95d5b2;font-size:48px;font-weight:800;line-height:1;display:block;margin-bottom:6px;font-family:Georgia,serif}
+
+.cfm-rd-table-wrap{overflow-x:auto;margin:24px 0}
+.cfm-rd-table{width:100%;border-collapse:collapse;min-width:520px;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e8ecf0}
+.cfm-rd-table thead tr{background:#1b4332}
+.cfm-rd-table th{color:#fff;font-size:13.5px;font-weight:700;text-align:left;padding:14px 18px;letter-spacing:.3px}
+.cfm-rd-table td{padding:14px 18px;font-size:14.5px;color:#4a5568;border-top:1px solid #e8ecf0}
+.cfm-rd-table tbody tr:nth-child(even){background:#f7f8fa}
+.cfm-rd-table tbody tr.total{background:#d1fae5}
+.cfm-rd-table tbody tr.total td{color:#1a1a1a;font-weight:800;font-size:15px}
+
+.cfm-rd-scenarios{display:flex;flex-direction:column;gap:18px;margin:24px 0 8px}
+.cfm-rd-scenario{background:#fff;border:1px solid #e8ecf0;border-radius:12px;overflow:hidden}
+.cfm-rd-scenario h4{color:#1a1a1a;font-size:16px;font-weight:800;margin:0;padding:16px 22px;background:#f7f8fa;border-bottom:1px solid #e8ecf0}
+.cfm-rd-scenario-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.cfm-rd-scenario-col{padding:18px 22px}
+.cfm-rd-scenario-col:first-child{border-right:1px solid #e8ecf0}
+.cfm-rd-scenario-col .k{display:block;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-rd-scenario-col.rug .k{color:#b45309}
+.cfm-rd-scenario-col.pro .k{color:#1b4332}
+.cfm-rd-scenario-col p{color:#4a5568;font-size:14px;line-height:1.65;margin:0}
+.cfm-rd-verdict{padding:14px 22px;background:#1b4332;border-top:1px solid #e8ecf0}
+.cfm-rd-verdict p{color:#fff;font-size:14px;line-height:1.6;margin:0;font-weight:600}
+.cfm-rd-verdict .k{color:#95d5b2;font-weight:700;text-transform:uppercase;font-size:11px;letter-spacing:1px;margin-right:8px}
+
+.cfm-rd-fit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 8px}
+.cfm-rd-fit-panel{border-radius:12px;padding:22px 24px}
+.cfm-rd-fit-panel.yes{background:#d1fae5;border:1px solid #a7f3d0}
+.cfm-rd-fit-panel.no{background:#fef3c7;border:1px solid #fde68a}
+.cfm-rd-fit-panel h4{font-size:14px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin:0 0 14px}
+.cfm-rd-fit-panel.yes h4{color:#065f46}
+.cfm-rd-fit-panel.no h4{color:#78350f}
+.cfm-rd-fit-panel ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.cfm-rd-fit-panel li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.6;color:#1a1a1a}
+.cfm-rd-fit-panel .mk{flex-shrink:0;font-weight:800}
+.cfm-rd-fit-panel.yes .mk{color:#059669}
+.cfm-rd-fit-panel.no .mk{color:#b45309}
+
+.cfm-rd-decisions{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-rd-decisions li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e8ecf0;border-radius:12px;padding:20px 22px}
+.cfm-rd-decisions .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#1b4332;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-rd-decisions .txt h4{color:#1a1a1a;font-size:15.5px;font-weight:700;margin:0 0 6px}
+.cfm-rd-decisions .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-rd-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-rd-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-rd-faq{max-width:100%;margin:24px 0 8px}
+.cfm-rd-faq-item{border:1px solid #e8ecf0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-rd-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#1a1a1a;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-rd-faq-q:hover{background:#d1fae5}
+.cfm-rd-faq-q .plus{color:#1b4332;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-rd-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-rd-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-rd-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-rd-cta{background:#1b4332;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-rd-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-rd-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-rd-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-rd-cta a.btn-w{background:#fff;color:#1b4332;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-rd-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-rd-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-rd-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-rd-related h3{color:#1b4332;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-rd-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-rd-rel-card{display:block;background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-rd-rel-card:hover{box-shadow:0 10px 30px rgba(27,67,50,.12);transform:translateY(-2px)}
+.cfm-rd-rel-card .lbl{display:block;color:#2d6a4f;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-rd-rel-card .ttl{color:#1b4332;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-rd-fit{grid-template-columns:1fr}
+.cfm-rd-scenario-body{grid-template-columns:1fr}
+.cfm-rd-scenario-col:first-child{border-right:none;border-bottom:1px solid #e8ecf0}
+.cfm-rd-rel-grid{grid-template-columns:1fr}
+.cfm-rd-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-rd-cta a.btn-w,.cfm-rd-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-rd-layout{padding:32px 20px}
+.cfm-rd-hero{min-height:320px;padding:48px 20px 40px}
+.cfm-rd-pullquote{padding:26px 22px}
+.cfm-rd-pullquote p{font-size:17px}
+}
+</style>
+
+<div class="cfm-page-rug-doctor">
+
+<div class="cfm-rd-progress" id="cfm-rd-progress"></div>
+
+<div class="cfm-rd-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-rd-hero" style="background-image:linear-gradient(160deg,rgba(27,67,50,.88) 0%,rgba(20,45,35,.85) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Rug-Doctor-vs-Professional-Carpet-Cleaner-Real-Comparison.webp')" role="img" aria-label="Rug Doctor rental machine versus professional truck-mounted carpet cleaning in Medford Oregon — honest side-by-side comparison">
+<span class="ey">Local Comparison &middot; Jackson County, Oregon</span>
+<h1>Rug Doctor vs Professional Carpet Cleaning — A Real Medford Comparison</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">9 min read</span></p>
+</div>
+
+<div class="cfm-rd-layout">
+
+<div class="cfm-rd-wrap">
+
+<div class="cfm-rd-intro" id="answer">
+<p>For light maintenance cleaning on lightly soiled carpet: a Rug Doctor rental is a defensible choice. For anything in a Medford home that actually needs cleaning &mdash; volcanic trail dust, pet contamination, wildfire smoke, or carpet that hasn't been professionally extracted in 2+ years &mdash; a Rug Doctor will leave your carpet wetter, re-soiling faster, and with contamination still present that you paid to partially address.</p>
+</div>
+
+<p class="cfm-rd-p">The Rug Doctor is available at every Fred Meyer and Home Depot in the Medford area. It costs around $35&ndash;$50 for a day rental, and it feels productive &mdash; you're doing something about your carpet. But the question isn't whether a Rug Doctor does something. It clearly does. The question is whether what it does is worth the time, the effort, and the money compared to what a professional clean gets you. The answer depends almost entirely on what your specific carpet actually needs.</p>
+
+<h2 id="how-rug-doctor">How a Rug Doctor Actually Works &mdash; What You're Paying For</h2>
+<span class="cfm-rd-lbl">How The Machine Works</span>
+<p class="cfm-rd-p"><strong>What does a Rug Doctor machine actually do to carpet?</strong></p>
+<p class="cfm-rd-p">A Rug Doctor uses an electric motor to agitate a cleaning solution into the carpet pile and simultaneously extract that solution back into an onboard recovery tank. The cleaning solution is a detergent-based formula you purchase separately (typically $15&ndash;$20 per bottle). You fill the clean water tank, activate the machine, and make slow passes over the carpet &mdash; forward to inject solution, backward to extract.</p>
+<p class="cfm-rd-p">For surface and upper-pile soil, a Rug Doctor does real cleaning. It agitates and removes visible dirt and surface-level contamination, reduces mild odors, and can refresh lightly soiled carpet in guest rooms or spaces that see minimal traffic. The result looks immediately better than a vacuumed carpet. This is genuine, and we acknowledge it.</p>
+<p class="cfm-rd-p">The physics of what happens after the pass matters more than what happens during it. <strong>How much moisture is left in the carpet backing?</strong> What's the extraction rate relative to how much water was injected? A rental machine leaves substantially more moisture in the carpet than professional equipment because the extraction motor is a fraction of the power &mdash; and that residual moisture is where the problems begin.</p>
+
+<h2 id="real-cost">The Real Total Cost of Renting a Rug Doctor in Medford</h2>
+<span class="cfm-rd-lbl">The Full Cost Picture</span>
+<p class="cfm-rd-p"><strong>Is renting a Rug Doctor actually cheaper than professional carpet cleaning?</strong></p>
+
+<div class="cfm-rd-table-wrap">
+<table class="cfm-rd-table">
+<thead><tr><th>Cost Item</th><th>Amount</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Machine rental (1 day)</td><td>$35&ndash;$50</td><td>Fred Meyer, Home Depot in Medford</td></tr>
+<tr><td>Rug Doctor cleaning solution</td><td>$15&ndash;$25</td><td>Need separate purchase; 1 bottle &asymp; 1 room</td></tr>
+<tr><td>Additional solution (3-bedroom home)</td><td>$45&ndash;$75</td><td>3&ndash;5 bottles for full house</td></tr>
+<tr><td>Carpet pre-spray (optional upsell)</td><td>$15&ndash;$25</td><td>Sold at rental counter</td></tr>
+<tr><td>Your time</td><td>4&ndash;6 hrs</td><td>Drive, fill, clean, return, dry wait</td></tr>
+<tr class="total"><td>True total cost</td><td>$95&ndash;$175</td><td>For a standard 3-bedroom Medford home</td></tr>
+</tbody>
+</table>
+</div>
+
+<p class="cfm-rd-p">A professional carpet cleaning for the same 3-bedroom Medford home is a competitive local investment &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">transparent pricing guide</a> for actual ranges.</p>
+<p class="cfm-rd-p">On price alone, the gap is smaller than most people assume. When you factor in the 4&ndash;6 hours of your time, driving to and from Fred Meyer, managing the water fills and tank empties, and the 12&ndash;24 hour drying wait, the value calculation changes further.</p>
+
+<p class="cfm-rd-p"><strong>Does the Rug Doctor solution actually clean as well as professional cleaning chemistry?</strong></p>
+<p class="cfm-rd-p">Rug Doctor's cleaning solution is a consumer-grade detergent formula. It's effective for general surface soil. The critical difference isn't just the cleaning chemistry &mdash; it's that a Rug Doctor doesn't rinse the chemistry out. What's injected into your carpet stays in your carpet (mostly). The alkaline detergent residue that remains in the fiber after a Rug Doctor clean is what drives re-soiling &mdash; the residue attracts new dirt aggressively. This is why Rug-Doctored carpet often looks surprisingly grimy within 3&ndash;4 weeks despite appearing clean on the day.</p>
+<div class="cfm-rd-pullquote">
+<p>Professional cleaning uses a pH-balanced rinse step that removes the cleaning chemistry from the fiber after extraction. This is why professionally cleaned carpet holds clean longer.</p>
+</div>
+<p class="cfm-rd-p">See our <a href="https://carpetcleaningmedfordoregon.com/our-process/">process page</a> for how the rinse and extraction steps fit together.</p>
+
+<h2 id="result-gap">What the Performance Gap Means in Practice</h2>
+<span class="cfm-rd-lbl">Practical Results</span>
+<p class="cfm-rd-p"><strong>In real-world terms, what's the difference in results between a Rug Doctor and professional cleaning?</strong></p>
+
+<div class="cfm-rd-scenarios">
+
+<div class="cfm-rd-scenario">
+<h4>Scenario 1 &mdash; Guest bedroom, light use, annual refresh</h4>
+<div class="cfm-rd-scenario-body">
+<div class="cfm-rd-scenario-col rug"><span class="k">Rug Doctor Result</span><p>Visually improved, odor reduced, carpet refreshed. No contamination present to reach. The machine's limitation doesn't matter because there's nothing difficult to clean. This is the scenario where a Rug Doctor performs closest to its marketing promise.</p></div>
+<div class="cfm-rd-scenario-col pro"><span class="k">Professional Result</span><p>Same quality improvement plus pH-balanced rinse (longer-lasting result), faster drying (2&ndash;4 hours vs 12&ndash;24), and no detergent residue.</p></div>
+</div>
+<div class="cfm-rd-verdict"><p><span class="k">Verdict</span>Rug Doctor is reasonable for this scenario if cost is the primary concern.</p></div>
+</div>
+
+<div class="cfm-rd-scenario">
+<h4>Scenario 2 &mdash; Family living room, trail dog, mud season, last cleaned 2 years ago</h4>
+<div class="cfm-rd-scenario-body">
+<div class="cfm-rd-scenario-col rug"><span class="k">Rug Doctor Result</span><p>Visual improvement in surface appearance. Red volcanic clay from Table Rocks hikes worked into the pile over 2 years will be partially addressed at the surface &mdash; but the machine can't reach clay packed into the backing. The carpet will look better but re-soil rapidly as residue in the backing gets wicked upward. Drying time: 12&ndash;24 hours (longer with Rogue Valley temperature inversions common October&ndash;March).</p></div>
+<div class="cfm-rd-scenario-col pro"><span class="k">Professional Result</span><p>Truck-mounted extraction removes embedded clay to backing depth. pH-balanced rinse prevents detergent residue. Carpet dry in 2&ndash;4 hours in summer. Result holds for 12&ndash;18 months.</p></div>
+</div>
+<div class="cfm-rd-verdict"><p><span class="k">Verdict</span>Professional cleaning produces a meaningfully different result here.</p></div>
+</div>
+
+<div class="cfm-rd-scenario">
+<h4>Scenario 3 &mdash; Bedroom affected by wildfire smoke during summer fire season</h4>
+<div class="cfm-rd-scenario-body">
+<div class="cfm-rd-scenario-col rug"><span class="k">Rug Doctor Result</span><p>Reduces surface odor. Does not meaningfully address particulate embedded deep in the fiber. The smoke odor will return within days as the particles that weren't extracted continue off-gassing. See our guide on <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/">whether carpet cleaning removes wildfire smoke smell</a>.</p></div>
+<div class="cfm-rd-scenario-col pro"><span class="k">Professional Result</span><p>Oxidizing pre-spray with an extended dwell time followed by deep extraction addresses odor compounds at fiber depth. Odor typically resolved in one treatment. See our <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">wildfire smoke carpet cleaning guide</a>.</p></div>
+</div>
+<div class="cfm-rd-verdict"><p><span class="k">Verdict</span>A Rug Doctor is not an appropriate tool for wildfire smoke treatment. Renting one after a Jackson County smoke event is spending money on a partial result.</p></div>
+</div>
+
+</div>
+
+<h2 id="re-soiling">The Re-Soiling Truth &mdash; Why Rug-Doctored Carpet Gets Dirty Faster</h2>
+<span class="cfm-rd-lbl">The Re-Soiling Reality</span>
+<p class="cfm-rd-p"><strong>Why does my carpet look dirty again so quickly after I use a Rug Doctor?</strong></p>
+<p class="cfm-rd-p">When a Rug Doctor passes over carpet, it injects cleaning solution and extracts it &mdash; but not all of it. A significant fraction of the detergent chemistry remains in the carpet fiber after the extraction pass. This residue is alkaline (most carpet cleaning detergents are), and it behaves like a static charge in the fiber &mdash; it attracts new soil particles aggressively from foot traffic, pet movement, and airborne dust. This is the mechanism behind the "Rug-Doctored in October, looks terrible by November" experience that's so common in Jackson County homes.</p>
+<p class="cfm-rd-p">The second mechanism is moisture-related. Because the extraction leaves more water in the carpet backing than professional extraction does, the carpet takes 12&ndash;24 hours to fully dry. During this drying window, any foot traffic &mdash; kids, pets, family walking through &mdash; deposits new soil into the wet, open carpet fiber before it closes. Soil deposited during the drying window is often ground in more effectively than normal because the fiber is temporarily more absorbent when damp.</p>
+<p class="cfm-rd-p">These two mechanisms &mdash; chemical residue and damp-window soil pickup &mdash; explain why a carpet that looks genuinely clean on the evening of a Rug Doctor rental can look disappointingly dirty 4&ndash;6 weeks later.</p>
+
+<h2 id="medford-fit">When a Rug Doctor Makes Sense in Medford &mdash; And When It Doesn't</h2>
+<span class="cfm-rd-lbl">Medford-Specific Fit</span>
+<p class="cfm-rd-p"><strong>Are there situations in the Rogue Valley where renting is the right choice?</strong> Yes &mdash; here's the honest breakdown.</p>
+
+<div class="cfm-rd-fit">
+<div class="cfm-rd-fit-panel yes">
+<h4>Use A Rug Doctor When</h4>
+<ul>
+<li><span class="mk">&#10003;</span>The carpet has light surface soil only (infrequently used room, minimal traffic)</li>
+<li><span class="mk">&#10003;</span>You vacuumed weekly throughout the year and there's no embedded contamination</li>
+<li><span class="mk">&#10003;</span>You need a quick refresh before a gathering and have 1&ndash;2 rooms of light-use carpet</li>
+<li><span class="mk">&#10003;</span>Cost is your primary concern and the result quality difference is acceptable to you</li>
+<li><span class="mk">&#10003;</span>You're in a short-term rental and not responsible for long-term carpet condition</li>
+<li><span class="mk">&#10003;</span>You're testing whether a carpet can be refreshed before deciding on replacement</li>
+</ul>
+</div>
+<div class="cfm-rd-fit-panel no">
+<h4>Use A Professional When</h4>
+<ul>
+<li><span class="mk">&#10007;</span>Table Rocks or Bear Creek Greenway volcanic clay is in the carpet from 2+ months of hikes</li>
+<li><span class="mk">&#10007;</span>Cat or dog contamination (enzyme treatment requires professional chemistry + sub-surface extraction)</li>
+<li><span class="mk">&#10007;</span>Wildfire smoke has affected your Jackson County home (a Rug Doctor cannot address particulate at fiber depth)</li>
+<li><span class="mk">&#10007;</span>Carpet hasn't been professionally extracted in 2+ years</li>
+<li><span class="mk">&#10007;</span>You need a dated service receipt for a move-out or landlord documentation</li>
+<li><span class="mk">&#10007;</span>You need the carpet dry within 4 hours for any reason (events, pets re-entry, kids)</li>
+<li><span class="mk">&#10007;</span>Allergen reduction is the goal (allergy households, post-pollen-season cleaning)</li>
+</ul>
+</div>
+</div>
+
+<h2 id="seven-decisions">7 Questions to Ask Yourself Before You Rent a Rug Doctor in Medford</h2>
+<span class="cfm-rd-lbl">Your Decision Checklist</span>
+<p class="cfm-rd-p"><strong>How do I know if I should rent or call a professional?</strong></p>
+
+<ol class="cfm-rd-decisions">
+<li><span class="num">1</span><div class="txt"><h4>Has this carpet been professionally extracted in the past 12 months?</h4><p>If yes, a Rug Doctor can maintain that baseline reasonably well. If no, professional extraction addresses the accumulated contamination a Rug Doctor won't reach.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Does anyone in the household hike Table Rocks, Roxy Ann Peak, or Bear Creek Greenway?</h4><p>If yes, red volcanic clay has likely accumulated in entry and living areas. Rug Doctor's partial extraction will leave this clay &mdash; which re-soils faster than ordinary dust. See our <a href="https://carpetcleaningmedfordoregon.com/rogue-valley-mud-season-trail-carpet-guide/">Rogue Valley mud season trail carpet guide</a>.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Do you have cats, dogs, or other pets?</h4><p>If pets are present, dander, paw tracking, and any contamination zones require enzyme chemistry and sub-surface extraction capability. A Rug Doctor provides neither.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Has your home been affected by wildfire smoke this season?</h4><p>If yes, a Rug Doctor cannot address odor-causing compounds at fiber depth. A professional smoke protocol is the only effective consumer option. See <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/">can carpet cleaning remove wildfire smoke smell</a>.</p></div></li>
+<li><span class="num">5</span><div class="txt"><h4>Do you need the carpet dry within 8 hours?</h4><p>If yes, a Rug Doctor typically leaves 12&ndash;24 hour drying time in Medford conditions (longer in winter with Rogue Valley temperature inversions). Professional extraction dries considerably faster.</p></div></li>
+<li><span class="num">6</span><div class="txt"><h4>Do you need a dated service receipt for a landlord, move-out, or deposit documentation?</h4><p>If yes, a Rug Doctor rental receipt doesn't meet the "professional cleaning" standard in most Oregon leases. See <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-deducted-security-deposit-oregon/">carpet cleaning and deducted security deposits in Oregon</a>.</p></div></li>
+<li><span class="num">7</span><div class="txt"><h4>Is cost your primary driver and the carpet is in light-use condition?</h4><p>If yes, a Rug Doctor is a reasonable option for the light-soil scenario where the machine's limitations don't matter.</p></div></li>
+</ol>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Rug-Doctor-vs-Professional-Carpet-Cleaner-Real-Comparison.webp" alt="Real-world comparison of Rug Doctor rental vs professional carpet cleaning results in Medford Oregon" style="width:100%;border-radius:14px;margin:28px 0;display:block;">
+
+<h2 id="faq">Rug Doctor vs Professional FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-rd-faq" id="cfm-rd-faq">
+
+<div class="cfm-rd-faq-item" aria-expanded="false">
+<button class="cfm-rd-faq-q" type="button">Is a Rug Doctor as good as professional carpet cleaning?<span class="plus">+</span></button>
+<div class="cfm-rd-faq-a"><div class="cfm-rd-faq-a-inner">For light surface soil on recently maintained carpet &mdash; close enough that the difference may not matter for your specific situation. For anything in a Medford home with trail soil, pet contamination, wildfire smoke exposure, or carpet that hasn't been professionally extracted in 2+ years &mdash; a Rug Doctor leaves the contamination that matters and creates a re-soiling cycle from detergent residue. The gap is greatest precisely in the situations where Medford homeowners most need effective cleaning.</div></div>
+</div>
+
+<div class="cfm-rd-faq-item" aria-expanded="false">
+<button class="cfm-rd-faq-q" type="button">How much does a Rug Doctor cost to rent in Medford vs hiring a professional?<span class="plus">+</span></button>
+<div class="cfm-rd-faq-a"><div class="cfm-rd-faq-a-inner">A Rug Doctor rental for a 3-bedroom Medford home runs $95&ndash;$175 total (machine rental + cleaning solution + optional upsells) plus 4&ndash;6 hours of your time. Professional carpet cleaning costs more upfront but includes labor, dries in 2&ndash;4 hours (vs 12&ndash;24), doesn't leave detergent residue, and addresses contamination at full pile depth. See our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">pricing guide</a> for current Medford-area rates.</div></div>
+</div>
+
+<div class="cfm-rd-faq-item" aria-expanded="false">
+<button class="cfm-rd-faq-q" type="button">Will a Rug Doctor remove wildfire smoke smell?<span class="plus">+</span></button>
+<div class="cfm-rd-faq-a"><div class="cfm-rd-faq-a-inner">Not effectively. Rug Doctor machines operate at temperatures insufficient to address the odor-causing compounds from wildfire smoke that are embedded in carpet fiber at depth. Surface odor may be temporarily reduced, but smoke smell returns as embedded compounds continue off-gassing. For wildfire smoke treatment in Jackson County homes, a professional oxidizing pre-spray protocol plus deep truck-mounted extraction is the effective approach. See <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/">can carpet cleaning remove wildfire smoke smell</a>.</div></div>
+</div>
+
+<div class="cfm-rd-faq-item" aria-expanded="false">
+<button class="cfm-rd-faq-q" type="button">Can I use a Rug Doctor for pet urine?<span class="plus">+</span></button>
+<div class="cfm-rd-faq-a"><div class="cfm-rd-faq-a-inner">Rug Doctor sells pet urine formulas, and they can reduce surface pet odor. For cat urine specifically &mdash; which involves uric acid crystals that bond to fiber and require enzyme chemistry with extended dwell time &mdash; consumer-grade solutions at rental-machine temperatures don't produce complete results. Cat odor treated with a Rug Doctor often returns with heat and humidity. For pet contamination in Medford households, professional enzyme treatment produces reliable results that rental machines typically don't. See <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-pet-urine-medford-oregon/">can carpet cleaning remove pet urine</a>.</div></div>
+</div>
+
+<div class="cfm-rd-faq-item" aria-expanded="false">
+<button class="cfm-rd-faq-q" type="button">Why does my carpet get dirty so fast after I rent a Rug Doctor?<span class="plus">+</span></button>
+<div class="cfm-rd-faq-a"><div class="cfm-rd-faq-a-inner">Two mechanisms: (1) Detergent residue &mdash; Rug Doctor solution isn't rinsed out after extraction, leaving alkaline chemistry in the fiber that attracts new soil aggressively; (2) Over-wet drying &mdash; the longer drying window means foot traffic during drying deposits soil into still-damp fiber. Professional cleaning uses a pH-balanced rinse to remove chemistry residue and dry stroke extraction to minimize drying time &mdash; both specifically prevent this re-soiling pattern.</div></div>
+</div>
+
+<div class="cfm-rd-faq-item" aria-expanded="false">
+<button class="cfm-rd-faq-q" type="button">Can I use a Rug Doctor for my move-out cleaning in Medford?<span class="plus">+</span></button>
+<div class="cfm-rd-faq-a"><div class="cfm-rd-faq-a-inner">If your lease requires "professional carpet cleaning," a Rug Doctor rental typically doesn't satisfy that requirement. Most Oregon residential leases that specify professional cleaning mean a licensed, insured company using commercial-grade equipment &mdash; a rental machine receipt from Fred Meyer or Home Depot is not the same document. For move-out cleaning that will be used for deposit documentation in Jackson County, professional cleaning with a dated IICRC-certified service receipt is the appropriate choice. See <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-deducted-security-deposit-oregon/">carpet cleaning and deducted security deposits in Oregon</a>.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-rd-toc" id="cfm-rd-toc" data-open="true">
+<span class="toc-ttl cfm-rd-toc-static">In This Guide</span>
+<button class="cfm-rd-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-rd-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-rd-toc-list">
+<li><a href="#answer">The Direct Answer</a></li>
+<li><a href="#how-rug-doctor">How a Rug Doctor Works</a></li>
+<li><a href="#real-cost">The Real Total Cost</a></li>
+<li><a href="#result-gap">The Performance Gap</a></li>
+<li><a href="#re-soiling">The Re-Soiling Truth</a></li>
+<li><a href="#medford-fit">Medford-Specific Fit</a></li>
+<li><a href="#seven-decisions">7 Decision Questions</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-rd-cta">
+<h2>When Professional Makes Sense &mdash; We're Ready</h2>
+<p>Truck-mounted, IICRC certified, pH-balanced rinse on every job. Dry in 2&ndash;4 hours. Medford and Jackson County.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; See Our Pricing &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-rd-related">
+<h3>Related Reading</h3>
+<div class="cfm-rd-rel-grid">
+<a class="cfm-rd-rel-card" href="https://carpetcleaningmedfordoregon.com/truck-mount-vs-portable-carpet-cleaning-medford/">
+<span class="lbl">&#128665; Guide</span>
+<p class="ttl">Truck Mount vs Portable Cleaning</p>
+</a>
+<a class="cfm-rd-rel-card" href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">
+<span class="lbl">&#128176; Guide</span>
+<p class="ttl">How Much Does Carpet Cleaning Cost?</p>
+</a>
+<a class="cfm-rd-rel-card" href="https://carpetcleaningmedfordoregon.com/is-carpet-cleaning-worth-it-medford-oregon/">
+<span class="lbl">&#9989; Guide</span>
+<p class="ttl">Is Carpet Cleaning Worth It?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-rd-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-rd-toc');
+var tocBtn=toc.querySelector('.cfm-rd-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-rd-faq .cfm-rd-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-rd-faq-q');
+var ans=item.querySelector('.cfm-rd-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-rd-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

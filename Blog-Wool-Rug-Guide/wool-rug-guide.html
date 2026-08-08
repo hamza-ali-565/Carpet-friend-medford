@@ -1,0 +1,417 @@
+<!-- wp:html -->
+<style id="cfm-wr-css">
+.cfm-page-wool-rug{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-wool-rug *,.cfm-page-wool-rug *::before,.cfm-page-wool-rug *::after{box-sizing:border-box}
+.cfm-page-wool-rug p,.cfm-page-wool-rug li,.cfm-page-wool-rug h1,.cfm-page-wool-rug h2,.cfm-page-wool-rug h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-wr-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52b788;z-index:9998;transition:width .1s linear}
+
+.cfm-wr-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-wr-topline a{color:#2d6a4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-wr-topline a:hover{text-decoration:underline}
+
+.cfm-wr-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-wr-hero .ey{display:block;color:#95d5b2;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-wr-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-wr-hero .byline{color:#95d5b2;font-size:13.5px;font-weight:600;margin:0}
+.cfm-wr-hero .rt{display:inline-block;background:#d8f3dc;color:#1b4332;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-wr-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-wr-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-wr-toc{flex:0 0 300px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #1b4332;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-wr-toc .toc-ttl{display:block;color:#2d6a4f;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-wr-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-wr-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-wr-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-wr-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-wr-toc a:hover{color:#1b4332}
+.cfm-wr-toc a.active{color:#1b4332;font-weight:700}
+.cfm-wr-toc a.active::before{color:#2d6a4f}
+.cfm-wr-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-wr-layout{flex-direction:column}
+.cfm-wr-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-wr-toc-static{display:none}
+.cfm-wr-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-wr-toc-toggle .chev{transition:transform .2s;color:#2d6a4f}
+.cfm-wr-toc[data-open="false"] ol{display:none}
+.cfm-wr-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-wr-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-wr-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-wr-intro{background:#d8f3dc;border-left:4px solid #1b4332;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-wr-intro p{color:#1a1a1a;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-wool-rug h2{color:#1b4332;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-wr-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-wool-rug .cfm-wr-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-wool-rug strong{color:#1a1a1a}
+
+.cfm-wr-lbl{display:block;color:#2d6a4f;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-wr-split{display:flex;gap:18px;margin:24px 0 8px}
+.cfm-wr-do,.cfm-wr-never{flex:1;border-radius:12px;padding:22px 22px 20px;border:1px solid}
+.cfm-wr-do{background:#f0fdf4;border-color:#16a34a}
+.cfm-wr-never{background:#fef2f2;border-color:#991b1b}
+.cfm-wr-do h4,.cfm-wr-never h4{font-size:15.5px;font-weight:800;margin:0 0 14px;letter-spacing:.3px}
+.cfm-wr-do h4{color:#166534}
+.cfm-wr-never h4{color:#991b1b}
+.cfm-wr-do ul,.cfm-wr-never ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.cfm-wr-do li,.cfm-wr-never li{font-size:14.5px;line-height:1.6;padding-left:0}
+.cfm-wr-do li{color:#14532d}
+.cfm-wr-never li{color:#7f1d1d}
+
+.cfm-wr-danger{background:#fee2e2;border-left:4px solid #9b1c1c;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-wr-danger p{color:#7f1d1d;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-wr-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-wr-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-wr-info{background:#dbeafe;border-left:4px solid #1e40af;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-wr-info p{color:#1e3a8a;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-wr-cards{display:grid;grid-template-columns:repeat(1,1fr);gap:16px;margin:24px 0 8px}
+.cfm-wr-card{background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;border-top:4px solid #1b4332}
+.cfm-wr-card h4{color:#1a1a1a;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-wr-card p{color:#4a5568;font-size:14px;line-height:1.65;margin:0 0 10px}
+
+.cfm-wr-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-wr-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e8ecf0;border-radius:12px;padding:20px 22px}
+.cfm-wr-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#1b4332;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-wr-steps .txt h4{color:#1a1a1a;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-wr-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-wr-when{display:flex;flex-direction:column;gap:12px;margin:24px 0 8px}
+.cfm-wr-when-item{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:18px 22px}
+.cfm-wr-when-item .num{flex-shrink:0;width:32px;height:32px;border-radius:8px;background:#d8f3dc;color:#1b4332;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-wr-when-item h4{color:#1a1a1a;font-size:15px;font-weight:700;margin:0 0 5px}
+.cfm-wr-when-item p{color:#4a5568;font-size:14px;line-height:1.6;margin:0}
+
+.cfm-wr-faq{max-width:100%;margin:24px 0 8px}
+.cfm-wr-faq-item{border:1px solid #e8ecf0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-wr-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#1a1a1a;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-wr-faq-q:hover{background:#d8f3dc}
+.cfm-wr-faq-q .plus{color:#1b4332;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-wr-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-wr-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-wr-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-wr-cta{background:#1b4332;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-wr-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-wr-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-wr-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-wr-cta a.btn-w{background:#fff;color:#1b4332;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-wr-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-wr-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-wr-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-wr-related h3{color:#1b4332;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-wr-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-wr-rel-card{display:block;background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-wr-rel-card:hover{box-shadow:0 10px 30px rgba(27,67,50,.12);transform:translateY(-2px)}
+.cfm-wr-rel-card .lbl{display:block;color:#2d6a4f;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-wr-rel-card .ttl{color:#1b4332;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-wr-split{flex-direction:column}
+.cfm-wr-rel-grid{grid-template-columns:1fr}
+.cfm-wr-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-wr-cta a.btn-w,.cfm-wr-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-wr-layout{padding:32px 20px}
+.cfm-wr-hero{min-height:320px;padding:48px 20px 40px}
+}
+</style>
+
+<div class="cfm-page-wool-rug">
+
+<div class="cfm-wr-progress" id="cfm-wr-progress"></div>
+
+<div class="cfm-wr-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-wr-hero" style="background-image:linear-gradient(160deg,rgba(27,67,50,.88) 0%,rgba(20,45,35,.85) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/How-to-Clean-Wool-Rugs-A-Fiber-Safe-Guide-for-Medford-Homes.webp')" role="img" aria-label="Wool area rug in Medford Oregon home &mdash; fiber-safe cleaning guide for Rogue Valley homeowners with wool rugs">
+<span class="ey">Local Guide &middot; Jackson County, Oregon</span>
+<h1>How to Clean Wool Rugs &mdash; A Fiber-Safe Guide for Medford Homes</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">8 min read</span></p>
+</div>
+
+<div class="cfm-wr-layout">
+
+<div class="cfm-wr-wrap">
+
+<div class="cfm-wr-intro" id="answer">
+<p>Wool rugs tolerate gentle vacuuming, cold water blotting of fresh spills, and low-moisture spot cleaning with pH-neutral solutions. They cannot tolerate alkaline cleaning products (even mild dish soap), hot water, scrubbing, machine washing, or hanging damp. In Medford specifically, volcanic clay from trail tracking and wildfire smoke require professional hot water extraction &mdash; home methods can't reach contamination at pile depth.</p>
+</div>
+
+<p class="cfm-wr-p">If you have a wool rug in your Medford home, you've probably wondered about the right way to maintain it between professional cleans. The anxiety is understandable &mdash; wool is the most rewarding rug fiber to own and the easiest to damage with the wrong approach. Most of the information online gets this right in general terms but misses the Rogue Valley-specific factors that matter here: the hard water from Jackson County's water system, the red volcanic clay from Table Rocks and Bear Creek Greenway hikes, and the smoke season context. This guide covers what to do, what never to do, and when to stop handling it yourself.</p>
+
+<h2 id="why-wool-different">Why Wool Rugs Behave Completely Differently from Synthetic Carpet</h2>
+<span class="cfm-wr-lbl">Wool Fiber Science</span>
+<p class="cfm-wr-p"><strong>Why is a wool rug so much more sensitive to cleaning mistakes than synthetic carpet?</strong></p>
+<p class="cfm-wr-p">Wool is a protein fiber &mdash; chemically more similar to human hair than to the synthetic polymers (nylon, polyester, polypropylene) that make up most wall-to-wall carpet. Protein fibers have a natural pH preference of approximately 4.5&ndash;7 (slightly acidic to neutral). When alkaline chemicals contact wool fiber &mdash; anything with a pH above 7 &mdash; they begin breaking down the amino acid bonds in the protein structure. This is the same chemical reaction that gives wool its naturally soft feel (protein chains are chemically cleaved by alkali) &mdash; but in a cleaning context, it means the fiber is being structurally damaged, not cleaned.</p>
+<p class="cfm-wr-p">Wool fiber surfaces are covered in microscopic scales, similar to fish scales. In normal use, these scales sit flat. When wool is exposed to heat, agitation, and moisture simultaneously &mdash; the conditions in a hot washing machine, for example &mdash; the scales open, interlock with neighboring fibers, and the interlocking can't be undone. The result is felting: irreversible fiber fusion that permanently shrinks and stiffens the rug. This is why "dry clean only" and "cold water wash" labels on wool items exist. The same damage happens with a steam cleaner or a carpet cleaning machine at standard residential carpet temperatures.</p>
+<p class="cfm-wr-p"><strong>Can I use a steam cleaner on a wool rug at home?</strong></p>
+<p class="cfm-wr-p">No. A home steam cleaner combines high heat with moisture and often agitation &mdash; exactly the conditions that cause felting and damage wool's protein structure. Hot water from a machine, even on "delicate mode," represents a significant risk to hand-knotted and high-quality wool rugs. Professional cleaning of wool rugs requires temperature control to below 140&deg;F, far below standard carpet cleaning temperature, and pH-neutral chemistry. This is why professional cleaning of wool is not interchangeable with DIY attempts &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">area rug cleaning service in Medford</a> for how we handle wool-safe temperature and chemistry.</p>
+
+<h2 id="never-do">What You Must Never Do to a Wool Rug</h2>
+<span class="cfm-wr-lbl">The Never List</span>
+<p class="cfm-wr-p"><strong>What are the biggest mistakes Medford homeowners make with wool rugs?</strong></p>
+
+<div class="cfm-wr-split">
+<div class="cfm-wr-do">
+<h4>&#10003; DO</h4>
+<ul>
+<li>Vacuum with a suction-only attachment &mdash; no rotating brush bar. Brush bars can snag wool pile and pull tufts.</li>
+<li>Blot fresh spills immediately with a clean white cloth. Blot, never rub.</li>
+<li>Use cold or room-temperature water for fresh spill treatment only.</li>
+<li>Use a pH-neutral wool-specific cleaning solution for spot treatment (available at specialty rug stores &mdash; Woolite Delicates, diluted at the correct ratio).</li>
+<li>Rotate the rug 90&deg; every 6 months to distribute traffic wear evenly.</li>
+<li>Use a rug pad to prevent backing abrasion from hard floors and reduce slippage.</li>
+<li>Lay flat to dry &mdash; never hang a wool rug when damp.</li>
+</ul>
+</div>
+<div class="cfm-wr-never">
+<h4>&#10007; NEVER</h4>
+<ul>
+<li>Apply dish soap, OxiClean, baking soda, vinegar, or any household cleaner &mdash; all are pH-inappropriate for wool.</li>
+<li>Use the rotating brush-roll on a vacuum. It damages pile tufts.</li>
+<li>Apply hot or warm water. It creates a shrinkage risk.</li>
+<li>Rub or scrub a stain &mdash; it pushes the stain deeper and distorts pile direction.</li>
+<li>Machine wash or put the rug in a top-load washer. This is guaranteed felting.</li>
+<li>Use a steam cleaner or standard carpet cleaning machine.</li>
+<li>Hang the rug to dry while wet. It puts enormous stress on the warp threads and can distort the shape permanently.</li>
+<li>Apply spot treatment chemicals without testing on a hidden corner first.</li>
+<li>Leave a wet rug folded or rolled. This creates mold risk and permanent crease damage.</li>
+</ul>
+</div>
+</div>
+
+<div class="cfm-wr-danger">
+<p>&#9888; The most common irreversible damage we see on wool rugs brought to us after DIY attempts: alkaline detergent damage (felting or dye shift), distortion from being hung wet, and pile damage from rotating vacuum heads. None of these can be undone.</p>
+</div>
+
+<h2 id="medford-hazards">Rogue Valley-Specific Hazards for Wool Rugs</h2>
+<span class="cfm-wr-lbl">Local Hazards</span>
+<p class="cfm-wr-p"><strong>Does living in Medford create specific problems for wool rugs that wouldn't happen elsewhere?</strong> Yes &mdash; three significant ones.</p>
+
+<div class="cfm-wr-cards">
+<div class="cfm-wr-card">
+<h4>Table Rocks and Trail Volcanic Clay</h4>
+<p>The red-orange volcanic silicate clay from Table Rocks hikes and Bear Creek Greenway is particularly problematic for wool rugs because wool's microscopic scale structure traps fine particulate more effectively than smooth synthetic fiber. Over months of foot traffic from households with active hikers or trail dogs, volcanic clay packs between the wool tufts at depths a home vacuum cannot reach. The clay's silicate composition is also mildly abrasive to wool fiber over time.</p>
+<p><strong>Home response:</strong> more frequent vacuuming &mdash; twice weekly in rooms near entry for trail households &mdash; reduces surface clay before it migrates deeper. But clay that has been worked into the pile by foot traffic over 3&ndash;6 months needs professional extraction at lower-than-standard temperatures. See <a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">area rug cleaning in Medford</a> for how we handle trail-soiled wool.</p>
+</div>
+<div class="cfm-wr-card">
+<h4>Wildfire Smoke Particulate (July&ndash;September)</h4>
+<p>During Rogue Valley wildfire season, PM2.5 particles settle into wool pile just as they do in wall-to-wall carpet. Wool's scale structure traps fine smoke particulate effectively, which means wildfire smoke contamination in wool rugs can be both an odor and an appearance issue. Home vacuuming removes surface particles but not embedded ones.</p>
+<p><strong>Critical note:</strong> do not attempt to treat wildfire smoke contamination on a wool rug with any oxidizing spray or home product. The oxidizing chemistry appropriate for smoke treatment in synthetic carpet can damage wool fiber. Wildfire smoke in wool requires professional treatment with wool-compatible chemistry at controlled temperatures.</p>
+</div>
+<div class="cfm-wr-card">
+<h4>Jackson County Hard Water Spotting</h4>
+<p>Jackson County's water supply is moderately hard, with elevated calcium and magnesium content. When you spot-treat a wool rug with tap water and let it air dry, the water evaporates but the minerals don't. The mineral residue creates "tide marks" &mdash; circular lighter-colored rings around the treated area that are more visible on dark-colored wool pile. Over time and repeated spot treatments with hard water, these mineral deposits accumulate and create stiff zones in the wool.</p>
+<p><strong>Prevention:</strong> use distilled water or filtered water for any home spot treatment on wool rugs. The tap water that's fine for synthetic carpet is a genuine problem for wool in a hard-water area like Jackson County.</p>
+</div>
+</div>
+
+<h2 id="home-routine">The Right Home Maintenance Routine for Wool Rugs in Medford</h2>
+<span class="cfm-wr-lbl">Maintenance Schedule</span>
+<p class="cfm-wr-p"><strong>How should I maintain a wool rug between professional cleanings?</strong></p>
+
+<ol class="cfm-wr-steps">
+<li><span class="num">1</span><div class="txt"><h4>Weekly (high-traffic) or bi-weekly (low-traffic)</h4><p>Vacuum using suction only, not the rotating brush bar. If your vacuum doesn't have a suction-only setting, use the bare-floor suction attachment or a carpet rake to lift pile before vacuuming. In a Medford home with trail access, vacuum the rug twice weekly during October&ndash;March mud season to prevent volcanic clay from migrating into the pile.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Monthly</h4><p>Flip the rug and vacuum the back. Dust and debris that migrates through the pile collects on the underside backing; vacuuming the back removes this material and prevents it from being ground back into the pile from below. Also check the rug pad &mdash; a worn or deteriorating pad can transfer particles and adhesive residue to the backing. Replace rug pads every 5&ndash;7 years.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Every 6 months</h4><p>Rotate the rug 90&deg; or 180&deg; to redistribute foot traffic wear. Inspect the fringe (if present) for fraying or staining &mdash; the fringe is the rug's warp threads, and once damaged they can unravel; minor fringe issues are best left for professional attention. Also check the backing: fold a corner gently, and if the backing is cracking or shedding powder, the secondary backing has dry-rotted and wet cleaning should not be attempted.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Annually or as needed</h4><p>Professional cleaning at appropriate wool-safe temperatures and chemistry. See our <a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">area rug cleaning service</a> for the full professional process.</p></div></li>
+</ol>
+
+<h2 id="spot-treatment">Spot Treatment Protocol for Wool Rugs &mdash; Step by Step</h2>
+<span class="cfm-wr-lbl">Spot Treatment at Home</span>
+<p class="cfm-wr-p"><strong>What's the correct way to treat a fresh spill on a wool rug?</strong></p>
+
+<ol class="cfm-wr-steps">
+<li><span class="num">1</span><div class="txt"><h4>Act immediately</h4><p>Wool's scale structure absorbs liquid quickly. Every 30 seconds a fresh spill sits makes extraction harder. Get a clean white cloth &mdash; white only, since colored cloth can transfer dye &mdash; and begin immediately.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>Blot, never rub</h4><p>Place the cloth on the spill and apply gentle downward pressure to absorb liquid. Lift and repeat. Do not rub or scrub &mdash; rubbing drives the spill into the pile structure and abrades the scale surface of wool fiber, causing permanent dull patches.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>Remove solids first</h4><p>For anything semi-solid, such as food or pet matter, remove the solid material with a spoon or flat edge before applying any moisture. Blot from the outside of the spill inward to prevent spreading.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Cold water flush, if needed</h4><p>For water-soluble spills like coffee, wine, or juice, a cold water flush after blotting removes dissolved residue. Use distilled or filtered water, not tap &mdash; hard water minerals leave tide marks on wool in Jackson County. Apply a small amount to the spot, blot again, and repeat once or twice. Don't saturate.</p></div></li>
+<li><span class="num">5</span><div class="txt"><h4>pH-neutral spot treatment, if stain remains</h4><p>If residue remains after cold water blotting, apply a very small amount of Woolite Delicates or a similar pH-neutral wool-safe product diluted to label directions. Test on a hidden area of the rug first, under a furniture leg, to confirm no dye shift. Blot gently &mdash; do not agitate. Cold water rinse, then blot dry.</p></div></li>
+<li><span class="num">6</span><div class="txt"><h4>Flat dry under a fan</h4><p>After spot treatment, lay the rug flat and direct a fan toward the treated area. Don't walk on the damp area, and don't fold or stack anything on a damp rug. Allow it to fully dry before returning the rug to use.</p></div></li>
+</ol>
+
+<div class="cfm-wr-danger">
+<p>&#9888; If any spot treatment product causes the rug color to shift, run, or spread, stop immediately and call a professional. Do not attempt to fix dye transfer at home &mdash; the more water and chemistry applied to a running dye, the larger the damage zone becomes. See our <a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">area rug cleaning service</a> for dye-transfer assessment.</p>
+</div>
+
+<h2 id="when-to-call">When to Call a Professional &mdash; The Decision Threshold for Wool Rugs</h2>
+<span class="cfm-wr-lbl">Professional vs Home Care</span>
+<p class="cfm-wr-p"><strong>When does a wool rug in Medford need professional cleaning rather than home care?</strong> Seven situations point to professional cleaning rather than continued home care.</p>
+
+<div class="cfm-wr-when">
+<div class="cfm-wr-when-item"><span class="num">1</span><div><h4>Trail soil or volcanic clay worked into the pile</h4><p>If your rug is in a room with direct trail access and hasn't been professionally cleaned in 12+ months, clay from Table Rocks or Bear Creek Greenway trail use has migrated below what home vacuuming can reach. Professional extraction removes this.</p></div></div>
+<div class="cfm-wr-when-item"><span class="num">2</span><div><h4>Wildfire smoke odor or discoloration</h4><p>Wool rugs near open windows or in rooms ventilated during smoke events can absorb PM2.5 and smoke odor. Home treatment is not appropriate for wool in this situation and requires professional smoke treatment with wool-compatible chemistry.</p></div></div>
+<div class="cfm-wr-when-item"><span class="num">3</span><div><h4>Pet contamination</h4><p>Cat or dog contamination on wool requires professional enzyme treatment. Consumer enzyme products may not be pH-appropriate for wool, and sub-surface contamination in a wool rug cannot be addressed with home methods.</p></div></div>
+<div class="cfm-wr-when-item"><span class="num">4</span><div><h4>Fringe damage or structural concerns</h4><p>Loose fringe, fraying edges, or visible backing deterioration are restoration issues, not cleaning issues. Professional assessment before cleaning is the right step.</p></div></div>
+<div class="cfm-wr-when-item"><span class="num">5</span><div><h4>Visible hard water tide marks from previous spot treatment</h4><p>Multiple tide-mark rings from hard water spot treatments need mineral-dissolving chemistry as part of the cleaning process &mdash; home methods don't address them.</p></div></div>
+<div class="cfm-wr-when-item"><span class="num">6</span><div><h4>Unknown stain type or old stain</h4><p>Older stains, unknown-origin stains, or stains that changed appearance after previous treatment are best assessed professionally. The wrong home chemistry can permanently set a stain in wool.</p></div></div>
+<div class="cfm-wr-when-item"><span class="num">7</span><div><h4>Annual professional maintenance</h4><p>Even a well-maintained wool rug with no visible issues benefits from annual professional extraction to remove accumulated fine particulate below vacuum reach.</p></div></div>
+</div>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/How-to-Clean-Wool-Rugs-A-Fiber-Safe-Guide-for-Medford-Homes.webp" alt="Wool rug being carefully maintained in a Medford Oregon home &mdash; when to use home care vs professional wool rug cleaning" style="width:100%;border-radius:14px;margin:28px 0;display:block;">
+
+<h2 id="faq">Wool Rug FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-wr-faq" id="cfm-wr-faq">
+
+<div class="cfm-wr-faq-item" aria-expanded="false">
+<button class="cfm-wr-faq-q" type="button">Can I clean a wool rug myself at home?<span class="plus">+</span></button>
+<div class="cfm-wr-faq-a"><div class="cfm-wr-faq-a-inner">For routine maintenance &mdash; regular vacuuming, fresh spill blotting with cold water and pH-neutral cleaner &mdash; yes, with the right approach. For anything involving accumulated deep-pile contamination, wildfire smoke, pet stains, hard water tide marks, or annual deep cleaning, professional cleaning is the appropriate path. Wool is the fiber most commonly damaged by well-intentioned DIY cleaning attempts &mdash; alkaline products, hot water, and scrubbing can all cause irreversible damage.</div></div>
+</div>
+
+<div class="cfm-wr-faq-item" aria-expanded="false">
+<button class="cfm-wr-faq-q" type="button">What cleaning products are safe for wool rugs?<span class="plus">+</span></button>
+<div class="cfm-wr-faq-a"><div class="cfm-wr-faq-a-inner">Products specifically labeled as pH-neutral or wool-safe &mdash; Woolite Delicates at the correct dilution is the most widely available. Stay away from standard dish soap, baking soda (alkaline), vinegar (acid, which damages dyes in some wool), OxiClean, and any general carpet cleaner. When in doubt, blot with cold distilled water first, and if that doesn't resolve the issue, call a professional rather than escalating to home chemistry.</div></div>
+</div>
+
+<div class="cfm-wr-faq-item" aria-expanded="false">
+<button class="cfm-wr-faq-q" type="button">Why does my wool rug smell musty after it got wet?<span class="plus">+</span></button>
+<div class="cfm-wr-faq-a"><div class="cfm-wr-faq-a-inner">Wool that was wetted and not dried completely flat and quickly can develop microbial activity in the backing. This is the musty smell &mdash; it's in the backing material, not the wool pile itself. A wool rug that wasn't dried properly after a spill or cleaning attempt often needs professional extraction and antimicrobial treatment. Don't roll or store a wool rug that has any damp or musty character.</div></div>
+</div>
+
+<div class="cfm-wr-faq-item" aria-expanded="false">
+<button class="cfm-wr-faq-q" type="button">How often should I professionally clean my wool rug in Medford?<span class="plus">+</span></button>
+<div class="cfm-wr-faq-a"><div class="cfm-wr-faq-a-inner">Once a year is the minimum for most wool rugs in residential Medford homes. More frequently for rugs in high-traffic areas near trail access &mdash; Table Rocks, Bear Creek Greenway access points in East and South Medford &mdash; rugs in pet households, or rugs in rooms affected by wildfire smoke season. See <a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">area rug cleaning in Medford</a> for scheduling.</div></div>
+</div>
+
+<div class="cfm-wr-faq-item" aria-expanded="false">
+<button class="cfm-wr-faq-q" type="button">Can you fix a wool rug that was damaged by DIY cleaning?<span class="plus">+</span></button>
+<div class="cfm-wr-faq-a"><div class="cfm-wr-faq-a-inner">Sometimes &mdash; it depends on the damage type. Dye transfer from alkaline chemistry may be partially addressed with specialist treatment. Hard water tide marks from tap water spot treatments can often be significantly reduced. Felting from hot water or machine washing is typically permanent. We assess honestly during pre-inspection what's recoverable before recommending a cleaning approach.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-wr-toc" id="cfm-wr-toc" data-open="true">
+<span class="toc-ttl cfm-wr-toc-static">In This Guide</span>
+<button class="cfm-wr-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-wr-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-wr-toc-list">
+<li><a href="#answer">The Short Answer</a></li>
+<li><a href="#why-wool-different">Why Wool Behaves Differently</a></li>
+<li><a href="#never-do">What You Must Never Do</a></li>
+<li><a href="#medford-hazards">Rogue Valley Hazards</a></li>
+<li><a href="#home-routine">Home Maintenance Routine</a></li>
+<li><a href="#spot-treatment">Spot Treatment Protocol</a></li>
+<li><a href="#when-to-call">When to Call a Professional</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-wr-cta">
+<h2>Wool Rug Needs Professional Care? We Know How.</h2>
+<p>pH-neutral chemistry, wool-safe temperatures, fiber identification before we touch it. Medford and Jackson County. (458) 302-0101</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">Our Area Rug Cleaning &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-wr-related">
+<h3>Related Reading</h3>
+<div class="cfm-wr-rel-grid">
+<a class="cfm-wr-rel-card" href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">
+<span class="lbl">&#127808; Service</span>
+<p class="ttl">Area Rug Cleaning Service &mdash; Medford</p>
+</a>
+<a class="cfm-wr-rel-card" href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-guide-medford-oregon/">
+<span class="lbl">&#128218; Guide</span>
+<p class="ttl">Area Rug Cleaning Guide</p>
+</a>
+<a class="cfm-wr-rel-card" href="https://carpetcleaningmedfordoregon.com/rogue-valley-mud-season-trail-carpet-guide/">
+<span class="lbl">&#127783;&#65039; Guide</span>
+<p class="ttl">Mud Season Trail Carpet Guide</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-wr-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-wr-toc');
+var tocBtn=toc.querySelector('.cfm-wr-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-wr-faq .cfm-wr-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-wr-faq-q');
+var ans=item.querySelector('.cfm-wr-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-wr-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->

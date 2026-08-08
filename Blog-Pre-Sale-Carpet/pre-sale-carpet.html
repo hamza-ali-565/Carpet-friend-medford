@@ -1,0 +1,470 @@
+<!-- wp:html -->
+<style id="cfm-ps-css">
+.cfm-page-pre-sale{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-page-pre-sale *,.cfm-page-pre-sale *::before,.cfm-page-pre-sale *::after{box-sizing:border-box}
+.cfm-page-pre-sale p,.cfm-page-pre-sale li,.cfm-page-pre-sale h1,.cfm-page-pre-sale h2,.cfm-page-pre-sale h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.cfm-ps-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:#52b788;z-index:9998;transition:width .1s linear}
+
+.cfm-ps-topline{max-width:1200px;margin:0 auto;padding:16px 20px 0}
+.cfm-ps-topline a{color:#2d6a4f;font-size:13.5px;font-weight:600;text-decoration:none}
+.cfm-ps-topline a:hover{text-decoration:underline}
+
+.cfm-ps-hero{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:clamp(360px,55vw,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,90px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);text-align:center;border-radius:0 0 16px 16px}
+.cfm-ps-hero .ey{display:block;color:#c4b5fd;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px}
+.cfm-ps-hero h1{color:#fff;font-size:clamp(28px,5vw,46px);font-weight:800;line-height:1.18;letter-spacing:-.5px;margin:0 auto 18px;max-width:820px}
+.cfm-ps-hero .byline{color:#c4b5fd;font-size:13.5px;font-weight:600;margin:0}
+.cfm-ps-hero .rt{display:inline-block;background:#ede9fe;color:#4c1d95;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-left:8px;vertical-align:middle}
+
+.cfm-ps-layout{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,32px);display:flex;gap:40px;align-items:flex-start}
+.cfm-ps-wrap{max-width:760px;margin:0;padding:0;flex:1;min-width:0}
+
+.cfm-ps-toc{flex:0 0 300px;background:#fff;border:1px solid #e8ecf0;border-left:3px solid #1b4332;border-radius:12px;padding:20px;position:sticky;top:24px}
+.cfm-ps-toc .toc-ttl{display:block;color:#7C3AED;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+.cfm-ps-toc ol{list-style:none;counter-reset:toc;margin:0;padding:0}
+.cfm-ps-toc li{counter-increment:toc;margin:0 0 4px}
+.cfm-ps-toc a{display:block;color:#4a5568;font-size:14px;line-height:1.5;text-decoration:none;padding:6px 0;border-radius:6px;transition:color .15s}
+.cfm-ps-toc a::before{content:counter(toc)'. ';color:#9ca3af;font-weight:700}
+.cfm-ps-toc a:hover{color:#1b4332}
+.cfm-ps-toc a.active{color:#1b4332;font-weight:700}
+.cfm-ps-toc a.active::before{color:#7C3AED}
+.cfm-ps-toc-toggle{display:none}
+
+@media(max-width:1023px){
+.cfm-ps-layout{flex-direction:column}
+.cfm-ps-toc{position:static;width:100%;flex:1 1 auto}
+.cfm-ps-toc-static{display:none}
+.cfm-ps-toc-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:0;font-family:inherit}
+.cfm-ps-toc-toggle .chev{transition:transform .2s;color:#7C3AED}
+.cfm-ps-toc[data-open="false"] ol{display:none}
+.cfm-ps-toc[data-open="false"] .toc-ttl{margin-bottom:0}
+.cfm-ps-toc[data-open="true"] .chev{transform:rotate(180deg)}
+.cfm-ps-toc[data-open="true"] ol{margin-top:12px}
+}
+
+.cfm-ps-intro{background:#ede9fe;border-left:4px solid #7C3AED;border-radius:0 12px 12px 0;padding:24px 26px;margin:0 0 44px}
+.cfm-ps-intro p{color:#1a1a1a;font-size:17px;line-height:1.75;margin:0;font-weight:500}
+
+.cfm-page-pre-sale h2{color:#1b4332;font-size:clamp(22px,3.4vw,30px);font-weight:800;line-height:1.28;letter-spacing:-.3px;margin:48px 0 18px}
+.cfm-ps-wrap>h2:first-of-type{margin-top:0}
+.cfm-page-pre-sale .cfm-ps-p{color:#4a5568;font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.cfm-page-pre-sale strong{color:#1a1a1a}
+
+.cfm-ps-lbl{display:block;color:#7C3AED;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-ps-realty{background:#EDE9FE;border-left:4px solid #7C3AED;border-radius:0 12px 12px 0;padding:22px 24px;margin:20px 0}
+.cfm-ps-realty p{color:#4c1d95;font-size:15px;line-height:1.7;margin:0}
+.cfm-ps-realty p strong{color:#5b21b6}
+.cfm-ps-realty .realty-lbl{display:block;color:#7C3AED;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+
+.cfm-ps-realty-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 8px}
+.cfm-ps-realty-card{background:#EDE9FE;border-left:4px solid #7C3AED;border-radius:0 12px 12px 0;padding:22px 20px}
+.cfm-ps-realty-card h4{color:#5b21b6;font-size:15.5px;font-weight:700;margin:0 0 8px}
+.cfm-ps-realty-card p{color:#4c1d95;font-size:14px;line-height:1.65;margin:0}
+
+.cfm-ps-steps{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.cfm-ps-steps li{display:flex;gap:16px;align-items:flex-start;background:#f7f8fa;border:1px solid #e8ecf0;border-radius:12px;padding:20px 22px}
+.cfm-ps-steps .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:#7C3AED;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.cfm-ps-steps .txt h4{color:#1a1a1a;font-size:15.5px;font-weight:700;margin:0 0 5px}
+.cfm-ps-steps .txt p{color:#4a5568;font-size:14.5px;line-height:1.65;margin:0}
+
+.cfm-ps-tiers{display:flex;flex-direction:column;gap:20px;margin:24px 0 8px}
+.cfm-ps-tier{background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 24px}
+.cfm-ps-tier .tier-hd{display:flex;align-items:center;gap:10px;margin:0 0 14px}
+.cfm-ps-tier .tier-num{flex-shrink:0;width:30px;height:30px;border-radius:50%;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.cfm-ps-tier.t1 .tier-num{background:#9b1c1c}
+.cfm-ps-tier.t2 .tier-num{background:#b45309}
+.cfm-ps-tier.t3 .tier-num{background:#1e40af}
+.cfm-ps-tier.t4 .tier-num{background:#4a5568}
+.cfm-ps-tier .tier-hd h4{color:#1a1a1a;font-size:16px;font-weight:800;margin:0}
+.cfm-ps-tier-rooms{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.cfm-ps-tier-room{background:#f7f8fa;border:1px solid #e8ecf0;border-radius:10px;padding:16px 18px}
+.cfm-ps-tier-room h5{color:#1a1a1a;font-size:14.5px;font-weight:700;margin:0 0 6px}
+.cfm-ps-tier-room p{color:#4a5568;font-size:13.5px;line-height:1.6;margin:0}
+
+.cfm-ps-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 8px}
+.cfm-ps-cpanel{border-radius:12px;padding:22px 24px;border:1px solid #e8ecf0}
+.cfm-ps-cpanel.clean{background:#f0fdf4;border-top:4px solid #16a34a}
+.cfm-ps-cpanel.replace{background:#fef2f2;border-top:4px solid #9b1c1c}
+.cfm-ps-cpanel h4{font-size:16px;font-weight:800;margin:0 0 14px}
+.cfm-ps-cpanel.clean h4{color:#166534}
+.cfm-ps-cpanel.replace h4{color:#7f1d1d}
+.cfm-ps-cpanel ul{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-direction:column;gap:10px}
+.cfm-ps-cpanel li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.6;color:#374151}
+.cfm-ps-cpanel .mark{flex-shrink:0;font-weight:800}
+.cfm-ps-cpanel.clean .mark{color:#16a34a}
+.cfm-ps-cpanel.replace .mark{color:#9b1c1c}
+.cfm-ps-cpanel .result{font-size:13.5px;line-height:1.6;padding-top:12px;border-top:1px dashed #d1d5db;margin:0;font-weight:600}
+.cfm-ps-cpanel.clean .result{color:#166534}
+.cfm-ps-cpanel.replace .result{color:#7f1d1d}
+
+.cfm-ps-timeline{margin:24px 0;display:flex;flex-direction:column;gap:0}
+.cfm-ps-tl-item{position:relative;padding:0 0 24px 30px;border-left:2px solid #e8ecf0}
+.cfm-ps-tl-item:last-child{border-left:2px solid transparent;padding-bottom:0}
+.cfm-ps-tl-item::before{content:'';position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:#7C3AED}
+.cfm-ps-tl-item .zone{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:8px;margin-bottom:6px;background:#ede9fe;color:#5b21b6}
+.cfm-ps-tl-item h4{color:#1a1a1a;font-size:15px;font-weight:700;margin:0 0 6px}
+.cfm-ps-tl-item p{color:#4a5568;font-size:14.5px;line-height:1.7;margin:0}
+.cfm-ps-tl-item ul{margin:8px 0 0;padding-left:18px;color:#4a5568;font-size:14px;line-height:1.7}
+
+.cfm-ps-warn{background:#fef3c7;border-left:4px solid #b45309;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-ps-warn p{color:#78350f;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-ps-info{background:#dbeafe;border-left:4px solid #1e40af;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.cfm-ps-info p{color:#1e3a8a;font-size:14.5px;line-height:1.65;margin:0;font-weight:600}
+
+.cfm-ps-faq{max-width:100%;margin:24px 0 8px}
+.cfm-ps-faq-item{border:1px solid #e8ecf0;border-radius:12px;overflow:hidden;margin:0 0 12px;background:#fff}
+.cfm-ps-faq-q{width:100%;text-align:left;background:#f7f8fa;border:none;cursor:pointer;padding:18px 22px;font-size:15.5px;font-weight:700;color:#1a1a1a;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.cfm-ps-faq-q:hover{background:#ede9fe}
+.cfm-ps-faq-q .plus{color:#7C3AED;font-size:20px;font-weight:300;flex-shrink:0;line-height:1;transition:transform .2s}
+.cfm-ps-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.cfm-ps-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.cfm-ps-faq-a-inner{padding:20px 22px;font-size:15px;color:#4a5568;line-height:1.75}
+
+.cfm-ps-cta{background:#1b4332;padding:clamp(48px,7vw,72px) clamp(20px,5vw,40px);text-align:center;margin-top:56px}
+.cfm-ps-cta h2{color:#fff;font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 14px;line-height:1.2}
+.cfm-ps-cta p{color:rgba(255,255,255,.92);font-size:16.5px;line-height:1.65;margin:0 auto 28px;max-width:600px}
+.cfm-ps-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.cfm-ps-cta a.btn-w{background:#fff;color:#7C3AED;font-weight:800;font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.cfm-ps-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:14px 32px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.55);white-space:nowrap}
+.cfm-ps-cta a.blog-link{color:#fff;font-size:13.5px;text-decoration:underline;opacity:.85}
+
+.cfm-ps-related{max-width:1000px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px)}
+.cfm-ps-related h3{color:#1b4332;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;text-align:center}
+.cfm-ps-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cfm-ps-rel-card{display:block;background:#fff;border:1px solid #e8ecf0;border-radius:12px;padding:22px 20px;text-decoration:none;transition:box-shadow .18s,transform .18s}
+.cfm-ps-rel-card:hover{box-shadow:0 10px 30px rgba(27,67,50,.12);transform:translateY(-2px)}
+.cfm-ps-rel-card .lbl{display:block;color:#7C3AED;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 8px}
+.cfm-ps-rel-card .ttl{color:#1b4332;font-size:15px;font-weight:700;line-height:1.4;margin:0}
+
+@media(max-width:768px){
+.cfm-ps-realty-cards{grid-template-columns:1fr}
+.cfm-ps-tier-rooms{grid-template-columns:1fr}
+.cfm-ps-compare{grid-template-columns:1fr}
+.cfm-ps-rel-grid{grid-template-columns:1fr}
+.cfm-ps-cta .btn-row{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+.cfm-ps-cta a.btn-w,.cfm-ps-cta a.btn-o{text-align:center;padding:15px 20px}
+.cfm-ps-layout{padding:32px 20px}
+.cfm-ps-hero{min-height:320px;padding:48px 20px 40px}
+}
+</style>
+
+<div class="cfm-page-pre-sale">
+
+<div class="cfm-ps-progress" id="cfm-ps-progress"></div>
+
+<div class="cfm-ps-topline"><a href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a></div>
+
+<div class="cfm-ps-hero" style="background-image:linear-gradient(160deg,rgba(27,67,50,.88) 0%,rgba(45,26,79,.82) 100%),url('https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Carpet-Cleaning-Before-Selling-Your-Medford-Home.webp')" role="img" aria-label="Clean, freshly cleaned carpet in a Medford Oregon home staged for listing — pre-listing carpet cleaning guide">
+<span class="ey">Local Guide &middot; Jackson County, Oregon</span>
+<h1>Carpet Cleaning Before Selling Your Medford Home &mdash; Is It Worth It?</h1>
+<p class="byline">By Carpet Friend Medford | July 2026 | Jackson County, OR <span class="rt">9 min read</span></p>
+</div>
+
+<div class="cfm-ps-layout">
+
+<div class="cfm-ps-wrap">
+
+<div class="cfm-ps-intro" id="answer">
+<p>Yes &mdash; carpet cleaning before listing your Medford home is almost always worth it. In the Rogue Valley market, clean carpet directly affects how your home photographs, how buyers feel on the walk-through, and whether inspection triggers negotiation. The cost of professional carpet cleaning is typically recovered many times over in faster sale time and offers that don't include carpet-related concessions.</p>
+</div>
+
+<p class="cfm-ps-p">If you're preparing to list your Medford home, you've probably already had a realtor walk through and give you the same short list: declutter, paint the front door, clean the carpet. Carpet cleaning tends to land third on that list. It should probably be first. In the Rogue Valley market &mdash; where trail-active households, wildfire smoke seasons, and high pet ownership rates mean the average Medford home's carpet has absorbed more than the average Portland home's &mdash; pre-listing carpet cleaning is one of the most direct investments you can make before photos go live.</p>
+
+<h2 id="roi-math">The ROI Math &mdash; What Pre-Listing Carpet Cleaning Is Actually Worth</h2>
+<span class="cfm-ps-lbl">The Numbers</span>
+<p class="cfm-ps-p"><strong>Is the cost of carpet cleaning before selling really justified by what it returns?</strong> Yes, and the math is worth walking through, because it's not a "nice to have" upgrade &mdash; it's a defensive move against the most common negotiation trigger a Medford seller faces.</p>
+
+<div class="cfm-ps-realty-cards">
+<div class="cfm-ps-realty-card"><h4>Angle 1 &mdash; The Concession Avoided</h4><p>In a typical Medford home sale, a buyer who notices visibly dirty or odor-affected carpet during the walk-through has two options: pass on the home or make a concession offer. Concession offers for carpet replacement in a standard 3-bedroom Medford home often run $3,000&ndash;$8,000 (carpet plus installation). A professional cleaning that costs a fraction of that amount &mdash; and that makes the carpet look significantly better &mdash; prevents that negotiating trigger entirely. If a $250&ndash;$400 professional clean prevents a $3,000 replacement concession, the ROI is 7&ndash;12&times; the cost.</p></div>
+<div class="cfm-ps-realty-card"><h4>Angle 2 &mdash; The Photography Impact</h4><p>Medford listings live and die by online photos &mdash; the vast majority of buyers see a home on Zillow or Realtor.com before they visit in person. Clean carpet photographs dramatically differently than dirty carpet. Dirty carpet in listing photos reads as "work needed" to buyers scanning listings; clean carpet reads as "maintained home." That perception difference affects how many showings a listing gets, which drives how fast it sells and how close to asking price.</p></div>
+<div class="cfm-ps-realty-card"><h4>Angle 3 &mdash; The Walk-Through Emotional Response</h4><p>Buyers decide whether they love a home within the first 60 seconds of entering. Clean-smelling carpet &mdash; no pet odor, no musty smell, no smoke character &mdash; creates an immediate positive impression. Odor-affected carpet, even subtle, creates an immediate negative association buyers often can't articulate but can't overcome. In a Medford market where wildfire smoke has been a presence for multiple seasons, smoke odor in carpet is a meaningful deal factor for buyers from outside the valley.</p></div>
+</div>
+
+<h2 id="medford-market">The Medford Real Estate Context &mdash; Why This Market Is Specific</h2>
+<span class="cfm-ps-lbl">Rogue Valley Market</span>
+<p class="cfm-ps-p"><strong>Does the Medford real estate market have specific factors that make carpet more important?</strong> It does &mdash; and they're factors a generic national carpet-cleaning article won't mention.</p>
+
+<div class="cfm-ps-realty-cards">
+<div class="cfm-ps-realty-card"><h4>Factor 1 &mdash; Outdoor Lifestyle Means More Carpet Wear</h4><p>Medford's trail culture &mdash; Table Rocks, Bear Creek Greenway, Roxy Ann Peak &mdash; means the average Jackson County home has more carpet wear from trail soil tracking than the average Oregon home. Red volcanic clay from Table Rocks hikes is particularly visible on lighter-colored carpet, and the rust-orange staining in entry areas is an immediate negative signal to buyers visiting East Medford homes. Pre-listing cleaning addresses exactly this type of visible staining.</p></div>
+<div class="cfm-ps-realty-card"><h4>Factor 2 &mdash; Wildfire Smoke History Affects Buyer Perception</h4><p>Buyers relocating to Medford from Portland, California, or outside the Rogue Valley may not be familiar with wildfire smoke and how it affects indoor spaces. A home with perceptible smoke odor in carpet &mdash; from one or more July&ndash;September wildfire seasons &mdash; can register strongly as a concern for buyers who associate the smell with air quality issues rather than ordinary Rogue Valley seasonal reality. Pre-listing smoke treatment eliminates this objection before it forms.</p></div>
+<div class="cfm-ps-realty-card"><h4>Factor 3 &mdash; Oregon Buyer Disclosure Requirements</h4><p>Oregon real estate disclosure law (ORS 105.465) requires sellers to disclose known material defects. Pet contamination in carpet that was not professionally treated is a grey area in disclosure &mdash; and one that tends to come up in buyer inspections. Professional cleaning that addresses pet contamination, with a dated service receipt documenting treatment, is cleaner from a disclosure perspective than known contamination left untreated. This is general information &mdash; consult your realtor and attorney for specific disclosure guidance.</p></div>
+</div>
+
+<h2 id="photography">Photography Timing &mdash; Getting This Right Changes Your Listing</h2>
+<span class="cfm-ps-lbl">Listing Photo Timing</span>
+<p class="cfm-ps-p"><strong>When should I schedule carpet cleaning before my listing photos?</strong> Earlier than most sellers assume &mdash; timing this wrong is one of the most common and most avoidable mistakes in pre-listing prep.</p>
+
+<div class="cfm-ps-realty">
+<span class="realty-lbl">Timing Mistake to Avoid</span>
+<p>The most common pre-listing timing mistake: cleaning the carpet the morning of photos and shooting while the carpet is still damp. Damp carpet doesn't photograph the same as dry carpet &mdash; the fiber appears flat, the sheen is different, and colors look slightly off. Allow full drying before photos.</p>
+</div>
+
+<ol class="cfm-ps-steps">
+<li><span class="num">1</span><div class="txt"><h4>If listing photos are on a weekday</h4><p>Schedule carpet cleaning 2&ndash;3 days before photos, not the morning of. In summer conditions, 2&ndash;4 hour dry time means a morning cleaning becomes afternoon staging. In winter conditions with 6&ndash;8 hour dry time, schedule for the day before photos at minimum.</p></div></li>
+<li><span class="num">2</span><div class="txt"><h4>If listing photos are on a Saturday</h4><p>Schedule carpet cleaning for Wednesday or Thursday. This allows two full days for complete drying and for any furniture to be moved back, plus buffer time if a room needs a second assessment.</p></div></li>
+<li><span class="num">3</span><div class="txt"><h4>What to do after cleaning, before photos</h4><p>Keep foot traffic off cleaned areas &mdash; clean socks only &mdash; until dry. Move furniture back with felt pads under legs to prevent marks on damp carpet. Run ceiling fans during the staging period to maintain fresh air. Don't allow pets in cleaned areas until fully dry.</p></div></li>
+<li><span class="num">4</span><div class="txt"><h4>Photography day</h4><p>Vacuum with a suction-only pass on the morning of photos to lift pile and remove any particles from the intervening day &mdash; do not apply any cleaning products. Ensure rooms are at normal household temperature, since cold rooms make carpet appear flat. Open blinds to maximize natural light; clean carpet photographs best with good light.</p></div></li>
+</ol>
+
+<h2 id="room-priority">Which Rooms Matter Most for Medford Buyers</h2>
+<span class="cfm-ps-lbl">Priority Rooms</span>
+<p class="cfm-ps-p"><strong>If I can't clean every room, which rooms should I prioritize before listing?</strong> Not every carpeted room carries equal weight with buyers. If budget or timeline forces a choice, prioritize in this order.</p>
+
+<div class="cfm-ps-tiers">
+<div class="cfm-ps-tier t1">
+<div class="tier-hd"><span class="tier-num">1</span><h4>Tier 1 &mdash; Must Clean (Non-Negotiable for Listing)</h4></div>
+<div class="cfm-ps-tier-rooms">
+<div class="cfm-ps-tier-room"><h5>Entry / Foyer Area</h5><p>The first carpeted space a buyer enters. If this reads as dirty, the tone for the entire walk-through is set negatively. In East Medford homes with trail access, entry carpet often has visible volcanic clay staining.</p></div>
+<div class="cfm-ps-tier-room"><h5>Living Room</h5><p>The most photographed room in every listing. Buyers form their primary impression of the home from the living room photo. Any visible traffic lanes, staining, or color inconsistency reads immediately in listing photos.</p></div>
+</div>
+</div>
+<div class="cfm-ps-tier t2">
+<div class="tier-hd"><span class="tier-num">2</span><h4>Tier 2 &mdash; Strongly Recommended</h4></div>
+<div class="cfm-ps-tier-rooms">
+<div class="cfm-ps-tier-room"><h5>Master Bedroom</h5><p>The second-most-photographed room. Clean carpet in the master bedroom is part of the lifestyle impression that drives emotional buyer decisions.</p></div>
+<div class="cfm-ps-tier-room"><h5>Hallways</h5><p>High-traffic, always shows matting and soil concentration in the traffic lane. A hallway with visible traffic wear signals "this home was lived in heavily." Cleaned hallways restore the impression of maintenance.</p></div>
+</div>
+</div>
+<div class="cfm-ps-tier t3">
+<div class="tier-hd"><span class="tier-num">3</span><h4>Tier 3 &mdash; Depending on Condition</h4></div>
+<div class="cfm-ps-tier-rooms">
+<div class="cfm-ps-tier-room"><h5>Secondary Bedrooms</h5><p>Clean if visibly soiled or pet-affected. If in good condition already, these may not require full professional treatment before listing.</p></div>
+</div>
+</div>
+<div class="cfm-ps-tier t4">
+<div class="tier-hd"><span class="tier-num">4</span><h4>Tier 4 &mdash; Assess Individually</h4></div>
+<div class="cfm-ps-tier-rooms">
+<div class="cfm-ps-tier-room"><h5>Finished Basement (If Carpeted)</h5><p>Buyers expect more casual condition in basement areas. Clean if there's visible soiling, odor, or pet contamination; skip if the carpet is in reasonable shape and resources are limited.</p></div>
+</div>
+</div>
+</div>
+
+<div class="cfm-ps-realty">
+<span class="realty-lbl">Buyer Psychology Note</span>
+<p>Buyers remember the worst thing they saw in a home. One badly soiled room that was skipped in pre-listing cleaning can anchor the buyer's perception of the entire property &mdash; even if the rest was well-presented.</p>
+</div>
+
+<h2 id="clean-vs-replace">When to Clean vs When to Replace &mdash; The Honest Assessment</h2>
+<span class="cfm-ps-lbl">Clean or Replace?</span>
+<p class="cfm-ps-p"><strong>How do I know if my carpet needs cleaning or replacement before listing?</strong> Most Medford carpet qualifies for cleaning rather than replacement &mdash; but not all of it does, and knowing the difference before you spend money matters.</p>
+
+<div class="cfm-ps-compare">
+<div class="cfm-ps-cpanel clean">
+<h4>CLEAN &mdash; Most Cost-Effective Pre-Listing Path</h4>
+<ul>
+<li><span class="mark">&#10003;</span>Carpet that's visibly dirty but structurally intact &mdash; pile springs back when pressed</li>
+<li><span class="mark">&#10003;</span>Traffic lane matting that hasn't exceeded the fiber's recovery threshold</li>
+<li><span class="mark">&#10003;</span>Pet contamination that's been treated professionally</li>
+<li><span class="mark">&#10003;</span>Smoke odor with no structural damage to the fiber</li>
+<li><span class="mark">&#10003;</span>Staining that professional pre-spray chemistry can address</li>
+<li><span class="mark">&#10003;</span>Hard water spotting or mineral deposits</li>
+</ul>
+<p class="result">Result: professional cleaning returns the carpet to a condition buyers accept or appreciate. The carpet doesn't need to look new &mdash; it needs to look maintained.</p>
+</div>
+<div class="cfm-ps-cpanel replace">
+<h4>REPLACE &mdash; When Cleaning Won't Be Sufficient</h4>
+<ul>
+<li><span class="mark">&#10007;</span>Carpet where the backing is dry-rotted or delaminating</li>
+<li><span class="mark">&#10007;</span>Carpet with permanent structural matting that doesn't spring back</li>
+<li><span class="mark">&#10007;</span>Deep pet contamination that has saturated to the subfloor</li>
+<li><span class="mark">&#10007;</span>Burn marks, tears, or physical damage cleaning can't address</li>
+<li><span class="mark">&#10007;</span>Carpet over 15 years old that's past its useful life appearance-wise</li>
+</ul>
+<p class="result">Result: replacement is the right call when cleaning would leave a result that still reads as "old carpet" to buyers. New builder-grade carpet installed before listing can reset buyer perception entirely.</p>
+</div>
+</div>
+
+<div class="cfm-ps-realty">
+<span class="realty-lbl">Our Approach</span>
+<p>We give you an honest assessment during pre-inspection. If we believe replacement makes more sense than cleaning for your listing situation, we'll tell you before starting work. We'd rather help you make the right decision than clean carpet that won't produce the result your listing needs.</p>
+</div>
+
+<h2 id="wildfire-context">Wildfire Smoke and Pre-Sale Carpet in the Rogue Valley</h2>
+<span class="cfm-ps-lbl">The Smoke Context</span>
+<p class="cfm-ps-p"><strong>Does wildfire smoke in carpet affect the sale of a Medford home?</strong> It can, and it's a Medford-specific situation real estate agents in the Rogue Valley navigate regularly &mdash; but one most national carpet cleaning articles don't acknowledge.</p>
+<p class="cfm-ps-p">Homes that were occupied during significant Rogue Valley wildfire smoke events &mdash; particularly the 2020 Almeda Fire season, and subsequent annual smoke events in July&ndash;September &mdash; can carry smoke character in carpet fibers that persists for years without professional treatment. Buyers from outside the region often have a stronger response to smoke odor than longtime Medford residents who have normalized its presence. If you've lived in your Medford home through multiple smoke seasons and your carpet has never received a dedicated <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">smoke treatment</a>, there's a meaningful chance it has accumulated smoke compounds that may register to buyers, particularly those relocating from smoke-free markets.</p>
+<p class="cfm-ps-p">For homes listing in spring or early summer &mdash; the most active Medford real estate season &mdash; schedule wildfire smoke treatment before the current fire season begins, ideally in April or May. If you're listing after a summer smoke event has already affected Jackson County, book smoke treatment and allow 48 hours before showing. Read more on <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/">whether carpet cleaning can remove wildfire smoke smell</a> for the specifics of how the treatment process works.</p>
+
+<img src="https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/Carpet-Cleaning-Before-Selling-Your-Medford-Home.webp" alt="Pre-listing carpet cleaning in Medford Oregon — how professional carpet cleaning improves home sale results in the Rogue Valley" style="width:100%;border-radius:14px;margin:28px 0;display:block;">
+
+<h2 id="timeline">The Pre-Listing Timeline &mdash; Where Carpet Cleaning Fits</h2>
+<span class="cfm-ps-lbl">Your Timeline</span>
+<p class="cfm-ps-p"><strong>When in the pre-listing process should I schedule carpet cleaning?</strong> Carpet cleaning fits into a specific window in your pre-listing sequence &mdash; too early and it won't be fresh for photos, too late and you risk a rushed, under-dried job.</p>
+
+<div class="cfm-ps-timeline">
+<div class="cfm-ps-tl-item"><span class="zone">6&ndash;8 Weeks Before Listing</span><h4>Assess and Book</h4><ul><li>Pre-inspection walk-through with your realtor</li><li>Identify carpet condition, pet contamination, smoke odor</li><li>Decide clean vs. replace per room</li><li>Book your carpet cleaning appointment now &mdash; good cleaners book 1&ndash;2 weeks out</li><li>If replacing carpet, order and schedule installation at this stage</li></ul></div>
+<div class="cfm-ps-tl-item"><span class="zone">3&ndash;4 Weeks Before Listing</span><h4>Staging and Repairs</h4><ul><li>Staging and furniture arrangement completed</li><li>Minor repairs finished</li></ul></div>
+<div class="cfm-ps-tl-item"><span class="zone">1&ndash;2 Weeks Before Listing</span><h4>Professional Carpet Cleaning</h4><ul><li>Carpet cleaning appointment happens here</li><li>For wildfire smoke treatment, book 10&ndash;14 days before photos for complete drying and off-gassing to resolve</li><li>For standard cleaning, 3&ndash;4 days before photos is appropriate</li></ul></div>
+<div class="cfm-ps-tl-item"><span class="zone">2&ndash;3 Days Before Photos</span><h4>Final Check</h4><ul><li>Carpet is fully dry</li><li>Final walk-through to confirm condition</li><li>Light vacuuming, morning of photos, suction only</li></ul></div>
+<div class="cfm-ps-tl-item"><span class="zone">Listing Day</span><h4>Ready to Show</h4><p>No carpet maintenance required if cleaning was timed correctly &mdash; fresh, dry, staged carpet ready for photos and showing.</p></div>
+</div>
+
+<div class="cfm-ps-info">
+<p>Good Medford carpet cleaners book out 1&ndash;2 weeks in advance, especially during spring listing season. Scheduling early in your pre-listing timeline protects you from a last-minute scramble before photos.</p>
+</div>
+
+<h2 id="faq">Pre-Listing Carpet Cleaning FAQ &mdash; Medford, Oregon</h2>
+<div class="cfm-ps-faq" id="cfm-ps-faq">
+
+<div class="cfm-ps-faq-item" aria-expanded="false">
+<button class="cfm-ps-faq-q" type="button">Should I clean or replace carpet before selling my Medford home?<span class="plus">+</span></button>
+<div class="cfm-ps-faq-a"><div class="cfm-ps-faq-a-inner">Clean first &mdash; unless the carpet has structural damage, is past 15 years old, or has contamination that cleaning can't fully address, such as deep subfloor pet saturation or physical damage. Professional cleaning costs a fraction of replacement and typically produces a result buyers accept. If we assess during pre-inspection that cleaning won't produce a listing-quality result, we'll tell you before we start so you can make the replacement decision with complete information.</div></div>
+</div>
+
+<div class="cfm-ps-faq-item" aria-expanded="false">
+<button class="cfm-ps-faq-q" type="button">How much does pre-listing carpet cleaning cost in Medford?<span class="plus">+</span></button>
+<div class="cfm-ps-faq-a"><div class="cfm-ps-faq-a-inner">Professional carpet cleaning for a standard 3-bedroom Medford home &mdash; the most common pre-listing scenario &mdash; is a competitive local investment. See our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">carpet cleaning cost guide</a> for current pricing. The more relevant number is what it prevents: a $3,000&ndash;$8,000 carpet replacement concession in a buyer offer is the most common outcome of listing with soiled carpet. Pre-listing cleaning is typically recovered many times over in the negotiation.</div></div>
+</div>
+
+<div class="cfm-ps-faq-item" aria-expanded="false">
+<button class="cfm-ps-faq-q" type="button">How soon before listing photos should I get carpets cleaned?<span class="plus">+</span></button>
+<div class="cfm-ps-faq-a"><div class="cfm-ps-faq-a-inner">2&ndash;3 days before photos in summer conditions, with 2&ndash;4 hour drying. 3&ndash;5 days before photos in fall or winter, with 6&ndash;8 hour drying in Rogue Valley conditions. Don't clean the morning of photos &mdash; wet or recently-dried carpet doesn't photograph the same as fully-dry, fully-set carpet. Allow at least one full day between cleaning and photos.</div></div>
+</div>
+
+<div class="cfm-ps-faq-item" aria-expanded="false">
+<button class="cfm-ps-faq-q" type="button">Does carpet cleaning help with Medford homes affected by wildfire smoke?<span class="plus">+</span></button>
+<div class="cfm-ps-faq-a"><div class="cfm-ps-faq-a-inner">Yes &mdash; professional smoke treatment with oxidizing pre-spray is the most important pre-listing investment for any Medford home that's been through fire seasons without specific smoke treatment. Buyers from outside the Rogue Valley may perceive smoke odor more strongly than longtime Medford residents. Smoke-treated carpet is a straightforward objection eliminated. See our guide on <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/">removing wildfire smoke smell from carpet</a>.</div></div>
+</div>
+
+<div class="cfm-ps-faq-item" aria-expanded="false">
+<button class="cfm-ps-faq-q" type="button">Will my realtor recommend carpet cleaning before listing?<span class="plus">+</span></button>
+<div class="cfm-ps-faq-a"><div class="cfm-ps-faq-a-inner">Every experienced Rogue Valley realtor will advise carpet cleaning as part of pre-listing preparation, particularly in homes with pets, active trail households, or smoke exposure. If your realtor hasn't mentioned it, bring it up &mdash; the ROI conversation is short and the outcome is almost always "yes, do it."</div></div>
+</div>
+
+<div class="cfm-ps-faq-item" aria-expanded="false">
+<button class="cfm-ps-faq-q" type="button">How do I keep cleaned carpet in good condition between cleaning and closing?<span class="plus">+</span></button>
+<div class="cfm-ps-faq-a"><div class="cfm-ps-faq-a-inner">Keep foot traffic to clean-sock only until dry. Don't allow pets on cleaned areas for 4&ndash;6 hours, or until fully dry. Place felt pads under furniture legs when moving furniture back. Vacuum lightly with suction-only on the morning of showings. Avoid any spot treatments between cleaning and closing &mdash; call us if something happens that needs attention.</div></div>
+</div>
+
+</div>
+
+</div>
+
+<aside class="cfm-ps-toc" id="cfm-ps-toc" data-open="true">
+<span class="toc-ttl cfm-ps-toc-static">In This Guide</span>
+<button class="cfm-ps-toc-toggle" type="button" aria-expanded="true" aria-controls="cfm-ps-toc-list">
+<span class="toc-ttl" style="margin:0">In This Guide</span>
+<span class="chev">&#9662;</span>
+</button>
+<ol id="cfm-ps-toc-list">
+<li><a href="#answer">The Bottom Line</a></li>
+<li><a href="#roi-math">The ROI Math</a></li>
+<li><a href="#medford-market">The Medford Real Estate Context</a></li>
+<li><a href="#photography">Photography Timing</a></li>
+<li><a href="#room-priority">Which Rooms Matter Most</a></li>
+<li><a href="#clean-vs-replace">Clean vs. Replace</a></li>
+<li><a href="#wildfire-context">Wildfire Smoke Context</a></li>
+<li><a href="#timeline">The Pre-Listing Timeline</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</aside>
+
+</div>
+
+<div class="cfm-ps-cta">
+<h2>Listing in Medford? Book Pre-Listing Carpet Cleaning Now.</h2>
+<p>We work around your realtor's timeline. Dated receipt included. Medford and Jackson County. (458) 302-0101</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call Now &mdash; (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">Pricing Guide &rarr;</a>
+</div>
+<a class="blog-link" href="https://carpetcleaningmedfordoregon.com/blog/">&larr; All Blog Posts</a>
+</div>
+
+<div class="cfm-ps-related">
+<h3>Related Reading</h3>
+<div class="cfm-ps-rel-grid">
+<a class="cfm-ps-rel-card" href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-remove-wildfire-smoke-smell/">
+<span class="lbl">&#128293; Guide</span>
+<p class="ttl">Remove Wildfire Smoke from Carpet</p>
+</a>
+<a class="cfm-ps-rel-card" href="https://carpetcleaningmedfordoregon.com/is-carpet-cleaning-worth-it-medford-oregon/">
+<span class="lbl">&#9989; Guide</span>
+<p class="ttl">Is Carpet Cleaning Worth It?</p>
+</a>
+<a class="cfm-ps-rel-card" href="https://carpetcleaningmedfordoregon.com/how-much-carpet-cleaning-cost-medford-oregon/">
+<span class="lbl">&#128176; Guide</span>
+<p class="ttl">How Much Does Carpet Cleaning Cost?</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+var bar=document.getElementById('cfm-ps-progress');
+function onScroll(){
+var h=document.documentElement;
+var st=h.scrollTop||document.body.scrollTop;
+var sh=(h.scrollHeight||document.body.scrollHeight)-h.clientHeight;
+bar.style.width=(sh>0?(st/sh*100):0)+'%';
+}
+document.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+var toc=document.getElementById('cfm-ps-toc');
+var tocBtn=toc.querySelector('.cfm-ps-toc-toggle');
+if(tocBtn){
+tocBtn.addEventListener('click',function(){
+var open=toc.getAttribute('data-open')==='true';
+toc.setAttribute('data-open',open?'false':'true');
+tocBtn.setAttribute('aria-expanded',open?'false':'true');
+});
+}
+
+var tocLinks=toc.querySelectorAll('a[href^="#"]');
+tocLinks.forEach(function(a){
+a.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(a.getAttribute('href'));
+if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+var sections=[];
+tocLinks.forEach(function(a){
+var id=a.getAttribute('href').slice(1);
+var el=document.getElementById(id);
+if(el)sections.push({id:id,el:el,link:a});
+});
+if('IntersectionObserver' in window && sections.length){
+var obs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+var match=sections.filter(function(s){return s.el===entry.target})[0];
+if(!match)return;
+if(entry.isIntersecting){
+tocLinks.forEach(function(a){a.classList.remove('active')});
+match.link.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(function(s){obs.observe(s.el)});
+}
+})();
+</script>
+
+<script>
+(function(){
+var items=document.querySelectorAll('#cfm-ps-faq .cfm-ps-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.cfm-ps-faq-q');
+var ans=item.querySelector('.cfm-ps-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.cfm-ps-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+
+<!-- /wp:html -->
