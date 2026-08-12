@@ -1,0 +1,441 @@
+<!-- wp:html -->
+ 
+<style id="cfm-css">/* CARPET FRIEND MEDFORD — PREMIUM HEADER */
+    .wp-block-kadence-header{display:none!important}
+    #cfm-header{position:sticky;top:0;left:0;right:0;z-index:9999;background:#fff;box-shadow:0 2px 20px rgba(12,31,53,.10);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+    #cfm-topbar{background:#0c1f35;padding:7px 0;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+    #cfm-topbar a,#cfm-topbar span{color:#7cbfe8;font-size:12px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+    #cfm-topbar a:hover{color:#fff}
+    #cfm-topbar .pipe{color:rgba(255,255,255,.2);font-size:11px}
+    #cfm-nav-wrap{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:70px;gap:0}
+    #cfm-logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;margin-right:28px}
+    #cfm-logo img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+    #cfm-logo-text .name{display:block;font-size:15px;font-weight:800;color:#0c1f35;line-height:1.15;letter-spacing:-.3px}
+    #cfm-logo-text .tagline{display:block;font-size:10px;font-weight:600;color:#1a7a4a;text-transform:uppercase;letter-spacing:1.5px}
+    #cfm-nav{display:flex;align-items:center;list-style:none;margin:0;padding:0;gap:0;flex:1}
+    #cfm-nav>li{position:relative}
+    #cfm-nav>li>a{display:flex;align-items:center;gap:4px;padding:0 13px;height:70px;font-size:13px;font-weight:600;color:#374151;text-decoration:none;white-space:nowrap;transition:color .18s;border-bottom:3px solid transparent}
+    #cfm-nav>li>a:hover,#cfm-nav>li.cfm-active>a{color:#1a7a4a;border-bottom-color:#1a7a4a}
+    #cfm-nav>li>a .arr{font-size:8px;color:#9ca3af;transition:transform .2s;margin-left:2px;display:inline-block}
+    #cfm-nav>li:hover>a .arr{transform:rotate(180deg);color:#1a7a4a}
+    .cfm-drop{position:absolute;top:calc(100% + 4px);left:0;background:#fff;border-radius:10px;box-shadow:0 10px 44px rgba(12,31,53,.14);border:1px solid #e8ecf0;min-width:240px;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s cubic-bezier(.4,0,.2,1);z-index:10000}
+    #cfm-nav>li:hover .cfm-drop{opacity:1;visibility:visible;transform:translateY(0)}
+    .cfm-drop.wide{min-width:560px;display:grid;grid-template-columns:1fr 1fr;gap:0;padding:16px 12px}
+    .cfm-col-hd{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9ca3af;padding:6px 10px 4px;display:block}
+    .cfm-drop a{display:flex;align-items:center;gap:9px;padding:8px 12px;font-size:13px;color:#374151;text-decoration:none;border-radius:6px;transition:all .15s;font-weight:500}
+    .cfm-drop a:hover{background:#f0f6ff;color:#0c1f35}
+    .cfm-drop a .ic{font-size:13px;flex-shrink:0}
+    .cfm-badge{background:#1a7a4a;color:#fff;font-size:9px;font-weight:700;padding:2px 5px;border-radius:4px;margin-left:auto;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+    .cfm-div{height:1px;background:#f3f4f6;margin:6px 10px}
+    #cfm-cta{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
+    #cfm-cta .c-call{display:flex;align-items:center;gap:7px;background:#0c1f35;color:#fff;padding:9px 15px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none;transition:background .18s;white-space:nowrap}
+    #cfm-cta .c-call:hover{background:#1a3a5c}
+    #cfm-cta .c-book{display:flex;align-items:center;gap:7px;background:#1a7a4a;color:#fff;padding:9px 18px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none;transition:background .18s;white-space:nowrap}
+    #cfm-cta .c-book:hover{background:#15693e}
+    #cfm-burg{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;margin-left:auto}
+    #cfm-burg span{display:block;width:24px;height:2px;background:#0c1f35;border-radius:2px;transition:all .22s}
+    #cfm-burg.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    #cfm-burg.open span:nth-child(2){opacity:0}
+    #cfm-burg.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    #cfm-mob{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:99998;overflow-y:auto;padding:72px 24px 40px}
+    #cfm-mob.open{display:block}
+    #cfm-mob-x{position:absolute;top:18px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:#0c1f35;line-height:1}
+    .cfm-ms{margin-bottom:24px}
+    .cfm-ms-t{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;display:block}
+    .cfm-ms a{display:block;padding:10px 0;font-size:15px;font-weight:600;color:#0c1f35;text-decoration:none;border-bottom:1px solid #f3f4f6}
+    .cfm-ms a:hover{color:#1a7a4a}
+    .cfm-mc{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+    .cfm-mc a{display:block;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none}
+    .cfm-mc .cc{background:#0c1f35;color:#fff}
+    .cfm-mc .cb{background:#1a7a4a;color:#fff}
+    @media(max-width:1000px){#cfm-nav>li>a{padding:0 9px;font-size:12px}}
+    @media(max-width:880px){#cfm-nav{display:none}#cfm-cta{display:none}#cfm-burg{display:flex}#cfm-topbar{display:none}}</style>
+    <!-- /wp:html -->
+    
+    <!-- wp:html -->
+    <style id="ccmo-svc">
+    *,*::before,*::after{box-sizing:border-box}
+    :root{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-warn:#B45309;--cfm-warnp:#FEF3C7;--r-sm:6px;--r-md:14px;--trans:0.22s ease}
+    body,p,h1,h2,h3,h4,li,td,th,a,span,div{word-wrap:break-word;overflow-wrap:break-word;word-break:normal;-webkit-hyphens:auto;hyphens:auto}
+
+    #rug-hero{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:linear-gradient(160deg,var(--cfm-dark) 0%,var(--cfm-mid) 100%);padding:clamp(52px,7vw,88px) clamp(20px,5vw,40px);text-align:center}
+    #rug-hero .ey{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);font-size:.78rem;font-weight:600;padding:6px 16px;border-radius:22px;margin:0 0 18px;hyphens:none}
+    #rug-hero h1{color:#fff;font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.15;letter-spacing:-.5px;margin:0 0 16px;hyphens:none}
+    #rug-hero .sub{color:rgba(255,255,255,.85);font-size:clamp(15px,2.2vw,17px);line-height:1.7;margin:0 auto 28px;max-width:720px}
+    #rug-hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    #rug-hero .ctas a{font-weight:700;font-size:15px;padding:14px 28px;border-radius:var(--r-sm);text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:all var(--trans)}
+    #rug-hero .ctas a.pc{background:#fff;color:var(--cfm-dark)}
+    #rug-hero .ctas a.pc:hover{transform:translateY(-2px)}
+    #rug-hero .ctas a.sc{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);font-weight:600}
+    #rug-hero .ctas a.sc:hover{background:rgba(255,255,255,.12)}
+
+    .rug-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:860px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(20px,5vw,28px);background:var(--cfm-white)}
+    .rug-body h2{color:var(--cfm-dark);font-size:clamp(20px,3.5vw,28px);font-weight:700;line-height:1.25;margin:40px 0 14px}
+    .rug-body h3{color:var(--cfm-h);font-size:18px;font-weight:600;margin:26px 0 8px}
+    .rug-body h4{color:var(--cfm-h);font-size:16px;font-weight:600;margin:0 0 8px}
+    .rug-body p{color:var(--cfm-body);font-size:16px;line-height:1.85;margin:0 0 18px}
+    .rug-body>p:first-of-type{margin-top:0}
+
+    .rug-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 var(--r-md) var(--r-md) 0;padding:20px 24px;margin:0 0 32px}
+    .rug-aeo p{color:var(--cfm-dark);font-weight:500;font-size:1.02rem;line-height:1.75;margin:0}
+    .rug-aeo strong{color:var(--cfm-dark)}
+
+    .rug-fiber-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0 30px}
+    .rug-fiber-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:var(--r-md);padding:22px;transition:all var(--trans)}
+    .rug-fiber-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+    .rug-fiber-card h4{color:var(--cfm-dark);font-size:15.5px;font-weight:700;margin:0 0 8px}
+    .rug-fiber-card p{color:var(--cfm-body);font-size:14px;line-height:1.7;margin:0}
+
+    .rug-steps{display:flex;flex-direction:column;gap:14px;margin:22px 0 28px}
+    .rug-step{display:flex;gap:16px;padding:22px;background:var(--cfm-bg);border-radius:var(--r-md);align-items:flex-start;border:1px solid var(--cfm-border)}
+    .rug-num{background:var(--cfm-dark);color:#fff;font-size:13px;font-weight:800;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .rug-step-body h4{color:var(--cfm-dark);font-size:15px;font-weight:700;margin:0 0 5px}
+    .rug-step-body p{color:var(--cfm-body);font-size:14px;line-height:1.7;margin:0}
+
+    .rug-warn{background:var(--cfm-warnp);border-left:4px solid var(--cfm-warn);border-radius:0 var(--r-md) var(--r-md) 0;padding:22px 24px;margin:24px 0}
+    .rug-warn h3{color:#78350f;font-size:16px;font-weight:700;margin:0 0 8px}
+    .rug-warn p{color:#5c4108;font-size:15px;line-height:1.75;margin:0}
+
+    .faq-b{border:1px solid var(--cfm-border);border-radius:var(--r-md);overflow:hidden;margin:20px 0 28px}
+    .faq-b details{border-bottom:1px solid var(--cfm-border)}
+    .faq-b details:last-child{border-bottom:none}
+    .faq-b summary{padding:18px 20px;font-size:15.5px;font-weight:600;color:var(--cfm-h);cursor:pointer;list-style:none;background:var(--cfm-bg);display:flex;justify-content:space-between;align-items:center;gap:14px;transition:background var(--trans);user-select:none}
+    .faq-b summary::-webkit-details-marker{display:none}
+    .faq-b summary:hover,.faq-b details[open] summary{background:var(--cfm-pale)}
+    .faq-b summary::after{content:'+';color:var(--cfm-light);font-size:20px;font-weight:300;flex-shrink:0;line-height:1}
+    .faq-b details[open] summary::after{content:'\2212'}
+    .faq-b .ans{padding:18px 20px;font-size:15px;color:var(--cfm-body);line-height:1.8;background:var(--cfm-white)}
+    .faq-b .ans strong{color:var(--cfm-dark)}
+
+    .rug-cta{background:var(--cfm-dark);border-radius:16px;padding:36px 32px;text-align:center;margin:40px 0}
+    .rug-cta h3{color:#fff;font-size:1.4rem;font-weight:800;margin:0 0 8px}
+    .rug-cta p{color:rgba(255,255,255,.85);font-size:15px;line-height:1.7;margin:0 0 22px}
+    .rug-cta a{background:#fff;color:var(--cfm-dark);font-weight:800;font-size:15px;padding:14px 30px;border-radius:var(--r-sm);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform var(--trans)}
+    .rug-cta a:hover{transform:translateY(-2px)}
+
+    @media(max-width:768px){
+      .rug-body{padding:44px 18px}
+      .rug-fiber-grid{grid-template-columns:1fr;gap:14px}
+      .rug-cta{padding:28px 22px;margin:30px 0}
+      .faq-b summary{font-size:14.5px;padding:16px 16px}
+      .faq-b .ans{padding:16px 16px}
+    }
+    @media(max-width:560px){
+      #rug-hero h1{font-size:25px;line-height:1.2}
+      .rug-body{padding:36px 16px}
+      #rug-hero .ctas{flex-direction:column;align-items:stretch;max-width:290px;margin-left:auto;margin-right:auto}
+      #rug-hero .ctas a{justify-content:center;text-align:center}
+      .rug-step{flex-direction:column;gap:10px}
+      .rug-cta h3{font-size:18px}
+      .faq-b summary{font-size:13.5px;padding:14px 14px}
+      .faq-b .ans{font-size:14px;padding:14px 14px}
+    }
+    </style>
+    <!-- /wp:html -->
+    
+    <!-- wp:html -->
+    <div id="rug-hero">
+    <span class="ey">&#127857; Rug Cleaning Services · Medford, Oregon · All Fiber Types</span>
+    <h1>Rug Cleaning Medford, Oregon — Area Rug &amp; Oriental Rug Specialists</h1>
+    <p class="sub">Wool, Persian, Turkish, antique, synthetic, kilim, shag, and oriental rugs — local rug cleaning services using fiber-specific methods, not a one-size-fits-all machine. We identify your rug before we touch it. That's the difference.</p>
+    <div class="ctas">
+    <a class="pc" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+    <a class="sc" href="https://carpetcleaningmedfordoregon.com/our-process/">See Our Process &#8594;</a>
+    </div>
+    </div>
+    
+    <div class="rug-body">
+    <div class="rug-aeo">
+    <p><strong>Where to get a rug cleaned in Medford, Oregon?</strong> Carpet Friend Medford is the local rug cleaning company serving all of Jackson County. Our area rugs cleaning service covers wool, hand-knotted Persian and Turkish rugs, antique rugs, synthetic machine-woven rugs, flat-weave kilims, throw rugs, and shag rugs — making us the professional rug cleaner Medford homeowners call for every rug type. <strong>Rug cleaning Medford Oregon:</strong> each fiber type requires different pre-spray chemistry, water temperature, and agitation. We identify your rug's fiber and check dye stability before touching it. On-site rug washing service at your Medford home in most cases, with 2–6 hour drying depending on fiber type.</p>
+    </div>
+    
+    <h2>Why Rug Cleaning in Medford Needs More Than Standard Carpet Cleaning</h2>
+    <p>When Medford homeowners search for <em>cleaning rugs near me</em> or <em>local rug cleaners</em>, they're often frustrated to find that standard carpet cleaning companies use the same one-temperature, one-chemistry approach on a $2,000 hand-knotted Persian that they use on builder-grade synthetic carpet. Area rugs in Jackson County homes accumulate a specific combination of contaminants — red volcanic clay from Table Rocks and Bear Creek Greenway hikes packs into rug pile with each pass of foot traffic, while wildfire smoke PM2.5 during July–September fire season creates deeply embedded contamination that surface-level rug wash service can't address.</p>
+    <p>The second problem is Medford's hard water. Jackson County's water supply runs high in calcium and magnesium — when homeowners spot-clean rugs with tap water and the spot dries, the mineral residue stays in the fibers. Repeated spot-cleaning with hard water builds a zone of mineral crystallization that makes fibers stiff and future rug stain removal service harder to complete effectively. We use pH-neutralized water and confirm mineral content is cleared in our rinse process.</p>
+    
+    <h2>Rug Fiber Types We Clean — What Separates Professional Rug Cleaners from General Carpet Cleaners</h2>
+    <div class="rug-fiber-grid">
+    <div class="rug-fiber-card"><h4>&#129523; Synthetic (Polypropylene, Nylon, Polyester)</h4><p>Most forgiving — tolerates standard alkaline pre-spray and hot water extraction up to 195°F. Dries fastest (2–3 hrs in Medford summer). Main risk is over-wetting a delaminating latex secondary backing.</p></div>
+    <div class="rug-fiber-card"><h4>&#129528; Wool Area Rugs</h4><p>Requires pH-neutral chemistry (wool lives at 4.5–7 pH) and warm — not hot — water. Felts and shrinks in alkaline chemistry or high heat. Extended drying (4–6 hrs flat). We never roll wool damp.</p></div>
+    <div class="rug-fiber-card"><h4>&#128218; Hand-Knotted Persian, Turkish &amp; Oriental Rugs</h4><p>The most common searches we get: <em>oriental rug cleaning near me</em>, <em>persian rug cleaning near me</em>, <em>turkish rug cleaning near me</em>, and <em>antique rug cleaning near me</em>. All require a mandatory dye transfer test before any water is applied — natural plant dyes run in alkaline conditions. Colorfast pieces: cold water, pH-neutral pre-spray, gentle extraction. Non-colorfast: dry-cleaning method only. We never guess on a valuable piece.</p></div>
+    <div class="rug-fiber-card"><h4>&#127807; Flat-Weave (Kilim, Dhurrie, Cotton)</h4><p>No pile — cleaned with even, low-moisture application to prevent tide marks. Cotton shrinks in high heat. We apply consistent moisture across the full surface before extraction.</p></div>
+    <div class="rug-fiber-card"><h4>&#128166; Shag & High-Pile</h4><p>Long pile traps debris deep and holds more moisture. Pre-vacuum both sides. Slow extraction passes to avoid over-wetting the backing. Pile groomed upright after cleaning to prevent mat-drying flat.</p></div>
+    <div class="rug-fiber-card"><h4>&#127958; Silk Blend Rugs</h4><p>Silk is S-coded (solvent cleaning only in most cases). We test for colorfastness and fiber content. If water-cleaning risks damage, we tell you before starting — not after.</p></div>
+    </div>
+    
+    <h2>Our Area Rug Cleaning Process — How Our Rug Wash Service Works</h2>
+    <div class="rug-steps">
+    <div class="rug-step"><div class="rug-num">1</div><div class="rug-step-body"><h4>Fiber & Dye Identification</h4><p>We read the manufacturer tag for fiber content and cleaning code. For hand-knotted rugs, we do a dye transfer test on each color zone. This determines everything that follows.</p></div></div>
+    <div class="rug-step"><div class="rug-num">2</div><div class="rug-step-body"><h4>Dry Pre-Vacuum — Both Sides</h4><p>We vacuum the top face and the underside. Debris that migrates through the pile to the backing falls back up when walked on. Double-sided pre-vacuum removes up to 90% of dry soil before any moisture is introduced.</p></div></div>
+    <div class="rug-step"><div class="rug-num">3</div><div class="rug-step-body"><h4>Fiber-Matched Pre-Spray Application</h4><p>Alkaline chemistry for synthetic fibers with oily soiling. pH-neutral for wool and silk. Enzyme pre-treatment for pet contamination zones. Oxidizing agent for wildfire smoke events. Dwell time: 5–10 minutes.</p></div></div>
+    <div class="rug-step"><div class="rug-num">4</div><div class="rug-step-body"><h4>Low-Moisture Extraction</h4><p>Truck-mounted system with reduced pressure settings for rugs — enough extraction force to pull contamination without distorting pile structure or over-wetting the backing foundation.</p></div></div>
+    <div class="rug-step"><div class="rug-num">5</div><div class="rug-step-body"><h4>pH-Balanced Rinse</h4><p>Neutralizes alkaline pre-spray residue that would otherwise attract new soil within weeks. Critical step most budget cleaners skip on rugs.</p></div></div>
+    <div class="rug-step"><div class="rug-num">6</div><div class="rug-step-body"><h4>Flat Drying & Pile Grooming</h4><p>Rug laid completely flat — never folded or hung while damp. Pile groomed upright. Fan circulation in summer Medford conditions: 2–4 hrs synthetic, 4–6 hrs wool, up to 8 hrs hand-knotted. We stay until you have a clear drying timeline.</p></div></div>
+    </div>
+    
+    <h2>Jackson County Rugs We See Most Often — And What They Need</h2>
+    <p>Homeowners searching <em>who cleans area rugs near me</em> or <em>who cleans rugs near me</em> in Medford often end up calling several rug cleaning companies before finding one that can handle the specific fiber in front of them. As the local rug cleaning company that serves all of Jackson County, we've built our process around the actual rugs in this market. Whether it's an antique Persian from a North Medford estate home, an Asian silk-blend piece from an Ashland Victorian, or a high-traffic synthetic from a South Medford rental — we've seen it and cleaned it.</p>
+    <p>Living in the Rogue Valley means your rug deals with things that rugs in most American cities don't. The combination of wildfire smoke season, volcanic trail dust from Table Rocks, hard water from Jackson County's water system, and high pet ownership creates a multi-layer contamination profile that requires specific — not generic — treatment.</p>
+    <p>We've cleaned oriental rugs for North Medford collectors, Turkish kilims from Jacksonville's historic district, Asian silk-blend pieces from Ashland Victorian homes, antique rugs where the homeowner searched for an <em>antique rug cleaner near me</em> and found us through a referral, and decade-old contaminated synthetic pieces in White City rental units. When you ask <em>where to get my rug cleaned</em> in Jackson County — or search <em>asian rug cleaning near me</em> for a silk-blend piece — the answer should be a rug cleaning company that knows what they're looking at before they touch it.</p>
+    
+    <div class="rug-warn">
+    <h3>&#9888;&#65039; What We Don't Clean — And Why We Tell You Upfront</h3>
+    <p>Dry-rotted latex backing (cracks when flexed) cannot be safely wet-cleaned — it will disintegrate. We identify this during pre-inspection. Rugs with structural damage, torn foundation wefts, or backing separation need restoration, not cleaning. Leather-backed rugs require specialist handling outside our scope. We'll always tell you what we can and can't do before we start — never after you've paid.</p>
+    </div>
+    
+    <div class="faq-b">
+    <details open><summary>Who cleans area rugs near me in Medford, Oregon?</summary><div class="ans">Carpet Friend Medford is the local rug cleaning service serving all of Medford and Jackson County. We clean area rugs, oriental rugs, Persian rugs, Turkish rugs, antique rugs, throw rugs, kilims, shag rugs, and synthetic rugs on-site at your Medford home or at our facility for larger or heavily contaminated pieces. IICRC certified. Call (458) 302-0101.</div></details>
+    <details><summary>Where to get a rug cleaned near me — do you offer pick-up?</summary><div class="ans">For most rugs in Medford and Jackson County, we come to you. Our truck-mounted system cleans your rug on-site. For very large rugs (over 10×14), antiques requiring plant-facility treatment, or non-colorfast pieces that need dry-cleaning methods, we transport the rug to our facility and return it cleaned and dry. Call to discuss which approach suits your rug.</div></details>
+    <details><summary>Are you the best oriental rug cleaning near me in Jackson County?</summary><div class="ans">We're the local rug cleaning company that handles oriental rug cleaning with mandatory dye testing before any water is applied — something many general carpet cleaners skip. Whether you need oriental rug cleaning near me, oriental rugs cleaning near me, professional oriental rug cleaning near me, or oriental rug cleaners near me for a hand-knotted antique, we use cold water and pH-neutral chemistry on colorfast pieces, and dry-cleaning methods on non-colorfast dyes. Looking for an oriental rug cleaner near me or professional rug cleaners in my area in Medford? Call us to describe your rug first — (458) 302-0101.</div></details>
+    <details><summary>Do you clean Persian rugs and antique rugs in Medford?</summary><div class="ans">Yes. Persian rug cleaning near me is one of our most common requests in Medford, particularly from North Medford and Ashland homeowners with antique collections. Persian rug cleaners near me and antique rug cleaners near me searches both lead here because we're the local rug cleaning company with the fiber identification and dye testing process that valuable rugs require. Antique rug cleaning near me from Jackson County: call (458) 302-0101 and describe the piece first.</div></details>
+    <details><summary>Do you clean throw rugs and smaller area rugs?</summary><div class="ans">Yes. Throw rug cleaning near me and throw rug cleaners searches bring many Medford homeowners to us because smaller rugs actually need careful handling — they dry faster but are easier to over-wet or shrink. We apply the same fiber identification and pre-spray selection to a 2×3 throw rug as to a 9×12 Persian. Throw rugs in Medford homes often accumulate the most trail soil and pet contamination because they sit at entry points.</div></details>
+    <details><summary>How much does area rug cleaning cost in Medford?</summary><div class="ans">Pricing is based on rug size, fiber type, and soil level — the same variables that determine how much chemistry and time your specific rug requires. We discuss your rug and confirm the total before any work begins. Call (458) 302-0101 to talk through your situation.</div></details>
+    <details><summary>Can you clean my wool rug without damaging it?</summary><div class="ans">Yes — wool requires specific handling that we're trained for: pH-neutral pre-spray chemistry, warm (not hot) water extraction, and flat drying. The most common damage to wool rugs happens when cleaners use standard alkaline chemistry or high-heat extraction. We adjust both. If a rug has unique characteristics that change our approach, we explain what and why before touching it.</div></details>
+    <details><summary>My Persian rug has multiple colors — will they bleed?</summary><div class="ans">We run a dye transfer test on each color zone before any water is applied. If dyes are stable (colorfast), we proceed with cold water and pH-neutral chemistry. If any zone shows dye transfer on the test cloth, we stop and explain the dry-cleaning alternative before you decide how to proceed. We don't risk a valuable piece.</div></details>
+    <details><summary>How do I know if my rug backing is still in good condition?</summary><div class="ans">Fold a corner and flex it back and forth. If the backing cracks, crumbles, or sheds powder, the latex has dry-rotted. This is common in rugs over 15 years old that have been repeatedly wet-cleaned or exposed to moisture. Dry-rotted backing means the rug cannot be safely wet-cleaned — we identify this before starting, not after.</div></details>
+    </div>
+    
+    <div class="rug-cta">
+    <h3>Rug Cleaning Medford — Local Rug Cleaning Services That Get It Right</h3>
+    <p>Call and describe the fiber type, approximate size, and what's happened to it. Our cleaning rug services are built around what your specific rug needs — no obligation, no surprises after we arrive. The local rug cleaning call that starts with honest information.</p>
+    <a href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+    </div>
+    <p style="font-size:13px;color:#9ca3af;border-top:1px solid #dde4ed;padding-top:16px">Carpet Friend Medford &middot; 1600 Delta Waters Rd, Medford, OR 97504 &middot; (458) 302-0101 &middot; IICRC Certified &middot; Local Rug Cleaning Company &middot; Jackson County, Oregon</p>
+    </div>
+    <!-- /wp:html -->
+    
+    <!-- wp:html -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://carpetcleaningmedfordoregon.com/#localbusiness",
+      "name": "Carpet Friend Medford",
+      "alternateName": "Carpet Friend Medford - Area Rug Cleaning Medford",
+      "url": "https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/",
+      "image": "https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/carpet-friend-medford-logo-1-1-300x300.jpg",
+      "logo": "https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/carpet-friend-medford-logo-1-1-300x300.jpg",
+      "description": "Professional area rug cleaning in Medford, Oregon for wool, Persian, Turkish, oriental, synthetic, kilim, shag, and specialty rugs. IICRC certified with fiber-matched cleaning methods, truck-mounted extraction, dye testing, and upfront pricing throughout Jackson County.",
+      "telephone": "+1-458-302-0101",
+      "email": "carpetfriendmedford@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1600 Delta Waters Rd",
+        "addressLocality": "Medford",
+        "addressRegion": "OR",
+        "postalCode": "97504",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.3265,
+        "longitude": -122.8756
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "16:00"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Jackson County"
+        }
+      ],
+      "serviceType": [
+        "Area Rug Cleaning",
+        "Persian Rug Cleaning",
+        "Oriental Rug Cleaning",
+        "Wool Rug Cleaning",
+        "Turkish Rug Cleaning",
+        "Synthetic Rug Cleaning",
+        "Kilim Rug Cleaning",
+        "Shag Rug Cleaning",
+        "Pet Odor Rug Cleaning",
+        "Wildfire Smoke Rug Cleaning"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Area Rug Cleaning Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Synthetic Area Rug Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wool Rug Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Persian & Turkish Rug Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kilim & Flat-Weave Rug Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Shag Rug Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pet Odor Treatment for Area Rugs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wildfire Smoke Odor Removal for Rugs"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Wool rug cleaning",
+        "Persian rug cleaning",
+        "Turkish rug cleaning",
+        "Oriental rug cleaning",
+        "Kilim cleaning",
+        "Shag rug cleaning",
+        "Fiber identification",
+        "Dye stability testing",
+        "Truck-mounted hot water extraction",
+        "Pet urine enzyme treatment",
+        "Wildfire smoke PM2.5 removal",
+        "Hard water mineral removal"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/"
+      }
+    }
+    </script>
+    <!-- /wp:html -->
+    
+    <!-- wp:html -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does area rug cleaning cost in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing is based on rug size, fiber type, and soil level—the same variables that determine how much chemistry and time your specific rug requires. We discuss your rug and confirm the total before any work begins. Call (458) 302-0101 to talk through your situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you clean my wool rug without damaging it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Wool requires specific handling including pH-neutral pre-spray chemistry, warm (not hot) water extraction, and flat drying. The most common damage to wool rugs occurs when standard alkaline chemistry or high-heat extraction is used. We adjust both based on the rug's fiber and explain any special considerations before cleaning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My Persian rug has multiple colors—will they bleed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Before any water is applied, we perform a dye transfer test on each color zone. If the dyes are colorfast, we proceed using cold water and pH-neutral cleaning chemistry. If any dye transfer is detected, we stop and explain the available dry-cleaning alternative before any work begins. We never risk damaging a valuable rug."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if my rug backing is still in good condition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fold a corner of the rug and gently flex it. If the backing cracks, crumbles, or sheds powder, the latex has likely dry-rotted. This is common in older rugs that have been repeatedly wet-cleaned or exposed to moisture. Dry-rotted latex backing cannot be safely wet-cleaned because it will disintegrate. We identify this during our pre-inspection before beginning any work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean rugs on-site or take them to a facility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most area rugs are cleaned on-site in your Medford home using our truck-mounted cleaning system. Very large rugs (over 10×14 feet), heavily contaminated rugs requiring specialized plant-based cleaning, or delicate antique rugs may be transported to our facility. We discuss the best approach with you during the pre-inspection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of rugs can't be safely wet-cleaned?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dry-rotted latex-backed rugs cannot be safely wet-cleaned because the backing will disintegrate. Rugs with structural damage, torn foundation wefts, backing separation, or leather backing require restoration or specialist treatment rather than standard cleaning. We identify these conditions during the pre-inspection and explain your options before any work begins."
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- /wp:html -->

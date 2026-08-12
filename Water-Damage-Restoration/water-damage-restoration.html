@@ -1,339 +1,339 @@
 <!-- wp:html -->
 <style id="cfm-wd-css">
-.cfm-svc-water{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F9FA}
-.cfm-svc-water *,.cfm-svc-water *::before,.cfm-svc-water *::after{box-sizing:border-box}
-.cfm-svc-water p,.cfm-svc-water li,.cfm-svc-water h1,.cfm-svc-water h2,.cfm-svc-water h3,.cfm-svc-water h4{word-wrap:break-word;overflow-wrap:break-word;margin:0}
-.cfm-svc-water{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-fire:#D85A30;--cfm-firep:#FDECE6;--cfm-safe:#065F46;--cfm-safep:#D1FAE5;--cfm-danger:#991B1B;--cfm-dangerp:#FEE2E2}
-
-.cfm-svc-water .cwd-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-.cfm-svc-water .cwd-section{padding:40px 0}
-.cfm-svc-water .cwd-lbl{display:block;color:var(--cfm-light);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center}
-.cfm-svc-water h2{color:var(--cfm-dark);font-size:1.5rem;font-weight:600;line-height:1.3;text-align:center;max-width:780px;margin:0 auto 32px}
-.cfm-svc-water h3{color:var(--cfm-h);font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:8px}
-.cfm-svc-water h4{color:var(--cfm-h);font-size:1rem;font-weight:600;line-height:1.45}
-.cfm-svc-water .cwd-p{color:var(--cfm-body);font-size:1rem;line-height:1.8;margin-bottom:16px}
-.cfm-svc-water .cwd-p:last-child{margin-bottom:0}
-.cfm-svc-water .cwd-q{display:block;color:var(--cfm-dark);font-weight:700;margin:22px 0 10px;font-size:1.05rem}
-
-/* HERO */
-.cfm-svc-water .cwd-hero{background:var(--cfm-dark);color:#fff;padding:64px 20px;text-align:center}
-.cfm-svc-water .cwd-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:22px;font-size:.78rem;font-weight:600;margin-bottom:18px}
-.cfm-svc-water .cwd-hero h1{color:#fff;font-size:1.8rem;font-weight:700;line-height:1.2;max-width:820px;margin:0 auto}
-.cfm-svc-water .cwd-hero .cwd-sub{color:rgba(255,255,255,.82);font-size:1.02rem;font-weight:400;line-height:1.6;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto}
-.cfm-svc-water .cwd-emergency{background:rgba(211,85,48,.25);border:1px solid rgba(211,85,48,.5);color:#fff;padding:12px 18px;border-radius:8px;font-size:.95rem;font-weight:600;max-width:680px;margin:18px auto 0;line-height:1.6}
-.cfm-svc-water .cwd-pills{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 20px}
-.cfm-svc-water .cwd-pills li{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
-.cfm-svc-water .cwd-cta-row{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-
-/* BUTTONS */
-.cfm-svc-water .cwd-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
-.cfm-svc-water .cwd-btn-emergency{background:var(--cfm-fire);color:#fff;box-shadow:0 4px 16px rgba(216,90,48,.4)}
-.cfm-svc-water .cwd-btn-emergency:hover{opacity:.9;transform:translateY(-2px)}
-.cfm-svc-water .cwd-btn-secondary{background:transparent;color:var(--cfm-dark);border:2px solid var(--cfm-dark);padding:12px 26px}
-.cfm-svc-water .cwd-btn-secondary:hover{background:var(--cfm-pale)}
-.cfm-svc-water .cwd-hero .cwd-btn-secondary{color:#fff;border-color:rgba(255,255,255,.6)}
-.cfm-svc-water .cwd-hero .cwd-btn-secondary:hover{background:rgba(255,255,255,.12)}
-
-/* AEO BOX */
-.cfm-svc-water .cwd-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:var(--cfm-h);max-width:1200px;margin:32px auto 0}
-
-/* CALLOUTS */
-.cfm-svc-water .cwd-callout{border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
-.cfm-svc-water .cwd-callout-fire{background:var(--cfm-firep);border-left:4px solid var(--cfm-fire);font-size:.95rem;color:var(--cfm-fire);font-weight:500}
-.cfm-svc-water .cwd-callout-safe{background:var(--cfm-safep);border-left:4px solid var(--cfm-safe)}
-.cfm-svc-water .cwd-callout-danger{background:var(--cfm-dangerp);border-left:4px solid var(--cfm-danger)}
-.cfm-svc-water .cwd-callout h4{margin-bottom:10px}
-.cfm-svc-water .cwd-callout-safe h4{color:var(--cfm-safe)}
-.cfm-svc-water .cwd-callout-danger h4{color:var(--cfm-danger)}
-.cfm-svc-water .cwd-callout ul{margin:0;padding-left:0;list-style:none}
-.cfm-svc-water .cwd-callout li{line-height:1.8}
-.cfm-svc-water .cwd-callout-safe li{color:var(--cfm-safe)}
-.cfm-svc-water .cwd-callout-danger li{color:var(--cfm-danger)}
-.cfm-svc-water .cwd-callout-safe p,.cfm-svc-water .cwd-callout-danger p{color:var(--cfm-body)}
-
-/* CARDS GRID */
-.cfm-svc-water .cwd-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px}
-.cfm-svc-water .cwd-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;transition:all .25s}
-.cfm-svc-water .cwd-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
-.cfm-svc-water .cwd-step-bubble{background:var(--cfm-pale);color:var(--cfm-dark);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;margin-bottom:14px}
-.cfm-svc-water .cwd-icon{font-size:1.75rem;display:block;margin-bottom:12px}
-
-/* STAT STRIP */
-.cfm-svc-water .cwd-stats{background:var(--cfm-dark);padding:48px 20px;text-align:center}
-.cfm-svc-water .cwd-stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
-.cfm-svc-water .cwd-stat-num{font-size:1.6rem;font-weight:700;color:#fff;line-height:1.2}
-.cfm-svc-water .cwd-stat-lbl{font-size:.875rem;color:rgba(255,255,255,.72);margin-top:4px}
-
-/* TABLE */
-.cfm-svc-water .cwd-table-wrap{border-radius:10px;border:1.5px solid var(--cfm-border);overflow-x:auto;margin:20px 0}
-.cfm-svc-water table{width:100%;border-collapse:collapse;min-width:560px}
-.cfm-svc-water thead{background:var(--cfm-dark);color:#fff}
-.cfm-svc-water th{padding:14px 18px;font-size:.9rem;font-weight:600;text-align:left}
-.cfm-svc-water td{padding:13px 18px;border:1px solid var(--cfm-border);color:var(--cfm-body);font-size:.95rem}
-.cfm-svc-water tbody tr:nth-child(even){background:var(--cfm-bg)}
-.cfm-svc-water tbody tr:nth-child(odd){background:var(--cfm-white)}
-.cfm-svc-water td:first-child{font-weight:600;color:var(--cfm-h)}
-
-/* MID CTA (urgent variant) */
-.cfm-svc-water .cwd-midcta{background:var(--cfm-firep);border-left:4px solid var(--cfm-fire);border-radius:14px;padding:32px 24px;text-align:center}
-.cfm-svc-water .cwd-midcta h3{color:var(--cfm-fire);margin-bottom:8px;text-align:center}
-.cfm-svc-water .cwd-midcta p{color:var(--cfm-body);margin-bottom:20px}
-.cfm-svc-water .cwd-midcta .cwd-cta-row{margin-top:0}
-
-/* FAQ */
-.cfm-svc-water .cwd-faq-item{border-bottom:1px solid var(--cfm-border)}
-.cfm-svc-water .cwd-faq-q{width:100%;text-align:left;padding:20px 0;font-size:1rem;font-weight:600;color:var(--cfm-h);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.cfm-svc-water .cwd-faq-q .cwd-faq-icon{color:var(--cfm-light);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
-.cfm-svc-water .cwd-faq-item.open .cwd-faq-icon{transform:rotate(135deg)}
-.cfm-svc-water .cwd-faq-a{padding:0 0 20px;color:var(--cfm-body);line-height:1.8;display:none}
-.cfm-svc-water .cwd-faq-item.open .cwd-faq-a{display:block;animation:cfmWdFade .2s ease}
-@keyframes cfmWdFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
-
-/* RELATED */
-.cfm-svc-water .cwd-related{display:grid;grid-template-columns:1fr;gap:20px}
-.cfm-svc-water .cwd-related a{display:block;border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;text-decoration:none;transition:all .2s}
-.cfm-svc-water .cwd-related a:hover{border-color:var(--cfm-light);transform:translateY(-3px)}
-.cfm-svc-water .cwd-related h4{color:var(--cfm-dark)}
-
-/* BOTTOM CTA */
-.cfm-svc-water .cwd-bottom-cta{background:var(--cfm-dark);padding:56px 24px;text-align:center;border-radius:16px;border-top:4px solid var(--cfm-fire)}
-.cfm-svc-water .cwd-bottom-cta h2{color:#fff}
-.cfm-svc-water .cwd-bottom-cta p{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;max-width:640px;margin:0 auto}
-.cfm-svc-water .cwd-bottom-cta .cwd-cta-row{margin-top:24px}
-.cfm-svc-water .cwd-bottom-cta .cwd-svc-area{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:20px}
-
-.cfm-svc-water a{color:var(--cfm-mid)}
-.cfm-svc-water a:hover{color:var(--cfm-dark)}
-
-@media(min-width:768px){
-.cfm-svc-water .cwd-section{padding:56px 0}
-.cfm-svc-water h2{font-size:1.65rem}
-.cfm-svc-water .cwd-hero{padding:72px 24px}
-.cfm-svc-water .cwd-hero h1{font-size:2.1rem}
-.cfm-svc-water .cwd-grid-2{grid-template-columns:1fr 1fr}
-.cfm-svc-water .cwd-grid-3{grid-template-columns:repeat(3,1fr)}
-.cfm-svc-water .cwd-stats-grid{grid-template-columns:repeat(4,1fr)}
-.cfm-svc-water .cwd-related{grid-template-columns:repeat(3,1fr)}
-}
-@media(min-width:1024px){
-.cfm-svc-water .cwd-section{padding:80px 0}
-.cfm-svc-water .cwd-hero{padding:88px 24px}
-.cfm-svc-water .cwd-hero h1{font-size:2.4rem}
-.cfm-svc-water h2{font-size:1.75rem}
-.cfm-svc-water .cwd-grid-5{grid-template-columns:repeat(5,1fr)}
-.cfm-svc-water .cwd-grid-6{grid-template-columns:repeat(3,1fr)}
-}
-</style>
-
-<div class="cfm-svc-water">
-
-<section class="cwd-hero">
-<div class="cwd-wrap">
-<span class="cwd-badge">Medford &middot; Emergency Carpet Response</span>
-<h1>Water Damage Carpet Restoration in Medford, Oregon</h1>
-<p class="cwd-sub">Flooded carpet, burst pipe, appliance leak, or storm water &mdash; every hour without extraction increases the risk of permanent damage and mold.</p>
-<p class="cwd-emergency">&#128680; Water in your carpet? Call now. Every hour matters. Mold can begin in 24&ndash;48 hours &mdash; the faster we extract, the better the salvage outcome.</p>
-<ul class="cwd-pills">
-<li>&#9989; Emergency Response</li>
-<li>&#9989; Fast Extraction</li>
-<li>&#9989; Rapid Drying Protocol</li>
-<li>&#9989; Insurance Documentation</li>
-<li>&#9989; Jackson County Local</li>
-</ul>
-<div class="cwd-cta-row">
-<a class="cwd-btn cwd-btn-emergency" href="tel:+14583020101">&#128222; Call NOW (458) 302-0101</a>
-<a class="cwd-btn cwd-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128680; Book Urgent Visit</a>
-</div>
-</div>
-</section>
-
-<div class="cwd-wrap">
-<p class="cwd-aeo">Yes &mdash; we respond to water-damaged carpet in Medford and Jackson County. Our process: emergency water extraction, rapid drying with industrial equipment to prevent mold, salvage assessment, and restoration cleaning if the carpet is recoverable. The critical window is 24&ndash;48 hours before mold begins. Call immediately &mdash; (458) 302-0101. The faster extraction happens, the better the outcome.</p>
-</div>
-
-<section class="cwd-section">
-<div class="cwd-wrap">
-<span class="cwd-lbl">Why Every Hour Counts</span>
-<h2>The 24&ndash;48 Hour Window &mdash; Why Water Damage Is an Emergency</h2>
-<div style="max-width:800px;margin:0 auto">
-<span class="cwd-q">How fast does mold grow in wet carpet?</span>
-<p class="cwd-callout cwd-callout-fire">Mold spore germination can begin in wet carpet within 24&ndash;48 hours at room temperature. In Medford's summer heat (90&deg;F+ indoors), mold can establish faster. This is not a service to schedule for next week.</p>
-<p class="cwd-p">Carpet that has been saturated by water damage begins its degradation clock immediately. In the first 1&ndash;6 hours, water is moving through the carpet pile, saturating the backing and beginning to flood the pad. In the first 6&ndash;12 hours, the pad is fully saturated and water is contacting the subfloor. In the 12&ndash;48 hour window, microbial activity begins in the wet organic materials of the backing and pad &mdash; this is when mold and bacteria establish. Beyond 48 hours with sustained moisture, the carpet and pad have potentially irreversible contamination.</p>
-<p class="cwd-p">Beyond the mold risk, sustained water saturation degrades carpet in several ways: the backing adhesive breaks down, causing delamination; the pad loses structural integrity and can collapse or develop odor-producing contamination; the subfloor &mdash; particularly wood subfloor common in older Medford homes &mdash; absorbs moisture and can begin warping.</p>
-<p class="cwd-p">The carpet's salvageability window is directly related to how quickly extraction begins. Carpet extracted and dried within 24 hours has a high salvage rate. Carpet left wet for 48&ndash;72 hours has a significantly lower salvage rate. Beyond 72 hours in most conditions, replacement is increasingly the likely outcome.</p>
-<span class="cwd-q">Can I use a wet-vac to handle water-damaged carpet myself?</span>
-<p class="cwd-p">A consumer wet-vac can extract some surface water and reduce visible standing water. It cannot extract moisture from the carpet backing, the pad, or the subfloor &mdash; the layers where damage accumulates and mold establishes. Professional extraction equipment moves significantly more water per pass than consumer wet-vacs, and industrial air movers and dehumidifiers accelerate drying at depths a consumer fan cannot reach. DIY extraction is better than nothing in the first hour, but should be followed immediately by professional response.</p>
-</div>
-</div>
-</section>
-
-<section class="cwd-section" style="background:var(--cfm-white)">
-<div class="cwd-wrap">
-<span class="cwd-lbl">Our Response Process</span>
-<h2>What We Do for Water-Damaged Carpet in Medford</h2>
-<div class="cwd-grid cwd-grid-5">
-<div class="cwd-card"><span class="cwd-step-bubble">1</span><h3>Rapid Response &amp; Assessment</h3><p class="cwd-p">We assess damage scope: source type (clean vs grey vs sewage water), extent of saturation, subfloor condition, and whether the carpet is structurally salvageable, and advise honestly before starting.</p></div>
-<div class="cwd-card"><span class="cwd-step-bubble">2</span><h3>Emergency Water Extraction</h3><p class="cwd-p">Commercial-grade extraction from the carpet surface, backing, and as much of the pad as possible. Multiple passes are made until extraction rate slows significantly.</p></div>
-<div class="cwd-card"><span class="cwd-step-bubble">3</span><h3>Pad Assessment &amp; Removal</h3><p class="cwd-p">Pad typically needs removal after significant water damage &mdash; it holds moisture and contamination and is rarely worth salvaging. Removing it lets the subfloor dry and eliminates the primary mold-growth substrate.</p></div>
-<div class="cwd-card"><span class="cwd-step-bubble">4</span><h3>Industrial Drying</h3><p class="cwd-p">Industrial air movers and dehumidifiers accelerate carpet and subfloor drying &mdash; fundamentally different from pointing household fans at wet carpet.</p></div>
-<div class="cwd-card"><span class="cwd-step-bubble">5</span><h3>Assessment &amp; Restoration</h3><p class="cwd-p">Once dry (confirmed with a moisture meter), we assess salvageability. Structurally sound, contamination-free carpet is cleaned and restored; contaminated or delaminated carpet, we advise on replacement.</p></div>
-</div>
-</div>
-</section>
-
-<section class="cwd-section">
-<div class="cwd-wrap" style="max-width:900px">
-<span class="cwd-lbl">Water Source Type</span>
-<h2>Water Source Type Changes the Treatment Approach</h2>
-<span class="cwd-q">Does the source of the water damage affect how it's treated?</span>
-<div class="cwd-table-wrap">
-<table>
-<thead><tr><th>Water Category</th><th>Source Examples</th><th>Treatment</th></tr></thead>
-<tbody>
-<tr><td>Category 1 &mdash; Clean Water</td><td>Burst supply pipe, overflowing sink, appliance supply line</td><td>Extraction + drying + restoration cleaning possible</td></tr>
-<tr><td>Category 2 &mdash; Grey Water</td><td>Dishwasher, washing machine, toilet overflow (no solids)</td><td>Extraction + antimicrobial treatment + pad replacement</td></tr>
-<tr><td>Category 3 &mdash; Black Water</td><td>Sewage backup, flooding from outdoor contaminated source</td><td>Carpet typically non-salvageable &mdash; extraction for subfloor access</td></tr>
-</tbody>
-</table>
-</div>
-<p class="cwd-p">For Category 1 water damage, carpet salvage is most likely when extraction begins quickly. For Category 2 and 3, the contamination concern elevates the response &mdash; antimicrobial treatment is required and carpet replacement becomes more likely depending on extent of exposure. We identify the water source at assessment and advise accordingly. If you don't know the source, we help assess it.</p>
-</div>
-</section>
-
-<section class="cwd-section" style="background:var(--cfm-white)">
-<div class="cwd-wrap">
-<span class="cwd-lbl">Local Context</span>
-<h2>Common Water Damage Sources in Medford and Jackson County Homes</h2>
-<span class="cwd-q" style="text-align:center;display:block">What causes most carpet water damage in Medford?</span>
-<div class="cwd-grid cwd-grid-6" style="margin-top:20px">
-<div class="cwd-card"><span class="cwd-icon">&#127783;&#65039;</span><h3>Winter Rogue Valley Storms and Flooding</h3><p class="cwd-p">Medford's October&ndash;March wet season brings sustained rain that can overwhelm drainage. Bear Creek flooding events, roof drainage backup, and storm water entry through basement windows and foundation cracks are common sources.</p></div>
-<div class="cwd-card"><span class="cwd-icon">&#129384;</span><h3>Burst Pipes &mdash; Winter Freeze Events</h3><p class="cwd-p">Freeze events in December&ndash;January &mdash; especially in Gold Hill, Eagle Point, and Rogue River where temperatures drop lower than the valley floor &mdash; can burst poorly insulated pipes that saturate carpet before discovery.</p></div>
-<div class="cwd-card"><span class="cwd-icon">&#128736;&#65039;</span><h3>Appliance Failures</h3><p class="cwd-p">Dishwasher supply line failure, washing machine overflow, ice maker line disconnect, and water heater tank failure are among the most common sources. Kitchen and laundry room adjacency means these spread to carpet within hours.</p></div>
-<div class="cwd-card"><span class="cwd-icon">&#127968;</span><h3>Roof Leak Damage</h3><p class="cwd-p">Damaged flashing, missing shingles, and clogged gutters allow water entry that tracks down walls and saturates carpet along exterior walls during heavy Rogue Valley rain events. Attic condensation and HVAC pan overflow are related sources.</p></div>
-<div class="cwd-card"><span class="cwd-icon">&#128703;</span><h3>Plumbing Overflow Events</h3><p class="cwd-p">Toilet overflow, slow-drain backup, and shower/tub overflow are common in Medford's older housing stock (1960s&ndash;1980s plumbing), typically affecting bathroom-adjacent carpet in hallways and bedrooms.</p></div>
-<div class="cwd-card"><span class="cwd-icon">&#127959;&#65039;</span><h3>Construction and Renovation Errors</h3><p class="cwd-p">Medford's active renovation market &mdash; particularly in the post-Almeda rebuild zone in Phoenix and Talent &mdash; creates water damage risk from plumbing installation errors and inadequate temporary waterproofing during construction.</p></div>
-</div>
-</div>
-</section>
-
-<section class="cwd-section">
-<div class="cwd-wrap">
-<div class="cwd-midcta">
-<h3>Wet Carpet Right Now?</h3>
-<p>Every hour of delay reduces the salvage outcome. Call us now &mdash; we respond to water damage calls in Medford and Jackson County.</p>
-<div class="cwd-cta-row">
-<a class="cwd-btn cwd-btn-emergency" href="tel:+14583020101">&#128222; CALL (458) 302-0101</a>
-<a class="cwd-btn cwd-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128680; Request Urgent Visit</a>
-</div>
-</div>
-</div>
-</section>
-
-<section class="cwd-section" style="background:var(--cfm-white)">
-<div class="cwd-wrap" style="max-width:800px">
-<span class="cwd-lbl">Honest Scope</span>
-<h2>What We Cover &mdash; and What We Don't</h2>
-<span class="cwd-q">Are you a full water damage restoration company?</span>
-<p class="cwd-callout cwd-callout-danger" style="color:var(--cfm-danger)">We are carpet restoration specialists &mdash; not a full structural water damage restoration company. Here's the exact boundary of what we do and don't cover.</p>
-<div class="cwd-callout cwd-callout-safe">
-<h4>What we DO</h4>
-<ul>
-<li>&#9989; Emergency carpet water extraction</li>
-<li>&#9989; Pad removal and disposal</li>
-<li>&#9989; Industrial air drying of carpet and subfloor surface</li>
-<li>&#9989; Carpet salvage assessment</li>
-<li>&#9989; Antimicrobial treatment (for Category 2 water)</li>
-<li>&#9989; Restoration cleaning after confirmed drying</li>
-<li>&#9989; Documentation for insurance claim purposes (dated receipts, service documentation)</li>
-</ul>
-</div>
-<div class="cwd-callout cwd-callout-danger">
-<h4>What we DON'T cover (refer to appropriate specialists)</h4>
-<ul>
-<li>&#10060; Structural mold remediation &mdash; if mold is present in walls, framing, or structural materials, you need a licensed mold remediation specialist</li>
-<li>&#10060; Structural drying of walls, ceilings, or building framing</li>
-<li>&#10060; Sewage/biohazard remediation for Category 3 events</li>
-<li>&#10060; Subfloor structural repairs or replacement</li>
-<li>&#10060; Insurance claim management or advocacy</li>
-</ul>
-</div>
-<div class="cwd-callout cwd-callout-safe">
-<h4>If your damage involves structural components</h4>
-<p class="cwd-p">For comprehensive water damage restoration including structural drying and mold remediation, we refer Medford homeowners to licensed water damage restoration companies. We work alongside them on the carpet component when needed. See our <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-cause-mold-wet-carpet-risks/">mold risk guide</a> for more on this boundary.</p>
-</div>
-</div>
-</section>
-
-<section class="cwd-section">
-<div class="cwd-wrap" style="max-width:800px">
-<span class="cwd-lbl">Insurance Documentation</span>
-<h2>Documentation for Insurance Claims</h2>
-<span class="cwd-q">Do you provide documentation for insurance claims?</span>
-<p class="cwd-p">Yes &mdash; every water damage job receives a dated service receipt documenting the date of service, the scope of work performed, the areas treated, and our IICRC certification. This documentation is accepted by most homeowner insurance carriers for claims related to water damage remediation.</p>
-<p class="cwd-p">We recommend photographing the damage before we begin (or we can assist with this) and contacting your insurance carrier before or as we're on-site. We can provide our service documentation to your insurance adjuster directly or through you.</p>
-<p class="cwd-p">Note: we provide documentation of the work we performed &mdash; we don't provide damage valuations, replacement cost estimates, or insurance advocacy services. For those, work with your insurance adjuster and a licensed public adjuster if needed.</p>
-</div>
-</section>
-
-<section class="cwd-section" style="background:var(--cfm-white)">
-<div class="cwd-wrap" style="max-width:800px">
-<h2>Water Damage Carpet FAQ &mdash; Medford, Oregon</h2>
-<div class="cwd-faq">
-<div class="cwd-faq-item"><button class="cwd-faq-q"><span>How fast can you respond to water-damaged carpet in Medford?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">We prioritize water damage calls. For Medford and immediate Jackson County, we aim to respond same-day for calls received during business hours (Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm). Call immediately at (458) 302-0101 and we'll tell you our earliest availability. Every hour matters for carpet salvage.</p></div></div>
-<div class="cwd-faq-item"><button class="cwd-faq-q"><span>Can wet carpet be saved after water damage?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">Often yes &mdash; depending on water source type, how long the carpet's been wet, and its structural condition. Category 1 (clean water) damage responded to within 24 hours has the highest salvage rate. Category 2 (grey water) can often be salvaged with antimicrobial treatment. Category 3 (sewage/black water) typically requires replacement. We assess salvageability honestly before committing to restoration.</p></div></div>
-<div class="cwd-faq-item"><button class="cwd-faq-q"><span>How long does carpet drying take after water damage?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">With industrial air movers and dehumidifiers, most carpets dry in 24&ndash;72 hours after extraction depending on saturation level, carpet type, pad removal, and subfloor condition. We use moisture meters to confirm complete drying before assessing restoration.</p></div></div>
-<div class="cwd-faq-item"><button class="cwd-faq-q"><span>Does homeowner's insurance cover wet carpet restoration?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">Most standard homeowner's insurance policies cover sudden and accidental water damage &mdash; burst pipes, appliance failures, roof leaks &mdash; including carpet damage. Flood damage from outside the foundation typically requires separate flood insurance. We provide dated documentation of our services; you coordinate with your insurance carrier for coverage determination.</p></div></div>
-<div class="cwd-faq-item"><button class="cwd-faq-q"><span>What if there's already mold in my carpet from a previous water event?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">If visible mold is present in the carpet or pad, the carpet typically needs to be removed and replaced &mdash; mold in organic carpet materials generally isn't addressable through cleaning. If mold has spread to the subfloor or wall framing, you need a licensed mold remediation specialist. We're transparent about this boundary &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-cause-mold-wet-carpet-risks/">mold risk guide</a>.</p></div></div>
-<div class="cwd-faq-item"><button class="cwd-faq-q"><span>Do you handle water damage from major storm events or Bear Creek flooding?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">Yes &mdash; Jackson County has experienced significant water damage events from Bear Creek flooding, storm events, and infrastructure failures across various areas including the Phoenix/Talent corridor. We're familiar with the Rogue Valley's specific water damage patterns and serve all Jackson County zip codes for water damage response.</p></div></div>
-</div>
-</div>
-</section>
-
-<section class="cwd-section">
-<div class="cwd-wrap">
-<h2>Related Services</h2>
-<div class="cwd-related">
-<a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/"><h4>&#129525; Carpet Repair</h4></a>
-<a href="https://carpetcleaningmedfordoregon.com/carpet-stretching-medford-oregon/"><h4>&#128260; Carpet Stretching</h4></a>
-<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/"><h4>&#127968; Residential Carpet Cleaning</h4></a>
-</div>
-</div>
-</section>
-
-<section class="cwd-section">
-<div class="cwd-wrap">
-<div class="cwd-bottom-cta">
-<h2>Water Damage to Carpet &mdash; Call Now, Not Tomorrow.</h2>
-<p>Every hour of delay reduces the salvage chance and increases mold risk. We respond to emergency carpet water damage across Medford and Jackson County.</p>
-<div class="cwd-cta-row">
-<a class="cwd-btn cwd-btn-emergency" href="tel:+14583020101">&#128222; CALL NOW (458) 302-0101</a>
-<a class="cwd-btn cwd-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128680; Book Urgent Visit</a>
-</div>
-<p class="cwd-svc-area">Serving Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504 and all of Jackson County</p>
-</div>
-</div>
-</section>
-
-</div>
-<script>
-(function(){'use strict';
-var root=document.querySelector('.cfm-svc-water');
-if(!root)return;
-root.querySelectorAll('.cwd-faq-item').forEach(function(item){
-var q=item.querySelector('.cwd-faq-q');
-q.addEventListener('click',function(){
-var open=item.classList.contains('open');
-root.querySelectorAll('.cwd-faq-item.open').forEach(function(o){if(o!==item){o.classList.remove('open');o.querySelector('.cwd-faq-icon').textContent='+'}});
-item.classList.toggle('open',!open);
-q.querySelector('.cwd-faq-icon').textContent=!open?'×':'+';
-});
-});
-root.querySelectorAll('a[href^="#"]').forEach(function(a){
-a.addEventListener('click',function(e){
-var t=document.querySelector(a.getAttribute('href'));
-if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
-});
-});
-})();
-</script>
-<!-- /wp:html -->
+    .cfm-svc-water{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F9FA}
+    .cfm-svc-water *,.cfm-svc-water *::before,.cfm-svc-water *::after{box-sizing:border-box}
+    .cfm-svc-water p,.cfm-svc-water li,.cfm-svc-water h1,.cfm-svc-water h2,.cfm-svc-water h3,.cfm-svc-water h4{word-wrap:break-word;overflow-wrap:break-word;margin:0}
+    .cfm-svc-water{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-fire:#D85A30;--cfm-firep:#FDECE6;--cfm-safe:#065F46;--cfm-safep:#D1FAE5;--cfm-danger:#991B1B;--cfm-dangerp:#FEE2E2}
+    
+    .cfm-svc-water .cwd-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+    .cfm-svc-water .cwd-section{padding:40px 0}
+    .cfm-svc-water .cwd-lbl{display:block;color:var(--cfm-light);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+    .cfm-svc-water h2{color:var(--cfm-dark);font-size:1.5rem;font-weight:600;line-height:1.3;text-align:center;max-width:780px;margin:0 auto 32px}
+    .cfm-svc-water h3{color:var(--cfm-h);font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:8px}
+    .cfm-svc-water h4{color:var(--cfm-h);font-size:1rem;font-weight:600;line-height:1.45}
+    .cfm-svc-water .cwd-p{color:var(--cfm-body);font-size:1rem;line-height:1.8;margin-bottom:16px}
+    .cfm-svc-water .cwd-p:last-child{margin-bottom:0}
+    .cfm-svc-water .cwd-q{display:block;color:var(--cfm-dark);font-weight:700;margin:22px 0 10px;font-size:1.05rem}
+    
+    /* HERO */
+    .cfm-svc-water .cwd-hero{background:var(--cfm-dark);color:#fff;padding:64px 20px;text-align:center}
+    .cfm-svc-water .cwd-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:22px;font-size:.78rem;font-weight:600;margin-bottom:18px}
+    .cfm-svc-water .cwd-hero h1{color:#fff;font-size:1.8rem;font-weight:700;line-height:1.2;max-width:820px;margin:0 auto}
+    .cfm-svc-water .cwd-hero .cwd-sub{color:rgba(255,255,255,.82);font-size:1.02rem;font-weight:400;line-height:1.6;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto}
+    .cfm-svc-water .cwd-emergency{background:rgba(211,85,48,.25);border:1px solid rgba(211,85,48,.5);color:#fff;padding:12px 18px;border-radius:8px;font-size:.95rem;font-weight:600;max-width:680px;margin:18px auto 0;line-height:1.6}
+    .cfm-svc-water .cwd-pills{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 20px}
+    .cfm-svc-water .cwd-pills li{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+    .cfm-svc-water .cwd-cta-row{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+    
+    /* BUTTONS */
+    .cfm-svc-water .cwd-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
+    .cfm-svc-water .cwd-btn-emergency{background:var(--cfm-fire);color:#fff;box-shadow:0 4px 16px rgba(216,90,48,.4)}
+    .cfm-svc-water .cwd-btn-emergency:hover{opacity:.9;transform:translateY(-2px)}
+    .cfm-svc-water .cwd-btn-secondary{background:transparent;color:var(--cfm-dark);border:2px solid var(--cfm-dark);padding:12px 26px}
+    .cfm-svc-water .cwd-btn-secondary:hover{background:var(--cfm-pale)}
+    .cfm-svc-water .cwd-hero .cwd-btn-secondary{color:#fff;border-color:rgba(255,255,255,.6)}
+    .cfm-svc-water .cwd-hero .cwd-btn-secondary:hover{background:rgba(255,255,255,.12)}
+    
+    /* AEO BOX */
+    .cfm-svc-water .cwd-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:var(--cfm-h);max-width:1200px;margin:32px auto 0}
+    
+    /* CALLOUTS */
+    .cfm-svc-water .cwd-callout{border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .cfm-svc-water .cwd-callout-fire{background:var(--cfm-firep);border-left:4px solid var(--cfm-fire);font-size:.95rem;color:var(--cfm-fire);font-weight:500}
+    .cfm-svc-water .cwd-callout-safe{background:var(--cfm-safep);border-left:4px solid var(--cfm-safe)}
+    .cfm-svc-water .cwd-callout-danger{background:var(--cfm-dangerp);border-left:4px solid var(--cfm-danger)}
+    .cfm-svc-water .cwd-callout h4{margin-bottom:10px}
+    .cfm-svc-water .cwd-callout-safe h4{color:var(--cfm-safe)}
+    .cfm-svc-water .cwd-callout-danger h4{color:var(--cfm-danger)}
+    .cfm-svc-water .cwd-callout ul{margin:0;padding-left:0;list-style:none}
+    .cfm-svc-water .cwd-callout li{line-height:1.8}
+    .cfm-svc-water .cwd-callout-safe li{color:var(--cfm-safe)}
+    .cfm-svc-water .cwd-callout-danger li{color:var(--cfm-danger)}
+    .cfm-svc-water .cwd-callout-safe p,.cfm-svc-water .cwd-callout-danger p{color:var(--cfm-body)}
+    
+    /* CARDS GRID */
+    .cfm-svc-water .cwd-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px}
+    .cfm-svc-water .cwd-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;transition:all .25s}
+    .cfm-svc-water .cwd-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+    .cfm-svc-water .cwd-step-bubble{background:var(--cfm-pale);color:var(--cfm-dark);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;margin-bottom:14px}
+    .cfm-svc-water .cwd-icon{font-size:1.75rem;display:block;margin-bottom:12px}
+    
+    /* STAT STRIP */
+    .cfm-svc-water .cwd-stats{background:var(--cfm-dark);padding:48px 20px;text-align:center}
+    .cfm-svc-water .cwd-stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
+    .cfm-svc-water .cwd-stat-num{font-size:1.6rem;font-weight:700;color:#fff;line-height:1.2}
+    .cfm-svc-water .cwd-stat-lbl{font-size:.875rem;color:rgba(255,255,255,.72);margin-top:4px}
+    
+    /* TABLE */
+    .cfm-svc-water .cwd-table-wrap{border-radius:10px;border:1.5px solid var(--cfm-border);overflow-x:auto;margin:20px 0}
+    .cfm-svc-water table{width:100%;border-collapse:collapse;min-width:560px}
+    .cfm-svc-water thead{background:var(--cfm-dark);color:#fff}
+    .cfm-svc-water th{padding:14px 18px;font-size:.9rem;font-weight:600;text-align:left}
+    .cfm-svc-water td{padding:13px 18px;border:1px solid var(--cfm-border);color:var(--cfm-body);font-size:.95rem}
+    .cfm-svc-water tbody tr:nth-child(even){background:var(--cfm-bg)}
+    .cfm-svc-water tbody tr:nth-child(odd){background:var(--cfm-white)}
+    .cfm-svc-water td:first-child{font-weight:600;color:var(--cfm-h)}
+    
+    /* MID CTA (urgent variant) */
+    .cfm-svc-water .cwd-midcta{background:var(--cfm-firep);border-left:4px solid var(--cfm-fire);border-radius:14px;padding:32px 24px;text-align:center}
+    .cfm-svc-water .cwd-midcta h3{color:var(--cfm-fire);margin-bottom:8px;text-align:center}
+    .cfm-svc-water .cwd-midcta p{color:var(--cfm-body);margin-bottom:20px}
+    .cfm-svc-water .cwd-midcta .cwd-cta-row{margin-top:0}
+    
+    /* FAQ */
+    .cfm-svc-water .cwd-faq-item{border-bottom:1px solid var(--cfm-border)}
+    .cfm-svc-water .cwd-faq-q{width:100%;text-align:left;padding:20px 0;font-size:1rem;font-weight:600;color:var(--cfm-h);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .cfm-svc-water .cwd-faq-q .cwd-faq-icon{color:var(--cfm-light);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
+    .cfm-svc-water .cwd-faq-item.open .cwd-faq-icon{transform:rotate(135deg)}
+    .cfm-svc-water .cwd-faq-a{padding:0 0 20px;color:var(--cfm-body);line-height:1.8;display:none}
+    .cfm-svc-water .cwd-faq-item.open .cwd-faq-a{display:block;animation:cfmWdFade .2s ease}
+    @keyframes cfmWdFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+    
+    /* RELATED */
+    .cfm-svc-water .cwd-related{display:grid;grid-template-columns:1fr;gap:20px}
+    .cfm-svc-water .cwd-related a{display:block;border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;text-decoration:none;transition:all .2s}
+    .cfm-svc-water .cwd-related a:hover{border-color:var(--cfm-light);transform:translateY(-3px)}
+    .cfm-svc-water .cwd-related h4{color:var(--cfm-dark)}
+    
+    /* BOTTOM CTA */
+    .cfm-svc-water .cwd-bottom-cta{background:var(--cfm-dark);padding:56px 24px;text-align:center;border-radius:16px;border-top:4px solid var(--cfm-fire)}
+    .cfm-svc-water .cwd-bottom-cta h2{color:#fff}
+    .cfm-svc-water .cwd-bottom-cta p{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;max-width:640px;margin:0 auto}
+    .cfm-svc-water .cwd-bottom-cta .cwd-cta-row{margin-top:24px}
+    .cfm-svc-water .cwd-bottom-cta .cwd-svc-area{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:20px}
+    
+    .cfm-svc-water a{color:var(--cfm-mid)}
+    .cfm-svc-water a:hover{color:var(--cfm-dark)}
+    
+    @media(min-width:768px){
+    .cfm-svc-water .cwd-section{padding:56px 0}
+    .cfm-svc-water h2{font-size:1.65rem}
+    .cfm-svc-water .cwd-hero{padding:72px 24px}
+    .cfm-svc-water .cwd-hero h1{font-size:2.1rem}
+    .cfm-svc-water .cwd-grid-2{grid-template-columns:1fr 1fr}
+    .cfm-svc-water .cwd-grid-3{grid-template-columns:repeat(3,1fr)}
+    .cfm-svc-water .cwd-stats-grid{grid-template-columns:repeat(4,1fr)}
+    .cfm-svc-water .cwd-related{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(min-width:1024px){
+    .cfm-svc-water .cwd-section{padding:80px 0}
+    .cfm-svc-water .cwd-hero{padding:88px 24px}
+    .cfm-svc-water .cwd-hero h1{font-size:2.4rem}
+    .cfm-svc-water h2{font-size:1.75rem}
+    .cfm-svc-water .cwd-grid-5{grid-template-columns:repeat(5,1fr)}
+    .cfm-svc-water .cwd-grid-6{grid-template-columns:repeat(3,1fr)}
+    }
+    </style>
+    
+    <div class="cfm-svc-water">
+    
+    <section class="cwd-hero">
+    <div class="cwd-wrap">
+    <span class="cwd-badge">Medford &middot; Emergency Carpet Response</span>
+    <h1>Water Damage in Medford, Oregon — Carpet Restoration</h1>
+    <p class="cwd-sub">Flooded carpet, burst pipe, appliance leak, or storm water &mdash; every hour without extraction increases the risk of permanent damage and mold.</p>
+    <p class="cwd-emergency">&#128680; Water in your carpet? Call now. Every hour matters. Mold can begin in 24&ndash;48 hours &mdash; the faster we extract, the better the salvage outcome.</p>
+    <ul class="cwd-pills">
+    <li>&#9989; Emergency Response</li>
+    <li>&#9989; Fast Extraction</li>
+    <li>&#9989; Rapid Drying Protocol</li>
+    <li>&#9989; Insurance Documentation</li>
+    <li>&#9989; Jackson County Local</li>
+    </ul>
+    <div class="cwd-cta-row">
+    <a class="cwd-btn cwd-btn-emergency" href="tel:+14583020101">&#128222; Call NOW (458) 302-0101</a>
+    <a class="cwd-btn cwd-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128680; Book Urgent Visit</a>
+    </div>
+    </div>
+    </section>
+    
+    <div class="cwd-wrap">
+    <p class="cwd-aeo">Yes &mdash; we respond to water damage in Medford and provide carpet restoration for affected carpet in Jackson County. Our process: emergency water extraction, rapid drying with industrial equipment to prevent mold, salvage assessment, and restoration cleaning if the carpet is recoverable. The critical window is 24&ndash;48 hours before mold begins. Call immediately &mdash; (458) 302-0101. The faster extraction happens, the better the outcome.</p>
+    </div>
+    
+    <section class="cwd-section">
+    <div class="cwd-wrap">
+    <span class="cwd-lbl">Why Every Hour Counts</span>
+    <h2>The 24&ndash;48 Hour Window &mdash; Why Water Damage Is an Emergency</h2>
+    <div style="max-width:800px;margin:0 auto">
+    <span class="cwd-q">How fast does mold grow in wet carpet?</span>
+    <p class="cwd-callout cwd-callout-fire">Mold spore germination can begin in wet carpet within 24&ndash;48 hours at room temperature. In Medford's summer heat (90&deg;F+ indoors), mold can establish faster. This is not a service to schedule for next week.</p>
+    <p class="cwd-p">Carpet that has been saturated by water damage begins its degradation clock immediately. In the first 1&ndash;6 hours, water is moving through the carpet pile, saturating the backing and beginning to flood the pad. In the first 6&ndash;12 hours, the pad is fully saturated and water is contacting the subfloor. In the 12&ndash;48 hour window, microbial activity begins in the wet organic materials of the backing and pad &mdash; this is when mold and bacteria establish. Beyond 48 hours with sustained moisture, the carpet and pad have potentially irreversible contamination.</p>
+    <p class="cwd-p">Beyond the mold risk, sustained water saturation degrades carpet in several ways: the backing adhesive breaks down, causing delamination; the pad loses structural integrity and can collapse or develop odor-producing contamination; the subfloor &mdash; particularly wood subfloor common in older Medford homes &mdash; absorbs moisture and can begin warping.</p>
+    <p class="cwd-p">The carpet's salvageability window is directly related to how quickly extraction begins. Carpet extracted and dried within 24 hours has a high salvage rate. Carpet left wet for 48&ndash;72 hours has a significantly lower salvage rate. Beyond 72 hours in most conditions, replacement is increasingly the likely outcome.</p>
+    <span class="cwd-q">Can I use a wet-vac to handle water-damaged carpet myself?</span>
+    <p class="cwd-p">A consumer wet-vac can extract some surface water and reduce visible standing water. It cannot extract moisture from the carpet backing, the pad, or the subfloor &mdash; the layers where damage accumulates and mold establishes. Professional extraction equipment moves significantly more water per pass than consumer wet-vacs, and industrial air movers and dehumidifiers accelerate drying at depths a consumer fan cannot reach. DIY extraction is better than nothing in the first hour, but should be followed immediately by professional response.</p>
+    </div>
+    </div>
+    </section>
+    
+    <section class="cwd-section" style="background:var(--cfm-white)">
+    <div class="cwd-wrap">
+    <span class="cwd-lbl">Our Response Process</span>
+    <h2>Water Damage Restoration Medford: What We Do for Water-Damaged Carpet</h2>
+    <div class="cwd-grid cwd-grid-5">
+    <div class="cwd-card"><span class="cwd-step-bubble">1</span><h3>Rapid Response &amp; Assessment</h3><p class="cwd-p">We assess damage scope: source type (clean vs grey vs sewage water), extent of saturation, subfloor condition, and whether the carpet is structurally salvageable, and advise honestly before starting.</p></div>
+    <div class="cwd-card"><span class="cwd-step-bubble">2</span><h3>Emergency Water Extraction</h3><p class="cwd-p">Commercial-grade extraction from the carpet surface, backing, and as much of the pad as possible. Multiple passes are made until extraction rate slows significantly.</p></div>
+    <div class="cwd-card"><span class="cwd-step-bubble">3</span><h3>Pad Assessment &amp; Removal</h3><p class="cwd-p">Pad typically needs removal after significant water damage &mdash; it holds moisture and contamination and is rarely worth salvaging. Removing it lets the subfloor dry and eliminates the primary mold-growth substrate.</p></div>
+    <div class="cwd-card"><span class="cwd-step-bubble">4</span><h3>Industrial Drying</h3><p class="cwd-p">Industrial air movers and dehumidifiers accelerate carpet and subfloor drying &mdash; fundamentally different from pointing household fans at wet carpet.</p></div>
+    <div class="cwd-card"><span class="cwd-step-bubble">5</span><h3>Assessment &amp; Restoration</h3><p class="cwd-p">Once dry (confirmed with a moisture meter), we assess salvageability. Structurally sound, contamination-free carpet is cleaned and restored; contaminated or delaminated carpet, we advise on replacement.</p></div>
+    </div>
+    </div>
+    </section>
+    
+    <section class="cwd-section">
+    <div class="cwd-wrap" style="max-width:900px">
+    <span class="cwd-lbl">Water Source Type</span>
+    <h2>Water Source Type Changes the Treatment Approach</h2>
+    <span class="cwd-q">Does the source of the water damage affect how it's treated?</span>
+    <div class="cwd-table-wrap">
+    <table>
+    <thead><tr><th>Water Category</th><th>Source Examples</th><th>Treatment</th></tr></thead>
+    <tbody>
+    <tr><td>Category 1 &mdash; Clean Water</td><td>Burst supply pipe, overflowing sink, appliance supply line</td><td>Extraction + drying + restoration cleaning possible</td></tr>
+    <tr><td>Category 2 &mdash; Grey Water</td><td>Dishwasher, washing machine, toilet overflow (no solids)</td><td>Extraction + antimicrobial treatment + pad replacement</td></tr>
+    <tr><td>Category 3 &mdash; Black Water</td><td>Sewage backup, flooding from outdoor contaminated source</td><td>Carpet typically non-salvageable &mdash; extraction for subfloor access</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <p class="cwd-p">For Category 1 water damage, carpet salvage is most likely when extraction begins quickly. For Category 2 and 3, the contamination concern elevates the response &mdash; antimicrobial treatment is required and carpet replacement becomes more likely depending on extent of exposure. We identify the water source at assessment and advise accordingly. If you don't know the source, we help assess it.</p>
+    </div>
+    </section>
+    
+    <section class="cwd-section" style="background:var(--cfm-white)">
+    <div class="cwd-wrap">
+    <span class="cwd-lbl">Local Context</span>
+    <h2>Common Water Damage Sources in Medford and Jackson County Homes</h2>
+    <span class="cwd-q" style="text-align:center;display:block">What causes most carpet water damage in Medford?</span>
+    <div class="cwd-grid cwd-grid-6" style="margin-top:20px">
+    <div class="cwd-card"><span class="cwd-icon">&#127783;&#65039;</span><h3>Winter Rogue Valley Storms and Flooding</h3><p class="cwd-p">Medford's October&ndash;March wet season brings sustained rain that can overwhelm drainage. Bear Creek flooding events, roof drainage backup, and storm water entry through basement windows and foundation cracks are common sources.</p></div>
+    <div class="cwd-card"><span class="cwd-icon">&#129384;</span><h3>Burst Pipes &mdash; Winter Freeze Events</h3><p class="cwd-p">Freeze events in December&ndash;January &mdash; especially in Gold Hill, Eagle Point, and Rogue River where temperatures drop lower than the valley floor &mdash; can burst poorly insulated pipes that saturate carpet before discovery.</p></div>
+    <div class="cwd-card"><span class="cwd-icon">&#128736;&#65039;</span><h3>Appliance Failures</h3><p class="cwd-p">Dishwasher supply line failure, washing machine overflow, ice maker line disconnect, and water heater tank failure are among the most common sources. Kitchen and laundry room adjacency means these spread to carpet within hours.</p></div>
+    <div class="cwd-card"><span class="cwd-icon">&#127968;</span><h3>Roof Leak Damage</h3><p class="cwd-p">Damaged flashing, missing shingles, and clogged gutters allow water entry that tracks down walls and saturates carpet along exterior walls during heavy Rogue Valley rain events. Attic condensation and HVAC pan overflow are related sources.</p></div>
+    <div class="cwd-card"><span class="cwd-icon">&#128703;</span><h3>Plumbing Overflow Events</h3><p class="cwd-p">Toilet overflow, slow-drain backup, and shower/tub overflow are common in Medford's older housing stock (1960s&ndash;1980s plumbing), typically affecting bathroom-adjacent carpet in hallways and bedrooms.</p></div>
+    <div class="cwd-card"><span class="cwd-icon">&#127959;&#65039;</span><h3>Construction and Renovation Errors</h3><p class="cwd-p">Medford's active renovation market &mdash; particularly in the post-Almeda rebuild zone in Phoenix and Talent &mdash; creates water damage risk from plumbing installation errors and inadequate temporary waterproofing during construction.</p></div>
+    </div>
+    </div>
+    </section>
+    
+    <section class="cwd-section">
+    <div class="cwd-wrap">
+    <div class="cwd-midcta">
+    <h3>Wet Carpet Right Now?</h3>
+    <p>Every hour of delay reduces the salvage outcome. Call us now &mdash; we respond to water damage calls in Medford and Jackson County.</p>
+    <div class="cwd-cta-row">
+    <a class="cwd-btn cwd-btn-emergency" href="tel:+14583020101">&#128222; CALL (458) 302-0101</a>
+    <a class="cwd-btn cwd-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128680; Request Urgent Visit</a>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    <section class="cwd-section" style="background:var(--cfm-white)">
+    <div class="cwd-wrap" style="max-width:800px">
+    <span class="cwd-lbl">Honest Scope</span>
+    <h2>What We Cover &mdash; and What We Don't</h2>
+    <span class="cwd-q">Are you a full water damage restoration company?</span>
+    <p class="cwd-callout cwd-callout-danger" style="color:var(--cfm-danger)">We are carpet restoration specialists &mdash; not a full structural water damage restoration company. Here's the exact boundary of what we do and don't cover.</p>
+    <div class="cwd-callout cwd-callout-safe">
+    <h4>What we DO</h4>
+    <ul>
+    <li>&#9989; Emergency carpet water extraction</li>
+    <li>&#9989; Pad removal and disposal</li>
+    <li>&#9989; Industrial air drying of carpet and subfloor surface</li>
+    <li>&#9989; Carpet salvage assessment</li>
+    <li>&#9989; Antimicrobial treatment (for Category 2 water)</li>
+    <li>&#9989; Restoration cleaning after confirmed drying</li>
+    <li>&#9989; Documentation for insurance claim purposes (dated receipts, service documentation)</li>
+    </ul>
+    </div>
+    <div class="cwd-callout cwd-callout-danger">
+    <h4>What we DON'T cover (refer to appropriate specialists)</h4>
+    <ul>
+    <li>&#10060; Structural mold remediation &mdash; if mold is present in walls, framing, or structural materials, you need a licensed mold remediation specialist</li>
+    <li>&#10060; Structural drying of walls, ceilings, or building framing</li>
+    <li>&#10060; Sewage/biohazard remediation for Category 3 events</li>
+    <li>&#10060; Subfloor structural repairs or replacement</li>
+    <li>&#10060; Insurance claim management or advocacy</li>
+    </ul>
+    </div>
+    <div class="cwd-callout cwd-callout-safe">
+    <h4>If your damage involves structural components</h4>
+    <p class="cwd-p">For comprehensive water damage restoration including structural drying and mold remediation, we refer Medford homeowners to licensed water damage restoration companies. We work alongside them on the carpet component when needed. See our <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-cause-mold-wet-carpet-risks/">mold risk guide</a> for more on this boundary.</p>
+    </div>
+    </div>
+    </section>
+    
+    <section class="cwd-section">
+    <div class="cwd-wrap" style="max-width:800px">
+    <span class="cwd-lbl">Insurance Documentation</span>
+    <h2>Documentation for Insurance Claims</h2>
+    <span class="cwd-q">Do you provide documentation for insurance claims?</span>
+    <p class="cwd-p">Yes &mdash; every water damage job receives a dated service receipt documenting the date of service, the scope of work performed, the areas treated, and our IICRC certification. This documentation is accepted by most homeowner insurance carriers for claims related to water damage remediation.</p>
+    <p class="cwd-p">We recommend photographing the damage before we begin (or we can assist with this) and contacting your insurance carrier before or as we're on-site. We can provide our service documentation to your insurance adjuster directly or through you.</p>
+    <p class="cwd-p">Note: we provide documentation of the work we performed &mdash; we don't provide damage valuations, replacement cost estimates, or insurance advocacy services. For those, work with your insurance adjuster and a licensed public adjuster if needed.</p>
+    </div>
+    </section>
+    
+    <section class="cwd-section" style="background:var(--cfm-white)">
+    <div class="cwd-wrap" style="max-width:800px">
+    <h2>Water Damage Carpet FAQ &mdash; Medford, Oregon</h2>
+    <div class="cwd-faq">
+    <div class="cwd-faq-item"><button class="cwd-faq-q"><span>How fast can you respond to water-damaged carpet in Medford?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">For water damage in Medford, we prioritize emergency calls. For Medford and immediate Jackson County, we aim to respond same-day for calls received during business hours (Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;4pm). Call immediately at (458) 302-0101 and we'll tell you our earliest availability. Every hour matters for carpet salvage.</p></div></div>
+    <div class="cwd-faq-item"><button class="cwd-faq-q"><span>Can wet carpet be saved after water damage?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">Often yes &mdash; depending on water source type, how long the carpet's been wet, and its structural condition. Category 1 (clean water) damage responded to within 24 hours has the highest salvage rate. Category 2 (grey water) can often be salvaged with antimicrobial treatment. Category 3 (sewage/black water) typically requires replacement. We assess salvageability honestly before committing to restoration.</p></div></div>
+    <div class="cwd-faq-item"><button class="cwd-faq-q"><span>How long does carpet drying take after water damage?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">With industrial air movers and dehumidifiers, most carpets dry in 24&ndash;72 hours after extraction depending on saturation level, carpet type, pad removal, and subfloor condition. We use moisture meters to confirm complete drying before assessing restoration.</p></div></div>
+    <div class="cwd-faq-item"><button class="cwd-faq-q"><span>Does homeowner's insurance cover wet carpet restoration?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">Most standard homeowner's insurance policies cover sudden and accidental water damage &mdash; burst pipes, appliance failures, roof leaks &mdash; including carpet damage. Flood damage from outside the foundation typically requires separate flood insurance. We provide dated documentation of our services; you coordinate with your insurance carrier for coverage determination.</p></div></div>
+    <div class="cwd-faq-item"><button class="cwd-faq-q"><span>What if there's already mold in my carpet from a previous water event?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">If visible mold is present in the carpet or pad, the carpet typically needs to be removed and replaced &mdash; mold in organic carpet materials generally isn't addressable through cleaning. If mold has spread to the subfloor or wall framing, you need a licensed mold remediation specialist. We're transparent about this boundary &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-cause-mold-wet-carpet-risks/">mold risk guide</a>.</p></div></div>
+    <div class="cwd-faq-item"><button class="cwd-faq-q"><span>Do you handle water damage from major storm events or Bear Creek flooding?</span><span class="cwd-faq-icon">+</span></button><div class="cwd-faq-a"><p class="cwd-p">Yes &mdash; Jackson County has experienced significant water damage events from Bear Creek flooding, storm events, and infrastructure failures across various areas including the Phoenix/Talent corridor. We're familiar with the Rogue Valley's specific water damage patterns and serve all Jackson County zip codes for water damage response.</p></div></div>
+    </div>
+    </div>
+    </section>
+    
+    <section class="cwd-section">
+    <div class="cwd-wrap">
+    <h2>Related Services</h2>
+    <div class="cwd-related">
+    <a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/"><h4>&#129525; Carpet Repair</h4></a>
+    <a href="https://carpetcleaningmedfordoregon.com/carpet-stretching-medford-oregon/"><h4>&#128260; Carpet Stretching</h4></a>
+    <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/"><h4>&#127968; Residential Carpet Cleaning</h4></a>
+    </div>
+    </div>
+    </section>
+    
+    <section class="cwd-section">
+    <div class="cwd-wrap">
+    <div class="cwd-bottom-cta">
+    <h2>Water Damage to Carpet &mdash; Call Now, Not Tomorrow.</h2>
+    <p>Every hour of delay reduces the salvage chance and increases mold risk. We respond to emergency carpet water damage across Medford and Jackson County.</p>
+    <div class="cwd-cta-row">
+    <a class="cwd-btn cwd-btn-emergency" href="tel:+14583020101">&#128222; CALL NOW (458) 302-0101</a>
+    <a class="cwd-btn cwd-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128680; Book Urgent Visit</a>
+    </div>
+    <p class="cwd-svc-area">Serving Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504 and all of Jackson County</p>
+    </div>
+    </div>
+    </section>
+    
+    </div>
+    <script>
+    (function(){'use strict';
+    var root=document.querySelector('.cfm-svc-water');
+    if(!root)return;
+    root.querySelectorAll('.cwd-faq-item').forEach(function(item){
+    var q=item.querySelector('.cwd-faq-q');
+    q.addEventListener('click',function(){
+    var open=item.classList.contains('open');
+    root.querySelectorAll('.cwd-faq-item.open').forEach(function(o){if(o!==item){o.classList.remove('open');o.querySelector('.cwd-faq-icon').textContent='+'}});
+    item.classList.toggle('open',!open);
+    q.querySelector('.cwd-faq-icon').textContent=!open?'×':'+';
+    });
+    });
+    root.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+    });
+    });
+    })();
+    </script>
+    <!-- /wp:html -->
