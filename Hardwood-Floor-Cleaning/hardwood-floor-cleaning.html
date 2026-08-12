@@ -1,0 +1,334 @@
+<!-- wp:html -->
+<style id="cfm-hw-css">
+.cfm-svc-hardwood{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F9FA}
+.cfm-svc-hardwood *,.cfm-svc-hardwood *::before,.cfm-svc-hardwood *::after{box-sizing:border-box}
+.cfm-svc-hardwood p,.cfm-svc-hardwood li,.cfm-svc-hardwood h1,.cfm-svc-hardwood h2,.cfm-svc-hardwood h3,.cfm-svc-hardwood h4{word-wrap:break-word;overflow-wrap:break-word;margin:0}
+.cfm-svc-hardwood{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-warn:#B45309;--cfm-warnp:#FEF3C7;--cfm-safe:#065F46;--cfm-fire:#D85A30}
+
+.cfm-svc-hardwood .chw-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.cfm-svc-hardwood .chw-section{padding:40px 0}
+.cfm-svc-hardwood .chw-lbl{display:block;color:var(--cfm-light);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.cfm-svc-hardwood h2{color:var(--cfm-dark);font-size:1.5rem;font-weight:600;line-height:1.3;text-align:center;max-width:780px;margin:0 auto 32px}
+.cfm-svc-hardwood h3{color:var(--cfm-h);font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:8px}
+.cfm-svc-hardwood h4{color:var(--cfm-h);font-size:1rem;font-weight:600;line-height:1.45}
+.cfm-svc-hardwood .chw-p{color:var(--cfm-body);font-size:1rem;line-height:1.8;margin-bottom:16px}
+.cfm-svc-hardwood .chw-p:last-child{margin-bottom:0}
+.cfm-svc-hardwood .chw-q{display:block;color:var(--cfm-dark);font-weight:700;margin:22px 0 10px;font-size:1.05rem}
+
+/* HERO */
+.cfm-svc-hardwood .chw-hero{background:linear-gradient(135deg,var(--cfm-dark) 0%,#123726 100%);color:#fff;padding:64px 20px;text-align:center;position:relative;overflow:hidden}
+.cfm-svc-hardwood .chw-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(255,255,255,.03) 0 2px,transparent 2px 40px);pointer-events:none}
+.cfm-svc-hardwood .chw-hero>*{position:relative}
+.cfm-svc-hardwood .chw-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:22px;font-size:.78rem;font-weight:600;margin-bottom:18px}
+.cfm-svc-hardwood .chw-hero h1{color:#fff;font-size:1.8rem;font-weight:700;line-height:1.2;max-width:820px;margin:0 auto}
+.cfm-svc-hardwood .chw-hero .chw-sub{color:rgba(255,255,255,.82);font-size:1.02rem;font-weight:400;line-height:1.6;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto}
+.cfm-svc-hardwood .chw-pills{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 20px}
+.cfm-svc-hardwood .chw-pills li{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+.cfm-svc-hardwood .chw-cta-row{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+
+/* BUTTONS */
+.cfm-svc-hardwood .chw-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
+.cfm-svc-hardwood .chw-btn-primary{background:var(--cfm-dark);color:#fff;box-shadow:0 4px 16px rgba(27,67,50,.3)}
+.cfm-svc-hardwood .chw-btn-primary:hover{background:var(--cfm-mid);transform:translateY(-2px)}
+.cfm-svc-hardwood .chw-btn-secondary{background:transparent;color:var(--cfm-dark);border:2px solid var(--cfm-dark);padding:12px 26px}
+.cfm-svc-hardwood .chw-btn-secondary:hover{background:var(--cfm-pale)}
+.cfm-svc-hardwood .chw-hero .chw-btn-secondary{color:#fff;border-color:rgba(255,255,255,.6)}
+.cfm-svc-hardwood .chw-hero .chw-btn-secondary:hover{background:rgba(255,255,255,.12)}
+
+/* AEO BOX */
+.cfm-svc-hardwood .chw-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:var(--cfm-h);max-width:1200px;margin:32px auto 0}
+
+/* CALLOUT */
+.cfm-svc-hardwood .chw-callout-warn{background:var(--cfm-warnp);border-left:4px solid var(--cfm-warn);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0;color:#78350f;font-weight:600}
+.cfm-svc-hardwood .chw-yn{margin:20px 0}
+.cfm-svc-hardwood .chw-yn h4{margin-bottom:10px}
+.cfm-svc-hardwood .chw-yn ul{list-style:none;margin:0;padding:0}
+.cfm-svc-hardwood .chw-yn li{line-height:1.8;color:var(--cfm-body)}
+.cfm-svc-hardwood .chw-yes h4{color:var(--cfm-safe)}
+.cfm-svc-hardwood .chw-no h4{color:var(--cfm-fire)}
+
+/* CARDS GRID */
+.cfm-svc-hardwood .chw-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px}
+.cfm-svc-hardwood .chw-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;transition:all .25s}
+.cfm-svc-hardwood .chw-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.cfm-svc-hardwood .chw-step-bubble{background:var(--cfm-pale);color:var(--cfm-dark);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;margin-bottom:14px}
+.cfm-svc-hardwood .chw-icon{font-size:1.75rem;display:block;margin-bottom:12px}
+
+/* STAT STRIP */
+.cfm-svc-hardwood .chw-stats{background:var(--cfm-dark);padding:48px 20px;text-align:center}
+.cfm-svc-hardwood .chw-stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
+.cfm-svc-hardwood .chw-stat-num{font-size:1.6rem;font-weight:700;color:#fff;line-height:1.2}
+.cfm-svc-hardwood .chw-stat-lbl{font-size:.875rem;color:rgba(255,255,255,.72);margin-top:4px}
+
+/* TABLE */
+.cfm-svc-hardwood .chw-table-wrap{border-radius:10px;border:1.5px solid var(--cfm-border);overflow-x:auto;margin:20px 0}
+.cfm-svc-hardwood table{width:100%;border-collapse:collapse;min-width:520px}
+.cfm-svc-hardwood thead{background:var(--cfm-dark);color:#fff}
+.cfm-svc-hardwood th{padding:14px 18px;font-size:.9rem;font-weight:600;text-align:left}
+.cfm-svc-hardwood td{padding:13px 18px;border:1px solid var(--cfm-border);color:var(--cfm-body);font-size:.95rem}
+.cfm-svc-hardwood tbody tr:nth-child(even){background:var(--cfm-bg)}
+.cfm-svc-hardwood tbody tr:nth-child(odd){background:var(--cfm-white)}
+.cfm-svc-hardwood td:first-child{font-weight:600;color:var(--cfm-h)}
+.cfm-svc-hardwood .yes{color:var(--cfm-safe);font-weight:600}
+.cfm-svc-hardwood .assess{color:var(--cfm-warn);font-weight:600}
+
+/* MID CTA */
+.cfm-svc-hardwood .chw-midcta{background:var(--cfm-pale);border:1.5px solid var(--cfm-border);border-radius:14px;padding:32px 24px;text-align:center}
+.cfm-svc-hardwood .chw-midcta h3{color:var(--cfm-dark);margin-bottom:8px;text-align:center}
+.cfm-svc-hardwood .chw-midcta p{color:var(--cfm-body);margin-bottom:20px}
+.cfm-svc-hardwood .chw-midcta .chw-cta-row{margin-top:0}
+
+/* FAQ */
+.cfm-svc-hardwood .chw-faq-item{border-bottom:1px solid var(--cfm-border)}
+.cfm-svc-hardwood .chw-faq-q{width:100%;text-align:left;padding:20px 0;font-size:1rem;font-weight:600;color:var(--cfm-h);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cfm-svc-hardwood .chw-faq-q .chw-faq-icon{color:var(--cfm-light);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
+.cfm-svc-hardwood .chw-faq-item.open .chw-faq-icon{transform:rotate(135deg)}
+.cfm-svc-hardwood .chw-faq-a{padding:0 0 20px;color:var(--cfm-body);line-height:1.8;display:none}
+.cfm-svc-hardwood .chw-faq-item.open .chw-faq-a{display:block;animation:cfmHwFade .2s ease}
+@keyframes cfmHwFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* RELATED */
+.cfm-svc-hardwood .chw-related{display:grid;grid-template-columns:1fr;gap:20px}
+.cfm-svc-hardwood .chw-related a{display:block;border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;text-decoration:none;transition:all .2s}
+.cfm-svc-hardwood .chw-related a:hover{border-color:var(--cfm-light);transform:translateY(-3px)}
+.cfm-svc-hardwood .chw-related h4{color:var(--cfm-dark)}
+
+/* BOTTOM CTA */
+.cfm-svc-hardwood .chw-bottom-cta{background:var(--cfm-dark);padding:56px 24px;text-align:center;border-radius:16px}
+.cfm-svc-hardwood .chw-bottom-cta h2{color:#fff}
+.cfm-svc-hardwood .chw-bottom-cta p{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;max-width:640px;margin:0 auto}
+.cfm-svc-hardwood .chw-bottom-cta .chw-cta-row{margin-top:24px}
+.cfm-svc-hardwood .chw-bottom-cta .chw-svc-area{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:20px}
+
+.cfm-svc-hardwood a{color:var(--cfm-mid)}
+.cfm-svc-hardwood a:hover{color:var(--cfm-dark)}
+
+@media(min-width:768px){
+.cfm-svc-hardwood .chw-section{padding:56px 0}
+.cfm-svc-hardwood h2{font-size:1.65rem}
+.cfm-svc-hardwood .chw-hero{padding:72px 24px}
+.cfm-svc-hardwood .chw-hero h1{font-size:2.1rem}
+.cfm-svc-hardwood .chw-grid-2{grid-template-columns:1fr 1fr}
+.cfm-svc-hardwood .chw-grid-4{grid-template-columns:repeat(2,1fr)}
+.cfm-svc-hardwood .chw-stats-grid{grid-template-columns:repeat(4,1fr)}
+.cfm-svc-hardwood .chw-related{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1024px){
+.cfm-svc-hardwood .chw-section{padding:80px 0}
+.cfm-svc-hardwood .chw-hero{padding:88px 24px}
+.cfm-svc-hardwood .chw-hero h1{font-size:2.4rem}
+.cfm-svc-hardwood h2{font-size:1.75rem}
+.cfm-svc-hardwood .chw-grid-4{grid-template-columns:repeat(4,1fr)}
+.cfm-svc-hardwood .chw-grid-6{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+
+<div class="cfm-svc-hardwood">
+
+<section class="chw-hero">
+<div class="chw-wrap">
+<span class="chw-badge">Jackson County &middot; IICRC Certified</span>
+<h1>Hardwood Floor Cleaning in Medford, Oregon</h1>
+<p class="chw-sub">Safe for all finished wood floors &mdash; no steam, no over-wetting, no damage risk. Rogue Valley homes served daily.</p>
+<ul class="chw-pills">
+<li>&#9989; IICRC Certified</li>
+<li>&#9989; No Steam Damage Risk</li>
+<li>&#9989; Finished &amp; Unfinished Wood</li>
+<li>&#9989; Upfront Pricing</li>
+<li>&#9989; Jackson County Local</li>
+</ul>
+<div class="chw-cta-row">
+<a class="chw-btn chw-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="chw-btn chw-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; See Pricing Guide</a>
+</div>
+</div>
+</section>
+
+<div class="chw-wrap">
+<p class="chw-aeo">Yes &mdash; we clean hardwood floors throughout Medford and Jackson County. Our process uses a pH-neutral, wood-safe cleaning solution with controlled-moisture application and immediate buffing &mdash; no steam, no excess water. Safe for factory-finished, site-finished, and engineered hardwood. Typical job: 2&ndash;3 rooms in 90 minutes. Results are immediate &mdash; no drying window like carpet cleaning.</p>
+</div>
+
+<section class="chw-section">
+<div class="chw-wrap">
+<span class="chw-lbl">Hardwood vs Carpet Cleaning</span>
+<h2>Why Hardwood Floor Cleaning Requires a Different Approach</h2>
+<div style="max-width:800px;margin:0 auto">
+<span class="chw-q">Can you use the same equipment on hardwood as you use on carpet?</span>
+<p class="chw-p">Water and hardwood floors have a fundamental conflict. Excess moisture causes wood to swell, warp, and separate at the seams &mdash; a risk that increases with the amount of moisture and the time it spends in contact with the wood surface. This is why standard carpet cleaning equipment, which injects water at 195&deg;F, is never used on hardwood floors. The steam and moisture would cause immediate and potentially permanent damage to the finish and the wood itself.</p>
+<p class="chw-p">Our hardwood floor cleaning uses a flat-head applicator with pH-neutral wood floor cleaning solution, applied with controlled moisture &mdash; enough to emulsify surface contamination without penetrating the finish seal. The solution is immediately buffed dry, leaving no standing moisture on the surface. This is the IICRC-approved approach for finished hardwood cleaning.</p>
+<p class="chw-p">Jackson County homes have a wide range of hardwood floor types &mdash; original fir and pine floors in Jacksonville's 1800s-era historic homes, engineered hardwood in East Medford's newer subdivisions, and reclaimed wood flooring becoming common in Ashland's renovations. Each requires awareness of the finish condition before any cleaning chemistry is applied. We assess finish integrity before starting.</p>
+</div>
+</div>
+</section>
+
+<section class="chw-section" style="background:var(--cfm-white)">
+<div class="chw-wrap">
+<span class="chw-lbl">Our Process</span>
+<h2>How We Clean Hardwood Floors in Medford Homes</h2>
+<div class="chw-grid chw-grid-4">
+<div class="chw-card"><span class="chw-step-bubble">1</span><h3>Pre-Inspection &amp; Finish Assessment</h3><p class="chw-p">We identify floor type (solid vs engineered), finish type (polyurethane, oil, wax, aluminum oxide), and condition. We discuss expectations before starting, including any wear that grime may be hiding.</p></div>
+<div class="chw-card"><span class="chw-step-bubble">2</span><h3>Dry Debris Removal</h3><p class="chw-p">Dust and abrasive particles scratch the finish if moved by a wet pad. We remove all dry debris first with a microfiber dry mop or low-suction vacuum before any solution is applied.</p></div>
+<div class="chw-card"><span class="chw-step-bubble">3</span><h3>pH-Neutral Solution</h3><p class="chw-p">We apply wood-safe, pH-neutral cleaning solution section by section, pH-matched to avoid alkaline damage to polyurethane or acid damage to oil finishes. Dwell time is brief (30&ndash;60 seconds).</p></div>
+<div class="chw-card"><span class="chw-step-bubble">4</span><h3>Immediate Buff-Dry</h3><p class="chw-p">Each section is buffed dry immediately &mdash; no standing moisture. We inspect as we go for areas needing a second pass, then walk through the results with you.</p></div>
+</div>
+</div>
+</section>
+
+<section class="chw-section">
+<div class="chw-wrap">
+<span class="chw-lbl">What We Address</span>
+<h2>What Our Hardwood Floor Cleaning Removes</h2>
+<div class="chw-grid chw-grid-6">
+<div class="chw-card"><span class="chw-icon">&#129476;</span><h3>Built-Up Grime and Dulling Soil</h3><p class="chw-p">Years of foot traffic deposit oils, dust, and fine debris that mops push into the grain without removing. Professional cleaning lifts this layer and restores the floor's actual finish sheen.</p></div>
+<div class="chw-card"><span class="chw-icon">&#128062;</span><h3>Pet Paw Tracking and Residue</h3><p class="chw-p">Jackson County's high pet ownership means pet-tracked soil, paw residue, and oils are among the most common hardwood contaminants we see &mdash; removed without the streak marks consumer mop products leave.</p></div>
+<div class="chw-card"><span class="chw-icon">&#128167;</span><h3>Water Mark Residue and Mineral Deposits</h3><p class="chw-p">Jackson County's moderately hard water leaves mineral deposits from mopping over time, creating a hazy, dull appearance. pH-neutral cleaning removes the mineral haze without damaging the finish.</p></div>
+<div class="chw-card"><span class="chw-icon">&#128293;</span><h3>Wildfire Smoke Residue</h3><p class="chw-p">PM2.5 particles from Rogue Valley wildfire events settle on hardwood surfaces just as they settle in carpet. Surface cleaning removes the smoke residue layer that dulls the finish appearance.</p></div>
+<div class="chw-card"><span class="chw-icon">&#127869;&#65039;</span><h3>Kitchen Grease and Cooking Residue</h3><p class="chw-p">Kitchen hardwood accumulates cooking grease and food residue that standard mopping redistributes rather than removes. Our cleaning lifts and removes this material.</p></div>
+<div class="chw-card"><span class="chw-icon">&#127959;&#65039;</span><h3>Construction and Renovation Dust</h3><p class="chw-p">Medford's active renovation market &mdash; particularly the post-Almeda rebuild zone in Phoenix and Talent &mdash; means new-installation or post-renovation hardwood commonly has fine construction dust embedded in the grain.</p></div>
+</div>
+</div>
+</section>
+
+<div class="chw-stats">
+<div class="chw-stats-grid">
+<div><div class="chw-stat-num">214+</div><div class="chw-stat-lbl">Jackson County homes served</div></div>
+<div><div class="chw-stat-num">3 Types</div><div class="chw-stat-lbl">Finished, engineered, oil-finished</div></div>
+<div><div class="chw-stat-num">pH-Neutral</div><div class="chw-stat-lbl">Wood-safe chemistry</div></div>
+<div><div class="chw-stat-num">0 Min</div><div class="chw-stat-lbl">Drying time &mdash; immediate buff-dry</div></div>
+</div>
+</div>
+
+<section class="chw-section">
+<div class="chw-wrap" style="max-width:800px">
+<span class="chw-lbl">Honest Assessment</span>
+<h2>What We Can and Can't Do for Your Hardwood Floors</h2>
+<span class="chw-q">Are there situations where hardwood cleaning isn't the right service?</span>
+<p class="chw-callout-warn">We believe in telling you honestly what a service can and can't achieve. Here's our honest assessment.</p>
+<div class="chw-yn chw-yes"><h4>What professional hardwood cleaning accomplishes</h4><ul>
+<li>&#9989; Removes accumulated surface grime, oils, and residue dulling the finish</li>
+<li>&#9989; Restores the floor's natural finish sheen where dulling is from surface contamination</li>
+<li>&#9989; Removes pet oils, cooking grease, and mineral deposits from mopping</li>
+<li>&#9989; Addresses wildfire smoke surface residue</li>
+<li>&#9989; Prepares the floor for re-coating if you're considering refinishing</li>
+</ul></div>
+<div class="chw-yn chw-no"><h4>What it does NOT accomplish</h4><ul>
+<li>&#10060; Repair scratches, gouges, or physical damage to the wood or finish</li>
+<li>&#10060; Restore finish that has been worn through to bare wood</li>
+<li>&#10060; Address water damage, cupping, or warping from prior moisture events</li>
+<li>&#10060; Replace the need for refinishing on floors with severely worn finish</li>
+</ul></div>
+<p class="chw-p">If your hardwood needs refinishing rather than cleaning, we'll tell you during our pre-inspection. We'd rather refer you to a hardwood refinishing professional than clean a floor that won't look better after the service.</p>
+</div>
+</section>
+
+<section class="chw-section" style="background:var(--cfm-white)">
+<div class="chw-wrap">
+<span class="chw-lbl">Rogue Valley Context</span>
+<h2>Hardwood Floor Care in Medford &mdash; What We See Here</h2>
+<span class="chw-q" style="text-align:center;display:block">Do Jackson County conditions affect hardwood floors differently than other markets?</span>
+<div class="chw-grid" style="margin-top:20px;grid-template-columns:1fr">
+<div class="chw-card" style="background:var(--cfm-pale);border-color:transparent"><span class="chw-icon">&#127964;&#65039;</span><h3>Table Rocks Volcanic Dust</h3><p class="chw-p">The fine silicate particulate from Table Rocks, Roxy Ann Peak, and Bear Creek Greenway trail access is particularly abrasive to hardwood finishes &mdash; harder than most household dust, acting as micro-grit sandpaper on polyurethane finish when walked across a floor. Homes with active trail users benefit most from professional cleaning, not just mopping, which distributes abrasive particles without removing them.</p></div>
+<div class="chw-card" style="background:var(--cfm-pale);border-color:transparent"><span class="chw-icon">&#128293;</span><h3>Wildfire Smoke Season Residue</h3><p class="chw-p">Smoke-season PM2.5 residue (July&ndash;September) settles on hardwood surfaces and creates a dulling, hazy layer. This is different from normal grime and responds well to professional cleaning. If your floor looks consistently duller in fall than spring, wildfire season residue may be a contributing factor.</p></div>
+<div class="chw-card" style="background:var(--cfm-pale);border-color:transparent"><span class="chw-icon">&#128167;</span><h3>Jackson County Hard Water Mopping</h3><p class="chw-p">Medford's water supply has moderate hardness. Repeated mopping without rinsing introduces mineral deposits that build up over years into a characteristic haze. Many homeowners think their finish is worn when it's actually clean floor obscured by mineral haze &mdash; which cleans off in a single professional service.</p></div>
+</div>
+</div>
+</section>
+
+<section class="chw-section">
+<div class="chw-wrap">
+<div class="chw-midcta">
+<h3>Medford and Jackson County Hardwood Floor Cleaning</h3>
+<p>Upfront pricing, no steam damage risk, same-day scheduling available.</p>
+<div class="chw-cta-row">
+<a class="chw-btn chw-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="chw-btn chw-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; See Pricing</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="chw-section" style="background:var(--cfm-white)">
+<div class="chw-wrap" style="max-width:900px">
+<span class="chw-lbl">Floor Types</span>
+<h2>Hardwood Floor Types We Clean in Medford and Jackson County</h2>
+<div class="chw-table-wrap">
+<table>
+<thead><tr><th>Floor Type</th><th>We Clean?</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Factory-finished solid hardwood</td><td class="yes">&#9989; Yes</td><td>Most common in newer Medford homes</td></tr>
+<tr><td>Site-finished solid hardwood</td><td class="yes">&#9989; Yes</td><td>Common in older Medford and Jacksonville historic homes</td></tr>
+<tr><td>Engineered hardwood</td><td class="yes">&#9989; Yes</td><td>Common in East Medford new construction</td></tr>
+<tr><td>Oil-finished hardwood</td><td class="yes">&#9989; Yes</td><td>Requires specific pH-neutral chemistry</td></tr>
+<tr><td>Laminate (not real wood)</td><td class="yes">&#9989; Yes</td><td>Moisture-controlled cleaning safe for laminate</td></tr>
+<tr><td>Wax-finished antique wood</td><td class="assess">&#9888;&#65039; Assess first</td><td>Wax floors require specific products &mdash; we test first</td></tr>
+<tr><td>Unfinished/bare wood</td><td class="assess">&#9888;&#65039; Assess first</td><td>No finish seal &mdash; moisture control is critical</td></tr>
+<tr><td>Bamboo flooring</td><td class="yes">&#9989; Yes</td><td>Treated as engineered hardwood</td></tr>
+<tr><td>Cork flooring</td><td class="yes">&#9989; Yes</td><td>Moisture-controlled, gentle cleaning</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section class="chw-section">
+<div class="chw-wrap" style="max-width:800px">
+<h2>Hardwood Floor Cleaning FAQ &mdash; Medford, Oregon</h2>
+<div class="chw-faq">
+<div class="chw-faq-item"><button class="chw-faq-q"><span>How often should hardwood floors be professionally cleaned?</span><span class="chw-faq-icon">+</span></button><div class="chw-faq-a"><p class="chw-p">Once or twice a year for most Medford homes &mdash; once yearly for low-traffic rooms, twice yearly for kitchens, entryways, and high-traffic zones. Homes with pets, trail access, or wood stoves accumulate contamination faster. Between professional cleans: dry microfiber mopping weekly, never wet mopping with excess water.</p></div></div>
+<div class="chw-faq-item"><button class="chw-faq-q"><span>Can you use steam cleaning on hardwood floors?</span><span class="chw-faq-icon">+</span></button><div class="chw-faq-a"><p class="chw-p">No &mdash; and any company that proposes steam cleaning on hardwood should be avoided. Steam introduces heat and concentrated moisture to a wood surface designed to be protected from both. Even finishes rated for moisture exposure aren't rated for steam. We never steam hardwood floors.</p></div></div>
+<div class="chw-faq-item"><button class="chw-faq-q"><span>Will professional cleaning remove scratches from my hardwood?</span><span class="chw-faq-icon">+</span></button><div class="chw-faq-a"><p class="chw-p">No &mdash; professional cleaning removes surface contamination and restores appearance, but scratches and gouges are physical damage that cleaning cannot address. Cleaning may make scratches appear worse by contrast (removing the grime that masked them). Deep scratches require refinishing.</p></div></div>
+<div class="chw-faq-item"><button class="chw-faq-q"><span>Do you clean hardwood floors in older Medford and Jacksonville homes?</span><span class="chw-faq-icon">+</span></button><div class="chw-faq-a"><p class="chw-p">Yes &mdash; we regularly clean historic-home hardwood in Jacksonville's National Historic Landmark district, older Medford neighborhoods, and Ashland's 1920s&ndash;1950s homes. Older site-finished floors receive extra care during finish assessment; if finish is worn through, we advise before cleaning.</p></div></div>
+<div class="chw-faq-item"><button class="chw-faq-q"><span>How long until we can walk on the hardwood after cleaning?</span><span class="chw-faq-icon">+</span></button><div class="chw-faq-a"><p class="chw-p">Immediately &mdash; unlike carpet cleaning, our process uses no excess moisture, so there's no drying window. We recommend indoor socks or clean-soled shoes for 24 hours to let the clean finish "breathe" before it picks up new outdoor soil.</p></div></div>
+<div class="chw-faq-item"><button class="chw-faq-q"><span>Do you clean hardwood in the greater Jackson County area?</span><span class="chw-faq-icon">+</span></button><div class="chw-faq-a"><p class="chw-p">Yes &mdash; all four Medford zip codes (97501&ndash;97504), Ashland, Central Point, Jacksonville, Eagle Point, White City, Phoenix, Talent, Gold Hill, and Rogue River. (458) 302-0101</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="chw-section" style="background:var(--cfm-white)">
+<div class="chw-wrap">
+<h2>Related Services</h2>
+<div class="chw-related">
+<a href="https://carpetcleaningmedfordoregon.com/tile-grout-cleaning-medford-oregon/"><h4>&#128252; Tile &amp; Grout Cleaning</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/natural-stone-cleaning-medford-oregon/"><h4>&#129704; Natural Stone Cleaning</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/air-duct-cleaning-medford-oregon/"><h4>&#128168; Air Duct Cleaning</h4></a>
+</div>
+</div>
+</section>
+
+<section class="chw-section">
+<div class="chw-wrap">
+<div class="chw-bottom-cta">
+<h2>Ready for Cleaner Hardwood Floors in Medford?</h2>
+<p>No steam damage risk. pH-neutral wood-safe process. Immediate results. Serving Medford, Ashland, Jacksonville, and all of Jackson County.</p>
+<div class="chw-cta-row">
+<a class="chw-btn chw-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="chw-btn chw-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; Pricing Guide</a>
+</div>
+<p class="chw-svc-area">Serving Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504 and all of Jackson County</p>
+</div>
+</div>
+</section>
+
+</div>
+<script>
+(function(){'use strict';
+var root=document.querySelector('.cfm-svc-hardwood');
+if(!root)return;
+root.querySelectorAll('.chw-faq-item').forEach(function(item){
+var q=item.querySelector('.chw-faq-q');
+q.addEventListener('click',function(){
+var open=item.classList.contains('open');
+root.querySelectorAll('.chw-faq-item.open').forEach(function(o){if(o!==item){o.classList.remove('open');o.querySelector('.chw-faq-icon').textContent='+'}});
+item.classList.toggle('open',!open);
+q.querySelector('.chw-faq-icon').textContent=!open?'×':'+';
+});
+});
+root.querySelectorAll('a[href^="#"]').forEach(function(a){
+a.addEventListener('click',function(e){
+var t=document.querySelector(a.getAttribute('href'));
+if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+});
+});
+})();
+</script>
+<!-- /wp:html -->

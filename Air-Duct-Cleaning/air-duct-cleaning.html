@@ -1,0 +1,283 @@
+<!-- wp:html -->
+<style id="cfm-ad-css">
+.cfm-svc-duct{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F9FA}
+.cfm-svc-duct *,.cfm-svc-duct *::before,.cfm-svc-duct *::after{box-sizing:border-box}
+.cfm-svc-duct p,.cfm-svc-duct li,.cfm-svc-duct h1,.cfm-svc-duct h2,.cfm-svc-duct h3,.cfm-svc-duct h4{word-wrap:break-word;overflow-wrap:break-word;margin:0}
+.cfm-svc-duct{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-fire:#D85A30;--cfm-firep:#FDECE6}
+
+.cfm-svc-duct .cad-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.cfm-svc-duct .cad-section{padding:40px 0}
+.cfm-svc-duct .cad-lbl{display:block;color:var(--cfm-light);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.cfm-svc-duct h2{color:var(--cfm-dark);font-size:1.5rem;font-weight:600;line-height:1.3;text-align:center;max-width:780px;margin:0 auto 32px}
+.cfm-svc-duct h3{color:var(--cfm-h);font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:8px}
+.cfm-svc-duct h4{color:var(--cfm-h);font-size:1rem;font-weight:600;line-height:1.45}
+.cfm-svc-duct .cad-p{color:var(--cfm-body);font-size:1rem;line-height:1.8;margin-bottom:16px}
+.cfm-svc-duct .cad-p:last-child{margin-bottom:0}
+.cfm-svc-duct .cad-q{display:block;color:var(--cfm-dark);font-weight:700;margin:22px 0 10px;font-size:1.05rem}
+
+/* HERO */
+.cfm-svc-duct .cad-hero{background:var(--cfm-dark);color:#fff;padding:64px 20px;text-align:center}
+.cfm-svc-duct .cad-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:22px;font-size:.78rem;font-weight:600;margin-bottom:18px}
+.cfm-svc-duct .cad-hero h1{color:#fff;font-size:1.9rem;font-weight:700;line-height:1.2;max-width:820px;margin:0 auto}
+.cfm-svc-duct .cad-hero .cad-sub{color:rgba(255,255,255,.82);font-size:1.02rem;font-weight:400;line-height:1.6;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto}
+.cfm-svc-duct .cad-pills{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 20px}
+.cfm-svc-duct .cad-pills li{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+.cfm-svc-duct .cad-cta-row{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+
+/* BUTTONS */
+.cfm-svc-duct .cad-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
+.cfm-svc-duct .cad-btn-primary{background:var(--cfm-dark);color:#fff;box-shadow:0 4px 16px rgba(27,67,50,.3)}
+.cfm-svc-duct .cad-btn-primary:hover{background:var(--cfm-mid);transform:translateY(-2px)}
+.cfm-svc-duct .cad-btn-secondary{background:transparent;color:var(--cfm-dark);border:2px solid var(--cfm-dark);padding:12px 26px}
+.cfm-svc-duct .cad-btn-secondary:hover{background:var(--cfm-pale)}
+.cfm-svc-duct .cad-hero .cad-btn-secondary{color:#fff;border-color:rgba(255,255,255,.6)}
+.cfm-svc-duct .cad-hero .cad-btn-secondary:hover{background:rgba(255,255,255,.12)}
+
+/* AEO BOX */
+.cfm-svc-duct .cad-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:var(--cfm-h);max-width:1200px;margin:32px auto 0}
+
+/* CALLOUT */
+.cfm-svc-duct .cad-callout-fire{background:var(--cfm-firep);border-left:4px solid var(--cfm-fire);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0;color:var(--cfm-fire);font-weight:500;font-size:.95rem}
+
+/* CARDS GRID */
+.cfm-svc-duct .cad-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px}
+.cfm-svc-duct .cad-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;transition:all .25s}
+.cfm-svc-duct .cad-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.cfm-svc-duct .cad-step-bubble{background:var(--cfm-pale);color:var(--cfm-dark);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;margin-bottom:14px}
+.cfm-svc-duct .cad-icon{font-size:1.75rem;display:block;margin-bottom:12px}
+
+/* STAT STRIP */
+.cfm-svc-duct .cad-stats{background:var(--cfm-dark);padding:48px 20px;text-align:center}
+.cfm-svc-duct .cad-stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
+.cfm-svc-duct .cad-stat-num{font-size:1.5rem;font-weight:700;color:#fff;line-height:1.2}
+.cfm-svc-duct .cad-stat-lbl{font-size:.875rem;color:rgba(255,255,255,.72);margin-top:4px}
+
+/* MID CTA */
+.cfm-svc-duct .cad-midcta{background:var(--cfm-pale);border:1.5px solid var(--cfm-border);border-radius:14px;padding:32px 24px;text-align:center}
+.cfm-svc-duct .cad-midcta h3{color:var(--cfm-dark);margin-bottom:8px;text-align:center}
+.cfm-svc-duct .cad-midcta p{color:var(--cfm-body);margin-bottom:20px}
+.cfm-svc-duct .cad-midcta .cad-cta-row{margin-top:0}
+
+/* FAQ */
+.cfm-svc-duct .cad-faq-item{border-bottom:1px solid var(--cfm-border)}
+.cfm-svc-duct .cad-faq-q{width:100%;text-align:left;padding:20px 0;font-size:1rem;font-weight:600;color:var(--cfm-h);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cfm-svc-duct .cad-faq-q .cad-faq-icon{color:var(--cfm-light);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
+.cfm-svc-duct .cad-faq-item.open .cad-faq-icon{transform:rotate(135deg)}
+.cfm-svc-duct .cad-faq-a{padding:0 0 20px;color:var(--cfm-body);line-height:1.8;display:none}
+.cfm-svc-duct .cad-faq-item.open .cad-faq-a{display:block;animation:cfmAdFade .2s ease}
+@keyframes cfmAdFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* RELATED */
+.cfm-svc-duct .cad-related{display:grid;grid-template-columns:1fr;gap:20px}
+.cfm-svc-duct .cad-related a{display:block;border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;text-decoration:none;transition:all .2s}
+.cfm-svc-duct .cad-related a:hover{border-color:var(--cfm-light);transform:translateY(-3px)}
+.cfm-svc-duct .cad-related h4{color:var(--cfm-dark)}
+
+/* BOTTOM CTA */
+.cfm-svc-duct .cad-bottom-cta{background:var(--cfm-dark);padding:56px 24px;text-align:center;border-radius:16px}
+.cfm-svc-duct .cad-bottom-cta h2{color:#fff}
+.cfm-svc-duct .cad-bottom-cta p{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;max-width:640px;margin:0 auto}
+.cfm-svc-duct .cad-bottom-cta .cad-cta-row{margin-top:24px}
+.cfm-svc-duct .cad-bottom-cta .cad-svc-area{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:20px}
+
+.cfm-svc-duct a{color:var(--cfm-mid)}
+.cfm-svc-duct a:hover{color:var(--cfm-dark)}
+
+@media(min-width:768px){
+.cfm-svc-duct .cad-section{padding:56px 0}
+.cfm-svc-duct h2{font-size:1.65rem}
+.cfm-svc-duct .cad-hero{padding:72px 24px}
+.cfm-svc-duct .cad-hero h1{font-size:2.2rem}
+.cfm-svc-duct .cad-grid-2{grid-template-columns:1fr 1fr}
+.cfm-svc-duct .cad-grid-4{grid-template-columns:repeat(2,1fr)}
+.cfm-svc-duct .cad-stats-grid{grid-template-columns:repeat(4,1fr)}
+.cfm-svc-duct .cad-related{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1024px){
+.cfm-svc-duct .cad-section{padding:80px 0}
+.cfm-svc-duct .cad-hero{padding:88px 24px}
+.cfm-svc-duct .cad-hero h1{font-size:2.4rem}
+.cfm-svc-duct h2{font-size:1.75rem}
+.cfm-svc-duct .cad-grid-5{grid-template-columns:repeat(5,1fr)}
+.cfm-svc-duct .cad-grid-6{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+
+<div class="cfm-svc-duct">
+
+<section class="cad-hero">
+<div class="cad-wrap">
+<span class="cad-badge">Medford &middot; Wildfire Smoke Season Specialists</span>
+<h1>Air Duct Cleaning in Medford, Oregon</h1>
+<p class="cad-sub">After every Rogue Valley wildfire season, smoke ash accumulates in your HVAC ducts and recirculates through every room. We remove it.</p>
+<ul class="cad-pills">
+<li>&#9989; Wildfire Smoke Protocol</li>
+<li>&#9989; Allergen &amp; Pet Dander Removal</li>
+<li>&#9989; Jackson County Local</li>
+<li>&#9989; Before &amp; After Assessment</li>
+</ul>
+<div class="cad-cta-row">
+<a class="cad-btn cad-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cad-btn cad-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128197; Book Now</a>
+</div>
+</div>
+</section>
+
+<div class="cad-wrap">
+<p class="cad-aeo">Yes &mdash; we clean residential HVAC air ducts in Medford and Jackson County. Our process removes wildfire smoke ash, PM2.5 particles, allergens, pet dander, dust buildup, and mold from forced-air duct systems. In Medford specifically, post-wildfire-season duct cleaning is the highest-impact indoor air quality intervention available after a significant smoke event.</p>
+</div>
+
+<section class="cad-section">
+<div class="cad-wrap">
+<span class="cad-lbl">The Medford Context</span>
+<h2>Why Medford Homes Need Air Duct Cleaning More Than Most</h2>
+<div style="max-width:800px;margin:0 auto">
+<span class="cad-q">Why is air duct cleaning especially important in the Rogue Valley?</span>
+<p class="cad-p">Every July through September in the Rogue Valley, Jackson County experiences wildfire smoke events from regional fires &mdash; the Bear Creek Valley geography that creates temperature inversions also traps smoke in the valley. Medford residents check regional air quality indexes and keep windows closed during smoke events, running HVAC systems to maintain indoor comfort. What most homeowners don't realize: the HVAC return air system draws indoor air &mdash; which itself contains infiltrated smoke &mdash; through the filter and into the duct system. PM2.5 particles that bypass the filter accumulate in the duct lining. Season after season, this builds up.</p>
+<p class="cad-p">Wildfire smoke compounds in ductwork don't stay in the ducts. Every time the HVAC system runs, it distributes heated or cooled air through those same ducts &mdash; carrying residual smoke particles and VOC compounds back into living spaces. This is the source of the "phantom smoke smell" phenomenon that Medford homeowners notice after the fire season ends: carpets and hard surfaces have been cleaned, windows aired, but the home still smells like smoke when the furnace kicks on.</p>
+<p class="cad-p">The HVAC system is the distribution mechanism. Cleaning it breaks the cycle.</p>
+<span class="cad-q">How long does wildfire smoke stay in my ductwork?</span>
+<p class="cad-p">Without intervention, PM2.5 compounds in duct lining can persist and continue off-gassing for years. Each subsequent smoke season adds a new layer. Homes that experienced multiple years of regional wildfire smoke without duct cleaning have accumulated years of smoke compound deposition in their duct systems. Professional duct cleaning physically removes this accumulated material.</p>
+</div>
+</div>
+</section>
+
+<section class="cad-section" style="background:var(--cfm-white)">
+<div class="cad-wrap">
+<span class="cad-lbl">What We Remove</span>
+<h2>What Accumulates in Medford HVAC Ducts Over Time</h2>
+<div class="cad-grid cad-grid-6">
+<div class="cad-card"><span class="cad-icon">&#128293;</span><h3>Wildfire Smoke Ash and PM2.5</h3><p class="cad-p">The primary Medford-specific accumulation. Fine carbonaceous particles from wildfire events that penetrated the HVAC system despite filtration, carrying VOC compounds that continue off-gassing every time the system runs.</p></div>
+<div class="cad-card"><span class="cad-icon">&#127800;</span><h3>Pollen and Seasonal Allergens</h3><p class="cad-p">Rogue Valley pollen &mdash; particularly pear, oak, and ryegrass from the Bear Creek Valley &mdash; enters HVAC systems during spring. For allergy households, duct accumulation of pollen is a significant issue during and after pollen season (March&ndash;June).</p></div>
+<div class="cad-card"><span class="cad-icon">&#128062;</span><h3>Pet Dander</h3><p class="cad-p">Jackson County's above-average pet ownership means pet dander is among the most common duct contaminants in the Medford residential market, circulating continuously until the ducts are cleaned.</p></div>
+<div class="cad-card"><span class="cad-icon">&#129440;</span><h3>Mold and Mildew</h3><p class="cad-p">Forced-air systems that have experienced moisture infiltration &mdash; from roof leaks, condensation, or humidity events during the wet season &mdash; can harbor mold growth in the duct lining, distributing spores every time the system runs.</p></div>
+<div class="cad-card"><span class="cad-icon">&#128168;</span><h3>Dust and Debris Buildup</h3><p class="cad-p">Ordinary dust accumulation over years of HVAC operation accounts for the majority of duct content in most homes &mdash; building over time until professional cleaning removes it.</p></div>
+<div class="cad-card"><span class="cad-icon">&#127959;&#65039;</span><h3>Construction and Renovation Dust</h3><p class="cad-p">Medford's active new construction market and post-Almeda rebuild activity in Phoenix and Talent means many homes have fine construction dust (drywall, concrete, insulation) in ductwork from construction or renovation.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cad-section">
+<div class="cad-wrap">
+<span class="cad-lbl">Our Process</span>
+<h2>How We Clean Air Ducts in Medford Homes</h2>
+<div class="cad-grid cad-grid-5">
+<div class="cad-card"><span class="cad-step-bubble">1</span><h3>Pre-Inspection &amp; Assessment</h3><p class="cad-p">We inspect the duct system, return air vents, registers, and accessible duct runs, assess accumulation level, identify obvious mold or moisture issues, and confirm the cleaning approach.</p></div>
+<div class="cad-card"><span class="cad-step-bubble">2</span><h3>System Isolation &amp; Protection</h3><p class="cad-p">We protect your HVAC equipment, cover supply registers in rooms not being actively cleaned, and set up negative pressure equipment so dislodged material is captured, not redistributed.</p></div>
+<div class="cad-card"><span class="cad-step-bubble">3</span><h3>Negative Pressure Extraction</h3><p class="cad-p">Our system creates negative pressure in the duct network, pulling dislodged material toward the extraction point rather than pushing it into the living space &mdash; the critical difference from consumer-grade duct attachments.</p></div>
+<div class="cad-card"><span class="cad-step-bubble">4</span><h3>Mechanical Agitation</h3><p class="cad-p">We agitate accumulated material in the duct lining using rotating brushes appropriate for the duct material (sheet metal, flexible, or fiberglass-lined). Agitated material is immediately captured by negative pressure.</p></div>
+<div class="cad-card"><span class="cad-step-bubble">5</span><h3>Register Cleaning &amp; Reassembly</h3><p class="cad-p">Supply registers and return grilles are cleaned separately. The system is reassembled and tested, and we walk through the before-and-after assessment with you.</p></div>
+</div>
+</div>
+</section>
+
+<div class="cad-stats">
+<div class="cad-stats-grid">
+<div><div class="cad-stat-num">214+</div><div class="cad-stat-lbl">Homes served in Jackson County</div></div>
+<div><div class="cad-stat-num">Oct&ndash;Nov</div><div class="cad-stat-lbl">Peak timing &mdash; post-wildfire season</div></div>
+<div><div class="cad-stat-num">Smoke Ash</div><div class="cad-stat-lbl">Most common issue we find</div></div>
+<div><div class="cad-stat-num">Single &amp; Multi-Zone</div><div class="cad-stat-lbl">Forced-air systems we service</div></div>
+</div>
+</div>
+
+<section class="cad-section">
+<div class="cad-wrap">
+<span class="cad-lbl">Timing Guide</span>
+<h2>When to Schedule Air Duct Cleaning in Medford</h2>
+<span class="cad-q" style="text-align:center;display:block">When is the best time to have air ducts cleaned in the Rogue Valley?</span>
+<div class="cad-grid cad-grid-4" style="margin-top:20px">
+<div class="cad-card"><span class="cad-icon">&#128197;</span><h3>October&ndash;November (Most Important)</h3><p class="cad-p">Immediately after wildfire smoke season ends and before winter heating begins. This is the single most impactful timing for Medford homeowners &mdash; it removes accumulated smoke compounds before the furnace redistributes them all winter, and addresses the full summer's accumulation in one service.</p></div>
+<div class="cad-card"><span class="cad-icon">&#127800;</span><h3>March&ndash;April (Pre-Pollen)</h3><p class="cad-p">For households with allergy or asthma conditions, spring duct cleaning removes winter's accumulated dust before pollen season. A clean duct system plus a fresh filter provides the best baseline through Medford's high-pollen April. See our <a href="https://carpetcleaningmedfordoregon.com/medford-april-pollen-carpet-allergen-guide/">pollen guide</a>.</p></div>
+<div class="cad-card"><span class="cad-icon">&#128230;</span><h3>Move-In (New to Medford)</h3><p class="cad-p">Duct systems in homes you're moving into carry the contamination profile of previous occupants &mdash; their pets, smoking history, and wildfire seasons. Move-in duct cleaning is one of the highest-impact fresh-start services. See our <a href="https://carpetcleaningmedfordoregon.com/move-in-carpet-cleaning-medford-oregon/">move-in cleaning page</a>.</p></div>
+<div class="cad-card"><span class="cad-icon">&#127959;&#65039;</span><h3>Post-Renovation</h3><p class="cad-p">Any renovation work that generated dust &mdash; drywall, insulation, flooring, painting &mdash; contaminates the duct system with fine particles the HVAC then distributes through every room, particularly relevant in the Phoenix/Talent post-Almeda rebuild zone.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cad-section" style="background:var(--cfm-white)">
+<div class="cad-wrap">
+<div class="cad-midcta">
+<h3>Rogue Valley Wildfire Season Just Ended?</h3>
+<p>October&ndash;November is the best window to clean smoke ash from your Medford ducts. Don't let the furnace redistribute it all winter.</p>
+<div class="cad-cta-row">
+<a class="cad-btn cad-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cad-btn cad-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128197; Book Now</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cad-section">
+<div class="cad-wrap" style="max-width:800px">
+<span class="cad-lbl">Indoor Air Quality</span>
+<h2>Air Duct Cleaning as Part of a Complete Indoor Air Quality Plan</h2>
+<span class="cad-q">Is air duct cleaning enough to improve indoor air quality in Medford?</span>
+<p class="cad-p">Air duct cleaning is the highest-impact intervention for HVAC-distributed indoor air quality &mdash; but it's one component of a complete plan. In Medford homes, we recommend combining duct cleaning with:</p>
+<p class="cad-p">&#9989; HVAC filter upgrade (MERV-13 or HEPA equivalent) immediately after duct cleaning to prevent recontamination<br>&#9989; <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">Carpet cleaning</a> to remove the same smoke, allergen, and pet dander that's also accumulated in carpet fiber<br>&#9989; HEPA air purifier with activated carbon filter in bedrooms and living areas during and after wildfire season</p>
+<p class="cad-p">Homes that were professionally carpet cleaned after a smoke event but whose ducts were not cleaned often experience a persistent "phantom smoke smell" when the HVAC runs, even after the carpet is clean &mdash; see our blog on <a href="https://carpetcleaningmedfordoregon.com/why-does-carpet-smell-after-cleaning/">why carpet smells after cleaning</a>.</p>
+<p class="cad-callout-fire">The fix is sequential: clean the ducts, then clean the carpet, then replace the filter. Doing it in reverse order means the freshly cleaned carpet is contaminated again the first time the furnace runs.</p>
+</div>
+</section>
+
+<section class="cad-section" style="background:var(--cfm-white)">
+<div class="cad-wrap" style="max-width:800px">
+<h2>Air Duct Cleaning FAQ &mdash; Medford, Oregon</h2>
+<div class="cad-faq">
+<div class="cad-faq-item"><button class="cad-faq-q"><span>How often should air ducts be cleaned in a Medford home?</span><span class="cad-faq-icon">+</span></button><div class="cad-faq-a"><p class="cad-p">The general EPA/NADCA recommendation is every 3&ndash;5 years for standard homes. For Medford specifically, we recommend every 2&ndash;3 years due to wildfire smoke season accumulation, plus cleaning after any significant smoke event, after renovation work, at move-in, or any time you notice a smoke or musty smell when the furnace runs. Homes with pets or documented allergy conditions benefit from the more frequent end of the range.</p></div></div>
+<div class="cad-faq-item"><button class="cad-faq-q"><span>Will air duct cleaning help with wildfire smoke smell?</span><span class="cad-faq-icon">+</span></button><div class="cad-faq-a"><p class="cad-p">Yes &mdash; if the smoke smell is coming from the duct system, cleaning is the fix. Diagnostic: if the smell is strongest when the HVAC runs, the ducts are the source; if present without the HVAC running and concentrated in specific areas, carpet or other surfaces may be the source. Often both need treatment, and the sequence matters &mdash; clean ducts first, then carpet. See our <a href="https://carpetcleaningmedfordoregon.com/why-does-carpet-smell-after-cleaning/">carpet smell guide</a>.</p></div></div>
+<div class="cad-faq-item"><button class="cad-faq-q"><span>Can air duct cleaning help with allergies in Jackson County?</span><span class="cad-faq-icon">+</span></button><div class="cad-faq-a"><p class="cad-p">Yes &mdash; particularly for allergy households in the Rogue Valley's high-pollen spring. Pollen, dust mite allergens, and pet dander that accumulate in ductwork are redistributed by the HVAC continuously; cleaning removes this reservoir. Combined with a fresh MERV-13+ filter and carpet cleaning, duct cleaning is a meaningful allergen-reduction intervention. See our <a href="https://carpetcleaningmedfordoregon.com/medford-april-pollen-carpet-allergen-guide/">pollen guide</a>.</p></div></div>
+<div class="cad-faq-item"><button class="cad-faq-q"><span>Should I clean the ducts or carpet first?</span><span class="cad-faq-icon">+</span></button><div class="cad-faq-a"><p class="cad-p">Ducts first, then carpet. If you clean the carpet first and then run the HVAC through dirty ducts, the freshly cleaned carpet will be recontaminated within days as the duct system redistributes accumulated material. The correct sequence: ducts &rarr; new HVAC filter &rarr; carpet.</p></div></div>
+<div class="cad-faq-item"><button class="cad-faq-q"><span>Do you clean air ducts in commercial buildings in Medford?</span><span class="cad-faq-icon">+</span></button><div class="cad-faq-a"><p class="cad-p">Yes &mdash; commercial HVAC duct cleaning in Medford's office parks, medical facilities, and commercial properties. Commercial systems vary significantly in size and layout; we assess them at a site visit before providing a quote.</p></div></div>
+<div class="cad-faq-item"><button class="cad-faq-q"><span>How long does air duct cleaning take for a typical Medford home?</span><span class="cad-faq-icon">+</span></button><div class="cad-faq-a"><p class="cad-p">A standard 3-bedroom Medford home with a single-zone forced-air system: 3&ndash;5 hours. Larger homes, multi-zone systems, or homes with significant contamination (multiple wildfire seasons, renovation dust) take longer. We provide a time estimate at booking, and the home is accessible throughout.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="cad-section">
+<div class="cad-wrap">
+<h2>Related Services</h2>
+<div class="cad-related">
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/"><h4>&#127968; Carpet Cleaning Medford</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/"><h4>&#128293; Wildfire Smoke Treatment</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/"><h4>&#129717; Hardwood Floor Cleaning</h4></a>
+</div>
+</div>
+</section>
+
+<section class="cad-section">
+<div class="cad-wrap">
+<div class="cad-bottom-cta">
+<h2>Clean Air Starts with Clean Ducts &mdash; Medford and Jackson County</h2>
+<p>Don't let another winter redistribute last summer's wildfire smoke through your home. Schedule post-smoke-season duct cleaning now.</p>
+<div class="cad-cta-row">
+<a class="cad-btn cad-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cad-btn cad-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128197; Book Now</a>
+</div>
+<p class="cad-svc-area">Serving Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504 and all of Jackson County</p>
+</div>
+</div>
+</section>
+
+</div>
+<script>
+(function(){'use strict';
+var root=document.querySelector('.cfm-svc-duct');
+if(!root)return;
+root.querySelectorAll('.cad-faq-item').forEach(function(item){
+var q=item.querySelector('.cad-faq-q');
+q.addEventListener('click',function(){
+var open=item.classList.contains('open');
+root.querySelectorAll('.cad-faq-item.open').forEach(function(o){if(o!==item){o.classList.remove('open');o.querySelector('.cad-faq-icon').textContent='+'}});
+item.classList.toggle('open',!open);
+q.querySelector('.cad-faq-icon').textContent=!open?'×':'+';
+});
+});
+root.querySelectorAll('a[href^="#"]').forEach(function(a){
+a.addEventListener('click',function(e){
+var t=document.querySelector(a.getAttribute('href'));
+if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+});
+});
+})();
+</script>
+<!-- /wp:html -->

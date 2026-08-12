@@ -1,0 +1,286 @@
+<!-- wp:html -->
+<style id="cfm-ns-css">
+.cfm-svc-stone{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F9FA}
+.cfm-svc-stone *,.cfm-svc-stone *::before,.cfm-svc-stone *::after{box-sizing:border-box}
+.cfm-svc-stone p,.cfm-svc-stone li,.cfm-svc-stone h1,.cfm-svc-stone h2,.cfm-svc-stone h3,.cfm-svc-stone h4{word-wrap:break-word;overflow-wrap:break-word;margin:0}
+.cfm-svc-stone{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-warn:#B45309;--cfm-warnp:#FEF3C7;--cfm-safe:#065F46;--cfm-fire:#D85A30}
+
+.cfm-svc-stone .cns-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.cfm-svc-stone .cns-section{padding:40px 0}
+.cfm-svc-stone .cns-lbl{display:block;color:var(--cfm-light);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.cfm-svc-stone h2{color:var(--cfm-dark);font-size:1.5rem;font-weight:600;line-height:1.3;text-align:center;max-width:780px;margin:0 auto 32px}
+.cfm-svc-stone h3{color:var(--cfm-h);font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:8px}
+.cfm-svc-stone h4{color:var(--cfm-h);font-size:1rem;font-weight:600;line-height:1.45}
+.cfm-svc-stone .cns-p{color:var(--cfm-body);font-size:1rem;line-height:1.8;margin-bottom:16px}
+.cfm-svc-stone .cns-p:last-child{margin-bottom:0}
+.cfm-svc-stone .cns-q{display:block;color:var(--cfm-dark);font-weight:700;margin:22px 0 10px;font-size:1.05rem}
+
+/* HERO */
+.cfm-svc-stone .cns-hero{background:var(--cfm-dark);color:#fff;padding:64px 20px;text-align:center}
+.cfm-svc-stone .cns-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:22px;font-size:.78rem;font-weight:600;margin-bottom:18px}
+.cfm-svc-stone .cns-hero h1{color:#fff;font-size:1.9rem;font-weight:700;line-height:1.2;max-width:820px;margin:0 auto}
+.cfm-svc-stone .cns-hero .cns-sub{color:rgba(255,255,255,.82);font-size:1.02rem;font-weight:400;line-height:1.6;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto}
+.cfm-svc-stone .cns-pills{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 20px}
+.cfm-svc-stone .cns-pills li{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+.cfm-svc-stone .cns-cta-row{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+
+/* BUTTONS */
+.cfm-svc-stone .cns-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
+.cfm-svc-stone .cns-btn-primary{background:var(--cfm-dark);color:#fff;box-shadow:0 4px 16px rgba(27,67,50,.3)}
+.cfm-svc-stone .cns-btn-primary:hover{background:var(--cfm-mid);transform:translateY(-2px)}
+.cfm-svc-stone .cns-btn-secondary{background:transparent;color:var(--cfm-dark);border:2px solid var(--cfm-dark);padding:12px 26px}
+.cfm-svc-stone .cns-btn-secondary:hover{background:var(--cfm-pale)}
+.cfm-svc-stone .cns-hero .cns-btn-secondary{color:#fff;border-color:rgba(255,255,255,.6)}
+.cfm-svc-stone .cns-hero .cns-btn-secondary:hover{background:rgba(255,255,255,.12)}
+
+/* AEO BOX */
+.cfm-svc-stone .cns-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:var(--cfm-h);max-width:1200px;margin:32px auto 0}
+
+/* CALLOUT */
+.cfm-svc-stone .cns-callout-warn{background:var(--cfm-warnp);border-left:4px solid var(--cfm-warn);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0;color:#78350f;font-weight:600}
+.cfm-svc-stone .cns-yn{margin:20px 0}
+.cfm-svc-stone .cns-yn h4{margin-bottom:10px}
+.cfm-svc-stone .cns-yn ul{list-style:none;margin:0;padding:0}
+.cfm-svc-stone .cns-yn li{line-height:1.8;color:var(--cfm-body)}
+.cfm-svc-stone .cns-yes h4{color:var(--cfm-safe)}
+.cfm-svc-stone .cns-no h4{color:var(--cfm-fire)}
+
+/* CARDS GRID */
+.cfm-svc-stone .cns-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px}
+.cfm-svc-stone .cns-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;transition:all .25s}
+.cfm-svc-stone .cns-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.cfm-svc-stone .cns-step-bubble{background:var(--cfm-pale);color:var(--cfm-dark);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;margin-bottom:14px}
+.cfm-svc-stone .cns-icon{font-size:1.75rem;display:block;margin-bottom:12px}
+
+/* MID CTA */
+.cfm-svc-stone .cns-midcta{background:var(--cfm-pale);border:1.5px solid var(--cfm-border);border-radius:14px;padding:32px 24px;text-align:center}
+.cfm-svc-stone .cns-midcta h3{color:var(--cfm-dark);margin-bottom:8px;text-align:center}
+.cfm-svc-stone .cns-midcta p{color:var(--cfm-body);margin-bottom:20px}
+.cfm-svc-stone .cns-midcta .cns-cta-row{margin-top:0}
+
+/* FAQ */
+.cfm-svc-stone .cns-faq-item{border-bottom:1px solid var(--cfm-border)}
+.cfm-svc-stone .cns-faq-q{width:100%;text-align:left;padding:20px 0;font-size:1rem;font-weight:600;color:var(--cfm-h);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cfm-svc-stone .cns-faq-q .cns-faq-icon{color:var(--cfm-light);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
+.cfm-svc-stone .cns-faq-item.open .cns-faq-icon{transform:rotate(135deg)}
+.cfm-svc-stone .cns-faq-a{padding:0 0 20px;color:var(--cfm-body);line-height:1.8;display:none}
+.cfm-svc-stone .cns-faq-item.open .cns-faq-a{display:block;animation:cfmNsFade .2s ease}
+@keyframes cfmNsFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* RELATED */
+.cfm-svc-stone .cns-related{display:grid;grid-template-columns:1fr;gap:20px}
+.cfm-svc-stone .cns-related a{display:block;border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;text-decoration:none;transition:all .2s}
+.cfm-svc-stone .cns-related a:hover{border-color:var(--cfm-light);transform:translateY(-3px)}
+.cfm-svc-stone .cns-related h4{color:var(--cfm-dark)}
+
+/* BOTTOM CTA */
+.cfm-svc-stone .cns-bottom-cta{background:var(--cfm-dark);padding:56px 24px;text-align:center;border-radius:16px}
+.cfm-svc-stone .cns-bottom-cta h2{color:#fff}
+.cfm-svc-stone .cns-bottom-cta p{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;max-width:640px;margin:0 auto}
+.cfm-svc-stone .cns-bottom-cta .cns-cta-row{margin-top:24px}
+.cfm-svc-stone .cns-bottom-cta .cns-svc-area{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:20px}
+
+.cfm-svc-stone a{color:var(--cfm-mid)}
+.cfm-svc-stone a:hover{color:var(--cfm-dark)}
+
+@media(min-width:768px){
+.cfm-svc-stone .cns-section{padding:56px 0}
+.cfm-svc-stone h2{font-size:1.65rem}
+.cfm-svc-stone .cns-hero{padding:72px 24px}
+.cfm-svc-stone .cns-hero h1{font-size:2.2rem}
+.cfm-svc-stone .cns-grid-2{grid-template-columns:1fr 1fr}
+.cfm-svc-stone .cns-related{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1024px){
+.cfm-svc-stone .cns-section{padding:80px 0}
+.cfm-svc-stone .cns-hero{padding:88px 24px}
+.cfm-svc-stone .cns-hero h1{font-size:2.4rem}
+.cfm-svc-stone h2{font-size:1.75rem}
+.cfm-svc-stone .cns-grid-3{grid-template-columns:repeat(3,1fr)}
+.cfm-svc-stone .cns-grid-6{grid-template-columns:repeat(3,1fr)}
+.cfm-svc-stone .cns-grid-5{grid-template-columns:repeat(5,1fr)}
+}
+</style>
+
+<div class="cfm-svc-stone">
+
+<section class="cns-hero">
+<div class="cns-wrap">
+<span class="cns-badge">Medford &middot; pH-Safe Stone Chemistry</span>
+<h1>Natural Stone Cleaning in Medford, Oregon</h1>
+<p class="cns-sub">Marble, travertine, granite, limestone, and slate &mdash; safe cleaning that protects the finish and restores the stone's appearance.</p>
+<ul class="cns-pills">
+<li>&#9989; pH-Neutral Chemistry</li>
+<li>&#9989; No Bleach or Acid</li>
+<li>&#9989; Streak-Free Results</li>
+<li>&#9989; Sealing Available</li>
+<li>&#9989; Jackson County Local</li>
+</ul>
+<div class="cns-cta-row">
+<a class="cns-btn cns-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cns-btn cns-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; See Pricing</a>
+</div>
+</div>
+</section>
+
+<div class="cns-wrap">
+<p class="cns-aeo">Yes &mdash; we clean natural stone floors, countertops, showers, and surfaces throughout Medford and Jackson County. We use pH-neutral stone-safe chemistry &mdash; never acidic or alkaline cleaners that etch stone. Stone types we clean: marble, travertine, granite, limestone, slate, flagstone, and quartzite. Sealing is available after cleaning for porous stones. Results are immediate.</p>
+</div>
+
+<section class="cns-section">
+<div class="cns-wrap">
+<span class="cns-lbl">Stone Care Science</span>
+<h2>Why Natural Stone Requires Specific Cleaning Chemistry</h2>
+<div style="max-width:800px;margin:0 auto">
+<span class="cns-q">Why can't I use regular cleaners on natural stone?</span>
+<p class="cns-p">Natural stone is chemically reactive to pH extremes in ways that tile and grout and carpet are not. Acidic cleaners (vinegar, citrus-based products, toilet bowl cleaners) chemically etch the surface of marble, limestone, and travertine &mdash; dulling the polish and creating microscopic surface damage that cannot be reversed without re-honing or re-polishing. Alkaline cleaners (bleach, ammonia, most general-purpose household cleaners) are safer for stone pH but leave residue and can degrade sealer.</p>
+<p class="cns-p">This is why "natural stone" products exist as a separate category from general cleaners &mdash; stone genuinely needs pH-neutral chemistry.</p>
+<p class="cns-p">Homes in Medford and Jackson County with natural stone surfaces range widely in type &mdash; travertine tile in bathrooms and entryways of 2000s-era Medford construction, marble countertops in newer Eagle Point and Ashland kitchen renovations, historic limestone and slate in Jacksonville's older homes, and flagstone in Rogue Valley ranch and rural property applications. Each has different porosity and pH tolerance. We identify your stone type before any cleaning chemistry touches it.</p>
+<span class="cns-q">Does Jackson County's hard water affect natural stone?</span>
+<p class="cns-p">Yes &mdash; significantly. Jackson County's moderately hard water deposits calcium and magnesium minerals on stone surfaces every time water evaporates. On marble and travertine specifically, this creates a characteristic "haze" or "scale" that obscures the stone's natural color and texture. Standard mopping with tap water accelerates this buildup. Professional stone cleaning removes mineral scale with a pH-appropriate chelating agent that dissolves calcium deposits without etching the stone.</p>
+</div>
+</div>
+</section>
+
+<section class="cns-section" style="background:var(--cfm-white)">
+<div class="cns-wrap">
+<span class="cns-lbl">Stone Types</span>
+<h2>Natural Stone We Clean in Medford Homes and Businesses</h2>
+<div class="cns-grid cns-grid-6">
+<div class="cns-card"><span class="cns-icon">&#129704;</span><h3>Marble</h3><p class="cns-p">Highly polished, extremely pH-sensitive. Acid from citrus, vinegar, or coffee will etch the surface immediately. We use neutral pH-7 stone cleaner, no acidic agents. Common in bathroom vanities and fireplace surrounds. Sealing recommended after cleaning to maintain polish.</p></div>
+<div class="cns-card"><span class="cns-icon">&#129747;</span><h3>Travertine</h3><p class="cns-p">Porous stone with natural voids filled during manufacturing &mdash; one of the most common natural stone floors in 1990s&ndash;2010s Medford homes. Prone to mineral scale from hard-water mopping. Sealing is highly recommended to prevent re-soiling.</p></div>
+<div class="cns-card"><span class="cns-icon">&#129704;</span><h3>Granite</h3><p class="cns-p">Harder and more acid-resistant than marble or travertine, but still benefits from pH-neutral chemistry. Common for Medford kitchen countertops. Cooking grease and product residue reduces its natural sheen over time; professional cleaning restores it.</p></div>
+<div class="cns-card"><span class="cns-icon">&#127961;</span><h3>Limestone</h3><p class="cns-p">Similar to marble in pH sensitivity &mdash; acids etch limestone immediately and irreversibly. Common in historic Jacksonville homes and Ashland architectural applications. One of the stones most commonly damaged by homeowner cleaning with wrong products; we always test a discrete area first.</p></div>
+<div class="cns-card"><span class="cns-icon">&#11035;&#65039;</span><h3>Slate</h3><p class="cns-p">Lower pH sensitivity than marble or limestone, but accumulates surface residue and scaling that dulls its natural color. Common in Medford mudroom entries, outdoor patios, and ranch properties throughout Jackson County.</p></div>
+<div class="cns-card"><span class="cns-icon">&#128738;</span><h3>Flagstone and Quartzite</h3><p class="cns-p">Common in Rogue Valley outdoor applications and rural properties around Gold Hill and Rogue River. We clean both interior and exterior stone, with a specific approach for exterior moss, lichen, or organic buildup from the wet season.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cns-section">
+<div class="cns-wrap">
+<span class="cns-lbl">Our Process</span>
+<h2>How We Clean Natural Stone in Medford</h2>
+<div class="cns-grid cns-grid-5">
+<div class="cns-card"><span class="cns-step-bubble">1</span><h3>Stone ID &amp; pH Assessment</h3><p class="cns-p">We identify stone type, finish (honed, polished, tumbled, natural), sealer condition, and any damage or mineral buildup needing specific attention. This determines chemistry and technique.</p></div>
+<div class="cns-card"><span class="cns-step-bubble">2</span><h3>Dry Surface Prep</h3><p class="cns-p">Loose grit and dry soil are removed before any solution is applied &mdash; abrasive particles can scratch stone finish if moved by a wet pad.</p></div>
+<div class="cns-card"><span class="cns-step-bubble">3</span><h3>pH-Neutral Cleaning</h3><p class="cns-p">We apply stone-specific pH-neutral cleaner &mdash; no bleach, no acids, no alkaline cleaners. Dwell time matches the contamination level, not a blanket timer.</p></div>
+<div class="cns-card"><span class="cns-step-bubble">4</span><h3>Agitation &amp; Rinse</h3><p class="cns-p">Gentle agitation with a soft-bristle brush or microfiber pad, never abrasive pads. Thorough rinse; for floors, wet-vacuum extraction of rinse water.</p></div>
+<div class="cns-card"><span class="cns-step-bubble">5</span><h3>Optional Sealing</h3><p class="cns-p">For porous stones (travertine, limestone, unpolished marble, slate), we offer impregnating sealer application after cleaning to prevent future water and stain penetration.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cns-section" style="background:var(--cfm-white)">
+<div class="cns-wrap">
+<span class="cns-lbl">Applications</span>
+<h2>Stone Surfaces We Clean in Medford and Jackson County</h2>
+<div class="cns-grid cns-grid-6">
+<div class="cns-card"><span class="cns-icon">&#128703;</span><h3>Bathroom Stone Floors &amp; Shower Surround</h3><p class="cns-p">The most common application in Medford homes. Travertine shower surrounds and bathroom floors accumulate soap scum, hard water scale, and grout haze &mdash; we remove all three. See our <a href="https://carpetcleaningmedfordoregon.com/tile-grout-cleaning-medford-oregon/">tile &amp; grout service</a> for grout-focused work.</p></div>
+<div class="cns-card"><span class="cns-icon">&#127865;</span><h3>Kitchen Stone Countertops</h3><p class="cns-p">Granite and marble countertops accumulate cooking grease, mineral scale, and product residue over time. Professional cleaning restores the stone's natural sheen and food-safe cleanable surface.</p></div>
+<div class="cns-card"><span class="cns-icon">&#127968;</span><h3>Entryway and Foyer Stone Floors</h3><p class="cns-p">High-traffic stone entryways &mdash; common in 1990s&ndash;2000s construction &mdash; accumulate volcanic clay from trail tracking, shoe grit, and hard water from boot drip, accelerating finish wear.</p></div>
+<div class="cns-card"><span class="cns-icon">&#128293;</span><h3>Fireplace Surround and Hearth</h3><p class="cns-p">Stone fireplaces with wood stoves and gas inserts accumulate soot residue, smoke staining, and ash. We clean with chemistry matched to the stone type &mdash; marble requires different care than slate or flagstone.</p></div>
+<div class="cns-card"><span class="cns-icon">&#127793;</span><h3>Outdoor Stone and Flagstone Patio</h3><p class="cns-p">Rogue Valley outdoor stone accumulates moss, lichen, mildew, and organic staining from the wet season (October&ndash;March). Best timing: late spring (April&ndash;May), after the rains and before entertaining season.</p></div>
+<div class="cns-card"><span class="cns-icon">&#127970;</span><h3>Commercial Stone in Medford Businesses</h3><p class="cns-p">Medical offices, hotel lobbies, and commercial properties along Riverside Ave, Stewart Ave, and Crater Lake Hwy with natural stone flooring or countertops receive regular professional stone maintenance from us.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cns-section">
+<div class="cns-wrap">
+<div class="cns-midcta">
+<h3>Stone Surfaces in Medford or Jackson County?</h3>
+<p>Call for a quick phone estimate or to discuss your specific stone type. We advise before booking on anything unusual.</p>
+<div class="cns-cta-row">
+<a class="cns-btn cns-btn-primary" href="tel:+14583020101">&#128222; (458) 302-0101</a>
+<a class="cns-btn cns-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; Pricing Guide</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cns-section" style="background:var(--cfm-white)">
+<div class="cns-wrap" style="max-width:800px">
+<span class="cns-lbl">Honest Limitations</span>
+<h2>What Stone Cleaning Can and Cannot Fix</h2>
+<span class="cns-q">Can you fix etching, cracks, or chipped stone?</span>
+<p class="cns-callout-warn">We clean stone &mdash; we don't restore structurally damaged stone.</p>
+<div class="cns-yn cns-yes"><h4>What cleaning fixes</h4><ul>
+<li>&#9989; Surface grime, grease, soap scum, and organic residue</li>
+<li>&#9989; Hard water mineral scale and calcium deposits</li>
+<li>&#9989; Smoke and soot residue on fireplace stone</li>
+<li>&#9989; Mold and mildew on exterior or bathroom stone</li>
+<li>&#9989; Re-soiling from prior improper cleaning products</li>
+</ul></div>
+<div class="cns-yn cns-no"><h4>What cleaning cannot fix</h4><ul>
+<li>&#10060; Acid etching (dull spots from vinegar, citrus, or toilet cleaner) &mdash; requires professional honing and re-polishing</li>
+<li>&#10060; Chips, cracks, or physical damage &mdash; requires stone restoration</li>
+<li>&#10060; Deeply set stains that penetrated unsealed stone &mdash; some respond to poultice treatment, assessed case by case</li>
+<li>&#10060; Worn or scratched polish on marble &mdash; requires professional re-polishing</li>
+</ul></div>
+<p class="cns-p">If your stone has acid etching or physical damage, we'll tell you during our assessment and can refer you to stone restoration specialists in the Medford area.</p>
+</div>
+</section>
+
+<section class="cns-section">
+<div class="cns-wrap" style="max-width:800px">
+<h2>Natural Stone Cleaning FAQ &mdash; Medford, Oregon</h2>
+<div class="cns-faq">
+<div class="cns-faq-item"><button class="cns-faq-q"><span>Can I use vinegar to clean my travertine or marble floors?</span><span class="cns-faq-icon">+</span></button><div class="cns-faq-a"><p class="cns-p">Never &mdash; and this is the most common stone cleaning mistake we encounter. Vinegar is acidic and will etch the surface of marble, travertine, and limestone immediately and irreversibly. The dull, hazy spots on stone floors are often acid etch marks from vinegar, citrus cleaners, or toilet bowl cleaner. Only pH-neutral stone-safe cleaners should contact these surfaces.</p></div></div>
+<div class="cns-faq-item"><button class="cns-faq-q"><span>How often should natural stone floors be professionally cleaned in Medford?</span><span class="cns-faq-icon">+</span></button><div class="cns-faq-a"><p class="cns-p">Once or twice a year for most Medford homes depending on traffic and use. Travertine bathroom floors and entry areas benefit from twice-yearly cleaning due to hard water buildup. Granite countertops may only need annual professional cleaning if maintained well between visits.</p></div></div>
+<div class="cns-faq-item"><button class="cns-faq-q"><span>Do you seal stone after cleaning?</span><span class="cns-faq-icon">+</span></button><div class="cns-faq-a"><p class="cns-p">Sealing is available as an add-on for porous stones &mdash; travertine, limestone, unpolished marble, and slate. It's not required for every stone type; polished granite and honed marble may already have a sealer in good condition. We assess sealer condition during inspection and recommend accordingly.</p></div></div>
+<div class="cns-faq-item"><button class="cns-faq-q"><span>What's the difference between stone cleaning and tile and grout cleaning?</span><span class="cns-faq-icon">+</span></button><div class="cns-faq-a"><p class="cns-p">Stone cleaning focuses on the stone surface using stone-specific pH-neutral chemistry. Tile and grout cleaning addresses the grout lines in tiled surfaces (including stone tile installations). Many stone tile applications benefit from both &mdash; we often do them together. See our <a href="https://carpetcleaningmedfordoregon.com/tile-grout-cleaning-medford-oregon/">tile &amp; grout page</a>.</p></div></div>
+<div class="cns-faq-item"><button class="cns-faq-q"><span>Can you clean outdoor stone in the Rogue Valley?</span><span class="cns-faq-icon">+</span></button><div class="cns-faq-a"><p class="cns-p">Yes &mdash; exterior flagstone, slate steps, and outdoor stone surfaces in Jackson County. Best timing is spring (April&ndash;May), after the wet season and before outdoor entertaining begins. Stone with significant organic growth (moss, lichen) is assessed at booking as it may need pre-treatment.</p></div></div>
+<div class="cns-faq-item"><button class="cns-faq-q"><span>Do you clean stone countertops as well as floors?</span><span class="cns-faq-icon">+</span></button><div class="cns-faq-a"><p class="cns-p">Yes &mdash; kitchen and bathroom countertops, fireplace surrounds, and other stone surfaces, not just floors. Our stone cleaning is a surface service, not limited by location in the home.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="cns-section" style="background:var(--cfm-white)">
+<div class="cns-wrap">
+<h2>Related Services</h2>
+<div class="cns-related">
+<a href="https://carpetcleaningmedfordoregon.com/tile-grout-cleaning-medford-oregon/"><h4>&#128252; Tile &amp; Grout Cleaning</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/"><h4>&#129717; Hardwood Floor Cleaning</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/air-duct-cleaning-medford-oregon/"><h4>&#128168; Air Duct Cleaning</h4></a>
+</div>
+</div>
+</section>
+
+<section class="cns-section">
+<div class="cns-wrap">
+<div class="cns-bottom-cta">
+<h2>Natural Stone Cleaned Right in Medford &mdash; pH-Safe, Streak-Free</h2>
+<p>Marble, travertine, granite, limestone, slate and more. Medford, Ashland, Jacksonville, Eagle Point, and all of Jackson County.</p>
+<div class="cns-cta-row">
+<a class="cns-btn cns-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cns-btn cns-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; See Pricing</a>
+</div>
+<p class="cns-svc-area">Serving Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504 and all of Jackson County</p>
+</div>
+</div>
+</section>
+
+</div>
+<script>
+(function(){'use strict';
+var root=document.querySelector('.cfm-svc-stone');
+if(!root)return;
+root.querySelectorAll('.cns-faq-item').forEach(function(item){
+var q=item.querySelector('.cns-faq-q');
+q.addEventListener('click',function(){
+var open=item.classList.contains('open');
+root.querySelectorAll('.cns-faq-item.open').forEach(function(o){if(o!==item){o.classList.remove('open');o.querySelector('.cns-faq-icon').textContent='+'}});
+item.classList.toggle('open',!open);
+q.querySelector('.cns-faq-icon').textContent=!open?'×':'+';
+});
+});
+root.querySelectorAll('a[href^="#"]').forEach(function(a){
+a.addEventListener('click',function(e){
+var t=document.querySelector(a.getAttribute('href'));
+if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+});
+});
+})();
+</script>
+<!-- /wp:html -->

@@ -1,0 +1,307 @@
+<!-- wp:html -->
+<style id="cfm-cr-css">
+.cfm-svc-repair{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F9FA}
+.cfm-svc-repair *,.cfm-svc-repair *::before,.cfm-svc-repair *::after{box-sizing:border-box}
+.cfm-svc-repair p,.cfm-svc-repair li,.cfm-svc-repair h1,.cfm-svc-repair h2,.cfm-svc-repair h3,.cfm-svc-repair h4{word-wrap:break-word;overflow-wrap:break-word;margin:0}
+.cfm-svc-repair{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-safe:#065F46;--cfm-safep:#D1FAE5;--cfm-danger:#991B1B;--cfm-dangerp:#FEE2E2}
+
+.cfm-svc-repair .ccr-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.cfm-svc-repair .ccr-section{padding:40px 0}
+.cfm-svc-repair .ccr-lbl{display:block;color:var(--cfm-light);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.cfm-svc-repair h2{color:var(--cfm-dark);font-size:1.5rem;font-weight:600;line-height:1.3;text-align:center;max-width:780px;margin:0 auto 32px}
+.cfm-svc-repair h3{color:var(--cfm-h);font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:8px}
+.cfm-svc-repair h4{color:var(--cfm-h);font-size:1rem;font-weight:600;line-height:1.45}
+.cfm-svc-repair .ccr-p{color:var(--cfm-body);font-size:1rem;line-height:1.8;margin-bottom:16px}
+.cfm-svc-repair .ccr-p:last-child{margin-bottom:0}
+.cfm-svc-repair .ccr-q{display:block;color:var(--cfm-dark);font-weight:700;margin:22px 0 10px;font-size:1.05rem}
+
+/* HERO */
+.cfm-svc-repair .ccr-hero{background:var(--cfm-dark);color:#fff;padding:64px 20px;text-align:center}
+.cfm-svc-repair .ccr-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:22px;font-size:.78rem;font-weight:600;margin-bottom:18px}
+.cfm-svc-repair .ccr-hero h1{color:#fff;font-size:1.9rem;font-weight:700;line-height:1.2;max-width:820px;margin:0 auto}
+.cfm-svc-repair .ccr-hero .ccr-sub{color:rgba(255,255,255,.82);font-size:1.02rem;font-weight:400;line-height:1.6;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto}
+.cfm-svc-repair .ccr-pills{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 20px}
+.cfm-svc-repair .ccr-pills li{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+.cfm-svc-repair .ccr-cta-row{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+
+/* BUTTONS */
+.cfm-svc-repair .ccr-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
+.cfm-svc-repair .ccr-btn-primary{background:var(--cfm-dark);color:#fff;box-shadow:0 4px 16px rgba(27,67,50,.3)}
+.cfm-svc-repair .ccr-btn-primary:hover{background:var(--cfm-mid);transform:translateY(-2px)}
+.cfm-svc-repair .ccr-btn-secondary{background:transparent;color:var(--cfm-dark);border:2px solid var(--cfm-dark);padding:12px 26px}
+.cfm-svc-repair .ccr-btn-secondary:hover{background:var(--cfm-pale)}
+.cfm-svc-repair .ccr-hero .ccr-btn-secondary{color:#fff;border-color:rgba(255,255,255,.6)}
+.cfm-svc-repair .ccr-hero .ccr-btn-secondary:hover{background:rgba(255,255,255,.12)}
+
+/* AEO BOX */
+.cfm-svc-repair .ccr-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:var(--cfm-h);max-width:1200px;margin:32px auto 0}
+
+/* CALLOUTS */
+.cfm-svc-repair .ccr-callout{border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+.cfm-svc-repair .ccr-callout-safe{background:var(--cfm-safep);border-left:4px solid var(--cfm-safe)}
+.cfm-svc-repair .ccr-callout-danger{background:var(--cfm-dangerp);border-left:4px solid var(--cfm-danger)}
+.cfm-svc-repair .ccr-callout h4{margin-bottom:10px}
+.cfm-svc-repair .ccr-callout-safe h4{color:var(--cfm-safe)}
+.cfm-svc-repair .ccr-callout-danger h4{color:var(--cfm-danger)}
+.cfm-svc-repair .ccr-callout ul{margin:0;padding-left:0;list-style:none}
+.cfm-svc-repair .ccr-callout li{line-height:1.8}
+.cfm-svc-repair .ccr-callout-safe li{color:var(--cfm-safe)}
+.cfm-svc-repair .ccr-callout-danger li{color:var(--cfm-danger)}
+
+/* CARDS GRID */
+.cfm-svc-repair .ccr-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px}
+.cfm-svc-repair .ccr-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;transition:all .25s}
+.cfm-svc-repair .ccr-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.cfm-svc-repair .ccr-step-bubble{background:var(--cfm-pale);color:var(--cfm-dark);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;margin-bottom:14px}
+.cfm-svc-repair .ccr-icon{font-size:1.75rem;display:block;margin-bottom:12px}
+
+/* STAT STRIP */
+.cfm-svc-repair .ccr-stats{background:var(--cfm-dark);padding:48px 20px;text-align:center}
+.cfm-svc-repair .ccr-stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
+.cfm-svc-repair .ccr-stat-num{font-size:1.7rem;font-weight:700;color:#fff;line-height:1.2}
+.cfm-svc-repair .ccr-stat-lbl{font-size:.875rem;color:rgba(255,255,255,.72);margin-top:4px}
+
+/* MID CTA */
+.cfm-svc-repair .ccr-midcta{background:var(--cfm-pale);border:1.5px solid var(--cfm-border);border-radius:14px;padding:32px 24px;text-align:center}
+.cfm-svc-repair .ccr-midcta h3{color:var(--cfm-dark);margin-bottom:8px;text-align:center}
+.cfm-svc-repair .ccr-midcta p{color:var(--cfm-body);margin-bottom:20px}
+.cfm-svc-repair .ccr-midcta .ccr-cta-row{margin-top:0}
+
+/* FAQ */
+.cfm-svc-repair .ccr-faq-item{border-bottom:1px solid var(--cfm-border)}
+.cfm-svc-repair .ccr-faq-q{width:100%;text-align:left;padding:20px 0;font-size:1rem;font-weight:600;color:var(--cfm-h);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cfm-svc-repair .ccr-faq-q .ccr-faq-icon{color:var(--cfm-light);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
+.cfm-svc-repair .ccr-faq-item.open .ccr-faq-icon{transform:rotate(135deg)}
+.cfm-svc-repair .ccr-faq-a{padding:0 0 20px;color:var(--cfm-body);line-height:1.8;display:none}
+.cfm-svc-repair .ccr-faq-item.open .ccr-faq-a{display:block;animation:cfmCrFade .2s ease}
+@keyframes cfmCrFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* RELATED */
+.cfm-svc-repair .ccr-related{display:grid;grid-template-columns:1fr;gap:20px}
+.cfm-svc-repair .ccr-related a{display:block;border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;text-decoration:none;transition:all .2s}
+.cfm-svc-repair .ccr-related a:hover{border-color:var(--cfm-light);transform:translateY(-3px)}
+.cfm-svc-repair .ccr-related h4{color:var(--cfm-dark)}
+
+/* BOTTOM CTA */
+.cfm-svc-repair .ccr-bottom-cta{background:var(--cfm-dark);padding:56px 24px;text-align:center;border-radius:16px}
+.cfm-svc-repair .ccr-bottom-cta h2{color:#fff}
+.cfm-svc-repair .ccr-bottom-cta p{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;max-width:640px;margin:0 auto}
+.cfm-svc-repair .ccr-bottom-cta .ccr-cta-row{margin-top:24px}
+.cfm-svc-repair .ccr-bottom-cta .ccr-svc-area{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:20px}
+
+.cfm-svc-repair a{color:var(--cfm-mid)}
+.cfm-svc-repair a:hover{color:var(--cfm-dark)}
+
+@media(min-width:768px){
+.cfm-svc-repair .ccr-section{padding:56px 0}
+.cfm-svc-repair h2{font-size:1.65rem}
+.cfm-svc-repair .ccr-hero{padding:72px 24px}
+.cfm-svc-repair .ccr-hero h1{font-size:2.2rem}
+.cfm-svc-repair .ccr-grid-2{grid-template-columns:1fr 1fr}
+.cfm-svc-repair .ccr-grid-4{grid-template-columns:repeat(2,1fr)}
+.cfm-svc-repair .ccr-stats-grid{grid-template-columns:repeat(4,1fr)}
+.cfm-svc-repair .ccr-related{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1024px){
+.cfm-svc-repair .ccr-section{padding:80px 0}
+.cfm-svc-repair .ccr-hero{padding:88px 24px}
+.cfm-svc-repair .ccr-hero h1{font-size:2.4rem}
+.cfm-svc-repair h2{font-size:1.75rem}
+.cfm-svc-repair .ccr-grid-4{grid-template-columns:repeat(4,1fr)}
+.cfm-svc-repair .ccr-grid-6{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+
+<div class="cfm-svc-repair">
+
+<section class="ccr-hero">
+<div class="ccr-wrap">
+<span class="ccr-badge">Jackson County &middot; Local Carpet Repair Specialist</span>
+<h1>Carpet Repair in Medford, Oregon</h1>
+<p class="ccr-sub">Before you replace it &mdash; let us fix it. Patching, seam repair, pet damage, burns, and re-stretching for Medford and all of Jackson County.</p>
+<ul class="ccr-pills">
+<li>&#9989; IICRC Certified</li>
+<li>&#9989; Patch from Closet Remnant</li>
+<li>&#9989; Invisible Repairs</li>
+<li>&#9989; Upfront Assessment</li>
+<li>&#9989; Same-Week Scheduling</li>
+</ul>
+<div class="ccr-cta-row">
+<a class="ccr-btn ccr-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="ccr-btn ccr-btn-secondary" href="https://carpetcleaningmedfordoregon.com/contact/">&#128241; Get a Free Assessment</a>
+</div>
+</div>
+</section>
+
+<div class="ccr-wrap">
+<p class="ccr-aeo">Yes &mdash; we repair carpet in Medford and Jackson County. Services include patching (using closet remnant or donor carpet), seam repair, pet damage restoration, burn hole repair, re-stretching for buckled or rippled carpet, and edge re-tacking. Most repairs cost significantly less than carpet replacement. We assess every repair honestly &mdash; if replacement makes more sense, we'll tell you before we start.</p>
+</div>
+
+<section class="ccr-section">
+<div class="ccr-wrap">
+<span class="ccr-lbl">Repair vs Replace</span>
+<h2>Fix It Before You Replace It &mdash; The Medford Carpet Repair Case</h2>
+<div style="max-width:800px;margin:0 auto">
+<span class="ccr-q">Is carpet repair ever as good as replacement?</span>
+<p class="ccr-p">Most Medford homeowners who notice a burn hole, a badly damaged seam, or a large pet-damaged area assume the only answer is full carpet replacement &mdash; and call us for a cleaning quote on carpet they've already decided to throw away. But carpet repair can address the majority of common damage types for a fraction of replacement cost, and a well-executed patch or seam repair is genuinely undetectable in normal use.</p>
+<p class="ccr-p">Carpet repair makes the most sense when the carpet is otherwise in good condition (structurally sound, with decent pile height and fiber integrity), the damage is isolated rather than spread throughout the home, and donor carpet material is available from a closet, under a bed, or from a remnant piece. In these situations, repair typically costs significantly less than replacement. See our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">pricing guide</a> for current Medford repair rate ranges.</p>
+<p class="ccr-p">We'll tell you honestly when repair isn't the right answer: if the carpet is at the end of its useful life, if the damage is so extensive that repairs would be more visible than new carpet, or if subfloor condition requires full removal and access. A pre-repair assessment is always free.</p>
+</div>
+</div>
+</section>
+
+<section class="ccr-section" style="background:var(--cfm-white)">
+<div class="ccr-wrap">
+<span class="ccr-lbl">Repair Types</span>
+<h2>Carpet Repairs We Perform in Medford and Jackson County</h2>
+<div class="ccr-grid ccr-grid-6">
+<div class="ccr-card"><span class="ccr-icon">&#129691;</span><h3>Patch Repair (Damage Replacement)</h3><p class="ccr-p">The most common repair request in Medford. A damaged section &mdash; pet damage, burn, an un-cleanable stain, a heavy wear spot &mdash; is cut out and replaced with a matching piece from the same carpet, seamed with heat-bond tape and power-stretched flat. In nylon and polyester carpet, a good patch is essentially invisible at standing height.</p></div>
+<div class="ccr-card"><span class="ccr-icon">&#129525;</span><h3>Seam Repair</h3><p class="ccr-p">Carpet seams separate over time &mdash; from heavy furniture dragging, improper original installation, moisture events, or age. We reattach loose or separated seams with hot-melt tape and a seam iron, re-stretching and re-tacking as needed. In older Medford homes (1970s&ndash;1990s), seam separation is one of the most common repair requests.</p></div>
+<div class="ccr-card"><span class="ccr-icon">&#128062;</span><h3>Pet Damage Repair</h3><p class="ccr-p">Jackson County's above-average pet ownership makes pet damage our most frequent repair scenario &mdash; clawing at doorways, chewing at edges and corners, localized destruction. Most pet damage is patchable if donor carpet is available. Pet odor contamination alongside physical damage is addressed before patching.</p></div>
+<div class="ccr-card"><span class="ccr-icon">&#128293;</span><h3>Burn Hole Repair</h3><p class="ccr-p">Cigarette burns, candle wax drops, fireplace ember sparks, and iron accidents create small, visible burn holes. For single or multiple small burns, patch repair with closet remnant donor material is the standard fix. Larger scorch areas &mdash; common in Medford's wood-stove culture &mdash; use a larger patch or seam-based repair.</p></div>
+<div class="ccr-card"><span class="ccr-icon">&#128260;</span><h3>Carpet Re-Stretching (Ripples and Buckling)</h3><p class="ccr-p">Carpet that has loosened from the tack strips and formed waves is unsightly and a trip hazard. Re-stretching with a power stretcher removes waves and re-tacks the carpet. This is distinct from our dedicated <a href="https://carpetcleaningmedfordoregon.com/carpet-stretching-medford-oregon/">carpet stretching service</a> for whole-room buckling.</p></div>
+<div class="ccr-card"><span class="ccr-icon">&#128204;</span><h3>Edge Re-Tacking and Transition Repair</h3><p class="ccr-p">Carpet edges that have pulled away from tack strips at doorways, stairs, and room perimeters are unsightly and a safety hazard. We re-tack the edge and replace damaged tack strip sections. Lifted or separated hard-floor transitions are also re-secured or replaced.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ccr-section">
+<div class="ccr-wrap">
+<span class="ccr-lbl">Our Process</span>
+<h2>How Carpet Repair Works at Carpet Friend Medford</h2>
+<div class="ccr-grid ccr-grid-4">
+<div class="ccr-card"><span class="ccr-step-bubble">1</span><h3>Free Assessment</h3><p class="ccr-p">We assess the damage, evaluate whether donor carpet is viable, and give an honest recommendation before any work begins. No work starts without your approval of approach and cost.</p></div>
+<div class="ccr-card"><span class="ccr-step-bubble">2</span><h3>Donor Material Sourcing</h3><p class="ccr-p">The best patches use carpet from the same installation &mdash; ideally a closet corner or furniture-covered area. If none is available, we assess a remnant piece and discuss match quality honestly.</p></div>
+<div class="ccr-card"><span class="ccr-step-bubble">3</span><h3>Repair Execution</h3><p class="ccr-p">Precise cutting with matching pile direction, heat-bond seaming, power stretching to eliminate edge ridging, and final grooming. Edge and transition work uses existing or new tack strip sections.</p></div>
+<div class="ccr-card"><span class="ccr-step-bubble">4</span><h3>Final Inspection</h3><p class="ccr-p">We walk you through the repair at standing height, edge level, and in raking light &mdash; which reveals seam lines most clearly. If there's an issue, we address it before leaving.</p></div>
+</div>
+</div>
+</section>
+
+<div class="ccr-stats">
+<div class="ccr-stats-grid">
+<div><div class="ccr-stat-num">6</div><div class="ccr-stat-lbl">Repair types we perform</div></div>
+<div><div class="ccr-stat-num">Since 2020</div><div class="ccr-stat-lbl">Carpet repair in Jackson County</div></div>
+<div><div class="ccr-stat-num">Patch Repair</div><div class="ccr-stat-lbl">Most common request</div></div>
+<div><div class="ccr-stat-num">Free</div><div class="ccr-stat-lbl">Honest assessment, no surprises</div></div>
+</div>
+</div>
+
+<section class="ccr-section">
+<div class="ccr-wrap">
+<span class="ccr-lbl">Local Context</span>
+<h2>Carpet Damage Patterns We See Across Medford and Jackson County</h2>
+<span class="ccr-q" style="text-align:center;display:block">Does Medford's specific environment create particular carpet damage patterns?</span>
+<div class="ccr-grid ccr-grid-2" style="margin-top:20px">
+<div class="ccr-card" style="background:var(--cfm-pale);border-color:transparent"><span class="ccr-icon">&#128293;</span><h3>Wood Stove Ember Damage</h3><p class="ccr-p">Medford and Jackson County have above-average wood stove and fireplace use. Ember and spark landing on hearthside carpet creates small, highly visible burn damage. Patch repair from closet remnant is the standard fix &mdash; common across all four Medford zip codes and in rural Gold Hill, Rogue River, and Jacksonville properties.</p></div>
+<div class="ccr-card" style="background:var(--cfm-pale);border-color:transparent"><span class="ccr-icon">&#128062;</span><h3>Trail Dog Entry Damage &mdash; East and South Medford</h3><p class="ccr-p">Table Rocks and Bear Creek Greenway trail access combined with high-energy dog breeds creates concentrated claw damage at exterior door thresholds. Threshold patch repair is among our most common jobs in East Medford (97504) and South Medford (97501) households.</p></div>
+<div class="ccr-card" style="background:var(--cfm-pale);border-color:transparent"><span class="ccr-icon">&#127970;</span><h3>Move-Out Damage in the Rental Market</h3><p class="ccr-p">The active rental market across White City (97503), West Medford (97502), and the Phoenix/Talent corridor generates repair demand at turnover. Targeted repair beats full replacement for cost and re-letting speed. We provide dated receipts for damage documentation &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-rental-properties-medford-landlords/">rental properties guide</a>.</p></div>
+<div class="ccr-card" style="background:var(--cfm-pale);border-color:transparent"><span class="ccr-icon">&#127974;</span><h3>Pre-Listing Repair in Medford Real Estate</h3><p class="ccr-p">Sellers often discover carpet damage during pre-listing prep. A pet damage patch, a burn spot, a separated hallway seam &mdash; all repairable for far less than the replacement concession a buyer would demand. We work within real estate timelines &mdash; see our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-before-selling-home-medford/">pre-sale carpet guide</a>.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ccr-section" style="background:var(--cfm-white)">
+<div class="ccr-wrap" style="max-width:800px">
+<span class="ccr-lbl">What We Can and Can't Repair</span>
+<h2>Carpet Repair Honest Assessment</h2>
+<span class="ccr-q">Is there carpet damage that's beyond repair?</span>
+<p class="ccr-p">We don't oversell what repair can achieve. Here's the honest line.</p>
+<div class="ccr-callout ccr-callout-safe">
+<h4>Can be repaired successfully</h4>
+<ul>
+<li>&#9989; Isolated burn holes (small to medium)</li>
+<li>&#9989; Pet damage at specific locations with donor material available</li>
+<li>&#9989; Seam separation and edge re-tacking</li>
+<li>&#9989; Carpet that has pulled away from tack strips</li>
+<li>&#9989; Small to medium damaged zones where surrounding carpet is in good condition</li>
+<li>&#9989; Pattern carpet &mdash; if the match is viable (we'll show you before committing)</li>
+</ul>
+</div>
+<div class="ccr-callout ccr-callout-danger">
+<h4>Typically better to replace</h4>
+<ul>
+<li>&#10060; Widespread damage across the full carpet area &mdash; multiple patches would be more visible and expensive than new carpet</li>
+<li>&#10060; No viable donor material exists and the pattern can't be matched</li>
+<li>&#10060; Carpet at end of useful life, where the patch would significantly outlast the surrounding material</li>
+<li>&#10060; Subfloor damage requiring structural access &mdash; a different scope from surface repair</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="ccr-section">
+<div class="ccr-wrap">
+<div class="ccr-midcta">
+<h3>Carpet Damaged? Get an Honest Assessment First.</h3>
+<p>We assess every repair job before any work starts &mdash; and we'll tell you if replacement makes more sense. No pressure, no surprise charges.</p>
+<div class="ccr-cta-row">
+<a class="ccr-btn ccr-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="ccr-btn ccr-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; Pricing Guide</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ccr-section" style="background:var(--cfm-white)">
+<div class="ccr-wrap" style="max-width:800px">
+<h2>Carpet Repair FAQ &mdash; Medford, Oregon</h2>
+<div class="ccr-faq">
+<div class="ccr-faq-item"><button class="ccr-faq-q"><span>Can you repair pet-damaged carpet in Medford?</span><span class="ccr-faq-icon">+</span></button><div class="ccr-faq-a"><p class="ccr-p">Yes &mdash; pet damage is our most common repair type. We patch claw and chew damage using donor carpet from a closet corner or remnant piece. For entry door threshold damage, we extend the carpet back to the tack strip with matching material. If pet odor is also present, we address that before patching.</p></div></div>
+<div class="ccr-faq-item"><button class="ccr-faq-q"><span>Do you need donor carpet for a patch repair?</span><span class="ccr-faq-icon">+</span></button><div class="ccr-faq-a"><p class="ccr-p">For an invisible or nearly invisible patch: yes, donor material from the same carpet installation is ideal. If none is available, we assess whether a closely matched remnant can produce an acceptable result and discuss match quality honestly before committing.</p></div></div>
+<div class="ccr-faq-item"><button class="ccr-faq-q"><span>How much does carpet repair cost in Medford?</span><span class="ccr-faq-icon">+</span></button><div class="ccr-faq-a"><p class="ccr-p">Repair cost varies by damage type, size, and complexity, but patch repairs are typically significantly less expensive than carpet replacement. We provide an upfront cost estimate during our free assessment &mdash; no work begins without approval. See our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">pricing guide</a> for general context.</p></div></div>
+<div class="ccr-faq-item"><button class="ccr-faq-q"><span>Can you repair patterned carpet with a patch?</span><span class="ccr-faq-icon">+</span></button><div class="ccr-faq-a"><p class="ccr-p">Yes &mdash; with more care. Pattern carpet requires matching the pattern repeat in the donor piece before cutting. We assess the pattern match during evaluation and are honest about visibility. Most pattern-carpet patches are nearly invisible at standing height when done correctly.</p></div></div>
+<div class="ccr-faq-item"><button class="ccr-faq-q"><span>Should I repair or replace carpet before selling my Medford home?</span><span class="ccr-faq-icon">+</span></button><div class="ccr-faq-a"><p class="ccr-p">For isolated damage on otherwise sound carpet, repair is almost always the better pre-listing choice &mdash; it costs less than replacement and prevents buyers from using visible damage as a price concession lever. We work within real estate timelines.</p></div></div>
+<div class="ccr-faq-item"><button class="ccr-faq-q"><span>Do you repair carpet in Jackson County outside Medford?</span><span class="ccr-faq-icon">+</span></button><div class="ccr-faq-a"><p class="ccr-p">Yes &mdash; Ashland, Central Point, Jacksonville, Eagle Point, White City, Phoenix, Talent, Gold Hill, and Rogue River. Same assessment and repair process throughout Jackson County. (458) 302-0101</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="ccr-section">
+<div class="ccr-wrap">
+<h2>Related Services</h2>
+<div class="ccr-related">
+<a href="https://carpetcleaningmedfordoregon.com/carpet-stretching-medford-oregon/"><h4>&#128260; Carpet Stretching</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/water-damage-carpet-restoration-medford-oregon/"><h4>&#128167; Water Damage Restoration</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/"><h4>&#127968; Residential Carpet Cleaning</h4></a>
+</div>
+</div>
+</section>
+
+<section class="ccr-section">
+<div class="ccr-wrap">
+<div class="ccr-bottom-cta">
+<h2>Carpet Damage in Medford? Let's Fix It Before You Replace It.</h2>
+<p>Free honest assessment. Upfront pricing. IICRC certified. Medford, Ashland, Central Point, Jacksonville, and all of Jackson County.</p>
+<div class="ccr-cta-row">
+<a class="ccr-btn ccr-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="ccr-btn ccr-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; See Pricing</a>
+</div>
+<p class="ccr-svc-area">Serving Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504 and all of Jackson County</p>
+</div>
+</div>
+</section>
+
+</div>
+<script>
+(function(){'use strict';
+var root=document.querySelector('.cfm-svc-repair');
+if(!root)return;
+root.querySelectorAll('.ccr-faq-item').forEach(function(item){
+var q=item.querySelector('.ccr-faq-q');
+q.addEventListener('click',function(){
+var open=item.classList.contains('open');
+root.querySelectorAll('.ccr-faq-item.open').forEach(function(o){if(o!==item){o.classList.remove('open');o.querySelector('.ccr-faq-icon').textContent='+'}});
+item.classList.toggle('open',!open);
+q.querySelector('.ccr-faq-icon').textContent=!open?'×':'+';
+});
+});
+root.querySelectorAll('a[href^="#"]').forEach(function(a){
+a.addEventListener('click',function(e){
+var t=document.querySelector(a.getAttribute('href'));
+if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+});
+});
+})();
+</script>
+<!-- /wp:html -->

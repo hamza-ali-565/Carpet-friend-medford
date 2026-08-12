@@ -1,0 +1,320 @@
+<!-- wp:html -->
+<style id="cfm-cs-css">
+.cfm-svc-stretch{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F9FA}
+.cfm-svc-stretch *,.cfm-svc-stretch *::before,.cfm-svc-stretch *::after{box-sizing:border-box}
+.cfm-svc-stretch p,.cfm-svc-stretch li,.cfm-svc-stretch h1,.cfm-svc-stretch h2,.cfm-svc-stretch h3,.cfm-svc-stretch h4{word-wrap:break-word;overflow-wrap:break-word;margin:0}
+.cfm-svc-stretch{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-safe:#065F46;--cfm-safep:#D1FAE5;--cfm-danger:#991B1B;--cfm-dangerp:#FEE2E2}
+
+.cfm-svc-stretch .ccs-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.cfm-svc-stretch .ccs-section{padding:40px 0}
+.cfm-svc-stretch .ccs-lbl{display:block;color:var(--cfm-light);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.cfm-svc-stretch h2{color:var(--cfm-dark);font-size:1.5rem;font-weight:600;line-height:1.3;text-align:center;max-width:780px;margin:0 auto 32px}
+.cfm-svc-stretch h3{color:var(--cfm-h);font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:8px}
+.cfm-svc-stretch h4{color:var(--cfm-h);font-size:1rem;font-weight:600;line-height:1.45}
+.cfm-svc-stretch .ccs-p{color:var(--cfm-body);font-size:1rem;line-height:1.8;margin-bottom:16px}
+.cfm-svc-stretch .ccs-p:last-child{margin-bottom:0}
+.cfm-svc-stretch .ccs-q{display:block;color:var(--cfm-dark);font-weight:700;margin:22px 0 10px;font-size:1.05rem}
+
+/* HERO */
+.cfm-svc-stretch .ccs-hero{background:var(--cfm-dark);color:#fff;padding:64px 20px;text-align:center}
+.cfm-svc-stretch .ccs-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:22px;font-size:.78rem;font-weight:600;margin-bottom:18px}
+.cfm-svc-stretch .ccs-hero h1{color:#fff;font-size:1.7rem;font-weight:700;line-height:1.2;max-width:820px;margin:0 auto}
+.cfm-svc-stretch .ccs-hero .ccs-sub{color:rgba(255,255,255,.82);font-size:1.02rem;font-weight:400;line-height:1.6;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto}
+.cfm-svc-stretch .ccs-pills{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 20px}
+.cfm-svc-stretch .ccs-pills li{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+.cfm-svc-stretch .ccs-cta-row{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+
+/* BUTTONS */
+.cfm-svc-stretch .ccs-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
+.cfm-svc-stretch .ccs-btn-primary{background:var(--cfm-dark);color:#fff;box-shadow:0 4px 16px rgba(27,67,50,.3)}
+.cfm-svc-stretch .ccs-btn-primary:hover{background:var(--cfm-mid);transform:translateY(-2px)}
+.cfm-svc-stretch .ccs-btn-secondary{background:transparent;color:var(--cfm-dark);border:2px solid var(--cfm-dark);padding:12px 26px}
+.cfm-svc-stretch .ccs-btn-secondary:hover{background:var(--cfm-pale)}
+.cfm-svc-stretch .ccs-hero .ccs-btn-secondary{color:#fff;border-color:rgba(255,255,255,.6)}
+.cfm-svc-stretch .ccs-hero .ccs-btn-secondary:hover{background:rgba(255,255,255,.12)}
+
+/* AEO BOX */
+.cfm-svc-stretch .ccs-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:var(--cfm-h);max-width:1200px;margin:32px auto 0}
+
+/* CALLOUTS */
+.cfm-svc-stretch .ccs-callout{border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+.cfm-svc-stretch .ccs-callout-safe{background:var(--cfm-safep);border-left:4px solid var(--cfm-safe)}
+.cfm-svc-stretch .ccs-callout-danger{background:var(--cfm-dangerp);border-left:4px solid var(--cfm-danger)}
+.cfm-svc-stretch .ccs-callout h4{margin-bottom:10px}
+.cfm-svc-stretch .ccs-callout-safe h4{color:var(--cfm-safe)}
+.cfm-svc-stretch .ccs-callout-danger h4{color:var(--cfm-danger)}
+.cfm-svc-stretch .ccs-callout ul{margin:0;padding-left:0;list-style:none}
+.cfm-svc-stretch .ccs-callout li{line-height:1.8}
+.cfm-svc-stretch .ccs-callout-safe li{color:var(--cfm-safe)}
+.cfm-svc-stretch .ccs-callout-danger li{color:var(--cfm-danger)}
+
+/* CARDS GRID */
+.cfm-svc-stretch .ccs-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px}
+.cfm-svc-stretch .ccs-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;transition:all .25s}
+.cfm-svc-stretch .ccs-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.cfm-svc-stretch .ccs-step-bubble{background:var(--cfm-pale);color:var(--cfm-dark);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;margin-bottom:14px}
+.cfm-svc-stretch .ccs-icon{font-size:1.75rem;display:block;margin-bottom:12px}
+
+/* STAT STRIP */
+.cfm-svc-stretch .ccs-stats{background:var(--cfm-dark);padding:48px 20px;text-align:center}
+.cfm-svc-stretch .ccs-stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
+.cfm-svc-stretch .ccs-stat-num{font-size:1.7rem;font-weight:700;color:#fff;line-height:1.2}
+.cfm-svc-stretch .ccs-stat-lbl{font-size:.875rem;color:rgba(255,255,255,.72);margin-top:4px}
+
+/* TABLE */
+.cfm-svc-stretch .ccs-table-wrap{border-radius:10px;border:1.5px solid var(--cfm-border);overflow-x:auto;margin:20px 0}
+.cfm-svc-stretch table{width:100%;border-collapse:collapse;min-width:520px}
+.cfm-svc-stretch thead{background:var(--cfm-dark);color:#fff}
+.cfm-svc-stretch th{padding:14px 18px;font-size:.9rem;font-weight:600;text-align:left}
+.cfm-svc-stretch td{padding:13px 18px;border:1px solid var(--cfm-border);color:var(--cfm-body);font-size:.95rem}
+.cfm-svc-stretch tbody tr:nth-child(even){background:var(--cfm-bg)}
+.cfm-svc-stretch tbody tr:nth-child(odd){background:var(--cfm-white)}
+.cfm-svc-stretch td:first-child{font-weight:600;color:var(--cfm-h)}
+
+/* MID CTA */
+.cfm-svc-stretch .ccs-midcta{background:var(--cfm-pale);border:1.5px solid var(--cfm-border);border-radius:14px;padding:32px 24px;text-align:center}
+.cfm-svc-stretch .ccs-midcta h3{color:var(--cfm-dark);margin-bottom:8px;text-align:center}
+.cfm-svc-stretch .ccs-midcta p{color:var(--cfm-body);margin-bottom:20px}
+.cfm-svc-stretch .ccs-midcta .ccs-cta-row{margin-top:0}
+
+/* FAQ */
+.cfm-svc-stretch .ccs-faq-item{border-bottom:1px solid var(--cfm-border)}
+.cfm-svc-stretch .ccs-faq-q{width:100%;text-align:left;padding:20px 0;font-size:1rem;font-weight:600;color:var(--cfm-h);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cfm-svc-stretch .ccs-faq-q .ccs-faq-icon{color:var(--cfm-light);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
+.cfm-svc-stretch .ccs-faq-item.open .ccs-faq-icon{transform:rotate(135deg)}
+.cfm-svc-stretch .ccs-faq-a{padding:0 0 20px;color:var(--cfm-body);line-height:1.8;display:none}
+.cfm-svc-stretch .ccs-faq-item.open .ccs-faq-a{display:block;animation:cfmCsFade .2s ease}
+@keyframes cfmCsFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* RELATED */
+.cfm-svc-stretch .ccs-related{display:grid;grid-template-columns:1fr;gap:20px}
+.cfm-svc-stretch .ccs-related a{display:block;border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;text-decoration:none;transition:all .2s}
+.cfm-svc-stretch .ccs-related a:hover{border-color:var(--cfm-light);transform:translateY(-3px)}
+.cfm-svc-stretch .ccs-related h4{color:var(--cfm-dark)}
+
+/* BOTTOM CTA */
+.cfm-svc-stretch .ccs-bottom-cta{background:var(--cfm-dark);padding:56px 24px;text-align:center;border-radius:16px}
+.cfm-svc-stretch .ccs-bottom-cta h2{color:#fff}
+.cfm-svc-stretch .ccs-bottom-cta p{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;max-width:640px;margin:0 auto}
+.cfm-svc-stretch .ccs-bottom-cta .ccs-cta-row{margin-top:24px}
+.cfm-svc-stretch .ccs-bottom-cta .ccs-svc-area{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:20px}
+
+.cfm-svc-stretch a{color:var(--cfm-mid)}
+.cfm-svc-stretch a:hover{color:var(--cfm-dark)}
+
+@media(min-width:768px){
+.cfm-svc-stretch .ccs-section{padding:56px 0}
+.cfm-svc-stretch h2{font-size:1.65rem}
+.cfm-svc-stretch .ccs-hero{padding:72px 24px}
+.cfm-svc-stretch .ccs-hero h1{font-size:2rem}
+.cfm-svc-stretch .ccs-grid-2{grid-template-columns:1fr 1fr}
+.cfm-svc-stretch .ccs-grid-3{grid-template-columns:repeat(3,1fr)}
+.cfm-svc-stretch .ccs-stats-grid{grid-template-columns:repeat(4,1fr)}
+.cfm-svc-stretch .ccs-related{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1024px){
+.cfm-svc-stretch .ccs-section{padding:80px 0}
+.cfm-svc-stretch .ccs-hero{padding:88px 24px}
+.cfm-svc-stretch .ccs-hero h1{font-size:2.3rem}
+.cfm-svc-stretch h2{font-size:1.75rem}
+.cfm-svc-stretch .ccs-grid-5{grid-template-columns:repeat(5,1fr)}
+}
+</style>
+
+<div class="cfm-svc-stretch">
+
+<section class="ccs-hero">
+<div class="ccs-wrap">
+<span class="ccs-badge">Medford &middot; Power Stretching Specialist</span>
+<h1>Carpet Stretching in Medford, Oregon &mdash; Fix Ripples and Buckles</h1>
+<p class="ccs-sub">Loose, rippling, or buckling carpet is both unsightly and a trip hazard. Power stretching restores a flat, tight surface &mdash; without replacing the carpet.</p>
+<ul class="ccs-pills">
+<li>&#9989; Power Stretcher (not knee kicker)</li>
+<li>&#9989; Same-Week Scheduling</li>
+<li>&#9989; Eliminates Trip Hazards</li>
+<li>&#9989; Upfront Pricing</li>
+<li>&#9989; Jackson County Local</li>
+</ul>
+<div class="ccs-cta-row">
+<a class="ccs-btn ccs-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="ccs-btn ccs-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; Pricing Guide</a>
+</div>
+</div>
+</section>
+
+<div class="ccs-wrap">
+<p class="ccs-aeo">Yes &mdash; we re-stretch rippled, loose, or buckled carpet throughout Medford and Jackson County using a power stretcher. Power stretching permanently removes waves and ripples, re-tacks the carpet to tack strips, trims any excess, and eliminates the trip hazard. A full room re-stretch typically takes 1&ndash;2 hours. In most cases, re-stretching costs significantly less than carpet replacement.</p>
+</div>
+
+<section class="ccs-section">
+<div class="ccs-wrap">
+<span class="ccs-lbl">Why It Happens</span>
+<h2>Why Carpet Ripples and Buckles &mdash; What's Actually Going On</h2>
+<div style="max-width:800px;margin:0 auto">
+<span class="ccs-q">Why does carpet develop waves and ripples over time?</span>
+<p class="ccs-p">Carpet rippling and buckling happens when the carpet is no longer being held taut across its full span. It was either installed with insufficient tension, the tack strips have released the carpet edge over time, or the carpet material itself has stretched (particularly common in polypropylene/olefin carpet, which has lower dimensional stability than nylon). Rippling is most visible in large rooms with long spans between walls and in rooms with south-facing sun exposure, where thermal expansion cycles gradually work slack into the carpet over years.</p>
+<p class="ccs-p">The single most common cause of carpet rippling in Medford homes is improper original installation using a knee kicker rather than a power stretcher. Knee kickers create tension sufficient for installation but not sufficient for long-term tautness &mdash; the carpet gradually relaxes over months to years and forms waves. This is why new carpet can appear flat for 1&ndash;3 years and then begin rippling: the initial installation tension dissipates and the carpet finds its relaxed shape.</p>
+<span class="ccs-q">Does humidity cause carpet to ripple?</span>
+<p class="ccs-p">Yes &mdash; particularly in Medford's wet season (October&ndash;March). Carpet backing and padding absorb atmospheric moisture during the Rogue Valley's rainy months and expand slightly. In rooms with limited ventilation, this expansion has nowhere to go and forms waves. Carpet that ripples seasonally (worse in winter, flatter in summer) has a moisture component to its buckling. Power stretching addresses the current state; improving the room's ventilation and subfloor moisture management reduces recurrence.</p>
+</div>
+</div>
+</section>
+
+<section class="ccs-section" style="background:var(--cfm-white)">
+<div class="ccs-wrap" style="max-width:900px">
+<span class="ccs-lbl">The Right Tool</span>
+<h2>Power Stretcher vs Knee Kicker &mdash; Why It Matters</h2>
+<span class="ccs-q">What's the difference between power stretching and knee kicking?</span>
+<div class="ccs-table-wrap">
+<table>
+<thead><tr><th></th><th>Knee Kicker</th><th>Power Stretcher</th></tr></thead>
+<tbody>
+<tr><td>Tension applied</td><td>Low (human force)</td><td>High (mechanical leverage)</td></tr>
+<tr><td>Best for</td><td>Small areas, positioning</td><td>Full-room and whole-home stretching</td></tr>
+<tr><td>Long-term result</td><td>Often relaxes within years</td><td>Permanent taut result</td></tr>
+<tr><td>Used by</td><td>Budget operators, DIY</td><td>Professional carpet technicians</td></tr>
+<tr><td>Ripple recurrence</td><td>High</td><td>Low</td></tr>
+<tr><td>IICRC recommendation</td><td>Installation aid only</td><td>Required for re-stretching</td></tr>
+</tbody>
+</table>
+</div>
+<p class="ccs-p">IICRC standards specify that carpet re-stretching should be performed with a power stretcher &mdash; not a knee kicker. A power stretcher uses a rigid pole that spans the room and a mechanical head that applies consistent, high tension across the full width of the carpet, driving it back onto the tack strips with the tension needed to hold for years rather than months. We only use power stretchers for re-stretching work. If a company quotes you carpet re-stretching without mentioning a power stretcher, ask specifically what equipment they use.</p>
+</div>
+</section>
+
+<section class="ccs-section">
+<div class="ccs-wrap">
+<span class="ccs-lbl">Our Process</span>
+<h2>How We Re-Stretch Carpet in Medford Homes</h2>
+<div class="ccs-grid ccs-grid-5">
+<div class="ccs-card"><span class="ccs-step-bubble">1</span><h3>Assessment &amp; Clearing</h3><p class="ccs-p">We assess the extent of rippling, the direction of installation, and any tack strip damage. Furniture is moved before stretching &mdash; we handle standard household furniture and advise on heavy pieces in advance.</p></div>
+<div class="ccs-card"><span class="ccs-step-bubble">2</span><h3>Tack Strip Inspection</h3><p class="ccs-p">We inspect perimeter tack strips before stretching. Damaged or missing strips can't hold re-stretched carpet &mdash; we replace damaged sections, common in 1970s&ndash;1980s Medford homes.</p></div>
+<div class="ccs-card"><span class="ccs-step-bubble">3</span><h3>Edge Release</h3><p class="ccs-p">The carpet edge opposite the primary stretch direction is carefully released from the tack strip and gently folded back to expose the pad and perimeter.</p></div>
+<div class="ccs-card"><span class="ccs-step-bubble">4</span><h3>Power Stretching</h3><p class="ccs-p">The power stretcher spans from a fixed wall, applying mechanical tension that drives the carpet back onto the tack strip pins. We work systematically for even tension throughout the room.</p></div>
+<div class="ccs-card"><span class="ccs-step-bubble">5</span><h3>Trim &amp; Re-Tack</h3><p class="ccs-p">Excess carpet at the stretched edge is trimmed flush with the wall base. Transitions and thresholds are re-secured. The room is inspected &mdash; flat carpet with no visible ripples.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ccs-section" style="background:var(--cfm-white)">
+<div class="ccs-wrap" style="max-width:800px">
+<span class="ccs-lbl">Stretch or Replace?</span>
+<h2>When Re-Stretching Makes Sense &mdash; and When It Doesn't</h2>
+<span class="ccs-q">Is carpet re-stretching worth it or should I just replace?</span>
+<div class="ccs-callout ccs-callout-safe">
+<h4>Re-stretching is worth it when</h4>
+<ul>
+<li>&#9989; The carpet itself is in good condition &mdash; decent pile height, no major staining, no fiber damage</li>
+<li>&#9989; The rippling is the primary or only issue &mdash; the carpet would look good if flat</li>
+<li>&#9989; The carpet has enough remaining useful life to justify the investment</li>
+<li>&#9989; The room isn't scheduled for renovation or flooring replacement soon</li>
+</ul>
+</div>
+<div class="ccs-callout ccs-callout-danger">
+<h4>Consider replacement when</h4>
+<ul>
+<li>&#10060; The carpet is at end of useful life &mdash; stretching a worn carpet just extends a worn carpet</li>
+<li>&#10060; The carpet has been stretched before and re-rippled (common with olefin/polypropylene)</li>
+<li>&#10060; The pad is also failing &mdash; a degraded pad may need replacement for the re-stretch to hold</li>
+</ul>
+</div>
+</div>
+</section>
+
+<div class="ccs-stats">
+<div class="ccs-stats-grid">
+<div><div class="ccs-stat-num">1&ndash;2 Hrs</div><div class="ccs-stat-lbl">Typical full-room re-stretch</div></div>
+<div><div class="ccs-stat-num">Power Only</div><div class="ccs-stat-lbl">No knee kickers used</div></div>
+<div><div class="ccs-stat-num">Permanent</div><div class="ccs-stat-lbl">Result when stretched correctly</div></div>
+<div><div class="ccs-stat-num">Same-Week</div><div class="ccs-stat-lbl">Scheduling available</div></div>
+</div>
+</div>
+
+<section class="ccs-section">
+<div class="ccs-wrap">
+<span class="ccs-lbl">Local Context</span>
+<h2>Carpet Rippling in Medford Homes &mdash; What We See Here</h2>
+<span class="ccs-q" style="text-align:center;display:block">Are there Medford-specific reasons carpet ripples here?</span>
+<div class="ccs-grid ccs-grid-3" style="margin-top:20px">
+<div class="ccs-card" style="background:var(--cfm-pale);border-color:transparent"><span class="ccs-icon">&#127783;&#65039;</span><h3>Rogue Valley Wet Season Humidity</h3><p class="ccs-p">Medford's October&ndash;March rainy season raises indoor humidity in homes without active ventilation. Carpet backing expands slightly with seasonal cycles &mdash; more pronounced on concrete slabs common in mid-century Medford construction. We sometimes see rippling that appears in October and reduces by June, a classic seasonal moisture pattern.</p></div>
+<div class="ccs-card" style="background:var(--cfm-pale);border-color:transparent"><span class="ccs-icon">&#9728;&#65039;</span><h3>South-Facing Room Thermal Cycling</h3><p class="ccs-p">Medford's 300+ sunny days a year and summer temperatures reaching 95&ndash;110&deg;F create significant thermal cycling. Polypropylene carpet &mdash; common in 1980s&ndash;1990s Medford construction &mdash; expands and contracts, introducing slack over years. South-facing rooms in East and North Medford are our most common thermal-rippling calls.</p></div>
+<div class="ccs-card" style="background:var(--cfm-pale);border-color:transparent"><span class="ccs-icon">&#127961;</span><h3>Original Knee-Kick Installation</h3><p class="ccs-p">A significant portion of Medford's housing stock is 30&ndash;40+ years old, where original installation used knee kickers before power stretching became industry standard. These carpets were always prone to rippling and are now at the age where the original tension has fully dissipated.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ccs-section" style="background:var(--cfm-white)">
+<div class="ccs-wrap">
+<div class="ccs-midcta">
+<h3>Ripples or Buckles? We Fix It Permanently.</h3>
+<p>Power stretcher, not a knee kicker. Permanent results, not a temporary fix. Medford and all of Jackson County. Same-week scheduling available.</p>
+<div class="ccs-cta-row">
+<a class="ccs-btn ccs-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="ccs-btn ccs-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; See Pricing</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ccs-section">
+<div class="ccs-wrap" style="max-width:800px">
+<h2>Carpet Stretching FAQ &mdash; Medford, Oregon</h2>
+<div class="ccs-faq">
+<div class="ccs-faq-item"><button class="ccs-faq-q"><span>Why is my carpet rippling and how do you fix it?</span><span class="ccs-faq-icon">+</span></button><div class="ccs-faq-a"><p class="ccs-p">Carpet ripples because it's no longer held taut between the tack strips at its perimeter &mdash; from inadequate original installation tension, degraded tack strip grip, or material relaxation, particularly common in polypropylene carpet and Medford's seasonally humid conditions. We fix it with a power stretcher that applies mechanical tension across the full room span, driving the carpet back onto the tack strips and trimming excess.</p></div></div>
+<div class="ccs-faq-item"><button class="ccs-faq-q"><span>How long does carpet re-stretching take?</span><span class="ccs-faq-icon">+</span></button><div class="ccs-faq-a"><p class="ccs-p">A standard bedroom (12x12) takes approximately 45&ndash;60 minutes. A living room or larger open area takes 90&ndash;120 minutes. Whole-home re-stretching across multiple rooms is quoted by total square footage. Furniture needs to be moved before we start.</p></div></div>
+<div class="ccs-faq-item"><button class="ccs-faq-q"><span>Will carpet re-stretching last?</span><span class="ccs-faq-icon">+</span></button><div class="ccs-faq-a"><p class="ccs-p">Power stretching produces results that hold significantly longer than knee-kicker stretching &mdash; typically for the remaining life of the carpet. Exceptions: polypropylene carpet stretched multiple times, rooms with significant seasonal humidity, and carpets on moisture-affected concrete slabs. We'll assess these factors during evaluation.</p></div></div>
+<div class="ccs-faq-item"><button class="ccs-faq-q"><span>Can all types of carpet be re-stretched?</span><span class="ccs-faq-icon">+</span></button><div class="ccs-faq-a"><p class="ccs-p">Most carpet types can be re-stretched successfully. Polypropylene/olefin carpet has lower dimensional stability and may ripple again faster than nylon or polyester. Berber and loop-pile carpet can be re-stretched but requires care to avoid snag damage. We'll assess your carpet type and pad condition before recommending re-stretching vs replacement.</p></div></div>
+<div class="ccs-faq-item"><button class="ccs-faq-q"><span>Do you need to remove all furniture for carpet stretching?</span><span class="ccs-faq-icon">+</span></button><div class="ccs-faq-a"><p class="ccs-p">The room should be substantially cleared for power stretching &mdash; we need access to the full room perimeter. We move standard household furniture; heavy entertainment centers, pianos, and large storage units should be cleared in advance. We'll discuss logistics at booking.</p></div></div>
+<div class="ccs-faq-item"><button class="ccs-faq-q"><span>Is carpet stretching the same as carpet repair?</span><span class="ccs-faq-icon">+</span></button><div class="ccs-faq-a"><p class="ccs-p">They overlap in some situations &mdash; a seam repair requires re-tensioning; a patch repair may need surrounding areas stretched. Standalone carpet stretching addresses whole-room or large-area buckling as the primary issue, while <a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/">carpet repair</a> addresses localized physical damage with stretching as a component.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="ccs-section" style="background:var(--cfm-white)">
+<div class="ccs-wrap">
+<h2>Related Services</h2>
+<div class="ccs-related">
+<a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/"><h4>&#129525; Carpet Repair</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/water-damage-carpet-restoration-medford-oregon/"><h4>&#128167; Water Damage Restoration</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/"><h4>&#127968; Carpet Cleaning Medford</h4></a>
+</div>
+</div>
+</section>
+
+<section class="ccs-section">
+<div class="ccs-wrap">
+<div class="ccs-bottom-cta">
+<h2>No More Ripples &mdash; Carpet Stretching Medford and Jackson County</h2>
+<p>Power stretcher only. Permanent results. Upfront pricing. IICRC certified. Same-week scheduling available for most Medford locations.</p>
+<div class="ccs-cta-row">
+<a class="ccs-btn ccs-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="ccs-btn ccs-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; See Pricing</a>
+</div>
+<p class="ccs-svc-area">Serving Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504 and all of Jackson County</p>
+</div>
+</div>
+</section>
+
+</div>
+<script>
+(function(){'use strict';
+var root=document.querySelector('.cfm-svc-stretch');
+if(!root)return;
+root.querySelectorAll('.ccs-faq-item').forEach(function(item){
+var q=item.querySelector('.ccs-faq-q');
+q.addEventListener('click',function(){
+var open=item.classList.contains('open');
+root.querySelectorAll('.ccs-faq-item.open').forEach(function(o){if(o!==item){o.classList.remove('open');o.querySelector('.ccs-faq-icon').textContent='+'}});
+item.classList.toggle('open',!open);
+q.querySelector('.ccs-faq-icon').textContent=!open?'×':'+';
+});
+});
+root.querySelectorAll('a[href^="#"]').forEach(function(a){
+a.addEventListener('click',function(e){
+var t=document.querySelector(a.getAttribute('href'));
+if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+});
+});
+})();
+</script>
+<!-- /wp:html -->

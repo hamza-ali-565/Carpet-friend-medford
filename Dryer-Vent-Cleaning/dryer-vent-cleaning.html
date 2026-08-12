@@ -1,0 +1,357 @@
+<!-- wp:html -->
+<style id="cfm-dv-css">
+.cfm-svc-dryer{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F9FA}
+.cfm-svc-dryer *,.cfm-svc-dryer *::before,.cfm-svc-dryer *::after{box-sizing:border-box}
+.cfm-svc-dryer p,.cfm-svc-dryer li,.cfm-svc-dryer h1,.cfm-svc-dryer h2,.cfm-svc-dryer h3,.cfm-svc-dryer h4{word-wrap:break-word;overflow-wrap:break-word;margin:0}
+.cfm-svc-dryer{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-fire:#D85A30;--cfm-firep:#FDECE6;--cfm-info:#1E40AF;--cfm-infop:#DBEAFE;--cfm-safe:#065F46;--cfm-safep:#D1FAE5;--cfm-danger:#991B1B;--cfm-dangerp:#FEE2E2}
+
+.cfm-svc-dryer .cdv-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.cfm-svc-dryer .cdv-section{padding:40px 0}
+.cfm-svc-dryer .cdv-lbl{display:block;color:var(--cfm-light);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.cfm-svc-dryer h2{color:var(--cfm-dark);font-size:1.5rem;font-weight:600;line-height:1.3;text-align:center;max-width:780px;margin:0 auto 32px}
+.cfm-svc-dryer h3{color:var(--cfm-h);font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:8px}
+.cfm-svc-dryer h4{color:var(--cfm-h);font-size:1rem;font-weight:600;line-height:1.45}
+.cfm-svc-dryer .cdv-p{color:var(--cfm-body);font-size:1rem;line-height:1.8;margin-bottom:16px}
+.cfm-svc-dryer .cdv-p:last-child{margin-bottom:0}
+.cfm-svc-dryer .cdv-q{display:block;color:var(--cfm-dark);font-weight:700;margin:22px 0 10px;font-size:1.05rem}
+
+/* HERO */
+.cfm-svc-dryer .cdv-hero{background:var(--cfm-dark);color:#fff;padding:64px 20px;text-align:center}
+.cfm-svc-dryer .cdv-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:22px;font-size:.78rem;font-weight:600;margin-bottom:18px}
+.cfm-svc-dryer .cdv-hero h1{color:#fff;font-size:1.9rem;font-weight:700;line-height:1.2;max-width:820px;margin:0 auto}
+.cfm-svc-dryer .cdv-hero .cdv-sub{color:rgba(255,255,255,.82);font-size:1.02rem;font-weight:400;line-height:1.6;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto}
+.cfm-svc-dryer .cdv-fire-hero{background:rgba(211,85,48,.22);border:1px solid rgba(211,85,48,.45);color:#fff;padding:12px 18px;border-radius:8px;font-size:.95rem;font-weight:600;max-width:680px;margin:18px auto 0}
+.cfm-svc-dryer .cdv-pills{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 20px}
+.cfm-svc-dryer .cdv-pills li{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+.cfm-svc-dryer .cdv-cta-row{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+
+/* BUTTONS */
+.cfm-svc-dryer .cdv-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
+.cfm-svc-dryer .cdv-btn-primary{background:var(--cfm-dark);color:#fff;box-shadow:0 4px 16px rgba(27,67,50,.3)}
+.cfm-svc-dryer .cdv-btn-primary:hover{background:var(--cfm-mid);transform:translateY(-2px)}
+.cfm-svc-dryer .cdv-btn-secondary{background:transparent;color:var(--cfm-dark);border:2px solid var(--cfm-dark);padding:12px 26px}
+.cfm-svc-dryer .cdv-btn-secondary:hover{background:var(--cfm-pale)}
+.cfm-svc-dryer .cdv-hero .cdv-btn-secondary{color:#fff;border-color:rgba(255,255,255,.6)}
+.cfm-svc-dryer .cdv-hero .cdv-btn-secondary:hover{background:rgba(255,255,255,.12)}
+
+/* AEO BOX */
+.cfm-svc-dryer .cdv-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:var(--cfm-h);max-width:1200px;margin:32px auto 0}
+
+/* CALLOUTS */
+.cfm-svc-dryer .cdv-callout{border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+.cfm-svc-dryer .cdv-callout-fire{background:var(--cfm-firep);border-left:4px solid var(--cfm-fire);font-size:.95rem;color:var(--cfm-fire);font-weight:500}
+.cfm-svc-dryer .cdv-callout-safe{background:var(--cfm-safep);border-left:4px solid var(--cfm-safe)}
+.cfm-svc-dryer .cdv-callout-info{background:var(--cfm-infop);border-left:4px solid var(--cfm-info)}
+.cfm-svc-dryer .cdv-callout-danger{background:var(--cfm-dangerp);border-left:4px solid var(--cfm-danger)}
+.cfm-svc-dryer .cdv-callout h4{margin-bottom:10px}
+.cfm-svc-dryer .cdv-callout-safe h4{color:var(--cfm-safe)}
+.cfm-svc-dryer .cdv-callout-danger h4{color:var(--cfm-danger)}
+.cfm-svc-dryer .cdv-callout ul{margin:0;padding-left:0;list-style:none}
+.cfm-svc-dryer .cdv-callout li{color:var(--cfm-body);line-height:1.8;padding-left:0}
+.cfm-svc-dryer .cdv-callout-safe li{color:var(--cfm-safe)}
+.cfm-svc-dryer .cdv-callout-danger li{color:var(--cfm-danger)}
+
+/* CARDS GRID */
+.cfm-svc-dryer .cdv-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px}
+.cfm-svc-dryer .cdv-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;transition:all .25s}
+.cfm-svc-dryer .cdv-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.cfm-svc-dryer .cdv-step-bubble{background:var(--cfm-pale);color:var(--cfm-dark);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;margin-bottom:14px}
+.cfm-svc-dryer .cdv-icon{font-size:1.75rem;display:block;margin-bottom:12px}
+
+/* STAT STRIP */
+.cfm-svc-dryer .cdv-stats{background:var(--cfm-dark);padding:48px 20px;text-align:center}
+.cfm-svc-dryer .cdv-stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
+.cfm-svc-dryer .cdv-stat-num{font-size:1.9rem;font-weight:700;color:#fff;line-height:1.2}
+.cfm-svc-dryer .cdv-stat-lbl{font-size:.875rem;color:rgba(255,255,255,.72);margin-top:4px}
+
+/* COMPARISON TABLE */
+.cfm-svc-dryer .cdv-table-wrap{border-radius:10px;border:1.5px solid var(--cfm-border);overflow-x:auto;margin:20px 0}
+.cfm-svc-dryer table{width:100%;border-collapse:collapse;min-width:520px}
+.cfm-svc-dryer thead{background:var(--cfm-dark);color:#fff}
+.cfm-svc-dryer th{padding:14px 18px;font-size:.9rem;font-weight:600;text-align:left}
+.cfm-svc-dryer td{padding:13px 18px;border:1px solid var(--cfm-border);color:var(--cfm-body);font-size:.95rem}
+.cfm-svc-dryer tbody tr:nth-child(even){background:var(--cfm-bg)}
+.cfm-svc-dryer tbody tr:nth-child(odd){background:var(--cfm-white)}
+.cfm-svc-dryer td:first-child{font-weight:600;color:var(--cfm-h)}
+
+/* MID CTA STRIP */
+.cfm-svc-dryer .cdv-midcta{background:var(--cfm-pale);border:1.5px solid var(--cfm-border);border-radius:14px;padding:32px 24px;text-align:center}
+.cfm-svc-dryer .cdv-midcta h3{color:var(--cfm-dark);margin-bottom:8px;text-align:center}
+.cfm-svc-dryer .cdv-midcta p{color:var(--cfm-body);margin-bottom:20px}
+.cfm-svc-dryer .cdv-midcta .cdv-cta-row{margin-top:0}
+
+/* FAQ */
+.cfm-svc-dryer .cdv-faq-item{border-bottom:1px solid var(--cfm-border)}
+.cfm-svc-dryer .cdv-faq-q{width:100%;text-align:left;padding:20px 0;font-size:1rem;font-weight:600;color:var(--cfm-h);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cfm-svc-dryer .cdv-faq-q .cdv-faq-icon{color:var(--cfm-light);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
+.cfm-svc-dryer .cdv-faq-item.open .cdv-faq-icon{transform:rotate(135deg)}
+.cfm-svc-dryer .cdv-faq-a{padding:0 0 20px;color:var(--cfm-body);line-height:1.8;display:none}
+.cfm-svc-dryer .cdv-faq-item.open .cdv-faq-a{display:block;animation:cfmDvFade .2s ease}
+@keyframes cfmDvFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* RELATED */
+.cfm-svc-dryer .cdv-related{display:grid;grid-template-columns:1fr;gap:20px}
+.cfm-svc-dryer .cdv-related a{display:block;border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;text-decoration:none;transition:all .2s}
+.cfm-svc-dryer .cdv-related a:hover{border-color:var(--cfm-light);transform:translateY(-3px)}
+.cfm-svc-dryer .cdv-related h4{color:var(--cfm-dark)}
+
+/* BOTTOM CTA */
+.cfm-svc-dryer .cdv-bottom-cta{background:var(--cfm-dark);padding:56px 24px;text-align:center;border-radius:16px}
+.cfm-svc-dryer .cdv-bottom-cta h2{color:#fff}
+.cfm-svc-dryer .cdv-bottom-cta p{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;max-width:640px;margin:0 auto}
+.cfm-svc-dryer .cdv-bottom-cta .cdv-cta-row{margin-top:24px}
+.cfm-svc-dryer .cdv-bottom-cta .cdv-svc-area{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:20px}
+
+.cfm-svc-dryer a{color:var(--cfm-mid)}
+.cfm-svc-dryer a:hover{color:var(--cfm-dark)}
+
+@media(min-width:768px){
+.cfm-svc-dryer .cdv-section{padding:56px 0}
+.cfm-svc-dryer h2{font-size:1.65rem}
+.cfm-svc-dryer .cdv-hero{padding:72px 24px}
+.cfm-svc-dryer .cdv-hero h1{font-size:2.2rem}
+.cfm-svc-dryer .cdv-grid-2{grid-template-columns:1fr 1fr}
+.cfm-svc-dryer .cdv-grid-4{grid-template-columns:repeat(2,1fr)}
+.cfm-svc-dryer .cdv-stats-grid{grid-template-columns:repeat(4,1fr)}
+.cfm-svc-dryer .cdv-related{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1024px){
+.cfm-svc-dryer .cdv-section{padding:80px 0}
+.cfm-svc-dryer .cdv-hero{padding:88px 24px}
+.cfm-svc-dryer .cdv-hero h1{font-size:2.4rem}
+.cfm-svc-dryer h2{font-size:1.75rem}
+.cfm-svc-dryer .cdv-grid-5{grid-template-columns:repeat(5,1fr)}
+.cfm-svc-dryer .cdv-grid-3{grid-template-columns:repeat(3,1fr)}
+.cfm-svc-dryer .cdv-grid-4{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+
+<div class="cfm-svc-dryer">
+
+<section class="cdv-hero">
+<div class="cdv-wrap">
+<span class="cdv-badge">Medford &middot; Fire Safety Service</span>
+<h1>Dryer Vent Cleaning in Medford, Oregon</h1>
+<p class="cdv-sub">A clogged dryer vent is a fire waiting to happen. We clean it out and give your dryer safe, full airflow.</p>
+<p class="cdv-fire-hero">&#128293; Clogged dryer vents are the #1 cause of home dryer fires. Over 15,000 dryer fires occur in the US each year &mdash; most are preventable with annual vent cleaning.</p>
+<ul class="cdv-pills">
+<li>&#9989; Rotary Brush + Vacuum System</li>
+<li>&#9989; Full Vent Length Cleared</li>
+<li>&#9989; Airflow Test</li>
+<li>&#9989; Annual Recommended</li>
+<li>&#9989; Jackson County Local</li>
+</ul>
+<div class="cdv-cta-row">
+<a class="cdv-btn cdv-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cdv-btn cdv-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; Pricing Guide</a>
+</div>
+</div>
+</section>
+
+<div class="cdv-wrap">
+<p class="cdv-aeo">Yes &mdash; we clean dryer vents in Medford and Jackson County. A clogged dryer vent is a serious fire hazard &mdash; lint is highly flammable and builds up in the vent over time. Our process uses a rotary brush system through the full vent length, vacuum extraction of dislodged lint, and an airflow test to confirm full clearance. Annual cleaning is recommended.</p>
+</div>
+
+<section class="cdv-section">
+<div class="cdv-wrap">
+<span class="cdv-lbl">The Fire Risk</span>
+<h2>Why Dryer Vent Cleaning Is a Fire Safety Service, Not Just Maintenance</h2>
+<div style="max-width:800px;margin:0 auto">
+<span class="cdv-q">How dangerous is a clogged dryer vent?</span>
+<p class="cdv-callout cdv-callout-fire">Lint is one of the most flammable materials in a home. At dryer exhaust temperatures (typically 120&ndash;135&deg;F), partially clogged lint accumulation in the vent can ignite. The U.S. Fire Administration attributes over 2,900 home dryer fires annually to failure to clean dryer vents.</p>
+<p class="cdv-p">Every load of laundry generates lint &mdash; the fine fiber particles shed by fabrics in the heat and agitation of drying. The lint trap catches most of this material, but fine lint particles bypass the trap and travel into the exhaust duct. Over time, this fine lint accumulates on the interior surface of the vent duct &mdash; particularly at bends, at the exterior vent flap, and in long duct runs. As accumulation thickens, it restricts airflow, causing the dryer to run hotter and longer. Heat plus flammable lint creates the conditions for a duct fire.</p>
+<p class="cdv-p">Jackson County households generate above-average lint loads for a specific reason: high pet ownership (pet hair is a significant lint contributor &mdash; it passes through the lint trap and accumulates in the duct at higher rates than fabric fiber), active outdoor lifestyles generating heavy laundry loads of trail clothes and outdoor gear, and a prevalence of large-breed dog households. Medford dryer vents typically accumulate lint faster than national averages would suggest.</p>
+<p class="cdv-p">Additionally, Medford homes with wood stoves and fireplaces that also use the laundry room as a utility space occasionally have ash particles finding their way into the laundry environment &mdash; mixing with lint in the vent creates a denser accumulation than fabric lint alone.</p>
+<span class="cdv-q">How do I know if my dryer vent is clogged?</span>
+<div class="cdv-callout cdv-callout-safe">
+<h4>Warning Signs</h4>
+<ul>
+<li>&#9989; Clothes take longer than one cycle to dry &mdash; the most common sign</li>
+<li>&#9989; Clothes and the dryer drum are unusually hot at the end of a cycle</li>
+<li>&#9989; Burning smell during or after a drying cycle</li>
+<li>&#9989; The exterior vent flap doesn't open fully or at all during operation</li>
+<li>&#9989; More than 12 months since last vent cleaning (or never cleaned)</li>
+<li>&#9989; Excessive lint visible at the exterior vent opening</li>
+<li>&#9989; Laundry room feels unusually humid after a drying cycle</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cdv-section" style="background:var(--cfm-white)">
+<div class="cdv-wrap">
+<span class="cdv-lbl">Our Process</span>
+<h2>How We Clean Dryer Vents in Medford Homes</h2>
+<div class="cdv-grid cdv-grid-5">
+<div class="cdv-card"><span class="cdv-step-bubble">1</span><h3>Pre-Service Assessment</h3><p class="cdv-p">We identify the vent route, duct material type (flexible foil, rigid metal, or semi-rigid), and duct length. Long runs (over 25 feet) or multiple bends may need extra time. We assess the exterior vent flap for damage before starting.</p></div>
+<div class="cdv-card"><span class="cdv-step-bubble">2</span><h3>Disconnect &amp; Vacuum Containment</h3><p class="cdv-p">We disconnect the dryer from the duct and set up our vacuum at the dryer end to capture dislodged lint during brush cleaning, preventing lint from re-entering the laundry room.</p></div>
+<div class="cdv-card"><span class="cdv-step-bubble">3</span><h3>Rotary Brush Cleaning</h3><p class="cdv-p">A flexible rotary brush system extends through the full duct length from the dryer connection to the exterior termination, agitating and dislodging lint while the vacuum captures it &mdash; through bends and the full run.</p></div>
+<div class="cdv-card"><span class="cdv-step-bubble">4</span><h3>Exterior Termination Cleaning</h3><p class="cdv-p">The exterior vent flap and final duct section are cleaned from outside. Lint accumulation at the termination point is often the most significant blockage &mdash; the flap can become clogged to the point it barely opens.</p></div>
+<div class="cdv-card"><span class="cdv-step-bubble">5</span><h3>Airflow Test &amp; Reconnection</h3><p class="cdv-p">We test airflow at the exterior termination during dryer operation, reconnect the dryer, confirm all connections are secure, and advise on your recommended next cleaning interval.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cdv-section">
+<div class="cdv-wrap" style="max-width:900px">
+<span class="cdv-lbl">Dryer Vent vs Air Duct</span>
+<h2>Dryer Vent Cleaning vs Air Duct Cleaning &mdash; Different Systems, Different Service</h2>
+<span class="cdv-q">Is dryer vent cleaning the same as air duct cleaning?</span>
+<p class="cdv-callout cdv-callout-info">These are two completely different systems that are frequently confused. Both are available as services &mdash; they should never be combined or substituted.</p>
+<div class="cdv-table-wrap">
+<table>
+<thead><tr><th></th><th>Dryer Vent</th><th>Air Duct (HVAC)</th></tr></thead>
+<tbody>
+<tr><td>What it serves</td><td>Clothes dryer exhaust</td><td>Heating and cooling air distribution</td></tr>
+<tr><td>What accumulates</td><td>Lint (highly flammable)</td><td>Dust, smoke, allergens, pet dander</td></tr>
+<tr><td>Primary concern</td><td>Fire hazard</td><td>Air quality</td></tr>
+<tr><td>Frequency</td><td>Annual</td><td>Every 2&ndash;3 years (Medford)</td></tr>
+<tr><td>Cleaning tool</td><td>Rotary brush + vacuum</td><td>Negative pressure + rotary brush</td></tr>
+<tr><td>Who needs it</td><td>Every home with a dryer</td><td>Homes with air quality concerns</td></tr>
+</tbody>
+</table>
+</div>
+<p class="cdv-p">Both services are available from Carpet Friend Medford, and many Medford homeowners combine them in the same visit &mdash; particularly in fall after wildfire season, when post-fire-season air duct cleaning and annual dryer vent cleaning are both timely. See our <a href="https://carpetcleaningmedfordoregon.com/air-duct-cleaning-medford-oregon/">air duct cleaning page</a>.</p>
+</div>
+</section>
+
+<div class="cdv-stats">
+<div class="cdv-stats-grid">
+<div><div class="cdv-stat-num">15,000+</div><div class="cdv-stat-lbl">Annual dryer fires in the US</div></div>
+<div><div class="cdv-stat-num">#1 Cause</div><div class="cdv-stat-lbl">Failure to clean vents</div></div>
+<div><div class="cdv-stat-num">12 Months</div><div class="cdv-stat-lbl">Recommended cleaning interval</div></div>
+<div><div class="cdv-stat-num">6&ndash;9 Months</div><div class="cdv-stat-lbl">Pet households &mdash; faster buildup</div></div>
+</div>
+</div>
+
+<section class="cdv-section" style="background:var(--cfm-white)">
+<div class="cdv-wrap">
+<span class="cdv-lbl">Rogue Valley Context</span>
+<h2>Dryer Vent Cleaning in Medford &mdash; What's Different Here</h2>
+<span class="cdv-q" style="text-align:center;display:block">Why do Medford households have higher dryer vent lint accumulation?</span>
+<div class="cdv-grid cdv-grid-2" style="margin-top:20px">
+<div class="cdv-card" style="background:var(--cfm-infop);border-color:transparent"><span class="cdv-icon">&#128054;</span><h3>High Pet Ownership and Pet Hair in Laundry</h3><p class="cdv-p">Jackson County's above-average pet ownership means households regularly wash pet bedding and towels used after Bear Creek Greenway or Table Rocks hikes. Dog and cat hair accumulates in the vent duct more densely than fabric fiber &mdash; pet-heavy households should plan for cleaning every 6&ndash;9 months.</p></div>
+<div class="cdv-card" style="background:var(--cfm-infop);border-color:transparent"><span class="cdv-icon">&#129462;</span><h3>Outdoor Gear and Trail Clothes Laundry Load</h3><p class="cdv-p">Medford's outdoor lifestyle &mdash; trail running, hiking, and river access on the Rogue River &mdash; generates heavy laundry loads of fleece and synthetic performance fabrics, among the heaviest lint producers. East Medford (97504) and Bear Creek corridor households should factor this into cleaning frequency.</p></div>
+<div class="cdv-card" style="background:var(--cfm-infop);border-color:transparent"><span class="cdv-icon">&#127757;</span><h3>Wildfire Ash in the Laundry Environment</h3><p class="cdv-p">During Rogue Valley wildfire smoke events (July&ndash;September), ash particles settle on outdoor items that enter the laundry cycle. Ash mixed with lint creates a denser accumulation &mdash; a post-season vent cleaning is worthwhile for affected households.</p></div>
+<div class="cdv-card" style="background:var(--cfm-infop);border-color:transparent"><span class="cdv-icon">&#127968;</span><h3>Long Duct Runs in Split-Level and Ranch Homes</h3><p class="cdv-p">Medford's 1960s&ndash;1980s ranch-style and split-level housing stock often places the laundry room far from an exterior wall. Duct runs over 25 feet accumulate lint faster &mdash; we assess duct length at booking and advise if extended service is needed.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cdv-section">
+<div class="cdv-wrap">
+<span class="cdv-lbl">Scheduling Guide</span>
+<h2>When to Schedule Dryer Vent Cleaning in Medford</h2>
+<span class="cdv-q" style="text-align:center;display:block">When is the best time to have a dryer vent cleaned?</span>
+<div class="cdv-grid cdv-grid-4" style="margin-top:20px">
+<div class="cdv-card"><span class="cdv-icon">&#128197;</span><h3>Annually &mdash; Standard</h3><p class="cdv-p">Every 12 months for standard households. The NFPA recommends annual cleaning as fire safety practice. A fall appointment (October&ndash;November) pairs well with post-wildfire-season air duct cleaning.</p></div>
+<div class="cdv-card"><span class="cdv-icon">&#128054;</span><h3>Every 6&ndash;9 Months &mdash; Pet Households</h3><p class="cdv-p">Households washing pet bedding, dog towels, and pet-hair-covered clothing regularly should plan for shorter intervals. If clothes are taking longer to dry, don't wait for the annual appointment.</p></div>
+<div class="cdv-card"><span class="cdv-icon">&#127960;</span><h3>Before First Use &mdash; New Home or Dryer</h3><p class="cdv-p">If you've purchased a Medford home and don't know when the vent was last cleaned, or moved a dryer to a new location, clean the vent before continuing regular use.</p></div>
+<div class="cdv-card"><span class="cdv-icon">&#9889;</span><h3>Immediately &mdash; Warning Signs Present</h3><p class="cdv-p">If clothes take more than one cycle to dry, the dryer feels unusually hot, you smell burning, or the flap doesn't open &mdash; don't wait for a scheduled appointment. Call (458) 302-0101.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cdv-section">
+<div class="cdv-wrap">
+<div class="cdv-midcta">
+<h3>Is Your Dryer Vent Overdue? It's a Safety Issue.</h3>
+<p>Lint is flammable. A clogged vent runs hotter and risks fire. Annual cleaning is the single most important dryer maintenance step.</p>
+<div class="cdv-cta-row">
+<a class="cdv-btn cdv-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cdv-btn cdv-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; Pricing Guide</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cdv-section" style="background:var(--cfm-white)">
+<div class="cdv-wrap" style="max-width:800px">
+<span class="cdv-lbl">Scope</span>
+<h2>What Dryer Vent Cleaning Includes &mdash; and What It Doesn't</h2>
+<div class="cdv-callout cdv-callout-safe">
+<h4>Included in every dryer vent cleaning service</h4>
+<ul>
+<li>&#9989; Full duct length cleaning from dryer connection to exterior termination</li>
+<li>&#9989; Rotary brush agitation through bends and transitions</li>
+<li>&#9989; Vacuum containment at the dryer end (lint doesn't enter the laundry room)</li>
+<li>&#9989; Exterior vent flap cleaning and inspection</li>
+<li>&#9989; Post-cleaning airflow test</li>
+<li>&#9989; Service documentation (receipt with date and scope)</li>
+</ul>
+</div>
+<div class="cdv-callout cdv-callout-danger">
+<h4>Not included in our dryer vent cleaning service</h4>
+<ul>
+<li>&#10060; Repair or replacement of damaged duct sections</li>
+<li>&#10060; Replacing deteriorated flexible foil duct with rigid metal duct (we advise and refer to an HVAC installer)</li>
+<li>&#10060; Bird or animal nest removal from exterior termination (we advise and can attempt removal; significant nesting may require additional steps)</li>
+<li>&#10060; Dryer appliance repair or maintenance</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="cdv-section">
+<div class="cdv-wrap" style="max-width:800px">
+<h2>Dryer Vent Cleaning FAQ &mdash; Medford, Oregon</h2>
+<div class="cdv-faq">
+<div class="cdv-faq-item"><button class="cdv-faq-q"><span>How often should I clean my dryer vent in Medford?</span><span class="cdv-faq-icon">+</span></button><div class="cdv-faq-a"><p class="cdv-p">Annually for most Medford households &mdash; the NFPA recommendation. For households with pets, heavy outdoor-lifestyle laundry, or above-average loads: every 6&ndash;9 months. If clothes are taking longer to dry or you've never had the vent cleaned, schedule immediately regardless of last cleaning date.</p></div></div>
+<div class="cdv-faq-item"><button class="cdv-faq-q"><span>What are the signs my dryer vent is clogged?</span><span class="cdv-faq-icon">+</span></button><div class="cdv-faq-a"><p class="cdv-p">The most reliable sign: clothes taking more than one cycle to fully dry. Other indicators include an unusually hot dryer drum, a burning smell during drying, a vent flap that doesn't open during operation, visible excess lint at the exterior opening, or a humid laundry room. Any of these warrant immediate cleaning.</p></div></div>
+<div class="cdv-faq-item"><button class="cdv-faq-q"><span>Is dryer vent cleaning the same as air duct cleaning?</span><span class="cdv-faq-icon">+</span></button><div class="cdv-faq-a"><p class="cdv-p">No &mdash; these are completely different systems. Dryer vents exhaust the clothes dryer; air ducts distribute heated and cooled air from your HVAC system. Dryer vent cleaning is a fire safety service (lint is flammable); air duct cleaning is an air quality service. We offer both, and they can be combined in a single visit. See our <a href="https://carpetcleaningmedfordoregon.com/air-duct-cleaning-medford-oregon/">air duct cleaning page</a>.</p></div></div>
+<div class="cdv-faq-item"><button class="cdv-faq-q"><span>Can a clogged dryer vent start a fire?</span><span class="cdv-faq-icon">+</span></button><div class="cdv-faq-a"><p class="cdv-p">Yes &mdash; this is why the service is categorized as fire safety rather than maintenance. Lint is highly flammable. A partially clogged vent makes the dryer run hotter to compensate for reduced airflow, and that added heat combined with accumulated lint creates conditions for ignition. The U.S. Fire Administration documents over 2,900 home dryer fires annually.</p></div></div>
+<div class="cdv-faq-item"><button class="cdv-faq-q"><span>How long does dryer vent cleaning take?</span><span class="cdv-faq-icon">+</span></button><div class="cdv-faq-a"><p class="cdv-p">For a standard Medford home with a typical duct length (under 25 feet, 1&ndash;2 bends): 30&ndash;45 minutes. Longer runs, multiple bends, or significant accumulation may take 60&ndash;90 minutes. We'll advise on a time estimate at booking.</p></div></div>
+<div class="cdv-faq-item"><button class="cdv-faq-q"><span>Do you clean dryer vents in apartments or multi-unit properties in Medford?</span><span class="cdv-faq-icon">+</span></button><div class="cdv-faq-a"><p class="cdv-p">Yes &mdash; apartment units, multi-unit buildings, and individual rental units throughout Jackson County. For property managers with multiple units, we can schedule batch visits. Provide unit count and building location at booking. (458) 302-0101</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="cdv-section" style="background:var(--cfm-white)">
+<div class="cdv-wrap">
+<h2>Related Services</h2>
+<div class="cdv-related">
+<a href="https://carpetcleaningmedfordoregon.com/air-duct-cleaning-medford-oregon/"><h4>&#128168; Air Duct Cleaning Medford</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/"><h4>&#127968; Residential Carpet Cleaning</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/"><h4>&#127970; Commercial Cleaning</h4></a>
+</div>
+</div>
+</section>
+
+<section class="cdv-section">
+<div class="cdv-wrap">
+<div class="cdv-bottom-cta">
+<h2>Dryer Vent Cleaned Safely in Medford &mdash; Don't Wait</h2>
+<p>Annual dryer vent cleaning is the most important fire safety maintenance step for any home. Medford and all of Jackson County.</p>
+<div class="cdv-cta-row">
+<a class="cdv-btn cdv-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cdv-btn cdv-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; Pricing Guide</a>
+</div>
+<p class="cdv-svc-area">Serving Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504 and all of Jackson County</p>
+</div>
+</div>
+</section>
+
+</div>
+<script>
+(function(){'use strict';
+var root=document.querySelector('.cfm-svc-dryer');
+if(!root)return;
+root.querySelectorAll('.cdv-faq-item').forEach(function(item){
+var q=item.querySelector('.cdv-faq-q');
+q.addEventListener('click',function(){
+var open=item.classList.contains('open');
+root.querySelectorAll('.cdv-faq-item.open').forEach(function(o){if(o!==item){o.classList.remove('open');o.querySelector('.cdv-faq-icon').textContent='+'}});
+item.classList.toggle('open',!open);
+q.querySelector('.cdv-faq-icon').textContent=!open?'×':'+';
+});
+});
+root.querySelectorAll('a[href^="#"]').forEach(function(a){
+a.addEventListener('click',function(e){
+var t=document.querySelector(a.getAttribute('href'));
+if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+});
+});
+})();
+</script>
+<!-- /wp:html -->

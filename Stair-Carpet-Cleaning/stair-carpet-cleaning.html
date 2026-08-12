@@ -1,0 +1,283 @@
+<!-- wp:html -->
+<style id="cfm-st-css">
+.cfm-svc-stair{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F9FA}
+.cfm-svc-stair *,.cfm-svc-stair *::before,.cfm-svc-stair *::after{box-sizing:border-box}
+.cfm-svc-stair p,.cfm-svc-stair li,.cfm-svc-stair h1,.cfm-svc-stair h2,.cfm-svc-stair h3,.cfm-svc-stair h4{word-wrap:break-word;overflow-wrap:break-word;margin:0}
+.cfm-svc-stair{--cfm-dark:#1B4332;--cfm-mid:#2D6A4F;--cfm-light:#52B788;--cfm-pale:#E8F5E9;--cfm-bg:#F8F9FA;--cfm-white:#FFFFFF;--cfm-h:#1A1A1A;--cfm-body:#4A5568;--cfm-muted:#6B7280;--cfm-border:#E2E8F0;--cfm-safe:#065F46;--cfm-safep:#D1FAE5;--cfm-info:#1E40AF;--cfm-infop:#DBEAFE}
+
+.cfm-svc-stair .cst-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.cfm-svc-stair .cst-section{padding:40px 0}
+.cfm-svc-stair .cst-lbl{display:block;color:var(--cfm-light);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.cfm-svc-stair h2{color:var(--cfm-dark);font-size:1.5rem;font-weight:600;line-height:1.3;text-align:center;max-width:760px;margin:0 auto 32px}
+.cfm-svc-stair h3{color:var(--cfm-h);font-size:1.2rem;font-weight:600;line-height:1.4;margin-bottom:8px}
+.cfm-svc-stair h4{color:var(--cfm-h);font-size:1rem;font-weight:600;line-height:1.45}
+.cfm-svc-stair .cst-p{color:var(--cfm-body);font-size:1rem;line-height:1.8;margin-bottom:16px}
+.cfm-svc-stair .cst-p:last-child{margin-bottom:0}
+.cfm-svc-stair .cst-q{display:block;color:var(--cfm-dark);font-weight:700;margin:22px 0 10px;font-size:1.05rem}
+
+/* HERO */
+.cfm-svc-stair .cst-hero{background:var(--cfm-dark);color:#fff;padding:64px 20px;text-align:center}
+.cfm-svc-stair .cst-badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:22px;font-size:.78rem;font-weight:600;margin-bottom:18px}
+.cfm-svc-stair .cst-hero h1{color:#fff;font-size:1.9rem;font-weight:700;line-height:1.2;max-width:820px;margin:0 auto}
+.cfm-svc-stair .cst-hero .cst-sub{color:rgba(255,255,255,.82);font-size:1.02rem;font-weight:400;line-height:1.6;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto}
+.cfm-svc-stair .cst-pills{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 20px}
+.cfm-svc-stair .cst-pills li{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+.cfm-svc-stair .cst-cta-row{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+
+/* BUTTONS */
+.cfm-svc-stair .cst-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-size:1rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
+.cfm-svc-stair .cst-btn-primary{background:var(--cfm-dark);color:#fff;box-shadow:0 4px 16px rgba(27,67,50,.3)}
+.cfm-svc-stair .cst-btn-primary:hover{background:var(--cfm-mid);transform:translateY(-2px)}
+.cfm-svc-stair .cst-btn-secondary{background:transparent;color:var(--cfm-dark);border:2px solid var(--cfm-dark);padding:12px 26px}
+.cfm-svc-stair .cst-btn-secondary:hover{background:var(--cfm-pale)}
+.cfm-svc-stair .cst-hero .cst-btn-secondary{color:#fff;border-color:rgba(255,255,255,.6)}
+.cfm-svc-stair .cst-hero .cst-btn-secondary:hover{background:rgba(255,255,255,.12)}
+
+/* AEO BOX */
+.cfm-svc-stair .cst-aeo{background:var(--cfm-pale);border-left:4px solid var(--cfm-dark);border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:var(--cfm-h);max-width:1200px;margin:32px auto 0}
+
+/* CARDS GRID */
+.cfm-svc-stair .cst-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px}
+.cfm-svc-stair .cst-card{background:var(--cfm-white);border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;transition:all .25s}
+.cfm-svc-stair .cst-card:hover{border-color:var(--cfm-light);transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.cfm-svc-stair .cst-step-bubble{background:var(--cfm-pale);color:var(--cfm-dark);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;margin-bottom:14px}
+.cfm-svc-stair .cst-icon{font-size:1.75rem;display:block;margin-bottom:12px}
+
+/* STAT STRIP */
+.cfm-svc-stair .cst-stats{background:var(--cfm-dark);padding:48px 20px;text-align:center}
+.cfm-svc-stair .cst-stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
+.cfm-svc-stair .cst-stat-num{font-size:1.9rem;font-weight:700;color:#fff;line-height:1.2}
+.cfm-svc-stair .cst-stat-lbl{font-size:.875rem;color:rgba(255,255,255,.72);margin-top:4px}
+
+/* MID CTA STRIP */
+.cfm-svc-stair .cst-midcta{background:var(--cfm-pale);border:1.5px solid var(--cfm-border);border-radius:14px;padding:32px 24px;text-align:center}
+.cfm-svc-stair .cst-midcta h3{color:var(--cfm-dark);margin-bottom:8px;text-align:center}
+.cfm-svc-stair .cst-midcta p{color:var(--cfm-body);margin-bottom:20px}
+.cfm-svc-stair .cst-midcta .cst-cta-row{margin-top:0}
+
+/* FAQ */
+.cfm-svc-stair .cst-faq-item{border-bottom:1px solid var(--cfm-border)}
+.cfm-svc-stair .cst-faq-q{width:100%;text-align:left;padding:20px 0;font-size:1rem;font-weight:600;color:var(--cfm-h);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cfm-svc-stair .cst-faq-q .cst-faq-icon{color:var(--cfm-light);font-size:1.3rem;transition:transform .2s;flex-shrink:0}
+.cfm-svc-stair .cst-faq-item.open .cst-faq-icon{transform:rotate(135deg)}
+.cfm-svc-stair .cst-faq-a{padding:0 0 20px;color:var(--cfm-body);line-height:1.8;display:none}
+.cfm-svc-stair .cst-faq-item.open .cst-faq-a{display:block;animation:cfmStFade .2s ease}
+@keyframes cfmStFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* RELATED */
+.cfm-svc-stair .cst-related{display:grid;grid-template-columns:1fr;gap:20px}
+.cfm-svc-stair .cst-related a{display:block;border:1.5px solid var(--cfm-border);border-radius:14px;padding:20px;text-decoration:none;transition:all .2s}
+.cfm-svc-stair .cst-related a:hover{border-color:var(--cfm-light);transform:translateY(-3px)}
+.cfm-svc-stair .cst-related h4{color:var(--cfm-dark)}
+
+/* BOTTOM CTA */
+.cfm-svc-stair .cst-bottom-cta{background:var(--cfm-dark);padding:56px 24px;text-align:center;border-radius:16px}
+.cfm-svc-stair .cst-bottom-cta h2{color:#fff}
+.cfm-svc-stair .cst-bottom-cta p{color:rgba(255,255,255,.82);font-size:1rem;line-height:1.7;max-width:640px;margin:0 auto}
+.cfm-svc-stair .cst-bottom-cta .cst-cta-row{margin-top:24px}
+.cfm-svc-stair .cst-bottom-cta .cst-svc-area{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:20px}
+
+.cfm-svc-stair a{color:var(--cfm-mid)}
+.cfm-svc-stair a:hover{color:var(--cfm-dark)}
+
+@media(min-width:768px){
+.cfm-svc-stair .cst-section{padding:56px 0}
+.cfm-svc-stair h2{font-size:1.65rem}
+.cfm-svc-stair .cst-hero{padding:72px 24px}
+.cfm-svc-stair .cst-hero h1{font-size:2.2rem}
+.cfm-svc-stair .cst-grid-2{grid-template-columns:1fr 1fr}
+.cfm-svc-stair .cst-grid-4{grid-template-columns:repeat(2,1fr)}
+.cfm-svc-stair .cst-stats-grid{grid-template-columns:repeat(4,1fr)}
+.cfm-svc-stair .cst-related{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1024px){
+.cfm-svc-stair .cst-section{padding:80px 0}
+.cfm-svc-stair .cst-hero{padding:88px 24px}
+.cfm-svc-stair .cst-hero h1{font-size:2.4rem}
+.cfm-svc-stair h2{font-size:1.75rem}
+.cfm-svc-stair .cst-grid-5{grid-template-columns:repeat(5,1fr)}
+.cfm-svc-stair .cst-grid-3{grid-template-columns:repeat(3,1fr)}
+.cfm-svc-stair .cst-grid-6{grid-template-columns:repeat(3,1fr)}
+.cfm-svc-stair .cst-grid-4{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+
+<div class="cfm-svc-stair">
+
+<section class="cst-hero">
+<div class="cst-wrap">
+<span class="cst-badge">Medford &middot; High-Traffic Stair Specialist</span>
+<h1>Stair Carpet Cleaning in Medford, Oregon</h1>
+<p class="cst-sub">Stairs take more punishment per square foot than any other surface in your home &mdash; and they need a different extraction approach to do it right.</p>
+<ul class="cst-pills">
+<li>&#9989; Stair Tool Attachment</li>
+<li>&#9989; Tread + Riser Cleaning</li>
+<li>&#9989; Pet Hair Extraction</li>
+<li>&#9989; Pile Direction Technique</li>
+<li>&#9989; Jackson County Local</li>
+</ul>
+<div class="cst-cta-row">
+<a class="cst-btn cst-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cst-btn cst-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; Pricing Guide</a>
+</div>
+</div>
+</section>
+
+<div class="cst-wrap">
+<p class="cst-aeo">Yes &mdash; we clean stair carpet throughout Medford and Jackson County. Stairs require a specialized stair tool attachment (not the standard floor wand), manual pre-agitation on both treads and risers, and careful pile-direction cleaning to avoid loosening tack strips at the edges. We include stairs as part of whole-home cleaning jobs or as a standalone service. Pricing is by the stair.</p>
+</div>
+
+<section class="cst-section">
+<div class="cst-wrap">
+<span class="cst-lbl">The Stair Challenge</span>
+<h2>Why Stair Carpet Needs a Different Approach Than Floor Carpet</h2>
+<div style="max-width:800px;margin:0 auto">
+<span class="cst-q">Can you clean stair carpet the same way you clean floor carpet?</span>
+<p class="cst-p">A standard carpet cleaning wand is designed for horizontal flat surfaces. Stairs are a series of angled, narrow surfaces &mdash; each tread is typically 10&ndash;11 inches deep, curved at the nose, and meets a vertical riser below it. The standard wand can't navigate this geometry effectively. To properly extract cleaning solution and soil from stair carpet, a dedicated stair tool is required &mdash; a smaller, angled tool that can work both the tread surface and the riser in sequence without missing the nose edge where the most contamination accumulates.</p>
+<p class="cst-p">Companies that claim to clean stairs but don't have a stair tool are applying the wand to the treads only, missing the risers entirely, and often missing the edge seam where the tread meets the riser &mdash; the single most contaminated zone on any stair.</p>
+<p class="cst-p">Floor carpet pile typically runs in one consistent direction determined at installation. Stair carpet pile direction changes at each tread-to-riser transition &mdash; the pile on the tread runs one direction, the riser pile runs at 90 degrees to it, and the nose (the curved front edge of the tread) has pile that's been compressed in multiple directions by foot traffic. Cleaning against the pile direction on a stair tread lifts embedded soil; cleaning with the pile direction leaves it. This requires conscious technique on every step &mdash; it can't be handled by a single pass.</p>
+<p class="cst-p">The edge seam at the back of each tread (where tread meets riser) is where pet hair concentrates on carpeted stairs in households with cats and dogs. Hair migrates from the open tread surface to the back edge with foot traffic and accumulates in a dense mat that standard extraction misses. Our stair cleaning includes pre-agitation of the back edge on every tread specifically to dislodge this accumulated material before extraction.</p>
+<span class="cst-q">Why are stair edges so hard to clean?</span>
+<p class="cst-p">The tread-to-riser seam at the back of each step creates a concave channel that acts as a collection point for soil, pet hair, and debris. It's difficult to reach with a standard wand, difficult to agitate without a stiff brush or agitation tool, and often missed entirely in a hurried cleaning job. We address every back edge on every step as part of our stair service.</p>
+</div>
+</div>
+</section>
+
+<section class="cst-section" style="background:var(--cfm-white)">
+<div class="cst-wrap">
+<span class="cst-lbl">Our Process</span>
+<h2>How We Clean Stair Carpet in Medford Homes</h2>
+<div class="cst-grid cst-grid-5">
+<div class="cst-card"><span class="cst-step-bubble">1</span><h3>Pre-Inspection</h3><p class="cst-p">We assess the stair carpet for fiber type (nylon, polyester, wool &mdash; stairs often have different carpet than the surrounding floor), tack strip condition at the edges (loose carpet at stair edges is a safety hazard and affects cleaning approach), and contamination profile.</p></div>
+<div class="cst-card"><span class="cst-step-bubble">2</span><h3>Dry Pre-Vacuuming</h3><p class="cst-p">We pre-vacuum each tread and riser with a stair attachment &mdash; removing loose dry soil and pet hair before any moisture is applied. The back-edge channel is pre-agitated with a stiff brush to dislodge compacted soil before vacuuming.</p></div>
+<div class="cst-card"><span class="cst-step-bubble">3</span><h3>Fiber-Matched Pre-Spray</h3><p class="cst-p">We apply pre-conditioner to each tread and riser, adjusted for the stair carpet's fiber type. Dwell time: 5&ndash;8 minutes per section. We work in sections of 3&ndash;4 stairs so pre-spray doesn't dry before extraction.</p></div>
+<div class="cst-card"><span class="cst-step-bubble">4</span><h3>Stair Tool Extraction</h3><p class="cst-p">Using our stair attachment, we extract each tread in the pile direction, then the riser, then specifically work the nose edge and back-edge channel. Multiple passes per step, with a pH-balanced rinse on the final pass.</p></div>
+<div class="cst-card"><span class="cst-step-bubble">5</span><h3>Edge Inspection &amp; Grooming</h3><p class="cst-p">We inspect each tread edge to confirm the carpet is still secured to tack strips, then finish with pile-direction grooming to set the carpet and ensure even drying.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cst-section">
+<div class="cst-wrap">
+<span class="cst-lbl">What We Treat</span>
+<h2>What Stair Carpet Cleaning Removes in Medford Homes</h2>
+<div class="cst-grid cst-grid-6">
+<div class="cst-card"><span class="cst-icon">&#128062;</span><h3>Pet Hair and Dander Concentration</h3><p class="cst-p">Carpeted stairs in Jackson County homes with dogs or cats accumulate pet hair at the tread-riser seam and nose edge at a rate significantly higher than floor carpet. Our pre-agitation and stair tool extraction target these zones before water touches the surface.</p></div>
+<div class="cst-card"><span class="cst-icon">&#129462;</span><h3>High-Traffic Wear Zone Soil</h3><p class="cst-p">The center of each tread takes more footsteps per hour than any other home surface. Compacted soil &mdash; including volcanic clay tracked in from Table Rocks and Bear Creek Greenway &mdash; requires the same pre-spray dwell and hot-water extraction we use on heavily soiled floor carpet.</p></div>
+<div class="cst-card"><span class="cst-icon">&#128293;</span><h3>Wildfire Smoke Accumulation</h3><p class="cst-p">PM2.5 particles from Rogue Valley wildfire events (July&ndash;September) settle through the stairwell air column onto stair carpet. Our stair cleaning removes this layer as part of a whole-home smoke treatment.</p></div>
+<div class="cst-card"><span class="cst-icon">&#127866;</span><h3>Food and Beverage Staining</h3><p class="cst-p">Carrying food and drinks on stairs produces the most common stair-specific staining pattern. The nose of each tread is the highest-frequency spill zone, and our pre-spray chemistry specifically targets it.</p></div>
+<div class="cst-card"><span class="cst-icon">&#129442;</span><h3>Dust Mites and Allergens</h3><p class="cst-p">Stairs sit at floor level, where dust mites, pollen, pet dander, and smoke particles concentrate. For Jackson County allergy households, stair cleaning is part of a complete allergen reduction plan. See our <a href="https://carpetcleaningmedfordoregon.com/medford-april-pollen-carpet-allergen-guide/">pollen &amp; allergen guide</a>.</p></div>
+<div class="cst-card"><span class="cst-icon">&#128167;</span><h3>Moisture and Mildew at Edges</h3><p class="cst-p">The seam between stair carpet and baseboard is a moisture-concentration zone during the Rogue Valley's wet season (October&ndash;March). Our edge-focused cleaning addresses this zone specifically before mildew can develop.</p></div>
+</div>
+</div>
+</section>
+
+<div class="cst-stats">
+<div class="cst-stats-grid">
+<div><div class="cst-stat-num">12&ndash;16</div><div class="cst-stat-lbl">Stairs per Jackson County job</div></div>
+<div><div class="cst-stat-num">Back Edge</div><div class="cst-stat-lbl">Most contaminated zone</div></div>
+<div><div class="cst-stat-num">Higher</div><div class="cst-stat-lbl">Pet hair vs. floor carpet</div></div>
+<div><div class="cst-stat-num">Every Step</div><div class="cst-stat-lbl">Tack strip check</div></div>
+</div>
+</div>
+
+<section class="cst-section">
+<div class="cst-wrap">
+<span class="cst-lbl">Local Context</span>
+<h2>Stair Carpet in Medford Homes &mdash; What We See Here</h2>
+<span class="cst-q" style="text-align:center;display:block">Does Medford's housing stock create particular stair carpet challenges?</span>
+<div class="cst-grid cst-grid-2" style="margin-top:20px">
+<div class="cst-card" style="background:var(--cfm-infop);border-color:transparent"><span class="cst-icon">&#127960;</span><h3>Two-Story Medford Home Construction (1980s&ndash;2010s)</h3><p class="cst-p">A significant portion of Medford's housing stock &mdash; particularly in East Medford (97504), North Medford (97501), and the Central Point (97502) corridor &mdash; is two-story construction with carpeted staircases built between 1980 and 2010. These stairs are often 15&ndash;45 years old with the original carpet installation.</p></div>
+<div class="cst-card" style="background:var(--cfm-infop);border-color:transparent"><span class="cst-icon">&#128054;</span><h3>Multi-Dog Households and Stair Traffic</h3><p class="cst-p">Medford's active trail culture correlates with large-breed, high-energy dogs that use staircases frequently throughout the day. Households with an Australian Shepherd or Labrador Retriever running the stairs daily should consider quarterly stair cleaning.</p></div>
+<div class="cst-card" style="background:var(--cfm-infop);border-color:transparent"><span class="cst-icon">&#127961;</span><h3>Jacksonville Historic Homes with Original Stair Carpet</h3><p class="cst-p">Jacksonville's National Historic Landmark district has many homes with original or period-appropriate wool or wool-blend stair carpet, requiring the pH-neutral, lower-temperature approach we use for delicate fiber cleaning.</p></div>
+<div class="cst-card" style="background:var(--cfm-infop);border-color:transparent"><span class="cst-icon">&#127970;</span><h3>Rental Properties with Stair Wear Documentation</h3><p class="cst-p">Multi-story rentals across White City, West Medford, and Phoenix/Talent frequently need documentation-grade stair cleaning at move-out. We provide dated receipts landlords accept for deposit documentation. See our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-rental-properties-medford-landlords/">rental properties guide</a>.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cst-section" style="background:var(--cfm-white)">
+<div class="cst-wrap" style="max-width:800px">
+<span class="cst-lbl">Combined Service</span>
+<h2>Stair Cleaning Combined with Your Full Home Clean</h2>
+<span class="cst-q">Can I add stair cleaning to my regular carpet cleaning appointment?</span>
+<p class="cst-p">Yes &mdash; combining stair cleaning with a whole-home carpet cleaning appointment is the most efficient approach. When we're already on-site with the truck-mounted system running, adding stair cleaning is a natural extension of the job. Stairs are typically cleaned at the end of the room sequence, so the pre-spray applied at the beginning of the job has maximum dwell time while we work through the floor rooms.</p>
+<p class="cst-p">Pricing for stairs added to a whole-home cleaning appointment is typically per stair step. See our <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">pricing guide</a> for current rates.</p>
+<p class="cst-p">Stair cleaning as a standalone service (stairs only, no floor rooms) is also available. We'll confirm same-week scheduling at booking.</p>
+</div>
+</section>
+
+<section class="cst-section">
+<div class="cst-wrap">
+<div class="cst-midcta">
+<h3>Stair Carpet Cleaned Right &mdash; Medford and Jackson County</h3>
+<p>Stair tool attachment, back-edge agitation, tread and riser extraction. Added to your whole-home cleaning or as a standalone service.</p>
+<div class="cst-cta-row">
+<a class="cst-btn cst-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cst-btn cst-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128176; Pricing Guide</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cst-section" style="background:var(--cfm-white)">
+<div class="cst-wrap" style="max-width:800px">
+<h2>Stair Carpet Cleaning FAQ &mdash; Medford, Oregon</h2>
+<div class="cst-faq">
+<div class="cst-faq-item"><button class="cst-faq-q"><span>Do you clean stair carpet in Medford?</span><span class="cst-faq-icon">+</span></button><div class="cst-faq-a"><p class="cst-p">Yes &mdash; throughout Medford and all of Jackson County. We clean stair carpet with a dedicated stair tool attachment that handles the tread, riser, nose, and back-edge channel on each step. Stairs are available as a standalone service or added to a whole-home cleaning appointment. Pricing is per stair step.</p></div></div>
+<div class="cst-faq-item"><button class="cst-faq-q"><span>Can stair carpet be professionally cleaned without removing it?</span><span class="cst-faq-icon">+</span></button><div class="cst-faq-a"><p class="cst-p">Yes &mdash; in nearly all cases. Stair carpet is cleaned in place with the stair tool. We do not need to remove or lift stair carpet for standard cleaning. If it's loose at the edges (tack strip failure), we note this during pre-inspection and discuss whether repair is needed before cleaning.</p></div></div>
+<div class="cst-faq-item"><button class="cst-faq-q"><span>How often should stair carpet be cleaned in a Medford home?</span><span class="cst-faq-icon">+</span></button><div class="cst-faq-a"><p class="cst-p">Annual cleaning as part of your whole-home professional service is the minimum. Households with high-traffic stairs, multiple dogs, or children who spend significant time on carpeted stairs should consider semi-annual cleaning &mdash; stairs re-soil faster than any other carpeted surface.</p></div></div>
+<div class="cst-faq-item"><button class="cst-faq-q"><span>Why does stair carpet look so different from my floor carpet?</span><span class="cst-faq-icon">+</span></button><div class="cst-faq-a"><p class="cst-p">Higher traffic per square foot. Each stair tread takes the full foot traffic of every person and pet in the household, often multiple times per day. The nose of each tread takes the most concentrated impact and shows wear first. A stair-specific tool addresses the nose and back edge where contamination is most concentrated.</p></div></div>
+<div class="cst-faq-item"><button class="cst-faq-q"><span>Do you clean pet hair from stair carpet?</span><span class="cst-faq-icon">+</span></button><div class="cst-faq-a"><p class="cst-p">Yes &mdash; pet hair concentration at the tread-riser seam is one of the most common stair carpet issues in Jackson County homes. We pre-agitate this zone on every step before extraction to dislodge the compacted hair mat that standard extraction misses.</p></div></div>
+<div class="cst-faq-item"><button class="cst-faq-q"><span>Do you clean stairs in multi-level apartment buildings in Medford?</span><span class="cst-faq-icon">+</span></button><div class="cst-faq-a"><p class="cst-p">Yes &mdash; including shared carpeted stairs in multi-unit buildings, stair carpet in townhome-style rentals, and stairs in two-story single-family rentals throughout Jackson County. We provide dated receipts for stair cleaning documentation. (458) 302-0101</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="cst-section">
+<div class="cst-wrap">
+<h2>Related Services</h2>
+<div class="cst-related">
+<a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/"><h4>&#127968; Residential Carpet Cleaning</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/"><h4>&#129525; Carpet Repair</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/can-carpet-cleaning-kill-fleas-and-dust-mites/"><h4>&#129947; Kill Fleas &amp; Dust Mites?</h4></a>
+</div>
+</div>
+</section>
+
+<section class="cst-section">
+<div class="cst-wrap">
+<div class="cst-bottom-cta">
+<h2>Stair Carpet Cleaned Properly &mdash; Every Step in Medford</h2>
+<p>Stair tool. Back-edge agitation. Tread and riser extraction. Pet hair removed. Serving all of Jackson County &mdash; Medford, Ashland, Central Point, and beyond.</p>
+<div class="cst-cta-row">
+<a class="cst-btn cst-btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="cst-btn cst-btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">&#127968; See All Services</a>
+</div>
+<p class="cst-svc-area">Serving Medford 97501 &middot; 97502 &middot; 97503 &middot; 97504 and all of Jackson County</p>
+</div>
+</div>
+</section>
+
+</div>
+<script>
+(function(){'use strict';
+var root=document.querySelector('.cfm-svc-stair');
+if(!root)return;
+root.querySelectorAll('.cst-faq-item').forEach(function(item){
+var q=item.querySelector('.cst-faq-q');
+q.addEventListener('click',function(){
+var open=item.classList.contains('open');
+root.querySelectorAll('.cst-faq-item.open').forEach(function(o){if(o!==item){o.classList.remove('open');o.querySelector('.cst-faq-icon').textContent='+'}});
+item.classList.toggle('open',!open);
+q.querySelector('.cst-faq-icon').textContent=!open?'×':'+';
+});
+});
+root.querySelectorAll('a[href^="#"]').forEach(function(a){
+a.addEventListener('click',function(e){
+var t=document.querySelector(a.getAttribute('href'));
+if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+});
+});
+})();
+</script>
+<!-- /wp:html -->
