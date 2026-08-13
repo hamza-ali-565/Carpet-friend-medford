@@ -1,0 +1,265 @@
+<!-- wp:html -->
+<div class="cfm-loc-downtown">
+<style>
+.cfm-loc-downtown{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-loc-downtown *,.cfm-loc-downtown *::before,.cfm-loc-downtown *::after{box-sizing:border-box}
+.cfm-loc-downtown p,.cfm-loc-downtown li,.cfm-loc-downtown td,.cfm-loc-downtown th,.cfm-loc-downtown h1,.cfm-loc-downtown h2,.cfm-loc-downtown h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.dm-hero{background:linear-gradient(160deg,#1B4332 0%,#2D6A4F 100%);padding:clamp(52px,7vw,90px) clamp(20px,5vw,40px);text-align:center}
+.dm-hero .badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);font-size:.78rem;font-weight:600;padding:6px 16px;border-radius:22px;margin:0 0 18px}
+.dm-hero h1{color:#fff;font-size:clamp(28px,6vw,44px);font-weight:800;line-height:1.15;letter-spacing:-.5px;margin:0 0 16px}
+.dm-hero .sub{color:rgba(255,255,255,.85);font-size:clamp(15px,2vw,17px);line-height:1.7;margin:0 auto 26px;max-width:780px}
+.dm-hero .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.dm-hero a.btn-primary{background:#fff;color:#1B4332;font-weight:700;font-size:16px;padding:14px 28px;border-radius:6px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:transform .18s}
+.dm-hero a.btn-primary:hover{transform:translateY(-2px)}
+.dm-hero a.btn-secondary{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:12px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.dm-pills{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.dm-pills span{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+
+.dm-sec{padding:clamp(48px,7vw,80px) clamp(20px,5vw,40px)}
+.dm-sec .inner{max-width:1200px;margin:0 auto}
+.dm-sec.white{background:#fff}.dm-sec.gray{background:#F8F9FA}
+.dm-eyebrow{display:block;color:#52B788;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 12px}
+.dm-eyebrow.center{text-align:center}
+.dm-h2{color:#1B4332;font-size:clamp(24px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 18px;letter-spacing:-.3px}
+.dm-h2.center{text-align:center}
+.dm-p{color:#4A5568;font-size:16px;line-height:1.85;margin:0 0 18px}
+.dm-p.center{text-align:center;max-width:780px;margin-left:auto;margin-right:auto}
+
+.dm-aeo{background:#E8F5E9;border-left:4px solid #1B4332;border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:#1B4332;max-width:1200px;margin:-30px auto 0}
+
+.dm-cond-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.dm-cond-item{background:#fff;border:1.5px solid #E2E8F0;border-radius:14px;padding:28px;transition:all .25s}
+.dm-cond-item:hover{border-color:#52B788;transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.dm-cond-item .ic{font-size:1.75rem;display:block;margin-bottom:12px}
+.dm-cond-item h3{color:#1B4332;font-size:1.05rem;font-weight:600;margin:0 0 8px}
+.dm-cond-item p{color:#4A5568;font-size:14.5px;line-height:1.75;margin:0 0 10px}
+.dm-cond-item a{color:#2D6A4F;font-weight:700;font-size:13.5px;text-decoration:none}
+
+.dm-svc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:32px}
+.dm-svc-card{background:#fff;border:1.5px solid #E2E8F0;border-radius:14px;padding:22px;transition:all .25s}
+.dm-svc-card:hover{border-color:#52B788;transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.dm-svc-card h3{color:#1A1A1A;font-size:16px;font-weight:600;margin:0 0 8px}
+.dm-svc-card p{color:#4A5568;font-size:14px;line-height:1.65;margin:0 0 12px}
+.dm-svc-card a{color:#2D6A4F;font-size:13.5px;font-weight:700;text-decoration:none}
+
+.dm-job-card{background:#E8F5E9;border:1.5px solid #E2E8F0;border-radius:14px;padding:32px 28px;margin-top:32px}
+.dm-job-card .job-tag{display:inline-block;background:#fff;color:#1B4332;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin:0 6px 18px 0}
+.dm-job-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.dm-job-grid h4{color:#1B4332;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin:0 0 10px}
+.dm-job-grid p{color:#4A5568;font-size:14.5px;line-height:1.75;margin:0}
+.dm-stat-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px;border-top:1px solid #cfe3d3;padding-top:24px}
+.dm-stat-mini div{text-align:center}
+.dm-stat-mini b{display:block;color:#1B4332;font-size:1.2rem;font-weight:800}
+.dm-stat-mini span{color:#6B7280;font-size:12.5px}
+
+.dm-stats{background:#1B4332;padding:56px 24px;text-align:center}
+.dm-stats .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.dm-stats b{display:block;color:#fff;font-size:2.1rem;font-weight:800}
+.dm-stats span{color:rgba(255,255,255,.72);font-size:.875rem}
+
+.dm-mid-cta{background:#E8F5E9;border:1.5px solid #E2E8F0;border-radius:14px;padding:32px;text-align:center;max-width:1200px;margin:0 auto}
+.dm-mid-cta h3{color:#1B4332;margin:0 0 8px;font-size:1.4rem}
+.dm-mid-cta p{color:#4A5568;margin:0 0 20px}
+.dm-mid-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.dm-mid-cta a.btn-p{background:#1B4332;color:#fff;font-weight:600;padding:14px 28px;border-radius:6px;text-decoration:none}
+.dm-mid-cta a.btn-s{border:2px solid #1B4332;color:#1B4332;font-weight:600;padding:12px 26px;border-radius:6px;text-decoration:none}
+
+.dm-nearby{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.dm-nearby a{display:inline-block;background:#fff;border:1.5px solid #E2E8F0;border-radius:8px;padding:10px 16px;font-size:.9rem;font-weight:500;color:#2D6A4F;text-decoration:none}
+.dm-nearby a:hover{border-color:#52B788;color:#1B4332}
+
+.dm-faq-wrap{max-width:820px;margin:32px auto 0}
+.dm-faq-item{border-bottom:1px solid #E2E8F0}
+.dm-faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 0;font-size:16px;font-weight:600;color:#1A1A1A;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.dm-faq-q .plus{color:#52B788;font-size:1.3rem;font-weight:300;flex-shrink:0;transition:transform .2s}
+.dm-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.dm-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.dm-faq-a-inner{padding:0 0 20px;font-size:15px;color:#4A5568;line-height:1.8}
+.dm-faq-a-inner a{color:#2D6A4F;font-weight:700;text-decoration:none}
+
+.dm-cta{background:#1B4332;padding:clamp(56px,7vw,64px) clamp(20px,5vw,40px);text-align:center;border-radius:16px;max-width:1200px;margin:0 auto}
+.dm-cta h2{color:#fff;font-size:clamp(24px,4.5vw,34px);font-weight:800;line-height:1.2;margin:0 0 12px}
+.dm-cta p{color:rgba(255,255,255,.82);font-size:16px;margin:0 0 24px}
+.dm-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.dm-cta a.btn-w{background:#fff;color:#1B4332;font-weight:800;font-size:16px;padding:14px 30px;border-radius:6px;text-decoration:none}
+.dm-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:12px 30px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,.55)}
+
+@media(max-width:1024px){.dm-svc-grid{grid-template-columns:1fr 1fr}.dm-stats .grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.dm-cond-grid,.dm-svc-grid,.dm-job-grid{grid-template-columns:1fr}.dm-aeo{margin-top:0}.dm-stat-mini{grid-template-columns:1fr 1fr}}
+@media(max-width:767px){.dm-hero .btn-row,.dm-cta .btn-row,.dm-mid-cta .btn-row{flex-direction:column;align-items:stretch;max-width:320px;margin-left:auto;margin-right:auto}.dm-hero a,.dm-cta a,.dm-mid-cta a{text-align:center;justify-content:center}}
+</style>
+
+<section class="dm-hero">
+<span class="badge">Downtown Medford &middot; 97501</span>
+<h1>Carpet Cleaning in Downtown Medford, Oregon</h1>
+<p class="sub">Apartments, rental units, small offices, and historic homes &mdash; Downtown Medford has the most varied carpet service needs in the city, and we handle all of them.</p>
+<div class="btn-row">
+<a class="btn-primary" href="tel:+14583020101">&#128222; Call or Text (458) 302-0101</a>
+<a class="btn-secondary" href="https://carpetcleaningmedfordoregon.com/#book">&#128197; Book Online &rarr;</a>
+</div>
+<div class="dm-pills">
+<span>&#10003; IICRC Certified</span>
+<span>&#10003; Truck-Mounted 195&deg;F</span>
+<span>&#10003; Move-Out Documentation</span>
+<span>&#10003; Commercial Carpet</span>
+<span>&#10003; Same-Week Scheduling</span>
+</div>
+</section>
+
+<div class="dm-aeo">Yes &mdash; Carpet Friend Medford serves Downtown Medford (97501) for residential apartments, rental unit move-outs, small office carpet, and residential homes near the downtown core. Downtown Medford has the highest rental unit density in the city &mdash; move-out cleaning with dated IICRC-certified receipts for deposit documentation is our most common service here.</div>
+
+<section class="dm-sec white">
+<div class="inner">
+<p class="dm-eyebrow">COMMUNITY CONTEXT</p>
+<h2 class="dm-h2">Downtown Medford, Oregon &mdash; The Urban Core</h2>
+<p class="dm-p">Downtown Medford (97501) is a different kind of carpet cleaning market than any other Medford neighborhood. The streets around the Central Avenue commercial corridor, Bear Creek Park, and the Riverside Avenue district include a mix that doesn't exist elsewhere in the city: apartment buildings of all ages, converted commercial spaces with residential units above them, older standalone homes on historic residential streets west of downtown, small professional offices with commercial-grade carpet, and an active restaurant and retail district that occasionally needs commercial carpet maintenance. Most carpet cleaning in downtown Medford is either apartment move-out documentation or office maintenance &mdash; two very different service profiles from the residential deep-clean needs of East or West Medford.</p>
+<p class="dm-p">Downtown Medford's high rental density &mdash; highest in the city &mdash; makes move-out carpet cleaning documentation more concentrated here than anywhere else in Jackson County. Tenants moving out of apartments on Main Street, South Riverside Ave, Fir Street, and the apartment complexes along the downtown fringe need professional cleaning that satisfies their lease's requirement, a dated IICRC-certified receipt accepted by property management for deposit dispute resolution, and fast turnaround since downtown units often need to re-let quickly. We provide all three &mdash; every downtown move-out job gets a dated service receipt with IICRC certification number included.</p>
+</div>
+</section>
+
+<section class="dm-sec gray">
+<div class="inner">
+<p class="dm-eyebrow">LOCAL CONDITIONS</p>
+<h2 class="dm-h2">Four Carpet Scenarios We Handle in Downtown Medford</h2>
+<div class="dm-cond-grid">
+<div class="dm-cond-item"><span class="ic">&#127970;</span><h3>Apartment Move-Out Cleaning (Most Common)</h3><p>Downtown Medford has Medford's highest concentration of rental units. The Central Avenue corridor, South Riverside Ave apartments, and the downtown-adjacent residential streets generate a high volume of move-out cleaning year-round. A downtown move-out differs from a suburban one: smaller square footage per unit, higher foot-traffic concentration, and property managers who know what adequate documentation looks like. Our dated IICRC-certified receipt meets the standard Jackson County property managers accept.</p><a href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="dm-cond-item"><span class="ic">&#127961;</span><h3>Historic Residential Homes Near Downtown</h3><p>The residential streets west of downtown &mdash; around 8th Street, Oakdale Avenue, and the historic neighborhoods near the Carnegie Library site and Bear Creek Park &mdash; have some of Medford's oldest occupied housing stock. Original hardwood floors in many, but also period-era carpet installations, some original nylon from the 1970s that's still restorable with proper cleaning, and wool rugs common in historic homes.</p><a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="dm-cond-item"><span class="ic">&#128188;</span><h3>Small Office and Commercial Carpet</h3><p>The professional office district along Riverside Ave, Central Ave, and the commercial corridors around downtown Medford includes small law offices, medical practices, financial services, and real estate offices &mdash; many with commercial-grade carpet tile or broadloom that benefits from periodic professional maintenance. We clean commercial carpet during off-hours to minimize business disruption.</p><a href="https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="dm-cond-item"><span class="ic">&#127946;</span><h3>Urban Soil Profile (Different from Residential Neighborhoods)</h3><p>Downtown carpet accumulates a distinctly different soil profile from residential neighborhoods &mdash; oxidized mineral particles from concrete sidewalks, tire rubber residue from parking areas, commercial food and restaurant-adjacent soiling, and higher-frequency foot traffic. This mix requires a broader-spectrum pre-spray than residential volcanic clay or organic alluvial soil: alkaline for the mineral component, surfactant-heavy chemistry for the mixed organic/inorganic profile.</p></div>
+</div>
+</div>
+</section>
+
+<section class="dm-sec white">
+<div class="inner">
+<p class="dm-eyebrow center">WHAT WE CLEAN</p>
+<h2 class="dm-h2 center">Carpet Services in Downtown Medford</h2>
+<div class="dm-svc-grid">
+<div class="dm-svc-card"><h3>&#128230; Move-Out Carpet Cleaning</h3><p>Dated IICRC-certified receipts for downtown Medford apartments and rental units. 48-hour turnaround. The most common downtown service.</p><a href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="dm-svc-card"><h3>&#127970; Commercial Carpet Cleaning</h3><p>Small office carpet cleaning in downtown Medford &mdash; after-hours, off-hours, or weekend scheduling to minimize business disruption.</p><a href="https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="dm-svc-card"><h3>&#127968; Residential Carpet Cleaning</h3><p>Full truck-mounted extraction for historic and established homes in the downtown residential streets and Bear Creek Park area.</p><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="dm-svc-card"><h3>&#127807; Area Rug Cleaning</h3><p>Natural fiber rugs and historic wool rugs in downtown Medford's older homes &mdash; fiber ID, dye testing, appropriate chemistry.</p><a href="https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="dm-svc-card"><h3>&#129905; Hardwood Floor Cleaning</h3><p>Historic homes around downtown Medford commonly have original hardwood &mdash; pH-neutral, controlled-moisture cleaning without steam damage risk.</p><a href="https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="dm-svc-card"><h3>&#127968; Move-In Cleaning</h3><p>Cleaning a newly leased downtown Medford apartment or commercial space before occupancy &mdash; start fresh.</p><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+</div>
+</div>
+</section>
+
+<section class="dm-sec gray">
+<div class="inner">
+<p class="dm-eyebrow">REAL JOB &middot; DOWNTOWN MEDFORD &middot; 97501</p>
+<h2 class="dm-h2">Downtown Medford Job &mdash; Apartment Move-Out, 3 Years of Urban Soil Accumulation</h2>
+<div class="dm-job-card">
+<span class="job-tag">&#128230; Move-Out Documentation</span><span class="job-tag">&#127970; Urban Soil</span><span class="job-tag">97501</span>
+<div class="dm-job-grid">
+<div><h4>The Situation</h4><p>A property manager for a downtown Medford apartment on South Riverside Ave contacted us after a tenant occupied a 2-bedroom unit for three years without any professional carpet cleaning. Urban soil accumulation from the downtown walking corridor was heavier than a comparable residential home, mixed with some food-related contamination in the kitchen-adjacent dining area. The property manager needed the cleaning documented for potential deposit deduction under ORS 90.300.</p></div>
+<div><h4>What We Did</h4><p>Pre-inspection identified commercial-grade polyester fiber, common in downtown rental units built in the 1990s&ndash;2000s. Soil was heavy in traffic lanes, lighter in corners; no UV contamination detected. Broad-spectrum alkaline pre-conditioner for urban mixed soil, 8-minute dwell. 195&deg;F extraction, two passes on traffic lanes, single pass elsewhere. pH-balanced rinse, dry stroke, carpet rake. Dated service receipt issued same day, delivered to the property manager.</p></div>
+<div><h4>The Result</h4><p>Traffic lane soil cleared to a result consistent with normal wear and tear for a 3-year tenancy. The property manager confirmed the receipt met their documentation requirement for the deposit adjustment, and the unit was re-listed within the week.</p></div>
+</div>
+<div class="dm-stat-mini">
+<div><b>3 years</b><span>Duration of tenancy</span></div>
+<div><b>2 passes</b><span>On high-traffic lanes</span></div>
+<div><b>Same day</b><span>Service receipt delivery</span></div>
+<div><b>48 hrs</b><span>Unit re-listed after cleaning</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="dm-stats">
+<div class="grid">
+<div><b>Move-Out</b><span>Primary Service</span></div>
+<div><b>Apts + Offices</b><span>Building Types</span></div>
+<div><b>Same-Day</b><span>Receipt Issue</span></div>
+<div><b>97501</b><span>ZIP</span></div>
+</div>
+</section>
+
+<section class="dm-sec white">
+<div class="inner">
+<div class="dm-mid-cta">
+<h3>Downtown Medford Move-Out or Office Cleaning &mdash; Same Week</h3>
+<p>IICRC-certified receipt for deposit documentation. Commercial off-hours scheduling. Historic home protocols. Whatever Downtown Medford needs &mdash; we handle it.</p>
+<div class="btn-row">
+<a class="btn-p" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="btn-s" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128202; Pricing Guide</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="dm-sec gray">
+<div class="inner">
+<p class="dm-eyebrow center">NEARBY AREAS</p>
+<h2 class="dm-h2 center">Also Serving Nearby Areas</h2>
+<ul class="dm-nearby">
+<li><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/">&#128205; North Medford (same 97501)</a></li>
+<li><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-west-medford-oregon/">&#128205; West Medford (97502)</a></li>
+<li><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">&#128205; Medford (All Areas)</a></li>
+</ul>
+</div>
+</section>
+
+<section class="dm-sec white">
+<div class="inner">
+<p class="dm-eyebrow center">QUESTIONS</p>
+<h2 class="dm-h2 center">Downtown Medford Carpet Cleaning FAQ</h2>
+<div class="dm-faq-wrap" id="dm-faq">
+<div class="dm-faq-item" aria-expanded="false">
+<button class="dm-faq-q">Do you clean apartment carpet in Downtown Medford?<span class="plus">+</span></button>
+<div class="dm-faq-a"><div class="dm-faq-a-inner">Yes &mdash; apartment cleaning is the most common service we provide in Downtown Medford (97501). We clean apartment carpet for tenants before move-out, for property managers between tenants, and for landlords seeking deposit documentation. Every apartment cleaning job receives a dated service receipt with our IICRC certification number. (458) 302-0101</div></div>
+</div>
+<div class="dm-faq-item" aria-expanded="false">
+<button class="dm-faq-q">Can you do commercial carpet cleaning in Downtown Medford?<span class="plus">+</span></button>
+<div class="dm-faq-a"><div class="dm-faq-a-inner">Yes &mdash; small offices, professional practices, and commercial spaces in the downtown core. We schedule commercial carpet cleaning during off-hours, evenings, or weekends to minimize business disruption. For businesses on Riverside Ave, Central Ave, and the surrounding professional district, call to discuss scheduling. <a href="https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/">Learn more</a></div></div>
+</div>
+<div class="dm-faq-item" aria-expanded="false">
+<button class="dm-faq-q">What documentation do you provide for move-out cleaning?<span class="plus">+</span></button>
+<div class="dm-faq-a"><div class="dm-faq-a-inner">A dated service receipt that includes the job address, date, scope of cleaning, and our IICRC certification number. This documentation meets the standard Jackson County property managers and Oregon's ORS 90.300 process accept for security deposit deduction documentation. We issue it on completion &mdash; same day. <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-deducted-security-deposit-oregon/">Learn more</a></div></div>
+</div>
+<div class="dm-faq-item" aria-expanded="false">
+<button class="dm-faq-q">Can I book carpet cleaning for a downtown Medford apartment if I don't own it?<span class="plus">+</span></button>
+<div class="dm-faq-a"><div class="dm-faq-a-inner">Yes &mdash; tenants can book cleaning for their rental unit. You'll want to check your lease about scheduling access. We work directly with tenants for move-out cleaning frequently. Just provide the address and confirm you have authorization to schedule work in the unit.</div></div>
+</div>
+<div class="dm-faq-item" aria-expanded="false">
+<button class="dm-faq-q">Do you clean historic homes in the residential areas near downtown?<span class="plus">+</span></button>
+<div class="dm-faq-a"><div class="dm-faq-a-inner">Yes &mdash; the residential streets around Bear Creek Park, 8th Street, and Oakdale Ave have some of Medford's oldest occupied homes. We handle older nylon and wool fiber installations common in these homes, and we can clean area rugs and natural fiber rugs with the pH-neutral protocol they require. Pre-inspection always first.</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="dm-sec gray">
+<div class="dm-cta">
+<h2>Downtown Medford Carpet Cleaning &mdash; Apartments, Offices, and Historic Homes</h2>
+<p>IICRC certified. Move-out receipts issued same day. Commercial off-hours available. Serving all of the Downtown Medford 97501 zip code.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call or Text (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/#book">&#128197; Book Online</a>
+</div>
+</div>
+</section>
+
+<script>
+(function(){'use strict';
+var items=document.querySelectorAll('#dm-faq .dm-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.dm-faq-q');
+var ans=item.querySelector('.dm-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.dm-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+</div>
+<!-- /wp:html -->

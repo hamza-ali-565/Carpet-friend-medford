@@ -1,0 +1,275 @@
+<!-- wp:html -->
+<div class="cfm-aud-medical">
+<style>
+.cfm-aud-medical{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-aud-medical *,.cfm-aud-medical *::before,.cfm-aud-medical *::after{box-sizing:border-box}
+.cfm-aud-medical p,.cfm-aud-medical li,.cfm-aud-medical td,.cfm-aud-medical th,.cfm-aud-medical h1,.cfm-aud-medical h2,.cfm-aud-medical h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.md-hero{background:linear-gradient(160deg,#1B4332 0%,#2D6A4F 100%);padding:clamp(52px,7vw,90px) clamp(20px,5vw,40px);text-align:center}
+.md-hero .badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);font-size:.78rem;font-weight:600;padding:6px 16px;border-radius:22px;margin:0 0 18px}
+.md-hero h1{color:#fff;font-size:clamp(28px,6vw,44px);font-weight:800;line-height:1.15;letter-spacing:-.5px;margin:0 0 16px}
+.md-hero .sub{color:rgba(255,255,255,.85);font-size:clamp(15px,2vw,17px);line-height:1.7;margin:0 auto 26px;max-width:780px}
+.md-hero .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.md-hero a.btn-primary{background:#fff;color:#1B4332;font-weight:700;font-size:16px;padding:14px 28px;border-radius:6px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:transform .18s}
+.md-hero a.btn-primary:hover{transform:translateY(-2px)}
+.md-hero a.btn-secondary{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:12px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.md-pills{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.md-pills span{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+
+.md-sec{padding:clamp(48px,7vw,80px) clamp(20px,5vw,40px)}
+.md-sec .inner{max-width:1200px;margin:0 auto}
+.md-sec.white{background:#fff}.md-sec.gray{background:#F8F9FA}
+.md-eyebrow{display:block;color:#52B788;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 12px}
+.md-eyebrow.center{text-align:center}
+.md-h2{color:#1B4332;font-size:clamp(24px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 18px;letter-spacing:-.3px}
+.md-h2.center{text-align:center}
+.md-p{color:#4A5568;font-size:16px;line-height:1.85;margin:0 0 18px}
+.md-p.center{text-align:center;max-width:780px;margin-left:auto;margin-right:auto}
+.md-p strong{color:#1A1A1A}
+.md-list{margin:0 0 18px;padding-left:0;list-style:none}
+.md-list li{color:#4A5568;font-size:15.5px;line-height:1.9;padding-left:22px;position:relative}
+.md-list li::before{content:"\2713";position:absolute;left:0;color:#52B788;font-weight:700}
+
+.md-aeo{background:#E8F5E9;border-left:4px solid #1B4332;border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:#1B4332;max-width:1200px;margin:-30px auto 0}
+.md-info{background:#DBEAFE;border-left:4px solid #1E40AF;border-radius:0 10px 10px 0;padding:16px 20px;color:#1A1A1A;font-size:15px;line-height:1.8;margin:20px 0}
+.md-fire{background:#FDECE6;border-left:4px solid #D85A30;border-radius:0 10px 10px 0;padding:16px 20px;color:#B84625;font-size:15px;line-height:1.8;margin:20px 0}
+.md-fire a{color:#B84625;font-weight:700;text-decoration:none}
+
+.md-steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:24px}
+.md-step{background:#fff;border:1.5px solid #E2E8F0;border-radius:14px;padding:24px;transition:all .25s}
+.md-step:hover{border-color:#52B788;transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.md-step .num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#1B4332;color:#fff;border-radius:50%;font-size:13px;font-weight:700;margin-bottom:12px}
+.md-step h3{color:#1B4332;font-size:1rem;font-weight:700;margin:0 0 8px}
+.md-step p{color:#4A5568;font-size:14px;line-height:1.7;margin:0}
+
+.md-card-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:24px}
+.md-card{background:#fff;border:1.5px solid #E2E8F0;border-radius:14px;padding:24px;transition:all .25s}
+.md-card:hover{border-color:#52B788;transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.md-card .ic{font-size:1.6rem;display:block;margin-bottom:10px}
+.md-card h3{color:#1B4332;font-size:1rem;font-weight:600;margin:0 0 8px}
+.md-card p{color:#4A5568;font-size:14px;line-height:1.7;margin:0}
+
+.md-stats{background:#1B4332;padding:56px 24px;text-align:center}
+.md-stats .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.md-stats b{display:block;color:#fff;font-size:1.9rem;font-weight:800}
+.md-stats span{color:rgba(255,255,255,.72);font-size:.85rem}
+
+.md-mid-cta{background:#E8F5E9;border:1.5px solid #E2E8F0;border-radius:14px;padding:32px;text-align:center;max-width:1200px;margin:0 auto}
+.md-mid-cta h3{color:#1B4332;margin:0 0 8px;font-size:1.4rem}
+.md-mid-cta p{color:#4A5568;margin:0 0 20px}
+.md-mid-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.md-mid-cta a.btn-p{background:#1B4332;color:#fff;font-weight:600;padding:14px 28px;border-radius:6px;text-decoration:none}
+.md-mid-cta a.btn-s{border:2px solid #1B4332;color:#1B4332;font-weight:600;padding:12px 26px;border-radius:6px;text-decoration:none}
+
+.md-related{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:32px}
+.md-related a{display:block;background:#fff;border:1.5px solid #E2E8F0;border-radius:14px;padding:22px;text-decoration:none;transition:all .25s}
+.md-related a:hover{border-color:#52B788;transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.md-related h4{color:#1A1A1A;font-size:15px;font-weight:600;margin:0}
+
+.md-faq-wrap{max-width:820px;margin:32px auto 0}
+.md-faq-item{border-bottom:1px solid #E2E8F0}
+.md-faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 0;font-size:16px;font-weight:600;color:#1A1A1A;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.md-faq-q .plus{color:#52B788;font-size:1.3rem;font-weight:300;flex-shrink:0;transition:transform .2s}
+.md-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.md-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.md-faq-a-inner{padding:0 0 20px;font-size:15px;color:#4A5568;line-height:1.8}
+.md-faq-a-inner a{color:#2D6A4F;font-weight:700;text-decoration:none}
+
+.md-cta{background:#1B4332;padding:clamp(56px,7vw,64px) clamp(20px,5vw,40px);text-align:center;border-radius:16px;max-width:1200px;margin:0 auto}
+.md-cta h2{color:#fff;font-size:clamp(24px,4.5vw,34px);font-weight:800;line-height:1.2;margin:0 0 12px}
+.md-cta p{color:rgba(255,255,255,.82);font-size:16px;margin:0 0 24px}
+.md-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.md-cta a.btn-w{background:#fff;color:#1B4332;font-weight:800;font-size:16px;padding:14px 30px;border-radius:6px;text-decoration:none}
+.md-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:12px 30px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,.55)}
+
+@media(max-width:1024px){.md-steps,.md-card-grid,.md-related{grid-template-columns:1fr 1fr}.md-stats .grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.md-steps,.md-card-grid,.md-related{grid-template-columns:1fr}.md-aeo{margin-top:0}}
+@media(max-width:767px){.md-hero .btn-row,.md-cta .btn-row,.md-mid-cta .btn-row{flex-direction:column;align-items:stretch;max-width:320px;margin-left:auto;margin-right:auto}.md-hero a,.md-cta a,.md-mid-cta a{text-align:center;justify-content:center}}
+</style>
+
+<section class="md-hero">
+<span class="badge">Medford Medical Offices &middot; IICRC Certified</span>
+<h1>Carpet Cleaning for Medical Offices in Medford, Oregon</h1>
+<p class="sub">Patient-safe chemistry, after-hours and weekend scheduling, documented receipts &mdash; professional carpet cleaning calibrated for healthcare environments in Jackson County.</p>
+<div class="btn-row">
+<a class="btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101 &mdash; Schedule After-Hours</a>
+<a class="btn-secondary" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128202; Commercial Pricing</a>
+</div>
+<div class="md-pills">
+<span>&#10003; IICRC Certified</span>
+<span>&#10003; Patient-Safe Chemistry</span>
+<span>&#10003; After-Hours Scheduling</span>
+<span>&#10003; Same-Day Documentation</span>
+<span>&#10003; No Patient-Hours Disruption</span>
+</div>
+</section>
+
+<div class="md-aeo">Yes &mdash; Carpet Friend Medford provides IICRC-certified carpet cleaning for medical offices, dental practices, physical therapy facilities, and healthcare settings throughout Medford and Jackson County. We schedule exclusively after patient hours or on weekends, use patient-safe low-residue chemistry, and provide same-day documented receipts. Near Asante Rogue Regional and Providence Medford Medical Center.</div>
+
+<section class="md-sec white">
+<div class="inner">
+<p class="md-eyebrow">WHY HEALTHCARE IS DIFFERENT</p>
+<h2 class="md-h2">Why Medical Office Carpet Cleaning Requires a Healthcare-Specific Approach</h2>
+<p class="md-p"><strong>What's different about carpet cleaning in a medical office vs a standard commercial space?</strong> Medical offices, dental practices, physical therapy facilities, and specialty clinics serve a patient population that includes immunocompromised individuals, respiratory patients, allergy sufferers, and people with heightened chemical sensitivities. The carpet cleaning chemistry, the post-cleaning off-gassing window, and the residue profile that's entirely appropriate in a standard commercial office may be clinically inappropriate in a space where respiratory patients breathe the same air six hours after a standard commercial cleaning. We use pH-neutral, low-VOC cleaning chemistry with complete rinse extraction that minimizes residual compounds in the carpet fiber. The result holds longer and off-gasses less during patient hours.</p>
+<p class="md-p">Medical offices cannot have carpet cleaned during patient hours. The equipment noise, the chemical off-gassing during the cleaning process, and the wet carpet drying window are all incompatible with an active clinical environment. We exclusively schedule medical office cleaning after-hours &mdash; evenings, Saturdays, or Sundays &mdash; and confirm that the carpet is fully dry before patient hours resume.</p>
+<p class="md-p"><strong>What does "patient-safe chemistry" actually mean?</strong> In the carpet cleaning context, it means:</p>
+<ul class="md-list">
+<li>pH-neutral pre-spray with low-foaming, low-residue surfactants</li>
+<li>No high-fragrance masking agents (fragrance sensitivity affects a significant portion of medical patients)</li>
+<li>pH-balanced rinse extraction that removes cleaning chemistry from the fiber rather than leaving alkaline residue that continues off-gassing</li>
+<li>Drying time confirmed (white cloth test) before the facility re-opens to patients</li>
+</ul>
+<p class="md-p">This is different from standard commercial cleaning chemistry, which prioritizes cleaning performance at the cost of higher residue and stronger fragrance profiles.</p>
+</div>
+</section>
+
+<section class="md-sec gray">
+<div class="inner">
+<p class="md-eyebrow">THE MEDFORD MEDICAL DISTRICT</p>
+<h2 class="md-h2">The Medford Medical Office Market &mdash; Who We Serve</h2>
+<p class="md-p"><strong>Where are the medical office facilities we clean in Jackson County?</strong> Medford is the healthcare hub of Southern Oregon. Asante Rogue Regional Medical Center on Barnett Road anchors the Medford medical campus, with a surrounding network of specialist offices, outpatient facilities, and ancillary practices in the medical office parks along Barnett Road, Crater Lake Avenue, and the Biddle Road corridor. Providence Medford Medical Center on Crater Lake Ave serves a similar cluster of affiliated and independent practices.</p>
+<p class="md-p">Beyond the hospital campuses, Medford's medical office market includes standalone dental practices throughout all four zip codes, physical therapy and rehabilitation facilities in the commercial corridors, specialty clinics (cardiology, orthopedics, oncology) in the Asante Health System network, and urgent care and primary care practices serving the full Jackson County population. All of these facilities share the same need: professional carpet cleaning that doesn't disrupt patient care, doesn't introduce residue or fragrance concerns for sensitive patients, and provides documented receipts for facility maintenance records.</p>
+</div>
+</section>
+
+<section class="md-sec white">
+<div class="inner">
+<p class="md-eyebrow">CLINICAL ALLERGEN REDUCTION</p>
+<h2 class="md-h2">Carpet Cleaning as an Infection Control and Allergen Reduction Practice</h2>
+<p class="md-p"><strong>Does carpet cleaning in a medical office actually reduce patient health risks?</strong></p>
+<div class="md-info">This section provides general information about carpet hygiene in healthcare settings. It is not medical or infection control advice. For specific infection control protocols, consult your facility's infection control officer and refer to CDC Environmental Cleaning guidelines for healthcare facilities.</div>
+<p class="md-p">Medical office carpet accumulates a contamination profile distinct from standard commercial carpet. Patient waiting areas see frequent respiratory particulate from patients with upper respiratory conditions, elevated pollen and outdoor allergen loads tracked in during high-pollen seasons, potential pathogen-containing droplets settling into the pile, and seasonal wildfire smoke PM2.5 during Rogue Valley fire events &mdash; of particular concern in healthcare facilities where respiratory patients are present. The CDC's Environmental Cleaning guidelines for healthcare facilities acknowledge carpet as a surface that requires scheduled maintenance cleaning &mdash; not just spot cleaning &mdash; as part of a comprehensive environmental hygiene program.</p>
+<p class="md-p">Truck-mounted hot water extraction at 195&deg;F physically removes the allergen reservoir from carpet pile at depth. This includes pollen, pet dander tracked in by patients, dust mite allergen (feces and body fragment particles that standard vacuuming redistributes but doesn't remove), and PM2.5 wildfire smoke particles. For medical offices serving allergy, asthma, and respiratory patients, periodic professional extraction reduces the environmental allergen burden that patients encounter in the waiting area. <a href="https://carpetcleaningmedfordoregon.com/medford-april-pollen-carpet-allergen-guide/" style="color:#2D6A4F;font-weight:700;text-decoration:none">Read the allergen guide &rarr;</a></p>
+</div>
+</section>
+
+<section class="md-sec gray">
+<div class="inner">
+<p class="md-eyebrow">OUR MEDICAL OFFICE SCHEDULING PROTOCOL</p>
+<h2 class="md-h2">How Medical Office Carpet Cleaning Works at Carpet Friend Medford</h2>
+<div class="md-steps">
+<div class="md-step"><span class="num">1</span><h3>After-Hours Only</h3><p>We accept bookings only for times outside patient-facing hours: evenings (after 6pm), Saturdays, and Sundays. We confirm your specific patient hours before booking.</p></div>
+<div class="md-step"><span class="num">2</span><h3>Pre-Visit Setup Coordination</h3><p>For facilities with specific access requirements (key codes, security systems, after-hours contact protocols), we coordinate all access details in advance. No surprises on the day of service.</p></div>
+<div class="md-step"><span class="num">3</span><h3>Pre-Inspection &amp; Chemistry Selection</h3><p>We walk through the facility to assess carpet type, soiling profile, and areas of particular concern. Chemistry is selected to minimize residue and fragrance for patient-sensitive environments.</p></div>
+<div class="md-step"><span class="num">4</span><h3>Patient-Safe Cleaning</h3><p>Low-VOC, low-residue pre-spray with complete pH-balanced rinse extraction. Equipment noise is managed within the after-hours window with minimal disturbance to facility materials.</p></div>
+<div class="md-step"><span class="num">5</span><h3>Drying Confirmation Before Re-Opening</h3><p>We use the white cloth test and visual inspection to confirm complete drying before leaving. If your facility opens at 8am, we ensure carpet is dry by 7am.</p></div>
+<div class="md-step"><span class="num">6</span><h3>Same-Day Documentation</h3><p>A dated service receipt documenting the cleaning date, facility address, treatment scope, and IICRC certification number is issued same-day &mdash; available for facility maintenance records or lease compliance verification.</p></div>
+</div>
+</div>
+</section>
+
+<section class="md-sec white">
+<div class="inner">
+<p class="md-eyebrow center">FACILITY TYPES</p>
+<h2 class="md-h2 center">Medical Facilities We Clean in Medford and Jackson County</h2>
+<div class="md-card-grid">
+<div class="md-card"><span class="ic">&#127973;</span><h3>Medical and Family Practice Offices</h3><p>Primary care and family medicine offices throughout Medford's four zip codes, including practices affiliated with Asante Health System and Providence Medical.</p></div>
+<div class="md-card"><span class="ic">&#129696;</span><h3>Dental Practices</h3><p>Standalone dental offices, orthodontic practices, and oral surgery facilities across Medford. High patient-hour traffic makes after-hours-only scheduling essential.</p></div>
+<div class="md-card"><span class="ic">&#127981;&#65039;</span><h3>Physical Therapy and Rehabilitation</h3><p>PT, occupational therapy, and rehabilitation facilities combining treatment areas with waiting rooms and administrative carpet. Floor-level patient activity makes carpet hygiene relevant.</p></div>
+<div class="md-card"><span class="ic">&#128300;</span><h3>Specialty Clinics</h3><p>Cardiology, oncology, orthopedics, and other specialty outpatient practices in the Medford medical office park district along Barnett Road and Crater Lake Ave.</p></div>
+<div class="md-card"><span class="ic">&#127970;</span><h3>Medical Office Buildings (Multi-Tenant)</h3><p>Multi-tenant medical office buildings where common areas &mdash; lobbies, corridors, shared waiting areas &mdash; require regular professional maintenance cleaning on a scheduled basis.</p></div>
+<div class="md-card"><span class="ic">&#128657;</span><h3>Urgent Care and Walk-In Clinics</h3><p>High-traffic, patient-facing carpet environments with the most intensive foot-traffic load of any medical facility type. These benefit from the most frequent professional cleaning schedule.</p></div>
+</div>
+</div>
+</section>
+
+<section class="md-stats">
+<div class="grid">
+<div><b>214+</b><span>Jackson County Jobs</span></div>
+<div><b>After-Hours</b><span>Scheduling / Weekend Only</span></div>
+<div><b>Patient-Safe</b><span>Low-Residue Chemistry</span></div>
+<div><b>Same-Day</b><span>Facility-Grade Documentation</span></div>
+</div>
+</section>
+
+<section class="md-sec white">
+<div class="inner">
+<p class="md-eyebrow">WILDFIRE SEASON CONTEXT</p>
+<h2 class="md-h2">Wildfire Smoke Season and Medical Office Carpet in Medford</h2>
+<p class="md-p"><strong>Do Rogue Valley wildfire smoke events affect medical office carpet?</strong></p>
+<div class="md-fire">During July&ndash;September Rogue Valley wildfire events, medical offices that run HVAC to maintain patient comfort draw outdoor air through their filtration systems. PM2.5 that bypasses HVAC filtration settles into carpet pile and can accumulate significant wildfire particulate over a smoke season.</div>
+<p class="md-p">This is particularly relevant for medical practices serving respiratory patients &mdash; pulmonology, allergy, asthma, and COPD management practices where patients are specifically seeking relief from environmental triggers. A post-smoke-season professional cleaning (October, after wildfire season ends) removes the accumulated PM2.5 from the carpet before winter patient season begins.</p>
+<p class="md-p">Our wildfire smoke protocol for medical offices uses an oxidizing pre-spray that chemically converts VOC compounds from smoke PM2.5 before extraction &mdash; the same approach we use in residential smoke treatment, adapted for patient-hours-adjacent scheduling. <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/" style="color:#2D6A4F;font-weight:700;text-decoration:none">Full wildfire smoke protocol &rarr;</a></p>
+</div>
+</section>
+
+<section class="md-sec gray">
+<div class="inner">
+<div class="md-mid-cta">
+<h3>Schedule After-Hours Medical Office Cleaning &mdash; Medford and Jackson County</h3>
+<p>Patient-safe chemistry. Weekend scheduling. Same-day documentation. We work around your patient hours &mdash; you don't work around our schedule.</p>
+<div class="btn-row">
+<a class="btn-p" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="btn-s" href="https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/">&#127970; General Commercial</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="md-sec white">
+<div class="inner">
+<p class="md-eyebrow center">QUESTIONS</p>
+<h2 class="md-h2 center">Medical Office Carpet Cleaning FAQ &mdash; Medford, Oregon</h2>
+<div class="md-faq-wrap" id="md-faq">
+<div class="md-faq-item" aria-expanded="false">
+<button class="md-faq-q">Do you clean carpet in medical offices in Medford?<span class="plus">+</span></button>
+<div class="md-faq-a"><div class="md-faq-a-inner">Yes &mdash; medical offices, dental practices, physical therapy facilities, specialty clinics, and multi-tenant medical office buildings throughout Medford and Jackson County. All medical office cleaning is scheduled after patient hours &mdash; evenings, Saturdays, or Sundays. Patient-safe, low-residue chemistry and same-day documented receipts on every job. (458) 302-0101</div></div>
+</div>
+<div class="md-faq-item" aria-expanded="false">
+<button class="md-faq-q">What chemistry do you use in medical settings?<span class="plus">+</span></button>
+<div class="md-faq-a"><div class="md-faq-a-inner">pH-neutral, low-VOC, low-residue pre-spray with complete pH-balanced rinse extraction. No high-fragrance masking agents. The complete rinse step removes cleaning chemistry from the carpet fiber rather than leaving alkaline or chemical residue that continues off-gassing during patient hours. We confirm drying completion before the facility re-opens.</div></div>
+</div>
+<div class="md-faq-item" aria-expanded="false">
+<button class="md-faq-q">Can you coordinate with our HIPAA-required access protocols?<span class="plus">+</span></button>
+<div class="md-faq-a"><div class="md-faq-a-inner">Yes. We coordinate all after-hours access details in advance &mdash; key codes, security systems, emergency contact protocols, and any HIPAA-adjacent considerations for access to patient-area facilities. Our technician signs any facility-required contractor access documentation.</div></div>
+</div>
+<div class="md-faq-item" aria-expanded="false">
+<button class="md-faq-q">How often should a Medford medical office have carpets professionally cleaned?<span class="plus">+</span></button>
+<div class="md-faq-a"><div class="md-faq-a-inner">Quarterly for high-traffic waiting rooms and patient-facing areas is the recommended standard for most medical practices &mdash; more frequently for urgent care or high-volume walk-in environments. Annual professional cleaning minimum for administrative and lower-traffic areas. Post-wildfire-season cleaning (October) is specifically recommended for respiratory and allergy specialty practices.</div></div>
+</div>
+<div class="md-faq-item" aria-expanded="false">
+<button class="md-faq-q">Do you provide documentation for JCAHO or facility maintenance records?<span class="plus">+</span></button>
+<div class="md-faq-a"><div class="md-faq-a-inner">Yes. Our dated service receipt documents the cleaning date, facility address, treatment scope, and IICRC certification number. For JCAHO documentation purposes, this receipt provides evidence of professional carpet maintenance as part of environmental cleaning compliance. Issued same-day on completion.</div></div>
+</div>
+</div>
+<div class="md-related">
+<a href="https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/"><h4>&#127970; Commercial Carpet Cleaning</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/"><h4>&#128293; Wildfire Smoke Treatment</h4></a>
+<a href="https://carpetcleaningmedfordoregon.com/medford-april-pollen-carpet-allergen-guide/"><h4>&#127800; April Pollen Allergen Guide</h4></a>
+</div>
+</div>
+</section>
+
+<section class="md-sec gray">
+<div class="md-cta">
+<h2>Medical Office Carpet Cleaning &mdash; Medford, After-Hours, Patient-Safe</h2>
+<p>IICRC certified. No fragrance concerns. No residue issues. No patient-hour disruption. Serving the Asante and Providence medical corridors and all Jackson County practices.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/">&#127970; See Commercial Service</a>
+</div>
+</div>
+</section>
+
+<script>
+(function(){'use strict';
+var items=document.querySelectorAll('#md-faq .md-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.md-faq-q');
+var ans=item.querySelector('.md-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.md-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+</div>
+<!-- /wp:html -->

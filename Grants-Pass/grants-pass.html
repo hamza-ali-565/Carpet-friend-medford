@@ -1,0 +1,266 @@
+<!-- wp:html -->
+<div class="cfm-loc-grantsp">
+<style>
+.cfm-loc-grantsp{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-loc-grantsp *,.cfm-loc-grantsp *::before,.cfm-loc-grantsp *::after{box-sizing:border-box}
+.cfm-loc-grantsp p,.cfm-loc-grantsp li,.cfm-loc-grantsp td,.cfm-loc-grantsp th,.cfm-loc-grantsp h1,.cfm-loc-grantsp h2,.cfm-loc-grantsp h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.gp-hero{background:linear-gradient(160deg,#1B4332 0%,#2D6A4F 100%);padding:clamp(52px,7vw,90px) clamp(20px,5vw,40px);text-align:center}
+.gp-hero .badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);font-size:.78rem;font-weight:600;padding:6px 16px;border-radius:22px;margin:0 0 18px}
+.gp-hero h1{color:#fff;font-size:clamp(28px,6vw,44px);font-weight:800;line-height:1.15;letter-spacing:-.5px;margin:0 0 16px}
+.gp-hero .sub{color:rgba(255,255,255,.85);font-size:clamp(15px,2vw,17px);line-height:1.7;margin:0 auto 26px;max-width:780px}
+.gp-hero .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.gp-hero a.btn-primary{background:#fff;color:#1B4332;font-weight:700;font-size:16px;padding:14px 28px;border-radius:6px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:transform .18s}
+.gp-hero a.btn-primary:hover{transform:translateY(-2px)}
+.gp-hero a.btn-secondary{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:12px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.gp-pills{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.gp-pills span{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+
+.gp-sec{padding:clamp(48px,7vw,80px) clamp(20px,5vw,40px)}
+.gp-sec .inner{max-width:1200px;margin:0 auto}
+.gp-sec.white{background:#fff}.gp-sec.gray{background:#F8F9FA}
+.gp-eyebrow{display:block;color:#52B788;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 12px}
+.gp-eyebrow.center{text-align:center}
+.gp-h2{color:#1B4332;font-size:clamp(24px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 18px;letter-spacing:-.3px}
+.gp-h2.center{text-align:center}
+.gp-p{color:#4A5568;font-size:16px;line-height:1.85;margin:0 0 18px}
+.gp-p.center{text-align:center;max-width:780px;margin-left:auto;margin-right:auto}
+
+.gp-aeo{background:#E8F5E9;border-left:4px solid #1B4332;border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:#1B4332;max-width:1200px;margin:-30px auto 0}
+
+.gp-cond-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.gp-cond-item{background:#fff;border:1.5px solid #E2E8F0;border-radius:14px;padding:28px;transition:all .25s}
+.gp-cond-item:hover{border-color:#52B788;transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.gp-cond-item .ic{font-size:1.75rem;display:block;margin-bottom:12px}
+.gp-cond-item h3{color:#1B4332;font-size:1.05rem;font-weight:600;margin:0 0 8px}
+.gp-cond-item p{color:#4A5568;font-size:14.5px;line-height:1.75;margin:0 0 10px}
+.gp-cond-item a{color:#2D6A4F;font-weight:700;font-size:13.5px;text-decoration:none}
+
+.gp-svc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:32px}
+.gp-svc-card{background:#fff;border:1.5px solid #E2E8F0;border-radius:14px;padding:22px;transition:all .25s}
+.gp-svc-card:hover{border-color:#52B788;transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.gp-svc-card h3{color:#1A1A1A;font-size:16px;font-weight:600;margin:0 0 8px}
+.gp-svc-card p{color:#4A5568;font-size:14px;line-height:1.65;margin:0 0 12px}
+.gp-svc-card a{color:#2D6A4F;font-size:13.5px;font-weight:700;text-decoration:none}
+
+.gp-job-card{background:#E8F5E9;border:1.5px solid #E2E8F0;border-radius:14px;padding:32px 28px;margin-top:32px}
+.gp-job-card .job-tag{display:inline-block;background:#fff;color:#1B4332;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin:0 6px 18px 0}
+.gp-job-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.gp-job-grid h4{color:#1B4332;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin:0 0 10px}
+.gp-job-grid p{color:#4A5568;font-size:14.5px;line-height:1.75;margin:0}
+.gp-stat-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px;border-top:1px solid #cfe3d3;padding-top:24px}
+.gp-stat-mini div{text-align:center}
+.gp-stat-mini b{display:block;color:#1B4332;font-size:1.2rem;font-weight:800}
+.gp-stat-mini span{color:#6B7280;font-size:12.5px}
+
+.gp-stats{background:#1B4332;padding:56px 24px;text-align:center}
+.gp-stats .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.gp-stats b{display:block;color:#fff;font-size:1.9rem;font-weight:800}
+.gp-stats span{color:rgba(255,255,255,.72);font-size:.875rem}
+
+.gp-mid-cta{background:#E8F5E9;border:1.5px solid #E2E8F0;border-radius:14px;padding:32px;text-align:center;max-width:1200px;margin:0 auto}
+.gp-mid-cta h3{color:#1B4332;margin:0 0 8px;font-size:1.4rem}
+.gp-mid-cta p{color:#4A5568;margin:0 0 20px}
+.gp-mid-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.gp-mid-cta a.btn-p{background:#1B4332;color:#fff;font-weight:600;padding:14px 28px;border-radius:6px;text-decoration:none}
+.gp-mid-cta a.btn-s{border:2px solid #1B4332;color:#1B4332;font-weight:600;padding:12px 26px;border-radius:6px;text-decoration:none}
+
+.gp-nearby{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.gp-nearby a{display:inline-block;background:#fff;border:1.5px solid #E2E8F0;border-radius:8px;padding:10px 16px;font-size:.9rem;font-weight:500;color:#2D6A4F;text-decoration:none}
+.gp-nearby a:hover{border-color:#52B788;color:#1B4332}
+
+.gp-faq-wrap{max-width:820px;margin:32px auto 0}
+.gp-faq-item{border-bottom:1px solid #E2E8F0}
+.gp-faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 0;font-size:16px;font-weight:600;color:#1A1A1A;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.gp-faq-q .plus{color:#52B788;font-size:1.3rem;font-weight:300;flex-shrink:0;transition:transform .2s}
+.gp-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.gp-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.gp-faq-a-inner{padding:0 0 20px;font-size:15px;color:#4A5568;line-height:1.8}
+.gp-faq-a-inner a{color:#2D6A4F;font-weight:700;text-decoration:none}
+
+.gp-cta{background:#1B4332;padding:clamp(56px,7vw,64px) clamp(20px,5vw,40px);text-align:center;border-radius:16px;max-width:1200px;margin:0 auto}
+.gp-cta h2{color:#fff;font-size:clamp(24px,4.5vw,34px);font-weight:800;line-height:1.2;margin:0 0 12px}
+.gp-cta p{color:rgba(255,255,255,.82);font-size:16px;margin:0 0 24px}
+.gp-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.gp-cta a.btn-w{background:#fff;color:#1B4332;font-weight:800;font-size:16px;padding:14px 30px;border-radius:6px;text-decoration:none}
+.gp-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:12px 30px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,.55)}
+
+@media(max-width:1024px){.gp-svc-grid{grid-template-columns:1fr 1fr}.gp-stats .grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.gp-cond-grid,.gp-svc-grid,.gp-job-grid{grid-template-columns:1fr}.gp-aeo{margin-top:0}.gp-stat-mini{grid-template-columns:1fr 1fr}}
+@media(max-width:767px){.gp-hero .btn-row,.gp-cta .btn-row,.gp-mid-cta .btn-row{flex-direction:column;align-items:stretch;max-width:320px;margin-left:auto;margin-right:auto}.gp-hero a,.gp-cta a,.gp-mid-cta a{text-align:center;justify-content:center}}
+</style>
+
+<section class="gp-hero">
+<span class="badge">Grants Pass, Oregon &middot; Josephine County</span>
+<h1>Carpet Cleaning in Grants Pass, Oregon</h1>
+<p class="sub">Truck-mounted, IICRC-certified carpet cleaning in Grants Pass OR &mdash; from Medford's most reviewed carpet cleaning company. Same process. Same upfront pricing. Just 30 miles closer than you'd think.</p>
+<div class="btn-row">
+<a class="btn-primary" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="btn-secondary" href="https://carpetcleaningmedfordoregon.com/#book">&#128197; Book Online &rarr;</a>
+</div>
+<div class="gp-pills">
+<span>&#10003; IICRC Certified</span>
+<span>&#10003; Truck-Mounted 195&deg;F</span>
+<span>&#10003; Upholstery Cleaning Available</span>
+<span>&#10003; Upfront Pricing</span>
+<span>&#10003; No Hidden Fees</span>
+</div>
+</section>
+
+<div class="gp-aeo">Yes &mdash; Carpet Friend Medford provides IICRC-certified carpet cleaning in Grants Pass, Oregon and throughout Josephine County. Our truck-mounted system at 195&deg;F serves Grants Pass OR residential and commercial properties with the same upfront pricing and process as our core Medford service area. Upholstery cleaning available. Cleaning services Grants Pass Oregon: (458) 302-0101.</div>
+
+<section class="gp-sec white">
+<div class="inner">
+<p class="gp-eyebrow">FROM MEDFORD TO GRANTS PASS</p>
+<h2 class="gp-h2">Carpet Cleaning Grants Pass &mdash; Why We Make the Drive</h2>
+<p class="gp-p"><strong>Why would a Medford carpet cleaning company serve Grants Pass Oregon?</strong> Grants Pass is 30 miles northwest of Medford on I-5 &mdash; a straight-shot drive that takes under 40 minutes in normal conditions. For Josephine County residents who have searched for carpet cleaners Grants Pass without finding a consistently IICRC-certified, truck-mounted option, we've extended our service area across the Josephine County line.</p>
+<p class="gp-p">The honest answer about why Grants Pass homeowners call us: IICRC-certified, truck-mounted cleaning services in Grants Pass OR are genuinely harder to find than in Medford's market. Our truck-mounted system at 195&deg;F delivers cleaning quality that portable and rental machines can't match &mdash; and we bring that same equipment to every Grants Pass job at the same pricing standards.</p>
+</div>
+</section>
+
+<section class="gp-sec gray">
+<div class="inner">
+<p class="gp-eyebrow">GRANTS PASS CARPET CONDITIONS</p>
+<h2 class="gp-h2">What Grants Pass Carpet Cleaning Looks Like in Practice</h2>
+<p class="gp-p"><strong>What carpet challenges are common in Grants Pass homes?</strong></p>
+<div class="gp-cond-grid">
+<div class="gp-cond-item"><span class="ic">&#127754;</span><h3>Rogue River Corridor &mdash; Agricultural and Organic Soil</h3><p>Grants Pass sits at the heart of the Rogue River corridor. Homes near the Rogue River, the Applegate River tributary, and the Illinois Valley farming areas deal with a rich, organic agricultural loam that's different from Medford's volcanic clay. This soil is moisture-retentive and packed with organic material &mdash; it requires broad-spectrum alkaline pre-spray with complete extraction to address.</p></div>
+<div class="gp-cond-item"><span class="ic">&#127794;</span><h3>Wooded Acreage Properties &mdash; Needle and Organic Debris</h3><p>Many Grants Pass homes sit on wooded lots along the Redwood Highway corridor and in the foothills toward the Siskiyou National Forest boundary. Needle debris, leaf tannins, and forest organic material tracked in from wooded properties creates a different soil profile from in-town addresses on 6th Street or the downtown corridor.</p></div>
+<div class="gp-cond-item"><span class="ic">&#128062;</span><h3>Rural Pet Households</h3><p>Grants Pass's rural-residential character means larger properties, more outdoor pet access, and higher per-household pet counts than urban markets. Rural pet households produce the most intensive enzyme treatment demand &mdash; dogs with acreage access track organic soil and bring in contamination from yards and outbuildings. UV inspection at pre-inspection maps every contamination zone before any work begins.</p><a href="https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/">Learn more &rarr;</a></div>
+<div class="gp-cond-item"><span class="ic">&#128293;</span><h3>Rogue Valley Wildfire Smoke</h3><p>Josephine County and Jackson County share the same wildfire smoke exposure profile. The Rogue Valley's July&ndash;September smoke season affects Grants Pass as directly as it affects Medford. PM2.5 from Siskiyou corridor fires and northern California fires infiltrates Grants Pass homes through the same mechanisms as Medford homes.</p><a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+</div>
+</div>
+</section>
+
+<section class="gp-sec white">
+<div class="inner">
+<p class="gp-eyebrow center">WHAT WE OFFER</p>
+<h2 class="gp-h2 center">Cleaning Services Grants Pass Oregon</h2>
+<div class="gp-svc-grid">
+<div class="gp-svc-card"><h3>&#127968; Residential Carpet Cleaning</h3><p>Truck-mounted 195&deg;F extraction for Grants Pass homes &mdash; acreage properties, in-town residential, and everything in between.</p><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="gp-svc-card"><h3>&#127961;&#65039; Upholstery Cleaning Grants Pass</h3><p>Sofa, sectional, loveseat, and chair upholstery cleaning in Grants Pass OR. Fabric code checked before any chemistry contact.</p><a href="https://carpetcleaningmedfordoregon.com/upholstery-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="gp-svc-card"><h3>&#128062; Pet Urine &amp; Odor Removal</h3><p>UV inspection and enzyme treatment for Grants Pass pet households. Rural property pet contamination addressed same as Medford service area.</p><a href="https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/">Learn more &rarr;</a></div>
+<div class="gp-svc-card"><h3>&#128230; Move-Out Carpet Cleaning</h3><p>IICRC-certified dated receipt for Josephine County rental properties. Same 48-hour turnaround availability as Medford service.</p><a href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="gp-svc-card"><h3>&#128293; Wildfire Smoke Treatment</h3><p>Oxidizing pre-spray protocol for Rogue Valley fire season smoke accumulation in Grants Pass homes.</p><a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="gp-svc-card"><h3>&#127807; Area Rug Cleaning</h3><p>Oriental, Persian, and area rug cleaning for Grants Pass homeowners.</p><a href="https://carpetcleaningmedfordoregon.com/oriental-rug-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+</div>
+</div>
+</section>
+
+<section class="gp-sec gray">
+<div class="inner">
+<p class="gp-eyebrow">REAL JOB &middot; GRANTS PASS &middot; JOSEPHINE COUNTY</p>
+<h2 class="gp-h2">Grants Pass Job &mdash; Acreage Property, Rural Pet Household + Wildfire Smoke</h2>
+<div class="gp-job-card">
+<span class="job-tag">&#128062; Rural Pet Protocol</span><span class="job-tag">&#128293; Smoke Treatment</span><span class="job-tag">Grants Pass OR</span>
+<div class="gp-job-grid">
+<div><h4>The Situation</h4><p>A Grants Pass homeowner near the Rogue River corridor contacted us for post-wildfire-season cleaning. The property was on 2 acres with three dogs &mdash; large-breed, outdoor-access dogs that tracked organic Rogue River agricultural soil into the home year-round. UV inspection revealed contamination in the living room and master bedroom. South-facing windows during August had also allowed PM2.5 accumulation in the living room.</p></div>
+<div><h4>What We Did</h4><p>Fiber pre-inspection: mid-grade nylon, 2012 installation, backing intact. Pet zones: dog enzyme pre-spray, 12-minute extended dwell (rural dogs, more outdoor contamination per zone), sub-surface extraction on one concentrated area. Smoke treatment: oxidizing pre-spray with 10-minute dwell on the living room. Main extraction: 195&deg;F, double pass on the living room (combined pet + smoke load), pH rinse, carpet rake.</p></div>
+<div><h4>The Result</h4><p>Pet odor neutral at the 48-hour check. Smoke odor addressed in the same visit. Agricultural soil accumulation cleared from both rooms. The homeowner booked an annual October cleaning for the following year to address the seasonal pattern.</p></div>
+</div>
+<div class="gp-stat-mini">
+<div><b>30 miles</b><span>Distance from Medford</span></div>
+<div><b>3 dogs</b><span>Rural pet household</span></div>
+<div><b>195&deg;F</b><span>Extraction temperature</span></div>
+<div><b>October</b><span>Annual booking established</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="gp-stats">
+<div class="grid">
+<div><b>30 Miles</b><span>Distance from Medford</span></div>
+<div><b>&lt;40 Min</b><span>Travel Time</span></div>
+<div><b>Served</b><span>Josephine County</span></div>
+<div><b>48 Hrs</b><span>Turnaround</span></div>
+</div>
+</section>
+
+<section class="gp-sec white">
+<div class="inner">
+<div class="gp-mid-cta">
+<h3>Carpet Cleaning Grants Pass OR &mdash; Same Process as Medford</h3>
+<p>IICRC certified. Truck-mounted. Upfront pricing. Serving Josephine County with the same process and standards as our core Medford service area.</p>
+<div class="btn-row">
+<a class="btn-p" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="btn-s" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128202; Pricing Guide</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="gp-sec gray">
+<div class="inner">
+<p class="gp-eyebrow center">NEARBY AREAS</p>
+<h2 class="gp-h2 center">Also Serving Nearby Areas</h2>
+<ul class="gp-nearby">
+<li><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">&#128205; Medford (All Areas)</a></li>
+<li><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-rogue-river-oregon/">&#128205; Rogue River, OR</a></li>
+<li><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-gold-hill-oregon/">&#128205; Gold Hill, OR</a></li>
+</ul>
+</div>
+</section>
+
+<section class="gp-sec white">
+<div class="inner">
+<p class="gp-eyebrow center">QUESTIONS</p>
+<h2 class="gp-h2 center">Carpet Cleaning Grants Pass Oregon &mdash; FAQ</h2>
+<div class="gp-faq-wrap" id="gp-faq">
+<div class="gp-faq-item" aria-expanded="false">
+<button class="gp-faq-q">Do you do carpet cleaning in Grants Pass, OR?<span class="plus">+</span></button>
+<div class="gp-faq-a"><div class="gp-faq-a-inner">Yes &mdash; Grants Pass and Josephine County are part of our extended service area. We're based in Medford (30 miles east on I-5) and travel to Grants Pass for residential and commercial carpet cleaning. IICRC certified, truck-mounted, upfront pricing. Call (458) 302-0101 to book.</div></div>
+</div>
+<div class="gp-faq-item" aria-expanded="false">
+<button class="gp-faq-q">Do you offer upholstery cleaning in Grants Pass?<span class="plus">+</span></button>
+<div class="gp-faq-a"><div class="gp-faq-a-inner">Yes &mdash; upholstery cleaning Grants Pass is available alongside carpet cleaning. We clean sofas, sectionals, chairs, and other upholstered furniture at Grants Pass addresses. Fabric code checked before any chemistry contact. Same appointment as your carpet cleaning or a standalone visit.</div></div>
+</div>
+<div class="gp-faq-item" aria-expanded="false">
+<button class="gp-faq-q">Do you serve all of Josephine County?<span class="plus">+</span></button>
+<div class="gp-faq-a"><div class="gp-faq-a-inner">Grants Pass city limits and the surrounding Josephine County area &mdash; including properties on the Rogue River corridor, the Illinois Valley area, and the Redwood Highway corridor. For properties significantly outside Grants Pass proper, call and describe the address &mdash; we'll confirm service availability.</div></div>
+</div>
+<div class="gp-faq-item" aria-expanded="false">
+<button class="gp-faq-q">Is the price the same in Grants Pass as in Medford?<span class="plus">+</span></button>
+<div class="gp-faq-a"><div class="gp-faq-a-inner">Same pricing structure, confirmed before any work begins. Upfront pricing is our standard regardless of location. See our pricing guide for reference ranges. <a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">Learn more</a></div></div>
+</div>
+<div class="gp-faq-item" aria-expanded="false">
+<button class="gp-faq-q">What carpet problems are most common in Grants Pass homes?<span class="plus">+</span></button>
+<div class="gp-faq-a"><div class="gp-faq-a-inner">Rural Grants Pass properties near the Rogue River corridor deal with agricultural organic soil and high pet-household pet ownership &mdash; both addressed with our standard pre-inspection and enzyme protocol. Wildfire smoke season is shared with Medford's July&ndash;September exposure window. For the specific cleaning services Grants Pass homeowners need, call and describe your situation &mdash; (458) 302-0101.</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="gp-sec gray">
+<div class="gp-cta">
+<h2>Carpet Cleaning Grants Pass Oregon &mdash; IICRC Certified, 30 Miles from Medford</h2>
+<p>Same truck-mounted process. Same upfront pricing. Upholstery cleaning available. Serving Josephine County from our Medford, OR base.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/#book">&#128197; Book Online</a>
+</div>
+</div>
+</section>
+
+<script>
+(function(){'use strict';
+var items=document.querySelectorAll('#gp-faq .gp-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.gp-faq-q');
+var ans=item.querySelector('.gp-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.gp-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+</div>
+<!-- /wp:html -->

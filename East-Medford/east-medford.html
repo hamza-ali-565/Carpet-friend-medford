@@ -1,0 +1,266 @@
+<!-- wp:html -->
+<div class="cfm-loc-east">
+<style>
+.cfm-loc-east{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cfm-loc-east *,.cfm-loc-east *::before,.cfm-loc-east *::after{box-sizing:border-box}
+.cfm-loc-east p,.cfm-loc-east li,.cfm-loc-east td,.cfm-loc-east th,.cfm-loc-east h1,.cfm-loc-east h2,.cfm-loc-east h3{word-wrap:break-word;overflow-wrap:break-word}
+
+.em-hero{background:linear-gradient(160deg,#1B4332 0%,#2D6A4F 100%);padding:clamp(52px,7vw,90px) clamp(20px,5vw,40px);text-align:center}
+.em-hero .badge{display:inline-block;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);font-size:.78rem;font-weight:600;padding:6px 16px;border-radius:22px;margin:0 0 18px}
+.em-hero h1{color:#fff;font-size:clamp(28px,6vw,44px);font-weight:800;line-height:1.15;letter-spacing:-.5px;margin:0 0 16px}
+.em-hero .sub{color:rgba(255,255,255,.85);font-size:clamp(15px,2vw,17px);line-height:1.7;margin:0 auto 26px;max-width:780px}
+.em-hero .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.em-hero a.btn-primary{background:#fff;color:#1B4332;font-weight:700;font-size:16px;padding:14px 28px;border-radius:6px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:transform .18s}
+.em-hero a.btn-primary:hover{transform:translateY(-2px)}
+.em-hero a.btn-secondary{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:12px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.em-pills{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.em-pills span{color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500}
+
+.em-sec{padding:clamp(48px,7vw,80px) clamp(20px,5vw,40px)}
+.em-sec .inner{max-width:1200px;margin:0 auto}
+.em-sec.white{background:#fff}.em-sec.gray{background:#F8F9FA}
+.em-eyebrow{display:block;color:#52B788;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 12px}
+.em-eyebrow.center{text-align:center}
+.em-h2{color:#1B4332;font-size:clamp(24px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 18px;letter-spacing:-.3px}
+.em-h2.center{text-align:center}
+.em-p{color:#4A5568;font-size:16px;line-height:1.85;margin:0 0 18px}
+.em-p.center{text-align:center;max-width:780px;margin-left:auto;margin-right:auto}
+
+.em-aeo{background:#E8F5E9;border-left:4px solid #1B4332;border-radius:0 10px 10px 0;padding:20px 24px;font-size:1.05rem;line-height:1.75;color:#1B4332;max-width:1200px;margin:-30px auto 0}
+
+.em-cond-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.em-cond-item{background:#fff;border:1.5px solid #E2E8F0;border-radius:14px;padding:28px;transition:all .25s}
+.em-cond-item:hover{border-color:#52B788;transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.em-cond-item .ic{font-size:1.75rem;display:block;margin-bottom:12px}
+.em-cond-item h3{color:#1B4332;font-size:1.05rem;font-weight:600;margin:0 0 8px}
+.em-cond-item p{color:#4A5568;font-size:14.5px;line-height:1.75;margin:0 0 10px}
+.em-cond-item .tx{color:#6B7280;font-size:13px;font-weight:600}
+.em-cond-item a{color:#2D6A4F;font-weight:700;font-size:13.5px;text-decoration:none}
+
+.em-svc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:32px}
+.em-svc-card{background:#fff;border:1.5px solid #E2E8F0;border-radius:14px;padding:22px;transition:all .25s}
+.em-svc-card:hover{border-color:#52B788;transform:translateY(-3px);box-shadow:0 10px 28px rgba(27,67,50,.11)}
+.em-svc-card h3{color:#1A1A1A;font-size:16px;font-weight:600;margin:0 0 8px}
+.em-svc-card p{color:#4A5568;font-size:14px;line-height:1.65;margin:0 0 12px}
+.em-svc-card a{color:#2D6A4F;font-size:13.5px;font-weight:700;text-decoration:none}
+
+.em-job-card{background:#E8F5E9;border:1.5px solid #E2E8F0;border-radius:14px;padding:32px 28px;margin-top:32px}
+.em-job-card .job-tag{display:inline-block;background:#fff;color:#1B4332;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin:0 6px 18px 0}
+.em-job-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.em-job-grid h4{color:#1B4332;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin:0 0 10px}
+.em-job-grid p{color:#4A5568;font-size:14.5px;line-height:1.75;margin:0}
+.em-stat-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px;border-top:1px solid #cfe3d3;padding-top:24px}
+.em-stat-mini div{text-align:center}
+.em-stat-mini b{display:block;color:#1B4332;font-size:1.2rem;font-weight:800}
+.em-stat-mini span{color:#6B7280;font-size:12.5px}
+
+.em-stats{background:#1B4332;padding:56px 24px;text-align:center}
+.em-stats .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.em-stats b{display:block;color:#fff;font-size:2.1rem;font-weight:800}
+.em-stats span{color:rgba(255,255,255,.72);font-size:.875rem}
+
+.em-mid-cta{background:#E8F5E9;border:1.5px solid #E2E8F0;border-radius:14px;padding:32px;text-align:center;max-width:1200px;margin:0 auto}
+.em-mid-cta h3{color:#1B4332;margin:0 0 8px;font-size:1.4rem}
+.em-mid-cta p{color:#4A5568;margin:0 0 20px}
+.em-mid-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.em-mid-cta a.btn-p{background:#1B4332;color:#fff;font-weight:600;padding:14px 28px;border-radius:6px;text-decoration:none}
+.em-mid-cta a.btn-s{border:2px solid #1B4332;color:#1B4332;font-weight:600;padding:12px 26px;border-radius:6px;text-decoration:none}
+
+.em-nearby{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.em-nearby a{display:inline-block;background:#fff;border:1.5px solid #E2E8F0;border-radius:8px;padding:10px 16px;font-size:.9rem;font-weight:500;color:#2D6A4F;text-decoration:none}
+.em-nearby a:hover{border-color:#52B788;color:#1B4332}
+
+.em-faq-wrap{max-width:820px;margin:32px auto 0}
+.em-faq-item{border-bottom:1px solid #E2E8F0}
+.em-faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 0;font-size:16px;font-weight:600;color:#1A1A1A;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:inherit}
+.em-faq-q .plus{color:#52B788;font-size:1.3rem;font-weight:300;flex-shrink:0;transition:transform .2s}
+.em-faq-item[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.em-faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.em-faq-a-inner{padding:0 0 20px;font-size:15px;color:#4A5568;line-height:1.8}
+.em-faq-a-inner a{color:#2D6A4F;font-weight:700;text-decoration:none}
+
+.em-cta{background:#1B4332;padding:clamp(56px,7vw,64px) clamp(20px,5vw,40px);text-align:center;border-radius:16px;max-width:1200px;margin:0 auto}
+.em-cta h2{color:#fff;font-size:clamp(24px,4.5vw,34px);font-weight:800;line-height:1.2;margin:0 0 12px}
+.em-cta p{color:rgba(255,255,255,.82);font-size:16px;margin:0 0 24px}
+.em-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.em-cta a.btn-w{background:#fff;color:#1B4332;font-weight:800;font-size:16px;padding:14px 30px;border-radius:6px;text-decoration:none}
+.em-cta a.btn-o{background:transparent;color:#fff;font-weight:600;font-size:16px;padding:12px 30px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,.55)}
+
+@media(max-width:1024px){.em-svc-grid{grid-template-columns:1fr 1fr}.em-stats .grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.em-cond-grid,.em-svc-grid,.em-job-grid{grid-template-columns:1fr}.em-aeo{margin-top:0}.em-stat-mini{grid-template-columns:1fr 1fr}}
+@media(max-width:767px){.em-hero .btn-row,.em-cta .btn-row,.em-mid-cta .btn-row{flex-direction:column;align-items:stretch;max-width:320px;margin-left:auto;margin-right:auto}.em-hero a,.em-cta a,.em-mid-cta a{text-align:center;justify-content:center}}
+</style>
+
+<section class="em-hero">
+<span class="badge">East Medford &middot; 97504</span>
+<h1>Carpet Cleaning in East Medford, Oregon</h1>
+<p class="sub">Table Rocks trail dust, wildfire smoke seasons, and active pet households &mdash; East Medford carpet takes more punishment than most neighborhoods in the valley.</p>
+<div class="btn-row">
+<a class="btn-primary" href="tel:+14583020101">&#128222; Call or Text (458) 302-0101</a>
+<a class="btn-secondary" href="https://carpetcleaningmedfordoregon.com/#book">&#128197; Book Online &rarr;</a>
+</div>
+<div class="em-pills">
+<span>&#10003; IICRC Certified</span>
+<span>&#10003; Truck-Mounted at 195&deg;F</span>
+<span>&#10003; Table Rocks Soil Specialist</span>
+<span>&#10003; Wildfire Smoke Protocol</span>
+<span>&#10003; Upfront Pricing</span>
+</div>
+</section>
+
+<div class="em-aeo">Yes &mdash; Carpet Friend Medford cleans carpet throughout East Medford (97504) with truck-mounted, IICRC-certified hot water extraction. East Medford's proximity to Table Rocks Trailhead means volcanic clay soil is our most common challenge here. We also handle wildfire smoke treatment and pet contamination &mdash; the three dominant carpet issues in this zip code.</div>
+
+<section class="em-sec white">
+<div class="inner">
+<p class="em-eyebrow">COMMUNITY CONTEXT</p>
+<h2 class="em-h2">East Medford, Oregon &mdash; The Trail Neighborhood</h2>
+<p class="em-p">East Medford (97504) is the part of Medford that most people mean when they say "the newer side of town." The housing stock along the Highway 62 corridor, out toward Crater Lake Highway, and into subdivisions around Delta Waters Road, Springbrook Road, and East McAndrews Road was built predominantly between 1990 and 2015. It's where a significant portion of Medford's active, outdoor-lifestyle households are concentrated &mdash; families with trail dogs, runners, mountain bikers, and hikers who access Table Rocks Trailhead as a daily routine rather than a weekend destination.</p>
+<p class="em-p">The soil profile in East Medford is more distinctive than any other Medford neighborhood. The Table Rocks Trailhead on Table Rock Road puts hundreds of hikers and their dogs on red volcanic basalt clay daily. That clay comes home on boots, paws, and clothing. It's fine-grained, silicate-heavy, and significantly more abrasive to carpet fiber than ordinary household dust. We see it in every East Medford home that has trail access &mdash; and East Medford has trail access.</p>
+</div>
+</section>
+
+<section class="em-sec gray">
+<div class="inner">
+<p class="em-eyebrow">WHAT EAST MEDFORD CARPET DEALS WITH</p>
+<h2 class="em-h2">The Four Soil Profiles We See Every Week in 97504</h2>
+<div class="em-cond-grid">
+<div class="em-cond-item"><span class="ic">&#127956;</span><h3>Table Rocks Volcanic Clay (Most Common)</h3><p>The red-orange volcanic basalt clay from Table Rocks Trailhead and Roxy Ann Peak access is the defining soil challenge of East Medford carpet cleaning. On paws and boot soles, the clay is silicate-heavy and fine-grained &mdash; it packs into carpet pile under foot traffic and bonds to fiber differently than organic soil. We see rust-orange staining in entry carpet and living rooms across East Medford at a rate no other Medford neighborhood matches.</p><p class="tx">Treatment: Alkaline pre-spray with extended dwell to release volcanic mineral bonds, followed by 195&deg;F truck-mounted extraction.</p></div>
+<div class="em-cond-item"><span class="ic">&#128293;</span><h3>Wildfire Smoke PM2.5 (July&ndash;September, Every Year)</h3><p>East Medford's south-facing bedroom and living room windows collect more wildfire PM2.5 infiltration than north-facing rooms during summer smoke events. Homes in the Delta Waters Road corridor and east-facing subdivisions have above-average smoke infiltration from the Cascade and Siskiyou fire corridors.</p><p class="tx">Treatment: Oxidizing pre-spray with 8-minute minimum dwell, 195&deg;F extraction, pH-balanced rinse.</p></div>
+<div class="em-cond-item"><span class="ic">&#128062;</span><h3>Trail Dog Pet Contamination</h3><p>East Medford has the highest concentration of working and trail dog breeds in Medford &mdash; Labs, Australian Shepherds, Border Collies, and Weimaraners are the breeds we most often encounter in 97504 homes. Trail dogs using Table Rocks or Bear Creek Greenway daily track mud, volcanic clay, and paw contamination into home carpet.</p><p class="tx">Treatment: UV pre-inspection, enzyme treatment, sub-surface extraction for pad contamination zones.</p></div>
+<div class="em-cond-item"><span class="ic">&#127800;</span><h3>Rogue Valley Pollen (March&ndash;June)</h3><p>The Bear Creek Valley's pear orchard concentration produces some of Oregon's highest pollen counts during April bloom &mdash; Pear Blossom Festival timing. East Medford homes accumulate pollen in carpet alongside volcanic clay and pet dander &mdash; the highest compound allergen burden in the Rogue Valley for this combination.</p><p class="tx">Treatment: Standard HWE addresses pollen accumulation effectively; pre-season cleaning in late March clears winter accumulation before peak pollen.</p></div>
+</div>
+</div>
+</section>
+
+<section class="em-sec white">
+<div class="inner">
+<p class="em-eyebrow center">WHAT WE CLEAN IN EAST MEDFORD</p>
+<h2 class="em-h2 center">Carpet Cleaning Services &mdash; East Medford, Oregon (97504)</h2>
+<div class="em-svc-grid">
+<div class="em-svc-card"><h3>&#128293; Wildfire Smoke Treatment</h3><p>Oxidizing pre-spray and extended-dwell extraction for East Medford homes with persistent smoke odor from summer fire events &mdash; especially south-facing rooms in the Delta Waters Road and Highway 62 corridor.</p><a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="em-svc-card"><h3>&#127968; Residential Carpet Cleaning</h3><p>Full truck-mounted extraction at 195&deg;F for every East Medford home &mdash; from newer builds in the Springbrook Road area to 1990s construction along East McAndrews.</p><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="em-svc-card"><h3>&#128062; Pet Urine &amp; Odor Removal</h3><p>UV pre-inspection, enzyme treatment, and sub-surface extraction for the trail-dog households concentrated in 97504. Zone-specific formula for cat and dog.</p><a href="https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/">Learn more &rarr;</a></div>
+<div class="em-svc-card"><h3>&#129756; Stair Carpet Cleaning</h3><p>Two-story homes in East Medford subdivisions often have carpeted staircases with heavy pet hair accumulation at tread edges. Stair-specific tool and technique.</p><a href="https://carpetcleaningmedfordoregon.com/stair-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="em-svc-card"><h3>&#128230; Move-Out Carpet Cleaning</h3><p>Dated service receipt for security deposit documentation, 48-hour turnaround for East Medford rental properties.</p><a href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+<div class="em-svc-card"><h3>&#127961;&#65039; Upholstery Cleaning</h3><p>Sofas, sectionals, and pet-used furniture in East Medford homes cleaned with fiber-appropriate chemistry checked before treatment begins.</p><a href="https://carpetcleaningmedfordoregon.com/upholstery-cleaning-medford-oregon/">Learn more &rarr;</a></div>
+</div>
+</div>
+</section>
+
+<section class="em-sec gray">
+<div class="inner">
+<p class="em-eyebrow">REAL JOB &middot; EAST MEDFORD &middot; 97504</p>
+<h2 class="em-h2">East Medford Job &mdash; Table Rocks Trail Dog Household, Accumulated Volcanic Clay</h2>
+<div class="em-job-card">
+<span class="job-tag">&#127956; Volcanic Clay Protocol</span><span class="job-tag">&#128062; Pet Treatment</span><span class="job-tag">97504</span>
+<div class="em-job-grid">
+<div><h4>The Situation</h4><p>A family in the East Medford subdivision off Delta Waters Road had two Labrador Retrievers that use Table Rocks Trailhead 4&ndash;5 times per week. The living room and entry hall carpet had visible rust-orange discoloration consistent with Table Rocks basalt clay accumulation &mdash; the entry hall was the worst, a dense, compacted clay layer that made the carpet feel stiff. They'd rented a Rug Doctor six months prior with minimal improvement.</p></div>
+<div><h4>What We Did</h4><p>Pre-inspection confirmed silicate clay contamination throughout the pile, concentrated in the entry, living room traffic lanes, and near the sliding door. UV inspection revealed a pet contamination zone in one corner. Pre-spray: alkaline pre-conditioner at pH 9.5, 10-minute dwell (extended given compaction severity), with manual agitation on clay zones before wand extraction. Truck-mounted HWE at 205&deg;F, two passes on the entry hall, pH-balanced rinse, dry stroke, carpet rake. UV-identified pet zone received enzyme pre-treatment before and after the main pass.</p></div>
+<div><h4>The Result</h4><p>Rust-orange coloring reduced by approximately 90% in the entry hall, with only a slight residual tint in the most compacted section. Pet zone odor-neutral at the 48-hour check. The homeowner had been considering carpet replacement in the entry hall; the cleaning result made that unnecessary.</p></div>
+</div>
+<div class="em-stat-mini">
+<div><b>205&deg;F</b><span>Extended temperature for volcanic clay</span></div>
+<div><b>10 min</b><span>Pre-spray dwell (extended protocol)</span></div>
+<div><b>2</b><span>Extraction passes on entry hall</span></div>
+<div><b>48 hr</b><span>Post-job odor check (pet zone)</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="em-stats">
+<div class="grid">
+<div><b>Table Rocks</b><span>Trail Soil Challenge</span></div>
+<div><b>Jul&ndash;Sep</b><span>Wildfire Season Annually</span></div>
+<div><b>Labs &amp; Aussies</b><span>Most Common Breed</span></div>
+<div><b>97504</b><span>ZIP Code</span></div>
+</div>
+</section>
+
+<section class="em-sec white">
+<div class="inner">
+<div class="em-mid-cta">
+<h3>Book East Medford Carpet Cleaning &mdash; Same-Week Scheduling</h3>
+<p>IICRC certified. Truck-mounted. Table Rocks trail dust and wildfire smoke are what we see most in 97504 &mdash; and what we're best at treating.</p>
+<div class="btn-row">
+<a class="btn-p" href="tel:+14583020101">&#128222; Call (458) 302-0101</a>
+<a class="btn-s" href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/">&#128202; Pricing Guide</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="em-sec gray">
+<div class="inner">
+<p class="em-eyebrow center">NEARBY AREAS</p>
+<h2 class="em-h2 center">Also Serving Neighborhoods and Cities Near East Medford</h2>
+<ul class="em-nearby">
+<li><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-south-medford-oregon/">&#128205; South Medford (shares 97504)</a></li>
+<li><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/">&#128205; North Medford (97501)</a></li>
+<li><a href="https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/">&#128205; Medford (All Areas)</a></li>
+</ul>
+</div>
+</section>
+
+<section class="em-sec white">
+<div class="inner">
+<p class="em-eyebrow center">QUESTIONS</p>
+<h2 class="em-h2 center">East Medford Carpet Cleaning &mdash; Frequently Asked Questions</h2>
+<div class="em-faq-wrap" id="em-faq">
+<div class="em-faq-item" aria-expanded="false">
+<button class="em-faq-q">Do you serve East Medford, Oregon?<span class="plus">+</span></button>
+<div class="em-faq-a"><div class="em-faq-a-inner">Yes. East Medford (97504) is part of our primary service area &mdash; we clean carpet in the Highway 62 corridor, Delta Waters Road area, Springbrook Road subdivisions, and all other East Medford neighborhoods. IICRC-certified, truck-mounted, upfront pricing on every job. (458) 302-0101</div></div>
+</div>
+<div class="em-faq-item" aria-expanded="false">
+<button class="em-faq-q">Can carpet cleaning remove Table Rocks trail dust?<span class="plus">+</span></button>
+<div class="em-faq-a"><div class="em-faq-a-inner">Yes &mdash; this is our most common East Medford request. Red volcanic basalt clay from Table Rocks Trailhead requires an alkaline pre-spray with extended dwell time to release the mineral bonds, followed by 195&deg;F+ truck-mounted extraction. Rental machines at 100&deg;F and standard mop-cleaning redistribute this clay rather than extracting it. Two-pass extraction is standard for heavily accumulated volcanic clay. <a href="https://carpetcleaningmedfordoregon.com/rogue-valley-mud-season-trail-carpet-guide/">Learn more</a></div></div>
+</div>
+<div class="em-faq-item" aria-expanded="false">
+<button class="em-faq-q">Do you treat wildfire smoke in East Medford carpet?<span class="plus">+</span></button>
+<div class="em-faq-a"><div class="em-faq-a-inner">Yes &mdash; our wildfire smoke protocol uses an oxidizing pre-spray with 8-minute dwell time before 195&deg;F extraction. East Medford's south-facing rooms and Highway 62 corridor homes see above-average smoke infiltration during July&ndash;September events. Standard cleaning reduces smoke odor but won't fully address PM2.5 bonded to fiber. <a href="https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/">Learn more</a></div></div>
+</div>
+<div class="em-faq-item" aria-expanded="false">
+<button class="em-faq-q">How often should East Medford homes be professionally cleaned?<span class="plus">+</span></button>
+<div class="em-faq-a"><div class="em-faq-a-inner">Annual minimum &mdash; twice yearly is better for most 97504 households. Regular Table Rocks or Roxy Ann Peak trail access, peak wildfire season July&ndash;September, and active dog households mean carpet accumulates faster here than in most Medford neighborhoods. Best schedule: spring (April&ndash;May, post-mud season) and fall (October, post-smoke season). <a href="https://carpetcleaningmedfordoregon.com/how-often-carpet-cleaning-medford-oregon/">Learn more</a></div></div>
+</div>
+<div class="em-faq-item" aria-expanded="false">
+<button class="em-faq-q">Do you provide a dated receipt for East Medford rental properties?<span class="plus">+</span></button>
+<div class="em-faq-a"><div class="em-faq-a-inner">Yes &mdash; every job includes a dated service receipt documenting the cleaning date, address, treatment scope, and our IICRC certification. Jackson County landlords in 97504 accept this receipt for security deposit documentation. 48-hour turnaround available for rental property move-out deadlines. <a href="https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/">Learn more</a></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="em-sec gray">
+<div class="em-cta">
+<h2>Carpet Cleaning in East Medford &mdash; Call or Book Today</h2>
+<p>Table Rocks trail dust, wildfire smoke, pet contamination &mdash; we know 97504. Truck-mounted. IICRC certified. Upfront pricing. Same-week scheduling.</p>
+<div class="btn-row">
+<a class="btn-w" href="tel:+14583020101">&#128222; Call or Text (458) 302-0101</a>
+<a class="btn-o" href="https://carpetcleaningmedfordoregon.com/#book">&#128197; Book Online</a>
+</div>
+</div>
+</section>
+
+<script>
+(function(){'use strict';
+var items=document.querySelectorAll('#em-faq .em-faq-item');
+items.forEach(function(item){
+var btn=item.querySelector('.em-faq-q');
+var ans=item.querySelector('.em-faq-a');
+btn.addEventListener('click',function(){
+var open=item.getAttribute('aria-expanded')==='true';
+items.forEach(function(other){
+other.setAttribute('aria-expanded','false');
+other.querySelector('.em-faq-a').style.maxHeight=null;
+});
+if(!open){
+item.setAttribute('aria-expanded','true');
+ans.style.maxHeight=ans.scrollHeight+'px';
+}
+});
+});
+})();
+</script>
+</div>
+<!-- /wp:html -->
