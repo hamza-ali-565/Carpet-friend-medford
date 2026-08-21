@@ -1,0 +1,125 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/spring-carpet-cleaning-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/spring-carpet-cleaning-medford-oregon/",
+      "name": "Spring Carpet Cleaning Medford Oregon",
+      "description": "Best time for Medford carpet cleaning? April–May. Remove winter soil, pollen, trail dust, and mud before summer heat. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/spring-carpet-cleaning-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/spring-carpet-cleaning-medford-oregon/#service",
+      "name": "Spring Carpet Cleaning Medford Oregon",
+      "description": "Best time for Medford carpet cleaning? April–May. Remove winter soil, pollen, trail dust, and mud before summer heat. (458) 302-0101.",
+      "serviceType": "Spring Carpet Cleaning Medford Oregon",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Gold Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/spring-carpet-cleaning-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/spring-carpet-cleaning-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is spring the best time for carpet cleaning in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spring (April–May) sits between the end of winter's accumulation cycle and the beginning of summer's. It captures a full winter's worth of mud season soil, wood stove smoke, dust mite build-up, and pollen — and removes it before summer heat begins bonding soil compounds more deeply into carpet fiber. The spring window in Medford is narrow — roughly 6 weeks before consistent 90&deg;F+ temperatures arrive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When exactly should I book spring carpet cleaning in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Late April is the sweet spot for most households — after Pear Blossom Festival peak pollen week, before summer temperatures arrive. Early May is the last practical window before the heat effect begins. For allergy households or STR hosts, earlier in April may be better. For home sellers, time the clean 3–5 days before listing photos go live."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can spring carpet cleaning help with my Medford allergy symptoms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A spring professional clean removes the accumulated allergen reservoir from carpet — pollen, dust mite allergen, pet dander from the winter indoor season — at its annual peak concentration. HEPA vacuuming during pollen season maintains the surface; spring professional extraction removes what's below the surface. Full allergen guide"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the latest I can book spring carpet cleaning before summer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mid-May in Medford. By late May, consistent 90&deg;F+ days begin and the temperature-related soil bonding effect starts. Carpet cleaned in June has less soil mobility than carpet cleaned in April for the same accumulation level. If you've missed April, book in the first two weeks of May to stay within the effective spring window."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have same-week spring cleaning availability in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spring is our busiest booking period — we recommend calling 1–2 weeks in advance for your preferred date in April or early May. For flexible timing, we often have same-week availability. Call (458) 302-0101 and we'll confirm the earliest slot."
+          }
+        }
+      ]
+    }
+  ]
+}

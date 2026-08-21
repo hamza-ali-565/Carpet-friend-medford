@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-east-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-east-medford-oregon/",
+      "name": "Carpet Cleaning East Medford | 97504",
+      "description": "IICRC-certified carpet cleaning in East Medford, OR (97504). Table Rocks trail dust, wildfire smoke, pet homes. Truck-mounted, upfront pricing. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-east-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-east-medford-oregon/#service",
+      "name": "Carpet Cleaning East Medford",
+      "description": "IICRC-certified carpet cleaning in East Medford, OR (97504). Table Rocks trail dust, wildfire smoke, pet homes. Truck-mounted, upfront pricing. (458) 302-0101.",
+      "serviceType": "Carpet Cleaning East Medford",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-east-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-east-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you serve East Medford, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. East Medford (97504) is part of our primary service area — we clean carpet in the Highway 62 corridor, Delta Waters Road area, Springbrook Road subdivisions, and all other East Medford neighborhoods. IICRC-certified, truck-mounted, upfront pricing on every job. (458) 302-0101"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can carpet cleaning remove Table Rocks trail dust?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — this is our most common East Medford request. Red volcanic basalt clay from Table Rocks Trailhead requires an alkaline pre-spray with extended dwell time to release the mineral bonds, followed by 195&deg;F+ truck-mounted extraction. Rental machines at 100&deg;F and standard mop-cleaning redistribute this clay rather than extracting it. Two-pass extraction is standard for heavily accumulated volcanic clay. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you treat wildfire smoke in East Medford carpet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — our wildfire smoke protocol uses an oxidizing pre-spray with 8-minute dwell time before 195&deg;F extraction. East Medford's south-facing rooms and Highway 62 corridor homes see above-average smoke infiltration during July–September events. Standard cleaning reduces smoke odor but won't fully address PM2.5 bonded to fiber. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should East Medford homes be professionally cleaned?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Annual minimum — twice yearly is better for most 97504 households. Regular Table Rocks or Roxy Ann Peak trail access, peak wildfire season July–September, and active dog households mean carpet accumulates faster here than in most Medford neighborhoods. Best schedule: spring (April–May, post-mud season) and fall (October, post-smoke season). Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide a dated receipt for East Medford rental properties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — every job includes a dated service receipt documenting the cleaning date, address, treatment scope, and our IICRC certification. Jackson County landlords in 97504 accept this receipt for security deposit documentation. 48-hour turnaround available for rental property move-out deadlines. Learn more"
+          }
+        }
+      ]
+    }
+  ]
+}

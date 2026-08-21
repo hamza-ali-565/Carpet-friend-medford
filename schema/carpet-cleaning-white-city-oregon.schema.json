@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-white-city-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-white-city-oregon/",
+      "name": "carpet-cleaning-white-city-or-|-local-expert",
+      "description": "Affordable carpet cleaning in White City, Oregon. Serving 97503, rental properties & post-Almeda rebuild homes. IICRC certified. Upfront pricing. Truck-mounted.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-white-city-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-white-city-oregon/#service",
+      "name": "carpet-cleaning-white-city-or-",
+      "description": "Affordable carpet cleaning in White City, Oregon. Serving 97503, rental properties & post-Almeda rebuild homes. IICRC certified. Upfront pricing. Truck-mounted.",
+      "serviceType": "carpet-cleaning-white-city-or-",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "White City"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-white-city-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-white-city-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you serve White City, Oregon (97503)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. White City is a regular service area — on the Highway 62 corridor between Medford and Eagle Point, and we're there multiple times per week. Same truck-mounted equipment, same IICRC-certified technician, same upfront pricing as all our Medford jobs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide move-out carpet cleaning in White City for landlords?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and it's our most common White City call. We serve the rental corridor throughout 97503 and provide a dated service receipt — the standard document for security deposit disputes in Jackson County. We can typically schedule within 48 hours of move-out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is affordable carpet cleaning available in White City?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our pricing is competitive and transparent — confirmed before we start, never adjusted after the truck is in your driveway. Most standard residential cleans in White City (similar square footage to central Medford) run the same competitive rate. Call (458) 302-0101 for a specific estimate based on your situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do post-fire smoke carpet cleaning in White City?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The 2020 Almeda Fire and subsequent fire seasons left PM2.5 smoke contamination in carpet fibers throughout the 97503 area. Our wildfire smoke protocol uses an oxidizing pre-spray followed by truck-mounted extraction at 195&deg;F — specifically designed to neutralize smoke compounds at the fiber level, not just mask odors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does carpet cleaning take to dry in White City?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same conditions as the rest of the Rogue Valley — 2–4 hours in summer (May–September), 6–8 hours in winter. White City's Highway 62 corridor position can make it slightly windier in winter — opening a window speeds drying noticeably. We advise on ventilation before we leave."
+          }
+        }
+      ]
+    }
+  ]
+}

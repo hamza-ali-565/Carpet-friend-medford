@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-west-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-west-medford-oregon/",
+      "name": "Carpet Cleaning West Medford | 97502",
+      "description": "Carpet cleaning in West Medford 97502. IICRC-certified service for olefin carpet, trail dust, and pet homes. Truck-mounted, upfront pricing. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-west-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-west-medford-oregon/#service",
+      "name": "Carpet Cleaning West Medford",
+      "description": "Carpet cleaning in West Medford 97502. IICRC-certified service for olefin carpet, trail dust, and pet homes. Truck-mounted, upfront pricing. (458) 302-0101.",
+      "serviceType": "Carpet Cleaning West Medford",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-west-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-west-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you clean carpet in West Medford, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. West Medford (97502) — including Stewart Avenue, Garfield Street, the Crater Lake Avenue corridor, and all 97502 residential streets. IICRC-certified, truck-mounted, upfront pricing. We identify carpet fiber type at every West Medford job before applying any chemistry. (458) 302-0101"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does West Medford carpet re-soil so fast after cleaning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Likely the olefin carpet fiber most common in West Medford's 1970s–1990s homes. Olefin bonds strongly to oily contamination and re-soils rapidly when alkaline cleaning residue isn't fully removed. Many rental machine cleans — and some professional cleans — use chemistry designed for nylon, which leaves a residue that accelerates re-soiling. We identify olefin at pre-inspection and use a degreasing formula matched to its chemistry. The result holds significantly longer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should West Medford homes be professionally cleaned?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Annually for standard 97502 households. Twice yearly for pet households, ranch homes near Bear Creek Greenway access, or homes with a history of rapid re-soiling after previous cleans (often a sign of olefin chemistry mismatch). Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you clean the carpet in my 1970s or 1980s West Medford home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — older ranch homes in West Medford are some of our most common jobs. We pre-inspect to confirm fiber type and backing condition. Olefin from the 1970s–1980s is frequently in structurally sound condition despite its age. We'll tell you honestly if we find a backing issue during pre-inspection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide a receipt for West Medford rental property cleaning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — every job receives a dated service receipt documenting the cleaning date, address, treatment scope, and our IICRC certification number. This receipt is accepted by Jackson County landlords for security deposit documentation. Learn more"
+          }
+        }
+      ]
+    }
+  ]
+}

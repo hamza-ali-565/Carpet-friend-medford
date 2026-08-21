@@ -1,0 +1,50 @@
+{
+  "DOMAIN": "carpetcleaningmedfordoregon.com",
+  "BUSINESS_NAME": "Carpet Friend Medford",
+  "LOGO_URL": "https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/carpet-friend-medford-logo-1-1-300x300.jpg",
+  "IMAGE_URL": "https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/carpet-friend-medford-logo-1-1-300x300.jpg",
+  "PHONE": "+1-458-302-0101",
+  "EMAIL": "carpetfriendmedford@gmail.com",
+  "STREET_ADDRESS": "1600 Delta Waters Rd",
+  "CITY": "Medford",
+  "STATE": "OR",
+  "ZIP": "97504",
+  "COUNTRY_CODE": "US",
+  "LATITUDE": 42.3265,
+  "LONGITUDE": -122.8756,
+  "LANGUAGE": "en-US",
+  "LANGUAGE_NAME": "English",
+  "CURRENCY": "USD",
+  "PRIMARY_SERVICE_AREA": "Jackson County, Oregon",
+  "COUNTY_OR_REGION": "Jackson County",
+  "SITE_DESCRIPTION": "Truck-mounted carpet cleaning in Medford, OR. IICRC certified. Most homes $150–$280. Upfront price confirmed before we start. Serving 97501–97504.",
+  "BUSINESS_DESCRIPTION": "Carpet Friend Medford is a locally owned, IICRC-certified carpet cleaner serving Jackson County, Oregon since 2020.",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61592073030535",
+    "https://www.instagram.com/carpetfriendmed/?hl=en",
+    "https://www.tiktok.com/@carpetfriend",
+    "https://www.pinterest.com/hamzakharadi/_profile/",
+    "https://www.threads.com/@carpetfriendmed",
+    "https://www.diigo.com/user/carpetf",
+    "https://dev.to/carpe_fr_e759a4d14be"
+  ],
+  "openingHours": {
+    "Monday-Friday": "08:00-18:00",
+    "Saturday": "09:00-16:00",
+    "Sunday": "closed"
+  },
+  "cities_served": [
+    "Medford", "Ashland", "Central Point", "Talent", "Phoenix",
+    "Jacksonville", "Eagle Point", "White City", "Gold Hill", "Rogue River"
+  ],
+  "zips_served": ["97501", "97502", "97503", "97504", "97530", "97535", "97540", "97524", "97525", "97537"],
+  "serviceType_catalog": [
+    "Carpet Cleaning", "Upholstery Cleaning", "Area & Oriental Rug Cleaning",
+    "Carpet Stretching & Repair", "Water Damage Carpet Restoration",
+    "Pet Odor & Urine Treatment", "Wildfire Smoke Treatment",
+    "Tile & Grout Cleaning", "Hardwood Floor Cleaning", "Natural Stone Cleaning",
+    "Air Duct Cleaning", "Dryer Vent Cleaning", "Stair Carpet Cleaning",
+    "Commercial Carpet Cleaning", "Move-In / Move-Out Carpet Cleaning"
+  ],
+  "additionalType_url": "https://www.productontology.org/id/Carpet_cleaning"
+}

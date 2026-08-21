@@ -1,0 +1,133 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-real-estate-medford/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-real-estate-medford/",
+      "name": "Carpet Cleaning Real Estate Medford OR",
+      "description": "Pre-listing carpet cleaning for Medford real estate. MLS photo timing, staging protocol, wildfire smoke treatment, clean-vs- replace guidance. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-real-estate-medford/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-real-estate-medford/#service",
+      "name": "Carpet Cleaning Real Estate Medford OR",
+      "description": "Pre-listing carpet cleaning for Medford real estate. MLS photo timing, staging protocol, wildfire smoke treatment, clean-vs- replace guidance. (458) 302-0101.",
+      "serviceType": "Carpet Cleaning Real Estate Medford OR",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Gold Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-real-estate-medford/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-real-estate-medford/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How soon before listing photos should I schedule carpet cleaning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3–5 days before photos in summer (April–October in Medford). 5–7 days before photos in winter or wet season. Don't clean the morning of photos — damp carpet doesn't photograph correctly. Allow at least one full drying day between cleaning and the photography appointment. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you assess whether carpet should be cleaned or replaced before listing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — every pre-listing job includes an honest pre-inspection assessment. If we believe cleaning will produce a listing-quality result, we proceed. If the carpet is past the point where cleaning will make a meaningful difference, we tell you before any work begins so you can make the replacement decision with full information."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you do pre-listing carpet cleaning on short notice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — for pre-listing situations with tight timelines, call and we'll tell you our first available appointment. We try to accommodate realtor scheduling timelines. For post-inspection scenarios where a clean is offered in lieu of a credit, 48-hour turnaround is often available. (458) 302-0101"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with real estate staging professionals in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. For staged listings, the sequence matters: clean carpet first, then bring in staging furniture. We coordinate with staging timelines and can schedule cleaning in advance of the staging appointment. Call to discuss the timing for your specific listing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is wildfire smoke treatment important for Medford listings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For homes that have been through one or more Rogue Valley fire seasons without smoke-specific carpet treatment: yes. Out-of-area buyers — especially from California markets — often interpret smoke odor as evidence of a structural issue rather than seasonal carpet accumulation. Our oxidizing pre-spray protocol eliminates the odor before it affects their impression on walkthrough. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a pre-listing carpet cleaning receipt include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A dated service receipt including service address, date, rooms cleaned, treatment types applied, IICRC certification number, and total charge. This receipt is used by sellers as documentation of professional cleaning for disclosure packages and by buyers' agents who request confirmation of professional maintenance."
+          }
+        }
+      ]
+    }
+  ]
+}

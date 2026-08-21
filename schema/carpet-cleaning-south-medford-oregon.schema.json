@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-south-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-south-medford-oregon/",
+      "name": "Carpet Cleaning South Medford Oregon",
+      "description": "IICRC-certified carpet cleaning in South Medford, OR. Remove trail dirt and wildfire smoke with truck-mounted cleaning and upfront pricing. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-south-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-south-medford-oregon/#service",
+      "name": "Carpet Cleaning South Medford Oregon",
+      "description": "IICRC-certified carpet cleaning in South Medford, OR. Remove trail dirt and wildfire smoke with truck-mounted cleaning and upfront pricing. (458) 302-0101.",
+      "serviceType": "Carpet Cleaning South Medford Oregon",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-south-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-south-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you serve South Medford, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. South Medford — including the Bear Creek Greenway corridor, Bear Creek Drive, South Riverside Avenue, and the residential neighborhoods connecting toward Phoenix — is a regular part of our service area. IICRC-certified, truck-mounted, upfront pricing. Call (458) 302-0101."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you clean Bear Creek Greenway soil from carpet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bear Creek alluvial soil is organic-rich creek bank clay — darker and more organic than the volcanic clay from Table Rocks in East Medford, and it responds to different pre-spray chemistry. We use an alkaline pre-conditioner matched to organic soil content with extended dwell time, followed by 195&deg;F truck-mounted extraction. The organic character of the soil means it's often accompanied by earthy odor that the extraction and pH-balanced rinse addresses. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do pre-listing carpet cleaning for South Medford home sales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — South Medford's active real estate market toward the Phoenix/Talent corridor generates regular pre-listing requests. We work within your realtor's timeline. A dated service receipt is included with every job. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you handle multi-pet households in South Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. South Medford's greenway-access households often have multiple dogs — and sometimes cats as well. We bring zone-specific enzyme formulas for both cat and dog contamination, UV inspection identifies every contamination zone, and sub-surface extraction addresses pad-level contamination. We don't use a one-formula-for-all approach. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does South Medford's wildfire smoke exposure compare to other neighborhoods?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "South Medford sees smoke from both the eastern fire corridors (same as all Medford neighborhoods in July–September) and from southern Oregon and northern California fire sources that enter the Rogue Valley from the south. This dual-direction exposure can make smoke accumulation in South Medford slightly higher than in north-facing neighborhoods during years with both eastern and southern fire activity. Our oxidizing pre-spray protocol addresses smoke from any source. Learn more"
+          }
+        }
+      ]
+    }
+  ]
+}

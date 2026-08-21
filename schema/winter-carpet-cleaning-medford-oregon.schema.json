@@ -1,0 +1,125 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/winter-carpet-cleaning-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/winter-carpet-cleaning-medford-oregon/",
+      "name": "Winter Carpet Cleaning Medford Oregon",
+      "description": "Carpet dirtiest in winter? Yes. Impossible to clean? No. IICRC- certified winter carpet cleaning in Medford works — with the right process. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/winter-carpet-cleaning-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/winter-carpet-cleaning-medford-oregon/#service",
+      "name": "Winter Carpet Cleaning Medford Oregon",
+      "description": "Carpet dirtiest in winter? Yes. Impossible to clean? No. IICRC- certified winter carpet cleaning in Medford works — with the right process. (458) 302-0101.",
+      "serviceType": "Winter Carpet Cleaning Medford Oregon",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Gold Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/winter-carpet-cleaning-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/winter-carpet-cleaning-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you actually clean carpet in winter in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — we clean carpet throughout Medford's winter season (October–March). Our truck-mounted 195&deg;F extraction combined with the dry stroke technique produces 6–8 hour drying in winter with proper ventilation. This is well within safe drying parameters. The longer winter drying time vs. summer (2–4 hrs) is managed through window ventilation, ceiling fan circulation, and the specific advice we give you at the end of every winter job. Call (458) 302-0101."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does carpet take to dry after cleaning in winter in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "6–8 hours with proper ventilation (windows open, ceiling fans running). This is longer than summer's 2–4 hours but well within the safe drying window. Over-wet carpet from rental machines can take 24+ hours in winter — that's where the mold risk enters. Our truck-mounted extraction removes the majority of moisture during the cleaning process. We advise on ventilation timing before leaving every winter job. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is winter a good time to clean carpet in Medford for dust mite reduction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Winter is actually the highest-impact time for dust mite allergen reduction in Medford homes. Dust mite populations peak in heated, closed winter homes — the warm, humidity-controlled indoor environment is their optimal habitat. Professional hot water extraction at 195&deg;F physically removes dust mite allergen (feces and body fragments) from the fiber depth that standard vacuuming can't reach. For allergy and asthma households, a January cleaning addresses the annual peak of the allergen reservoir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is scheduling easiest for carpet cleaning in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "January and February. Our spring (April–May) calendar fills 1–2 weeks in advance. Summer smoke events create urgent demand. October brings pre-holiday pressure. January and February are consistently the quietest months — fastest turnaround, most scheduling flexibility, same-week availability for most Medford addresses. If you've been putting off a cleaning, winter is the path of least scheduling resistance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I clean my carpet after the holiday season in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — the January post-holiday reset is our recommended timing for Medford homes that hosted Thanksgiving and Christmas guests. Holiday gatherings produce 3–4 weeks of concentrated foot traffic on top of the accumulated winter load. January cleaning removes this combined holiday + early-winter accumulation before the rest of the heating season adds further layers. The scheduling is easiest in January of any time of year."
+          }
+        }
+      ]
+    }
+  ]
+}

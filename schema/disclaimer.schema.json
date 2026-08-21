@@ -1,0 +1,16 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/disclaimer/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/disclaimer/",
+      "name": "Disclaimer | Carpet Friend Medford",
+      "description": "Disclaimer for Carpet Friend Medford's website. Results vary. Content is for general guidance, not a guarantee. Medford, OR.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US"
+    }
+  ]
+}

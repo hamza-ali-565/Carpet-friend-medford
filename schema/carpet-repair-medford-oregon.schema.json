@@ -1,0 +1,173 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/",
+      "name": "Carpet Repair Near Me | Medford Oregon",
+      "description": "Carpet repair in Medford, OR — patching, seams, pet damage, burn holes & re-attachment. Carpet repair near me. Jackson County. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/#service",
+      "name": "Carpet Repair Near Me",
+      "description": "Carpet repair in Medford, OR — patching, seams, pet damage, burn holes & re-attachment. Carpet repair near me. Jackson County. (458) 302-0101.",
+      "serviceType": "Carpet Repair Near Me",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Gold Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you repair carpet — what does the process actually involve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Carpet repair starts with sourcing donor material from the same installation — a closet corner or furniture-covered spot. The damaged area is cut out precisely, the donor piece is cut to match the pile direction and pattern (if applicable), and the patch is seamed with heat-bond tape and power-stretched flat. For seam repairs, we apply hot-melt tape and a seam iron, then re-stretch and re-tack. Edge and transition repairs involve re-pinning to existing tack strips or replacing damaged strip sections. Whether you need professional carpet repair near me for a single burn hole or a carpet patch repair near me for a larger pet damage zone, the whole job typically takes 1–2 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to repair carpet in a doorway — is that something you handle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — how to repair carpet in doorway situations is one of the most common questions we get, and doorway carpet repair is one of our most frequent jobs in Medford. Carpet at doorway thresholds takes concentrated traffic and is the most common location for pet claw damage, fraying, and edge separation. The repair extends the carpet back to the tack strip with donor material, or re-secures the existing edge if the fiber is intact. We also replace or re-secure the transition strip between carpet and hard floor at doorways when it has lifted or separated."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you repair pet-damaged carpet in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — pet damage is our most common carpet repair service request. We patch claw and chew damage using donor carpet from a closet corner or remnant piece. For entry door threshold damage, we extend the carpet back to the tack strip with matching material. If pet odor is also present, we address that before patching."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you do carpet repair and cleaning in the same visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — carpet repair and cleaning together in one visit is often the most efficient approach. We repair first, then clean. The patch is fully set before the cleaning chemistry touches it, and you end with a repaired and freshly cleaned carpet in a single appointment. For pet-damaged carpet specifically, we treat any contamination zones with enzyme cleaner before patching, then clean the full room after the patch work is done."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do oriental carpet repair or area rug repair near me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — we handle oriental carpet repair near me calls across Jackson County, as well as general rug repairs near me for area rugs with physical damage: fraying edges, pet claw damage at corners, torn pile, and loose backing. Oriental and Persian rugs with significant structural damage are assessed case-by-case — some repairs require hand-knotting skills that go beyond our standard patch and seam work, and we'll tell you honestly if that's the case. Many clients who search for rug restoration near me in Medford or oriental carpet repair near me end up combining rug repair with a cleaning visit. For rugs that need cleaning alongside repair, see our area rug cleaning page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can carpet be shampooed and repaired at the same appointment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We get carpet shampoo repair near me searches frequently — homeowners who want both the damaged section fixed and the full room cleaned in one visit. Our approach: assess and complete the repair first, then clean. This way the patch has time to set before any cleaning moisture is applied, and the final result is a repaired, freshly cleaned carpet. For badly stained areas that won't clean out, we assess whether a carpet patch repair or a deep cleaning treatment is the better answer before touching anything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you need donor carpet for a patch repair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For an invisible or nearly invisible patch: yes, donor material from the same carpet installation is ideal. If none is available, we assess whether a closely matched remnant can produce an acceptable result and discuss match quality honestly before committing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does carpet repair cost in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Repair cost varies by damage type, size, and complexity, but carpet repairs are typically significantly less expensive than carpet replacement. We provide an upfront cost estimate during our free assessment — no work begins without approval. See our pricing guide for general context."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you repair patterned carpet with a patch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — with more care. Pattern carpet requires matching the pattern repeat in the donor piece before cutting. We assess the pattern match during evaluation and are honest about visibility. Most pattern-carpet patches are nearly invisible at standing height when done correctly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I repair or replace carpet before selling my Medford home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For isolated damage on otherwise sound carpet, repair is almost always the better pre-listing choice — it costs less than replacement and prevents buyers from using visible damage as a price concession lever. We work within real estate timelines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair carpet in Jackson County outside Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Ashland, Central Point, Jacksonville, Eagle Point, White City, Phoenix, Talent, Gold Hill, and Rogue River. Same carpet repair service throughout Jackson County. (458) 302-0101"
+          }
+        }
+      ]
+    }
+  ]
+}

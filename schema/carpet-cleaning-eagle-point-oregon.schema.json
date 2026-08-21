@@ -1,0 +1,81 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-eagle-point-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-eagle-point-oregon/",
+      "name": "Carpet Cleaning Eagle Point OR | Local Expert",
+      "description": "Professional carpet cleaning in Eagle Point, Oregon. Serving 97524, Rogue River valley trails & new builds. IICRC certified, truck-mounted, upfront pricing.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-eagle-point-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-eagle-point-oregon/#service",
+      "name": "Carpet Cleaning Eagle Point OR",
+      "description": "Professional carpet cleaning in Eagle Point, Oregon. Serving 97524, Rogue River valley trails & new builds. IICRC certified, truck-mounted, upfront pricing.",
+      "serviceType": "Carpet Cleaning Eagle Point OR",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-eagle-point-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-eagle-point-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you serve Eagle Point, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Eagle Point (97524) is a regular stop — 9 miles east of our Medford base, and we're there weekly. Same IICRC-certified technician, same truck-mounted equipment, same upfront pricing as all our Jackson County jobs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean carpet in new construction homes in Eagle Point?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and it's one of our most common Eagle Point calls. New construction carpet contains drywall dust, adhesive residue, and construction particulate that requires a specific protocol — heavy dry pre-vacuum first to prevent drywall dust turning to plaster mud during extraction, followed by truck-mounted HWE at 195&deg;F. We recommend cleaning before your first tenant or furniture moves in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does wildfire smoke affect carpets in Eagle Point specifically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eagle Point's location at the base of the Cascades means it can be in the smoke envelope from eastern Oregon fires as well as Rogue Valley events. PM2.5 particles from wildfires infiltrate building gaps and settle into carpet fibers — standard vacuuming doesn't reach them. Our wildfire smoke protocol (oxidizing pre-spray + 195&deg;F extraction) is the standard treatment we recommend after any significant AQI event."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What drying time should I expect in Eagle Point?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Summer (May–September): 2–4 hours with ceiling fans or open windows. Spring and fall: 4–6 hours depending on temperature. Winter: 6–8 hours — Eagle Point can run cooler than Medford proper. We advise specifically on ventilation before we leave each job."
+          }
+        }
+      ]
+    }
+  ]
+}

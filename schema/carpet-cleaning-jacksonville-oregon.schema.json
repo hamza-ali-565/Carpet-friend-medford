@@ -1,0 +1,81 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-jacksonville-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-jacksonville-oregon/",
+      "name": "Carpet Cleaning Jacksonville OR | Local Expert",
+      "description": "IICRC-certified carpet cleaning in Jacksonville, OR. Serving historic homes, wine country rentals & 97530. Upfront pricing. Truck-mounted. Same-week available.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-jacksonville-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-jacksonville-oregon/#service",
+      "name": "Carpet Cleaning Jacksonville OR",
+      "description": "IICRC-certified carpet cleaning in Jacksonville, OR. Serving historic homes, wine country rentals & 97530. Upfront pricing. Truck-mounted. Same-week available.",
+      "serviceType": "Carpet Cleaning Jacksonville OR",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-jacksonville-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-jacksonville-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you clean carpets in Jacksonville, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Jacksonville (97530) is a regular service area for Carpet Friend Medford. We bring the same IICRC-certified technician and truck-mounted equipment we use across all of Jackson County — no difference in service quality for being outside Medford's city limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have experience cleaning older carpets and rugs in historic Jacksonville homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and it's one of the main reasons Jacksonville homeowners call us specifically. Historic homes in Jacksonville's National Historic Landmark district frequently have older carpet installations, delicate wool rugs, or fiber types that require lower extraction temperatures and pH-neutral chemistry. We check fiber type and run a dye transfer test before applying any pre-spray chemistry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you turn around carpet cleaning between Britt Festival guest stays?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We prioritize 48-hour turnarounds for STR properties and vacation rentals in the Jacksonville and Applegate Valley area during the Britt Festival summer season (July–August). Call or text (458) 302-0101 to schedule around your check-in/check-out timeline. We provide a dated service receipt for your property records."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the drying time for carpets in Jacksonville?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same as across the Rogue Valley — 2–4 hours in summer (July–September), 6–8 hours in the cooler, damper months (October–March). Jacksonville's slightly higher elevation and Applegate Valley position can make autumn drying times run toward the 6-hour end. We advise on ventilation before we leave."
+          }
+        }
+      ]
+    }
+  ]
+}

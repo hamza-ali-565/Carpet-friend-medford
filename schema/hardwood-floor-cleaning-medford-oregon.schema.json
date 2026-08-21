@@ -1,0 +1,133 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/",
+      "name": "Hardwood Floor Cleaning | Medford OR",
+      "description": "Safe hardwood floor cleaning in Medford, OR for finished and unfinished wood. No steam, no over-wetting. Serving Jackson County. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/#service",
+      "name": "Hardwood Floor Cleaning",
+      "description": "Safe hardwood floor cleaning in Medford, OR for finished and unfinished wood. No steam, no over-wetting. Serving Jackson County. (458) 302-0101.",
+      "serviceType": "Hardwood Floor Cleaning",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Gold Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How often should hardwood floors be professionally cleaned?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once or twice a year for most Medford homes — once yearly for low-traffic rooms, twice yearly for kitchens, entryways, and high-traffic zones. Homes with pets, trail access, or wood stoves accumulate contamination faster. If you are comparing searches such as \"hardwood floor cleaning jacksonville fl\" or \"hardwood floor cleaning portland,\" make sure you choose a provider serving your actual local area. Between professional cleans: dry microfiber mopping weekly, never wet mopping with excess water."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you use steam cleaning on hardwood floors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — and any company that proposes steam cleaning on hardwood should be avoided. Steam introduces heat and concentrated moisture to a wood surface designed to be protected from both. Even finishes rated for moisture exposure aren't rated for steam. We never steam hardwood floors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will professional cleaning remove scratches from my hardwood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — professional cleaning removes surface contamination and restores appearance, but scratches and gouges are physical damage that cleaning cannot address. Cleaning may make scratches appear worse by contrast (removing the grime that masked them). Deep scratches require refinishing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer hardwood floor cleaning services in older Medford and Jacksonville homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — we regularly clean historic-home hardwood in Jacksonville's National Historic Landmark district, older Medford neighborhoods, and Ashland's 1920s–1950s homes. Older site-finished floors receive extra care during finish assessment; if finish is worn through, we advise before cleaning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until we can walk on the hardwood after cleaning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Immediately — unlike carpet cleaning, our process uses no excess moisture, so there's no drying window. We recommend indoor socks or clean-soled shoes for 24 hours to let the clean finish \"breathe\" before it picks up new outdoor soil."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean hardwood in the greater Jackson County area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — all four Medford zip codes (97501–97504), Ashland, Central Point, Jacksonville, Eagle Point, White City, Phoenix, Talent, Gold Hill, and Rogue River. (458) 302-0101"
+          }
+        }
+      ]
+    }
+  ]
+}

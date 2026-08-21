@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-rogue-river-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-rogue-river-oregon/",
+      "name": "Carpet Cleaning Rogue River OR | Local Expert",
+      "description": "#1 carpet cleaning in Rogue River, Oregon. Serving 97537, river valley properties & rural Jackson County. IICRC certified. Truck-mounted. Upfront pricing.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-rogue-river-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-rogue-river-oregon/#service",
+      "name": "Carpet Cleaning Rogue River OR",
+      "description": "#1 carpet cleaning in Rogue River, Oregon. Serving 97537, river valley properties & rural Jackson County. IICRC certified. Truck-mounted. Upfront pricing.",
+      "serviceType": "Carpet Cleaning Rogue River OR",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-rogue-river-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-rogue-river-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you serve Rogue River, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Rogue River (97537) is 16 miles west of our Medford base along the I-5 corridor, and it's a regular service run for us — not a special trip. Same IICRC-certified technician, same truck-mounted equipment, same upfront pricing as anywhere else in Jackson County, with no travel surcharge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean vacation and seasonal homes in the Rogue River area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Rogue River has a significant number of cabins and second homes along Evans Creek Road, Bailey Hill Road, and near the river itself that sit vacant for stretches between visits. We run a deep-clean protocol for these properties — extended pre-spray dwell time and multiple extraction passes — since carpet in seasonally-used homes tends to carry heavier embedded soil than a daily-occupied residence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can carpet cleaning handle 6+ years of embedded soil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most cases, yes, though results depend on the carpet's condition and how deep the soil has settled. Our approach for long-neglected carpet is heavier pre-vacuuming, extended pre-spray dwell time, and multiple truck-mounted extraction passes at higher heat. We're upfront during the pre-inspection about what's realistically achievable versus what may be permanent staining or wear."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about smoke from fires in the Rogue River canyon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rogue River's canyon geography tends to trap and concentrate wildfire smoke from fires both east in the Rogue Valley and west in the Illinois Valley and Applegate area, often keeping PM2.5 levels elevated longer than in open valley communities. Our wildfire smoke treatment — an oxidizing pre-spray followed by hot-water extraction — is the standard protocol we recommend for Rogue River homes after any significant smoke event, typically July through October."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle fishing/hunting cabin-type carpet with heavy outdoor soil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this is common Rogue River work given the town's river and outdoor recreation access near Whitehorse Park and the Indian Mary Park corridor. Cabin carpet with heavy dog traffic, river mud, and organic debris gets extra pre-vacuum passes and enzyme pre-treatment where needed before extraction, and we're direct about what will and won't fully lift out on the first visit."
+          }
+        }
+      ]
+    }
+  ]
+}

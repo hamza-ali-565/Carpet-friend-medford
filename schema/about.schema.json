@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/about/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/about/",
+      "name": "About Carpet Friend Medford | Local Cleaner",
+      "description": "Carpet Friend Medford is a locally owned, IICRC-certified carpet cleaner serving Jackson County since 2020. Meet our trusted local team.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "additionalType": "AboutPage",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/stair-carpet-cleaning-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/stair-carpet-cleaning-medford-oregon/",
+      "name": "Stair Carpet Cleaning Medford Oregon",
+      "description": "Medford stair carpet cleaning for high-traffic stairs, including treads, risers, edges, and pet hair. Serving Jackson County. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/stair-carpet-cleaning-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/stair-carpet-cleaning-medford-oregon/#service",
+      "name": "Stair Carpet Cleaning Medford Oregon",
+      "description": "Medford stair carpet cleaning for high-traffic stairs, including treads, risers, edges, and pet hair. Serving Jackson County. (458) 302-0101.",
+      "serviceType": "Stair Carpet Cleaning Medford Oregon",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Gold Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/stair-carpet-cleaning-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/stair-carpet-cleaning-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you clean stair carpet in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — throughout Medford and all of Jackson County. We clean stair carpet with a dedicated stair tool attachment that handles the tread, riser, nose, and back-edge channel on each step. Stairs are available as a standalone service or added to a whole-home cleaning appointment. Pricing is per stair step."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can stair carpet be professionally cleaned without removing it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — in nearly all cases. Stair carpet is cleaned in place with the stair tool. We do not need to remove or lift stair carpet for standard cleaning. If it's loose at the edges (tack strip failure), we note this during pre-inspection and discuss whether repair is needed before cleaning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should stair carpet be cleaned in a Medford home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Annual cleaning as part of your whole-home professional service is the minimum. Households with high-traffic stairs, multiple dogs, or children who spend significant time on carpeted stairs should consider semi-annual cleaning — stairs re-soil faster than any other carpeted surface."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does stair carpet look so different from my floor carpet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Higher traffic per square foot. Each stair tread takes the full foot traffic of every person and pet in the household, often multiple times per day. The nose of each tread takes the most concentrated impact and shows wear first. A stair-specific tool addresses the nose and back edge where contamination is most concentrated."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean pet hair from stair carpet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — pet hair concentration at the tread-riser seam is one of the most common stair carpet issues in Jackson County homes. We pre-agitate this zone on every step before extraction to dislodge the compacted hair mat that standard extraction misses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean stairs in multi-level apartment buildings in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — including shared carpeted stairs in multi-unit buildings, stair carpet in townhome-style rentals, and stairs in two-story single-family rentals throughout Jackson County. We provide dated receipts for stair cleaning documentation. (458) 302-0101"
+          }
+        }
+      ]
+    }
+  ]
+}

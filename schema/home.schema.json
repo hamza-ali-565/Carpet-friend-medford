@@ -1,0 +1,376 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://carpetcleaningmedfordoregon.com/#website",
+      "url": "https://carpetcleaningmedfordoregon.com/",
+      "name": "Carpet Friend Medford",
+      "description": "Truck-mounted carpet cleaning in Medford, OR. IICRC certified. Most homes $150–$280. Upfront price confirmed before we start. Serving 97501–97504.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://carpetcleaningmedfordoregon.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/",
+      "name": "Carpet Cleaning Medford Oregon | Carpet Cleaning Expert",
+      "description": "Truck-mounted carpet cleaning in Medford, OR. IICRC certified. Most homes $150–$280. Upfront price confirmed before we start. Serving 97501–97504.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#service"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://carpetcleaningmedfordoregon.com/#business",
+      "name": "Carpet Friend Medford",
+      "url": "https://carpetcleaningmedfordoregon.com/",
+      "logo": "https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/carpet-friend-medford-logo-1-1-300x300.jpg",
+      "image": "https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/carpet-friend-medford-logo-1-1-300x300.jpg",
+      "description": "Carpet Friend Medford is a locally owned, IICRC-certified carpet cleaner serving Jackson County, Oregon since 2020.",
+      "telephone": "+1-458-302-0101",
+      "email": "carpetfriendmedford@gmail.com",
+      "priceRange": "$$",
+      "additionalType": "https://www.productontology.org/id/Carpet_cleaning",
+      "parentOrganization": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#organization"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61592073030535",
+        "https://www.instagram.com/carpetfriendmed/?hl=en",
+        "https://www.tiktok.com/@carpetfriend",
+        "https://www.pinterest.com/hamzakharadi/_profile/",
+        "https://www.threads.com/@carpetfriendmed",
+        "https://www.diigo.com/user/carpetf",
+        "https://dev.to/carpe_fr_e759a4d14be"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1600 Delta Waters Rd",
+        "addressLocality": "Medford",
+        "addressRegion": "OR",
+        "postalCode": "97504",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.3265,
+        "longitude": -122.8756
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "16:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-458-302-0101",
+          "contactType": "customer service",
+          "areaServed": "Jackson County, Oregon",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Gold Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Jackson County"
+        }
+      ],
+      "serviceType": [
+        "Carpet Cleaning",
+        "Upholstery Cleaning",
+        "Area & Oriental Rug Cleaning",
+        "Carpet Stretching & Repair",
+        "Water Damage Carpet Restoration",
+        "Pet Odor & Urine Treatment",
+        "Wildfire Smoke Treatment",
+        "Tile & Grout Cleaning",
+        "Hardwood Floor Cleaning",
+        "Natural Stone Cleaning",
+        "Air Duct Cleaning",
+        "Dryer Vent Cleaning",
+        "Stair Carpet Cleaning",
+        "Commercial Carpet Cleaning",
+        "Move-In / Move-Out Carpet Cleaning"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Carpet Cleaning Services in Medford, OR",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Carpet Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Upholstery Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Area & Oriental Rug Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Carpet Stretching & Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Water Damage Carpet Restoration"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pet Odor & Urine Treatment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wildfire Smoke Treatment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tile & Grout Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hardwood Floor Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Natural Stone Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Air Duct Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dryer Vent Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stair Carpet Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Carpet Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Move-In / Move-Out Carpet Cleaning"
+            }
+          }
+        ]
+      },
+      "mainEntityOfPage": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#webpage"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://carpetcleaningmedfordoregon.com/#organization",
+      "name": "Carpet Friend Medford",
+      "url": "https://carpetcleaningmedfordoregon.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://carpetcleaningmedfordoregon.com/wp-content/uploads/2026/07/carpet-friend-medford-logo-1-1-300x300.jpg"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61592073030535",
+        "https://www.instagram.com/carpetfriendmed/?hl=en",
+        "https://www.tiktok.com/@carpetfriend",
+        "https://www.pinterest.com/hamzakharadi/_profile/",
+        "https://www.threads.com/@carpetfriendmed",
+        "https://www.diigo.com/user/carpetf",
+        "https://dev.to/carpe_fr_e759a4d14be"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/#service",
+      "name": "Carpet Cleaning",
+      "description": "Carpet Friend Medford is a locally owned, IICRC-certified carpet cleaner serving Jackson County, Oregon since 2020.",
+      "serviceType": "Carpet Cleaning",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Jackson County, Oregon"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does carpet cleaning cost in Medford, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Medford homes run Competitive local rate for a full residential carpet clean. We confirm the cost before starting — based on your specific carpet type, square footage, and soil level. Affordable and transparent, with no surprises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does carpet cleaning take to dry in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "During Medford summers — 80–100°F — carpets dry in 2–4 hours. During cooler months and winter temperature inversions, expect 6–8 hours. Running ceiling fans and opening windows speeds it up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can carpet cleaning remove wildfire smoke smell?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — but it requires the right process. Wildfire smoke deposits PM2.5 particles deep in carpet fibers. Truck-mounted extraction at 195°F+ with fiber-level deodorizer is what actually eliminates the smoke odor. Our most common call after Jackson County smoke events each July–September."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can professional cleaning remove pet urine odor permanently?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most cases yes — with correct enzyme treatment and sub-surface extraction. Cat and dog urine need different formulas. If the sub-floor has been saturated over years, we'll tell you honestly whether cleaning or replacement makes more sense."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between your cleaning and a Rug Doctor rental?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Temperature and suction. Rug Doctor delivers water at ~100°F. Our truck-mounted system runs at 195–240°F with 5–10x the suction power — your carpet comes out cleaner, dries faster, and doesn't get the sticky residue that makes carpets re-soil quickly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve all Medford zip codes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We serve 97501, 97502, 97503, and 97504, plus Ashland, Central Point, Jacksonville, Eagle Point, Talent, Phoenix, Rogue River, and throughout Jackson County."
+          }
+        }
+      ]
+    }
+  ]
+}

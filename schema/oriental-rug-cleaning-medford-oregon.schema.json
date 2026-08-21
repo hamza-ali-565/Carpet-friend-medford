@@ -1,0 +1,125 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/oriental-rug-cleaning-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/oriental-rug-cleaning-medford-oregon/",
+      "name": "Oriental Rug Cleaning Medford Oregon",
+      "description": "Persian, Turkish, antique and oriental rug cleaning near me in Medford, OR. Drop-off available. Dye-safe, IICRC-certified rug washing. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/oriental-rug-cleaning-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/oriental-rug-cleaning-medford-oregon/#service",
+      "name": "Oriental Rug Cleaning Medford Oregon",
+      "description": "Persian, Turkish, antique and oriental rug cleaning near me in Medford, OR. Drop-off available. Dye-safe, IICRC-certified rug washing. (458) 302-0101.",
+      "serviceType": "Oriental Rug Cleaning Medford Oregon",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Gold Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/oriental-rug-cleaning-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/oriental-rug-cleaning-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I get my oriental rug cleaned near me in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Carpet Friend Medford provides oriental rug cleaning near me for all of Jackson County — Persian, Turkish, antique, tribal, and silk-blend rugs. On-site cleaning at your home for most pieces. Drop-off rug washing service at 1600 Delta Waters Rd, Medford, OR 97504 for larger pieces, antiques, or rugs with suspected dye sensitivity. Call before drop-off: (458) 302-0101."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean Persian rugs near me in Medford, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Persian rug cleaning near me in Medford and Jackson County is our most common oriental rug request. We dye-test every color zone before applying any chemistry. Isfahan, Tabriz, Kashan, Qom, and tribal Persian pieces all receive cold-water, pH-neutral treatment with low-pressure extraction. Plant dye rugs require cold water only — no exceptions. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you clean antique rugs — will the fibers survive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Antique rug cleaning near me is the highest-care scenario we handle. We pre-inspect fiber and backing condition before agreeing to clean any antique piece. If the backing has dry-rotted, if pile is too fragile for wet cleaning, or if the dye test shows unstable dyes with no safe alternative — we decline and tell you why. A declined job protects your rug. We never start a job on an antique rug that we don't believe can survive it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there an area rug cleaning drop-off location near me in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — drop-off rug washing service at 1600 Delta Waters Rd, Medford, OR 97504. Call first at (458) 302-0101 so we can confirm we have capacity and discuss your rug's condition before you bring it in. Drop-off is best for large pieces (over 8&times;10), antiques, non-colorfast rugs, or any piece that needs extended assessment time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if my oriental rug can be safely wet-cleaned?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We run the dye transfer test on arrival — white cloth pressed to each color zone. If dyes are stable (colorfast), wet cleaning proceeds. If not, we explain the dry-cleaning alternative before any work begins. You can also do a rough pre-check at home: wet a white cloth and press it to an inconspicuous area. If color transfers, your rug has fugitive dyes and needs specialist handling."
+          }
+        }
+      ]
+    }
+  ]
+}

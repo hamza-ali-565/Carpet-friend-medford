@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/feedback/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/feedback/",
+      "name": "Share Your Feedback | Carpet Friend Medford",
+      "description": "Tell us how your Carpet Friend Medford cleaning went. Leave a Google review or send feedback directly. Jackson County local.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      }
+    }
+  ]
+}

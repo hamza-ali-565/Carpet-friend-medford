@@ -1,0 +1,552 @@
+[
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/",
+    "slug": "home",
+    "page_type": "home",
+    "meta_title": "Carpet Cleaning Medford Oregon | Carpet Cleaning Expert",
+    "meta_description": "Truck-mounted carpet cleaning in Medford, OR. IICRC certified. Most homes $150–$280. Upfront price confirmed before we start. Serving 97501–97504.",
+    "schema_file": "schema/home.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-97504/",
+    "slug": "carpet-cleaning-97504",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning 97504 | East & South Medford",
+    "meta_description": "Carpet cleaners in Medford 97504 serving East & South Medford. Expert cleaning for trail dust and wildfire smoke. IICRC-certified. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-97504.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-97503/",
+    "slug": "carpet-cleaning-97503",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning 97503 | White City & Jacksonville",
+    "meta_description": "Carpet cleaning in zip 97503 — White City rentals and Jacksonville historic homes. Almeda rebuild experience. IICRC-certified, truck-mounted. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-97503.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-stretching-medford-oregon/",
+    "slug": "carpet-stretching-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Stretching Medford Oregon | Fix Ripples",
+    "meta_description": "Carpet rippling or buckling in Medford, OR? Power stretching removes waves, re-tacks loose edges, and fixes trip hazards. Jackson County. (458) 302-0101.",
+    "schema_file": "schema/carpet-stretching-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-grants-pass-oregon/",
+    "slug": "carpet-cleaning-grants-pass-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Grants Pass Oregon",
+    "meta_description": "IICRC-certified carpet cleaning in Grants Pass, OR. Upholstery cleaning, truck-mounted, upfront pricing. Serving Josephine County. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-grants-pass-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/oriental-rug-cleaning-medford-oregon/",
+    "slug": "oriental-rug-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Oriental Rug Cleaning Medford Oregon",
+    "meta_description": "Persian, Turkish, antique and oriental rug cleaning near me in Medford, OR. Drop-off available. Dye-safe, IICRC-certified rug washing. (458) 302-0101.",
+    "schema_file": "schema/oriental-rug-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/winter-carpet-cleaning-medford-oregon/",
+    "slug": "winter-carpet-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Winter Carpet Cleaning Medford Oregon",
+    "meta_description": "Carpet dirtiest in winter? Yes. Impossible to clean? No. IICRC- certified winter carpet cleaning in Medford works — with the right process. (458) 302-0101.",
+    "schema_file": "schema/winter-carpet-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/fall-carpet-cleaning-medford-oregon/",
+    "slug": "fall-carpet-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Fall Carpet Cleaning Medford Oregon",
+    "meta_description": "October is Medford's best carpet cleaning month — post-smoke, pre-soot, pre-holiday. IICRC-certified, truck-mounted. Same-week booking. (458) 302-0101",
+    "schema_file": "schema/fall-carpet-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-97501/",
+    "slug": "carpet-cleaning-97501",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning 97501 | Medford Oregon",
+    "meta_description": "Carpet cleaning in Medford 97501 — Downtown and North Medford. IICRC-certified, truck-mounted, same-week scheduling. Upfront pricing. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-97501.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-downtown-medford-oregon/",
+    "slug": "carpet-cleaning-downtown-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Downtown Medford OR",
+    "meta_description": "Carpet cleaning in Downtown Medford, OR (97501). Apartments, offices, and rental units — IICRC-certified, truck-mounted, move-out receipts. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-downtown-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-west-medford-oregon/",
+    "slug": "carpet-cleaning-west-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning West Medford | 97502",
+    "meta_description": "Carpet cleaning in West Medford 97502. IICRC-certified service for olefin carpet, trail dust, and pet homes. Truck-mounted, upfront pricing. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-west-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-south-medford-oregon/",
+    "slug": "carpet-cleaning-south-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning South Medford Oregon",
+    "meta_description": "IICRC-certified carpet cleaning in South Medford, OR. Remove trail dirt and wildfire smoke with truck-mounted cleaning and upfront pricing. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-south-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/",
+    "slug": "carpet-cleaning-north-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning North Medford | 97501",
+    "meta_description": "IICRC-certified carpet cleaning in North Medford, OR (97501). Established homes, wood stove smoke, Bear Creek Greenway access. Truck-mounted. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-north-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-east-medford-oregon/",
+    "slug": "carpet-cleaning-east-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning East Medford | 97504",
+    "meta_description": "IICRC-certified carpet cleaning in East Medford, OR (97504). Table Rocks trail dust, wildfire smoke, pet homes. Truck-mounted, upfront pricing. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-east-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/summer-wildfire-carpet-cleaning-medford/",
+    "slug": "summer-wildfire-carpet-cleaning-medford",
+    "page_type": "service",
+    "meta_title": "Summer Wildfire Carpet Cleaning Medford",
+    "meta_description": "Wildfire smoke in your Medford carpet? Act within 60 days — PM2.5 bonds harder over time. We clean during and after Rogue Valley fire season. (458) 302-0101.",
+    "schema_file": "schema/summer-wildfire-carpet-cleaning-medford.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/spring-carpet-cleaning-medford-oregon/",
+    "slug": "spring-carpet-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Spring Carpet Cleaning Medford Oregon",
+    "meta_description": "Best time for Medford carpet cleaning? April–May. Remove winter soil, pollen, trail dust, and mud before summer heat. (458) 302-0101.",
+    "schema_file": "schema/spring-carpet-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-medical-offices-medford/",
+    "slug": "carpet-cleaning-medical-offices-medford",
+    "page_type": "service",
+    "meta_title": "Medical Office Carpet Cleaning Medford",
+    "meta_description": "IICRC-certified carpet cleaning for Medford medical offices. Patient-safe cleaning, after-hours scheduling, and documented receipts. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-medical-offices-medford.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-97502/",
+    "slug": "carpet-cleaning-97502",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning 97502 | West Medford OR",
+    "meta_description": "Carpet cleaning in Medford 97502. Serving West Medford, ranch homes, rentals, and Crater Lake Ave. IICRC-certified, truck-mounted. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-97502.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-real-estate-medford/",
+    "slug": "carpet-cleaning-real-estate-medford",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Real Estate Medford OR",
+    "meta_description": "Pre-listing carpet cleaning for Medford real estate. MLS photo timing, staging protocol, wildfire smoke treatment, clean-vs- replace guidance. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-real-estate-medford.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/water-damage-carpet-restoration-medford-oregon/",
+    "slug": "water-damage-carpet-restoration-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Water Damage Carpet Restoration Medford Oregon",
+    "meta_description": "Water damage Medford, OR? Emergency carpet extraction, rapid drying & restoration. Act fast—mold can grow within 24–48 hours. Jackson County. (458) 302-0101.",
+    "schema_file": "schema/water-damage-carpet-restoration-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/area-rug-cleaning-medford-oregon/",
+    "slug": "area-rug-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Rug Cleaning Medford Oregon | Area & Oriental Rugs",
+    "meta_description": "Area rug cleaning in Medford, OR. Wool, Persian, synthetic & kilim rugs. Fiber-matched chemistry. IICRC certified. Call (458) 302-0101.",
+    "schema_file": "schema/area-rug-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-repair-medford-oregon/",
+    "slug": "carpet-repair-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Repair Near Me | Medford Oregon",
+    "meta_description": "Carpet repair in Medford, OR — patching, seams, pet damage, burn holes & re-attachment. Carpet repair near me. Jackson County. (458) 302-0101.",
+    "schema_file": "schema/carpet-repair-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/hardwood-floor-cleaning-medford-oregon/",
+    "slug": "hardwood-floor-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Hardwood Floor Cleaning | Medford OR",
+    "meta_description": "Safe hardwood floor cleaning in Medford, OR for finished and unfinished wood. No steam, no over-wetting. Serving Jackson County. (458) 302-0101.",
+    "schema_file": "schema/hardwood-floor-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/air-duct-cleaning-medford-oregon/",
+    "slug": "air-duct-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Air Duct Cleaning | Medford Oregon",
+    "meta_description": "Air duct cleaning in Medford, OR. Removes wildfire smoke ash, allergens, pet dander from HVAC systems. Jackson County homes. (458) 302-0101.",
+    "schema_file": "schema/air-duct-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/natural-stone-cleaning-medford-oregon/",
+    "slug": "natural-stone-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Natural Stone Cleaning | Medford Oregon",
+    "meta_description": "Professional natural stone cleaning in Medford, OR. Marble, travertine, granite, and slate — pH-safe, streak-free. Serving Jackson County. Call (458) 302-0101.",
+    "schema_file": "schema/natural-stone-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/stair-carpet-cleaning-medford-oregon/",
+    "slug": "stair-carpet-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Stair Carpet Cleaning Medford Oregon",
+    "meta_description": "Medford stair carpet cleaning for high-traffic stairs, including treads, risers, edges, and pet hair. Serving Jackson County. (458) 302-0101.",
+    "schema_file": "schema/stair-carpet-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/dryer-vent-cleaning-medford-oregon/",
+    "slug": "dryer-vent-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Dryer Vent Cleaning Medford Oregon",
+    "meta_description": "Dryer vent cleaning in Medford, OR. Clogged vents cause dryer fires — we remove lint buildup and restore airflow. Serving Jackson County. (458) 302-0101.",
+    "schema_file": "schema/dryer-vent-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/disclaimer/",
+    "slug": "disclaimer",
+    "page_type": "legal",
+    "meta_title": "Disclaimer | Carpet Friend Medford",
+    "meta_description": "Disclaimer for Carpet Friend Medford's website. Results vary. Content is for general guidance, not a guarantee. Medford, OR.",
+    "schema_file": "schema/disclaimer.schema.json",
+    "faq_schema": "no",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/terms-conditions/",
+    "slug": "terms-conditions",
+    "page_type": "legal",
+    "meta_title": "Terms & Conditions | Carpet Friend Medford",
+    "meta_description": "Terms of use for carpetcleaningmedfordoregon.com and our carpet cleaning services in Medford, Oregon. Effective July 2026.",
+    "schema_file": "schema/terms-conditions.schema.json",
+    "faq_schema": "no",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/privacy-policy/",
+    "slug": "privacy-policy",
+    "page_type": "legal",
+    "meta_title": "Privacy Policy | Carpet Friend Medford",
+    "meta_description": "We don't sell your data. See exactly what Carpet Friend Medford collects, why we collect it, and how you can contact us about it.",
+    "schema_file": "schema/privacy-policy.schema.json",
+    "faq_schema": "no",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/feedback/",
+    "slug": "feedback",
+    "page_type": "utility",
+    "meta_title": "Share Your Feedback | Carpet Friend Medford",
+    "meta_description": "Tell us how your Carpet Friend Medford cleaning went. Leave a Google review or send feedback directly. Jackson County local.",
+    "schema_file": "schema/feedback.schema.json",
+    "faq_schema": "no",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/contact/",
+    "slug": "contact",
+    "page_type": "utility",
+    "meta_title": "Contact Carpet Friend Medford | (458) 302-0101",
+    "meta_description": "Call, text, or email Carpet Friend Medford. Serving Jackson County. (458) 302-0101 · Mon–Fri 8am–6pm · Sat 9am–4pm. Upfront pricing. Same-week scheduling.",
+    "schema_file": "schema/contact.schema.json",
+    "faq_schema": "no",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/about/",
+    "slug": "about",
+    "page_type": "about",
+    "meta_title": "About Carpet Friend Medford | Local Cleaner",
+    "meta_description": "Carpet Friend Medford is a locally owned, IICRC-certified carpet cleaner serving Jackson County since 2020. Meet our trusted local team.",
+    "schema_file": "schema/about.schema.json",
+    "faq_schema": "no",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-ashland-oregon/",
+    "slug": "carpet-cleaning-ashland-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Ashland OR | Carpet Friend Medford",
+    "meta_description": "Carpet cleaning in Ashland, Oregon. Shakespeare Festival STR turnarounds, wildfire smoke treatment, pet odor removal. IICRC certified. (458) 302-0101.",
+    "schema_file": "schema/carpet-cleaning-ashland-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-central-point-oregon/",
+    "slug": "carpet-cleaning-central-point-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Central Point OR | Local Expert",
+    "meta_description": "Professional carpet cleaning in Central Point, Oregon. IICRC certified, truck-mounted, upfront pricing. Serving 97502 and the Rogue Valley since day one.",
+    "schema_file": "schema/carpet-cleaning-central-point-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/faq/",
+    "slug": "faq",
+    "page_type": "faq",
+    "meta_title": "FAQ: Carpet Cleaning Medford Oregon | Answers",
+    "meta_description": "Answers to Medford carpet cleaning question cost, drying time, wildfire smoke, pet urine, and what the Rug Doctor can't do. Jackson County locals answer.",
+    "schema_file": "schema/faq.schema.json",
+    "faq_schema": "yes_required",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/",
+    "slug": "best-carpet-cleaners-medford-oregon",
+    "page_type": "guide_check_faq",
+    "meta_title": "Best Carpet Cleaners Medford Oregon 2026 | Guide",
+    "meta_description": "Comparison of carpet cleaning companies in Medford, OR - New View, Carpet Cleaning Bros, 5 Star, Stanley, Rugbusters. Who's actually worth calling in Jackson County?",
+    "schema_file": "schema/best-carpet-cleaners-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/commercial-carpet-cleaning-medford-oregon/",
+    "slug": "commercial-carpet-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Commercial Carpet Cleaning Medford, OR | IICRC",
+    "meta_description": "Evening & weekend commercial carpet cleaning in Medford, OR. IICRC certified, transparent pricing, same technician every visit. Call (458) 302-0101.",
+    "schema_file": "schema/commercial-carpet-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/move-in-carpet-cleaning-medford-oregon/",
+    "slug": "move-in-carpet-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Move-In Carpet Cleaning Medford OR | Before Move Day",
+    "meta_description": "Move-in carpet cleaning in Medford, Oregon. UV pet inspection, smoke assessment, 48-hr scheduling. Clean before your furniture arrives. (458) 302-0101.",
+    "schema_file": "schema/move-in-carpet-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/pet-odor-removal-medford-oregon/",
+    "slug": "pet-odor-removal-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Pet Urine & Odor Removal Medford OR | Enzymes",
+    "meta_description": "Cat & dog urine need different enzymes. Sub-surface extraction for pad contamination. Honest results — we tell you what to realistically expect.",
+    "schema_file": "schema/pet-odor-removal-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/tile-grout-cleaning-medford-oregon/",
+    "slug": "tile-grout-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Tile & Grout Cleaning Medford, OR | Sealing",
+    "meta_description": "Professional tile & grout cleaning in Medford, OR. Removes hard water buildup & wildfire ash, plus penetrating sealant. Call (458) 302-0101.",
+    "schema_file": "schema/tile-grout-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/upholstery-cleaning-medford-oregon/",
+    "slug": "upholstery-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Upholstery Cleaning Medford, OR | IICRC Pro",
+    "meta_description": "Professional upholstery cleaning in Medford, OR. Fabric-safe methods for sofas, chairs & rugs, checked by code before cleaning. Call (458) 302-0101.",
+    "schema_file": "schema/upholstery-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/wildfire-smoke-carpet-cleaning-medford-oregon/",
+    "slug": "wildfire-smoke-carpet-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Wildfire Smoke Carpet Cleaning Medford OR",
+    "meta_description": "PM2.5 smoke particles embed deep in Medford carpets. Only Rogue Valley company with dedicated smoke treatment protocol. Book after smoke events.",
+    "schema_file": "schema/wildfire-smoke-carpet-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-stain-removal-medford-oregon/",
+    "slug": "carpet-stain-removal-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Stain Removal Medford OR | Right Chemistry",
+    "meta_description": "Professional carpet stain removal in Medford, Oregon. Red wine, pet urine, red clay, wildfire ash. Chemistry matched to stain type. Call (458) 302-0101.",
+    "schema_file": "schema/carpet-stain-removal-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-jacksonville-oregon/",
+    "slug": "carpet-cleaning-jacksonville-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Jacksonville OR | Local Expert",
+    "meta_description": "IICRC-certified carpet cleaning in Jacksonville, OR. Serving historic homes, wine country rentals & 97530. Upfront pricing. Truck-mounted. Same-week available.",
+    "schema_file": "schema/carpet-cleaning-jacksonville-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-eagle-point-oregon/",
+    "slug": "carpet-cleaning-eagle-point-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Eagle Point OR | Local Expert",
+    "meta_description": "Professional carpet cleaning in Eagle Point, Oregon. Serving 97524, Rogue River valley trails & new builds. IICRC certified, truck-mounted, upfront pricing.",
+    "schema_file": "schema/carpet-cleaning-eagle-point-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-white-city-oregon/",
+    "slug": "carpet-cleaning-white-city-oregon",
+    "page_type": "service",
+    "meta_title": "carpet-cleaning-white-city-or-|-local-expert",
+    "meta_description": "Affordable carpet cleaning in White City, Oregon. Serving 97503, rental properties & post-Almeda rebuild homes. IICRC certified. Upfront pricing. Truck-mounted.",
+    "schema_file": "schema/carpet-cleaning-white-city-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-talent-oregon/",
+    "slug": "carpet-cleaning-talent-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Talent Oregon | Local Expert",
+    "meta_description": "IICRC-certified carpet cleaning in Talent, OR. Almeda rebuild homes, Bear Creek rentals & 97540. Truck-mounted,",
+    "schema_file": "schema/carpet-cleaning-talent-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-phoenix-oregon/",
+    "slug": "carpet-cleaning-phoenix-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Phoenix Oregon | Almeda Rebuild",
+    "meta_description": "Post-Almeda rebuild carpet cleaning in Phoenix, OR. Serving 97535 homeowners with IICRC-certified, truck-mounted extraction. Upfront pricing. Same week.",
+    "schema_file": "schema/carpet-cleaning-phoenix-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-gold-hill-oregon/",
+    "slug": "carpet-cleaning-gold-hill-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Gold Hill Oregon | Local Expert",
+    "meta_description": "Professional carpet cleaning in Gold Hill, OR. Serving 97525, Rogue River valley properties & rural Jackson",
+    "schema_file": "schema/carpet-cleaning-gold-hill-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-rogue-river-oregon/",
+    "slug": "carpet-cleaning-rogue-river-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Rogue River OR | Local Expert",
+    "meta_description": "#1 carpet cleaning in Rogue River, Oregon. Serving 97537, river valley properties & rural Jackson County. IICRC certified. Truck-mounted. Upfront pricing.",
+    "schema_file": "schema/carpet-cleaning-rogue-river-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/our-process/",
+    "slug": "our-process",
+    "page_type": "howto",
+    "meta_title": "Our 7-Step Carpet Cleaning Process | Medford OR",
+    "meta_description": "Pre-vacuum, fiber-matched pre-spray, 195°F extraction, pH rinse, dry strokes & carpet raking — exactly what we do every job in Medford, Oregon.",
+    "schema_file": "schema/our-process.schema.json",
+    "faq_schema": "no",
+    "howto_schema": "yes_required"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/move-out-carpet-cleaning-medford-oregon/",
+    "slug": "move-out-carpet-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Move-Out Carpet Cleaning Medford OR | Deposits",
+    "meta_description": "Medford move-out carpet cleaning with dated receipt for your landlord. Oregon deposit rights explained. 48-hr turnaround across Jackson County.",
+    "schema_file": "schema/move-out-carpet-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-medford-oregon/",
+    "slug": "carpet-cleaning-medford-oregon",
+    "page_type": "service",
+    "meta_title": "Carpet Cleaning Medford Oregon | Hot Water Extraction",
+    "meta_description": "195°F truck-mounted extraction in Medford OR. Pre-vacuum every job. Wildfire smoke, pet odor & stain removal. Same-day available. Call now.",
+    "schema_file": "schema/carpet-cleaning-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  },
+  {
+    "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-cost-medford-oregon/",
+    "slug": "carpet-cleaning-cost-medford-oregon",
+    "page_type": "guide_check_faq",
+    "meta_title": "Carpet Cleaning Cost Medford OR | 2026 Prices",
+    "meta_description": "Carpet cleaning in Medford costs $150–$280 for most homes. Per-room price table from 214 local jobs. No bait-and-switch. Price confirmed before start.",
+    "schema_file": "schema/carpet-cleaning-cost-medford-oregon.schema.json",
+    "faq_schema": "check_content",
+    "howto_schema": "no"
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-grants-pass-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-grants-pass-oregon/",
+      "name": "Carpet Cleaning Grants Pass Oregon",
+      "description": "IICRC-certified carpet cleaning in Grants Pass, OR. Upholstery cleaning, truck-mounted, upfront pricing. Serving Josephine County. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-grants-pass-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-grants-pass-oregon/#service",
+      "name": "Carpet Cleaning Grants Pass Oregon",
+      "description": "IICRC-certified carpet cleaning in Grants Pass, OR. Upholstery cleaning, truck-mounted, upfront pricing. Serving Josephine County. (458) 302-0101.",
+      "serviceType": "Carpet Cleaning Grants Pass Oregon",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Grants Pass"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-grants-pass-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-grants-pass-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you do carpet cleaning in Grants Pass, OR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Grants Pass and Josephine County are part of our extended service area. We're based in Medford (30 miles east on I-5) and travel to Grants Pass for residential and commercial carpet cleaning. IICRC certified, truck-mounted, upfront pricing. Call (458) 302-0101 to book."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer upholstery cleaning in Grants Pass?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — upholstery cleaning Grants Pass is available alongside carpet cleaning. We clean sofas, sectionals, chairs, and other upholstered furniture at Grants Pass addresses. Fabric code checked before any chemistry contact. Same appointment as your carpet cleaning or a standalone visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve all of Josephine County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Grants Pass city limits and the surrounding Josephine County area — including properties on the Rogue River corridor, the Illinois Valley area, and the Redwood Highway corridor. For properties significantly outside Grants Pass proper, call and describe the address — we'll confirm service availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the price the same in Grants Pass as in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same pricing structure, confirmed before any work begins. Upfront pricing is our standard regardless of location. See our pricing guide for reference ranges. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What carpet problems are most common in Grants Pass homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rural Grants Pass properties near the Rogue River corridor deal with agricultural organic soil and high pet-household pet ownership — both addressed with our standard pre-inspection and enzyme protocol. Wildfire smoke season is shared with Medford's July–September exposure window. For the specific cleaning services Grants Pass homeowners need, call and describe your situation — (458) 302-0101."
+          }
+        }
+      ]
+    }
+  ]
+}

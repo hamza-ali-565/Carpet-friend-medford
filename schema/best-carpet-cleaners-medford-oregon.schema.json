@@ -1,0 +1,109 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/",
+      "name": "Best Carpet Cleaners Medford Oregon 2026 | Guide",
+      "description": "Comparison of carpet cleaning companies in Medford, OR - New View, Carpet Cleaning Bros, 5 Star, Stanley, Rugbusters. Who's actually worth calling in Jackson County?",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/#service",
+      "name": "Best Carpet Cleaners Medford Oregon 2026",
+      "description": "Comparison of carpet cleaning companies in Medford, OR - New View, Carpet Cleaning Bros, 5 Star, Stanley, Rugbusters. Who's actually worth calling in Jackson County?",
+      "serviceType": "Best Carpet Cleaners Medford Oregon 2026",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        },
+        {
+          "@type": "City",
+          "name": "Ashland"
+        },
+        {
+          "@type": "City",
+          "name": "Central Point"
+        },
+        {
+          "@type": "City",
+          "name": "Talent"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville"
+        },
+        {
+          "@type": "City",
+          "name": "Eagle Point"
+        },
+        {
+          "@type": "City",
+          "name": "White City"
+        },
+        {
+          "@type": "City",
+          "name": "Gold Hill"
+        },
+        {
+          "@type": "City",
+          "name": "Rogue River"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/best-carpet-cleaners-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is the best carpet cleaner in Medford, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your situation. For wildfire smoke treatment and pet enzyme contamination with upfront pricing, Carpet Friend Medford specializes in Medford-specific soil types. For the highest review count in the area, Carpet Cleaning Bros has 650+ five-star reviews. For water damage restoration alongside carpet cleaning, Rugbusters has that capability. For the longest local history, Five Star Carpet Service has been operating since 1984."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I choose a carpet cleaning company in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ask five questions: (1) Are they IICRC certified? (2) Do they pre-vacuum before extraction? (3) Is pricing confirmed before they start? (4) What's their drying time in summer? (5) Truck-mounted or portable machine? Any company that can't answer all five clearly is worth passing on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Carpet Cleaning Bros or New View better in Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both are established local operators with good reputations. Carpet Cleaning Bros has the advantage in review volume (650+) and online booking convenience. New View has strong IICRC credentials and HIPAA training. Neither has a dedicated wildfire smoke protocol or neighborhood-level content — if that matters to you, compare accordingly."
+          }
+        }
+      ]
+    }
+  ]
+}

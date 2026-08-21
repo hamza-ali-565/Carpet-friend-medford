@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/#webpage",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/",
+      "name": "Carpet Cleaning North Medford | 97501",
+      "description": "IICRC-certified carpet cleaning in North Medford, OR (97501). Established homes, wood stove smoke, Bear Creek Greenway access. Truck-mounted. (458) 302-0101.",
+      "isPartOf": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "about": {
+        "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/#service",
+      "name": "Carpet Cleaning North Medford",
+      "description": "IICRC-certified carpet cleaning in North Medford, OR (97501). Established homes, wood stove smoke, Bear Creek Greenway access. Truck-mounted. (458) 302-0101.",
+      "serviceType": "Carpet Cleaning North Medford",
+      "provider": {
+        "@id": "https://carpetcleaningmedfordoregon.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Medford"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/#faq",
+      "url": "https://carpetcleaningmedfordoregon.com/carpet-cleaning-north-medford-oregon/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you serve North Medford, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. North Medford (97501), including the Columbus Avenue corridor, Hillcrest Road neighborhood, the country club area, and properties along the Crater Lake Highway and Stewart Avenue corridors. IICRC-certified, truck-mounted, upfront pricing. (458) 302-0101"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you remove wood stove smoke smell from carpet in North Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — wood stove smoke is one of our specialties in North Medford given the neighborhood's older heating-with-wood culture. Wood stove smoke requires a different pre-spray from wildfire smoke — phenolic and creosote-based compounds respond to a specialty deodorizing formula, not the oxidizing pre-spray we use for PM2.5. Multiple heating seasons of accumulation respond well to extended dwell treatment. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean Persian and Oriental rugs in North Medford homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We start with a mandatory dye transfer test on every natural fiber rug. If colorfast, we use a pH-neutral pre-spray at approximately 6.5 pH with a 6-minute dwell and extract at 140&deg;F — lower than our standard 195&deg;F, specifically to protect wool fiber integrity. North Medford's established homes have some of the most valuable area rugs we clean in the Rogue Valley. Learn more"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle older carpet in North Medford's 1970s–1980s homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With careful pre-inspection and fiber identification. Older quality nylon carpet from the 1970s and 1980s is often structurally sound despite its age — it was made to last. We assess pile height, backing integrity, and fiber condition before determining the appropriate extraction temperature and chemistry. Some older carpet in North Medford homes is genuinely restorable with professional cleaning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do pre-listing carpet cleaning in North Medford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. North Medford's established real estate market sees regular pre-listing carpet cleaning requests from homeowners preparing to sell in the Columbus Avenue, Hillcrest, and country club area neighborhoods. We work within your realtor's timeline. Learn more"
+          }
+        }
+      ]
+    }
+  ]
+}
